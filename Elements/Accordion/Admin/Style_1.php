@@ -409,6 +409,13 @@ class Style_1 extends AdminStyle {
         );
         $this->start_controls_tab();
         $this->add_control(
+                'sa-ac-op-cl-icon', $this->style, [
+            'label' => __('Icon', SHORTCODE_ADDOONS),
+            'type' => Controls::ICON,
+            'default' => 'fab fa-acquisitions-incorporated',
+                ]
+        );
+        $this->add_control(
                 'sa-ac-op-cl-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
@@ -425,52 +432,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::BORDER,
                 ]
         );
-        $this->end_controls_tab();
-
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa-ac-op-cl-h-color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-                ]
-        );
-        $this->add_group_control(
-                'sa-ac-op-cl-h-bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-                ]
-        );
-        $this->add_group_control(
-                'sa-ac-op-cl-h-br', $this->style, [
-            'type' => Controls::BORDER,
-                ]
-        );
-        $this->end_controls_tab();
-
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa-ac-op-cl-a-color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-                ]
-        );
-        $this->add_group_control(
-                'sa-ac-op-cl-a-bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-                ]
-        );
-        $this->add_group_control(
-                'sa-ac-op-cl-a-br', $this->style, [
-            'type' => Controls::BORDER,
-                ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
-
-        $this->add_responsive_control(
+          $this->add_responsive_control(
                 'sa-ac-op-cl-br-radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => TRUE,
@@ -498,15 +460,39 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
+        
+        
+        $this->end_controls_tab();
 
-        $this->add_group_control(
-                'sa-ac-op-cl-bx-shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa-ac-op-cl-h-icon', $this->style, [
+            'label' => __('Icon', SHORTCODE_ADDOONS),
+            'type' => Controls::ICON,
+            'default' => 'fab fa-acquisitions-incorporated',
                 ]
         );
-        $this->add_responsive_control(
-                'sa-ac-op-cl-padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
+        $this->add_control(
+                'sa-ac-op-cl-h-color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+                ]
+        );
+        $this->add_group_control(
+                'sa-ac-op-cl-h-bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+                ]
+        );
+        $this->add_group_control(
+                'sa-ac-op-cl-h-br', $this->style, [
+            'type' => Controls::BORDER,
+                ]
+        );
+          $this->add_responsive_control(
+                'sa-ac-op-cl-h-br-radius', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
+            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -529,6 +515,73 @@ class Style_1 extends AdminStyle {
                     'step' => .1,
                 ],
             ],
+                ]
+        );
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
+         $this->add_control(
+                'sa-ac-op-cl-a-icon', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::ICON,
+            'default' => '#787878',
+                ]
+        );
+        $this->add_control(
+                'sa-ac-op-cl-a-color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+                ]
+        );
+        $this->add_group_control(
+                'sa-ac-op-cl-a-bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+                ]
+        );
+        $this->add_group_control(
+                'sa-ac-op-cl-a-br', $this->style, [
+            'type' => Controls::BORDER,
+                ]
+        );
+          $this->add_responsive_control(
+                'sa-ac-op-cl-a-br-radius', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
+            'separator' => TRUE,
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 0,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+                ]
+        );
+
+        $this->end_controls_tab();
+
+        $this->end_controls_tabs();
+
+      
+
+        $this->add_group_control(
+                'sa-ac-op-cl-bx-shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
                 ]
         );
         $this->add_responsive_control(
