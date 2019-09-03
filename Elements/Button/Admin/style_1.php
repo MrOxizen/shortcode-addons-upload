@@ -171,7 +171,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
-                    'selector' => [
+            'selector' => [
                 '{{WRAPPER}} .class2 .class' => 'color:{{VALUE}};'
             ],
                 ]

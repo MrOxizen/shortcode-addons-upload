@@ -30,10 +30,8 @@ class Style_1 extends Templates {
             'sa-ac-title-color' => $style[77],
             'sa-ac-title-h-color' => $style[101],
             'sa-ac-title-a-color' => $style[169],
-            
             'sa-ac-op-cl-bg-color' => $style[103],
             'sa-ac-op-cl-h-bg-color' => $style[105],
-            
             'sa-ac-op-cl-color' => $style[115],
             'sa-ac-op-cl-h-color' => $style[117],
             'sa-ac-op-cl-br-color' => $style[123],
@@ -43,7 +41,6 @@ class Style_1 extends Templates {
             'sa-ac-cont-bg-color' => $style[211],
             'sa-ac-cont-color' => $style[217],
             'sa-ac-icon-position' => $style[279],
-            'sa-ac-opening' => $style[281],
         ];
 
         $this->upgrade_bg_image($style, 5, 'sa-ac-title-bg');
@@ -69,44 +66,64 @@ class Style_1 extends Templates {
         $this->upgrade_dimensions($style, 231, 'sa-ac-cont-br-radius');
         $this->upgrade_dimensions($style, 247, 'sa-ac-cont-padding');
         $this->upgrade_dimensions($style, 263, 'sa-ac-cont-margin');
-        echo '<pre>';
-        print_r($style);
-        print_r($this->update);
-        echo '</pre>';
+        $newdata = http_build_query($this->update);
+        //$this->wpdb->query($this->wpdb->prepare("UPDATE {$this->parent_table} SET css = %s, stylesheet = %s WHERE id = %d", $newdata, $stylesheet, $styleid));
+    }
+
+    public function child_data_upgrade() {
+        foreach ($this->child as $value) {
+            $itemid = $value['id'];
+            $filesdata = explode('||#||', $value['files']);
+          //  print_r($filesdata);
+            $files = [
+                'sa_el_text' => ''.$filesdata[2].'',
+                'sa_el_content' => '',
+            ];
+            $f = '{'.wp_json_encode($files, JSON_UNESCAPED_UNICODE).'}';
+             //echo $f;
+            // $f = '||#||OxiAddons-AC-T ||#||Lorem Ipsum is simply dummy text of the printing and typesetting industry.||#|| OxiAddons-AC-IN ||#||Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.||#||';
+            if ((int) $itemid):
+                $this->wpdb->query($this->wpdb->prepare("UPDATE {$this->child_table} SET files = %s WHERE id = %d", $f, $itemid));
+                echo $this->wpdb->prepare("UPDATE {$this->child_table} SET files = %s WHERE id = %d", $f, $itemid);
+                echo '<br>';
+            endif;
+        }
+
+
+
+        //$this->child = $childarray;
     }
 
     public function default_render($style, $child, $admin) {
 
         foreach ($child as $v) {
-            parse_str($v['files'], $value);
-            echo '  <div class="oxi-addons-AC-style-1 oxi-addons-admin-edit-list">
-                        <div class="oxi-addons-AC-style-1-heading active" ref="#oxi-addons-AC-style-1-heading-id-25">
-                            <div class="span-active"><i class="fas fa-arrow-down oxi-icons"></i></div>
-                            <div class="span-deactive"><i class="fas fa-arrow-right oxi-icons"></i></div>
-                            <div class="heading-data">' . $value['sa_el_text'] . '</div>
-                        </div>
-                        <div class="oxi-addons-ac-C-9" id="oxi-addons-AC-style-1-heading-id-25" style="display: block;">
-                            <div class="oxi-addons-ac-C-9-b">
-                               ' . $value['sa_el_content'] . '
-                            </div>
-                        </div> ';
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
-                        </div>';
-            endif;
-            echo ' </div>';
+
+//            wp_parse_str($v['files'], $value);
+//            echo '  <div class="oxi-addons-AC-style-1 oxi-addons-admin-edit-list">
+//                        <div class="oxi-addons-AC-style-1-heading active" ref="#oxi-addons-AC-style-1-heading-id-25">
+//                            <div class="span-active"><i class="fas fa-arrow-down oxi-icons"></i></div>
+//                            <div class="span-deactive"><i class="fas fa-arrow-right oxi-icons"></i></div>
+//                            <div class="heading-data">' . $value['sa_el_text'] . '</div>
+//                        </div>
+//                        <div class="oxi-addons-ac-C-9" id="oxi-addons-AC-style-1-heading-id-25" style="display: block;">
+//                            <div class="oxi-addons-ac-C-9-b">
+//                               ' . $value['sa_el_content'] . '
+//                            </div>
+//                        </div> ';
+//            if ($admin == 'admin'):
+//                echo '  <div class="oxi-addons-admin-absulote">
+//                            <div class="oxi-addons-admin-absulate-edit">
+//                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
+//                            </div>
+//                            <div class="oxi-addons-admin-absulate-delete">
+//                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
+//                             </div>
+//                        </div>';
+//            endif;
+//            echo ' </div>';
         }
     }
 
-//    public function child_data_upgrade($data) {
-//        
-//    }
 }
 
 new Style_1();
