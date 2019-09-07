@@ -45,19 +45,19 @@ class Style_1 extends AdminStyle {
         $this->add_control(
                 'sa_els_text', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
+            'type' => Controls::NUMBER,
             'placeholder' => 'Hi This is text',
             'selector' => [
-                '{{WRAPPER}} .heading-data' => '',
+                '{{WRAPPER}} .heading-data' => 'font-size:{{VALUE}}px',
             ],
                 ]
         );
 
         $this->add_control(
-                'sa-ac-opening', $this->style, [
+                'sa-ac-openingdd', $this->style, [
             'label' => __('Opening Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            //'loader' => TRUE,
+           
             'default' => 'dashed',
             'options' => [
                 'block' => __('Block', SHORTCODE_ADDOONS),
@@ -70,16 +70,14 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa-ac-openings', $this->style, [
+                'sa-ac-opening', $this->style, [
             'label' => __('Opening Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'dashed',
+            'default' => 'one-by-one',
+            'loader' => TRUE,
             'options' => [
                 'one-by-one' => __('One by One', SHORTCODE_ADDOONS),
                 'randomly' => __('Randomly', SHORTCODE_ADDOONS),
-            ],
-            'selector' => [
-                '{{WRAPPER}} .class .class' => ''
             ],
                 ]
         );
@@ -129,7 +127,7 @@ class Style_1 extends AdminStyle {
                 'unit' => 'px',
                 'size' => 0,
             ],
-            'loader' => TRUE,
+            //'loader' => TRUE,
             'range' => [
                 '%' => [
                     'min' => 0,
@@ -196,9 +194,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
-            'loader' => TRUE,
+          //  'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-ac-template-1-heading .heading-data' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-ac-template-1-heading .heading-data' => 'background:{{VALUE}};'
             ],
                 ]
         );
