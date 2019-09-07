@@ -12,7 +12,6 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
@@ -43,20 +42,24 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_responsive_control(
-                'sa-ac-opening-number', $this->style, [
-            'label' => __('Number', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
-            'separator' => TRUE,
-            'type' => Controls::NUMBER,
-            'default' => 10,
+
+        $this->add_control(
+                'sa-ac-opening', $this->style, [
+            'label' => __('Opening Type', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'loader' => TRUE,
+            'default' => 'dashed',
+            'options' => [
+                'one-by-one' => __('One by One', SHORTCODE_ADDOONS),
+                'randomly' => __('Randomly', SHORTCODE_ADDOONS),
+            ],
             'selector' => [
-                '{{WRAPPER}} .class .class' => 'width:{{VALUE}}%;'
+                '{{WRAPPER}} .class .class' => ''
             ],
                 ]
         );
-        $this->add_control(
-                'sa-ac-opening', $this->style, [
+         $this->add_control(
+                'sa-ac-openings', $this->style, [
             'label' => __('Opening Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
             'default' => 'dashed',
@@ -74,7 +77,8 @@ class Style_1 extends AdminStyle {
             'label' => __('Icon Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
-            'default' => 'left',
+            'loader' => TRUE,
+            'default' => '',
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -113,6 +117,7 @@ class Style_1 extends AdminStyle {
                 'unit' => 'px',
                 'size' => 0,
             ],
+            'loader' => TRUE,
             'range' => [
                 '%' => [
                     'min' => 0,
@@ -131,7 +136,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .class .class' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-ac-template-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -158,8 +163,9 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa-ac-title-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'loader' => FALSE,
             'selector' => [
-                '{{WRAPPER}} .class2 .class' => ''
+                '{{WRAPPER}} .oxi-addons-ac-template-1-heading .heading-data' => ''
             ],
                 ]
         );
@@ -178,8 +184,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
-                    'selector' => [
-                '{{WRAPPER}} .class2 .class' => 'color:{{VALUE}};'
+            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-ac-template-1-heading .heading-data' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -432,7 +439,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::BORDER,
                 ]
         );
-          $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-ac-op-cl-br-radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => TRUE,
@@ -460,8 +467,8 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        
-        
+
+
         $this->end_controls_tab();
 
         $this->start_controls_tab();
@@ -489,7 +496,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::BORDER,
                 ]
         );
-          $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-ac-op-cl-h-br-radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => TRUE,
@@ -520,7 +527,7 @@ class Style_1 extends AdminStyle {
         $this->end_controls_tab();
 
         $this->start_controls_tab();
-         $this->add_control(
+        $this->add_control(
                 'sa-ac-op-cl-a-icon', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::ICON,
@@ -544,7 +551,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::BORDER,
                 ]
         );
-          $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-ac-op-cl-a-br-radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => TRUE,
@@ -577,7 +584,7 @@ class Style_1 extends AdminStyle {
 
         $this->end_controls_tabs();
 
-      
+
 
         $this->add_group_control(
                 'sa-ac-op-cl-bx-shadow', $this->style, [
@@ -760,6 +767,19 @@ class Style_1 extends AdminStyle {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div cecholass="modal-body">';
+
+        $this->add_control(
+                'sa_el_initial_open', $this->style, [
+            'label' => __('Initial Open?', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => '',
+            'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+
         $this->add_control(
                 'sa_el_text', $this->style, [
             'label' => __('Title', SHORTCODE_ADDOONS),
