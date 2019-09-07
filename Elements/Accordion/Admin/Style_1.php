@@ -42,6 +42,14 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+        $this->add_group_control(
+                'sa-ac-column', $this->style, [
+            'type' => Controls::COLUMN,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-ac-template-1' => '',
+            ],
+                ]
+        );
         $this->add_control(
                 'sa_els_text', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
@@ -57,7 +65,6 @@ class Style_1 extends AdminStyle {
                 'sa-ac-openingdd', $this->style, [
             'label' => __('Opening Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-           
             'default' => 'dashed',
             'options' => [
                 'block' => __('Block', SHORTCODE_ADDOONS),
@@ -194,7 +201,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
-          //  'loader' => TRUE,
+            //  'loader' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-ac-template-1-heading .heading-data' => 'background:{{VALUE}};'
             ],
