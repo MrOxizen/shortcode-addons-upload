@@ -42,23 +42,34 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+        $this->add_control(
+                'sa_els_text', $this->style, [
+            'label' => __('Autoplay', SHORTCODE_ADDOONS),
+            'type' => Controls::TEXT,
+            'placeholder' => 'Hi This is text',
+            'selector' => [
+                '{{WRAPPER}} .heading-data' => '',
+            ],
+                ]
+        );
 
         $this->add_control(
                 'sa-ac-opening', $this->style, [
             'label' => __('Opening Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'loader' => TRUE,
+            //'loader' => TRUE,
             'default' => 'dashed',
             'options' => [
-                'one-by-one' => __('One by One', SHORTCODE_ADDOONS),
-                'randomly' => __('Randomly', SHORTCODE_ADDOONS),
+                'block' => __('Block', SHORTCODE_ADDOONS),
+                'flex' => __('Flex', SHORTCODE_ADDOONS),
             ],
             'selector' => [
-                '{{WRAPPER}} .class .class' => ''
+                '{{WRAPPER}} .heading-data' => 'display:{{VALUE}};',
+                '{{WRAPPER}} .heading-data ' => ''
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa-ac-openings', $this->style, [
             'label' => __('Opening Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
@@ -77,7 +88,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Icon Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
-            'loader' => TRUE,
+            //   'loader' => TRUE,
             'default' => '',
             'options' => [
                 'left' => [
@@ -89,7 +100,8 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .class .class' => 'text-align:{{VALUE}};'
+                '{{WRAPPER}} .heading-data' => 'text-align:{{VALUE}};',
+                '{{WRAPPER}} .heading-data ' => ''
             ],
                 ]
         );

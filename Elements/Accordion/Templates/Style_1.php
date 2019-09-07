@@ -60,10 +60,10 @@ class Style_1 extends Templates {
             endif;
             echo '  <div class="oxi-addons-ac-template-1 oxi-addons-admin-edit-list">
                         <div class="oxi-addons-ac-template-1-heading ' . $active . '" ref="#oxi-addons-ac-template-1-id-' . $v['id'] . '">
-                            ' . ($style['sa-ac-icon-position'] != 'left' ? '<div class="heading-data">' . $value['sa_el_text'] . '</div>' : '') . '
+                            ' . ($style['sa-ac-icon-position'] != 'left' ? '<div class="heading-data flex block">' . $value['sa_el_text'] . '</div>' : '') . '
                             <div class="span-active"><i class="fas fa-arrow-down oxi-icons"></i></div>
                             <div class="span-deactive"><i class="fas fa-arrow-right oxi-icons"></i></div>
-                            ' . ($style['sa-ac-icon-position'] == 'left' ? '<div class="heading-data">' . $value['sa_el_text'] . '</div>' : '') . '
+                            ' . ($style['sa-ac-icon-position'] == 'left' ? '<div class="heading-data flex block">' . $value['sa_el_text'] . '</div>' : '') . '
                         </div>
                         <div class="oxi-addons-ac-template-1-content" id="oxi-addons-ac-template-1-id-' . $v['id'] . '" style="' . $display . '">
                             <div class="oxi-addons-ac-template-1-content-b">
