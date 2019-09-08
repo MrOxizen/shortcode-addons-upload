@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplo
+*/
+
+.oxi-addons-heading-container{
+    text-align: center;
+}
+.oxi-addons-heading-container .oxi-addons-heading{
+    font-size: 60px;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-addons-heading-container .oxi-addons-heading{ 
+        font-size: 40px;  
+        padding: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    } 
+} 
+@media only screen and (max-width : 668px){
+    .oxi-addons-heading-container .oxi-addons-heading{ 
+        font-size: 30px;  
+        padding: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
