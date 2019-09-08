@@ -22,14 +22,7 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-heading-tabs'
         );
         $this->start_section_devider();
-        $this->add_group_control(
-                'sa_head_column', $this->style, [
-            'type' => 'effects',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
-            ],
-                ]
-        );
+
         $this->start_controls_section(
                 'shortcode-addons-heading-text', [
             'label' => esc_html__('Heading Text', SHORTCODE_ADDOONS),
@@ -42,6 +35,9 @@ class Style_1 extends AdminStyle {
             'type' => Controls::TEXTAREA,
             'default' => 'This is Heading Text',
             'placeholder' => 'This is Heading Text',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading' => '',
+            ],
                 ]
         );
         $this->add_control(
@@ -59,25 +55,37 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        $this->end_controls_section();
 
-
-
-        $this->start_controls_section(
-                'shortcode-addons-animation', [
-            'label' => esc_html__('Animation', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
-                ]
-        );
-        $this->add_group_control(
-                'sa_head_animation', $this->style, [
-            'type' => Controls::ANIMATION,
+        $this->add_control(
+                'sa_head_heading_alignment', $this->style, [
+            'label' => __('Text Align', SHORTCODE_ADDOONS),
+            'separator' => TRUE,
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'dashed',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', 'plugin-domain'),
+                    'icon' => 'fas fa-sort-amount-up',
+                ],
+                'center' => [
+                    'title' => __('Center', 'plugin-domain'),
+                    'icon' => 'fas fa-exchange-alt',
+                ],
+                'right' => [
+                    'title' => __('Right', 'plugin-domain'),
+                    'icon' => 'fas fa-exchange-alt',
+                ],
+            ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
+                '{{WRAPPER}}  .oxi-addons-heading-container ' => 'text-align:{{VALUE}};',
             ],
                 ]
         );
+
         $this->end_controls_section();
+
+
 
         $this->end_section_devider();
         $this->start_section_devider();
@@ -110,6 +118,9 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_border_btm', $this->style, [
             'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
+            ],
                 ]
         );
         $this->add_responsive_control(
@@ -168,8 +179,16 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-heading-container ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
+                ]
+        );
+        $this->add_group_control(
+                'sa_head_animation', $this->style, [
+            'type' => Controls::ANIMATION,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading-container' => ''
+            ],
                 ]
         );
         $this->end_controls_section();
