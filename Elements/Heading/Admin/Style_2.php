@@ -65,13 +65,13 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-$this->add_control(
+        $this->add_control(
                 'sa_head_heading_alignment', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'dashed',
+            'default' => 'center',
             'options' => [
                 'left' => [
                     'title' => __('Left', 'plugin-domain'),
@@ -149,7 +149,7 @@ $this->add_control(
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],

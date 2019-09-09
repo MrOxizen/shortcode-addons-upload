@@ -62,7 +62,7 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'dashed',
+            'default' => 'center',
             'options' => [
                 'left' => [
                     'title' => __('Left', 'plugin-domain'),
@@ -138,7 +138,7 @@ class Style_1 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
