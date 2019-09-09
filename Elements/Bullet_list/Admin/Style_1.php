@@ -279,21 +279,33 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 a.oxi-BL-link' => 'color: {{VALUE}}',
+            ]
                 ]
         );
         $this->add_group_control(
                 'sa-bl-lc-bg', $this->style, [
             'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 a.oxi-BL-link' => '',
+            ]
                 ]
         );
         $this->add_group_control(
                 'sa-bl-lc-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 a.oxi-BL-link' => '',
+            ]
                 ]
         );
         $this->add_group_control(
                 'sa-bl-lc-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 a.oxi-BL-link' => '',
+            ]
                 ]
         );
         $this->add_responsive_control(
@@ -322,6 +334,9 @@ class Style_1 extends AdminStyle {
                     'step' => .1,
                 ],
             ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 a.oxi-BL-link' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+            ]
                 ]
         );
         $this->add_responsive_control(
@@ -350,6 +365,9 @@ class Style_1 extends AdminStyle {
                     'step' => .1,
                 ],
             ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-li .oxi-addons-admin-edit-list' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+            ]
                 ]
         );
         $this->end_controls_tab();
@@ -366,21 +384,22 @@ class Style_1 extends AdminStyle {
             'type' => Controls::BACKGROUND,
                 ]
         );
-
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa-ac-opening-number', $this->style, [
-            'label' => __('Number', SHORTCODE_ADDOONS),
+            'label' => __('Scale', SHORTCODE_ADDOONS),
             'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::NUMBER,
             'default' => 10,
             'selector' => [
-                '{{WRAPPER}} .class .class' => 'width:{{VALUE}}%;'
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 a.oxi-BL-link:hover' => 'transform: scale({{VALUE}});'
             ],
                 ]
         );
+
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
