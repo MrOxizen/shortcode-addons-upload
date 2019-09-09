@@ -1,0 +1,18 @@
+.oxi_addons__icon_main{
+    display: flex;
+    justify-content: center;
+}
+.oxi_addons__icon{
+    width: 80px;
+    height: 80px;
+    background: #ff00cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+}
+.oxi-icons{
+    font-size: 32px;
+    color: white;
+}

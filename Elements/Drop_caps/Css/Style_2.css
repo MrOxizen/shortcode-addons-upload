@@ -1,0 +1,16 @@
+.oxi_addons__drop_caps_main {
+    display: inline-block;  
+    float: left;
+}
+.oxi_addons__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: #FB533B;
+    color: #fff;
+    font-size: 22px;
+    margin: 5px;
+    border-radius: 50px;
+}
