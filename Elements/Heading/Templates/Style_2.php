@@ -16,13 +16,25 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_2 extends Templates {
 
+     
     public function default_render($style, $child, $admin) {
-        echo '<pre>';
-        print_r($style);
-        echo '</pre>';
+//        echo '<pre>';
+//        print_r($style);
+//        echo '</pre>';
         if ($style['sa_head_text'] != '') {
             echo ' <div class="oxi-addons-heading-container " > 
-                    <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading" >' . OxiAddonsTextConvert($style['sa_head_text']) . '</' . $style['sa_head_heading_tag'] . '>
+                    <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading" '
+                    . 'style= "background: url(' . $this->media_render('sa_head_image',$style) . ');
+                    -moz-background-size: 100% 100%;
+                    -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+                    text-fill-color: transparent;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    -moz-text-fill-color: transparent;
+                    -moz-background-clip: text;  '
+                    . '">' . $this->text_render($style['sa_head_text']) . '</' . $style['sa_head_heading_tag'] . '>
                </div> ';
         }
     }
@@ -34,9 +46,7 @@ class Style_2 extends Templates {
         $stylefiles = explode('||#||', $style['css']);
         $headingimage = $stylefiles[3];
         $styledata = explode('|', $stylefiles[4]);
-        echo '<pre>';
-        print_r($stylefiles);
-        echo '</pre>';
+
         $data = $stylefiles[1];
         echo ' <div class="oxi-addons-container">
                 <div class="oxi-addons-row"> 

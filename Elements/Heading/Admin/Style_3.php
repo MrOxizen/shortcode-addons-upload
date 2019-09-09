@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_2
+ * Description of Style_3
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_tabs(
@@ -38,18 +38,11 @@ class Style_2 extends AdminStyle {
             'default' => 'This is Heading Text',
             'placeholder' => 'This is Heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container  .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-heading' => '',
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_head_image', $this->style, [
-            'type' => Controls::MEDIA,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
-            ],
-                ]
-        );
+
         $this->add_control(
                 'sa_head_heading_tag', $this->style, [
             'label' => __('Heading Tag', SHORTCODE_ADDOONS),
@@ -65,7 +58,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-$this->add_control(
+        $this->add_control(
                 'sa_head_heading_alignment', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'separator' => TRUE,
@@ -93,10 +86,6 @@ $this->add_control(
         );
         $this->end_controls_section();
 
-
-
-
-
         $this->end_section_devider();
         $this->start_section_devider();
 
@@ -122,7 +111,8 @@ $this->add_control(
                 'sa_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-heading-container ' => '',
+                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading ' => '',
             ],
                 ]
         );
@@ -203,6 +193,7 @@ $this->add_control(
                 ]
         );
         $this->end_controls_section();
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
