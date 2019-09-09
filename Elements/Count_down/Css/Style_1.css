@@ -1,10 +1,53 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Sep 2, 2019, 10:30:51 AM
-    Author     : biplo
-*/
+.sa-addons-count-down-content .sa-addons-countdown-section {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
 
+.sa-addons-countdown-mid {
+    display: block;
+}
+
+.sa-addons-count-down-content .sa-addons-countdown-amount {
+    display: block;
+    font-size: 50px;
+    padding: 5px;
+    color: #db3328;
+    text-align: center;
+}
+
+.sa-addons-count-down-content .sa-addons-countdown-period {
+    display: block;
+    font-size: 20px;
+    color: #545454;
+    padding: 5px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 669px) and (max-width: 993px) {
+    .sa-addons-count-down-content .sa-addons-countdown-section {
+        padding: 10;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-amount {
+        font-size: 35px;
+        padding: 5px;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-period {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .sa-addons-count-down-content .sa-addons-countdown-section {
+        padding: 5;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-amount {
+        font-size: 30px;
+        padding: 5;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-period {
+        font-size: 16px;
+        padding: 5px;
+    }
+}

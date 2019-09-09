@@ -1,0 +1,70 @@
+.oxi-addons-heading-container {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-heading {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-heading .oxi-addons-heading-text {
+    width: 100%;
+    float: left;
+    font-size: 50px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+
+    color: #6fab30;
+    margin: 0;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-sub-heading {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-sub-heading .oxi-addons-sub-heading-text{
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    font-family: "Amiri";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+
+    color: #706868;
+    margin: 0;
+    padding: 0px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-heading .oxi-addons-heading-text {
+        font-size: 50px;
+        margin: 0;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-sub-heading .oxi-addons-sub-heading-text{
+        font-size: 20px;
+        margin: 0;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-heading .oxi-addons-heading-text {
+        font-size: 50px;
+        margin: 0;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-sub-heading .oxi-addons-sub-heading-text{
+        font-size: 20px;
+        margin: 0;
+        padding: 0px 0px 0px 0px
+    }
+}
