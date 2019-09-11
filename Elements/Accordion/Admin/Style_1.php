@@ -88,6 +88,32 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
+           $this->add_control(
+                'sa_head_heading_alignment', $this->style, [
+            'label' => __('Text Align', SHORTCODE_ADDOONS),
+            'separator' => TRUE,
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', 'plugin-domain'),
+                    'icon' => 'fas fa-sort-amount-up',
+                ],
+                'center' => [
+                    'title' => __('Center', 'plugin-domain'),
+                    'icon' => 'fas fa-exchange-alt',
+                ],
+                'right' => [
+                    'title' => __('Right', 'plugin-domain'),
+                    'icon' => 'fas fa-exchange-alt',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}}  .oxi-addons-heading-container ' => 'text-align:{{VALUE}};',
+            ],
+                ]
+        );
         $this->add_control(
                 'sa-ac-icon-position', $this->style, [
             'label' => __('Icon Position', SHORTCODE_ADDOONS),

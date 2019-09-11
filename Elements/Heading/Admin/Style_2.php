@@ -45,9 +45,6 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_image', $this->style, [
             'type' => Controls::MEDIA,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
-            ],
                 ]
         );
         $this->add_control(
@@ -74,16 +71,16 @@ class Style_2 extends AdminStyle {
             'default' => 'center',
             'options' => [
                 'left' => [
-                    'title' => __('Left', 'plugin-domain'),
-                    'icon' => 'fas fa-sort-amount-up',
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
                 'center' => [
-                    'title' => __('Center', 'plugin-domain'),
-                    'icon' => 'fas fa-exchange-alt',
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
                 'right' => [
-                    'title' => __('Right', 'plugin-domain'),
-                    'icon' => 'fas fa-exchange-alt',
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
                 ],
             ],
             'selector' => [

@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_3
+ * Description of Style_6
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_3 extends AdminStyle {
+class Style_6 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_tabs(
@@ -29,8 +29,6 @@ class Style_3 extends AdminStyle {
                 ]
         );
 
-
-
         $this->add_control(
                 'sa_head_text', $this->style, [
             'label' => __('Heading Text', SHORTCODE_ADDOONS),
@@ -38,15 +36,34 @@ class Style_3 extends AdminStyle {
             'default' => 'This is Heading Text',
             'placeholder' => 'This is Heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => '',
             ],
                 ]
         );
-
+        $this->add_control(
+                'sa_sub_head_text', $this->style, [
+            'label' => __('Sub Text', SHORTCODE_ADDOONS),
+            'type' => Controls::TEXTAREA,
+            'default' => 'This is Sub-heading Text',
+            'placeholder' => 'This is Sub-heading Text',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => '',
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_head_image_bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-img-body' => '',
+            ],
+                ]
+        );
         $this->add_control(
                 'sa_head_heading_tag', $this->style, [
             'label' => __('Heading Tag', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
+            'separator' => TRUE,
             'default' => 'h2',
             'options' => [
                 'h1' => __('Heading 1', SHORTCODE_ADDOONS),
@@ -58,100 +75,13 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_head_heading_alignment', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' =>'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-heading-container ' => 'text-align:{{VALUE}};',
-            ],
-                ]
-        );
-        $this->end_controls_section();
-
-        $this->end_section_devider();
-        $this->start_section_devider();
-
-
-        $this->start_controls_section(
-                'shortcode-addons-font-settings', [
-            'label' => esc_html__('Typography ', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-        $this->add_control(
-                'sa_head_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#252b25',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
 
         $this->add_group_control(
-                'sa_head_typo', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container ' => '',
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading ' => '',
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_head_border_btm', $this->style, [
+                'sa_head_container_border_btm', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
             ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_head_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
                 ]
         );
         $this->add_responsive_control(
@@ -180,8 +110,140 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-body-container ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
+                ]
+        );
+
+        $this->end_controls_section();
+
+        $this->end_section_devider();
+        $this->start_section_devider();
+
+
+        $this->start_controls_section(
+                'shortcode-addons-font-settings', [
+            'label' => esc_html__('Heading Typography ', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
+        $this->add_control(
+                'sa_head_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#0f0f0f',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+
+
+        $this->add_group_control(
+                'sa_head_typo', $this->style, [
+            'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text ' => '',
+            ],
+                ]
+        );
+
+        $this->add_responsive_control(
+                'sa_head_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons-sub-head-font-settings', [
+            'label' => esc_html__('Sub-Heading Typography ', SHORTCODE_ADDOONS),
+            'showing' => False,
+                ]
+        );
+        $this->add_control(
+                'sa_sub_head_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#706868',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+
+        $this->add_group_control(
+                'sa_sub_head_typo', $this->style, [
+            'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text ' => '',
+            ],
+                ]
+        );
+
+        $this->add_responsive_control(
+                'sa_sub_head_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons-animation', [
+            'label' => esc_html__('Animation ', SHORTCODE_ADDOONS),
+            'showing' => False,
                 ]
         );
         $this->add_group_control(
@@ -193,7 +255,6 @@ class Style_3 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-
         $this->end_section_devider();
         $this->end_section_tabs();
     }
