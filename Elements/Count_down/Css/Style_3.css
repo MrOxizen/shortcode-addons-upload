@@ -1,0 +1,76 @@
+.sa-addons-count-down-container {
+    width: 100%;
+    float: left;
+}
+
+.sa-addons-count-down-content {
+    width: 100%;
+    float: left;
+}
+
+.sa-addons-count-down-content .sa-addons-countdown-section {
+    width: 100%;
+    float: left;
+    padding: 5px 5px 5px 5px;
+    margin: 0px 0px 0px 0px;
+}
+
+.sa-addons-count-down-content .sa-addons-countdown-mid {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    background: linear-gradient(135deg, rgba(241, 167, 241, 1) 0%, rgba(250, 208, 196, 1) 97%);
+    border-radius: 100px;
+}
+
+.sa-addons-count-down-content .sa-addons-countdown-amount {
+    display: block;
+    font-size: 37px;
+    color: #292929;
+    font-family: "Francois One";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 40px 10px 0px 10px;
+}
+
+.sa-addons-count-down-content .sa-addons-countdown-period {
+    display: block;
+    font-size: 20px;
+    color: #292929;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 15px 10px 10px 10px;
+}
+
+@media only screen and (min-width: 669px) and (max-width: 993px) {
+    .sa-addons-count-down-content .sa-addons-countdown-section {
+        padding: 10;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-amount {
+        font-size: 35px;
+        padding: 5px;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-period {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .sa-addons-count-down-content .sa-addons-countdown-section {
+        padding: 5;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-amount {
+        font-size: 30px;
+        padding: 5;
+    }
+    .sa-addons-count-down-content .sa-addons-countdown-period {
+        font-size: 16px;
+        padding: 5px;
+    }
+}

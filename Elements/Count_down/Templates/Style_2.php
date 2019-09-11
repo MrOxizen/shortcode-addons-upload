@@ -1,0 +1,192 @@
+<?php
+
+namespace SHORTCODE_ADDONS_UPLOAD\Elements\Count_down\Templates;
+
+if (!defined('ABSPATH')) {
+  exit;
+}
+
+/**
+ * Description of Style_1
+ * Content of Shortcode Addons Plugins
+ *
+ * @author $biplob018
+ */
+
+use SHORTCODE_ADDONS\Core\Templates;
+
+class Style_2 extends Templates
+{
+
+  public function public_jquery()
+  {
+    $this->JSHANDLE = 'jquery.countdown.min';
+    wp_enqueue_script('jquery.countdown.min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/jquery.countdown.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+  }
+
+  public function inline_public_jquery()
+  {
+    $style = $this->style;
+    if ($style['sa_cd_date_time'] != '') {
+      $time_date = explode('T', $style['sa_cd_date_time']);
+    }
+    $jquery = 'jQuery(".sa-addons-count-down-content").countdown("' . $time_date[0] . ' ' . $time_date[1] . '").on("update.countdown", function(event) {
+                    var jQuerythis = jQuery(this).html(event.strftime(\'<div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="sa-addons-countdown-section sa-addons-counter-days ' . $this->array_render('sa_cd_d_txt_sps', $style) . '"><div class="sa-addons-countdown-mid"><div class="sa-addons-countdown-amount">%D</div><div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_d_txt']) . '</div></div> </div> </div> <div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"> <div class="sa-addons-countdown-section sa-addons-counter-hours ' . $this->array_render('sa_cd_hours_txt_sps', $style) . '"><div class="sa-addons-countdown-mid"><div class="sa-addons-countdown-amount"> %H</div> <div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_hours_txt']) . '</div></div></div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="sa-addons-countdown-section sa-addons-counter-minutes ' . $this->array_render('sa_cd_min_txt_sps', $style) . '"><div class="sa-addons-countdown-mid"> <div class="sa-addons-countdown-amount"> %M </div> <div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_min_txt']) . '</div> </div> </div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="sa-addons-countdown-section sa-addons-counter-seconds ' . $this->array_render('sa_cd_seco_txt_sps', $style) . '"> <div class="sa-addons-countdown-mid"><div class="sa-addons-countdown-amount"> %S</div> <div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_seco_txt']) . ' </div></div></div></div>\'));
+                  });';
+    return $jquery;;
+  }
+
+  public function default_render($style, $child, $admin)
+  {
+    echo ' <div class="sa-addons-count-down-container">
+              <div class="sa-addons-count-down-content">
+                                  
+              </div>      
+           </div>';
+  }
+
+  public function old_render()
+  {
+
+    $styledata = $this->dbdata;
+    $stylename = $styledata['style_name'];
+    $oxiid = $styledata['id'];
+    $stylefiles = explode('||#||', $styledata['css']);
+    $style = explode('|', $stylefiles[0]);
+    $css = '';
+    $jquery = 'jQuery(".oxi-addons-counter-' . $oxiid . '").countdown("' . $style[3] . ' ' . $style[5] . '").on("update.countdown", function(event) {
+                        var jQuerythis = jQuery(this).html(event.strftime(\'<div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="oxi-countdown-section oxi-addons-counter-days"><div class="oxi-countdown-mid"><div class="oxi-countdown-amount">%D</div><div class="oxi-countdown-period">' . $stylefiles[3] . '</div></div> </div> </div> <div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"> <div class="oxi-countdown-section oxi-addons-counter-hours"><div class="oxi-countdown-mid"><div class="oxi-countdown-amount"> %H</div> <div class="oxi-countdown-period">' . $stylefiles[5] . '</div></div></div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="oxi-countdown-section oxi-addons-counter-minutes"><div class="oxi-countdown-mid"> <div class="oxi-countdown-amount"> %M </div> <div class="oxi-countdown-period"> ' . $stylefiles[7] . '</div> </div> </div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="oxi-countdown-section oxi-addons-counter-seconds"> <div class="oxi-countdown-mid"><div class="oxi-countdown-amount"> %S</div> <div class="oxi-countdown-period">' . $stylefiles[9] . ' </div></div></div></div>\'));
+                      });';
+
+    echo '<div class="oxi-addons-container">
+              <div class="oxi-addons-row">
+                    <div class="oxi-addons-counter-' . $oxiid . '" ' . OxiAddonsAnimation($style, 63) . '>
+                        
+                    </div>
+               </div>
+          </div>';
+    $css .= '.oxi-addons-counter-' . $oxiid . ' .oxi-countdown-section{
+                    width:100%;
+                    float:left;
+                    padding: ' . OxiAddonsPaddingMarginSanitize($style, 7) . ';
+                  }
+                  .oxi-countdown-mid{
+                    width:100%;
+                    margin: 0 auto;
+                    display:block;
+                  }
+                  .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-amount{
+                    display: block;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex; 
+                    width: ' . $style[95] . 'px;
+                    height: ' . $style[95] . 'px;
+                    font-size:' . $style[67] . 'px;
+                    color:' . $style[71] . ';        
+                    ' . OxiAddonsBGImage($style, 103) . '
+                    ' . OxiAddonsFontSettings($style, 73) . '
+                    border-radius: ' . $style[99] . 'px;
+                    border-width: ' . OxiAddonsPaddingMarginSanitize($style, 107) . ';
+                    border-style:' . $style[123] . '; 
+                    border-color:' . $style[124] . ';
+                    margin: ' . OxiAddonsPaddingMarginSanitize($style, 79) . ';
+                    margin-left:auto;
+                    margin-right:auto;
+                  }
+                  .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-period{
+                    display: block;
+                    font-size:' . $style[135] . 'px;
+                    color:' . $style[139] . ';        
+                    ' . OxiAddonsFontSettings($style, 141) . '
+                    padding: ' . OxiAddonsPaddingMarginSanitize($style, 147) . ';
+                  }
+                @media only screen and (min-width : 669px) and (max-width : 993px){
+                  .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-section{                  
+                    padding: ' . OxiAddonsPaddingMarginSanitize($style, 8) . ';
+                  }                  
+                  .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-amount{                   
+                    width: ' . $style[96] . 'px;
+                    height: ' . $style[96] . 'px;
+                    font-size:' . $style[68] . 'px;    
+                    border-radius: ' . $style[100] . 'px;
+                    border-width: ' . OxiAddonsPaddingMarginSanitize($style, 108) . ';                   
+                    margin: ' . OxiAddonsPaddingMarginSanitize($style, 80) . ';     
+                         margin-left:auto;
+                    margin-right:auto;
+                  }
+                  .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-period{                   
+                    font-size:' . $style[136] . 'px;                   
+                    padding: ' . OxiAddonsPaddingMarginSanitize($style, 148) . ';
+                  }
+                }
+                @media only screen and (max-width : 668px){
+                .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-section{                  
+                    padding: ' . OxiAddonsPaddingMarginSanitize($style, 9) . ';
+                  }                  
+                  .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-amount{                   
+                    width: ' . $style[97] . 'px;
+                    height: ' . $style[97] . 'px;
+                    font-size:' . $style[69] . 'px;    
+                    border-radius: ' . $style[101] . 'px;
+                    border-width: ' . OxiAddonsPaddingMarginSanitize($style, 109) . ';                   
+                    margin: ' . OxiAddonsPaddingMarginSanitize($style, 81) . ';      
+                         margin-left:auto;
+                    margin-right:auto;
+                  }
+                  .oxi-addons-counter-' . $oxiid . ' .oxi-countdown-period{                   
+                    font-size:' . $style[137] . 'px;                   
+                    padding: ' . OxiAddonsPaddingMarginSanitize($style, 149) . ';
+                  }
+                }
+                ';
+    if ($style[203] == 'yes') {
+      $css .= '.oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-days .oxi-countdown-amount{
+                        color:' . $style[205] . ';    
+                        ' . OxiAddonsBGImage($style, 209) . '
+                        border-style:' . $style[213] . '; 
+                        border-color:' . $style[214] . ';
+                      }
+                      .oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-days .oxi-countdown-period{
+                        color:' . $style[207] . ';    
+                      }';
+    }
+    if ($style[249] == 'yes') {
+      $css .= '.oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-hours .oxi-countdown-amount{
+                        color:' . $style[251] . ';   
+                        ' . OxiAddonsBGImage($style, 255) . '
+                        border-style:' . $style[259] . '; 
+                        border-color:' . $style[260] . ';
+                      }
+                      .oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-hours .oxi-countdown-period{
+                        color:' . $style[253] . ';    
+                      }';
+    }
+    if ($style[295] == 'yes') {
+      $css .= '.oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-minutes .oxi-countdown-amount{
+                        color:' . $style[297] . '; 
+                        ' . OxiAddonsBGImage($style, 301) . '
+                        border-style:' . $style[305] . '; 
+                        border-color:' . $style[306] . ';
+                      }
+                      .oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-minutes .oxi-countdown-period{
+                        color:' . $style[299] . ';    
+                      }';
+    }
+    if ($style[341] == 'yes') {
+      $css .= '.oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-seconds .oxi-countdown-amount{
+                        color:' . $style[343] . ';  
+                        ' . OxiAddonsBGImage($style, 347) . '
+                        border-style:' . $style[351] . '; 
+                        border-color:' . $style[352] . ';
+                      }
+                      .oxi-addons-counter-' . $oxiid . ' .oxi-addons-counter-seconds .oxi-countdown-period{
+                        color:' . $style[345] . ';    
+                      }';
+    }
+
+    wp_add_inline_style('shortcode-addons-style', $css);
+    wp_enqueue_script('jquery.countdown.min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/jquery.countdown.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+    wp_add_inline_script('jquery.countdown.min', $jquery);
+  }
+}

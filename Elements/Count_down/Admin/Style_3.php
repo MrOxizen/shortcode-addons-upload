@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle
+class Style_3 extends AdminStyle
 {
 
     public function register_controls()
@@ -61,25 +61,25 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_responsive_control(
-            'sa_cd_padding',
+            'sa_cd_h_w',
             $this->style,
             [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
+                'label' => __('Height & Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 170,
                 ],
                 'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
                     '%' => [
                         'min' => 0,
-                        'max' => 50,
+                        'max' => 100,
                         'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
@@ -88,7 +88,128 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-container .sa-addons-count-down-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-mid' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_cd_border_r',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'separator' => TRUE,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 100,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-mid' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_cd_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'separator' => TRUE,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-section' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_cd_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'separator' => TRUE,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-section' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -97,15 +218,22 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::ANIMATION,
+                'selector' => [
+                    '{{WRAPPER}} ..sa-addons-count-down-content .sa-addons-countdown-section' => ''
+                ]
             ]
         );
 
         $this->end_controls_section();
+
+        $this->end_section_devider();
+
+        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Number Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => TRUE,
             ]
         );
         $this->add_control(
@@ -163,14 +291,11 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->end_controls_section();
-        $this->end_section_devider();
-
-        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Text Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => FALSE,
             ]
         );
         $this->add_control(
@@ -203,7 +328,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -306,6 +431,32 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+        $this->add_group_control(
+            'sa_cd_d_num_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'condition' => [
+                    'sa_cd_d_txt_sps' => 'shortcode-addons-count-number'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_d_num_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'condition' => [
+                    'sa_cd_d_txt_sps' => 'shortcode-addons-count-number'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
 
         $this->end_controls_section();
 
@@ -365,6 +516,32 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_hours_num_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'condition' => [
+                    'sa_cd_hours_txt_sps' => 's-a-count-hours'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_hours_num_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'condition' => [
+                    'sa_cd_hours_txt_sps' => 's-a-count-hours'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-mid' => ''
                 ],
             ]
         );
@@ -437,6 +614,32 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+        $this->add_group_control(
+            'sa_cd_min_num_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'condition' => [
+                    'sa_cd_min_txt_sps' => 's-a-count-minute'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_min_num_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'condition' => [
+                    'sa_cd_min_txt_sps' => 's-a-count-minute'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
 
         $this->end_controls_section();
         $this->start_controls_section(
@@ -499,6 +702,32 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_seco_num_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'condition' => [
+                    'sa_cd_seco_txt_sps' => 's-a-count-second'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-mid' => ''
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cd_seco_num_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'condition' => [
+                    'sa_cd_seco_txt_sps' => 's-a-count-second'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-mid' => ''
                 ],
             ]
         );
