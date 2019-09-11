@@ -127,7 +127,7 @@ class Style_8 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons-general', [
             'label' => esc_html__('General ', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
+            
                 ]
         );
 
