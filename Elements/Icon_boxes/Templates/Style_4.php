@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_4 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -42,20 +42,20 @@ class Style_1 extends Templates
                 $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
                 $endlink .= '</a>';
             }
-            echo'<div class="' . $this->column_render('sa_icon_box_col', $style) . '">
+            echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . '">
                     <div class="sa_addons_icon_boxes_container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
 
-                    echo $link;
+            echo $link;
 
-                    echo'<div class="sa_addons_icon_boxes_style_1">
+            echo '<div class="sa_addons_icon_boxes_style_4">
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '
                         </div>';
-                    echo $endlink;
+            echo $endlink;
 
-                if ($admin == 'admin') :
-                    echo'<div class="oxi-addons-admin-absulote">
+            if ($admin == 'admin') :
+                echo '<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
                                 <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
                             </div>
@@ -63,8 +63,8 @@ class Style_1 extends Templates
                                 <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
                             </div>
                         </div>';
-                endif;
-                echo'</div>
+            endif;
+            echo '</div>
                 </div>';
         }
     }
@@ -79,43 +79,40 @@ class Style_1 extends Templates
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
         $css = '';
-
         echo '<div class="oxi-addons-container">';
         echo '<div class="oxi-addons-row">';
         foreach ($listdata as $value) {
+            $linklast = $linkfirst = $heading = $content = $fontawesome = '';
             $data = explode('||#||', $value['files']);
             if ($data[7] != '') {
-                $linkfirst = '<a href="' . OxiAddonsUrlConvert($data[7]) . '" target="' . $styledata[177] . '">';
+                $linkfirst = '<a href="' . OxiAddonsUrlConvert($data[7]) . '" target="' . $styledata[203] . '">';
                 $linklast = '</a>';
             }
-            $icon = $heading = $content = '';
-
             if ($data[1] != '') {
-                $icon = '<div class="oxi-addons-icon-boxes-icon" ' . OxiAddonsAnimation($styledata, 173) . '>
-                        ' . oxi_addons_font_awesome($data[1]) . '
-                    </div>';
+                $fontawesome = '<div class="oxi-addons-icon-boxes-icon" ' . OxiAddonsAnimation($styledata, 173) . '>
+                                ' . oxi_addons_font_awesome($data[1]) . '
+                            </div>';
             }
             if ($data[3] != '') {
                 $heading = '<div class="oxi-addons-icon-boxes-heading">
-                        ' . OxiAddonsTextConvert($data[3]) . '
-                    </div>';
+                            ' . OxiAddonsTextConvert($data[3]) . '
+                        </div>';
             }
             if ($data[5] != '') {
                 $content = '<div class="oxi-addons-icon-boxes-content">
                           ' . OxiAddonsTextConvert($data[5]) . '
                         </div>';
             }
-
-            echo '<div class="' . OxiAddonsItemRows($styledata, 179) . '">';
-            echo $linkfirst;
-            echo '<div class="oxi-addons-icon-boxes-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 89) . '>
-                  <div class="oxi-addons-icon-boxes-' . $oxiid . '-data">
-                        ' . $icon . '
-                        ' . $heading . '
-                        ' . $content . '
-                  </div>
-              </div>';
-            echo $linklast;
+            echo '<div class="' . OxiAddonsItemRows($styledata, 205) . '">';
+                echo $linkfirst;
+                echo '<div class="oxi-addons-icon-boxes-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 89) . '>
+                        <div class="oxi-addons-icon-boxes-' . $oxiid . '-data">
+                            ' . $fontawesome . '
+                            ' . $heading . '
+                            ' . $content . '
+                        </div>
+                    </div>';
+                echo $linklast;
             echo '</div>';
         }
         echo '</div>';
@@ -130,7 +127,8 @@ class Style_1 extends Templates
                 }
                 .oxi-addons-icon-boxes-' . $oxiid . '-data{
                     width: 100%;
-                    float:left; 
+                    float:left;
+                    position:relative; 
                     ' . OxiAddonsBGImage($styledata, 11) . '
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 35) . ';
                     border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 15) . ';
@@ -141,18 +139,33 @@ class Style_1 extends Templates
                 }
                 .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-boxes-icon{
                     width: 100%;
-                    float:left;
+                    position:absolute;
+                    top:-' . ($styledata[179] / 2) . 'px;
+                    left:0;
+                    height:' . $styledata[179] . 'px;
                     text-align: ' . $styledata[99] . ';
+                    padding: 0 ' . $styledata[63] . 'px 0 ' . $styledata[59] . 'px;
                 }
                 .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-icons{
-                   display:inline-block;
+                   width:' . $styledata[179] . 'px;
+                   height:' . $styledata[179] . 'px;
+                   line-height:' . $styledata[179] . 'px;                   
+                   background:' . $styledata[177] . ';
+                   display: inline-flex;
+                   justify-content: center;
+                   align-items: center;  
+                   text-align:center;
                    color: ' . $styledata[97] . ';
                    font-size: ' . $styledata[93] . 'px;
-                   padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 101) . ';   
+                   border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 187) . ';
+                   border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 101) . ';
+                   border-style:' . $styledata[183] . '; 
+                   border-color:' . $styledata[184] . ';   
                 }
                 .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-boxes-heading{
                    width: 100%;
                    float:left;
+                   margin-top:' . ($styledata[179] / 2) . 'px;
                    color: ' . $styledata[121] . ';
                    font-size: ' . $styledata[117] . 'px;
                    ' . OxiAddonsFontSettings($styledata, 123) . '    
@@ -174,11 +187,21 @@ class Style_1 extends Templates
                     .oxi-addons-icon-boxes-' . $oxiid . '-data{ 
                         border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 36) . ';
                         border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 16) . ';
-                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 52) . '; 
+                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 52) . ';
+                    
+                    }
+                    .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-boxes-icon{                   
+                        top:-' . ($styledata[180] / 2) . 'px;
+                        height:' . $styledata[180] . 'px;
+                        padding: 0 ' . $styledata[64] . 'px 0 ' . $styledata[60] . 'px;
                     }
                     .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-icons{
-                       font-size: ' . $styledata[94] . 'px;
-                       padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 102) . ';   
+                        width:' . $styledata[180] . 'px;
+                        height:' . $styledata[180] . 'px;
+                        line-height:' . $styledata[180] . 'px;
+                        font-size: ' . $styledata[94] . 'px;
+                        border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 188) . ';
+                        border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 102) . ';
                     }
                     .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-boxes-heading{
                       
@@ -198,12 +221,22 @@ class Style_1 extends Templates
                     .oxi-addons-icon-boxes-' . $oxiid . '-data{ 
                         border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 37) . ';
                         border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 17) . ';
-                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 53) . '; 
+                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 53) . ';
+                    
+                    }
+                    .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-boxes-icon{                   
+                        top:-' . ($styledata[181] / 2) . 'px;
+                        height:' . $styledata[181] . 'px;
+                        padding: 0 ' . $styledata[65] . 'px 0 ' . $styledata[61] . 'px;
                     }
                     .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-icons{
-                       font-size: ' . $styledata[95] . 'px;
-                       padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 103) . ';   
-                    }
+                        width:' . $styledata[181] . 'px;
+                        height:' . $styledata[181] . 'px;
+                        line-height:' . $styledata[181] . 'px;
+                        font-size: ' . $styledata[95] . 'px;
+                        border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 189) . ';
+                        border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 103) . ';
+                }
                     .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-boxes-heading{
                       
                        font-size: ' . $styledata[119] . 'px;
@@ -215,6 +248,7 @@ class Style_1 extends Templates
                     } 
                 }
                 ';
+
         $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons-icon-boxes-' . $oxiid . '-data"));}, 500);';
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $js);
