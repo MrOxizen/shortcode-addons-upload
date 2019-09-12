@@ -42,18 +42,18 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa-bl-g-max-width', $this->style, [
+                'sa-bl-g-max-width-control', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
-            //   'loader' => TRUE,
+            'loader' => TRUE,
             'default' => '',
             'options' => [
                 'auto' => [
                     'title' => __('Auto', SHORTCODE_ADDOONS),
                 ],
                 'max-width' => [
-                    'title' => __('Max Width', SHORTCODE_ADDOONS),
+                    'title' => __('Daynamic', SHORTCODE_ADDOONS),
                 ],
             ],
                 ]
@@ -87,7 +87,7 @@ class Style_1 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addons-bullet-list-area .sa-bl-width-auto' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
             'condition' => [
-                'sa-bl-g-max-width-max-width' => 'max-width'
+                'sa-bl-g-max-width-control' => 'max-width'
             ]
                 ]
         );
@@ -429,10 +429,10 @@ class Style_1 extends AdminStyle {
                 ]
         );
 
-        $this->add_control(
+        $this->add_group_control(
                 'sa_bl_url', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
+            'type' => Controls::URL,
             'default' => '',
             'placeholder' => 'https://www.yoururl.com',
                 ]
