@@ -24,7 +24,7 @@ class Style_6 extends AdminStyle {
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons-heading-text', [
-            'label' => esc_html__('Heading Text', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Text', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
@@ -73,6 +73,13 @@ class Style_6 extends AdminStyle {
                 'h5' => __('Heading 5', SHORTCODE_ADDOONS),
                 'h6' => __('Heading 6', SHORTCODE_ADDOONS),
             ],
+                ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons-general', [
+            'label' => esc_html__('General ', SHORTCODE_ADDOONS),
+           
                 ]
         );
 
@@ -259,8 +266,5 @@ class Style_6 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-    public function modal_opener() {
-        return false;
-    }
-
+ 
 }

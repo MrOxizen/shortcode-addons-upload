@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_4
+ * Description of Style_11
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_4 extends AdminStyle {
+class Style_11 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_tabs(
@@ -24,7 +24,7 @@ class Style_4 extends AdminStyle {
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons-heading-text', [
-            'label' => esc_html__('General', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Text', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
@@ -33,7 +33,7 @@ class Style_4 extends AdminStyle {
                 'sa_head_text', $this->style, [
             'label' => __('Heading Text', SHORTCODE_ADDOONS),
             'type' => Controls::TEXTAREA,
-            'default' => 'This is Heading Text',
+            'default' => 'Heading',
             'placeholder' => 'This is Heading Text',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => '',
@@ -44,7 +44,7 @@ class Style_4 extends AdminStyle {
                 'sa_sub_head_text', $this->style, [
             'label' => __('Sub Text', SHORTCODE_ADDOONS),
             'type' => Controls::TEXTAREA,
-            'default' => 'This is Sub-heading Text',
+            'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicin elit sed.Lorem ipsum dolor sit amet, consectetur adipisicin elit sed.Lorem ipsum dolor sit amet, consectetur adipisicin elit sed.',
             'placeholder' => 'This is Sub-heading Text',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => '',
@@ -68,7 +68,13 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-   
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons-general', [
+            'label' => esc_html__('General', SHORTCODE_ADDOONS),
+           
+                ]
+        );
         $this->add_responsive_control(
                 'sa_head_margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -99,7 +105,14 @@ class Style_4 extends AdminStyle {
             ]
                 ]
         );
-
+        $this->add_group_control(
+                'sa_head_animation', $this->style, [
+            'type' => Controls::ANIMATION,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading-container' => ''
+            ],
+                ]
+        );
         $this->end_controls_section();
 
         $this->end_section_devider();
@@ -116,9 +129,20 @@ class Style_4 extends AdminStyle {
                 'sa_head_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#6fab30',
+            'default' => '#1f1f1f',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_head_bg_color', $this->style, [
+            'label' => __('Background Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'oparetor' => 'RGB',
+            'default' => 'rgba(60, 217, 123, 1)',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'background-color:{{VALUE}};'
             ],
                 ]
         );
@@ -126,13 +150,20 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
-            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text ' => '',
             ],
                 ]
         );
-  
+
+        $this->add_group_control(
+                'sa_head_border_btm', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => '',
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_head_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -191,7 +222,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-       
+
         $this->add_responsive_control(
                 'sa_sub_head_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -224,25 +255,10 @@ class Style_4 extends AdminStyle {
         );
 
         $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons-animation', [
-            'label' => esc_html__('Animation ', SHORTCODE_ADDOONS),
-            'showing' => False,
-                ]
-        );
-        $this->add_group_control(
-                'sa_head_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
-            ],
-                ]
-        );
-        $this->end_controls_section();
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
 
 
 }

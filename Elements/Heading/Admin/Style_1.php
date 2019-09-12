@@ -70,7 +70,7 @@ class Style_1 extends AdminStyle {
                 ],
                 'center' => [
                     'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' =>'fa fa-align-center',
+                    'icon' => 'fa fa-align-center',
                 ],
                 'right' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
@@ -194,10 +194,6 @@ class Style_1 extends AdminStyle {
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
-    }
-
-    public function modal_opener() {
-        return false;
     }
 
 }

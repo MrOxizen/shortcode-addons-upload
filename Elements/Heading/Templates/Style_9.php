@@ -21,56 +21,26 @@ class Style_9 extends Templates {
 //        print_r($style);
 //        echo '</pre>';
 //      print_r($this->media_render('sa_head_image',$style)) ;
-//        $heading = $content = $WM = '';
-//
-//        if ($style['sa_head_heading_tag'] != '') {
-//            $heading = '<' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading-text"> 
-//                            ' . $this->text_render($style['sa_head_text']) . '
-//                        </' . $style['sa_head_heading_tag'] . '>';
-//        }
-//        if ($style['sa_sub_heading_tag']) {
-//            $content = ' <' . $style['sa_sub_heading_tag'] . '  class="oxi-addons-sub-heading-text"> 
-//                            ' . $this->text_render($style['sa_sub_head_text']) . '
-//                        </' . $style['sa_sub_heading_tag'] . '>';
-//        }
-//        
-//        if ($style['sa_head_heading_alignment'] == 'left') {
-//            $transformdata = "   
-//                top: 50%;
-//                left: 0%;
-//                transform: translateX(-0%) translateY(-50%);";
-//        } else if ($style['sa_head_heading_alignment'] == 'center') {
-//            $transformdata = " 
-//                top: 50%;
-//                left: 50%;
-//                transform: translateX(-50%) translateY(-50%);
-//                ";
-//        } else {
-//            $transformdata = "  
-//           
-//              
-//                top: 50%;
-//                right: 0%;
-//                transform: translateY(-50%);";
-//        }
-//        if ($style['sa_sub_head_WM_text']) {
-//            $WM = '<div class="oxi-addons-heading-WM"  style="' . $transformdata . '">
-//                        ' . $style['sa_sub_head_WM_text'] . '
-//                  
-//                    </div>';
-//        }
-//        
-//        echo '<div class="OxiAddons-Heading" >
-//                    <div class="oxi-addons-heading-container">
-//                     ' . $WM . '
-//                        <div class="oxi-addons-sub-heading">
-//                            ' . $content . '
-//                        </div>
-//                        <div class="oxi-addons-heading">
-//                            ' . $heading . '
-//                        </div>
-//                   </div>
-//            </div>';
+
+        if ($style['sa_head_text'] != '') {
+            $heading = '<' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading-text"> 
+                              ' . $this->text_render($style['sa_head_text']) . '
+                        </' . $style['sa_head_heading_tag'] . '>';
+        }
+        if ($style['sa_sub_heading_tag']) {
+            $content = ' <' . $style['sa_sub_heading_tag'] . '  class="oxi-addons-sub-heading-text"> 
+                            ' . $this->text_render($style['sa_sub_head_text']) . '
+                        </' . $style['sa_sub_heading_tag'] . '>';
+        }
+
+        echo ' <div class="oxi-addons-heading-container">
+                    <div class="oxi-addons-sub-heading">
+                        ' . $content . '
+                    </div>
+                    <div class="oxi-addons-heading">
+                        ' . $heading . '
+                    </div>
+                </div>';
     }
 
     public function old_render() {
@@ -248,7 +218,7 @@ class Style_9 extends Templates {
                         padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 9) . ';
                     }
                 }';
-              wp_add_inline_style('shortcode-addons-style', $css);
+        wp_add_inline_style('shortcode-addons-style', $css);
     }
 
 }

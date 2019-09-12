@@ -204,8 +204,6 @@ class Style_2 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-    public function modal_opener() {
-        return false;
-    }
+
 
 }

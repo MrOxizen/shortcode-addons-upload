@@ -24,7 +24,7 @@ class Style_5 extends AdminStyle {
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons-heading-text', [
-            'label' => esc_html__('Heading Text', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Text', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
@@ -68,7 +68,16 @@ class Style_5 extends AdminStyle {
             ],
                 ]
         );
-   
+
+
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons-general', [
+            'label' => esc_html__('General ', SHORTCODE_ADDOONS),
+           
+                ]
+        );
         $this->add_group_control(
                 'sa_head_container_border_btm', $this->style, [
             'type' => Controls::BORDER,
@@ -107,7 +116,6 @@ class Style_5 extends AdminStyle {
             ]
                 ]
         );
-
         $this->end_controls_section();
 
         $this->end_section_devider();
@@ -145,7 +153,6 @@ class Style_5 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
-                    
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text ' => '',
@@ -218,7 +225,7 @@ class Style_5 extends AdminStyle {
             ],
                 ]
         );
-       
+
         $this->add_responsive_control(
                 'sa_sub_head_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -270,8 +277,5 @@ class Style_5 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-    public function modal_opener() {
-        return false;
-    }
 
 }
