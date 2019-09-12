@@ -20,6 +20,7 @@ class Style_4 extends Templates {
         if ($style['sa-bl-g-max-width-control'] == 'max-width') {
             $class = 'sa-bl-width-auto';
         }
+        
         echo ' <div class="oxi-addons-main-wrapper-full-area ">
                         <div class="oxi-icon-last ' . $class . '">';
                         foreach ($child as $v) {
@@ -27,21 +28,19 @@ class Style_4 extends Templates {
                                
                                 echo '<div class=" oxi-info-banner-style-4-static ">
                                         <div class="oxi-addons-content-boxes-list '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'">
-                                            <div class="oxi-addons-content-boxes-main">                                                  
-                                                <div class="oxi-addons-box">
-                                                    <div class="oxi-addons-content-boxes-icon">
-                                                        <i class="' . $value['sa_bl_four_icon'] . '"></i>
-                                                    </div>
-                                                    <div class="oxi-addons-header-content">  
-                                                        <div class="oxi-addons-content-boxes-heading">
-                                                                ' . $value['sa_bl_four_text'] . '
-                                                        </div>
-                                                        <div class="oxi-addons-content-boxes-content">
-                                                            ' . $value['sa_bl_four_textarea'] . '
-                                                        </div>
+                                            <div class="oxi-addons-box">
+                                                <div class="oxi-addons-content-boxes-icon">
+                                                    <i class="' . $value['sa_bl_four_icon'] . '"></i>
                                                 </div>
-                                            </div>
-                                        </div>';
+                                                <div class="oxi-addons-header-content">  
+                                                    <div class="oxi-addons-content-boxes-heading">
+                                                            ' . $value['sa_bl_four_text'] . '
+                                                    </div>
+                                                    <div class="oxi-addons-content-boxes-content">
+                                                        ' . $value['sa_bl_four_textarea'] . '
+                                                    </div>
+                                                </div>
+                                            </div>';
 
                                 if ($admin == 'admin'):
                                     echo '  <div class="oxi-addons-admin-absulote">
@@ -57,11 +56,8 @@ class Style_4 extends Templates {
                                     </div>';
                             }
                             
-        echo '      
-                </div>
-            </div>
-            
-        ';
+        echo '  </div>
+            </div>';
     }
 
     public function old_render() {

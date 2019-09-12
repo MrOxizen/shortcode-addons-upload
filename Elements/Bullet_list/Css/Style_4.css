@@ -28,17 +28,6 @@
      float: left
  }
  
- .oxi-addons-content-boxes-list .oxi-addons-content-boxes-main {
-     width: 100%;
-     float: left;
-     background: #fff;
-     border: 0px solid;
-     border-color: #ddd;
-     border-radius: 5px 5px 5px 5px;
-     box-shadow: 0px 0px 0px 0px;
-     padding: 10px 10px 10px 10px
- }
- 
  .oxi-addons-content-boxes-list .oxi-addons-right-side {
      width: 100%;
      float: left
@@ -102,11 +91,9 @@
      transform: translateX(-50%)translateY(-100%);
      top: 25%;
      width: 2px;
-     border-left: 2px solid;
      height: 100%;
      display: block;
      z-index: 1;
-     border-color: #bababa
  }
  
  .oxi-addons-main-wrapper-full-area .oxi-info-banner-style-4-static:first-child .oxi-addons-content-boxes-icon:before {}
@@ -177,10 +164,6 @@
      .oxi-addons-content-boxes-list {
          padding: 10px 10px 10px 10px
      }
-     .oxi-addons-content-boxes-list .oxi-addons-content-boxes-main {
-         border-radius: px px px px;
-         padding: 10px 10px 10px 10px
-     }
      .oxi-addons-main-wrapper-full-area .oxi-addons-content-boxes-heading {
          font-size: 20px;
          padding: 5px 20px 5px 0px
@@ -213,10 +196,6 @@
          padding: px px px px
      }
      .oxi-addons-content-boxes-list {
-         padding: 10px 10px 10px 10px
-     }
-     .oxi-addons-content-boxes-list .oxi-addons-content-boxes-main {
-         border-radius: px px px px;
          padding: 10px 10px 10px 10px
      }
      .oxi-addons-main-wrapper-full-area .oxi-addons-content-boxes-heading {
