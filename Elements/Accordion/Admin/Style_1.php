@@ -44,10 +44,8 @@ class Style_1 extends AdminStyle {
         );
         $this->add_group_control(
                 'sa-ac-column', $this->style, [
-            'type' => Controls::COLUMN,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-ac-template-1' => '',
-            ],
+            'type' => Controls::URL,
+            'condition' => ['sa-ac-icon-position' => 'left']
                 ]
         );
         $this->add_control(
@@ -229,18 +227,32 @@ class Style_1 extends AdminStyle {
             'default' => '#787878',
             //  'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-ac-template-1-heading .heading-data' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-ac-template-1-heading .heading-data' => 'color:{{VALUE}};'
             ],
                 ]
         );
         $this->add_group_control(
                 'sa-ac-title-bg', $this->style, [
             'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}}' => ''
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa-ac-co-bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}}:hover' => ''
+            ],
                 ]
         );
         $this->add_group_control(
                 'sa-ac-title-br', $this->style, [
             'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-ac-template-1-heading' => ''
+            ],
                 ]
         );
         $this->end_controls_tab();
@@ -257,8 +269,11 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-ac-title-h-bg', $this->style, [
+                'sa-ac-title-h-BG', $this->style, [
             'type' => Controls::BACKGROUND,
+            'selector' => [
+            // '{{WRAPPER}} .oxi-addons-ac-template-1-heading:hover' => ''
+            ],
                 ]
         );
         $this->add_group_control(
@@ -317,16 +332,25 @@ class Style_1 extends AdminStyle {
                     'step' => .1,
                 ],
             ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-ac-template-1-heading' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
                 ]
         );
         $this->add_group_control(
                 'sa-ac-title-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-ac-template-1-heading' => ''
+            ],
                 ]
         );
         $this->add_group_control(
                 'sa-ac-title-bx-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}}' => ''
+            ],
                 ]
         );
         $this->add_responsive_control(
@@ -809,7 +833,7 @@ class Style_1 extends AdminStyle {
                     <h4 class="modal-title">Accordions Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div cecholass="modal-body">';
+                <div class="modal-body">';
 
         $this->add_control(
                 'sa_el_initial_open', $this->style, [
