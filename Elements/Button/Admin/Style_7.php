@@ -31,9 +31,7 @@ class Style_7 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn7 .oxi-button-btn7' => ''
-            ],
+            'loader' => TRUE,
                 ]
         );
         $this->add_group_control(

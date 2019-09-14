@@ -31,9 +31,7 @@ class Style_4 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn4 .oxi-button-btn4' => ''
-            ],
+            'loader' => TRUE,
                 ]
         );
 

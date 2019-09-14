@@ -21,8 +21,6 @@ and open the template in the editor.
     cursor: pointer;
     z-index: 1;
     padding: 10px 15px 10px 15px;
-    width: 230px;
-    max-width: 100%;
     background: rgba(33, 33, 33, 1.00);
     border-width: 2px 2px 2px 2px;
     border-color: #757575;
