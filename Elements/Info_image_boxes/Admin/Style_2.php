@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -205,6 +205,7 @@ class Style_1 extends AdminStyle {
                 'sa_info_image_hover_border_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
+            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',
@@ -265,22 +266,22 @@ class Style_1 extends AdminStyle {
         );
         $this->add_control(
                 'sa_info_image_img_alignment', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
+            'label' => __('Vertical Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
             'default' => 'center',
             'options' => [
-                'flex-start' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
+                'top' => [
+                    'title' => __('Top', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-sort-amount-up',
                 ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
+                'middle' => [
+                    'title' => __('Middle', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-exchange-alt',
                 ],
-                'flex-end' => [
+                'bottom' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
+                    'icon' => 'fas fa-sort-amount-down',
                 ],
             ],
             'selector' => [
@@ -288,6 +289,28 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
+         $this->add_control(
+                'sa_info_image_img_alignment', $this->style, [
+            'label' => __('Vertical Position', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center',
+            'options' => [
+                'sa_info_image_img_alignment_left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
+                ],
+                'sa_info_image_img_alignment_right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+            ],
+                ]
+        );
+
 
         $this->add_group_control(
                 'sa_info_image_img_bor', $this->style, [
@@ -579,7 +602,7 @@ class Style_1 extends AdminStyle {
                     ],
                 ]
         );
-   
+     
         echo '</div>';
     }
 

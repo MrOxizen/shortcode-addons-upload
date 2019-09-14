@@ -19,14 +19,14 @@
     box-shadow: 0px 10px 55px 5px rgba(137, 173, 255, 0.35);
 }
 
-.oxi-addons-main-wrapper .oxi-addons-image-main {
+.oxi-addons-image-main {
     width: 100%;
     float: left;
     display: flex;
     justify-content: center
 }
 
-.oxi-addons-main-wrapper .oxi-addons-image-main .oxi-addons-img {
+.oxi-addons-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,12 +40,12 @@
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-main-wrapper .oxi-addons-main-content {
+.oxi-addons-main-content {
     width: 100%;
     float: left
 }
 
-.oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-heading {
+.oxi-addons-heading {
     font-size: 28px;
     font-family: "Lato";
     font-weight: 700;
@@ -59,13 +59,13 @@
     float: left
 }
 
-.oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-heading span {
+.oxi-addons-heading span {
     font-size: 26px;
     color: #006eeb;
     font-weight: bold
 }
 
-.oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-details {
+.oxi-addons-details {
     font-size: 18px;
     font-family: "Roboto";
     font-weight: 100;
@@ -87,20 +87,20 @@
         border-radius: 0px 0px 0px 0px;
         padding: 20px 10px 40px 10px
     }
-    .oxi-addons-main-wrapper .oxi-addons-image-main .oxi-addons-img {
+    .oxi-addons-img {
         width: 78px;
         height: 104px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-heading {
+    .oxi-addons-heading {
         font-size: 28px;
         padding: 9px 9px 9px 9px
     }
-    .oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-heading span {
+    .oxi-addons-heading span {
         font-size: 26px
     }
-    .oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-details {
+    .oxi-addons-details {
         font-size: 18px;
         padding: 10px 10px 10px 10px
     }
@@ -114,20 +114,20 @@
         border-radius: 0px 0px 0px 0px;
         padding: 20px 10px 40px 10px
     }
-    .oxi-addons-main-wrapper .oxi-addons-image-main .oxi-addons-img {
+    .oxi-addons-img {
         width: 78px;
         height: 104px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-heading {
+    .oxi-addons-heading {
         font-size: 28px;
         padding: 9px 9px 9px 9px
     }
-    .oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-heading span {
+    .oxi-addons-heading span {
         font-size: 26px
     }
-    .oxi-addons-main-wrapper .oxi-addons-main-content .oxi-addons-details {
+    .oxi-addons-details {
         font-size: 18px;
         padding: 10px 10px 10px 10px
     }
