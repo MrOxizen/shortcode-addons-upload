@@ -1,0 +1,9 @@
+.oxi_addons__drop_caps_main {
+    display: inline-block;  
+   float: left;
+}
+.oxi_addons__text {
+    color: #FF7777;
+    font-size: 22px;
+     padding: 5px;
+}

@@ -48,12 +48,14 @@ class Style_1 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
+
         $this->add_control(
             'sa_cd_date_time',
             $this->style,
             [
                 'label' => __('Date', SHORTCODE_ADDOONS),
                 'type' => Controls::DATE_TIME,
+                'default' => '2022-01-01T01:00',
                 'time' => TRUE,
             ]
         );
@@ -86,7 +88,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .class .class' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-container .sa-addons-count-down-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -112,7 +114,10 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#db3328',
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                ],
             ]
         );
         $this->add_group_control(
@@ -120,6 +125,9 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => ''
+                ],
             ]
         );
         $this->add_responsive_control(
@@ -130,7 +138,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -150,7 +158,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .class .class' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -171,7 +179,10 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#545454',
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                ],
             ]
         );
         $this->add_group_control(
@@ -179,6 +190,9 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-period' => ''
+                ],
             ]
         );
         $this->add_responsive_control(
@@ -189,7 +203,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -209,7 +223,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .class .class' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-period' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -244,6 +258,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
+                'default' => 'Days',
+                'loader' => TRUE,
                 'placeholder' => 'Days',
             ]
         );
@@ -252,20 +268,12 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Separate Settings', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT,
-                'default' => 'no',
-                'options' => [
-                    'yes' => [
-                        'title' => __('Yes', SHORTCODE_ADDOONS),
-                    ],
-                    'no' => [
-                        'title' => __('No', SHORTCODE_ADDOONS),
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .class .class' => 'text-align:{{VALUE}};'
-                ],
+                'type' => Controls::SWITCHER,
+                'default' => '',
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'shortcode-addons-count-number',
             ]
         );
         $this->add_control(
@@ -274,10 +282,13 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Number Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#f29993',
                 'condition' => [
-                    'sa_cd_d_txt_sps' => 'yes'
-                ]
+                    'sa_cd_d_txt_sps' => 'shortcode-addons-count-number'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                ],
             ]
         );
         $this->add_control(
@@ -286,10 +297,13 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#545454',
                 'condition' => [
-                    'sa_cd_d_txt_sps' => 'yes'
-                ]
+                    'sa_cd_d_txt_sps' => 'shortcode-addons-count-number'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                ],
             ]
         );
 
@@ -307,6 +321,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
+                'default' => 'Hours',
+                'loader' => TRUE,
                 'placeholder' => 'Hours',
             ]
         );
@@ -315,20 +331,11 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Separate Settings', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT,
-                'default' => 'no',
-                'options' => [
-                    'yes' => [
-                        'title' => __('Yes', SHORTCODE_ADDOONS),
-                    ],
-                    'no' => [
-                        'title' => __('No', SHORTCODE_ADDOONS),
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .class .class' => 'text-align:{{VALUE}};'
-                ],
+                'type' => Controls::SWITCHER,
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 's-a-count-hours',
             ]
         );
         $this->add_control(
@@ -337,10 +344,13 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Number Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#f29993',
                 'condition' => [
-                    'sa_cd_hours_txt_sps' => 'yes'
-                ]
+                    'sa_cd_hours_txt_sps' => 's-a-count-hours'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                ],
             ]
         );
         $this->add_control(
@@ -349,10 +359,13 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#545454',
                 'condition' => [
-                    'sa_cd_hours_txt_sps' => 'yes'
-                ]
+                    'sa_cd_hours_txt_sps' => 's-a-count-hours'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                ],
             ]
         );
 
@@ -374,40 +387,39 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
+                'default' => 'Minutes',
+                'loader' => TRUE,
                 'placeholder' => 'Minutes',
             ]
         );
+
         $this->add_control(
             'sa_cd_min_txt_sps',
             $this->style,
             [
                 'label' => __('Separate Settings', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT,
-                'default' => 'no',
-                'options' => [
-                    'yes' => [
-                        'title' => __('Yes', SHORTCODE_ADDOONS),
-                    ],
-                    'no' => [
-                        'title' => __('No', SHORTCODE_ADDOONS),
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .class .class' => 'text-align:{{VALUE}};'
-                ],
+                'type' => Controls::SWITCHER,
+                'default' => '',
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 's-a-count-minute',
             ]
         );
+
         $this->add_control(
             'sa_cd_min_num_color',
             $this->style,
             [
                 'label' => __('Number Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#f29993',
                 'condition' => [
-                    'sa_cd_min_txt_sps' => 'yes'
-                ]
+                    'sa_cd_min_txt_sps' => 's-a-count-minute'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                ],
             ]
         );
         $this->add_control(
@@ -416,10 +428,13 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#545454',
                 'condition' => [
-                    'sa_cd_min_txt_sps' => 'yes'
-                ]
+                    'sa_cd_min_txt_sps' => 's-a-count-minute'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                ],
             ]
         );
 
@@ -437,40 +452,39 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
+                'default' => 'Seconds',
+                'loader' => TRUE,
                 'placeholder' => 'Seconds',
             ]
         );
+
         $this->add_control(
             'sa_cd_seco_txt_sps',
             $this->style,
             [
                 'label' => __('Separate Settings', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT,
-                'default' => 'no',
-                'options' => [
-                    'yes' => [
-                        'title' => __('Yes', SHORTCODE_ADDOONS),
-                    ],
-                    'no' => [
-                        'title' => __('No', SHORTCODE_ADDOONS),
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .class .class' => 'text-align:{{VALUE}};'
-                ],
+                'type' => Controls::SWITCHER,
+                'default' => '',
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 's-a-count-second',
             ]
         );
+
         $this->add_control(
             'sa_cd_seco_num_color',
             $this->style,
             [
                 'label' => __('Number Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#f29993',
                 'condition' => [
-                    'sa_cd_seco_txt_sps' => 'yes'
-                ]
+                    'sa_cd_seco_txt_sps' => 's-a-count-second'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                ],
             ]
         );
         $this->add_control(
@@ -479,10 +493,13 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Text Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#545454',
                 'condition' => [
-                    'sa_cd_seco_txt_sps' => 'yes'
-                ]
+                    'sa_cd_seco_txt_sps' => 's-a-count-second'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                ],
             ]
         );
 
@@ -490,46 +507,5 @@ class Style_1 extends AdminStyle
 
         $this->end_section_devider();
         $this->end_section_tabs();
-    }
-
-    public function modal_opener()
-    {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div cecholass="modal-body">';
-        $this->add_control(
-            'sa_el_text',
-            $this->style,
-            [
-                'label' => __('Title', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Lorem Ipsum is simply dummy text',
-                'placeholder' => 'Lorem Ipsum is simply dummy text',
-            ]
-        );
-
-        $this->add_control(
-            'sa_el_content',
-            $this->style,
-            [
-                'label' => __('Content', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
-                'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-            ]
-        );
-        echo '</div>';
     }
 }

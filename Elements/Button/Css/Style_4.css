@@ -1,0 +1,210 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addons-align-btn4 {
+    text-align: center
+}
+
+.oxi-addons-align-btn4 .oxi-button-btn4 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: auto;
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    margin: 0px 0px 0px 0px;
+    color: #000000;
+    background: rgba(163, 206, 247, 1.00);
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0px;
+    text-align: center;
+    transition:  .5s ease, -webkit-transform .2s ease;
+    transition:  .5s ease, transform .2s ease;
+    transition:  .5s ease, transform .2s ease, -webkit-transform .2s ease;
+    will-change: transform;
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);	
+}
+
+.oxi-addons-align-btn4 .oxi-button-btn4.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+
+
+.oxi-addons-align-btn4 .sa-button-text{
+    transition: none;
+}
+
+.oxi-button-btn4:before,
+.oxi-button-btn4:after {
+    content: "";
+    position: absolute;
+    transition: inherit;
+    z-index: -1
+}
+
+.oxi-button-btn4:hover {
+    color: #ffffff;
+    transition-delay: .6s
+}
+
+.oxi-button-btn4:hover:before {
+    transition-delay: 0s
+}
+
+.oxi-button-btn4:hover:after {
+    background: rgba(126, 90, 199, 1);
+    transition-delay: .4s
+}
+
+
+/*Position Top*/
+
+.oxi-addons-align-btn4 .sa-btn-effect-top:before, 
+.oxi-addons-align-btn4 .sa-btn-effect-top:after {
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+
+.oxi-addons-align-btn4 .sa-btn-effect-top:before {
+    bottom: 0;	
+    border: 3px solid rgba(126, 90, 199, 1);
+    border-top: 0;
+    border-bottom: 0;
+    
+}
+.oxi-addons-align-btn4 .sa-btn-effect-top:after {
+    top: 0;
+    height: 0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-top:hover:before,
+.oxi-addons-align-btn4 .sa-btn-effect-top:hover:after {
+    height: 100%;
+}
+
+/*Position Left*/
+
+.oxi-addons-align-btn4 .sa-btn-effect-left:before, 
+.oxi-addons-align-btn4 .sa-btn-effect-left:after {
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+
+.oxi-addons-align-btn4 .sa-btn-effect-left:before {
+    right: 0;
+    border: 3px solid rgba(126, 90, 199, 1);
+    border-left: 0;
+    border-right: 0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-left:after {
+    left: 0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-left:hover:before,
+.oxi-addons-align-btn4 .sa-btn-effect-left:hover:after {
+    width: 100%;
+}
+
+/*Position Right*/
+
+.oxi-addons-align-btn4 .sa-btn-effect-right:before, 
+.oxi-addons-align-btn4 .sa-btn-effect-right:after {
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+
+.oxi-addons-align-btn4 .sa-btn-effect-right:before {
+    left: 0;
+    border: 3px solid rgba(126, 90, 199, 1);
+    border-left: 0;
+    border-right: 0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-right:after {
+    right: 0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-right:hover:before,
+.oxi-addons-align-btn4 .sa-btn-effect-right:hover:after {
+    width: 100%;
+}
+
+/*Position Center*/
+
+.oxi-addons-align-btn4 .sa-btn-effect-center:before {
+    top: 0;
+    left: 50%;
+    height:100%;
+    width:0;
+    border: 3px solid rgba(126, 90, 199, 1);
+    border-left: 0;
+    border-right: 0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-center:after {
+    left: 0;
+    bottom:0;
+    height:0;
+    width:100%;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-center:hover:before{
+    left:0;
+    width:100%;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-center:hover:after {
+    height: 100%;
+    top:0;
+}
+/*Position Bottom*/
+.oxi-addons-align-btn4 .sa-btn-effect-bottom:before, 
+.oxi-addons-align-btn4 .sa-btn-effect-bottom:after {
+    left:0;
+    height:0;
+    width:100%;
+}
+
+.oxi-addons-align-btn4 .sa-btn-effect-bottom:before {
+    top: 0;
+    border: 3px solid rgba(126, 90, 199, 1);
+    border-top: 0;
+    border-bottom: 0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-bottom:after {
+    bottom:0;
+    height:0;
+}
+.oxi-addons-align-btn4 .sa-btn-effect-bottom:hover:before,
+.oxi-addons-align-btn4 .sa-btn-effect-bottom:hover:after {
+    height: 100%;
+
+}
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn4 .oxi-button-btn4  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn4 .oxi-button-btn4  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 0px 0px 0px
+    }
+}
