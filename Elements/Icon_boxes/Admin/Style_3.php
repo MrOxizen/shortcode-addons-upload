@@ -84,7 +84,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -614,7 +614,7 @@ class Style_3 extends AdminStyle
                     <h4 class="modal-title">Icon Boxes Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div cecholass="modal-body">';
+                <div class="modal-body">';
 
         $this->add_control(
             'sa_icon_box_icon',
