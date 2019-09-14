@@ -23,7 +23,7 @@ class Style_4 extends Templates {
         $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
 
         echo '  <div class="oxi-addons-align-btn4">
-                   <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn4 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' '.$style['sa_btn_effect_position'].' " id="' . $style['sa_btn_id'] . '">' . $text . '</a>
+                   <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn4 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' '.$style['sa_btn_effect_position'].' " >' . $text . '</a>
                 </div>';
     }
 

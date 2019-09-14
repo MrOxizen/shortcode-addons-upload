@@ -36,6 +36,13 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
+         $this->add_group_control(
+                'sa_btn_link', $this->style, [
+            'type' => Controls::URL,
+            'loader' => TRUE,
+                ]
+        );
+
         $this->add_control(
                 'sa_btn_icon', $this->style, [
             'label' => __('Icon', SHORTCODE_ADDOONS),
@@ -61,22 +68,8 @@ class Style_3 extends AdminStyle {
         );
 
 
-        $this->add_group_control(
-                'sa_btn_link', $this->style, [
-            'type' => Controls::URL,
-            'loader' => TRUE,
-                ]
-        );
-
-        $this->add_control(
-                'sa_btn_id', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Button ID', SHORTCODE_ADDOONS),
-            'placeholder' => __('Button ID', SHORTCODE_ADDOONS),
-            'loader' => TRUE,
-            'default' => 'button-03',
-                ]
-        );
+       
+       
 
         $this->end_controls_section();
 

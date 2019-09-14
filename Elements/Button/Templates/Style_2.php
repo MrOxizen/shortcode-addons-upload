@@ -46,7 +46,7 @@ class Style_2 extends Templates {
         endif;
 
         echo '  <div class="oxi-addons-align-btn2">
-                    <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn2 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . $style['sa_btn_icon_view'] . '" id="' . $style['sa_btn_id'] . '">' . $html . '</a>
+                    <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn2 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . $style['sa_btn_icon_view'] . '" >' . $html . '</a>
                 </div>
                 ';
     }
