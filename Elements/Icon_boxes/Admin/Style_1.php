@@ -54,6 +54,9 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::COLUMN,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
+                ],
             ]
         );
         $this->add_responsive_control(

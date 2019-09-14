@@ -44,18 +44,17 @@ class Style_5 extends Templates
                 $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
                 $endlink .= '</a>';
             }
-            echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . '">
-                    <div class="sa_addons_icon_boxes_container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
+            echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+                    <div class="sa_addons_icon_boxes_container">';
 
-            echo $link;
-
-            echo '<div class="sa_addons_icon_boxes_style_5">
+                echo $link;
+                echo '<div class="sa_addons_icon_boxes_style_5">
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '
                         </div>';
-            echo $endlink;
-
+                echo $endlink;
+            echo '</div>';
             if ($admin == 'admin') :
                 echo '<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
@@ -66,8 +65,7 @@ class Style_5 extends Templates
                             </div>
                         </div>';
             endif;
-            echo '</div>
-                </div>';
+            echo '</div>';
         }
     }
 

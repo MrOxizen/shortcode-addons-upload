@@ -37,14 +37,14 @@ class Style_6 extends Templates
                 $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
                 $endlink .= '</a>';
             }
-            echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . '">';
+            echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
             echo $link;
-                echo '<div class="sa_addons_icon_boxes_container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+                echo '<div class="sa_addons_icon_boxes_container">
                         <div class="sa_addons_icon_boxes_style_6">
                             ' . ($style['sa_icon_box_icon_position'] == 'top' ? $icon . $heading : $heading . $icon) . '
                         </div>';
             
-
+                echo '</div>';
             if ($admin == 'admin') :
                 echo '<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
@@ -55,7 +55,6 @@ class Style_6 extends Templates
                             </div>
                         </div>';
             endif;
-            echo '</div>';
 
             echo $endlink;
             echo'</div>';
