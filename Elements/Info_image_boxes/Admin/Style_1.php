@@ -536,7 +536,6 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Heading', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => 'Lorem Ipsum is simply dummy text',
                     'placeholder' => 'Your Heading Here',
                 ]
         );
@@ -547,8 +546,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Content', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
-                    'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.',
-                    'placeholder' => 'Your Content Here',
+                     'placeholder' => 'Your Content Here',
                 ]
         );
         $this->add_group_control(

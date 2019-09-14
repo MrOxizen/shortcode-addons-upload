@@ -17,17 +17,18 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_2 extends Templates {
 
     public function default_render($style, $child, $admin) {
-    
+
         foreach ($child as $v) {
-                
+
             $value = json_decode($v['rawdata'], true);
 //            echo '<pre>';
-//            print_r($value);
+//            print_r($style['sa_info_image_img_v_pos']);
 //            echo '</pre>';
-            $heading = $details = $button = $img_center = $images = $content = '';
+            $heading = $details = $button = $img_center = $img_ver_position = $images = $content = '';
 
-            if ($this->media_render('sa_info_image_img_src',$value) != '') {
-                $images = ' <img src="'.$this->media_render('sa_info_image_img_src',$value).'" alt="images" class="oxi-addons-img">';
+            if ($this->media_render('sa_info_image_img_src', $value) != '') {
+                $images = '<div class="oxi-addons-image-main">'
+                        . '<img src="' . $this->media_render('sa_info_image_img_src', $value) . '" alt="images" class="oxi-addons-img"></div>';
             }
             if ($value['sa_info_image_h_text'] != '') {
                 $heading = '  <div class="oxi-addons-heading">
@@ -36,28 +37,40 @@ class Style_2 extends Templates {
             }
             if ($value['sa_info_image_content_text'] != '') {
                 $details = '<div class="oxi-addons-details">
-                ' .  $this->text_render($value['sa_info_image_content_text']) . '
+                ' . $this->text_render($value['sa_info_image_content_text']) . '
                 </div>';
             }
-            $content = '<div class="oxi-addons-main-wrapper " >
-                            <div class="oxi-addons-image-main">
-                            ' . $images . ' 
-                            </div> 
-                            <div class="oxi-addons-main-content">
-                                ' . $heading . ' 
-                                ' . $details . '  
-                            </div>
+            if ($style['sa_info_image_img_v_pos'] == 'sa_info_image_img_alignment_left') {
+                $img_ver_position .= ' 
+                    ' . $images . '  
+                    <div class="oxi-addons-main-content">
+                        ' . $heading . ' 
+                        ' . $details . '  
+                    </div>
+                ';
+            } else {
+                $img_ver_position .= '  
+                <div class="oxi-addons-main-content">
+                    ' . $heading . ' 
+                    ' . $details . '  
+                </div>
+                ' . $images . '  
+            ';
+            }
+                $content = '<div class="oxi-addons-main-wrapper " >
+                          
+                            ' . $img_ver_position . '
                         </div>';
-            echo '<div class=" oxi-addons-info-image-parent-wrapper ' . $this->column_render('sa_info_image_column', $style) . '">
+                echo '<div class=" oxi-addons-info-image-parent-wrapper ' . $this->column_render('sa_info_image_column', $style) . '">
                       <div class="sa_addons_icon_boxes_container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
-                        if ( $value['sa_info_image_url-url'] != '') {
-                              echo '<a href="' . $this->url_render('sa_info_image_url', $value) . '"  >
+                if ($value['sa_info_image_url-url'] != '') {
+                    echo '<a href="' . $this->url_render('sa_info_image_url', $value) . '"  >
                                         ' . $content . '
                                    </a>';
-                        } else {
-                            echo $content;
-                        }
-              if ($admin == 'admin') :
+                } else {
+                    echo $content;
+                }
+                if ($admin == 'admin') :
                     echo'<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
                                 <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
@@ -67,71 +80,73 @@ class Style_2 extends Templates {
                             </div>
                         </div>';
                 endif;
-            echo '</div>';
-            echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
         }
-    }
 
-    public function old_render() {
-        $styledata = $this->dbdata;
-        $listdata = $this->child;
-        $oxiid = $styledata['id'];
-        $stylefiles = explode('||#||', $styledata['css']);
-        $styledata = explode('|', $stylefiles[0]);
-        $css = '';
-        
-        echo '<div class="oxi-addons-container"> <div class="oxi-addons-row">';
+        public function old_render() {
+            $styledata = $this->dbdata;
+            $listdata = $this->child;
+            $oxiid = $styledata['id'];
+            $stylefiles = explode('||#||', $styledata['css']);
+            $styledata = explode('|', $stylefiles[0]);
+            $css = '';
+
+            echo '<div class="oxi-addons-container"> <div class="oxi-addons-row">';
             foreach ($listdata as $value) {
-                $data = explode('||#||', $value['files']);  
-                $heading = $details = $button = $img_center = $images= $content= '';
+                $data = explode('||#||', $value['files']);
+                $heading = $details = $button = $img_center = $images = $content = '';
 
-                if($data[1] != ''){
-                    $images = ' <img src="'.OxiAddonsUrlConvert($data[1]).'" alt="images" class="oxi-addons-img">';
-                } 
-            if($data[3] != ''){
-                $heading = '  <div class="oxi-addons-heading">
+                if ($data[1] != '') {
+                    $images = '  <div class="oxi-addons-image-main"> 
+                                     <img src="' . OxiAddonsUrlConvert($data[1]) . '" alt="images" class="oxi-addons-img">
+                                 </div>';
+                }
+                if ($data[3] != '') {
+                    $heading = '  <div class="oxi-addons-heading">
                 ' . OxiAddonsTextConvert($data[3]) . '
                 </div>';
-            } 
-            if($data[5] != ''){
-                $details = '<div class="oxi-addons-details">
+                }
+                if ($data[5] != '') {
+                    $details = '<div class="oxi-addons-details">
                 ' . OxiAddonsTextConvert($data[5]) . '
                 </div>';
-            }  
+                }
                 $content = '
                     <div  ' . OxiAddonsAnimation($styledata, 63) . '>
-                        <div class="oxi-addons-main-wrapper-' . $oxiid . ' oxi-addons-main-wrapper-' . $oxiid . '-'.$value['id'].'" >
+                        <div class="oxi-addons-main-wrapper-' . $oxiid . ' oxi-addons-main-wrapper-' . $oxiid . '-' . $value['id'] . '" >
                             <div class="oxi-addons-image-main">
-                            '.$images.' 
+                            ' . $images . ' 
                             </div> 
                             <div class="oxi-addons-main-content">
-                                '.$heading.' 
-                                '.$details.'  
+                                ' . $heading . ' 
+                                ' . $details . '  
                             </div>
                         </div>
                      </div>
                     ';
-            echo '<div class="oxi-addons-parent-wrapper-'.$oxiid.' ' . OxiAddonsItemRows($styledata, 3) . '  ">';
-                     if($data[7] != '' ){
-                       echo '<a href="' . OxiAddonsUrlConvert($data[7]) . '" target="' . $styledata[9] . '" >
-                            '.$content.'
+                echo '<div class="oxi-addons-parent-wrapper-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 3) . '  ">';
+                if ($data[7] != '') {
+                    echo '<a href="' . OxiAddonsUrlConvert($data[7]) . '" target="' . $styledata[9] . '" >
+                            ' . $content . '
                        </a>';
-                     }else{
-                        echo $content ;
-                     }
-                   
-                        echo '</div>';
-                        }
-          echo '</div></div>';
-        if($styledata[82] == 'left'){
-            $img_center = 'justify-content: start';
-        }elseif($styledata[82] == 'center'){
-            $img_center = 'justify-content: center';
-        }else{
-            $img_center = 'justify-content: end';
-        }
-        $css .= '
-        .oxi-addons-parent-wrapper-'.$oxiid.'{
+                } else {
+                    echo $content;
+                }
+
+                echo '</div>';
+            }
+            echo '</div></div>';
+            if ($styledata[82] == 'left') {
+                $img_center = 'justify-content: start';
+            } elseif ($styledata[82] == 'center') {
+                $img_center = 'justify-content: center';
+            } else {
+                $img_center = 'justify-content: end';
+            }
+            $css .= '
+        .oxi-addons-parent-wrapper-' . $oxiid . '{
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 47) . '; 
         }
         .oxi-addons-main-wrapper-' . $oxiid . '{   
@@ -139,7 +154,7 @@ class Style_2 extends Templates {
             width: 100%;
             float: left; 
             overflow: hidden; 
-            background: '.$styledata[7].'; 
+            background: ' . $styledata[7] . '; 
             border:  ' . $styledata[9] . 'px ' . $styledata[10] . ';
             border-color: ' . $styledata[13] . ';
             border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 15) . ';  
@@ -154,7 +169,7 @@ class Style_2 extends Templates {
             width: 100%;
             float: left; 
             display: flex;
-            '.$img_center.';
+            ' . $img_center . ';
         }
         .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-image-main .oxi-addons-img{ 
             display: flex; 
@@ -198,7 +213,7 @@ class Style_2 extends Templates {
 
         @media only screen and (min-width : 669px) and (max-width : 993px){
 
-            .oxi-addons-parent-wrapper-'.$oxiid.'{
+            .oxi-addons-parent-wrapper-' . $oxiid . '{
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 48) . '; 
             }
             .oxi-addons-main-wrapper-' . $oxiid . '{    
@@ -224,7 +239,7 @@ class Style_2 extends Templates {
             }
         }
         @media only screen and (max-width : 668px){
-            .oxi-addons-parent-wrapper-'.$oxiid.'{
+            .oxi-addons-parent-wrapper-' . $oxiid . '{
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 49) . '; 
             }
             .oxi-addons-main-wrapper-' . $oxiid . '{    
@@ -251,10 +266,11 @@ class Style_2 extends Templates {
 
         }
     ';
-    $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons-main-wrapper-'.$oxiid.'"));}, 500);';
+            $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons-main-wrapper-' . $oxiid . '"));}, 500);';
 
-        wp_add_inline_style('shortcode-addons-style', $css);
-        wp_add_inline_script('shortcode-addons-jquery', $js);
+            wp_add_inline_style('shortcode-addons-style', $css);
+            wp_add_inline_script('shortcode-addons-jquery', $js);
+        }
+
     }
-
-}
+    

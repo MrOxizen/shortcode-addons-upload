@@ -265,36 +265,36 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_info_image_img_alignment', $this->style, [
-            'label' => __('Vertical Position', SHORTCODE_ADDOONS),
+                'sa_info_image_img_ver_alignment', $this->style, [
+            'label' => __('Vertical Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
             'default' => 'center',
             'options' => [
-                'top' => [
+                'flex-start' => [
                     'title' => __('Top', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-sort-amount-up',
                 ],
-                'middle' => [
+                'center' => [
                     'title' => __('Middle', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-exchange-alt',
                 ],
-                'bottom' => [
+                'flex-end' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-sort-amount-down',
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main ' => 'justify-content:{{VALUE}};',
+                '{{WRAPPER}}  .oxi-addons-image-main ' => 'align-items:{{VALUE}};',
             ],
                 ]
         );
          $this->add_control(
-                'sa_info_image_img_alignment', $this->style, [
+                'sa_info_image_img_v_pos', $this->style, [
             'label' => __('Vertical Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
+            'default' => 'sa_info_image_img_alignment_left',
             'options' => [
                 'sa_info_image_img_alignment_left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -559,7 +559,6 @@ class Style_2 extends AdminStyle {
                 [
                     'label' => __('Heading', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => 'Lorem Ipsum is simply dummy text',
                     'placeholder' => 'Your Heading Here',
                 ]
         );
@@ -570,7 +569,6 @@ class Style_2 extends AdminStyle {
                 [
                     'label' => __('Content', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
-                    'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.',
                     'placeholder' => 'Your Content Here',
                 ]
         );
