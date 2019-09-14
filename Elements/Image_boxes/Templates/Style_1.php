@@ -20,225 +20,229 @@ class Style_1 extends Templates {
         if($style['sa-bl-g-max-width-control'] == 'max-width'){
                 $class = 'sa-bl-width-auto';
             }
-        echo '<div class="oxi-addons-bullet-list-area">
-                    <div class="oxi-addons-bullet-list-full-content"> 
-			<div class="oxi-addons-list-type-1 '.$class.'">
-                            <ol class="oxi-addons-list-ol ">';
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
-            $a_tag = '';
-                echo '<li class="oxi-addons-list-li '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'">
-                    <a '.$this->url_render('sa_bl_url', $value).' class="oxi-BL-link">' . $value['sa_bl_text'] . '</a>';
+        $value = json_decode($v['rawdata'], true);
+        $link = $endlink = $heading = $image = '';
+        if ($value['sa_ib_url-url'] != '') {
+                $link .= '<a class="oxi-addons-link" ' . $this->url_render('sa_ib_url', $value) . '>';
+                $endlink .= '</a>';
+        }
+        if ($value['sa_ib_heading'] != '') {
+                $heading .= '<div class="oxi-addons-heading">
+                                ' . $this->text_render($value['sa_ib_heading']) . '
+                             </div>';
+        }
+        if ($this->media_render('sa_ib_media', $value) != '') {
+                $image .= '<div class="oxi-addons-image">
+                                <img class="oxi-addons-img" src="' . $this->media_render('sa_ib_media', $value) . '">
+                            </div>';
+        }
+        if ($style['sa-ib-content-position'] == 'heading') {
+                $headingposition = '
+                <div class="oxi-addons-icon-box  ">
+                    <div class="oxi-addons-icon-body">
+                        '.$link.'      
+                        '.$heading.'      
+                        '.$image.'     
+                        '.$endlink.'   
+                     </div>
+                </div>';
+        }else{
+            $imageposition = '
+                <div class="oxi-addons-icon-box ">
+                    <div class="oxi-addons-icon-body">
+                        '.$link.'
+                        '.$image.'
+                        '.$heading.'     
+                        '.$endlink.'   
+                     </div>
+                </div>';
+        }
+        
+        
+        
+        echo '<div class="oxi-addons-icon-boxes-main ' . $this->column_render('sa-ib-content-box-col', $style) . '">
+                    <div class="oxi-addons-icon-boxes-area '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'">
+                        '.$headingposition.'
+                        '.$imageposition.'
+                    ';
 
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
+        if ($admin == 'admin') :
+                    echo'<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
                                 <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
                             </div>
                             <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
+                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
+                            </div>
                         </div>';
-            endif;
-            echo '</li>';
+                endif;
+        echo '</div></div> ';
         }
-        echo '          </ol>
-                    </div>
-                </div>
-            </div>
-            
-        ';
     }
 
     public function old_render() {
-        $style = $this->dbdata;
-        $child = $this->child;
-        $oxiid = $style['id'];
-        $stylefiles = explode('||#||', $style['css']);
-        $styledata = explode('|', $stylefiles[0]);
-
-        echo '<div class="oxi-addons-container"> 
-            <div class="oxi-addons-row"> 
-		<div class="oxi-addons-bullet-list-' . $oxiid . '">
-                    <div class="oxi-addons-bullet-list-full-content"> 
-			<div class="oxi-addons-list-type-1">
-                            <ol class="oxi-addons-list-ol ">';
-
-        foreach ($child as $key => $one_item) {
-
-            $a_tag = '';
-            $listfiles = explode('||#||', $one_item['files']);
-            if (!empty($listfiles[1])) {
-                $a_tag = '<a href="' . OxiAddonsUrlConvert($listfiles[3]) . '" class="oxi-BL-link">' . OxiAddonsTextConvert($listfiles[1]) . '</a>';
-            }
-            echo'
-                <li class="oxi-addons-list-li ' . OxiAddonsAdminDefine($user) . ' ">' . $a_tag . '
-		';
-            echo '</li>';
+        $styledata = $this->dbdata;
+        $listdata = $this->child;
+        $stylename = $styledata['style_name'];
+    $oxiid = $styledata['id'];
+    $stylefiles = explode('||#||', $styledata['css']);
+    $styledata = explode('|', $stylefiles[0]);
+    echo '<div class="oxi-addons-container"><div class="oxi-addons-row">';
+    foreach ($listdata as $value) {
+        $firstlink = $lastlink = $heading = $image = '';
+        $data = explode('||#||', $value['files']);
+ 
+        if ($data[5] != '') {
+            $firstlink = '<a class="oxi-addons-link" href="' . OxiAddonsUrlConvert($data[5]) . '" target="' . $styledata[55] . '">';
+            $lastlink = '</a>';
+        }
+        if ($data[1] != '') {
+            $heading = '<div class="oxi-addons-heading">
+                            ' . OxiAddonsTextConvert($data[1]) . '
+                        </div>';
+        }
+        if ($data[3] != '') {
+            $image = '<div class="oxi-addons-image" ' . OxiAddonsAnimation($styledata, 135) . '>
+                         <img class="oxi-addons-img" src="' . OxiAddonsUrlConvert($data[3]) . '" alt="icon box image">
+                    </div>';
         }
 
-        echo'                   </ol>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-	</div>
-	';
+        $loopdata = '';
+        $rearrange = explode(',', $styledata[151]);
+        foreach ($rearrange as $arrange) {
+            $loopdata .= $$arrange;
+        }
+        echo '<div class="' . OxiAddonsItemRows($styledata, 3) . '  ' . OxiAddonsAdminDefine($user) . '">
+                    ' . $firstlink . '
+                        <div class="oxi-addons-icon-boxes-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 95) . '>
+                            <div class="oxi-addons-icon-box">
+                                <div class="oxi-addons-icon-body">
+                                   ' . $loopdata . '
+                                </div>
+                            </div>
+                        </div>
+                    ' . $lastlink . '
 
-        $css = '
-	
-		.oxi-addons-bullet-list-' . $oxiid . '{
-			width:100%;
-			display: flex;
-			justify-content: center;
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-bullet-list-full-content{
-			background : transparent;
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1{
-			width:100%;
-			float: left;
-			max-width: ' . $styledata[175] . 'px; 
-				 
-			margin : 0 0 0 0;
-			padding :' . OxiAddonsPaddingMarginSanitize($styledata, 21) . ';
-		}
+                    ';
 
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 ol.oxi-addons-list-ol{
-			width:100%;
-			float: left;
-			counter-reset: li;
-			list-style: none;
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 5) . ';
-			margin : 0 0 0 0;
-		}
+        
+        echo '</div> ';
+    }
+    echo ' </div></div>
+        ';
 
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 ol.oxi-addons-list-ol li.oxi-addons-list-li{
-			padding : 0 0 0 0;
-			margin  : ' . OxiAddonsPaddingMarginSanitize($styledata, 111) . ';
-		}
+    $css = '
+        .oxi-addons-link{
+            display: block;
+            width: 100%;
+        }
+        .oxi-addons-icon-boxes-' . $oxiid . '{
+            width: 100%;
+            max-width: ' . $styledata[7] . 'px;
+            margin: 0 auto;
+            position: relative;
+            display: -webkit-box;
+            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 73) . ';
+            transition: 0.5s all !important; 
+        }
+        .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box{
+            position: relative;
+            width: 100%;
+            float: left; 
+            ' . OxiAddonsBGImage($styledata, 15) . '
+            border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
+            border-style:' . $styledata[35] . '; 
+            border-color:' . $styledata[36] . ';
+            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 39) . ';
+            overflow: hidden;
+            ' . OxiAddonsBoxShadowSanitize($styledata, 89) . '
 
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link{
-			position: relative;
-			display: block;
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 95) . ';
-			margin : 0 0 0 0;
-			color:' . $styledata[85] . ';
-			background:' . $styledata[87] . ';
-			text-decoration: none;
-			font-size: ' . $styledata[81] . 'px;
-			transition: all .2s ease-in-out;
-		    ' . OxiAddonsFontSettings($styledata, 89) . '
-				 transform-origin: 0% 0%;
-		}
+        } 
+        .oxi-addons-icon-boxes-' . $oxiid . ':hover .oxi-addons-icon-box{ 
+            ' . OxiAddonsBoxShadowSanitize($styledata, 145) . ' 
+            ' . OxiAddonsBGImage($styledata, 141) . '
+            border-color: ' . $styledata[153] . ';
+        } 
+        .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box::after{
+            content: "";
+            display: block;
+            padding-bottom: ' . ($styledata[11] / $styledata[7] * 100) . '%;
+        } 
+        .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box .oxi-addons-icon-body .oxi-addons-heading{
+            width: 100%;
+            float: left;
+            color: ' . $styledata[103] . ';
+            font-size: ' . $styledata[99] . 'px;
+            ' . OxiAddonsFontSettings($styledata, 105) . '    
+            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 111) . ';  
+            line-height: 1;
+        }
+        .oxi-addons-icon-boxes-' . $oxiid . ':hover .oxi-addons-icon-box .oxi-addons-icon-body .oxi-addons-heading{
+            color: ' . $styledata[139] . '; 
+        }
+        .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box .oxi-addons-icon-body{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 57) . ';
+            width: 100%;
+        }
+        .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-image{
+             width: 100%; 
+             float: left;
+             text-align: center;
+        }
+        .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-image .oxi-addons-img{
+           width: ' . $styledata[127] . 'px; 
+           height: ' . $styledata[131] . 'px;
+        }
+        @media only screen and (min-width : 669px) and (max-width : 993px){
+            .oxi-addons-icon-boxes-' . $oxiid . '{ 
+                max-width: ' . $styledata[8] . 'px; 
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 74) . '; 
+            }
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box{ 
+                border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 20) . '; 
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 40) . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 58) . '; 
+            }  
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box::after{ 
+                padding-bottom: ' . ($styledata[12] / $styledata[8] * 100) . '%;
+            } 
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box .oxi-addons-icon-body .oxi-addons-heading{ 
+                font-size: ' . $styledata[100] . 'px; 
+                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 112) . ';  
+            } 
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-image .oxi-addons-img{
+               width: ' . $styledata[128] . 'px; 
+               height: ' . $styledata[132] . 'px;
+            }
+        }
+        @media only screen and (max-width : 668px){ 
+            .oxi-addons-icon-boxes-' . $oxiid . '{ 
+                max-width: ' . $styledata[9] . 'px; 
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 75) . '; 
+            }
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box{ 
+                border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 21) . '; 
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 41) . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 59) . '; 
+            }  
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box::after{ 
+                padding-bottom: ' . ($styledata[13] / $styledata[9] * 100) . '%;
+            } 
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-icon-box .oxi-addons-icon-body .oxi-addons-heading{ 
+                font-size: ' . $styledata[101] . 'px; 
+                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 113) . ';  
+            } 
+            .oxi-addons-icon-boxes-' . $oxiid . ' .oxi-addons-image .oxi-addons-img{
+               width: ' . $styledata[129] . 'px; 
+               height: ' . $styledata[133] . 'px;
+            }
+        }';
 
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link:hover{
-			
-			color:' . $styledata[127] . ';
-			background:' . $styledata[129] . ';
-			text-decoration:none;
-			transform: scale(' . $styledata[171] . ');
-		}
-
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link:before{
-			content: counter(li);
-			counter-increment: li;
-			position: absolute;
-			right: 100%;
-			top: 50%;
-			color:' . $styledata[73] . ';
-			background:' . $styledata[75] . ';
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 57) . ';
-			
-			font-size: ' . $styledata[43] . 'px;
-			border-width : ' . OxiAddonsPaddingMarginSanitize($styledata, 131) . ';
-			border-style: ' . $styledata[147] . ';
-			border-color: ' . $styledata[148] . ';
-			text-align: center;
-		    ' . OxiAddonsFontSettings($styledata, 51) . '
-			transform: translateY(-50%);
-			margin : 0 0 0 0;
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link:hover:before{
-			color:' . $styledata[77] . ';
-			background:' . $styledata[79] . ';
-			border-width : ' . OxiAddonsPaddingMarginSanitize($styledata, 151) . ';
-			border-style: ' . $styledata[167] . ';
-			border-color: ' . $styledata[168] . ';
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-bullet-list {
-			width: 100%;
-			float:left;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-bullet-list oxi-addons-bullet-list-full-content{
-			width: 100%;
-			float:left;	
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-bullet-list-full-content ul.oxi-addons-bl-ul{
-			list-style-type : disc;
-			list-style-position : inside;
-			list-style-image: black;
-		}
-	@media only screen and (min-width : 669px) and (max-width : 993px){
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1{
-			max-width: ' . $styledata[176] . 'px; 
-				padding :' . OxiAddonsPaddingMarginSanitize($styledata, 22) . ';
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 ol.oxi-addons-list-ol{
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 6) . ';
-		}
-
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 ol.oxi-addons-list-ol li.oxi-addons-list-li{
-			margin  : ' . OxiAddonsPaddingMarginSanitize($styledata, 112) . ';
-		}
-
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link{
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 96) . ';
-			font-size: ' . $styledata[82] . 'px;
-		}
-
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link:before{
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 58) . ';
-			font-size: ' . $styledata[44] . 'px;
-			border-width : ' . OxiAddonsPaddingMarginSanitize($styledata, 132) . ';
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link:hover:before{
-			border-width : ' . OxiAddonsPaddingMarginSanitize($styledata, 152) . ';
-		}
-	}
-	@media only screen and (max-width : 668px){
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1{
-			max-width: ' . $styledata[177] . 'px; 
-				padding :' . OxiAddonsPaddingMarginSanitize($styledata, 23) . ';
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 ol.oxi-addons-list-ol{
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 7) . ';
-		}
-
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 ol.oxi-addons-list-ol li.oxi-addons-list-li{
-			margin  : ' . OxiAddonsPaddingMarginSanitize($styledata, 113) . ';
-		}
-			.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link{
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 97) . ';
-			font-size: ' . $styledata[83] . 'px;
-		}
-
-
-
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link:before{
-			Padding :' . OxiAddonsPaddingMarginSanitize($styledata, 59) . ';
-			font-size: ' . $styledata[45] . 'px;
-			border-width : ' . OxiAddonsPaddingMarginSanitize($styledata, 133) . ';
-		}
-		.oxi-addons-bullet-list-' . $oxiid . ' .oxi-addons-list-type-1 a.oxi-BL-link:hover:before{
-			border-width : ' . OxiAddonsPaddingMarginSanitize($styledata, 153) . ';
-		}
-
-	}
-	';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
 
