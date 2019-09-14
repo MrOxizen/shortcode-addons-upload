@@ -58,7 +58,7 @@ class Style_1 extends Templates {
                 $active = 'active';
                 $display = 'display:block';
             endif;
-            echo '  <div class="oxi-addons-ac-template-1 oxi-addons-admin-edit-list">
+            echo '  <div class=" ' . $this->column_render('sa-ac-column', $style) . 'oxi-addons-ac-template-1 oxi-addons-admin-edit-list">
                         <div class="oxi-addons-ac-template-1-heading ' . $active . '" ref="#oxi-addons-ac-template-1-id-' . $v['id'] . '">
                             ' . ($style['sa-ac-icon-position'] != 'left' ? '<div class="heading-data flex block">' . $value['sa_el_text'] . '</div>' : '') . '
                             <div class="span-active"><i class="fas fa-arrow-down oxi-icons"></i></div>
