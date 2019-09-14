@@ -42,15 +42,7 @@ class Style_1 extends AdminStyle {
             'loader' => TRUE,
                 ]
         );
-        $this->add_control(
-                'sa_btn_id', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Button ID', SHORTCODE_ADDOONS),
-            'placeholder' => __('Button ID', SHORTCODE_ADDOONS),
-            'loader' => TRUE,
-            'default' => 'button-01',
-                ]
-        );
+       
 
 
         $this->end_controls_section();

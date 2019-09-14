@@ -53,7 +53,7 @@
 
 @media only screen and (min-width:669px) and (max-width:993px) {
     .sa_addons_icon_boxes_container {
-        max-width: 300px;
+        max-width: 250px;
         padding: 40px 10px 10px 10px
     }
     .sa_addons_icon_boxes_style_6 {
@@ -76,7 +76,7 @@
 
 @media only screen and (max-width:668px) {
     .sa_addons_icon_boxes_container {
-        max-width: 300px;
+        max-width: 250px;
         padding: 40px 10px 10px 10px
     }
     .sa_addons_icon_boxes_style_6 {

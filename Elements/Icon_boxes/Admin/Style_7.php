@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle
+class Style_7 extends AdminStyle
 {
 
     public function register_controls()
@@ -64,7 +64,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => '450',
                 ],
                 'range' => [
                     'px' => [
@@ -97,7 +97,7 @@ class Style_2 extends AdminStyle
                 'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => '10',
                 ],
                 'range' => [
                     'px' => [
@@ -117,20 +117,11 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
-        $this->add_group_control(
-            'sa_icon_box_boxshadow',
-            $this->style,
-            [
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2' => ''
-                ],
-            ]
-        );
+        
         $this->add_group_control(
             'sa_icon_box_animation',
             $this->style,
@@ -160,7 +151,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2' => ''
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7' => ''
                 ],
             ]
         );
@@ -170,7 +161,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2' => ''
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7' => ''
                 ],
             ]
         );
@@ -203,7 +194,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -217,7 +208,7 @@ class Style_2 extends AdminStyle
                 'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => '30',
                 ],
                 'range' => [
                     'px' => [
@@ -237,7 +228,18 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            'sa_icon_box_boxshadow',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7' => ''
                 ],
             ]
         );
@@ -267,6 +269,47 @@ class Style_2 extends AdminStyle
             ]
         );
 
+        $this->add_control(
+            'sa_icon_box_icon_position',
+            $this->style,
+            [
+                'label' => __('Icon Box Position', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'loader' => TRUE,
+                'default' => 'right',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                    ],
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_icon_box_icon_rotate',
+            $this->style,
+            [
+                'label' => __('Icon Rotate', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '-45',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -100,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_icons_body' => 'transform: rotate({{SIZE}}deg); -webkit-transform: rotate({{SIZE}}deg); -moz-transform: rotate({{SIZE}}deg); -ms-transform: rotate({{SIZE}}deg); -o-transform: rotate({{SIZE}}deg);',
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_icon_box_icon_f_s',
             $this->style,
@@ -275,7 +318,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '30',
+                    'size' => '23',
                 ],
                 'range' => [
                     'px' => [
@@ -295,51 +338,20 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
-        $this->add_responsive_control(
-            'sa_icon_box_icon_h_w',
-            $this->style,
-            [
-                'label' => __('Height & Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '70',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 5,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .oxi-icons' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; line-height: {{SIZE}}{{UNIT}};'
-                ],
-            ]
-        );
+        
         $this->add_control(
             'sa_icon_box_icon_color',
             $this->style,
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#f77c18',
+                'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .oxi-icons' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .oxi-icons' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -349,55 +361,17 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .oxi-icons' => ''
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_icon' => ''
                 ],
             ]
         );
-        $this->add_control(
-            'sa_icon_box_icon_align',
-            $this->style,
-            [
-                'label' => __('Icon Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_icon' => 'text-align: {{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_icon_box_icon_border',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .oxi-icons' => ''
-                ],
-            ]
-        );
+
         $this->add_responsive_control(
-            'sa_icon_box_icon_border_r',
+            'sa_icon_box_icon_padd',
             $this->style,
             [
-                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -420,17 +394,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_icon_box_icon_animation',
-            $this->style,
-            [
-                'type' => Controls::ANIMATION,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .oxi-icons' => ''
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_icons_body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -455,9 +419,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Heading Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#000000',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_headding' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_headding' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -468,7 +432,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_headding' => ''
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_headding' => ''
                 ],
             ]
         );
@@ -501,7 +465,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_headding' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_headding' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -520,9 +484,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Content Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#e3e3e3',
+                'default' => '#6b6b6b',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_content' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_content' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -533,7 +497,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_content' => ''
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_content' => ''
                 ],
             ]
         );
@@ -566,7 +530,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -621,7 +585,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Content', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXTAREA,
-                'default' => 'Now there’s really no need to purchase and overload your WordPress website with another plugin! Supreme Shortcodes introduce a brand new shortcode for your collection, Icon Boxes!',
+                'default' => 'Cras sagittis. Vivamus in erat urna cursus vestibulum. Vestibulum rutrum, mi nec elementum vehiculaid fringilla.',
                 'placeholder' => 'Your Content Here',
             ]
         );

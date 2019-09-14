@@ -1,0 +1,157 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addons-align-btn7 {
+    text-align: center;
+}
+
+.oxi-addons-align-btn7 .oxi-button-btn7 {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgba(189, 15, 15, 0.93);
+    -webkit-transition-duration: 4s;
+    transition-duration: 0s;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-width: 0px 0px 0px 0px;
+    border-style: dotted;
+    border-color: #ffffff;
+    border-radius: 0px;
+    outline: none;
+    box-shadow: 2px 2px 1px 2px rgba(189, 189, 189, 0);
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+    padding: 13px 18px 13px 18px;
+}
+
+.oxi-addons-align-btn7 .oxi-button-btn7.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+
+.oxi-addons-align-btn7 .oxi-button-btn7:hover {
+
+    color: #ffffff;
+    background: rgba(255, 0, 0, 0.93);
+    border-width: 0px 0px 0px 0px;
+    border-style: dotted;
+    border-color: #a60000;
+    border-radius: 0px;
+    outline: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.oxi-addons-align-btn7 .sa-btn-effect-top-left:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 250%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all .8s;
+    top:0;
+    left:0;
+}
+.oxi-addons-align-btn7 .sa-btn-effect-top-right:after {
+        content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 250%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all .8s;
+    top: 0;
+    right: 0;
+}
+.oxi-addons-align-btn7 .sa-btn-effect-center:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 250%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all .8s;
+    bottom:50%;
+    top:50%;
+    left:0%;
+    right:0%;
+}
+.oxi-addons-align-btn7 .sa-btn-effect-bottom-left:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 250%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all .8s;
+    bottom:0;
+    left:0;
+}
+.oxi-addons-align-btn7 .sa-btn-effect-bottom-right:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 250%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all .8s;
+    bottom:0;
+    right:0;
+}
+
+.oxi-addons-align-btn7 .oxi-button-btn7:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn7 .oxi-button-btn7  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 13px 18px 13px 18px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn7 .oxi-button-btn7 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 13px 18px 13px 18px;
+        margin: 0px 5px 0px 0px;
+    }
+
+}
