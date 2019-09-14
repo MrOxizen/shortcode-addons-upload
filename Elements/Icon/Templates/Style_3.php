@@ -36,7 +36,7 @@ class Style_3 extends Templates
             }
 
 
-            echo '  <div class="oxi_addons__icon_main_wrapper oxi-addons-admin-edit-list">
+            echo '  <div class="oxi_addons__icon_main_wrapper '.($admin == "admin" ? 'oxi-addons-admin-edit-list' : '').' '.$this->column_render('sa_icon_column', $style).'">
                             <div class="oxi_addons__icon_main">
                                 '. $icon .'
                             </div>
