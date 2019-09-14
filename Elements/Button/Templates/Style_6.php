@@ -16,17 +16,27 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_6 extends Templates {
 
+    public function inline_public_css() {
+        $style = $this->style;
+        $animation = '.' . $this->WRAPPER . ' .oxi-addons-align-btn6 .' . $style['sa_btn_effect_view'] . ':hover{
+            -webkit-animation: ' . $style['sa_btn_effect_view'] . ' ' . $style['sa_btn_duration-size'] . 'ms linear infinite;
+            animation: ' . $style['sa_btn_effect_view'] . ' ' . $style['sa_btn_duration-size'] . 'ms linear infinite;
+        }';
+
+
+        return $animation;
+    }
+
     public function default_render($style, $child, $admin) {
-        $text = '';
+        $text = $effect = '';
         $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
+
 
         echo '  <div class="oxi-addons-button">
                     <div class="oxi-addons-align-btn6">
-                        <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn6 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . '" id="' . $style['sa_btn_id'] . '">' . $text . '</a>
+                        <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn6 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . (array_key_exists('sa_btn_h_i_e', $style) ? $style['sa_btn_effect_view'] : '') . '" id="' . $style['sa_btn_id'] . '">' . $text . '</a>
                     </div>
                 </div>';
-
-       
     }
 
     public function old_render() {

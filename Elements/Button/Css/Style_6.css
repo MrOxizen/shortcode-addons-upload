@@ -47,8 +47,7 @@ and open the template in the editor.
 }
 
 .oxi-addons-align-btn6 .oxi-button-btn6:hover {
-   -webkit-animation: button-animation 1.5s linear infinite;
-    animation: button-animation 1.5s linear infinite;
+  
     color: #000000;
     background: rgba(128, 0, 0, 0.00);
     border-width: 2px 2px 2px 2px;
@@ -59,12 +58,41 @@ and open the template in the editor.
     border-radius: 4px;
     box-shadow: 1px 1px 10px 0px rgba(184, 184, 184, 0.84);
 }
-@keyframes button-animation {
+
+.oxi-addons-align-btn6 .sa-effect-left-to-right:hover {
+     -webkit-animation: left-to-right 1.5s linear infinite;
+    animation: left-to-right 1500ms linear infinite;
+}
+@keyframes sa-effect-left-to-right {
     from {
-        background-position: 0 0
+        background-position: 0 0;
     }
     to {
-        background-position: 50px 0
+        background-position: 50px 0;
+    }
+}
+@keyframes sa-effect-right-to-left {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -50px 0;
+    }
+}
+@keyframes sa-effect-top-to-bottom {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 50px;
+    }
+}
+@keyframes sa-effect-bottom-to-top {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -50px ;
     }
 }
 

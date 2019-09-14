@@ -31,7 +31,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-                    'selector' => [
+            'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => ''
             ],
                 ]
@@ -40,7 +40,6 @@ class Style_6 extends AdminStyle {
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
             'loader' => TRUE,
-            
                 ]
         );
         $this->add_control(
@@ -48,8 +47,8 @@ class Style_6 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Button ID', SHORTCODE_ADDOONS),
             'placeholder' => __('Button ID', SHORTCODE_ADDOONS),
-             'default' => 'button-06',
-                    'loader' => TRUE,
+            'default' => 'button-06',
+            'loader' => TRUE,
                 ]
         );
 
@@ -149,7 +148,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Button Width', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'default' => 'sa-width-dymanic',
-                    'loader' => TRUE,
+            'loader' => TRUE,
             'label_on' => __('Dynamic', SHORTCODE_ADDOONS),
             'label_off' => __('Auto', SHORTCODE_ADDOONS),
             'return_value' => 'sa-width-dymanic',
@@ -387,6 +386,64 @@ class Style_6 extends AdminStyle {
 
         $this->end_controls_tabs();
 
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Hover Image Effect Setting', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+                ]
+        );
+
+        $this->add_control(
+                'sa_btn_h_i_e', $this->style, [
+            'label' => __('Effect ON/OFF', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => 'yes',
+            'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->add_control(
+                'sa_btn_effect_view', $this->style, [
+            'label' => __('Viewing Animaton', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'default' => 'sa-icon-left-to-right',
+            'loader' => TRUE,
+            'options' => [
+                'sa-effect-left-to-right' => __('Left to Right', SHORTCODE_ADDOONS),
+                'sa-effect-right-to-left' => __('Right-to-Left', SHORTCODE_ADDOONS),
+                'sa-effect-top-to-bottom' => __('Top-to-Bottom', SHORTCODE_ADDOONS),
+                'sa-effect-bottom-to-top' => __('Bottom-to-Top', SHORTCODE_ADDOONS),
+            ],
+            'condition' => [
+                'sa_btn_h_i_e' => 'yes',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_btn_duration', $this->style, [
+            'label' => __('Duration /ms', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 1000,
+            ],
+            'loader' => TRUE,
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 5000,
+                    'step' => 50,
+                ],
+            ],
+            'condition' => [
+                'sa_btn_h_i_e' => 'yes',
+            ],
+                ]
+        );
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
