@@ -360,7 +360,10 @@ class Style_12 extends AdminStyle {
                 'sa-btn-h-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn12 .oxi-button-btn12:hover' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn12 .sa-btn-effect-top::before' => '',
+                '{{WRAPPER}} .oxi-addons-align-btn12 .sa-btn-effect-bottom::before' => '',
+                '{{WRAPPER}} .oxi-addons-align-btn12 .sa-btn-effect-left::before' => '',
+                '{{WRAPPER}} .oxi-addons-align-btn12 .sa-btn-effect-right::before' => '',
             ],]
         );
 
