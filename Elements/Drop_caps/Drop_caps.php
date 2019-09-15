@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Elements_Frontend;
 
-class Accordion extends Elements_Frontend {
+class Drop_caps extends Elements_Frontend {
 
     public function pre_active() {
         return array('style-1');

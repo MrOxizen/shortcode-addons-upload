@@ -17,19 +17,23 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        $text  = '';
         $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
+        $icon = (array_key_exists('sa_btn_icon', $style) ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
 
+        if (array_key_exists('sa_btn_icon_position', $style)):
+            $html = $icon . $text;
+        else:
+            $html = $text . $icon;
+        endif;
         echo '  <div class="oxi-addons-align-btn1">
-                   <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn1 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . '" >' . $text . '</a>
+                   <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn1 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . '" >' . $html . '</a>
                 </div>';
             }
 
     public function old_render() {
-        $styledata = $this->dbdata;
-        $child = $this->child;
-        $oxiid = $styledata['id'];
-        $stylefiles = explode('||#||', $styledata['css']);
+        $style = $this->dbdata;
+        $oxiid = $style['id'];
+        $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
         $css = '';
         $href = '';

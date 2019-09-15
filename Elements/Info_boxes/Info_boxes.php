@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Drop_caps;
+namespace SHORTCODE_ADDONS_UPLOAD\Elements\Info_boxes;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Elements_Frontend;
 
-class Drop_caps extends Elements_Frontend {
+class Info_boxes extends Elements_Frontend {
 
     public function pre_active() {
         return array('style-1');

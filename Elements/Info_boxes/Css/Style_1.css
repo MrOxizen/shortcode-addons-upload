@@ -1,0 +1,81 @@
+.oxi_addons__info_boxes_wrapper {
+    padding: 5px;
+}
+
+.oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.oxi_addons__info_boxes_wrapper .oxi_addons__heading_style_1 {
+    color: #757575;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.oxi_addons__info_boxes_wrapper .oxi_addons__details_style_1 {
+    color: #808080;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_1 .oxi-icons {
+    font-size: 40px;
+    color: #333;
+}
+
+.oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_1:hover .oxi_addons__icon_style_1 .oxi-icons {
+    color: #2ab500;
+}
+
+@media only screen and (min-width: 669px) and (max-width: 993px) {
+    .oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_1 {
+        padding: 7px 0;
+    }
+    .oxi_addons__info_boxes_wrapper .oxi_addons__heading_style_1 {
+        color: #757575;
+        font-size: 18px;
+        padding: 7px 0;
+    }
+    .oxi_addons__info_boxes_wrapper .oxi_addons__details_style_1 {
+        font-size: 16px;
+        padding: 7px 0;
+    }
+    .oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_1 .oxi-icons {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_1 {
+        padding: 5px 0;
+    }
+    .oxi_addons__info_boxes_wrapper .oxi_addons__heading_style_1 {
+        color: #757575;
+        font-size: 18px;
+        padding: 5px 0;
+    }
+    .oxi_addons__info_boxes_wrapper .oxi_addons__details_style_1 {
+        font-size: 14px;
+        padding: 7px 0;
+    }
+    .oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_1 .oxi-icons {
+        font-size: 25px;
+    }
+}
