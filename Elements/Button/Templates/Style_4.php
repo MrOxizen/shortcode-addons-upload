@@ -19,8 +19,7 @@ class Style_4 extends Templates {
     
 
     public function default_render($style, $child, $admin) {
-        $text = '';
-        $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
+       $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
 
         echo '  <div class="oxi-addons-align-btn4">
                    <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn4 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' '.$style['sa_btn_effect_position'].' " >' . $text . '</a>
@@ -29,7 +28,6 @@ class Style_4 extends Templates {
 
     public function old_render() {
         $style = $this->dbdata;
-        $child = $this->child;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $css = '';
