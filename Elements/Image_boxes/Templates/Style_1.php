@@ -17,9 +17,6 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        if($style['sa-bl-g-max-width-control'] == 'max-width'){
-                $class = 'sa-bl-width-auto';
-            }
         foreach ($child as $v) {
         $value = json_decode($v['rawdata'], true);
         $link = $endlink = $heading = $image = '';
