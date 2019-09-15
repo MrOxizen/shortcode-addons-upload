@@ -1,0 +1,210 @@
+.oxi-image-boxes-area-container .oxi-addons-image-image {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center
+}
+
+.oxi-image-boxes-area-container {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto
+}
+
+.oxi-image-boxes-area-container .oxi-image-boxes-row {
+    width: 100%;
+    float: left;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image {
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border: px dotted;
+    border-color: #fff;
+    border-radius: -2px -2px -2px -2px;
+    box-shadow: 0px 4px 8px 0px rgba(207, 186, 186, 1);
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image:after {
+    display: block;
+    content: "";
+    padding-bottom: 105.55555555556%
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 10px 10px 10px;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image:hover .oxi-addons-image-content {
+    opacity: 1
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content-cell {
+    width: 100%;
+    float: left;
+    opacity: 0;
+    transform: translateY(120%)
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image:hover .oxi-addons-image-content-cell {
+    transform: translateY(0%);
+    opacity: 1
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content-heading,
+.oxi-image-boxes-area-container .oxi-addons-image-content-body,
+.oxi-image-boxes-area-container .oxi-addons-image-content-button {
+    width: 100%;
+    float: left
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content-heading {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    padding: 5px 5px 5px 5px
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content-body {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    padding: 5px 5px 5px 5px
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content-button {
+    text-align: center
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content-button-data {
+    display: inline-block;
+    font-size: 14px;
+    color: #0e0e0e;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid;
+    border-color: #ffffff;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    border-radius: 30px 30px 30px 30px;
+    padding: 10px 30px 10px 30px;
+    margin: 10px 10px 10px 10px
+}
+
+.oxi-image-boxes-area-container .oxi-addons-image-content-button-data:hover {
+    color: #ffffff;
+    background: rgba(255, 115, 115, 1.00);
+    border-color: #ffffff;
+    border-radius: 30px 30px 30px 30px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-image-boxes-area-container {
+        max-width: 360px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image {
+        border-radius: -2px -2px -2px -2px
+    }
+    .oxi-image-boxes-area-container .oxi-image-boxes-row {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image:after {
+        padding-bottom: 105.55555555556%
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content {
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-heading {
+        font-size: 30px;
+        padding: 5px 5px 5px 5px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-body {
+        font-size: 16px;
+        padding: 5px 5px 5px 5px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-button {
+        text-align: OxiAddImageBoxes-B-BR-top
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-button-data {
+        font-size: 14px;
+        padding: 10px 30px 10px 30px;
+        margin: 10px 10px 10px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-image-boxes-area-container {
+        max-width: 360px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image {
+        border-radius: -2px -2px -2px -2px
+    }
+    .oxi-image-boxes-area-container .oxi-image-boxes-row {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image:after {
+        padding-bottom: 105.55555555556%
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content {
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-heading {
+        font-size: 16px;
+        padding: 5px 5px 5px 5px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-body {
+        font-size: 11px;
+        padding: 5px 5px 5px 5px
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-button {
+        text-align: 30
+    }
+    .oxi-image-boxes-area-container .oxi-addons-image-content-button-data {
+        font-size: 10px;
+        padding: 7px 25px 7px 25px;
+        margin: 0px 0px 0px 0px
+    }
+}

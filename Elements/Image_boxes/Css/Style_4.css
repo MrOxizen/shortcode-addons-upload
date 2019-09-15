@@ -1,0 +1,180 @@
+.oxi-addons-content-boxes-17 .oxi-addons-content-boxes-images-95 {
+    background: linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/10/nature-animal-quotes.jpg");
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%
+}
+
+.oxi-addons-content-boxes-17 {
+    width: 100%;
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto
+}
+
+.oxi-addons-content-boxes-17 .oxi-addons-content-boxes-full {
+    margin: 80px 10px 80px 10px
+}
+
+.oxi-addons-content-boxes-17-image_content {
+    width: 100%;
+    float: left;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0px 0px 0px -20px;
+    transition: all .3s linear
+}
+
+.oxi-addons-content-boxes-17:hover .oxi-addons-content-boxes-17-image_content {
+    transition: all .3s linear;
+    margin: 20px 0px 0px -25px
+}
+
+.oxi-addons-content-boxes-17 .oxi-addons-content-boxes-17-data {
+    width: 100%;
+    float: left;
+    background: rgba(26, 26, 26, 1.00);
+    margin: -27px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+    ;
+    z-index: 9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s linear
+}
+
+.oxi-addons-content-boxes-17:hover .oxi-addons-content-boxes-17-data {
+    margin: -80px 0px 0px 0px;
+    background: rgba(219, 15, 15, 1);
+    transition: all .3s linear
+}
+
+.oxi-addons-content-boxes-17-data .oxi-addons-content-boxes-17-icon .oxi-icons {
+    color: #ffffff;
+    font-size: 33px;
+    padding: 80px 1px 80px 25px
+}
+
+.oxi-addons-content-boxes-17-data .oxi-addons-content-boxes-17-icon:hover .oxi-icons {
+    color: #ffffff
+}
+
+.oxi-addons-content-boxes-17 .oxi-addons-content-boxes-images {
+    width: 100%;
+    height: 180px;
+    float: left
+}
+
+.oxi-addons-content-boxes-17 .oxi-addons-content-boxes-17-content {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    float: left
+}
+
+.oxi-addons-content-boxes-17 .oxi-addons-content-boxes-heading {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "Open Sans";
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 1px;
+    padding: 6px 10px 6px 10px
+}
+
+.oxi-addons-content-boxes-17 .oxi-addons-content-boxes-content {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 1px;
+    ;
+    padding: 10px 10px 20px 10px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-content-boxes-17 {
+        max-width: 350px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-full {
+        margin: 80px 10px 80px 10px
+    }
+    .oxi-addons-content-boxes-17-image_content {
+        margin: 0px 0px 0px -20px
+    }
+    .oxi-addons-content-boxes-17:hover .oxi-addons-content-boxes-17-image_content {
+        margin: 20px 0px 0px -25px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-17-data {
+        margin: -27px 0px 0px 0px
+    }
+    .oxi-addons-content-boxes-17:hover .oxi-addons-content-boxes-17-data {
+        margin: -80px 0px 0px 0px
+    }
+    .oxi-addons-content-boxes-17-data .oxi-addons-content-boxes-17-icon .oxi-icons {
+        padding: 80px 10px 80px 22px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-images {
+        height: 180px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-17-content {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-heading {
+        font-size: 20px;
+        padding: 6px 10px 6px 0px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-content {
+        font-size: 15px;
+        padding: 10px 0px 20px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-content-boxes-17 {
+        max-width: 332px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-full {
+        margin: 80px 10px 80px 10px
+    }
+    .oxi-addons-content-boxes-17-image_content {
+        margin: 0px 0px 0px -20px
+    }
+    .oxi-addons-content-boxes-17:hover .oxi-addons-content-boxes-17-image_content {
+        margin: 20px 0px 0px -25px
+    }
+    .oxi-addons-content-boxes-17-data {
+        margin: -27px 0px 0px 0px
+    }
+    .oxi-addons-content-boxes-17:hover .oxi-addons-content-boxes-17-data {
+        margin: -80px 0px 0px 0px
+    }
+    .oxi-addons-content-boxes-17-data .oxi-addons-content-boxes-17-icon .oxi-icons {
+        padding: 80px 6px 80px 15px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-images {
+        height: 180px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-17-content {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-heading {
+        font-size: 19px;
+        padding: 6px 10px 6px 0px
+    }
+    .oxi-addons-content-boxes-17 .oxi-addons-content-boxes-content {
+        font-size: 14px;
+        padding: 10px 0px 20px 0px
+    }
+}
