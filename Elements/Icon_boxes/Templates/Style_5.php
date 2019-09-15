@@ -74,7 +74,6 @@ class Style_5 extends Templates
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
-        $user = $this->admin;
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);

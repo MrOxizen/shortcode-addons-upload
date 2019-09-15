@@ -19,7 +19,7 @@ class Style_9 extends Templates {
    
 
     public function default_render($style, $child, $admin) {
-        $html = $href = $target = '';
+        $html = '';
         $text1 = '<div class="sa-button-text1">' . $this->text_render($style['sa_btn_text']) . '</div>';
         $text2 = (array_key_exists('sa_btn_second_text_condition', $style) ? '<div class="sa-button-text2">' . $this->text_render($style['sa_btn_second_text']) . '</div>': '');
         $icon = (array_key_exists('sa_btn_icon', $style) ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
@@ -39,7 +39,6 @@ class Style_9 extends Templates {
 
     public function old_render() {
         $style = $this->dbdata;
-        $child = $this->child;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $css = '';

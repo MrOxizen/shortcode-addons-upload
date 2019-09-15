@@ -35,7 +35,7 @@ class Style_2 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-        $html = $href = $target = '';
+        $html = '';
         $text = '<div class="s-a-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
         $icon = (array_key_exists('sa_btn_icon', $style) ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
 

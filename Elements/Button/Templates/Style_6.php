@@ -28,8 +28,7 @@ class Style_6 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-        $text = $effect = '';
-        $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
+       $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
 
 
         echo '  <div class="oxi-addons-button">
@@ -41,7 +40,6 @@ class Style_6 extends Templates {
 
     public function old_render() {
         $style = $this->dbdata;
-        $child = $this->child;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $css = '';
