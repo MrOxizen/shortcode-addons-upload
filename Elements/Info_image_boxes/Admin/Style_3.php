@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_2
+ * Description of Style_3
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
 
@@ -43,25 +43,131 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_group_control(
+
+        $this->add_group_control(
+                'sa_info_image_border', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}}  .oxi-addons-main-wrapper' => ''
+            ],
+                ]
+        );
+
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+
+        $this->add_group_control(
                 'sa_info_image_bg_color',
                 $this->style,
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                       '{{WRAPPER}}  .oxi-addons-main-wrapper ' => ''
+                        '{{WRAPPER}}  .oxi-addons-main-wrapper' => ''
                     ],
                 ]
         );
- 
         $this->add_group_control(
-                'sa_info_image_border', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-main-wrapper ' => ''
-            ],
+                'sa_info_image_normal_boxshadow',
+                $this->style,
+                [
+                    'type' => Controls::BOXSHADOW,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-main-wrapper' => ''
+                    ],
                 ]
         );
+        $this->add_responsive_control(
+                'sa_info_image_normal_border_radius', $this->style, [
+            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-main-wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+
+        $this->add_group_control(
+                'sa_info_image_bg_hover_color',
+                $this->style,
+                [
+                    'type' => Controls::BACKGROUND,
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-addons-main-wrapper:hover' => ''
+                    ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_info_image_hover_boxshadow',
+                $this->style,
+                [
+                    'type' => Controls::BOXSHADOW,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-main-wrapper:hover' => ''
+                    ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_info_image_hover_border_radius', $this->style, [
+            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-main-wrapper:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
 
         $this->add_responsive_control(
                 'sa_info_image_padding', $this->style, [
@@ -125,13 +231,6 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons-general-style', [
-            'label' => esc_html__('General Style', SHORTCODE_ADDOONS),
-//            'showing' => TRUE,
-                ]
-        );
         $this->add_group_control(
                 'sa_head_animation', $this->style, [
             'type' => Controls::ANIMATION,
@@ -140,101 +239,8 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->start_controls_tabs(
-                'shortcode-addons-start-tabs', [
-            'options' => [
-                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-            ]
-                ]
-        );
-        $this->start_controls_tab();
-        $this->add_group_control(
-                'sa_info_image_normal_boxshadow',
-                $this->style,
-                [
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-main-wrapper' => ''
-                    ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_info_image_normal_border_radius', $this->style, [
-            'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_group_control(
-                'sa_info_image_hover_boxshadow',
-                $this->style,
-                [
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-main-wrapper:hover' => ''
-                    ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_info_image_hover_border_radius', $this->style, [
-            'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-           
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
         $this->end_controls_section();
+
         $this->end_section_devider();
 
         $this->start_section_devider();
@@ -248,7 +254,7 @@ class Style_2 extends AdminStyle {
                 'sa_info_image_img_width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-            'default' => 90,
+            'default' => 100,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-image-main .oxi-addons-img' => 'width: {{VALUE}}px;',
             ]
@@ -258,60 +264,37 @@ class Style_2 extends AdminStyle {
                 'sa_info_image_img_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-            'default' => 90,
+            'default' => 100,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-image-main .oxi-addons-img' => 'height: {{VALUE}}px;',
             ]
                 ]
         );
-        $this->add_control(
-                'sa_info_image_img_ver_alignment', $this->style, [
-            'label' => __('Vertical Align', SHORTCODE_ADDOONS),
+  $this->add_control(
+                'sa_info_image_img_alignment', $this->style, [
+            'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
             'default' => 'center',
             'options' => [
                 'flex-start' => [
-                    'title' => __('Top', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-sort-amount-up',
-                ],
-                'center' => [
-                    'title' => __('Middle', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-exchange-alt',
-                ],
-                'flex-end' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-sort-amount-down',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main ' => 'align-items:{{VALUE}};',
-            ],
-                ]
-        );
-         $this->add_control(
-                'sa_info_image_img_v_pos', $this->style, [
-            'label' => __('Vertical Position', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'loader' => TRUE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'sa_info_image_img_alignment_left',
-            'options' => [
-                'sa_info_image_img_alignment_left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
                     'icon' => 'fa fa-align-left',
                 ],
-                'sa_info_image_img_alignment_right' => [
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
+                ],
+                'flex-end' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
                     'icon' => 'fa fa-align-right',
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                '{{WRAPPER}}  .oxi-addons-image-main ' => 'justify-content:{{VALUE}};',
             ],
                 ]
         );
-
 
         $this->add_group_control(
                 'sa_info_image_img_bor', $this->style, [
@@ -394,40 +377,56 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-         $this->start_controls_section(
+        $this->start_controls_section(
                 'shortcode-addons-heading', [
             'label' => esc_html__('Heading Setting', SHORTCODE_ADDOONS),
                 ]
         );
 
-        $this->add_control(
-                'sa_info_image_head_title', $this->style, [
-            'label' => __('Heading', SHORTCODE_ADDOONS),
-            'type' => Controls::HEADING,
-          
+        $this->start_controls_tabs(
+                'shortcode-addons-start-h-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
                 ]
         );
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_info_image_head_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'separator' => TRUE,
-            'default' => '#252b25',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_info_image_head_h_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ffffff',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-main-wrapper:hover .oxi-addons-heading' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_group_control(
                 'sa_info_image_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
+            'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading' => '',
             ],
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_info_image_heading_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -457,60 +456,60 @@ class Style_2 extends AdminStyle {
             ]
                 ]
         );
-       $this->add_control(
-                'sa_info_image_span_head_title', $this->style, [
-            'label' => __('Heading Span', SHORTCODE_ADDOONS),
-            'type' => Controls::HEADING,
-          
-                ]
-        );
-        $this->add_control(
-                'sa_info_image_head_span_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'separator' => TRUE,
-            'default' => '#252b25',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading span' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_info_image_head_span_typo', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading span' => '',
-            ],
-                ]
-        );
         $this->end_controls_section();
+
 
         $this->start_controls_section(
                 'shortcode-addons-short-details', [
             'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
                 ]
         );
-         
+        $this->start_controls_tabs(
+                'sa_info_image_short_det_tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+
         $this->add_control(
                 'sa_info_image_short_det_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#252b25',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-details' => 'color:{{VALUE}};'
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+
+        $this->add_control(
+                'sa_info_image_short_det_H_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ffffff',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-main-wrapper:hover .oxi-addons-details' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_group_control(
                 'sa_info_image_short_det_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'separator' => TRUE,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-details' => '',
             ],
                 ]
         );
-          $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_info_image_short_det_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -542,7 +541,7 @@ class Style_2 extends AdminStyle {
         );
         $this->end_controls_section();
 
-        
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
@@ -611,7 +610,7 @@ class Style_2 extends AdminStyle {
                     ],
                 ]
         );
-     
+
         echo '</div>';
     }
 
