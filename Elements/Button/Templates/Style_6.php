@@ -34,7 +34,7 @@ class Style_6 extends Templates {
 
         echo '  <div class="oxi-addons-button">
                     <div class="oxi-addons-align-btn6">
-                        <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn6 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . (array_key_exists('sa_btn_h_i_e', $style) ? $style['sa_btn_effect_view'] : '') . '" id="' . $style['sa_btn_id'] . '">' . $text . '</a>
+                        <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn6 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . (array_key_exists('sa_btn_h_i_e', $style) ? $style['sa_btn_effect_view'] : '') . '" >' . $text . '</a>
                     </div>
                 </div>';
     }

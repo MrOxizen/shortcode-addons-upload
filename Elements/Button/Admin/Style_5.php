@@ -31,9 +31,7 @@ class Style_5 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-                    'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn5 .oxi-button-btn5' => ''
-            ],
+              'loader' => TRUE,
                 ]
         );
         $this->add_group_control(
@@ -43,16 +41,7 @@ class Style_5 extends AdminStyle {
             
                 ]
         );
-        $this->add_control(
-                'sa_btn_id', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Button ID', SHORTCODE_ADDOONS),
-            'placeholder' => __('Button ID', SHORTCODE_ADDOONS),
-             'default' => 'button-05',
-                    'loader' => TRUE,
-                ]
-        );
-
+       
 
         $this->end_controls_section();
 

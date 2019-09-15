@@ -1,0 +1,130 @@
+.sa_addons_icon_boxes_container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 8px 8px 8px 20px
+}
+
+.sa_addons_icon_boxes_style_7 {
+    width: 100%;
+    float: left;
+    box-shadow: 0px 0px 1px 1px rgba(219, 216, 216, 1);
+    padding: 30px 30px 30px 30px;
+    background: rgba(255, 255, 255, 1)
+}
+
+.sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_icon {
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    background: #ef3938;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.sa_addons_icon_boxes_style_7.icon_left .sa_addons_icon_boxes_icon {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.sa_addons_icon_boxes_style_7.icon_left .sa_addons_icon_boxes_icon {
+    left: -60px;
+}
+
+.sa_addons_icon_boxes_style_7 .sa_icons_body {
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    font-size: 23px;
+    padding: 0px 45px 18px 0px;
+    transform: rotate(-44deg);
+    -webkit-transform: rotate(-44deg);
+    -moz-transform: rotate(-44deg);
+    -ms-transform: rotate(-44deg);
+    -o-transform: rotate(-44deg);
+}
+
+.sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_headding {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    font-family: "Nunito";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #4d4d4d;
+    font-size: 18px;
+    padding: 0px 0px 8px 0px
+}
+
+.sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_content {
+    font-family: "Nunito Sans";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: .5px;
+    color: #4d4d4d;
+    font-size: 16px;
+    padding: 0px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_icon_boxes_container {
+        max-width: OxiAddonsEW-G-P-top px;
+        padding: 8px 8px 8px 20px
+    }
+    .sa_addons_icon_boxes_style_7 {
+        padding: 30px 30px 30px 30px
+    }
+    .sa_addons_icon_boxes_style_7 .sa_icons_body {
+        font-size: 23px;
+        padding: 5px 45px 18px 0px;
+        transform: rotate(-44deg)
+    }
+    .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_headding {
+        font-size: 18px;
+        padding: 0px 0px 8px 0px
+    }
+    .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_content {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_icon_boxes_container {
+        max-width: 30px;
+        padding: 8px 8px 8px 20px
+    }
+    .sa_addons_icon_boxes_style_7 {
+        padding: 30px 30px 30px 30px
+    }
+    .sa_addons_icon_boxes_style_7 .sa_icons_body {
+        font-size: 23px;
+        padding: 5px 45px 18px 0px;
+        transform: rotate(-44deg)
+    }
+    .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_headding {
+        font-size: 18px;
+        padding: 0px 0px 8px 0px
+    }
+    .sa_addons_icon_boxes_style_7 .sa_addons_icon_boxes_content {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+}

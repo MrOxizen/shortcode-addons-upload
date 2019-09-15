@@ -31,9 +31,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => ''
-            ],
+            'loader' => TRUE,
                 ]
         );
         $this->add_group_control(
@@ -43,12 +41,14 @@ class Style_6 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_btn_id', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Button ID', SHORTCODE_ADDOONS),
-            'placeholder' => __('Button ID', SHORTCODE_ADDOONS),
-            'default' => 'button-06',
+                'sa_btn_h_i_e', $this->style, [
+            'label' => __('Effect ON/OFF', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => 'yes',
             'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
                 ]
         );
 
@@ -392,20 +392,13 @@ class Style_6 extends AdminStyle {
                 'shortcode-addons', [
             'label' => esc_html__('Hover Image Effect Setting', SHORTCODE_ADDOONS),
             'showing' => FALSE,
+            'condition' => [
+                'sa_btn_h_i_e' => 'yes',
+            ],
                 ]
         );
 
-        $this->add_control(
-                'sa_btn_h_i_e', $this->style, [
-            'label' => __('Effect ON/OFF', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'default' => 'yes',
-            'loader' => TRUE,
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
+        
         $this->add_control(
                 'sa_btn_effect_view', $this->style, [
             'label' => __('Viewing Animaton', SHORTCODE_ADDOONS),

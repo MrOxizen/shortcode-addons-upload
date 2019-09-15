@@ -31,9 +31,7 @@ class Style_4 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn4 .oxi-button-btn4' => ''
-            ],
+            'loader' => TRUE,
                 ]
         );
 
@@ -43,15 +41,7 @@ class Style_4 extends AdminStyle {
             'loader' => TRUE,
                 ]
         );
-        $this->add_control(
-                'sa_btn_id', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Button ID', SHORTCODE_ADDOONS),
-            'placeholder' => __('Button ID', SHORTCODE_ADDOONS),
-                    'default' => 'button-04',
-            'loader' => TRUE,
-                ]
-        );
+       
         $this->add_control(
                 'sa_btn_effect_position', $this->style, [
             'label' => __('Effect Position', SHORTCODE_ADDOONS),

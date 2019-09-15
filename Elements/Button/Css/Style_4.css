@@ -44,10 +44,10 @@ and open the template in the editor.
     width: 100%;
 }
 
-/*.oxi-addons-align-btn4 .oxi-button-btn4:active,
-.oxi-addons-align-btn4 .oxi-button-btn4:hover{
-    background: inherit;
-}*/
+
+.oxi-addons-align-btn4 .sa-button-text{
+    transition: none;
+}
 
 .oxi-button-btn4:before,
 .oxi-button-btn4:after {

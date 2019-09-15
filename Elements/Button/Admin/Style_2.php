@@ -30,11 +30,10 @@ class Style_2 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn2 .oxi-button-btn2 .s-a-button-text' => ''
-            ],
+            'loader' => TRUE,
                 ]
         );
+
         $this->add_control(
                 'sa_btn_icon', $this->style, [
             'label' => __('Icon', SHORTCODE_ADDOONS),
@@ -71,8 +70,6 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-
-
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
@@ -80,15 +77,9 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-        $this->add_control(
-                'sa_btn_id', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Button ID', SHORTCODE_ADDOONS),
-            'placeholder' => __('Button ID', SHORTCODE_ADDOONS),
-            'default' => 'button-02',
-            'loader' => TRUE,
-                ]
-        );
+
+
+
 
         $this->end_controls_section();
 
@@ -429,6 +420,9 @@ class Style_2 extends AdminStyle {
                 'shortcode-addons', [
             'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
             'showing' => FALSE,
+            'condition' => [
+                'sa_btn_icon' => 'yes',
+            ],
                 ]
         );
 
