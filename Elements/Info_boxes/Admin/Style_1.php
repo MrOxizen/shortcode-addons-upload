@@ -45,7 +45,7 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::COLUMN,
-                'default' => 'oxi-bt-col-lg-3',
+                'default' => 'oxi-bt-col-lg-4',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__info_boxes_wrapper' => '',
                 ],
