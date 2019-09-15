@@ -80,7 +80,6 @@ class Style_7 extends Templates
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
-        $user = $this->admin;
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
@@ -108,7 +107,7 @@ class Style_7 extends Templates
                                     ' . $details . '
                                 </div>';
             }
-            echo '<div class="' . OxiAddonsItemRows($styledata, 144) . ' ' . OxiAddonsAdminDefine($user) . '">
+            echo '<div class="' . OxiAddonsItemRows($styledata, 144) . '">
             <div class="oxi-addons-EW-wrapper-' . $oxiid . ' oxi-addons-EW-wrapper-' . $oxiid . '-' . $value['id'] . '" ' . OxiAddonsAnimation($styledata, 139) . '>
                 <div class="oxi-addons-EW-row">
                     <div class="oxi-addons-EW-image">
@@ -119,22 +118,7 @@ class Style_7 extends Templates
                     </div>
                 </div>
             </div>';
-            if ($user == 'admin') {
-                echo '  <div class="oxi-addons-admin-absulote">
-                        <div class="oxi-addons-admin-absulate-edit">
-                            <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditicon_boxesdata") . '
-                                <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                            </form>
-                        </div>
-                        <div class="oxi-addons-admin-absulate-delete">
-                            <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeleteicon_boxesdata") . '
-                                <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                            </form>
-                        </div>
-                    </div>';
-            }
+
             echo '</div>';
         }
         echo '</div>';

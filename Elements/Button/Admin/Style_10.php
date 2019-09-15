@@ -125,7 +125,7 @@ class Style_10 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('General Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'showing' => TRUE,
                 ]
         );
         $this->add_control(
@@ -270,7 +270,7 @@ class Style_10 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Button Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'showing' => TRUE,
                 ]
         );
 
@@ -375,7 +375,6 @@ class Style_10 extends AdminStyle {
                 'sa_btn_text_h_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'description' => __('Select Hover Color', SA_ELEMENTOR_TEXTDOMAIN),
             'default' => '#4449b3',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn9 .oxi-button-btn9:hover .sa-button-text1' => 'color:{{VALUE}};'
@@ -505,7 +504,15 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-
+         $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_icon_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -516,6 +523,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
+         $this->end_controls_tab();
+         $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_icon_hover_color', $this->style, [
             'label' => __('Hover Color', SHORTCODE_ADDOONS),
@@ -526,6 +535,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
+         $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_btn_second_text_padding', $this->style, [
             'label' => __('Text Padding', SHORTCODE_ADDOONS),
@@ -600,7 +611,15 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
 
         $this->add_control(
                 'sa_btn_icon_color', $this->style, [
@@ -612,6 +631,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_icon_hover_color', $this->style, [
             'label' => __('Icon Hover Color', SHORTCODE_ADDOONS),
@@ -622,6 +643,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_btn_icon_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -678,7 +701,7 @@ class Style_10 extends AdminStyle {
                     'min' => 0,
                     'max' => 500,
                     'step' => 1,
-                ],   
+                ],
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn9 .oxi-button-btn9 .oxi-btn-icon:after' => 'width:{{SIZE}}px;'
@@ -699,8 +722,6 @@ class Style_10 extends AdminStyle {
                     'max' => 500,
                     'step' => 1,
                 ],
-
-    
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn9 .oxi-button-btn9 .oxi-btn-icon:after' => 'height:{{SIZE}}px;'
@@ -708,7 +729,15 @@ class Style_10 extends AdminStyle {
                 ]
         );
 
-
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_midline_color', $this->style, [
             'label' => __(' Color', SHORTCODE_ADDOONS),
@@ -719,6 +748,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_midline_hover_color', $this->style, [
             'label' => __('Midline Hover Color', SHORTCODE_ADDOONS),
@@ -729,7 +760,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-        
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->end_controls_section();
 
 

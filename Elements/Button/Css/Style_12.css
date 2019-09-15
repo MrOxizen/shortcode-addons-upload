@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addons-align-btn12 {
+    text-align: center;
+}
+
+.oxi-addons-align-btn12 .oxi-button-btn12 {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-size: 20px;
+    font-family: "Cousine";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    letter-spacing: 1.3px;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    color: #3498db;
+    background: rgba(255, 255, 255, 1.00);
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #262626;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    overflow: hidden;
+    padding: 12px 12px 12px 12px;
+    z-index: 0;
+}
+
+.oxi-addons-align-btn12 .oxi-button-btn12.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+
+.oxi-addons-align-btn12 .oxi-button-btn12:hover {
+    color: #ffffff
+}
+/*Top*/
+
+.oxi-addons-align-btn12 .sa-btn-effect-top::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background: rgba(52, 152, 219, 1.00);
+    z-index: -1;
+    transition: 0.4s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+
+}
+.oxi-addons-align-btn12 .sa-btn-effect-top:hover::before {
+    height: 180%;
+    top: 100;
+}
+
+/*Bottom*/
+.oxi-addons-align-btn12 .sa-btn-effect-bottom::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height : 0%;
+    width: 100%;
+    background: rgba(52, 152, 219, 1.00);
+    z-index: -1;
+    transition: 0.4s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.oxi-addons-align-btn12 .sa-btn-effect-bottom:hover::before {
+    height: 180%;
+    bottom: 100;
+}
+/*Left*/
+.oxi-addons-align-btn12 .sa-btn-effect-left::before{
+    content: "";
+    position: absolute;
+    left : 0;
+    height: 100%;
+    width: 0;
+    background: rgba(52, 152, 219, 1.00);
+    z-index: -1;
+    transition: 0.4s;
+    left: 0;
+    border-radius: 0 50% 50%  0;
+}
+.oxi-addons-align-btn12 .sa-btn-effect-left:hover::before{
+    width: 180%;
+    left: 100;
+}
+
+/*Right*/
+.oxi-addons-align-btn12 .sa-btn-effect-right::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(52, 152, 219, 1.00);
+    z-index: -1;
+    transition: 0.4s;
+    right: 0;
+    border-radius :50% 0 0 50%  ;
+}
+.oxi-addons-align-btn12 .sa-btn-effect-right:hover::before {
+    width: 180%;
+    right: 100;
+}
+
+.oxi-addons-align-btn12 .oxi-button-btn12 .oxi-icons{
+   
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn12 .oxi-button-btn12  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn12 .oxi-button-btn12 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 5px 0px 0px;
+    }
+
+}

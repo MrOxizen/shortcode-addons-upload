@@ -51,7 +51,7 @@ class Style_1 extends Templates {
             echo '<div class=" oxi-addons-info-image-parent-wrapper ' . $this->column_render('sa_info_image_column', $style) . '">
                       <div class="sa_addons_icon_boxes_container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
                         if ( $value['sa_info_image_url-url'] != '') {
-                              echo '<a href="' . $this->url_render('sa_info_image_url', $value) . '"  >
+                              echo '<a ' . $this->url_render('sa_info_image_url', $value) . '  >
                                         ' . $content . '
                                    </a>';
                         } else {

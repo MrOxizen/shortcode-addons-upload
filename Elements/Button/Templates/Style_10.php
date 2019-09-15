@@ -39,7 +39,6 @@ class Style_10 extends Templates {
 
     public function old_render() {
         $style = $this->dbdata;
-        $child = $this->child;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $css = '';

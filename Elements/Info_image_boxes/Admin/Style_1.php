@@ -376,11 +376,18 @@ class Style_1 extends AdminStyle {
                 ]
         );
 
-
+        $this->add_control(
+                'sa_info_image_head_title', $this->style, [
+            'label' => __('Heading', SHORTCODE_ADDOONS),
+            'type' => Controls::HEADING,
+          
+                ]
+        );
         $this->add_control(
                 'sa_info_image_head_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
+            'separator' => TRUE,
             'default' => '#252b25',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading' => 'color:{{VALUE}};'
@@ -426,16 +433,18 @@ class Style_1 extends AdminStyle {
             ]
                 ]
         );
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons-heading-span', [
-            'label' => esc_html__('Heading Span Setting', SHORTCODE_ADDOONS),
+       $this->add_control(
+                'sa_info_image_span_head_title', $this->style, [
+            'label' => __('Heading Span', SHORTCODE_ADDOONS),
+            'type' => Controls::HEADING,
+          
                 ]
         );
         $this->add_control(
                 'sa_info_image_head_span_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
+            'separator' => TRUE,
             'default' => '#252b25',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading span' => 'color:{{VALUE}};'
@@ -457,6 +466,7 @@ class Style_1 extends AdminStyle {
             'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
                 ]
         );
+         
         $this->add_control(
                 'sa_info_image_short_det_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),

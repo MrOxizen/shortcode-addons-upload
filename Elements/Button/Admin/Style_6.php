@@ -59,90 +59,9 @@ class Style_6 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('General Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'showing' => TRUE,
                 ]
         );
-        $this->add_group_control(
-                'sa_btn_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_btn_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 15,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
-
-        $this->add_responsive_control(
-                'sa_btn_margin', $this->style, [
-            'label' => __('Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 0,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
-
-        $this->end_controls_section();
-
-        $this->end_section_devider();
-
-        $this->start_section_devider();
-
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Button Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
-                ]
-        );
-
-
         $this->add_control(
                 'sa_btn_width_choose', $this->style, [
             'label' => __('Button Width', SHORTCODE_ADDOONS),
@@ -211,6 +130,59 @@ class Style_6 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
+                'sa_btn_animation', $this->style, [
+            'type' => Controls::ANIMATION,
+                ]
+        );
+       
+
+        $this->add_responsive_control(
+                'sa_btn_margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 0,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+
+        $this->end_controls_section();
+
+        $this->end_section_devider();
+
+        $this->start_section_devider();
+
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Button Setting', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
+
+
+        
+        $this->add_group_control(
                 'sa_btn_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
@@ -230,7 +202,6 @@ class Style_6 extends AdminStyle {
         $this->add_control(
                 'sa-btn-text-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Select Background Color', SA_ELEMENTOR_TEXTDOMAIN),
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
@@ -311,8 +282,7 @@ class Style_6 extends AdminStyle {
                 'sa-btn-text-h-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'description' => __('Select Hover Color', SA_ELEMENTOR_TEXTDOMAIN),
-            'default' => '#000000',
+           'default' => '#000000',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6:hover' => 'color:{{VALUE}};'
             ],
@@ -385,7 +355,37 @@ class Style_6 extends AdminStyle {
         $this->end_controls_tab();
 
         $this->end_controls_tabs();
-
+         $this->add_responsive_control(
+                'sa_btn_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+                    'separator'=> TRUE,
+            'default' => [
+                'unit' => 'px',
+                'size' => 15,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
         $this->end_controls_section();
 
         $this->start_controls_section(
