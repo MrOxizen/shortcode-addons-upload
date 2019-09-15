@@ -1,5 +1,6 @@
 <?php
 
+
 namespace SHORTCODE_ADDONS_UPLOAD\Elements\Icon\Admin;
 
 if (!defined('ABSPATH')) {
@@ -68,16 +69,16 @@ class Style_4 extends AdminStyle
                     '_blank' => [
                         'title' => __('New Tab', SHORTCODE_ADDOONS),
                     ],
-                ], 
+                ],
             ]
         );
         $this->add_responsive_control(
             'sa_icon_alignment',
             $this->style,
             [
-                'label' => __('Link Opening', SHORTCODE_ADDOONS),
+                'label' => __('Alignment', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT, 
+                'operator' => Controls::OPERATOR_TEXT,
                 'default' => 'center',
                 'options' => [
                     'flex-start' => [
@@ -89,7 +90,7 @@ class Style_4 extends AdminStyle
                     'flex-end' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
                     ],
-                ], 
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__icon_main' => 'justify-content: {{VALUE}};'
                 ],
@@ -139,7 +140,7 @@ class Style_4 extends AdminStyle
         $this->end_section_devider();
 
         $this->start_section_devider();
-        
+
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -224,28 +225,39 @@ class Style_4 extends AdminStyle
                     '{{WRAPPER}} .oxi_addons__icon .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
-        ); 
-        $this->add_control(
+        );
+        $this->add_group_control(
             'sa_icon_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'oparetor' => 'RGB',
-                'default' => '#ff00cc',
+                'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__icon' => ''
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_icon_border', $this->style, [
-        'type' => Controls::BORDER,
-        'selector' => [
-            '{{WRAPPER}} .oxi_addons__icon' => ''
-        ],
+            'sa_icon_box_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon' => ''
+                ],
             ]
-    );
+        );
+        $this->add_group_control(
+            'sa_icon_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon' => ''
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_icon_border_radius',
             $this->style,
@@ -278,8 +290,8 @@ class Style_4 extends AdminStyle
                     '{{WRAPPER}} .oxi_addons__icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
-        ); 
-        $this->end_controls_section(); 
+        );
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }
@@ -321,12 +333,12 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TEXT,
             ]
         );
-        $this->add_control(
+        $this->add_group_control(
             'sa_icon_link',
             $this->style,
             [
                 'label' => __('Icon Link', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
+                'type' => Controls::URL,
             ]
         );
         echo '</div>';

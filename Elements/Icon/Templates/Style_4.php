@@ -12,33 +12,29 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_4 extends Templates
-{
+class Style_4 extends Templates {
 
-
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
 
         foreach ($child as $v) {
             $value = json_decode($v['rawdata'], true);
             $icon = '';
-            if ($value['sa_icon_link'] != '') {
-                $icon = '<a  id="'.$value['sa_icon_id'].'" href="'. $value['sa_icon_link'] .'" target="'.$style['sa_icon_link_opening_style'].'"  class="oxi_addons__icon">
+            if ($value['sa_icon_link-url'] != '') {
+                $icon = '<a ' . $this->url_render('sa_icon_link', $value) . ' class="oxi_addons__icon">
                 ' . $this->font_awesome_render($value['sa_icon_fontawesome']) . '
             </a>';
             } else {
-                $icon = '<div class="oxi_addons__icon"  id="'.$value['sa_icon_id'].'">
+                $icon = '<div class="oxi_addons__icon" ' . ($value['sa_icon_link-id'] != '' ? 'id="' . $value['sa_icon_link-id'] . '"' : '') . '>
                 ' . $this->font_awesome_render($value['sa_icon_fontawesome']) . '
             </div>';
             }
 
 
-            echo '  <div class="oxi_addons__icon_main_wrapper '.($admin == "admin" ? 'oxi-addons-admin-edit-list' : '').' '.$this->column_render('sa_icon_column', $style).'">
+            echo '  <div class="oxi_addons__icon_main_wrapper ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_icon_column', $style) . '">
                             <div class="oxi_addons__icon_main">
-                                '. $icon .'
+                                ' . $icon . '
                             </div>
                         ';
             if ($admin == 'admin') :
@@ -55,33 +51,32 @@ class Style_4 extends Templates
         }
     }
 
-    public function old_render()
-    {
+    public function old_render() {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
-        $styledata = explode('|', $stylefiles[0]); 
-    echo '<div class="oxi-addons-container">';
-    echo '<div class="oxi-addons-row">';
-    foreach ($listdata as $value) {
-        $listfiles = explode('||#||', $value['files']);
-        echo '<div class="' . OxiAddonsItemRows($styledata, 37) . ' oxi-addons-center" ' . OxiAddonsAnimation($styledata, 23) . '>';
-        if ($listfiles[7] != '') {
-            $hreffirst = '<a href="' . OxiAddonsUrlConvert($listfiles[7]) . '" target = "' . $styledata[1] . '"  class="oxi-icon oxi-icon-' . $oxiid . '" id="' . $listfiles[5] . '">';
-            $hreflast = '</a>';
-        } else {
-            $hreffirst = '<div  class="oxi-icon oxi-icon-' . $oxiid . '" id="' . $listfiles[5] . '">';
-            $hreflast = '</div>';
+        $styledata = explode('|', $stylefiles[0]);
+        echo '<div class="oxi-addons-container">';
+        echo '<div class="oxi-addons-row">';
+        foreach ($listdata as $value) {
+            $listfiles = explode('||#||', $value['files']);
+            echo '<div class="' . OxiAddonsItemRows($styledata, 37) . ' oxi-addons-center" ' . OxiAddonsAnimation($styledata, 23) . '>';
+            if ($listfiles[7] != '') {
+                $hreffirst = '<a href="' . OxiAddonsUrlConvert($listfiles[7]) . '" target = "' . $styledata[1] . '"  class="oxi-icon oxi-icon-' . $oxiid . '" id="' . $listfiles[5] . '">';
+                $hreflast = '</a>';
+            } else {
+                $hreffirst = '<div  class="oxi-icon oxi-icon-' . $oxiid . '" id="' . $listfiles[5] . '">';
+                $hreflast = '</div>';
+            }
+            echo $hreffirst;
+            echo '' . oxi_addons_font_awesome($listfiles[3]) . '';
+            echo $hreflast;
+            echo '</div>';
         }
-        echo $hreffirst;
-        echo '' . oxi_addons_font_awesome($listfiles[3]) . '';
-        echo $hreflast; 
         echo '</div>';
-    }
-    echo '</div>';
-    echo '</div>';
-    $css = '.oxi-addons-container .oxi-icon-' . $oxiid . '{
+        echo '</div>';
+        $css = '.oxi-addons-container .oxi-icon-' . $oxiid . '{
                     max-width: ' . $styledata[15] . 'px;
                     width: 100%;
                     position:relative;
@@ -148,4 +143,5 @@ class Style_4 extends Templates
                 }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
+
 }

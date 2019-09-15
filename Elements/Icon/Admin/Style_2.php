@@ -50,8 +50,7 @@ class Style_2 extends AdminStyle
                     '{{WRAPPER}} .oxi_addons__icon_main_wrapper' => '',
                 ],
             ]
-        );
-
+        ); 
         $this->add_control(
             'sa_icon_link_opening_style',
             $this->style,
@@ -75,7 +74,7 @@ class Style_2 extends AdminStyle
             'sa_icon_alignment',
             $this->style,
             [
-                'label' => __('Link Opening', SHORTCODE_ADDOONS),
+                'label' => __('Alignment', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_TEXT, 
                 'default' => 'center',
@@ -103,7 +102,7 @@ class Style_2 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_drop_caps_margin',
+            'sa_icon_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -365,12 +364,12 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TEXT,
             ]
         );
-        $this->add_control(
+        $this->add_group_control(
             'sa_icon_link',
             $this->style,
             [
                 'label' => __('Icon Link', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
+                'type' => Controls::URL,
             ]
         );
         echo '</div>';

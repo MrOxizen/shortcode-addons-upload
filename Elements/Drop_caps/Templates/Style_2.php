@@ -30,7 +30,7 @@ class Style_2 extends Templates {
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
-        
+        $css = '';
      echo '<div class="oxi-addons-drop-caps-' . $oxiid . '"  ' . OxiAddonsAnimation($styledata, 35) . '>' . $stylefiles[3] . '</div>';
     $css .= '
             .oxi-addons-drop-caps-' . $oxiid . '{ 

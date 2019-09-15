@@ -25,12 +25,12 @@ class Style_1 extends Templates
         foreach ($child as $v) {
             $value = json_decode($v['rawdata'], true);
             $icon = '';
-            if ($value['sa_icon_link'] != '') {
-                $icon = '<a  id="'.$value['sa_icon_id'].'" href="'. $value['sa_icon_link'] .'" target="'.$style['sa_icon_link_opening_style'].'"  class="oxi_addons__icon">
+            if ($value['sa_icon_link-url'] != '') {
+                $icon = '<a ' . $this->url_render('sa_icon_link', $value) . ' class="oxi_addons__icon">
                 ' . $this->font_awesome_render($value['sa_icon_fontawesome']) . '
             </a>';
             } else {
-                $icon = '<div class="oxi_addons__icon"  id="'.$value['sa_icon_id'].'">
+                $icon = '<div class="oxi_addons__icon" ' . ($value['sa_icon_link-id'] != '' ? 'id="' . $value['sa_icon_link-id'] . '"' : '') . '>
                 ' . $this->font_awesome_render($value['sa_icon_fontawesome']) . '
             </div>';
             }
