@@ -66,7 +66,6 @@ class Style_6 extends Templates
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
-        $user = $this->admin;
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
@@ -91,7 +90,7 @@ class Style_6 extends Templates
             foreach ($rearrange as $arrange) {
                 $loopdata .= $$arrange;
             }
-            echo '<div class="' . OxiAddonsItemRows($styledata, 165) . '  ' . OxiAddonsAdminDefine($user) . '">
+            echo '<div class="' . OxiAddonsItemRows($styledata, 165) . '">
                    ' . $linkfirst . '
                         <div class="oxi-icon-boxes-' . $oxiid . '"  ' . OxiAddonsAnimation($styledata, 89) . '>
                              <div class="oxi-addons-icon-box">
@@ -101,22 +100,7 @@ class Style_6 extends Templates
                              </div>
                         </div>
                     ' . $linklast . ' ';
-            if ($user == 'admin') {
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditicon_boxesdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                </form>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeleteicon_boxesdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                </form>
-                            </div>
-                        </div>';
-            }
+
             echo '</div>';
         }
         echo ' </div>
