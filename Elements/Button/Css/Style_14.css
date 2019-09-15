@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+
+.oxi-addons-align-btn14 .oxi-button-btn14 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    color: #000000;
+    overflow: hidden;
+    font-size: 20px;
+    font-family: "Nunito";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 1.5px;
+    ;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 2px 2px 0px 0px
+}
+
+.oxi-addons-align-btn14 .oxi-button-btn14.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+.oxi-addons-align-btn14 {
+    text-align: center
+}
+
+.oxi-addons-align-btn14 .oxi-button-btn14 .oxi-icons{
+
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px;
+}
+.oxi-addons-align-btn14 .oxi-button-btn14:hover {
+      color: #000000;
+    background: #9e9e9e;
+   border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #000000;
+}
+.oxi-addons-align-btn14 .oxi-button-btn14 {
+    background: rgba(255, 255, 255, 0.00)
+}
+
+.oxi-addons-align-btn14 .oxi-material-design {
+    position: relative
+}
+
+.oxi-addons-align-btn14 .oxi-material-design canvas {
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn14 .oxi-button-btn14  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn14 .oxi-button-btn14 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 5px 0px 0px
+    }
+    .oxi-addons-align-btn14 {
+        text-align: center
+    }
+}
