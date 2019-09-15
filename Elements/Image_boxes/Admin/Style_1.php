@@ -62,6 +62,7 @@ class Style_1 extends AdminStyle {
                 'sa-ib-content-box-col', $this->style, [
             'type' => Controls::COLUMN,
             'loader' => TRUE,
+             
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-icon-boxes-main' => '',
             ]
@@ -87,6 +88,7 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa-ib-content-background', $this->style, [
             'type' => Controls::BACKGROUND,
+            'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-icon-boxes-area .oxi-addons-icon-box' => '',
             ]
@@ -295,6 +297,7 @@ class Style_1 extends AdminStyle {
         $this->end_section_devider();
 
         $this->start_section_devider();
+        
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Heading Settings', SHORTCODE_ADDOONS),
