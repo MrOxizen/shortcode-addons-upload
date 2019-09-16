@@ -19,39 +19,31 @@ class Style_4 extends Templates {
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = json_decode($v['rawdata'], true);
-            $heading = $content = $link = '';
-            if ($value['sa_image_boxes_heading'] != '') {
-                $heading = '<div class="oxi-addons-image-content-heading">
-                                  ' . $this->text_render($value['sa_image_boxes_heading']) . '
-                                </div>';
-            }
-            if ($value['sa_image_boxes_s_description'] != '') {
-                $content = '<div class="oxi-addons-image-content-body">
-                                  ' . $this->text_render($value['sa_image_boxes_s_description']) . '
-                                </div> ';
-            }
-            if ($value['sa_image_boxes_button'] != '') {
-                $link = '<div class="oxi-addons-image-content-button">
-                                    <a ' . $this->url_render('sa_image_boxes_button_url', $value) . ' class="oxi-addons-image-content-button-data">
-                                        ' . $this->text_render($value['sa_image_boxes_button']) . '
-                                    </a>
-                                </div>';
-            }
-
-
-            echo '<div class="oxi-addons-image-box-main-area ' . $this->column_render('sa-image-boxes-col', $style) . ' ">
-                    <div class="oxi-image-boxes-area-container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
-                        <div class="oxi-image-boxes-row">
-                            <div class="oxi-addons-image">
-                                <div class="oxi-addons-image-image "  style="background-image: url(\'' . $this->media_render('sa_image_boxes_media', $value) . '\');">
-                                    <div class="oxi-addons-image-content">
-                                        ' . $heading . '
-                                        ' . $content . '
-                                        ' . $link . '
-                                    </div>
-                                </div>
-                            </div>
-                        </div>';
+            $heading = $content = $img = '';
+            
+                 echo ' <div class="oxi-addons-content-boxes-four-colum ' . $this->column_render('sa-image-boxes-four-col', $style) . '   ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
+                                    <div class="oxi-addons-content-boxes-four-area">
+					<div class="oxi-addons-content-boxes-full " >
+						<div class="oxi-addons-content-boxes-four-area-image_content">
+							<div class="oxi-addons-content-boxes-images " style="background-image: url(\'' . $this->media_render('sa_image_boxes_media', $value) . '\');">
+                       
+                                                        </div> 
+						</div>  
+						<div class="oxi-addons-content-boxes-four-area-data"> 
+                                                    <div class="oxi-addons-content-boxes-four-area-icon">
+                                                            ' . $this->font_awesome_render($value['sa_image_boxes_icon']) . '
+                                                    </div>
+                                                    <div class="oxi-addons-content-boxes-four-area-content">
+                                                        <div class="oxi-addons-content-boxes-heading">
+                                                              ' . $this->text_render($value['sa_image_boxes_heading']) . '
+                                                        </div>
+							<div class="oxi-addons-content-boxes-content">
+                                                                ' . $this->text_render($value['sa_image_boxes_s_description']) . '
+                                                        </div> 
+                                                    </div>    
+						</div>
+					</div>
+                                    </div>';
             if ($admin == 'admin') :
                 echo'<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
@@ -62,8 +54,7 @@ class Style_4 extends Templates {
                             </div>
                         </div>';
             endif;
-            echo '</div>
-               </div>';
+            echo '</div>';
         }
     }
 
@@ -71,43 +62,43 @@ class Style_4 extends Templates {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
-    $oxiid = $styledata['id'];
-    $stylefiles = explode('||#||', $styledata['css']);
-    $styledata = explode('|', $stylefiles[0]);
-    $css = '';
-    echo '<div class="oxi-addons-container"><div class="oxi-addons-row">';
-    foreach ($listdata as $value) {
-        $data = explode('||#||', $value['files']);
-        $heading = $content = $img = '';
-        if ($data[3] != '') {
-            $heading = '
+        $oxiid = $styledata['id'];
+        $stylefiles = explode('||#||', $styledata['css']);
+        $styledata = explode('|', $stylefiles[0]);
+        $css = '';
+        echo '<div class="oxi-addons-container"><div class="oxi-addons-row">';
+        foreach ($listdata as $value) {
+            $data = explode('||#||', $value['files']);
+            $heading = $content = $img = '';
+            if ($data[3] != '') {
+                $heading = '
                     <div class="oxi-addons-content-boxes-heading">
                         ' . OxiAddonsTextConvert($data[3]) . '
                     </div>
                 ';
-        }
-        if ($data[5] != '') {
-            $content = '
+            }
+            if ($data[5] != '') {
+                $content = '
                     <div class="oxi-addons-content-boxes-content">
                     ' . OxiAddonsTextConvert($data[5]) . '
                 </div>  
                 ';
-        }
-        if ($data[1] != '') {
-            $img = '
+            }
+            if ($data[1] != '') {
+                $img = '
                     <div class="oxi-addons-content-boxes-images  oxi-addons-content-boxes-images-' . $value['id'] . '">
                        
                     </div>
                 ';
-            $css .= '.oxi-addons-content-boxes-' . $oxiid . ' .oxi-addons-content-boxes-images-' . $value['id'] . '{
+                $css .= '.oxi-addons-content-boxes-' . $oxiid . ' .oxi-addons-content-boxes-images-' . $value['id'] . '{
                             background: linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("' . OxiAddonsUrlConvert($data[1]) . '");
                             -moz-background-size: 100% 100%;
                             -o-background-size: 100% 100%;
                             background-size: 100% 100%;
                         }';
-        }
-        echo '<div class="' . OxiAddonsItemRows($styledata, 127) . '  ' . OxiAddonsAdminDefine($user) . '">';
-        echo ' 
+            }
+            echo '<div class="' . OxiAddonsItemRows($styledata, 127) . '">';
+            echo ' 
                 <div class="oxi-addons-content-boxes-' . $oxiid . ' " ' . OxiAddonsAnimation($styledata, 53) . '>
 					<div class="oxi-addons-content-boxes-full " >
 						<div class="oxi-addons-content-boxes-' . $oxiid . '-image_content">
@@ -125,26 +116,11 @@ class Style_4 extends Templates {
 						</div>
 					</div>
                 </div>';
-        if ($user == 'admin') {
-            echo '  <div class="oxi-addons-admin-absulote">
-                                <div class="oxi-addons-admin-absulate-edit">
-                                    <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditimage_boxesdata") . '
-                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                        <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                    </form>
-                                </div>
-                                <div class="oxi-addons-admin-absulate-delete">
-                                    <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeleteimage_boxesdata") . '
-                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                        <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                    </form>
-                                </div>
-                            </div>';
+
+            echo '</div>';
         }
-        echo '</div>';
-    }
-    echo '</div></div>';
-    $css .= '.oxi-addons-content-boxes-' . $oxiid . '{
+        echo '</div></div>';
+        $css .= '.oxi-addons-content-boxes-' . $oxiid . '{
                     width: 100%;
                     position: relative;
                     max-width: ' . $styledata[3] . 'px;
