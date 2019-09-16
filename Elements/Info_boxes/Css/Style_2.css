@@ -1,15 +1,15 @@
-.oxi_addons__info_boxes_wrapper {
+.oxi_addons__info_boxes_wrapper{
     padding: 5px;
 }
 
-.oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_2 {
+ .oxi_addons__info_boxes_main_style_2 {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px 0;
 }
 
-.oxi_addons__info_boxes_wrapper .oxi_addons__heading_style_2 {
+ .oxi_addons__heading_style_2 {
     color: #757575;
     font-size: 22px;
     font-weight: bold;
@@ -19,7 +19,7 @@
     padding: 10px 0;
 }
 
-.oxi_addons__info_boxes_wrapper .oxi_addons__details_style_2 {
+ .oxi_addons__details_style_2 {
     color: #808080;
     font-size: 16px;
     font-weight: normal;
@@ -29,13 +29,13 @@
     padding: 10px 0;
 }
 
-.oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_2 {
+ .oxi_addons__icon_style_2 {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_2 .oxi-icons {
+ .oxi_addons__icon_style_2 .oxi-icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,8 +45,13 @@
     width: 80px;
     height: 80px;
     border-radius: 10px;
+    transition: 0.5s ease-in;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in; 
 }
-.oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_2:hover .oxi_addons__icon_style_2 .oxi-icons { 
+ .oxi_addons__info_boxes_main_style_2:hover .oxi_addons__icon_style_2 .oxi-icons { 
     color: #ffffff;
     background-color: #28aaa5; 
     border-radius: 40px;
@@ -54,37 +59,37 @@
 
  
 @media only screen and (min-width: 669px) and (max-width: 993px) {
-    .oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_2 {
+     .oxi_addons__info_boxes_main_style_2 {
         padding: 7px 0;
     }
-    .oxi_addons__info_boxes_wrapper .oxi_addons__heading_style_2 {
+     .oxi_addons__heading_style_2 {
         color: #757575;
         font-size: 18px;
         padding: 7px 0;
     }
-    .oxi_addons__info_boxes_wrapper .oxi_addons__details_style_2 {
+     .oxi_addons__details_style_2 {
         font-size: 16px;
         padding: 7px 0;
     }
-    .oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_2 .oxi-icons {
+     .oxi_addons__icon_style_2 .oxi-icons {
         font-size: 30px;
     }
 }
 
 @media only screen and (max-width: 668px) {
-    .oxi_addons__info_boxes_wrapper .oxi_addons__info_boxes_main_style_2 {
+     .oxi_addons__info_boxes_main_style_2 {
         padding: 5px 0;
     }
-    .oxi_addons__info_boxes_wrapper .oxi_addons__heading_style_2 {
+     .oxi_addons__heading_style_2 {
         color: #757575;
         font-size: 18px;
         padding: 5px 0;
     }
-    .oxi_addons__info_boxes_wrapper .oxi_addons__details_style_2 {
+     .oxi_addons__details_style_2 {
         font-size: 14px;
         padding: 7px 0;
     }
-    .oxi_addons__info_boxes_wrapper .oxi_addons__icon_style_2 .oxi-icons {
+     .oxi_addons__icon_style_2 .oxi-icons {
         font-size: 25px;
     }
 }

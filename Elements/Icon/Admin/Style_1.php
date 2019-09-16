@@ -50,27 +50,7 @@ class Style_1 extends AdminStyle
                     '{{WRAPPER}} .oxi_addons__icon_main_wrapper' => '',
                 ],
             ]
-        );
-
-        $this->add_control(
-            'sa_icon_link_opening_style',
-            $this->style,
-            [
-                'label' => __('Link Opening', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT,
-                'loader' => TRUE,
-                'default' => '_blank',
-                'options' => [
-                    '' => [
-                        'title' => __('Normal', SHORTCODE_ADDOONS),
-                    ],
-                    '_blank' => [
-                        'title' => __('New Tab', SHORTCODE_ADDOONS),
-                    ],
-                ], 
-            ]
-        );
+        ); 
         $this->add_responsive_control(
             'sa_icon_alignment',
             $this->style,
@@ -82,12 +62,15 @@ class Style_1 extends AdminStyle
                 'options' => [
                     'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
                     ],
                     'center' => [
                         'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
                     ],
                     'flex-end' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
                     ],
                 ], 
                 'selector' => [
@@ -95,6 +78,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+      
         $this->add_group_control(
             'sa_drop_caps_animation',
             $this->style,

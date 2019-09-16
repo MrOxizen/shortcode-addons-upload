@@ -52,50 +52,35 @@ class Style_4 extends AdminStyle
                 ],
             ]
         );
-
-        $this->add_control(
-            'sa_icon_link_opening_style',
-            $this->style,
-            [
-                'label' => __('Link Opening', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT,
-                'loader' => TRUE,
-                'default' => '_blank',
-                'options' => [
-                    '' => [
-                        'title' => __('Normal', SHORTCODE_ADDOONS),
-                    ],
-                    '_blank' => [
-                        'title' => __('New Tab', SHORTCODE_ADDOONS),
-                    ],
-                ],
-            ]
-        );
+ 
         $this->add_responsive_control(
             'sa_icon_alignment',
             $this->style,
             [
                 'label' => __('Alignment', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_TEXT,
+                'operator' => Controls::OPERATOR_TEXT, 
                 'default' => 'center',
                 'options' => [
                     'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
                     ],
                     'center' => [
                         'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
                     ],
                     'flex-end' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
                     ],
-                ],
+                ], 
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__icon_main' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
+      
         $this->add_group_control(
             'sa_icon_animation',
             $this->style,

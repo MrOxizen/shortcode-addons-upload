@@ -361,7 +361,7 @@ class Style_2 extends AdminStyle {
             ],]
         );
         $this->add_group_control(
-                'sa_btn_tx_shadow', $this->style, [
+                'sa_btn_h_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn2 .oxi-button-btn2:hover' => ''
@@ -369,7 +369,7 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_btn_box_shadow', $this->style, [
+                'sa_btn_h_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn2 .oxi-button-btn2:hover' => ''
