@@ -144,10 +144,9 @@
     position: absolute;
     white-space: nowrap;
     display: block;
-    z-index: 999;
+    z-index: 90;
     width: 200px;
     margin: 0;
-    left: -45px;
     top: 32px;
     transform: rotate(-45deg)
 }

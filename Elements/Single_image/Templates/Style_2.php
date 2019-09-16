@@ -27,6 +27,7 @@ class Style_2 extends Templates {
 
     public function inline_public_jquery() {
         $style = $this->style;
+//        echo $this->WRAPPER;
         if ($style['sa_s_image_light_or_link'] == 'lightbox') {
             return 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-single-image-icon-data").OximagnificPopup({
                         items: [
@@ -35,7 +36,7 @@ class Style_2 extends Templates {
                             }
                         ],
                         type: "image",
-                        mainClass: ".' . $this->WRAPPER . '",
+                        mainClass: "' . $this->WRAPPER . '",
                         callbacks: {
                                     beforeChange: function() {
                                      this.items[0].src = this.items[0].src + "?=" + Math.random(); 
@@ -51,25 +52,26 @@ class Style_2 extends Templates {
     public function inline_public_css() {
         $style = $this->style;
         if ($style['sa_s_image_light_or_link'] == 'lightbox') {
-            return '.oxi-addons-lightbox-' . $this->oxiid . '.Oximfp-bg{
-                    background: ' . $style['sa_s_image_bg_color'] . ';
-                    z-index: ' . ($style['sa_s_image_light_z_ind'] - 1) . ';
-                  }
-                  .oxi-addons-lightbox-' . $this->oxiid . '.Oximfp-wrap{
+            return '.shortcode-addons-wrapper-' . $this->oxiid . '.Oximfp-bg{
+                        background: ' . $style['sa_s_image_light_bg_color'] . ';
+                        z-index: ' . ($style['sa_s_image_light_z_ind'] - 1) . ';
+                      }
+                  .shortcode-addons-wrapper-' . $this->oxiid . '.Oximfp-wrap{
                    z-index: ' . $style['sa_s_image_light_z_ind'] . ';
                   }
-                  .oxi-addons-lightbox-' . $this->oxiid . ' .Oximfp-content{
+                  .shortcode-addons-wrapper-' . $this->oxiid . ' .Oximfp-content{
                     z-index: ' . ($style['sa_s_image_light_z_ind'] + 2) . ';
                     }
-                  .oxi-addons-lightbox-' . $this->oxiid . ' .Oximfp-close{
+                  .shortcode-addons-wrapper-' . $this->oxiid . ' .Oximfp-close{
                       z-index: ' . ($style['sa_s_image_light_z_ind'] + 3) . ';
                   }
 
-                 .oxi-addons-lightbox-' . $this->oxiid . ' .Oximfp-image-holder .Oximfp-close, 
-                 .oxi-addons-lightbox-' . $this->oxiid . ' .Oximfp-iframe-holder .Oximfp-close{
+                 .shortcode-addons-wrapper-' . $this->oxiid . ' .Oximfp-image-holder .Oximfp-close, 
+                 .shortcode-addons-wrapper-' . $this->oxiid . ' .Oximfp-iframe-holder .Oximfp-close{
                      color: ' . $style['sa_s_image_light_cls_clr'] . ';
                   }
-                  .oxi-addons-lightbox-' . $this->oxiid . ' .Oximfp-preloader{
+                 
+                  .shortcode-addons-wrapper-' . $this->oxiid . ' .Oximfp-preloader{
                      background: ' . $style['sa_s_image_light_pre_clr'] . ';
                   }';
         }
@@ -91,6 +93,7 @@ class Style_2 extends Templates {
                             </div>
                         </div>';
         }
+        if($this->media_render('sa_s_image_img', $style) != ''){
         echo '  <div class="oxi-addons-single-image-container"  id="' . $style['sa_s_image_ID'] . '">
                     <div class="oxi-addons-single-image-row">
                         <div class="oxi-addons-single-image">
@@ -102,6 +105,9 @@ class Style_2 extends Templates {
                         ' . $ribbon . '
                     </div>
                 </div>';
+        }else{
+            echo '<div style="color : red;">Please Upload an Image !</div>';
+        }
     }
 
     public function old_render() {
@@ -152,6 +158,7 @@ class Style_2 extends Templates {
                   .oxi-addons-lightbox-' . $oxiid . ' .Oximfp-content{
                     z-index: ' . ($styledata[249] + 2) . ';
                     }
+                  
                   .oxi-addons-lightbox-' . $oxiid . ' .Oximfp-close{
                       z-index: ' . ($styledata[249] + 3) . ';
                   }
