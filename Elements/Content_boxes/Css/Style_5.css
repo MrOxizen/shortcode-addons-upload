@@ -1,0 +1,122 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplob
+*/
+
+.oxi-addons-content-boxes{
+    width:100%;
+    position:relative;
+    max-width:300px;
+    margin:0 auto ;
+}
+.oxi-addons-content-boxes-data{
+    width:100%;
+    float:left;
+    background:rgba(12, 151, 166, 1);
+    margin:10px 10px 10px 10px;
+    box-shadow:1px 7px 13px -3px rgba(161, 161, 161, 1) ;
+}
+.oxi-addons-content-boxes .oxi-addons-content-boxes-icon{
+    width:100%;
+    height:163px;
+    float:left;
+    text-align:center;
+    background:rgba(29, 124, 207, 0.78);
+    display:flex;
+    justify-content:center;
+    align-items:center ;
+}
+.oxi-addons-content-boxes .oxi-addons-content-boxes-icon-data{
+    position:relative;
+    display:inline-block 
+}
+.oxi-addons-content-boxes .oxi-icons{
+    display:inlne-block;
+    width:100%;
+    height:100%;
+    font-size:55px;
+    color:#ffffff;
+}
+.oxi-addons-content-boxes .oxi-addons-content-boxes-content-outer{
+    width:100%;
+    padding:10px 10px 10px 10px;
+    float:left ;
+}
+.oxi-addons-content-boxes .oxi-addons-content-boxes-heading{
+    width:100%;
+    float:left;
+    color:#ffffff;
+    font-size:22px;
+    font-family:"Open Sans";
+    font-weight:600;
+    font-style:normal;
+    line-height:1.3;
+    text-align:left;
+    padding:6px 10px 6px 10px ;
+}
+.oxi-addons-content-boxes .oxi-addons-content-boxes-content{
+    width:100%;
+    float:left;
+    color:#ffffff;
+    font-size:16px;
+    font-family:"Open Sans";
+    font-weight:300;
+    font-style:normal;
+    line-height:1.3;
+    text-align:left;
+    padding:10px 10px 15px 10px ;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px){
+    .oxi-addons-content-boxes{
+        max-width:300px ;
+    }
+    .oxi-addons-content-boxes-data{
+        margin:10px 10px 10px 10px ;
+    }
+    .oxi-addons-content-boxes .oxi-addons-content-boxes-icon{
+        height:163px ;
+    }
+    .oxi-addons-content-boxes .oxi-icons{
+        font-size:55px ;
+    }
+    .oxi-addons-content-boxes- .oxi-addons-content-boxes-content{
+        padding:10px 10px 10px 10px ;
+    }
+    .oxi-addons-content-boxes .oxi-addons-content-boxes-heading{
+        font-size:22px;padding:6px 10px 6px 10px ;
+    }
+    .oxi-addons-content-boxes .oxi-addons-content-boxes-content{
+        font-size:16px;padding:10px 10px 15px 10px ;
+    }
+}
+@media only screen and (max-width:668px){
+    .oxi-addons-content-boxes{
+        max-width:300px ;
+    }
+    .oxi-addons-content-boxes-data{
+        margin:10px 10px 10px 10px ;
+    }
+    .oxi-addons-content-boxes .oxi-addons-content-boxes-icon{
+        height:163px ;
+    }
+    .oxi-addons-content-boxes .oxi-icons{
+        font-size:55px ;
+    }
+    .oxi-addons-content-boxes .oxi-addons-content-boxes-84-content{
+        padding:10px 10px 10px 10px ;
+    }
+    .oxi-addons-content-boxes .oxi-addons-content-boxes-heading{
+        font-size:22px;
+        padding:300px 10px px rgba(12, 151, 166, 1)px ;
+    }
+    .oxi-addons-content-boxes .oxi-addons-content-boxes-content{
+        font-size:16px;
+        padding:10px 10px 15px 10px ;
+    }
+}
