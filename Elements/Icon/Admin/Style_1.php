@@ -279,7 +279,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Icon Link', SHORTCODE_ADDOONS),
                 'type' => Controls::URL,
-            ], 
+            ] 
         );
         echo '</div>';
     }

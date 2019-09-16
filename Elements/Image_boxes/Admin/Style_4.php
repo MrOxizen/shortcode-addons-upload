@@ -44,16 +44,16 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-image-boxes-col', $this->style, [
+                'sa-image-boxes-four-col', $this->style, [
             'type' => Controls::COLUMN,
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image-box-main-area' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-colum' => '',
             ]
                 ]
         );
         $this->add_responsive_control(
-                'sa-image-boxes-width', $this->style, [
+                'sa-image-boxes-four-width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::SLIDER,
@@ -88,7 +88,7 @@ class Style_4 extends AdminStyle {
 
 
         $this->add_responsive_control(
-                'sa-image-boxes-margin', $this->style, [
+                'sa-image-boxes-four-margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -132,7 +132,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-image-boxes-height', $this->style, [
+                'sa-image-boxes-four-height', $this->style, [
             'label' => __('Image Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
@@ -173,7 +173,7 @@ class Style_4 extends AdminStyle {
 
         $this->start_controls_tab();
         $this->add_responsive_control(
-                'sa-image-margin', $this->style, [
+                'sa-image-boxes-four-image-margin', $this->style, [
             'label' => __('Image Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -205,7 +205,7 @@ class Style_4 extends AdminStyle {
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_responsive_control(
-                'sa-image-hover-margin', $this->style, [
+                'sa-image-boxes-four-image-hover-margin', $this->style, [
             'label' => __('Image Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -239,7 +239,7 @@ class Style_4 extends AdminStyle {
 
 
         $this->add_group_control(
-                'sa-image-boxes-boxshadow', $this->style, [
+                'sa-image-boxes-four-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'separator' => TRUE,
             'selector' => [
@@ -248,7 +248,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-image-boxes-animation', $this->style, [
+                'sa-image-boxes-four-animation', $this->style, [
             'type' => Controls::ANIMATION,
             'selector' => [
                 '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-image' => '',
@@ -288,7 +288,7 @@ class Style_4 extends AdminStyle {
         $this->start_controls_tab();
 
         $this->add_group_control(
-                'sa-ib-content-box-background', $this->style, [
+                'sa-content-boxes-four-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content' => '',
@@ -296,7 +296,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-ib-content-box-margin', $this->style, [
+                'sa-content-boxes-four-margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -329,7 +329,7 @@ class Style_4 extends AdminStyle {
         $this->start_controls_tab();
 
         $this->add_group_control(
-                'sa-ib-content-box-background', $this->style, [
+                'sa-content-boxes-four-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content' => '',
@@ -337,7 +337,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-ib-content-box-margin', $this->style, [
+                'sa-content-boxes-four-margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -371,7 +371,7 @@ class Style_4 extends AdminStyle {
         $this->end_controls_tabs();
 
         $this->add_responsive_control(
-                'sa-ib-content-box-padding', $this->style, [
+                'sa-content-boxes-four-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'separator' => TRUE,
@@ -410,7 +410,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-image-boxes-width', $this->style, [
+                'sa-image-boxes-icon-four-size', $this->style, [
             'label' => __('Icon Size', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::SLIDER,
@@ -442,7 +442,7 @@ class Style_4 extends AdminStyle {
         );
         
         $this->add_control(
-                'sa-image-box-heading-color', $this->style, [
+                'sa-image-boxes-icon-four-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
@@ -452,7 +452,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-image-box-button-padding', $this->style, [
+                'sa-image-boxes-icon-four-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -494,7 +494,7 @@ class Style_4 extends AdminStyle {
         );
 
         $this->add_control(
-                'sa-image-box-heading-color', $this->style, [
+                'sa-image-boxes-four-heading-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
@@ -504,7 +504,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-image-box-heading-typho', $this->style, [
+                'sa-image-boxes-four-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'separator' => TRUE,
             'selector' => [
@@ -513,7 +513,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-image-box-heading-shadow', $this->style, [
+                'sa-image-boxes-four-heading-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => '',
@@ -521,7 +521,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa-image-box-heading_alignment', $this->style, [
+                'sa-image-boxes-four-heading_alignment', $this->style, [
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
@@ -546,7 +546,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-image-box-heading-padding', $this->style, [
+                'sa-image-boxes-four-heading-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -584,7 +584,7 @@ class Style_4 extends AdminStyle {
         );
 
         $this->add_control(
-                'sa-image-box-short-description-color', $this->style, [
+                'sa-image-boxes-four-short-description-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
@@ -594,7 +594,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-image-box-short-description-typho', $this->style, [
+                'sa-image-boxes-four-short-description-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'separator' => TRUE,
             'selector' => [
@@ -603,7 +603,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-image-box-short-description-tx-shadow', $this->style, [
+                'sa-image-boxes-four-short-description-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-body' => '',
@@ -611,7 +611,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa-image-box-short-description_alignment', $this->style, [
+                'sa-image-boxes-four-short-description_alignment', $this->style, [
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
@@ -636,7 +636,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-image-box-short-description-padding', $this->style, [
+                'sa-image-boxes-four-short-description-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -686,22 +686,6 @@ class Style_4 extends AdminStyle {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">';
-        $this->add_control(
-                'sa_image_boxes_heading', $this->style, [
-            'label' => __('Title', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Heading',
-            'placeholder' => 'Heading',
-                ]
-        );
-        $this->add_control(
-                'sa_image_boxes_s_description', $this->style, [
-            'label' => __('Short Description', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Lorem ipsum dolor sit amet',
-            'placeholder' => 'Lorem ipsum dolor sit amet',
-                ]
-        );
         $this->add_group_control(
                 'sa_image_boxes_media', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
@@ -710,20 +694,30 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_image_boxes_button', $this->style, [
-            'label' => __('Button Text', SHORTCODE_ADDOONS),
+                'sa_image_boxes_heading', $this->style, [
+            'label' => __('Title', SHORTCODE_ADDOONS),
             'type' => Controls::TEXT,
-            'default' => 'Learn More',
+            'default' => 'Lorem Ipsum',
+            'placeholder' => 'Lorem Ipsum',
                 ]
         );
-        $this->add_group_control(
-                'sa_image_boxes_button_url', $this->style, [
-            'label' => __('URL', SHORTCODE_ADDOONS),
-            'type' => Controls::URL,
-            'default' => '',
-            'placeholder' => 'https://www.yoururl.com',
+        $this->add_control(
+                'sa_image_boxes_s_description', $this->style, [
+            'label' => __('Short Description', SHORTCODE_ADDOONS),
+            'type' => Controls::TEXTAREA,
+            'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            'placeholder' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 ]
         );
+        $this->add_control(
+                'sa_image_boxes_icon', $this->style, [
+            'label' => __('Icon', SHORTCODE_ADDOONS),
+            'type' => Controls::ICON,
+            'default' => 'fas fa-camera',
+                ]
+        );
+        
+        
         echo '</div>';
     }
 
