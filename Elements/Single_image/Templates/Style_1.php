@@ -20,11 +20,15 @@ class Style_1 extends Templates {
 //        echo '<pre>';
 //        print_r($style);
 //        echo '</pre>';
-//        echo  $style['sa_s_image_ribbon'];
-//      print_r($this->media_render('sa_head_image',$style)) ;
-        $ribbon = '';
+        $deg = '';
+       if($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left'){
+           $deg = 'transform: rotate(-45deg); left : '.$style['sa_s_image_ribbon_left'].'px; ';
+        }else{
+           $deg = 'transform: rotate(45deg);right : '.$style['sa_s_image_ribbon_right'].'px; ';
+       }
+       $ribbon = '';
         if(array_key_exists('sa_s_image_ribbon',$style)){
-            $ribbon .= '<div class="oxi-addons-single-image-ribbon">
+            $ribbon .= '<div class="oxi-addons-single-image-ribbon" style="'.$deg.'">
                             <div class="oxi-addons-single-image-ribbon-position">
                                 <div class="oxi-addons-single-image-ribbon-content">' . $this->text_render($style['sa_s_image_ribbon_text']) . '</div>
                             </div>
@@ -250,6 +254,7 @@ class Style_1 extends Templates {
     
     
         wp_add_inline_style('shortcode-addons-style', $css);
+       
     }
 
 }
