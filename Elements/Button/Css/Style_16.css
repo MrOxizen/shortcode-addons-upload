@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addons-align-btn16 {
+    text-align: center;
+}
+.oxi-addons-align-btn16 .oxi-button-btn16 {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: "Artifika";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    text-align: center;
+    color: #bdbdbd;
+    padding: 5px 5px 5px 5px;
+    background: rgba(33, 33, 33, 0.51);
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 40px 40px 40px 40px;
+    position: relative;
+    transition: none;
+}
+.oxi-addons-align-btn16 .oxi-button-btn16.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+
+/*.oxi-addons-align-btn16 .sa-button-text{
+    transition: none;
+}*/
+
+/*.oxi-addons-align-btn16 .oxi-button-btn16:hover .sa-button-text{
+    transition: none;
+}*/
+
+.oxi-addons-align-btn16 .oxi-button-btn16:hover,
+.oxi-addons-align-btn16 .oxi-button-btn16:focus,
+.oxi-addons-align-btn16 .oxi-button-btn16:active {
+    background: rgba(33, 33, 33, 0.51);
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #000000;
+    color: #d1d1d1;
+    transition: none;
+}
+
+
+
+.oxi-addons-align-btn16 .oxi-button-btn16 .oxi-icons {
+   font-size: 22px;
+    color: #ffa012;
+    background: rgba(87, 87, 87, 0.51);
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #474747;
+    border-radius: 50px 50px 50px 50px;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oxi-addons-align-btn16 .oxi-button-btn16:hover .oxi-icons{
+    color: #bdbdbd;
+    background: rgba(56, 56, 56, 0.51);
+    border-color: #ffa012;
+ 
+}
+
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn16 .oxi-button-btn16 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 5px 5px 5px 5px;
+        border-width: 0px 0px 0px 0px
+    }
+
+    .oxi-addons-align-btn16 .oxi-button-btn16 .oxi-icons {
+        font-size: 20px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn16 .oxi-button-btn16 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 5px 5px 5px 5px;
+        border-width: 0px 0px 0px 0px
+    }
+    .oxi-addons-align-btn16 .oxi-button-btn16 .oxi-icons {
+        font-size: 20px
+    }
+    .oxi-addons-align-btn16 {
+        text-align: center
+    }
+}

@@ -477,7 +477,7 @@ class Style_1 extends AdminStyle {
         );
         
         $this->end_controls_tab();
-         $this->start_controls_tab();
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_icon_h_color', $this->style, [
             'label' => __('Icon Hover Color', SHORTCODE_ADDOONS),
@@ -488,7 +488,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-         $this->end_controls_tab();
+        $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_btn_icon_padding', $this->style, [
