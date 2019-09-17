@@ -60,6 +60,12 @@
      justify-content: center;
  }
  
+ .sa-addons-tabs-main-wrapper-style-1 .sa-addons-header.inline-block {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
  .sa-addons-tabs-main-wrapper-style-1 .sa-active {
      color: #ffffff;
      background: rgba(70, 171, 194, 1.00);
