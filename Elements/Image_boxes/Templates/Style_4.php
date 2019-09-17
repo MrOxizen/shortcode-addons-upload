@@ -19,8 +19,22 @@ class Style_4 extends Templates {
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = json_decode($v['rawdata'], true);
-            $heading = $content = $img = '';
-            
+            $heading = $content = $icon = '';
+            if($this->font_awesome_render($value['sa_image_boxes_icon']) != ''){
+                $icon = '<div class="oxi-addons-content-boxes-four-area-icon">
+                            ' . $this->font_awesome_render($value['sa_image_boxes_icon']) . '
+                        </div>';
+            }
+            if($this->text_render($value['sa_image_boxes_heading']) != ''){
+                $heading = '<div class="oxi-addons-content-boxes-heading">
+                                ' . $this->text_render($value['sa_image_boxes_heading']) . '
+                            </div>';
+            }
+            if($this->text_render($value['sa_image_boxes_s_description']) != ''){
+                $content = '<div class="oxi-addons-content-boxes-content">
+                                ' . $this->text_render($value['sa_image_boxes_s_description']) . '
+                            </div> ';
+            }
                  echo ' <div class="oxi-addons-content-boxes-four-colum ' . $this->column_render('sa-image-boxes-four-col', $style) . '   ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
                                     <div class="oxi-addons-content-boxes-four-area">
 					<div class="oxi-addons-content-boxes-full " >
@@ -30,16 +44,10 @@ class Style_4 extends Templates {
                                                         </div> 
 						</div>  
 						<div class="oxi-addons-content-boxes-four-area-data"> 
-                                                    <div class="oxi-addons-content-boxes-four-area-icon">
-                                                            ' . $this->font_awesome_render($value['sa_image_boxes_icon']) . '
-                                                    </div>
+                                                    ' .$icon. '
                                                     <div class="oxi-addons-content-boxes-four-area-content">
-                                                        <div class="oxi-addons-content-boxes-heading">
-                                                              ' . $this->text_render($value['sa_image_boxes_heading']) . '
-                                                        </div>
-							<div class="oxi-addons-content-boxes-content">
-                                                                ' . $this->text_render($value['sa_image_boxes_s_description']) . '
-                                                        </div> 
+                                                    ' .$heading. '
+                                                    ' .$content. '
                                                     </div>    
 						</div>
 					</div>

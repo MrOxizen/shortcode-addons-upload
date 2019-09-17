@@ -79,7 +79,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -113,7 +113,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-full' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -157,7 +157,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image:after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-images' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -198,7 +198,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-image' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area-image_content' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -230,7 +230,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-image' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-full:hover .oxi-addons-content-boxes-four-area-image_content' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -243,7 +243,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::BOXSHADOW,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-image' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-four-area-data' => '',
             ]
                 ]
         );
@@ -251,7 +251,7 @@ class Style_4 extends AdminStyle {
                 'sa-image-boxes-four-animation', $this->style, [
             'type' => Controls::ANIMATION,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-image' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-four-area-data' => '',
             ]
                 ]
         );
@@ -291,7 +291,7 @@ class Style_4 extends AdminStyle {
                 'sa-content-boxes-four-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-four-area-data' => '',
             ]
                 ]
         );
@@ -321,7 +321,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-four-area-data' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -332,7 +332,7 @@ class Style_4 extends AdminStyle {
                 'sa-content-boxes-four-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area:hover .oxi-addons-content-boxes-four-area-data' => '',
             ]
                 ]
         );
@@ -362,7 +362,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area:hover .oxi-addons-content-boxes-four-area-data' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -397,7 +397,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-four-area-data' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -436,7 +436,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon i' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -447,7 +447,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon i' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -477,7 +477,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-button' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon i' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -499,7 +499,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-heading' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -508,7 +508,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-heading' => '',
             ]
                 ]
         );
@@ -516,7 +516,7 @@ class Style_4 extends AdminStyle {
                 'sa-image-boxes-four-heading-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-heading' => '',
             ]
                 ]
         );
@@ -541,7 +541,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -571,7 +571,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-heading' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -589,7 +589,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-body' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-content' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -598,7 +598,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-body' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-content' => '',
             ]
                 ]
         );
@@ -606,7 +606,7 @@ class Style_4 extends AdminStyle {
                 'sa-image-boxes-four-short-description-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-body' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-content' => '',
             ]
                 ]
         );
@@ -631,7 +631,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-body' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-content' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -661,7 +661,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-body' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-content' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
