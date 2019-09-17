@@ -20,24 +20,32 @@ class Style_1 extends Templates {
 //        echo '<pre>';
 //        print_r($style);
 //        echo '</pre>';
-//        echo  $style['sa_s_image_ribbon'];
-//      print_r($this->media_render('sa_head_image',$style)) ;
+        $deg = '';
+        if ($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left') {
+            $deg = 'transform: rotate(-45deg); left : ' . $style['sa_s_image_ribbon_left'] . 'px; ';
+        } else {
+            $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
+        }
         $ribbon = '';
-        if(array_key_exists('sa_s_image_ribbon',$style)){
-            $ribbon .= '<div class="oxi-addons-single-image-ribbon">
+        if (array_key_exists('sa_s_image_ribbon', $style)) {
+            $ribbon .= '<div class="oxi-addons-single-image-ribbon" style="' . $deg . '">
                             <div class="oxi-addons-single-image-ribbon-position">
                                 <div class="oxi-addons-single-image-ribbon-content">' . $this->text_render($style['sa_s_image_ribbon_text']) . '</div>
                             </div>
                         </div>';
         }
-        echo ' <div class="oxi-addons-single-image-container" id="' . $style['sa_s_image_ID'] . '">
+        if ($this->media_render('sa_s_image_img', $style) != '') {
+            echo ' <div class="oxi-addons-single-image-container" id="' . $style['sa_s_image_ID'] . '">
                             <div class="oxi-addons-single-image-row">
                                 <div class="oxi-addons-single-image">
                                     <img src="' . $this->media_render('sa_s_image_img', $style) . '">
                                 </div>
-                                '.$ribbon.'
+                                ' . $ribbon . '
                             </div>
                         </div>';
+        } else {
+            echo '<div style="color : red;">Please Upload an Image !</div>';
+        }
     }
 
     public function old_render() {
@@ -47,8 +55,8 @@ class Style_1 extends Templates {
         $css = '';
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
-        
-    echo '  <div class="oxi-addons-container">
+
+        echo '  <div class="oxi-addons-container">
                     <div class="oxi-addons-row">
                         <div class="oxi-addons-single-image-container-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 159) . ' id="' . $stylefiles[3] . '">
                             <div class="oxi-addons-single-image-row">
@@ -64,12 +72,12 @@ class Style_1 extends Templates {
                         </div>
                     </div>
                 </div>';
-    if ($styledata[165] == 'left') {
-        $ribbonpo = '-';
-    } else {
-        $ribbonpo = '';
-    }
-    $css .= '.oxi-addons-single-image-container-' . $oxiid . '{
+        if ($styledata[165] == 'left') {
+            $ribbonpo = '-';
+        } else {
+            $ribbonpo = '';
+        }
+        $css .= '.oxi-addons-single-image-container-' . $oxiid . '{
                     display: inline-block;
                     overflow: hidden;
                     vertical-align: middle;
@@ -247,8 +255,8 @@ class Style_1 extends Templates {
                    }
                 }
                 ';
-    
-    
+
+
         wp_add_inline_style('shortcode-addons-style', $css);
     }
 
