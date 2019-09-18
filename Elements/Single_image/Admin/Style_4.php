@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_4
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_4 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_tabs(
@@ -133,6 +133,7 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+      
 
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
@@ -161,6 +162,20 @@ class Style_1 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-single-image-container .oxi-addons-single-image img' => '-webkit-filter : grayscale( {{SIZE}}% ); filter : grayscale( {{SIZE}}% ); '
             ],
+                ]
+        );
+          $this->add_control(
+                'sa_s_image_scale', $this->style, [
+            'label' => __('Scale', SHORTCODE_ADDOONS),
+            'type' => Controls::NUMBER,
+           
+            'default' => 1,
+            'max' => 10,
+            'min' => 0,
+            'step' => '0.1',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-single-image-container  .oxi-addons-single-image img' => 'transform:scale({{VALUE}});',
+            ]
                 ]
         );
         $this->add_control(
@@ -237,7 +252,7 @@ class Style_1 extends AdminStyle {
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 60,
                     'step' => 1,
                 ]
             ],
@@ -246,6 +261,21 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
+         $this->add_control(
+                'sa_s_image_h_scale', $this->style, [
+            'label' => __('Scale', SHORTCODE_ADDOONS),
+            'type' => Controls::NUMBER,
+           
+            'default' => 1,
+            'max' => 10,
+            'min' => 0,
+            'step' => '0.1',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-single-image-container  .oxi-addons-single-image:hover img' => 'transform:scale({{VALUE}});',
+            ]
+                ]
+        );
+         
         $this->add_control(
                 'sa_s_image_h_bg_color', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
@@ -309,6 +339,20 @@ class Style_1 extends AdminStyle {
         $this->end_controls_tab();
 
         $this->end_controls_tabs();
+              $this->add_control(
+                'sa_s_image_animation_dur', $this->style, [
+            'label' => __('Animation Duration', SHORTCODE_ADDOONS),
+            'type' => Controls::NUMBER,
+            Controls::SEPARATOR,
+            'default' => 5,
+            'max' => 10,
+            'min' => 0,
+                    'step' => '0.1',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-single-image-container .oxi-addons-single-image-ribbon' => 'transition: transform {{VALUE}}s;',
+            ]
+                ]
+        );
         $this->end_controls_section();
 
 

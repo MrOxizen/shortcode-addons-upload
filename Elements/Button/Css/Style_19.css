@@ -1,0 +1,192 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addons-align-btn19 {
+    text-align: center;
+}
+
+.oxi-addons-align-btn19 .oxi-button-btn19 {
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: rgba(255, 23, 68, 1.00);
+    overflow: hidden;
+
+
+}
+
+.oxi-addons-align-btn19 .oxi-button-btn19.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+
+.oxi-addons-align-btn19 .oxi-button-btn19 .sa-button-text {
+    color: #ffffff;
+    font-size: 20px;
+
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.oxi-addons-align-btn19 .oxi-button-btn19 .sa-hover-text-text{
+    color: #ff1744;
+    font-size: 20px;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+/*.oxi-addons-align-btn19 .oxi-button-btn19 .sa-hover-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(28, 28, 28, 1.00);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease
+}
+.oxi-addons-align-btn19 .oxi-button-btn19:hover .sa-hover-text {
+    width: 100%;
+    overflow: hidden
+}*/
+
+.oxi-addons-align-btn19 .sa-bottom-to-top .sa-hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28, 28, 28, 1.00);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.oxi-addons-align-btn19 .sa-bottom-to-top:hover .sa-hover-text {
+    height: 100%;
+}
+.oxi-addons-align-btn19 .sa-top-to-bottom .sa-hover-text {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(28, 28, 28, 1.00);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.oxi-addons-align-btn19 .sa-top-to-bottom:hover .sa-hover-text {
+    bottom: 0;
+    height: 100%;
+}
+
+.oxi-addons-align-btn19 .sa-left-to-right .sa-hover-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background: rgba(28, 28, 28, 1.00);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+.oxi-addons-align-btn19 .sa-left-to-right:hover .sa-hover-text {
+    width: 100%;
+}
+.oxi-addons-align-btn19 .sa-right-to-left .sa-hover-text {
+    position: absolute;
+    left: 100%;
+    right: 0;
+    bottom:0;
+    background: rgba(28, 28, 28, 1.00);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+.oxi-addons-align-btn19 .sa-right-to-left:hover .sa-hover-text {
+    width: 100%;
+    left:0;
+}
+.oxi-addons-align-btn19 .sa-center-top-to-bottom .sa-hover-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgba(28, 28, 28, 1.00);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.oxi-addons-align-btn19 .sa-center-top-to-bottom:hover .sa-hover-text {
+    height: 100%;
+}
+.oxi-addons-align-btn19 .sa-center-left-to-right .sa-hover-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(28, 28, 28, 1.00);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+.oxi-addons-align-btn19 .sa-center-left-to-right:hover .sa-hover-text {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.oxi-addons-align-btn19 .oxi-button-btn19 .oxi-icons{
+
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn19 .oxi-button-btn19  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn19 .oxi-button-btn19 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 5px 0px 0px;
+    }
+
+}

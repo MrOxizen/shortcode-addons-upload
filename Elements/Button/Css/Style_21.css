@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+
+.oxi-addons-align-btn21 .oxi-button-btn21 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    margin: 0px 0px 0px 0px;
+    color: #ffffff;
+    background: rgba(81,45,168,1.00);
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+    transition: none;
+}
+
+.oxi-addons-align-btn21 .oxi-button-btn21.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+.oxi-addons-align-btn21 {
+    text-align: center
+}
+
+.oxi-addons-align-btn21 .oxi-button-btn21 .oxi-icons{
+
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px;
+}
+.oxi-addons-align-btn21 .oxi-button-btn21:hover {
+    color: #000000;
+    border-width: 0px;
+    border-style: dotted;
+    border-color: #ff0000;
+    border-radius: 50px;
+
+    transition: none;
+}
+
+
+
+.oxi-addons-align-btn21 .sa-left-to-right:after{
+    position: absolute;
+    content: "";
+    transform: rotate(25deg);
+    background: rgba(124,77,255,1.00);
+    overflow: hidden;
+    width: 0;
+    height: 180px;
+    transition: .3s ease;
+    z-index: -1;
+}
+.oxi-addons-align-btn21 .sa-left-to-right:hover::after{
+    width: calc(100% - 40px);
+}
+
+.oxi-addons-align-btn21 .sa-top-to-bottom:after{
+    position: absolute;
+    content: "";
+    transform: rotate(-25deg);
+    background: rgba(124,77,255,1.00);
+    overflow: hidden;
+    width: 0;
+    height: 180px;
+    transition: .3s ease;
+    z-index: -1;
+}
+.oxi-addons-align-btn21 .sa-top-to-bottom:hover::after{
+    width: calc(100% - 40px);
+}
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn21 .oxi-button-btn21  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn21 .oxi-button-btn21 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 5px 0px 0px
+    }
+    .oxi-addons-align-btn21 {
+        text-align: center
+    }
+}
