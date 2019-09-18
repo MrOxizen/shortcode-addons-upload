@@ -23,12 +23,12 @@ class Style_3 extends Templates {
             if ($value['sa_image_boxes_heading'] != '') {
                 $heading = '<div class="oxi-addons-image-content-heading">
                                   ' . $this->text_render($value['sa_image_boxes_heading']) . '
-                                </div>';
+                            </div>';
             }
             if ($value['sa_image_boxes_s_description'] != '') {
                 $content = '<div class="oxi-addons-image-content-body">
                                   ' . $this->text_render($value['sa_image_boxes_s_description']) . '
-                                </div> ';
+                            </div> ';
             }
             if ($value['sa_image_boxes_button'] != '') {
                 $link = '<div class="oxi-addons-image-content-button">
