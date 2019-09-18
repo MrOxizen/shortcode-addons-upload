@@ -45,6 +45,10 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_image', $this->style, [
             'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => 'http://127.0.0.1/wordpress/wp-content/uploads/2019/08/service-3-copyright.jpg',
+            ],
                 ]
         );
         $this->add_control(
@@ -203,7 +207,5 @@ class Style_2 extends AdminStyle {
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
-
 
 }
