@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplo
+*/
+.oxi-addons-text-blocks {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-text-blocks-1st-body {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #949494;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-text-blocks-2nd-body {
+    width: 100%;
+    float: left;
+    font-size: 80px;
+    color: #ff8293;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-text-blocks-3rd-body {
+    width: 100%;
+    float: left;
+    font-size: 30px;
+    color: #6e6e6e;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-text-blocks {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-text-blocks-1st-body {
+        font-size: 40px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-text-blocks-2nd-body {
+        font-size: 50px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-text-blocks-3rd-body {
+        font-size: 30px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-text-blocks {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-text-blocks-1st-body {
+        font-size: 40px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-text-blocks-2nd-body {
+        font-size: 50px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-text-blocks-3rd-body {
+        font-size: 30px;
+        padding: 0px 0px 0px 0px
+    }
+}

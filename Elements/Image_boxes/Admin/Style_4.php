@@ -329,7 +329,7 @@ class Style_4 extends AdminStyle {
         $this->start_controls_tab();
 
         $this->add_group_control(
-                'sa-content-boxes-four-background', $this->style, [
+                'sa-content-boxes-hover-four-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-content-boxes-four-area:hover .oxi-addons-content-boxes-four-area-data' => '',
@@ -337,7 +337,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa-content-boxes-four-margin', $this->style, [
+                'sa-content-boxes-hover-four-margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -674,15 +674,15 @@ class Style_4 extends AdminStyle {
     public function modal_opener() {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
+            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);
     }
 
     public function modal_form_data() {
         echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
+                    <h4 class="modal-title">Image Boxes Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">';
@@ -690,7 +690,10 @@ class Style_4 extends AdminStyle {
                 'sa_image_boxes_media', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
             'type' => Controls::MEDIA,
-            'default' => '',
+            'default' => [
+                'type' => 'media-library',
+                'link' => '#asdas',
+            ]
                 ]
         );
         $this->add_control(
