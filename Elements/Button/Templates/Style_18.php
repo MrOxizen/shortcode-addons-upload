@@ -16,45 +16,20 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_18 extends Templates {
 
-//    public function inline_public_css() {
-//        $position = '';
-//        $style = $this->style;
-//        $distance = $style['sa_btn_icon_distance-size'];
-//        $hoverdistance = $style['sa_btn_h_icon_distance-size'];
-//        $all = $distance + $hoverdistance;
-//
-//        if (array_key_exists('sa_btn_icon_position', $style)) {
-//            $position = '.' . $this->WRAPPER . ' .oxi-addons-align-btn18 .sa-left-to-right .s-a-button-text {
-//                            padding: 0px ' . $hoverdistance . 'px 0px ' . $distance . 'px ;
-//                        }
-//                        .' . $this->WRAPPER . ' .oxi-addons-align-btn18 .sa-left-to-right:hover .s-a-button-text {
-//                            margin-left: -' . $all . 'px;
-//                        }';
-//        } else {
-//            $position = '.' . $this->WRAPPER . ' .oxi-addons-align-btn18 .sa-right-to-left .s-a-button-text {
-//                              padding: 0px ' . $distance . 'px 0px ' . $hoverdistance . 'px ;
-//                        }
-//                        .' . $this->WRAPPER . ' .oxi-addons-align-btn18 .sa-right-to-left:hover .s-a-button-text {
-//                            margin-right: -' . $all . 'px;
-//                            
-//                        }';
-//        }
-//        return $position;
-//    }
 
     public function default_render($style, $child, $admin) {
         $html = '';
         $text = '<div class="s-a-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
-        $icon = (array_key_exists('sa_btn_icon', $style) ? '<div class="sa-button-icon1">' . $this->font_awesome_render($style['sa_btn_icon_class']) . '</div>' : '');
+        $icon = (array_key_exists('sa_btn_icon', $style && $style['sa_btn_icon'] != '0') ? '<div class="sa-button-icon1">' . $this->font_awesome_render($style['sa_btn_icon_class']) . '</div>' : '');
 
-        if (array_key_exists('sa_btn_icon_position', $style)):
+        if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0'):
             $html = '<div class="sa-button-body">' . $icon . $text . '</div>';
         else:
             $html = '<div class="sa-button-body">' . $text . $icon . '</div>';
         endif;
 
         echo '  <div class="oxi-addons-align-btn18">
-                    <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn18 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . (array_key_exists('sa_btn_icon_position', $style) ? 'sa-left-to-right' : 'sa-right-to-left') . '" >' . $html . '</a>
+                    <a ' . $this->animation_render('sa_btn_animation', $style) . ' ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn18 ' . (array_key_exists('sa_btn_width_choose', $style) && $style['sa_btn_width_choose'] != '0' ? $style['sa_btn_width_choose'] : '') . ' ' . (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0' ? 'sa-left-to-right' : 'sa-right-to-left') . '" >' . $html . '</a>
                 </div>
                 ';
     }

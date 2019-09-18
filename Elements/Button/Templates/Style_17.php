@@ -45,10 +45,10 @@ class Style_17 extends Templates {
     public function default_render($style, $child, $admin) {
         $html = '';
         $text = '';
-        $icon1 = (array_key_exists('sa_btn_icon', $style) ? '<div class="sa-button-icon1">' . $this->font_awesome_render($style['sa_btn_icon_class']) . '</div>' : '');
-        $icon2 = (array_key_exists('sa_btn_icon2', $style) ? '<div class="sa-button-icon2">' . $this->font_awesome_render($style['sa_btn_icon2_class']) . '</div>' :  (array_key_exists('sa_btn_icon', $style) ? '<div class="sa-button-icon2">' . $this->font_awesome_render($style['sa_btn_icon_class']) . '</div>' : '') );
+        $icon1 = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? '<div class="sa-button-icon1">' . $this->font_awesome_render($style['sa_btn_icon_class']) . '</div>' : '');
+        $icon2 = (array_key_exists('sa_btn_icon2', $style) && $style['sa_btn_icon2'] != '0' ? '<div class="sa-button-icon2">' . $this->font_awesome_render($style['sa_btn_icon2_class']) . '</div>' :  (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? '<div class="sa-button-icon2">' . $this->font_awesome_render($style['sa_btn_icon_class']) . '</div>' : '') );
         $icon = $icon1 . $icon2;
-        if (array_key_exists('sa_btn_icon_position', $style)):
+        if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0'):
             $text = '<div class="s-a-button-text">' . $icon . $this->text_render($style['sa_btn_text']) . '</div>';
 //            $html = $icon . $text ;
         else:
@@ -58,7 +58,7 @@ class Style_17 extends Templates {
         endif;
 
         echo '  <div class="oxi-addons-align-btn17">
-                    <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn17 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . (array_key_exists('sa_btn_icon_position', $style) ? 'sa-left-to-right' : 'sa-right-to-left') . '" >' . $text . '</a>
+                    <a ' . $this->animation_render('sa_btn_animation', $style) . ' ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn17 ' . (array_key_exists('sa_btn_width_choose', $style) && $style['sa_btn_width_choose'] != '0' ? $style['sa_btn_width_choose'] : '') . ' ' . (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0' ? 'sa-left-to-right' : 'sa-right-to-left') . '" >' . $text . '</a>
                 </div>
                 ';
     }
