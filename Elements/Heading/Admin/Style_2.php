@@ -30,7 +30,6 @@ class Style_2 extends AdminStyle {
         );
 
 
-
         $this->add_control(
                 'sa_head_text', $this->style, [
             'label' => __('Heading Text', SHORTCODE_ADDOONS),
@@ -40,6 +39,13 @@ class Style_2 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading-container  .oxi-addons-heading' => '',
             ],
+                ]
+        );
+        $this->add_control(
+                'sa_head_text', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::SEPARATOR,
+            'separator' => TRUE
                 ]
         );
         $this->add_group_control(
