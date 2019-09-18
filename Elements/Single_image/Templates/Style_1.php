@@ -27,7 +27,7 @@ class Style_1 extends Templates {
             $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
         }
         $ribbon = '';
-        if (array_key_exists('sa_s_image_ribbon', $style)) {
+        if (array_key_exists('sa_s_image_ribbon', $style) && $style['sa_s_image_ribbon'] != '0') {
             $ribbon .= '<div class="oxi-addons-single-image-ribbon" style="' . $deg . '">
                             <div class="oxi-addons-single-image-ribbon-position">
                                 <div class="oxi-addons-single-image-ribbon-content">' . $this->text_render($style['sa_s_image_ribbon_text']) . '</div>

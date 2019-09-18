@@ -447,7 +447,10 @@ class Style_6 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::MEDIA,
-                'loader' => TRUE,
+                'default' => [
+                    'type' => 'media-library',
+                    'link' => '',
+                ],
             ]
         );
 

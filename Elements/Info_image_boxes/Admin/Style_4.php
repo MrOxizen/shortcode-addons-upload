@@ -477,7 +477,7 @@ class Style_4 extends AdminStyle {
             ]
                 ]
         );
-        
+
         $this->end_controls_section();
 
         $this->start_controls_section(
@@ -606,6 +606,10 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_info_image_img_src', $this->style, [
             'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => '',
+            ],
                 ]
         );
         $this->add_control(

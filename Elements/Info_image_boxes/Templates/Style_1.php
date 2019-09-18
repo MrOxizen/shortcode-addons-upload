@@ -17,28 +17,28 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-    
+
         foreach ($child as $v) {
-                
-            $value = json_decode($v['rawdata'], true);
-//            echo '<pre>';
-//        print_r($value);
-//        echo '</pre>';
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $heading = $details = $button = $img_center = $images = $content = '';
 
-            if ($this->media_render('sa_info_image_img_src',$value) != '') {
-                $images = ' <img src="'.$this->media_render('sa_info_image_img_src',$value).'" alt="images" class="oxi-addons-img">';
+            if ($this->media_render('sa_info_image_img_src', $value) != '') {
+                $images = ' <img src="' . $this->media_render('sa_info_image_img_src', $value) . '" alt="images" class="oxi-addons-img">';
             }
-            if ($value['sa_info_image_h_text'] != '') {
-                $heading = '  <div class="oxi-addons-heading">
+            if (array_key_exists('sa_info_image_h_text', $value)) :
+                if ($value['sa_info_image_h_text'] != '') {
+                    $heading = '  <div class="oxi-addons-heading">
                 ' . $this->text_render($value['sa_info_image_h_text']) . '
                 </div>';
-            }
-            if ($value['sa_info_image_content_text'] != '') {
-                $details = '<div class="oxi-addons-details">
-                ' .  $this->text_render($value['sa_info_image_content_text']) . '
+                }
+            endif;
+            if (array_key_exists('sa_info_image_content_text', $value)) :
+                if ($value['sa_info_image_content_text'] != '') {
+                    $details = '<div class="oxi-addons-details">
+                ' . $this->text_render($value['sa_info_image_content_text']) . '
                 </div>';
-            }
+                }
+            endif;
             $content = '<div class="oxi-addons-main-wrapper " >
                             <div class="oxi-addons-image-main">
                             ' . $images . ' 
@@ -50,15 +50,16 @@ class Style_1 extends Templates {
                         </div>';
             echo '<div class=" oxi-addons-info-image-parent-wrapper ' . $this->column_render('sa_info_image_column', $style) . '">
                       <div class="sa_addons_icon_boxes_container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
-                        if ( $value['sa_info_image_url-url'] != '') {
-                              echo '<a ' . $this->url_render('sa_info_image_url', $value) . '  >
+            if (array_key_exists('sa_info_image_content_text', $value)) :
+                if ($value['sa_info_image_url-url'] != '') {
+                    echo '<a ' . $this->url_render('sa_info_image_url', $value) . '  >
                                         ' . $content . '
                                    </a>';
-                        } else {
-                            echo $content;
-                        }
-              if ($admin == 'admin') :
-                    echo'<div class="oxi-addons-admin-absulote">
+                } else {
+                    echo $content;
+                } endif;
+            if ($admin == 'admin') :
+                echo'<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
                                 <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
                             </div>
@@ -66,7 +67,7 @@ class Style_1 extends Templates {
                                 <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
                             </div>
                         </div>';
-                endif;
+            endif;
             echo '</div>';
             echo '</div>';
         }
@@ -83,7 +84,9 @@ class Style_1 extends Templates {
         foreach ($listdata as $value) {
             $data = explode('||#||', $value['files']);
             $heading = $details = $button = $img_center = $images = $content = '';
-
+//            echo '<pre>';
+//            print_r($data);
+//            echo '</pre>';
             if ($data[1] != '') {
                 $images = ' <img src="' . OxiAddonsUrlConvert($data[1]) . '" alt="images" class="oxi-addons-img">';
             }

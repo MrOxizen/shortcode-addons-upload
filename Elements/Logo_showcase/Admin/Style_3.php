@@ -432,7 +432,10 @@ class Style_3 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::MEDIA,
-                'loader' => TRUE,
+                'default' => [
+                    'type' => 'media-library',
+                    'link' => '',
+                ],
             ]
         );
         $this->add_control(

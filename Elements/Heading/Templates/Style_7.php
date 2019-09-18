@@ -42,12 +42,6 @@ class Style_7 extends Templates {
                             <img class="oxi-image" src="' . $this->media_render('sa_head_image', $style) . '">
                         </div>
                     </div>';
-        } else {
-              $img = '<div class="oxi-addons-img-body-wrapper">
-                        <div class="oxi-addons-img-body">
-                            <img class="oxi-image" src="https://www.oxilab.org/wp-content/uploads/2019/03/divider-2461548__340.png">
-                        </div>
-                    </div>';
         }
         if ($style['sa_head_style'] == 1) {
             $fulldata = $content . $heading . $img;
@@ -57,7 +51,7 @@ class Style_7 extends Templates {
             $fulldata = $img . $content . $heading;
         }
 
-        echo '  <div class="oxi-addons-body-container" >
+        echo '  <div class="oxi-addons-body-container" '.$this->animation_render('sa_head_animation', $style).'>
                 ' . $fulldata . '
             </div>    ';
     }

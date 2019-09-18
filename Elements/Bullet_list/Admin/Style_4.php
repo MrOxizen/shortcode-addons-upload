@@ -644,15 +644,15 @@ class Style_4 extends AdminStyle {
     public function modal_opener() {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
+            'title' => __('Add New Bullet List', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Bullet List Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);
     }
 
     public function modal_form_data() {
         echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
+                    <h4 class="modal-title">Bullet List Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div cecholass="modal-body">';

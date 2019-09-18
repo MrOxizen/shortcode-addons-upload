@@ -16,10 +16,10 @@
     display: inline-block;
 }
 
-.sa-addons-tabs-main-wrapper-style-4 .sa_tabs_icon .oxi-icons {
+.sa-addons-tabs-main-wrapper-style-4 .sa-addons-header .sa_tabs_icon .oxi-icons {
     font-size: 17px;
-    color: #ffffff;
-    padding: 0px 10px 0px 10px;
+    color: #1c1c1c;
+    padding: 0px 5px 0px 5px;
 }
 
 .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header.block {
@@ -56,18 +56,19 @@
 .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header {
     font-size: 18px;
     color: #1c1c1c;
+    text-align: center;
     font-family: "Ubuntu";
     font-weight: 100;
     font-style: normal;
     border-style: solid;
     border-color: #b5b5b5;
     border-width: 0px 0px 0px 1px;
-    padding: 15px 50px 15px 20px;
+    padding: 15px 10px 15px 10px;
     cursor: pointer
 }
 
 .sa-addons-tabs-main-wrapper-style-4 .sa-active {
-    color: #cc4242 !important;
+    color: #cc4242;
     position: relative;
     -webkit-transition: all 0.5s linear;
     -ms-transition: all 0.5s linear;
@@ -81,7 +82,7 @@
     position: absolute;
     left: -1px;
     top: 0;
-    background: #cc4242 !important;
+    background: #cc4242;
     width: 2px;
     height: 100%
 }
@@ -91,10 +92,15 @@
 }
 
 .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line {
+    display: none;
     width: 50px;
     height: 2px;
     background: #ff5c5c;
     margin: 30px 0px 5px 20px
+}
+
+.sa-addons-tabs-main-wrapper-style-4.show_line_setting .sa-addons-line {
+    display: block;
 }
 
 .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two:hover {

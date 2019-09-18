@@ -87,7 +87,7 @@ class Style_3 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addons-bullet-list-main-area .sa-bl-width-auto' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
             'condition' => [
-                'sa-bl-g-max-width' => 'max-width'
+                'sa-bl-g-max-width-control' => 'max-width'
             ]
                 ]
         );
@@ -393,7 +393,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -401,7 +401,7 @@ class Style_3 extends AdminStyle {
                 'sa-bl-lc-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link' => '',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => '',
             ]
                 ]
         );
@@ -409,7 +409,7 @@ class Style_3 extends AdminStyle {
                 'sa-bl-lc-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link' => '',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => '',
             ]
                 ]
         );
@@ -417,7 +417,7 @@ class Style_3 extends AdminStyle {
                 'sa-bl-lc-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link' => '',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => '',
             ]
                 ]
         );
@@ -448,7 +448,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -505,7 +505,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::NUMBER,
             'default' => 10,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link:hover' => 'transform: scale({{VALUE}});'
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:hover' => 'transform: scale({{VALUE}});'
             ],
                 ]
         );
@@ -521,15 +521,15 @@ class Style_3 extends AdminStyle {
     public function modal_opener() {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
+            'title' => __('Add New Bullet List', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Bullet List Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);
     }
 
     public function modal_form_data() {
         echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
+                    <h4 class="modal-title">Bullet List Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div cecholass="modal-body">';
@@ -550,10 +550,10 @@ class Style_3 extends AdminStyle {
                 ]
         );
 
-        $this->add_control(
+        $this->add_group_control(
                 'sa_bl_url', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
+            'type' => Controls::URL,
             'default' => '',
             'placeholder' => 'https://www.yoururl.com',
                 ]

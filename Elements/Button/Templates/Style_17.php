@@ -23,7 +23,7 @@ class Style_17 extends Templates {
         $hoverdistance = $style['sa_btn_h_icon_distance-size'];
         $all = $distance + $hoverdistance;
 
-        if (array_key_exists('sa_btn_icon_position', $style)) {
+        if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0') {
             $position = '.' . $this->WRAPPER . ' .oxi-addons-align-btn17 .sa-left-to-right .s-a-button-text {
                             padding: 0px ' . $hoverdistance . 'px 0px ' .  $distance. 'px ;
                         }

@@ -21,12 +21,13 @@ class Style_6 extends Templates
     public function default_render($style, $child, $admin)
     {
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
             $img = $hover_text = $link = $endlink = '';
-
-            if ($value['sa_logo_showcase_url-url'] != '') {
-                $link .= '<a ' . $this->url_render('sa_logo_showcase_url', $value) . ' class="sa_logo_showcase_link">';
-                $endlink .= '</a>';
+            $value = $v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : [];      
+            if (array_key_exists('sa_logo_showcase_url_open', $value) && $value['sa_logo_showcase_url_open'] != '0') {
+                if ($value['sa_logo_showcase_url-url'] != '') {
+                    $link .= '<a ' . $this->url_render('sa_logo_showcase_url', $value) . ' class="logo_showcase_link">';
+                    $endlink .= '</a>';
+                }
             }
             if ($value['sa_logo_showcase_hover_text'] != '') {
                 $hover_text .= '<div class="sa_addons_logo_showcase_hover_text">

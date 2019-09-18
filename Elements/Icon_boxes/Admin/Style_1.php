@@ -130,7 +130,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => ''
+                    '{{WRAPPER}} .sa_addons_icon_boxes_style_1' => ''
                 ],
             ]
         );
@@ -139,9 +139,6 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::ANIMATION,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => ''
-                ],
             ]
         );
 

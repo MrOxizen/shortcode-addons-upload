@@ -270,7 +270,7 @@ class Style_3 extends AdminStyle {
             ]
                 ]
         );
-  $this->add_control(
+        $this->add_control(
                 'sa_info_image_img_alignment', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -585,6 +585,10 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa_info_image_img_src', $this->style, [
             'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => '',
+            ],
                 ]
         );
         $this->add_control(
