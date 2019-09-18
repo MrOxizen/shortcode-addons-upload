@@ -22,26 +22,27 @@ class Style_5 extends Templates
     {
 
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
             $icon = $heading = $details = $button = '';
 
-            if ($value['sa_info_boxes_button_link-url'] != '' ) {
+            if (array_key_exists('sa_info_boxes_button_link-url', $value) && $value['sa_info_boxes_button_link-url'] != '' ) {
                 $button = '<div class="oxi_addons__button"><a ' . $this->url_render('sa_info_boxes_button_link', $value) . ' class="oxi-buttons">
                 ' . $this->text_render($value['sa_info_boxes_button_text']) . '
             </a></div>';
-            } elseif($value['sa_info_boxes_button_link-url'] == '' && $value['sa_info_boxes_button_text'] != '') {
+            } elseif(array_key_exists('sa_info_boxes_button_text', $value) && $value['sa_info_boxes_button_link-url'] == '' && $value['sa_info_boxes_button_text'] != '') {
                 $button = '<div class="oxi_addons__button"><button class="oxi-buttons" ' . ($value['sa_info_boxes_button_link-id'] != '' ? 'id="' . $value['sa_info_boxes_button_link-id'] . '"' : '') . '>
                 ' . $this->text_render($value['sa_info_boxes_button_text']) . '
             </button></div>';
             }
 
-            if ($value['sa_info_boxes_heading'] != '') {
+            if (array_key_exists('sa_info_boxes_heading', $value) && $value['sa_info_boxes_heading'] != '') {
                 $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_5">' . $this->text_render($value['sa_info_boxes_heading']) . '</' . $style['sa_info_tag'] . '>';
             }
-            if ($value['sa_info_boxes_details'] != '') {
+            if (array_key_exists('sa_info_boxes_details', $value) && $value['sa_info_boxes_details'] != '') {
                 $details = '<div class="oxi_addons__details_style_5"> ' . $this->text_render($value['sa_info_boxes_details']) . ' </div>';
             }
-            if ($value['sa_info_boxes_fontawesome'] != '') {
+            if (array_key_exists('sa_info_boxes_fontawesome', $value) && $value['sa_info_boxes_fontawesome'] != '') {
                 $icon = '<div class="oxi_addons__icon_style_5">
                 ' . $this->font_awesome_render($value['sa_info_boxes_fontawesome']) . '
             </div>';

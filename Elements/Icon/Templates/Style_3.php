@@ -19,9 +19,9 @@ class Style_3 extends Templates {
     public function default_render($style, $child, $admin) {
 
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $icon = '';
-            if ($value['sa_icon_link-url'] != '') {
+            if (array_key_exists('sa_icon_link-url', $value) && $value['sa_icon_link-url'] != '') {
                 $icon = '<a ' . $this->url_render('sa_icon_link', $value) . ' class="oxi_addons__icon">
                 ' . $this->font_awesome_render($value['sa_icon_fontawesome']) . '
             </a>';

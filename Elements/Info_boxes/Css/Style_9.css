@@ -1,0 +1,102 @@
+.oxi_addons__info_boxes_wrapper {
+    padding:5px 5px 5px 5px;
+   }
+   .oxi_addons__info_boxes_main_style_9 {
+    width:100%;   
+    padding:10px 10px 10px 10px ;
+    display: inline-block;
+}
+   .oxi_addons__info_boxes_main_style_9 .oxi_addons__icon_style_9 {
+    position:relative;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+   }
+   .oxi_addons__info_boxes_main_style_9 .oxi_addons__icon {
+    position: relative; 
+    height: 30px;
+    width: 30px;  
+    border: 0px solid;
+    border-color: #ffffff; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    transition: .5s all ease-in-out !important;  
+}
+ .oxi_addons__info_boxes_main_style_9 .oxi-icons { 
+    font-size: 40px;
+    color: #539dfd; 
+   } 
+ .oxi_addons__info_boxes_main_style_9:hover .oxi-icons { 
+    color:#1789a3 
+   } 
+ .oxi_addons__heading_style_9 {
+    width:100%; 
+    color:#636363;
+    font-size:16px;
+    font-family:"Bree Serif";
+    font-weight:100;
+    font-style:normal;
+    line-height:1.5;
+    text-align:left; 
+    padding:0px;
+   }
+ .oxi_addons__sub_heading_style_9 {
+    width:100%; 
+    color:#292929;
+    font-size:20px;
+    font-family:"Bree Serif";
+    font-weight:100;
+    font-style:normal;
+    line-height:1.5;
+    text-align:left; 
+    padding:0px 0px 10px 0px 
+   }
+ .oxi_addons__details_style_9 {
+    width:100%; 
+    font-size:15px;
+    color:#555555;
+    font-family:"Crete Round";
+    font-weight:100;
+    font-style:normal;
+    line-height:1.8;
+    text-align:left; 
+    padding:0px;
+   }
+   
+   @media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi_addons__info_boxes_wrapper {
+        padding:5px 5px 5px 5px;
+       }
+       .oxi_addons__info_boxes_main_style_9 {
+        width:100%;   
+        padding:5px;
+        display: inline-block;
+    }
+       .oxi_addons__info_boxes_main_style_9 .oxi_addons__icon_style_9 {
+        position:relative;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+       }
+       .oxi_addons__info_boxes_main_style_9 .oxi_addons__icon { 
+        height: 25px;
+        width: 25px;
+      
+}
+     .oxi_addons__info_boxes_main_style_9 .oxi-icons { 
+        font-size: 30px;
+       } 
+      
+     
+     .oxi_addons__sub_heading_style_9 {
+        width:100%; 
+        color:#292929;
+        font-size:18px; 
+       }
+    
+   }
+   @media only screen and (max-width:668px) {
+   
+   }
