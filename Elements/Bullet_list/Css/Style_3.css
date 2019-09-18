@@ -14,8 +14,9 @@
 
 .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 {
     width: 100%;
+    max-width: 90%;
     margin: 0 auto;
-    padding: 0px 0px 0px 7px
+    padding: 0px 0px 0px 15px;
 }
 
 .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 ol.oxi-addons-list-ol {
@@ -32,7 +33,7 @@
     margin: 12px 12px 12px 12px
 }
 
-.oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link {
+.oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link {
     position: relative;
     display: block;
     Padding: 10px 25px 10px 25px;
@@ -51,7 +52,7 @@
     border-radius: 0px 0px 0px 0px
 }
 
-.oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link:hover {
+.oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:hover {
     color: #ffffff;
     background: rgba(71, 71, 71, 1);
     text-decoration: none;
@@ -80,7 +81,7 @@
     text-align: center!important
 }
 
-.oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link:hover:before {
+.oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:hover:before {
     color: #ffffff;
     background: rgba(71, 71, 71, 1);
     border-width: 2px 2px 2px 2px;
@@ -118,19 +119,19 @@
     .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 ol.oxi-addons-list-ol li.oxi-addons-list-li {
         margin: 7px 7px 7px 7px
     }
-    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link {
+    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link {
         Padding: 10px 25px 10px 25px;
         font-size: 14px;
         border-radius: 0px 0px 0px 0px
     }
-    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link:before {
+    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:before {
         margin: 0px 2px 0px 0px;
         font-size: 15px;
         width: 40px;
         height: 42px;
         border-width: 2px 2px 2px 2px
     }
-    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link:hover:before {
+    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:hover:before {
         border-width: 2px 2px 2px 2px
     }
 }
@@ -146,19 +147,19 @@
     .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 ol.oxi-addons-list-ol li.oxi-addons-list-li {
         margin: 8px 8px 8px 8px
     }
-    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link {
+    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link {
         Padding: 10px 25px 10px 25px;
         font-size: 13px;
         border-radius: 0px 0px 0px 0px
     }
-    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link:before {
+    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:before {
         margin: 0px 2px 0px 0px;
         font-size: 14px;
         width: 35px;
         height: 35px;
         border-width: 2px 2px 2px 2px
     }
-    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 a.oxi-BL-link:hover:before {
+    .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:hover:before {
         border-width: 2px 2px 2px 2px
     }
 }

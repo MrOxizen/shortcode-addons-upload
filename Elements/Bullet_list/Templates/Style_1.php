@@ -25,10 +25,19 @@ class Style_1 extends Templates {
 			<div class="oxi-addons-list-type-1 '.$class.'">
                             <ol class="oxi-addons-list-ol ">';
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
-            $a_tag = '';
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            $textheading = '';
+            
+            if (array_key_exists('sa_bl_text', $value) && $value['sa_bl_text'] != '') {
+                if(array_key_exists('sa_bl_url-url', $value) && $value['sa_bl_url-url'] != ''){
+                    $textheading .= '<a '.$this->url_render('sa_bl_url', $value).' class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</a>';
+                }else{
+                    $textheading .= '<div class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</div>';
+                }
+                
+            }
                 echo '<li class="oxi-addons-list-li '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'">
-                    <a '.$this->url_render('sa_bl_url', $value).' class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</a>';
+                    '.$textheading.'';
 
             if ($admin == 'admin'):
                 echo '  <div class="oxi-addons-admin-absulote">
