@@ -5,7 +5,7 @@
  .oxi_addons__info_boxes_main_style_8 {
      width: 100%; 
      display: flex; 
-     padding: 10px 10px 10px 10px
+     padding: 10px 10px 10px 10px;
  }
  
  .oxi_addons__info_boxes_main_style_8 .oxi_addons__icon {
@@ -17,32 +17,32 @@
      background: rgba(26, 188, 156, 1.00);
      border: 0px solid;
      border-color: #ffffff;
-     border-radius: 100px 100px 100px 100px;
+     border-radius: 50px 50px 50px 50px;
      align-items: center;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    transition: .5s all ease-in-out !important;
-     -webkit-border-radius: 100px 100px 100px 100px;
-     -moz-border-radius: 100px 100px 100px 100px;
-     -ms-border-radius: 100px 100px 100px 100px;
-     -o-border-radius: 100px 100px 100px 100px;
- }
+     display: flex;
+     justify-content: center;
+     text-decoration: none;
+     transition: .5s all ease-in-out !important;
+     -webkit-border-radius: 50px 50px 50px 50px;
+     -moz-border-radius: 50px 50px 50px 50px;
+     -ms-border-radius: 50px 50px 50px 50px;
+     -o-border-radius: 50px 50px 50px 50px;
+}
 
- .oxi_addons__info_boxes_main_style_8  .oxi_addons__icon:after {
+ .oxi_addons__info_boxes_main_style_8  .oxi_addons__icon::after {
      content: "";
      position: absolute;
      border: 2px solid;
-     border-color: #212121;
-     height: 90px;
-     width: 90px;
-     border-radius: 100px 100px 100px 100px;
+     border-color: #4da7f0;
+     height: 100%;
+     width: 100%;
+     border-radius: 50px 50px 50px 50px;
      transform: scale(0);
      transition: .5s all ease-in-out;
-     -webkit-border-radius: 100px 100px 100px 100px;
-     -moz-border-radius: 100px 100px 100px 100px;
-     -ms-border-radius: 100px 100px 100px 100px;
-     -o-border-radius: 100px 100px 100px 100px;
+     -webkit-border-radius: 50px 50px 50px 50px;
+     -moz-border-radius: 50px 50px 50px 50px;
+     -ms-border-radius: 50px 50px 50px 50px;
+     -o-border-radius: 50px 50px 50px 50px;
      -webkit-transition: .5s all ease-in-out;
      -moz-transition: .5s all ease-in-out;
      -ms-transition: .5s all ease-in-out;

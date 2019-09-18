@@ -198,229 +198,6 @@ class Style_8 extends AdminStyle
             ]
         );
         $this->end_controls_section();   
-       
-        $this->end_section_devider(); 
-        $this->start_section_devider();
-
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_info_font_size',
-            $this->style,
-            [
-                'label' => __('Icon Size', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 40,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 5,
-                        'max' => 150,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 1,
-                        'max' => 20,
-                        'step' => 0.1,
-                    ],
-                    'rem' => [
-                        'min' => 1,
-                        'max' => 20,
-                        'step' => 0.1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_icon_icon_width_height',
-            $this->style,
-            [
-                'label' => __('Icon Width & Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 80,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 50,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [ 
-                        'min' => 3,
-                        'max' => 20,
-                        'step' => 0.1,
-                    ],
-                    'rem' => [
-                        'min' => 3,
-                        'max' => 20,
-                        'step' => 0.1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon::after' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                ],
-               
-            ]
-        );
-        $this->start_controls_tabs(
-            'shortcode-addons-start-tabs',
-            [
-                'options' => [
-                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS), 
-                ]
-            ]
-        );
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_info_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR, 
-                'default' => ' #ffdd33',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi-icons' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_info_bg_color',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR, 
-                'default' => '#28a745',
-                'separetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => 'background-color:{{VALUE}};'
-                ],
-            ]
-        );
-      
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_info_hover_color',
-            $this->style,
-            [
-                'label' => __('Hover Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#fff',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_8:hover .oxi-icons' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_info_bg_color_hover',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR, 
-                'default' => '#28aaa5',
-                'separetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_8:hover .oxi_addons__icon' => 'background-color:{{VALUE}};'
-                ],
-            ]
-        ); 
-      
-        $this->end_controls_tab();
-        $this->end_controls_tabs(); 
-        
-        $this->add_group_control(
-            'sa_info_boxes_icon_border',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon .oxi-icons' => ''
-                ], 
-            ]
-
-        );
-        $this->add_responsive_control(
-            'sa_info_boxes_info_border_radius',
-            $this->style,
-            [
-                'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 10,
-                ],
-                //'loader' => TRUE,
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -100,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_info_boxes_info_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 5,
-                ],
-                //'loader' => TRUE,
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_8' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -574,6 +351,312 @@ class Style_8 extends AdminStyle
             ]
         );
         $this->end_controls_section();
+        $this->end_section_devider(); 
+        $this->start_section_devider();
+
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_info_font_size',
+            $this->style,
+            [
+                'label' => __('Icon Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 40,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 5,
+                        'max' => 150,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                    'rem' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_icon_icon_width_height',
+            $this->style,
+            [
+                'label' => __('Icon Width & Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 80,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 50,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [ 
+                        'min' => 3,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                    'rem' => [
+                        'min' => 3,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};', 
+                ],
+               
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS), 
+                ]
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_info_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR, 
+                'default' => ' #ffdd33',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi-icons' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_info_bg_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR, 
+                'default' => '#28a745',
+                'separetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => 'background-color:{{VALUE}};'
+                ],
+            ]
+        );
+      
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_info_hover_color',
+            $this->style,
+            [
+                'label' => __('Hover Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_8:hover .oxi-icons' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_info_bg_color_hover',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR, 
+                'default' => '#28aaa5',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_8:hover .oxi_addons__icon' => 'background-color:{{VALUE}};'
+                ],
+            ]
+        ); 
+      
+        $this->end_controls_tab();
+        $this->end_controls_tabs(); 
+        $this->add_control(
+            'sa_info_boxes_separetor',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,  
+                Controls::SEPARATOR => TRUE, 
+            ]
+        ); 
+        $this->add_group_control(
+            'sa_info_boxes_icon_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => ''
+                ], 
+            ]
+
+        );
+        $this->add_responsive_control(
+            'sa_info_boxes_info_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 10,
+                ],
+                //'loader' => TRUE,
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -100,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_info_boxes_info_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 5,
+                ],
+                //'loader' => TRUE,
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Icon Hover Circle Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        ); 
+        $this->add_responsive_control(
+            'sa_icon_icon_circle_hover_dis',
+            $this->style,
+            [
+                'label' => __('Distance Circle', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 10,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ], 
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon::after' => 'width: calc(100% + {{SIZE}}px); height: calc(100% + {{SIZE}}px);', 
+                ],
+               
+            ]
+        );
+         
+        $this->add_group_control(
+            'sa_info_icon_circle_hover_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER, 
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon::after' => ''
+                ], 
+            ]
+
+        );
+        $this->add_responsive_control(
+            'sa_info_boxes_circle_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 50,
+                ], 
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -100,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon::after' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+       
+        $this->end_controls_section();
+        
         $this->end_section_devider();
         $this->end_section_tabs();
     }

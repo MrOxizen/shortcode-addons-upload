@@ -23,7 +23,7 @@ class Style_16 extends Templates {
         $iconcls = $style['sa_btn_icon_distance-size'];
         $hovericoncls = $style['sa_btn_h_icon_distance-size'];
         $hmargin = $iconcls - $hovericoncls;
-        if (array_key_exists('sa_btn_icon_position', $style)) {
+        if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0') {
             $position = '.' . $this->WRAPPER . ' .oxi-addons-align-btn16 .oxi-button-btn16 .oxi-icons {
                             margin-right: ' . $iconcls . 'px;
                         }

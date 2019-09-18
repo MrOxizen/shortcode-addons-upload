@@ -56,7 +56,7 @@ class Style_4 extends Templates
             echo '<div class="sa-addons-header ' . $style['sa_tabs_headding_icon_style'] . ' sa-header-' . $header['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $header['id'] . '">' . $icon_text . '</div>';
         }
         echo '</div>
-            <div class="sa-addons-main-tab-body ">
+            <div class="sa-addons-main-tab-body">
                 <div class="sa-addons-line"></div>';
         foreach ($child as $body) {
             $value_body = ($body['rawdata'] != '' ? json_decode($body['rawdata'], true) : []);
@@ -71,8 +71,8 @@ class Style_4 extends Templates
 
             if (array_key_exists('sa_tabs_tab_icon_on_off', $value_body)) :
                 $icon .= '<div class="sa_tabs_icon">
-                                            ' . $this->font_awesome_render($value_body['sa_tabs_tab_icon']) . '
-                                            </div>';
+                            ' . $this->font_awesome_render($value_body['sa_tabs_tab_icon']) . '
+                            </div>';
             endif;
             if (array_key_exists('sa_tabs_tab_icon_on_off', $value_body)) :
                 if ($style['sa_tabs_headding_icon_style'] == 'inline-block') :
@@ -84,36 +84,28 @@ class Style_4 extends Templates
                 $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_body) ? $value_body['sa_tabs_h_text'] : '');
             endif;
 
-            echo '</div>';
             echo '<div class="sa-addons-header-two sa-header-' . $body['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $body['id'] . '">' . $icon_text . '</div>';
             echo '<div class="sa-addons-body ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" id="sa-tab-' . $this->oxiid . '-id-' . $body['id'] . '" style="display: none;">
-                            <div class="sa-addons-line"></div>
-                            ' . $this->text_render(array_key_exists('sa_tabs_content', $value_body) ? $value_body['sa_tabs_content'] : '') . '
-                    ';
+                    <div class="sa-addons-line-two"></div>
+                    ' . $this->text_render(array_key_exists('sa_tabs_content', $value_body) ? $value_body['sa_tabs_content'] : '') . '
+                ';
             if ($admin == 'admin') :
                 echo '<div class="oxi-addons-admin-absulote">
-                                    <div class="oxi-addons-admin-absulate-edit">
-                                        <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $body['id'] . '">Edit</button>
-                                    </div>
-                                    <div class="oxi-addons-admin-absulate-delete">
-                                        <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $body['id'] . '">Delete</button>
-                                    </div>
-                                </div>';
+                            <div class="oxi-addons-admin-absulate-edit">
+                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $body['id'] . '">Edit</button>
+                            </div>
+                            <div class="oxi-addons-admin-absulate-delete">
+                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $body['id'] . '">Delete</button>
+                            </div>
+                        </div>';
             endif;
             echo '</div>';
         }
         echo '</div>';
         echo '</div>';
+        echo '</div>';
 
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
-    }
-    public function inline_public_css()
-    {
-        return '.' . $this->WRAPPER . ' .sa-addons-tabs-main-wrapper-style-4 .sa-active::after{
-                    border-left: ' . $this->style['sa_tabs_headding_arrow-size'] . 'px solid transparent;
-                    border-right: ' . $this->style['sa_tabs_headding_arrow-size'] . 'px solid transparent;
-                    border-bottom: ' . $this->style['sa_tabs_headding_arrow-size'] . 'px solid ' . $this->style['sa_tabs_headding_arrow-color'] . ';
-                    }';
     }
     public function inline_public_jquery()
     {
