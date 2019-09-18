@@ -21,39 +21,45 @@ class Style_5 extends Templates
     public function default_render($style, $child, $admin)
     {
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
+
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
             $icon = $heading = $content = $link = $endlink = '';
-            if ($value['sa_icon_box_icon'] != '') {
+            if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {
                 $icon .= '<div class="sa_addons_icon_boxes_icon">
                             <div class="sa_icons_body">
                                 ' . $this->font_awesome_render($value['sa_icon_box_icon']) . '
                             </div>
-                        </div>';
+                        </div>
+                ';
             }
-            if ($value['sa_icon_box_h_text'] != '') {
+            if (array_key_exists('sa_icon_box_h_text', $value) && $value['sa_icon_box_h_text'] != '') {
                 $heading .= '<div class="sa_addons_icon_boxes_headding">
                             ' . $this->text_render($value['sa_icon_box_h_text']) . '
                         </div>';
             }
-            if ($value['sa_icon_box_content'] != '') {
+            if (array_key_exists('sa_icon_box_content', $value) && $value['sa_icon_box_content'] != '') {
                 $content .= '<div class="sa_addons_icon_boxes_content">
                             ' . $this->text_render($value['sa_icon_box_content']) . '
                         </div>';
             }
-            if ($value['sa_icon_box_url-url'] != '') {
-                $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
-                $endlink .= '</a>';
+            if (array_key_exists('sa_icon_box_url_open', $value) && $value['sa_icon_box_url_open'] != '0') {
+                if ($value['sa_icon_box_url-url'] != '') {
+                    $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
+                    $endlink .= '</a>';
+                }
             }
+
             echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="sa_addons_icon_boxes_container">';
 
-                echo $link;
-                echo '<div class="sa_addons_icon_boxes_style_5">
+            echo $link;
+            echo '<div class="sa_addons_icon_boxes_style_5">
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '
                         </div>';
-                echo $endlink;
+            echo $endlink;
             echo '</div>';
             if ($admin == 'admin') :
                 echo '<div class="oxi-addons-admin-absulote">

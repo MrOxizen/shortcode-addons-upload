@@ -92,10 +92,15 @@
 }
 
 .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line {
+    display: none;
     width: 50px;
     height: 2px;
     background: #ff5c5c;
     margin: 30px 0px 5px 20px
+}
+
+.sa-addons-tabs-main-wrapper-style-4.show_line_setting .sa-addons-line {
+    display: block;
 }
 
 .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two:hover {

@@ -19,6 +19,7 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            
             $icon = $heading = $content = $link = $endlink = '';
             if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {
                 $icon .= '<div class="sa_addons_icon_boxes_icon">
@@ -35,9 +36,11 @@ class Style_1 extends Templates {
                             ' . $this->text_render($value['sa_icon_box_content']) . '
                         </div>';
             }
-            if (array_key_exists('sa_icon_box_url-url', $value) && $value['sa_icon_box_url-url'] != '') {
-                $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
-                $endlink .= '</a>';
+            if (array_key_exists('sa_icon_box_url_open', $value) && $value['sa_icon_box_url_open'] != '0') {
+                if ($value['sa_icon_box_url-url'] != '') {
+                    $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
+                    $endlink .= '</a>';
+                }
             }
             echo'<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="sa_addons_icon_boxes_container">';

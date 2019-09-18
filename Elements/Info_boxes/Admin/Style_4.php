@@ -540,7 +540,7 @@ class Style_4 extends AdminStyle
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'center',
                 'options' => [
-                    'left' => [
+                    'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-left',
                     ],
@@ -548,7 +548,7 @@ class Style_4 extends AdminStyle
                         'title' => __('Center', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-center',
                     ],
-                    'right' => [
+                    'flex-end' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-right',
                     ],

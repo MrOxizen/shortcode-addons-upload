@@ -12,16 +12,18 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-use SHORTCODE_ADDONS\Core\Templates; 
-class Style_1 extends Templates {
+use SHORTCODE_ADDONS\Core\Templates;
 
-   
+class Style_1 extends Templates { 
+    
     public function default_render($style, $child, $admin) {
-
-        echo '<div class="oxi_addons__drop_caps_main">
-                <div class="oxi_addons__text">'. $this->text_render($style['sa_drop_caps_text']) .'</div>
-              </div>';
-       
+        $text  = '';
+        if (array_key_exists('sa_drop_caps_text', $style) && $style['sa_drop_caps_text'] != '') {
+            $text = ' <div class="oxi_addons__text">'. $this->text_render($style['sa_drop_caps_text']) .'</div>';
+        }
+        echo '<div class="oxi_addons__drop_caps_main" >
+               '. $text .'
+              </div>'; 
     }
 
     public function old_render() {

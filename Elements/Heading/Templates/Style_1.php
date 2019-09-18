@@ -20,7 +20,7 @@ class Style_1 extends Templates {
 
         if ($style['sa_head_text'] != '') {
             echo ' <div class="oxi-addons-heading-container " > 
-                    <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading">' . $this->text_render($style['sa_head_text']) . '</' . $style['sa_head_heading_tag'] . '>
+                    <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading" ' . $this->animation_render('sa_head_animation', $style) . '>' . $this->text_render($style['sa_head_text']) . '</' . $style['sa_head_heading_tag'] . '>
                </div> ';
         }
     }
@@ -31,8 +31,8 @@ class Style_1 extends Templates {
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[2]);
-  
-$data = $stylefiles[1];
+
+        $data = $stylefiles[1];
         echo ' <div class="oxi-addons-container" >
              <div class="oxi-addons-row"> 
                     <div class="oxi-addons-container-' . $oxiid . ' " ' . OxiAddonsAnimation($styledata, 45) . '> 
@@ -73,7 +73,7 @@ $data = $stylefiles[1];
                         margin-bottom: ' . $styledata[39] . 'px;
                     }
                 }';
-        echo OxiAddonsInlineCSSData($css);
+        wp_add_inline_style('shortcode-addons-style', $css);
     }
 
 }

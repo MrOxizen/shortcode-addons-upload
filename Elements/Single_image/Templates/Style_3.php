@@ -80,21 +80,23 @@ class Style_3 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $deg = $jquery = $css = '';
-        if ($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left') {
-            $deg = 'transform: rotate(-45deg); left : ' . $style['sa_s_image_ribbon_left'] . 'px; ';
-        } else {
-            $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
+        if (array_key_exists('sa_s_image_ribbon', $style) && $style['sa_s_image_ribbon'] != '0' && $style['sa_s_image_ribbon_pos'] != '') {
+            if ($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left') {
+                $deg = 'transform: rotate(-45deg); left : ' . $style['sa_s_image_ribbon_left'] . 'px; ';
+            } else {
+                $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
+            }
         }
         $ribbon = '';
-        if (array_key_exists('sa_s_image_ribbon', $style)) {
+        if (array_key_exists('sa_s_image_ribbon', $style) && $style['sa_s_image_ribbon'] != '0') {
             $ribbon .= '<div class="oxi-addons-single-image-ribbon" style="' . $deg . '">
                             <div class="oxi-addons-single-image-ribbon-position">
                                 <div class="oxi-addons-single-image-ribbon-content">' . $this->text_render($style['sa_s_image_ribbon_text']) . '</div>
                             </div>
                         </div>';
         }
-        if($this->media_render('sa_s_image_img', $style) != ''){
-        echo '  <div class="oxi-addons-single-image-container"  id="' . $style['sa_s_image_ID'] . '">
+        if ($this->media_render('sa_s_image_img', $style) != '') {
+            echo '  <div class="oxi-addons-single-image-container"  id="' . $style['sa_s_image_ID'] . '">
                     <div class="oxi-addons-single-image-row">
                         <div class="oxi-addons-single-image">
                             <img src="' . $this->media_render('sa_s_image_img', $style) . '">
@@ -105,7 +107,7 @@ class Style_3 extends Templates {
                         ' . $ribbon . '
                     </div>
                 </div>';
-        }else{
+        } else {
             echo '<div style="color : red;">Please Upload an Image !</div>';
         }
     }
@@ -119,19 +121,19 @@ class Style_3 extends Templates {
         $styledata = explode('|', $stylefiles[0]);
         $jquery = '';
 
-            echo '  <div class="oxi-addons-container">
+        echo '  <div class="oxi-addons-container">
                       <div class="oxi-addons-row">
                           <div class=" oxi-addons-single-image-container-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 159) . ' id="' . $stylefiles[3] . '">
                              <div class="oxi-addons-single-image-row">
                              <div class="oxi-addons-single-image">
                                  <img src="' . OxiAddonsUrlConvert($stylefiles[5]) . '">
                                  <div class="oxi-addons-single-image-icon">';
-         if ($styledata[245] == 'link') {
-             echo '<a href="' . OxiAddonsUrlConvert($stylefiles[11]) . '" target="' . $styledata[247] . '"><div class="oxi-addons-single-image-icon-data">' . $stylefiles[9] . '</div></a>';
-         } else {
+        if ($styledata[245] == 'link') {
+            echo '<a href="' . OxiAddonsUrlConvert($stylefiles[11]) . '" target="' . $styledata[247] . '"><div class="oxi-addons-single-image-icon-data">' . $stylefiles[9] . '</div></a>';
+        } else {
 
-             echo '<div class="oxi-addons-single-image-icon-data">' . $stylefiles[9] . '</div>';
-             $jquery .= 'jQuery(".oxi-addons-single-image-container-' . $oxiid . ' .oxi-addons-single-image-icon-data").OximagnificPopup({
+            echo '<div class="oxi-addons-single-image-icon-data">' . $stylefiles[9] . '</div>';
+            $jquery .= 'jQuery(".oxi-addons-single-image-container-' . $oxiid . ' .oxi-addons-single-image-icon-data").OximagnificPopup({
                              items: [
                                  {
                                      src: "' . OxiAddonsUrlConvert($stylefiles[13]) . '",
@@ -148,7 +150,7 @@ class Style_3 extends Templates {
                              closeOnContentClick: true,
                              tLoading: "",
                          });';
-             $css .= '.oxi-addons-lightbox-' . $oxiid . '.Oximfp-bg{
+            $css .= '.oxi-addons-lightbox-' . $oxiid . '.Oximfp-bg{
                          background: ' . $styledata[251] . ';
                          z-index: ' . ($styledata[249] - 1) . ';
                        }
@@ -171,8 +173,8 @@ class Style_3 extends Templates {
                        .oxi-addons-lightbox-' . $oxiid . ' .Oximfp-preloader{
                           background: ' . $styledata[255] . ';
                        }';
-         }
-         echo '                </div>
+        }
+        echo '                </div>
                              </div>
                              <div class="oxi-addons-single-image-ribbon">
                                  <div class="oxi-addons-single-image-ribbon-position">
@@ -183,12 +185,12 @@ class Style_3 extends Templates {
                          </div>
                          </div>
                      </div>';
-         if ($styledata[165] == 'left') {
-             $ribbonpo = '-';
-         } else {
-             $ribbonpo = '';
-         }
-         $css .= '.oxi-addons-single-image-container-' . $oxiid . '{
+        if ($styledata[165] == 'left') {
+            $ribbonpo = '-';
+        } else {
+            $ribbonpo = '';
+        }
+        $css .= '.oxi-addons-single-image-container-' . $oxiid . '{
                          display: inline-block;
                          overflow: hidden;
                          vertical-align: middle;
@@ -403,7 +405,7 @@ class Style_3 extends Templates {
                          }
                      }
                      ';
-         $jquery .= '';
+        $jquery .= '';
         wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Elements/Single_image/file/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_add_inline_style('MagnificPopup', $css);
         wp_enqueue_script('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Elements/Single_image/file/MagnificPopup.js', false, SA_ADDONS_PLUGIN_VERSION);

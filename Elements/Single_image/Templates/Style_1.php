@@ -18,16 +18,18 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
 //        echo '<pre>';
-//        print_r($style);
+//        print_r($style['sa_s_image_ribbon_pos']);
 //        echo '</pre>';
         $deg = '';
-        if ($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left') {
-            $deg = 'transform: rotate(-45deg); left : ' . $style['sa_s_image_ribbon_left'] . 'px; ';
-        } else {
-            $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
+        if ( array_key_exists('sa_s_image_ribbon', $style) && $style['sa_s_image_ribbon'] != '0' && $style['sa_s_image_ribbon_pos'] != '') {
+            if ($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left') {
+                $deg = 'transform: rotate(-45deg); left : ' . $style['sa_s_image_ribbon_left'] . 'px; ';
+            } else {
+                $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
+            }
         }
         $ribbon = '';
-        if (array_key_exists('sa_s_image_ribbon', $style)) {
+        if (array_key_exists('sa_s_image_ribbon', $style) && $style['sa_s_image_ribbon'] != '0') {
             $ribbon .= '<div class="oxi-addons-single-image-ribbon" style="' . $deg . '">
                             <div class="oxi-addons-single-image-ribbon-position">
                                 <div class="oxi-addons-single-image-ribbon-content">' . $this->text_render($style['sa_s_image_ribbon_text']) . '</div>

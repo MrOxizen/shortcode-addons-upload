@@ -583,6 +583,34 @@ class Style_18 extends AdminStyle {
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
+        $this->add_responsive_control(
+                'sa_btn_icon_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'separator' => TRUE,
+           
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn18 .oxi-button-btn18 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
 
         $this->end_controls_section();
 
