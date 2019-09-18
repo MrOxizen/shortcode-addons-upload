@@ -59,7 +59,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 200,
+                'size' => 450,
             ],
             'range' => [
                 'px' => [
@@ -79,7 +79,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image-box-area' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-image-box-area' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -88,28 +88,23 @@ class Style_2 extends AdminStyle {
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
-                'unit' => 'px',
-                'size' => 200,
+                'unit' => '%',
+                'size' => 50,
             ],
             'range' => [
+                '%' => [
+                    'min' => 1,
+                    'max' => 200,
+                    'step' => .1,
+                ],
                 'px' => [
                     'min' => 1,
                     'max' => 2000,
                     'step' => 1,
                 ],
-                'em' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => 0.1,
-                ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image-image::after' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-image-image::after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -797,15 +792,15 @@ class Style_2 extends AdminStyle {
     public function modal_opener() {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
+            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);
     }
 
     public function modal_form_data() {
         echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
+                    <h4 class="modal-title">Image Boxes Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">';
@@ -829,7 +824,10 @@ class Style_2 extends AdminStyle {
                 'sa_image_boxes_media', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
             'type' => Controls::MEDIA,
-            'default' => '',
+            'default' => [
+                'type' => 'media-library',
+                'link' => '#asdas',
+            ]
                 ]
         );
         $this->add_control(

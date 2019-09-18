@@ -18,27 +18,34 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $image = $info = $rating = $name = '';
             if($this->media_render('sa_testi_profile_picture', $value) != ''){
               $image = '<div class="oxi-testimonials-style-testi-image">                               
                                 <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
                             </div>';  
             }
-            if($this->text_render($value['sa_testi_profile_description']) != ''){
+            if(array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != ''){
               $info = '<div class="oxi-testimonials-style-testi-info">
                                 ' . $this->text_render($value['sa_testi_profile_description']) . '
                             </div>';  
             }
-            if($this->public_rating_render($value['sa_testi_profile_rating-size']) != ''){
+            if(array_key_exists('sa_testi_profile_rating-size', $value) && $value['sa_testi_profile_rating-size'] != ''){
               $rating = '<div class="oxi-testimonials-style-testi-rating">
                                 ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '  
                             </div> ';  
             }
-            if($this->text_render($value['sa_testi_profile_name']) != ''){
-              $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-testi-name" ">
+            if(array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != ''){
+              
+              if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
+                    $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-testi-name">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                            </a>';  
+                            </a>'; 
+                } else {
+                    $name = '<div  class="oxi-testimonials-style-testi-name">
+                                ' . $this->text_render($value['sa_testi_profile_name']) . ' 
+                            </div>'; 
+                }
             }
             
             echo ' <div class="oxi-testimonials-testi-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'" >
