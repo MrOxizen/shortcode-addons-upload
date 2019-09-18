@@ -475,7 +475,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
