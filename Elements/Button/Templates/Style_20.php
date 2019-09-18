@@ -18,15 +18,15 @@ class Style_20 extends Templates {
 
     public function default_render($style, $child, $admin) {
         $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
-        $icon = (array_key_exists('sa_btn_icon', $style) ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
+        $icon = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
 
-        if (array_key_exists('sa_btn_icon_position', $style)):
+        if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0'):
             $html = $icon . $text;
         else:
             $html = $text . $icon;
         endif;
         echo '  <div class="oxi-addons-align-btn20">
-                   <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn20 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' '.$style['sa_btn_effect_position'].'" >' . $html . '</a>
+                   <a ' . $this->animation_render('sa_btn_animation', $style) . ' ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn20 ' . (array_key_exists('sa_btn_width_choose', $style) && $style['sa_btn_width_choose'] != '0' ? $style['sa_btn_width_choose'] : '') . ' '.$style['sa_btn_effect_position'].'" >' . $html . '</a>
                 </div>';
     }
 

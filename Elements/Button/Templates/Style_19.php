@@ -18,7 +18,7 @@ class Style_19 extends Templates {
 
     public function default_render($style, $child, $admin) {
         $text1=  '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
-        $text2= (array_key_exists('sa_btn_hover_text_condition', $style) ? '<div class="sa-hover-text"><div class="sa-hover-text-text">' . $this->text_render($style['sa_btn_hover_text']) . '</div></div>' : '<div class="sa-hover-text"><div class="sa-hover-text-text">' . $this->text_render($style['sa_btn_text']) . '</div></div>');
+        $text2= (array_key_exists('sa_btn_hover_text_condition', $style) && $style['sa_btn_hover_text_condition'] != '0' ? '<div class="sa-hover-text"><div class="sa-hover-text-text">' . $this->text_render($style['sa_btn_hover_text']) . '</div></div>' : '<div class="sa-hover-text"><div class="sa-hover-text-text">' . $this->text_render($style['sa_btn_text']) . '</div></div>');
         $text = $text1 . $text2 ;
       
         
@@ -27,7 +27,7 @@ class Style_19 extends Templates {
 
         echo '  <div class="oxi-addons-button">
                     <div class="oxi-addons-align-btn19">
-                        <a ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn19 ' . (array_key_exists('sa_btn_width_choose', $style) ? $style['sa_btn_width_choose'] : '') . ' ' . $style['sa_btn_effect_position'] . '" >' . $text . '</a>
+                        <a ' . $this->animation_render('sa_btn_animation', $style) . ' ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn19 ' . (array_key_exists('sa_btn_width_choose', $style) && $style['sa_btn_width_choose'] != '0' ? $style['sa_btn_width_choose'] : '') . ' ' . $style['sa_btn_effect_position'] . '" >' . $text . '</a>
                     </div>
                 </div>';
     }
