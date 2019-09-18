@@ -11,8 +11,7 @@
     box-shadow: 0px 6px 15px -5px rgba(181, 181, 181, 0.47);
 }
 
-
-/* .sa-addons-tabs-main-wrapper-style-4 .sa_tabs_icon {
+.sa-addons-tabs-main-wrapper-style-4 .sa_tabs_icon {
     text-align: center;
     display: inline-block;
 }
@@ -33,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
 
 .sa-addons-tabs-main-wrapper-style-4 * {
     transition: none !important;

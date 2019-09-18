@@ -250,6 +250,7 @@ class Style_4 extends Templates
             }
             .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-wrapper{
                 display: flex;
+                flex-direction: inherit;
                 overflow: hidden;
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 34) . ';
                 ' . OxiAddonsBoxShadowSanitize($styledata, 172) . '; 

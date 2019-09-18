@@ -241,7 +241,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => 'paddding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -333,14 +333,48 @@ class Style_4 extends AdminStyle
             ]
         );
 
-        $this->add_group_control(
-            'sa_tabs_headding_border_a',
+        $this->add_control(
+            'sa_tabs_headding_border_c_a',
             $this->style,
             [
-                'type' => Controls::BORDER,
+                'label' => __('Border Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'loader' => TRUE,
+                'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header.sa-active' => '',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two.sa-active' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-active::before' => 'background: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_tabs_headding_border_a_w',
+            $this->style,
+            [
+                'label' => __('Border Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-active::before' => 'width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
