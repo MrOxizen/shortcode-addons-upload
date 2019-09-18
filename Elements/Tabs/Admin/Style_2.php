@@ -52,7 +52,7 @@ class Style_2 extends AdminStyle
         $all_initial = [];
         $i = 0;
         foreach ($this->child as $value) :
-            $all_value = json_decode($value['rawdata'], true);
+            $all_value = json_decode(stripcslashes($value['rawdata']), true);
             $all_initial[$i] = $all_value['sa_tabs_h_text'];
             $i++;
         endforeach;

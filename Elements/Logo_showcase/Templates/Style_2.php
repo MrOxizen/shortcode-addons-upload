@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -21,12 +21,14 @@ class Style_2 extends Templates
     public function default_render($style, $child, $admin)
     {
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
+            $value = $v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : [];
             $img = $link = $endlink = '';
-
-            if ($value['sa_logo_showcase_url-url'] != '') {
-                $link .= '<a ' . $this->url_render('sa_logo_showcase_url', $value) . ' class="logo_showcase_link">';
-                $endlink .= '</a>';
+            
+            if (array_key_exists('sa_logo_showcase_url_open', $value) && $value['sa_logo_showcase_url_open'] != '0') {
+                if ($value['sa_logo_showcase_url-url'] != '') {
+                    $link .= '<a ' . $this->url_render('sa_logo_showcase_url', $value) . ' class="logo_showcase_link">';
+                    $endlink .= '</a>';
+                }
             }
             if ($this->media_render('sa_logo_showcase_img', $value) != '') {
                 $img .= '<img src="' . $this->media_render('sa_logo_showcase_img', $value) . '" class="sa_addons_img">';
