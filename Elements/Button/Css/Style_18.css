@@ -82,7 +82,7 @@ and open the template in the editor.
     padding: 15px 15px 15px 15px;
 }
 
-.oxi-addons-align-btn18 .sa-right-to-left .sa-button-icon1{
+/*.oxi-addons-align-btn18 .sa-right-to-left .sa-button-icon1{
     position: absolute;
     left: 100%;
 }
@@ -92,7 +92,7 @@ and open the template in the editor.
     opacity: 0;
     transition: none;
 
-}
+}*/
 
 .oxi-addons-align-btn18 .sa-left-to-right .s-a-button-text{
     position: absolute;
@@ -109,7 +109,27 @@ and open the template in the editor.
     transition: all .3s linear;
 }
 .oxi-addons-align-btn18 .sa-left-to-right:hover .sa-button-icon1{
-        left: calc(80%);
+    left: calc(80%);
+    transition: all .3s linear;
+}
+
+
+.oxi-addons-align-btn18 .sa-right-to-left .s-a-button-text{
+    position: absolute;
+    transition: all .3s linear;
+}
+.oxi-addons-align-btn18 .sa-right-to-left:hover .s-a-button-text{
+    position: absolute;
+    transition: all .3s linear;
+}
+
+.oxi-addons-align-btn18 .sa-right-to-left .sa-button-icon1{
+    position: absolute;
+    right: 0;
+    transition: all .3s linear;
+}
+.oxi-addons-align-btn18 .sa-right-to-left:hover .sa-button-icon1{
+    right: calc(80%);
     transition: all .3s linear;
 }
 
