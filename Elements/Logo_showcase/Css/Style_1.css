@@ -3,6 +3,11 @@
     padding: 0px 0px 0px 0px
 }
 
+.sa_addons_logo_showcase_container .logo_showcase_link {
+    width: 100%;
+    height: 100%;
+}
+
 .sa_addons_logo_showcase_style_1 {
     max-width: 200px;
     width: 100%;
