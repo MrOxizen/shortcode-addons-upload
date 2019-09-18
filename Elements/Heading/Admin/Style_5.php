@@ -75,7 +75,6 @@ class Style_5 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons-general', [
             'label' => esc_html__('General ', SHORTCODE_ADDOONS),
-           
                 ]
         );
         $this->add_group_control(
@@ -197,7 +196,11 @@ class Style_5 extends AdminStyle {
             ]
                 ]
         );
-
+        $this->add_group_control(
+                'sa_head_animation', $this->style, [
+            'type' => Controls::ANIMATION,
+                ]
+        );
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons-sub-head-font-settings', [
@@ -258,24 +261,9 @@ class Style_5 extends AdminStyle {
         );
 
         $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons-animation', [
-            'label' => esc_html__('Animation ', SHORTCODE_ADDOONS),
-            'showing' => False,
-                ]
-        );
-        $this->add_group_control(
-                'sa_head_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
-            ],
-                ]
-        );
-        $this->end_controls_section();
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
 
 }

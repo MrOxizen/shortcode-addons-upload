@@ -562,6 +562,10 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa_info_image_img_src', $this->style, [
             'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => '',
+            ],   
                 ]
         );
         $this->add_control(

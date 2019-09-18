@@ -20,42 +20,51 @@ class Style_4 extends Templates {
         if ($style['sa-bl-g-max-width-control'] == 'max-width') {
             $class = 'sa-bl-width-auto';
         }
-        
+
         echo ' <div class="oxi-addons-main-wrapper-full-area ">
                         <div class="oxi-icon-last ' . $class . '">';
-                        foreach ($child as $v) {
-                                $value = json_decode($v['rawdata'], true);
-                               
+                            foreach ($child as $v) {
+                                $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+                                $icon = $heading = $textarea = '';
+                                if (array_key_exists('sa_bl_four_icon', $value) && $value['sa_bl_four_icon'] != '') {
+                                    $icon = '<div class="oxi-addons-content-boxes-icon">
+                                                    ' . $this->font_awesome_render($value['sa_bl_four_icon']) . '
+                                                </div>';
+                                }
+                                if (array_key_exists('sa_bl_four_text', $value) && $value['sa_bl_four_text'] != '') {
+                                     $heading .= '<div class="oxi-addons-content-boxes-heading">
+                                                            ' . $this->text_render($value['sa_bl_four_text']) . '
+                                                    </div>';
+                                }
+                                if (array_key_exists('sa_bl_four_textarea', $value) && $value['sa_bl_four_textarea'] != '') {
+                                     $textarea .= '<div class="oxi-addons-content-boxes-content">
+                                                        ' . $this->text_render($value['sa_bl_four_textarea']) . '
+                                                    </div>';
+                                }
+                                
                                 echo '<div class=" oxi-info-banner-style-4-static ">
-                                        <div class="oxi-addons-content-boxes-list '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'">
+                                        <div class="oxi-addons-content-boxes-list ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
                                             <div class="oxi-addons-box">
-                                                <div class="oxi-addons-content-boxes-icon">
-                                                    <i class="' . $value['sa_bl_four_icon'] . '"></i>
-                                                </div>
+                                                ' .$icon. '
                                                 <div class="oxi-addons-header-content">  
-                                                    <div class="oxi-addons-content-boxes-heading">
-                                                            ' . $value['sa_bl_four_text'] . '
-                                                    </div>
-                                                    <div class="oxi-addons-content-boxes-content">
-                                                        ' . $value['sa_bl_four_textarea'] . '
-                                                    </div>
+                                                    ' .$heading. '
+                                                    ' .$textarea. '   
                                                 </div>
                                             </div>';
-
-                                if ($admin == 'admin'):
-                                    echo '  <div class="oxi-addons-admin-absulote">
-                                                <div class="oxi-addons-admin-absulate-edit">
-                                                    <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                                                </div>
-                                                <div class="oxi-addons-admin-absulate-delete">
-                                                   <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                                                 </div>
-                                            </div>';
-                                endif;
-                                echo '</div>
+                                        if ($admin == 'admin'):
+                                            echo '  <div class="oxi-addons-admin-absulote">
+                                                        <div class="oxi-addons-admin-absulate-edit">
+                                                            <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
+                                                        </div>
+                                                        <div class="oxi-addons-admin-absulate-delete">
+                                                           <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
+                                                         </div>
+                                                    </div>';
+                                             endif;
+                                 echo '</div>
                                     </div>';
-                            }
-                            
+        }
+
         echo '  </div>
             </div>';
     }
@@ -73,7 +82,7 @@ class Style_4 extends Templates {
                 <div class="oxi-addons-row">
                     <div class="oxi-addons-main-wrapper-' . $oxiid . ' ">
                         <div class="oxi-icon-last">';
-                    
+
         foreach ($listdata as $one_item) {
             $listfiles = explode('||#||', $one_item['files']);
 
@@ -105,23 +114,23 @@ class Style_4 extends Templates {
                     <div class="oxi-addons-content-boxes-main">                        
 			<div class="oxi-addons-box">';
 
-                            if ($styledata[3] == 'left') {
-                                 echo ' ' . $icon .
-                                    '<div class="oxi-addons-header-content">
+            if ($styledata[3] == 'left') {
+                echo ' ' . $icon .
+                '<div class="oxi-addons-header-content">
 					' . $heading . '
 					' . $content . '     
                                     </div> 
 										   ';
-                            } else {
-                                     echo ' <div class="oxi-addons-header-content">
+            } else {
+                echo ' <div class="oxi-addons-header-content">
                                                 ' . $heading . '
                                                 ' . $content . '     
                                             </div> 
                                             ' . $icon . '
                                             ';
-                            }
+            }
 
-                    echo '</div>
+            echo '</div>
 		</div>';
             echo '</div></div>';
         }

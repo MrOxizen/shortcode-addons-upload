@@ -53,7 +53,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::MEDIA,
             'default' => [
                 'type' => 'media-library',
-                'link' => 'http://127.0.0.1/wordpress/wp-content/uploads/2019/08/service-3-copyright.jpg',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/04/180168-nature-landscape-animals-trees-sunset-silhouette-birds-photo_manipulation-deer-horizon-reflection-orange.jpg',
             ],
                 ]
         );
@@ -204,9 +204,6 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_animation', $this->style, [
             'type' => Controls::ANIMATION,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
-            ],
                 ]
         );
         $this->end_controls_section();

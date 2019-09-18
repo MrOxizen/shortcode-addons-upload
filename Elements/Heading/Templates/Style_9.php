@@ -33,7 +33,7 @@ class Style_9 extends Templates {
                         </' . $style['sa_sub_heading_tag'] . '>';
         }
 
-        echo ' <div class="oxi-addons-heading-container">
+        echo ' <div class="oxi-addons-heading-container"  '.$this->animation_render('sa_head_animation', $style).' >
                     <div class="oxi-addons-sub-heading">
                         ' . $content . '
                     </div>

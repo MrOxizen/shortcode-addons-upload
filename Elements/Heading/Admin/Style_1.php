@@ -186,9 +186,7 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_animation', $this->style, [
             'type' => Controls::ANIMATION,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
-            ],
+          
                 ]
         );
         $this->end_controls_section();

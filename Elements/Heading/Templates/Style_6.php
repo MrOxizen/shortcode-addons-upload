@@ -38,7 +38,7 @@ class Style_6 extends Templates {
                         </div>';
         }
 
-        echo '  <div class="oxi-addons-body-container">
+        echo '  <div class="oxi-addons-body-container" '.$this->animation_render('sa_head_animation', $style).'>
                     ' . $content . '
                     ' . $heading . '
                 </div>      ';

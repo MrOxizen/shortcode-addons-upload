@@ -122,9 +122,6 @@ class Style_9 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_animation', $this->style, [
             'type' => Controls::ANIMATION,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
-            ],
                 ]
         );
 
