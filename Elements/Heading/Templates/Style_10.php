@@ -20,7 +20,7 @@ class Style_10 extends Templates {
 //        echo '<pre>';
 //        print_r($style);
 //        echo '</pre>';
-//        echo  $style['sa_head_line_style'];
+//        echo  $style['sa_head_animation'];
 //      print_r($this->media_render('sa_head_image',$style)) ;
 $align = '';
         if($style['sa_head_line_style'] == 'oxi_line_top_left' || $style['sa_head_line_style'] == 'oxi_line_btm_left'){
@@ -40,8 +40,8 @@ $align = '';
                             ' . $this->text_render($style['sa_sub_head_text']) . '
                         </' . $style['sa_sub_heading_tag'] . '>';
         }
-        echo '  <div class="oxi-addons-heading-container">
-                    <div class="oxi-addons-main-heading-body">
+        echo '  <div class="oxi-addons-heading-container"   >
+                    <div class="oxi-addons-main-heading-body"  '.$this->animation_render('sa_head_animation', $style).'>
                         <div class="oxi-addons-sub-heading">
                             ' . $content . '
                         </div>

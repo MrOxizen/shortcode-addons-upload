@@ -60,7 +60,7 @@ class Style_8 extends Templates {
                     </div>';
         }
         
-        echo '<div class="OxiAddons-Heading" >
+        echo '<div class="OxiAddons-Heading" '.$this->animation_render('sa_head_animation', $style).' >
                     <div class="oxi-addons-heading-container">
                      ' . $WM . '
                         <div class="oxi-addons-sub-heading">

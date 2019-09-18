@@ -69,6 +69,15 @@ class Style_7 extends AdminStyle {
                 ]
         );
 
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons-general', [
+            'label' => esc_html__('General ', SHORTCODE_ADDOONS),
+            'showing' => False,
+                ]
+        );
+
         $this->add_responsive_control(
                 'sa_head_margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -99,9 +108,15 @@ class Style_7 extends AdminStyle {
             ]
                 ]
         );
-
+        $this->add_group_control(
+                'sa_head_animation', $this->style, [
+            'type' => Controls::ANIMATION,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-heading-container' => ''
+            ],
+                ]
+        );
         $this->end_controls_section();
-
         $this->end_section_devider();
         $this->start_section_devider();
 
@@ -117,7 +132,7 @@ class Style_7 extends AdminStyle {
             'label' => __('Style', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
             'default' => '2',
-            'loader' =>TRUE,
+            'loader' => TRUE,
             'options' => [
                 '1' => __('Style 1', SHORTCODE_ADDOONS),
                 '2' => __('Style 2', SHORTCODE_ADDOONS),
@@ -128,7 +143,11 @@ class Style_7 extends AdminStyle {
         $this->add_group_control(
                 'sa_head_image', $this->style, [
             'type' => Controls::MEDIA,
-            ]
+            'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/03/divider-2461548__340.png',
+            ],
+                ]
         );
 
         $this->add_responsive_control(
@@ -280,25 +299,9 @@ class Style_7 extends AdminStyle {
         );
 
         $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons-animation', [
-            'label' => esc_html__('Animation ', SHORTCODE_ADDOONS),
-            'showing' => False,
-                ]
-        );
-        $this->add_group_control(
-                'sa_head_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
-            ],
-                ]
-        );
-        $this->end_controls_section();
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
-   
 
 }
