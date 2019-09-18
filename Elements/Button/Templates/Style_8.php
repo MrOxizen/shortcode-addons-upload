@@ -19,7 +19,7 @@ class Style_8 extends Templates {
     public function inline_public_css() {
         $position = '';
         $style = $this->style;
-        if (array_key_exists('sa_btn_icon_position', $style)) {
+        if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0') {
             $position = '.' . $this->WRAPPER . ' .oxi-addons-align-btn8 .oxi-button-btn8 .oxi-icons {
                             margin-right: ' . $style['sa_btn_icon_distance-size'] . 'px;
                         }';
