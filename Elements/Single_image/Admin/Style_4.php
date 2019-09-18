@@ -32,6 +32,10 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_s_image_img', $this->style, [
             'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/cold-dark-eerie-414144.jpg',
+            ],
                 ]
         );
 
@@ -120,7 +124,7 @@ class Style_4 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-      
+
 
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
@@ -151,11 +155,10 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-          $this->add_control(
+        $this->add_control(
                 'sa_s_image_scale', $this->style, [
             'label' => __('Scale', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-           
             'default' => 1,
             'max' => 10,
             'min' => 0,
@@ -248,11 +251,10 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa_s_image_h_scale', $this->style, [
             'label' => __('Scale', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-           
             'default' => 1,
             'max' => 10,
             'min' => 0,
@@ -262,7 +264,7 @@ class Style_4 extends AdminStyle {
             ]
                 ]
         );
-         
+
         $this->add_control(
                 'sa_s_image_h_bg_color', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
@@ -326,7 +328,7 @@ class Style_4 extends AdminStyle {
         $this->end_controls_tab();
 
         $this->end_controls_tabs();
-              $this->add_control(
+        $this->add_control(
                 'sa_s_image_animation_dur', $this->style, [
             'label' => __('Animation Duration', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
@@ -334,7 +336,7 @@ class Style_4 extends AdminStyle {
             'default' => 5,
             'max' => 10,
             'min' => 0,
-                    'step' => '0.1',
+            'step' => '0.1',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-single-image-container .oxi-addons-single-image-ribbon' => 'transition: transform {{VALUE}}s;',
             ]
