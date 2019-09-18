@@ -28,7 +28,7 @@ class Style_1 extends Templates {
             $value = json_decode($v['rawdata'], true);
             $a_tag = '';
                 echo '<li class="oxi-addons-list-li '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'">
-                    <a '.$this->url_render('sa_bl_url', $value).' class="oxi-BL-link">' . $value['sa_bl_text'] . '</a>';
+                    <a '.$this->url_render('sa_bl_url', $value).' class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</a>';
 
             if ($admin == 'admin'):
                 echo '  <div class="oxi-addons-admin-absulote">

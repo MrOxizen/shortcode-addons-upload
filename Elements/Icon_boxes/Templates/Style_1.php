@@ -12,48 +12,45 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
-{
+class Style_1 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $icon = $heading = $content = $link = $endlink = '';
-            if ($value['sa_icon_box_icon'] != '') {
+            if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {
                 $icon .= '<div class="sa_addons_icon_boxes_icon">
                             ' . $this->font_awesome_render($value['sa_icon_box_icon']) . '
                         </div>';
             }
-            if ($value['sa_icon_box_h_text'] != '') {
+            if (array_key_exists('sa_icon_box_h_text', $value) && $value['sa_icon_box_h_text'] != '') {
                 $heading .= '<div class="sa_addons_icon_boxes_headding">
                             ' . $this->text_render($value['sa_icon_box_h_text']) . '
                         </div>';
             }
-            if ($value['sa_icon_box_content'] != '') {
+            if (array_key_exists('sa_icon_box_content', $value) && $value['sa_icon_box_content'] != '') {
                 $content .= '<div class="sa_addons_icon_boxes_content">
                             ' . $this->text_render($value['sa_icon_box_content']) . '
                         </div>';
             }
-            if ($value['sa_icon_box_url-url'] != '') {
+            if (array_key_exists('sa_icon_box_url-url', $value) && $value['sa_icon_box_url-url'] != '') {
                 $link .= '<a ' . $this->url_render('sa_icon_box_url', $value) . '>';
                 $endlink .= '</a>';
             }
             echo'<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="sa_addons_icon_boxes_container">';
-                    echo $link;
-                    echo'<div class="sa_addons_icon_boxes_style_1">
+            echo $link;
+            echo'<div class="sa_addons_icon_boxes_style_1" ' . $this->animation_render('sa_icon_box_animation', $style) . '>
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '
                         </div>';
-                    echo $endlink;
-                echo'</div>';
-                if ($admin == 'admin') :
-                    echo'<div class="oxi-addons-admin-absulote">
+            echo $endlink;
+            echo'</div>';
+            if ($admin == 'admin') :
+                echo'<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
                                 <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
                             </div>
@@ -61,13 +58,12 @@ class Style_1 extends Templates
                                 <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
                             </div>
                         </div>';
-                endif;
-                echo'</div>';
+            endif;
+            echo'</div>';
         }
     }
 
-    public function old_render()
-    {
+    public function old_render() {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -215,4 +211,5 @@ class Style_1 extends Templates
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $js);
     }
+
 }

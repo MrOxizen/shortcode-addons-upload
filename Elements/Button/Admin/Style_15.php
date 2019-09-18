@@ -126,7 +126,7 @@ class Style_15 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn155 .oxi-button-btn15.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn15 .oxi-button-btn15.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_btn_width_choose' => 'sa-width-dymanic',

@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_5 extends AdminStyle
+class Style_7 extends AdminStyle
 {
 
     public function register_controls()
@@ -59,30 +59,30 @@ class Style_5 extends AdminStyle
                 'type' => Controls::BACKGROUND,
                 'oparetor'  => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7' => ''
                 ],
             ]
         );
-        
+
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
                 'options' => [
                     'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS), 
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
                 ]
             ]
         );
-        
-        $this->start_controls_tab(); 
-     
+
+        $this->start_controls_tab();
+
         $this->add_group_control(
             'sa_info_boxes_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7' => ''
                 ],
             ]
         );
@@ -93,19 +93,19 @@ class Style_5 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7' => ''
                 ],
             ]
         );
         $this->end_controls_tab();
-        $this->start_controls_tab();  
+        $this->start_controls_tab();
         $this->add_group_control(
             'sa_info_boxes_border_hover',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5:hover' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7:hover' => ''
                 ],
             ]
         );
@@ -116,9 +116,9 @@ class Style_5 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5:hover' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7:hover' => ''
                 ],
-              
+
             ]
         );
         $this->end_controls_tab();
@@ -152,7 +152,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
                 'separator' => TRUE
             ]
@@ -197,7 +197,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::ANIMATION,
             ]
         );
-        $this->end_controls_section();   
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -210,19 +210,19 @@ class Style_5 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5  .oxi-buttons' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7  .oxi-buttons' => ''
                 ],
             ]
-        ); 
-       
+        );
+
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
                 'options' => [
                     'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS), 
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
                 ]
             ]
         );
@@ -235,7 +235,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_5  .oxi-buttons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_7  .oxi-buttons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -245,10 +245,10 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#7ecfc0',
+                'default' => '#41aaa8',
                 'oparetor'  => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_5  .oxi-buttons' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_7  .oxi-buttons' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -258,11 +258,11 @@ class Style_5 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5 .oxi-buttons' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi-buttons' => ''
                 ],
             ]
         );
-        
+
         $this->add_responsive_control(
             'sa_info_boxes_button_border_radius',
             $this->style,
@@ -292,7 +292,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_5  .oxi-buttons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_7  .oxi-buttons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -303,7 +303,7 @@ class Style_5 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5  .oxi-buttons' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7  .oxi-buttons' => ''
                 ],
             ]
         );
@@ -317,7 +317,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5  .oxi-buttons:hover' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7  .oxi-buttons:hover' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -327,10 +327,10 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#41aaa8',
+                'default' => '#000272',
                 'oparetor'  => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_5  .oxi-buttons:hover' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_7  .oxi-buttons:hover' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -340,7 +340,7 @@ class Style_5 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_5  .oxi-buttons:hover' => ''
+                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_7  .oxi-buttons:hover' => ''
                 ],
             ]
         );
@@ -373,7 +373,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_5  .oxi-buttons:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_7  .oxi-buttons:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -384,7 +384,7 @@ class Style_5 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_5  .oxi-buttons:hover' => ''
+                    '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_7  .oxi-buttons:hover' => ''
                 ],
             ]
         );
@@ -414,10 +414,10 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5 .oxi_addons__button' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__button' => 'justify-content: {{VALUE}};'
                 ],
             ]
-        );  
+        );
         $this->add_responsive_control(
             'sa_info_boxes_button_padding',
             $this->style,
@@ -447,7 +447,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5  .oxi-buttons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7  .oxi-buttons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -480,92 +480,57 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5 .oxi_addons__button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
 
-        $this->end_controls_section(); 
-        $this->end_section_devider(); 
+        $this->end_controls_section();
+        $this->end_section_devider();
         $this->start_section_devider();
 
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Image Setting', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
         );
-        $this->add_responsive_control(
-            'sa_info_font_size',
+        $this->add_control(
+            'sa_info_overlay_color',
             $this->style,
             [
-                'label' => __('Icon Size', SHORTCODE_ADDOONS),
+                'label' => __('Hover Overlay Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor'  => 'RGB',
+                'loader'  => TRUE,
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_info_image_height',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                
+
                 'default' => [
-                    'unit' => 'px',
-                    'size' => 40,
+                    'unit' => '%',
+                    'size' => 50,
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 5,
-                        'max' => 150,
+                        'min' => 0,
+                        'max' => 1000,
                         'step' => 1,
                     ],
-                    'em' => [
+                    '%' => [
                         'min' => 1,
-                        'max' => 20,
-                        'step' => 0.1,
-                    ],
-                    'rem' => [
-                        'min' => 1,
-                        'max' => 20,
-                        'step' => 0.1,
+                        'max' => 100,
+                        'step' => 1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_5 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_info_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR, 
-                'default' => ' #ffdd33',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_5 .oxi-icons' => 'color:{{VALUE}};'
-                ],
-            ]
-        );  
-        $this->add_control(
-            'sa_icon_alignment',
-            $this->style,
-            [
-                'label' => __('Alignment', SHORTCODE_ADDOONS),
-                'separator' => TRUE,
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-right',
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_5' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons_image::after' => 'padding-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -575,11 +540,45 @@ class Style_5 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_5 .oxi-icons' => ''
-                ], 
+                    '{{WRAPPER}} .oxi_addons_image' => ''
+                ],
             ]
 
         );
+        $this->add_responsive_control(
+            'sa_info_boxes_info_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 10,
+                ],
+                //'loader' => TRUE,
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}}  .oxi_addons_image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+
         $this->add_responsive_control(
             'sa_info_boxes_info_padding',
             $this->style,
@@ -609,7 +608,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__image_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -621,7 +620,7 @@ class Style_5 extends AdminStyle
                 'showing' => FALSE,
             ]
         );
-        
+
         $this->add_control(
             'sa_info_tag',
             $this->style,
@@ -649,10 +648,20 @@ class Style_5 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_5' => ''
+                    '{{WRAPPER}} .oxi_addons__heading_style_7' => ''
                 ],
             ]
-        ); 
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab(); // start tab
         $this->add_control(
             'sa_info_boxes_heading_color',
             $this->style,
@@ -661,11 +670,29 @@ class Style_5 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#757575',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_5' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__heading_style_7' => 'color:{{VALUE}};'
                 ],
             ]
         );
-       
+        $this->end_controls_tab(); // end tab
+        $this->start_controls_tab(); // start tab
+        $this->add_control(
+            'sa_info_boxes_heading_color_hover',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#757575',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7:hover .oxi_addons__heading_style_7' => 'color:{{VALUE}};'
+                ],
+            ]
+
+        );
+        $this->end_controls_tab(); // end tab
+        $this->end_controls_tabs();
+
+
         $this->add_responsive_control(
             'sa_info_boxes_heading_padding',
             $this->style,
@@ -695,7 +722,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__heading_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -715,11 +742,21 @@ class Style_5 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_5' => ''
+                    '{{WRAPPER}} .oxi_addons__details_style_7' => ''
                 ],
             ]
         );
-         
+
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab(); // start tab
         $this->add_control(
             'sa_info_boxes_details_color',
             $this->style,
@@ -728,11 +765,27 @@ class Style_5 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#808080',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_5' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__details_style_7' => 'color:{{VALUE}};'
                 ],
             ]
         );
-      
+        $this->end_controls_tab(); // end tab
+        $this->start_controls_tab(); // start tab 
+        $this->add_control(
+            'sa_info_boxes_details_color_hover',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7:hover .oxi_addons__details_style_7' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->end_controls_tab(); // end tab
+        $this->end_controls_tabs();
+
         $this->add_responsive_control(
             'sa_info_boxes_details_padding',
             $this->style,
@@ -762,7 +815,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__details_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -791,13 +844,12 @@ class Style_5 extends AdminStyle
                 <div class="modal-body">';
 
 
-        $this->add_control(
-            'sa_info_boxes_fontawesome',
+        $this->add_group_control(
+            'sa_info_boxes_image',
             $this->style,
             [
-                'label' => __('Font Awesome Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'placeholder' => 'example:- fab fa-facebook',
+                'label' => __('Image', SHORTCODE_ADDOONS),
+                'type' => Controls::MEDIA,
             ]
         );
         $this->add_control(

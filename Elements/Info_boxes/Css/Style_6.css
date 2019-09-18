@@ -1,0 +1,133 @@
+.oxi_addons__info_boxes_wrapper {
+    padding: 5px;
+}
+.oxi_addons__info_boxes_main_style_6 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0px 3px 5px 0px rgb(179, 179, 179);
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #ff8c78;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    background:  rgba(216, 225, 255, 0.69) ;
+}
+ .oxi_addons__info_boxes_main_style_6:hover {  
+	box-shadow: 2px 5px 11px 2px rgba(130, 130, 130, 0.68);
+	border-width: 2px 2px 2px 2px;
+	border-style: solid;
+	border-color: #7fb9fa; 
+}
+ .oxi_addons__heading_style_6 {
+    color: #757575;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+ .oxi_addons__details_style_6 {
+    color: #808080;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+ .oxi_addons__icon_style_6 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.oxi_addons__icon_style_6 .oxi-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px; 
+    font-size: 40px;
+    color: rgb(61, 98, 219);
+    transition: 0.5s ease-in;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in; 
+}
+ .oxi_addons__info_boxes_main_style_6:hover .oxi-icons {
+    color: #4879ff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.oxi_addons__info_boxes_main_style_6 .oxi_addons__button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.oxi_addons__info_boxes_main_style_6 .oxi-buttons {
+	font-family: "Amiko";
+	font-weight: 300;
+	font-style: normal; 
+	text-align: center;
+	font-size: 16px;
+	background: rgba(0, 0, 0, 1);
+	border-width: 0;
+	border-style: solid;
+	border-color: #c2bebe; 
+	color: #ffffff;
+	padding: 5px 25px 5px 25px; 
+    cursor: pointer;
+    display: inline-block;
+}
+.oxi_addons__info_boxes_main_style_6 .oxi-buttons:hover { 
+    color: #ffffff; 
+    background: #4879ff;
+}
+ 
+@media only screen and (min-width: 669px) and (max-width: 993px) {
+     .oxi_addons__info_boxes_main_style_6 {
+        padding: 7px 0;
+    }
+     .oxi_addons__heading_style_6 {
+        color: #757575;
+        font-size: 18px;
+        padding: 7px 0;
+    }
+     .oxi_addons__details_style_6 {
+        font-size: 16px;
+        padding: 7px 0;
+    }
+     .oxi_addons__icon_style_6 .oxi-icons {
+        font-size: 30px;
+    } 
+}
+
+@media only screen and (max-width: 668px) {
+     .oxi_addons__info_boxes_main_style_6 {
+        padding: 5px 0;
+    }
+     .oxi_addons__heading_style_6 {
+        color: #757575;
+        font-size: 18px;
+        padding: 5px 0;
+    }
+     .oxi_addons__details_style_6 {
+        font-size: 14px;
+        padding: 7px 0;
+    }
+     .oxi_addons__icon_style_6 .oxi-icons {
+        font-size: 25px;
+    }
+}
