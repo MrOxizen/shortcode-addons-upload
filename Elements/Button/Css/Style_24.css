@@ -57,7 +57,7 @@ and open the template in the editor.
     transition: .3s
 }
 
-.oxi-addons-align-btn24 .oxi-button-btn24 .oxi-icons {
+.oxi-addons-align-btn24 .oxi-button-btn24 .sa-button-icon {
     color: #fafafa;
     font-size: 22px;
     display: inline-flex;
@@ -68,15 +68,15 @@ and open the template in the editor.
     border-style: solid;
     border-color: #000000;
     border-radius: 0px 0px 0px 0px;
-    padding: 25px;
+    padding: 20px;
     position: absolute;
 
-    transition: .3s
+   
 }
-.oxi-addons-align-btn24 .oxi-button-btn24:hover .oxi-icons{
+.oxi-addons-align-btn24 .oxi-button-btn24:hover .sa-button-icon{
     color: #ffffff;
 
-    transition: .3s
+    
 
 }
 
@@ -87,8 +87,11 @@ and open the template in the editor.
     position: absolute;
     transform: translateX(25%);
 }
-.oxi-addons-align-btn24 .sa-left-to-right .oxi-icons{
+.oxi-addons-align-btn24 .sa-left-to-right .sa-button-icon{
     left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index:3;
 }
 
 
@@ -96,13 +99,16 @@ and open the template in the editor.
     position: absolute;
     transform: translateX(-25%);
 }
-.oxi-addons-align-btn24 .sa-right-to-left .oxi-icons {
+.oxi-addons-align-btn24 .sa-right-to-left .sa-button-icon {
 
-    right: 0;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
 
-.oxi-addons-align-btn24 .sa_bounce_top_bottom .oxi-icons{
+.oxi-addons-align-btn24 .sa_bounce_top_bottom:hover .oxi-icons{
     background: none;
     -webkit-animation: topToBottom 0.3s alternate ease infinite;
     animation: topToBottom 0.3s alternate ease infinite;
@@ -125,7 +131,7 @@ and open the template in the editor.
     }
 }
 
-.oxi-addons-align-btn24 .sa_bounce_left_to_right .oxi-icons{
+.oxi-addons-align-btn24 .sa_bounce_left_to_right:hover .oxi-icons{
     background: none;
     -webkit-animation: leftToRight 0.3s alternate ease infinite;
     animation: leftToRight 0.3s alternate ease infinite;
@@ -147,7 +153,7 @@ and open the template in the editor.
         -webkit-transform: translateX(5px);
     }
 }
-.oxi-addons-align-btn24 .sa_shake .oxi-icons{
+.oxi-addons-align-btn24 .sa_shake:hover .oxi-icons{
     padding-left: 10px;
     background: none;
     -webkit-animation: bounceright 0.03s alternate ease infinite;
@@ -170,14 +176,14 @@ and open the template in the editor.
         -webkit-transform: rotate(30deg);
     }
 }
-.oxi-addons-align-btn24 .sa_zoom .oxi-icons{
+.oxi-addons-align-btn24 .sa_zoom:hover .oxi-icons{
     -webkit-animation: none;
     -webkit-transform: scale(1.4);
     animation: none;
     transform: scale(1.4);
     transition-duration: 0.3s;
 }
-.oxi-addons-align-btn24 .sa_skew .oxi-icons{
+.oxi-addons-align-btn24 .sa_skew:hover .oxi-icons{
     -webkit-animation: none;
     -webkit-transform: skew(-20deg);
     animation: none;
