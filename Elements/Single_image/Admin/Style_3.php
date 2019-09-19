@@ -44,6 +44,10 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa_s_image_img', $this->style, [
             'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/asdasdasd.jpeg',
+            ],
                 ]
         );
 
@@ -449,7 +453,7 @@ class Style_3 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => 'rgba(68, 161, 86,1.00)',
+            'default' => 'rgba(125, 68, 163, 1)',
             'selector' => [
                 '{{WRAPPER}}  .oxi-addons-single-image-container .oxi-addons-single-image-ribbon-content' => 'background:{{VALUE}};',
                 '{{WRAPPER}}  .oxi-addons-single-image-container .oxi-addons-single-image-ribbon:after' => 'border-color:{{VALUE}};',
@@ -753,6 +757,10 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa_s_image_light_img', $this->style, [
             'type' => Controls::MEDIA,
+                    'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/asdasdasd.jpeg',
+            ],
                 ]
         );
         $this->add_control(

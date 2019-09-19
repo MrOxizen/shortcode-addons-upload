@@ -12,7 +12,7 @@
 }
 
 .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-full {
-    margin: 80px 10px 80px 10px
+    margin: 10px 10px 10px 10px
 }
 
 .oxi-addons-content-boxes-four-area-image_content {
@@ -51,15 +51,12 @@
     transition: all .3s linear
 }
 
-.oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon .oxi-icons {
+.oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon i {
     color: #ffffff;
     font-size: 33px;
     padding: 80px 1px 80px 25px
 }
 
-.oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon:hover .oxi-icons {
-    color: #ffffff
-}
 
 .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-images {
     width: 100%;
@@ -107,7 +104,7 @@
         max-width: 350px
     }
     .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-full {
-        margin: 80px 10px 80px 10px
+        margin: 10px 10px 10px 10px;
     }
     .oxi-addons-content-boxes-four-area-image_content {
         margin: 0px 0px 0px -20px
@@ -121,7 +118,7 @@
     .oxi-addons-content-boxes-four-area:hover .oxi-addons-content-boxes-four-area-data {
         margin: -80px 0px 0px 0px
     }
-    .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon .oxi-icons {
+    .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon i {
         padding: 80px 10px 80px 22px
     }
     .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-images {
@@ -145,7 +142,7 @@
         max-width: 332px
     }
     .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-full {
-        margin: 80px 10px 80px 10px
+        margin: 10px 10px 10px 10px;
     }
     .oxi-addons-content-boxes-four-area-image_content {
         margin: 0px 0px 0px -20px
@@ -159,7 +156,7 @@
     .oxi-addons-content-boxes-four-area:hover .oxi-addons-content-boxes-four-area-data {
         margin: -80px 0px 0px 0px
     }
-    .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon .oxi-icons {
+    .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon i {
         padding: 80px 6px 80px 15px
     }
     .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-images {

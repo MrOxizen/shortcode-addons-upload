@@ -18,25 +18,25 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
-        $value = json_decode($v['rawdata'], true);
+        $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
         $link = $endlink = $heading = $image = '';
-        if ($value['sa_ib_url-url'] != '') {
+        if (array_key_exists('sa_ib_url-url', $value) && $value['sa_ib_url-url'] != '') {
                 $link .= '<a class="oxi-addons-link" ' . $this->url_render('sa_ib_url', $value) . '>';
                 $endlink .= '</a>';
         }
-        if ($value['sa_ib_heading'] != '') {
+        if (array_key_exists('sa_ib_heading', $value) && $value['sa_ib_heading'] != '') {
                 $heading .= '<div class="oxi-addons-heading">
                                 ' . $this->text_render($value['sa_ib_heading']) . '
                              </div>';
         }
-        if ($this->media_render('sa_ib_media', $value) != '') {
+        if (array_key_exists('sa_ib_media', $value) && $this->media_render('sa_ib_media', $value) != '') {
                 $image .= '<div class="oxi-addons-image">
                                 <img class="oxi-addons-img" src="' . $this->media_render('sa_ib_media', $value) . '">
                             </div>';
         }
         if ($style['sa-ib-content-position'] == 'heading') {
                 $headingposition = '
-                <div class="oxi-addons-icon-box  ">
+                <div class="oxi-addons-icon-box  "  ' . $this->animation_render('sa-ib-content-animation', $style) . '>
                     <div class="oxi-addons-icon-body">
                         '.$link.'      
                         '.$heading.'      
@@ -46,7 +46,7 @@ class Style_1 extends Templates {
                 </div>';
         }else{
             $imageposition = '
-                <div class="oxi-addons-icon-box ">
+                <div class="oxi-addons-icon-box "  ' . $this->animation_render('sa-ib-content-animation', $style) . '>
                     <div class="oxi-addons-icon-body">
                         '.$link.'
                         '.$image.'

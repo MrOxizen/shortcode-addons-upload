@@ -130,7 +130,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_drop_caps_animation',
+            'sa_info_boxes_animation',
             $this->style,
             [
                 'type' => Controls::ANIMATION,
@@ -229,7 +229,7 @@ class Style_1 extends AdminStyle
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'center',
                 'options' => [
-                    'left' => [
+                    'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-left',
                     ],
@@ -237,7 +237,7 @@ class Style_1 extends AdminStyle
                         'title' => __('Center', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-center',
                     ],
-                    'right' => [
+                    'flex-end' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-right',
                     ],

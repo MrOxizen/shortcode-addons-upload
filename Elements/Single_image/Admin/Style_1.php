@@ -32,6 +32,10 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa_s_image_img', $this->style, [
             'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/fireworks-846063_1920.jpg',
+            ],
                 ]
         );
 

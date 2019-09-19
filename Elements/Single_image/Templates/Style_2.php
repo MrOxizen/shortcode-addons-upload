@@ -80,21 +80,23 @@ class Style_2 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $deg = $jquery = $css = '';
-        if ($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left') {
-            $deg = 'transform: rotate(-45deg); left : ' . $style['sa_s_image_ribbon_left'] . 'px; ';
-        } else {
-            $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
+        if (array_key_exists('sa_s_image_ribbon', $style) && $style['sa_s_image_ribbon'] != '0' && $style['sa_s_image_ribbon_pos'] != '') {
+            if ($style['sa_s_image_ribbon_pos'] == 'sa_info_image_img_alignment_left') {
+                $deg = 'transform: rotate(-45deg); left : ' . $style['sa_s_image_ribbon_left'] . 'px; ';
+            } else {
+                $deg = 'transform: rotate(45deg);right : ' . $style['sa_s_image_ribbon_right'] . 'px; ';
+            }
         }
         $ribbon = '';
-        if (array_key_exists('sa_s_image_ribbon', $style)) {
+        if (array_key_exists('sa_s_image_ribbon', $style) && $style['sa_s_image_ribbon'] != '0') {
             $ribbon .= '<div class="oxi-addons-single-image-ribbon" style="' . $deg . '">
                             <div class="oxi-addons-single-image-ribbon-position">
                                 <div class="oxi-addons-single-image-ribbon-content">' . $this->text_render($style['sa_s_image_ribbon_text']) . '</div>
                             </div>
                         </div>';
         }
-        if($this->media_render('sa_s_image_img', $style) != ''){
-        echo '  <div class="oxi-addons-single-image-container"  id="' . $style['sa_s_image_ID'] . '">
+        if ($this->media_render('sa_s_image_img', $style) != '') {
+            echo '  <div class="oxi-addons-single-image-container"  id="' . $style['sa_s_image_ID'] . '">
                     <div class="oxi-addons-single-image-row">
                         <div class="oxi-addons-single-image">
                             <img src="' . $this->media_render('sa_s_image_img', $style) . '">
@@ -105,7 +107,7 @@ class Style_2 extends Templates {
                         ' . $ribbon . '
                     </div>
                 </div>';
-        }else{
+        } else {
             echo '<div style="color : red;">Please Upload an Image !</div>';
         }
     }

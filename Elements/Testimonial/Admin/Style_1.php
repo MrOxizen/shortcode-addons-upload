@@ -660,7 +660,7 @@ class Style_1 extends AdminStyle {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
             'title' => __('Add New Testimonial', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Testimonial Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);
     }
@@ -675,7 +675,10 @@ class Style_1 extends AdminStyle {
                 'sa_testi_profile_picture', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
             'type' => Controls::MEDIA,
-            'default' => '',
+            'default' => [
+                'type' => 'media-library',
+                'link' => '#asdas',
+            ]
                 ]
         );
         $this->add_control(

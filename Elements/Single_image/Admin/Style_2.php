@@ -44,6 +44,10 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_s_image_img', $this->style, [
             'type' => Controls::MEDIA,
+                     'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/architecture-black-and-white-brick-104707.jpg',
+            ],
                 ]
         );
 
@@ -776,6 +780,10 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_s_image_light_img', $this->style, [
             'type' => Controls::MEDIA,
+                           'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/architecture-black-and-white-brick-104707.jpg',
+            ],
                 ]
         );
         $this->add_control(

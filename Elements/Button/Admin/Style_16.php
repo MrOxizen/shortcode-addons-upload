@@ -594,7 +594,7 @@ class Style_16 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_btn_icon_br_radius', $this->style, [
+                'sa_btn_icon_hover_br_radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => FALSE,
             'type' => Controls::DIMENSIONS,

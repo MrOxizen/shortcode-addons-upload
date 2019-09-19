@@ -18,26 +18,26 @@ class Style_4 extends Templates {
 
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $heading = $content = $icon = '';
-            if($this->font_awesome_render($value['sa_image_boxes_icon']) != ''){
+            if(array_key_exists('sa_image_boxes_icon', $value) && $value['sa_image_boxes_icon'] != ''){
                 $icon = '<div class="oxi-addons-content-boxes-four-area-icon">
                             ' . $this->font_awesome_render($value['sa_image_boxes_icon']) . '
                         </div>';
             }
-            if($this->text_render($value['sa_image_boxes_heading']) != ''){
+            if(array_key_exists('sa_image_boxes_heading', $value) && $value['sa_image_boxes_heading'] != ''){
                 $heading = '<div class="oxi-addons-content-boxes-heading">
                                 ' . $this->text_render($value['sa_image_boxes_heading']) . '
                             </div>';
             }
-            if($this->text_render($value['sa_image_boxes_s_description']) != ''){
+            if(array_key_exists('sa_image_boxes_s_description', $value) && $value['sa_image_boxes_s_description'] != ''){
                 $content = '<div class="oxi-addons-content-boxes-content">
                                 ' . $this->text_render($value['sa_image_boxes_s_description']) . '
                             </div> ';
             }
                  echo ' <div class="oxi-addons-content-boxes-four-colum ' . $this->column_render('sa-image-boxes-four-col', $style) . '   ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
                                     <div class="oxi-addons-content-boxes-four-area">
-					<div class="oxi-addons-content-boxes-full " >
+					<div class="oxi-addons-content-boxes-full " ' . $this->animation_render('sa-image-boxes-four-animation', $style) . '>
 						<div class="oxi-addons-content-boxes-four-area-image_content">
 							<div class="oxi-addons-content-boxes-images " style="background-image: url(\'' . $this->media_render('sa_image_boxes_media', $value) . '\');">
                        
