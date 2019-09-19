@@ -48,7 +48,11 @@ and open the template in the editor.
 .oxi-addons-align-btn4 .sa-button-text{
     transition: none;
 }
-
+.oxi-addons-align-btn4 .oxi-button-btn4 .oxi-icons{
+   
+    font-size: 20px;
+    color: #ffffff;
+}
 .oxi-button-btn4:before,
 .oxi-button-btn4:after {
     content: "";
