@@ -64,7 +64,7 @@ class Style_16 extends AdminStyle {
             'type' => Controls::ICON,
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'fas fa-angle-double-right',
+            'default' => 'fas fa-fire',
             'loader' => TRUE,
             'condition' => [
                 'sa_btn_icon' => 'yes',
@@ -632,7 +632,7 @@ class Style_16 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 5,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

@@ -41,6 +41,7 @@ and open the template in the editor.
    
     font-size: 20px;
     color: #ffffff;
+     padding: 0px 0px 0px 15px;
 }
 .oxi-addons-align-btn1 .oxi-button-btn1:hover {
     background: rgba(46, 204, 113, 1);

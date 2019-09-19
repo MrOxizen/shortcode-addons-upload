@@ -45,6 +45,12 @@ and open the template in the editor.
     max-width: 220px;
     width: 100%;
 }
+.oxi-addons-align-btn7 .oxi-button-btn7 .oxi-icons{
+   
+    font-size: 20px;
+    color: #ffffff;
+     padding: 0px 0px 0px 15px;
+}
 
 .oxi-addons-align-btn7 .oxi-button-btn7:hover {
 

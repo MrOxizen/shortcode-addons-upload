@@ -129,7 +129,7 @@ and open the template in the editor.
    
     font-size: 20px;
     color: #ffffff;
-    padding: 5px;
+   padding: 0px 0px 0px 15px;
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
