@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_27 extends AdminStyle {
 
     public function register_controls() {
 
@@ -126,7 +126,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_btn_width_choose' => 'sa-width-dymanic',
@@ -151,7 +151,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1' => 'text-align:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27' => 'text-align:{{VALUE}};'
             ],
                 ]
         );
@@ -188,7 +188,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -212,7 +212,7 @@ class Style_1 extends AdminStyle {
                 'sa_btn_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => ''
             ],
                 ]
         );
@@ -231,7 +231,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1 .sa-button-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -239,67 +239,12 @@ class Style_1 extends AdminStyle {
                 'sa-btn-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => ''
             ],
                 ]
         );
 
-        $this->add_group_control(
-                'sa-btn-br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => ''
-            ],
-                ]
-        );
 
-        $this->add_responsive_control(
-                'sa-btn-br-radius', $this->style, [
-            'label' => __('Border radius', SHORTCODE_ADDOONS),
-            'separator' => FALSE,
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 50,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa-btn-tx-shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => ''
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_btn_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => ''
-            ],
-                ]
-        );
 
         $this->end_controls_tab();
 
@@ -308,9 +253,9 @@ class Style_1 extends AdminStyle {
                 'sa-btn-text-h-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
+            'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover .sa-button-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -318,27 +263,78 @@ class Style_1 extends AdminStyle {
                 'sa-btn-h-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27:hover' => ''
             ],]
         );
 
-        $this->add_group_control(
-                'sa-btn-h-br', $this->style, [
-            'type' => Controls::BORDER,
+
+
+        $this->end_controls_tab();
+
+        $this->end_controls_tabs();
+
+
+
+        $this->add_responsive_control(
+                'sa_btn_border_width', $this->style, [
+            'label' => __('Border Width', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'separator' => TRUE,
+            'default' => [
+                'unit' => 'px',
+                'size' => 5,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+            ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-1' => 'width: {{TOP}}px;',
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-2' => 'height: {{RIGHT}}px;',
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-3' => 'height: {{BOTTOM}}px;',
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-4' => 'width: {{LEFT}}px;',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa-btn-border-color', $this->style, [
+            'label' => __('Border Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#000000',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line' => 'background:{{VALUE}};'
             ],
                 ]
         );
 
+        $this->add_group_control(
+                'sa-btn-tx-shadow', $this->style, [
+            'type' => Controls::TEXTSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => ''
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_btn_box_shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
-                'sa-btn-hover-br-radius', $this->style, [
+                'sa-btn-br-radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => FALSE,
+            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 0,
             ],
             'range' => [
                 '%' => [
@@ -358,34 +354,14 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],]
-        );
-        $this->add_group_control(
-                'sa-btn-h-tx-shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_btn_h_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover' => ''
-            ],
-                ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_btn_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => 10,
@@ -408,7 +384,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -452,7 +428,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -471,7 +447,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1 .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-icons' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -484,7 +460,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27:hover .oxi-icons' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -517,7 +493,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn27 .oxi-button-btn27 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
