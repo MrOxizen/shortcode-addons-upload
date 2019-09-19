@@ -1,184 +1,230 @@
-.oxi-testimonials-testi-padding {
-    padding: 20px 10px 20px 10px
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-item-testi {
-    position: relative;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi {
-    width: 100%;
-    position: relative;
-    float: left;
-    text-align: left;
-    background: #ffffff;
-    padding: 15px 15px 15px 15px;
-    border-radius: 0px 0px 0px 0px;
-    box-shadow: 0px 7px 30px -8px rgba(227, 227, 227, 1);
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image {
-    width: 100%;
-    display: block;
-    position: relative;
-    margin: 0 auto 10px;
-    max-width: 90px;
-    vertical-align: middle
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image:after {
-    padding-bottom: 90px;
-    content: "";
-    display: block
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 100px 100px 100px 100px;
-    border-width: 4px 4px 4px 4px;
-    border-style: double;
-    border-color: #1565c0
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-info {
-    width: 100%;
-    float: left;
-    font-size: 15px;
-    color: #7a7a7a;
-    font-family: "Crete Round";
-    font-weight: 300;
-    font-style: normal;
-    line-height: 1.5;
-    text-align: center;
-    letter-spacing: 1px;
-    ;
-    line-height: 130%;
-    margin: 10px 0px 10px 0px
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-rating {
-    text-align: center;
-    padding: 0px 0px 20px 0px
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-rating i {
-    font-size: 20px;
-    color: #1565c0;
-    padding: 0 2px
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 40px;
-    position: absolute;
-    top: 100%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    left: 50%;
-    line-height: 100%;
-    color: #ffffff;
-    font-size: 16px;
-    background: rgba(21, 101, 192, 1.00);
-    font-family: "Source Sans Pro";
-    font-weight: 600;
-    font-style: normal;
-    line-height: 1;
-    text-align: center;
-    ;
-    border-radius: 50px 50px 50px 50px;
-}
-
-.oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name:hover{
-    color: #ffffff;
-    background: rgba(20, 78, 153, 1)
-}
-
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-testimonials-testi-padding .oxi-testimonials-testi-padding {
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-item-testi {
-        max-width: 600px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi {
-        padding: 15px 15px 15px 15px;
-        border-radius: 0px 0px 0px 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image {
-        width: 90px;
-        margin: 0 auto 10px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image:after {
-        padding-bottom: 90px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image img {
-        border-radius: 100px 100px 100px 100px;
-        border-width: 4px 4px 4px 4px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-info {
-        font-size: 15px;
-        margin: 10px 0px 10px 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-rating {
-        padding: 0px 0px 20px 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-rating i {
-        font-size: 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name {
-        font-size: 16px;
-        border-radius: 50px 50px 50px 50px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-testimonials-testi-padding .oxi-testimonials-testi-padding {
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-item-testi {
-        max-width: 600px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi {
-        padding: 15px 15px 15px 15px;
-        border-radius: 0px 0px 0px 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image {
-        width: 90px;
-        margin: 0 auto 10px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image:after {
-        padding-bottom: 90px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-image img {
-        border-radius: 100px 100px 100px 100px;
-        border-width: 4px 4px 4px 4px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-info {
-        font-size: 15px;
-        margin: 10px 0px 10px 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-rating {
-        padding: 10px 0px 20px 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-rating i {
-        font-size: 0px
-    }
-    .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name {
-        font-size: 16px;
-        border-radius: 50px 50px 50px 50px
-    }
-}
+.oxi-testimonials-testinew-padding {
+     padding: 0px 0px 20px 0px;
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-item-testinew {
+     max-width: 500px;
+     width: 100%;
+     margin: 0 auto;
+     display: flex
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew {
+     width: 100%;
+     position: relative;
+     float: left;
+     text-align: left;
+     border-width: 0px 0px 0px 0px;
+     border-style: solid;
+     border-color: #bd1cd9;
+     background: #fafafa;
+     padding: 10px 10px 10px 10px;
+     border-radius: 5px 5px 5px 5px;
+     box-shadow: 0px 8px 40px -15px rgba(140, 140, 140, 1);
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image {
+     width: 70px;
+     position: absolute;
+     top: 100%;
+     right: 0%;
+     transform: translate(-50%, -50%);
+     vertical-align: middle
+ }
+ 
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image:after {
+     padding-bottom: 70px;
+     content: "";
+     display: block
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: block;
+     border-radius: 100px 100px 100px 100px;
+     border-width: 0px 0px 0px 0px;
+     border-style: solid;
+     border-color: #bd1cd9
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info {
+     width: 100%;
+     float: left;
+     font-size: 16px;
+     color: #878787;
+     font-family: "Crete Round";
+     font-weight: 300;
+     font-style: normal;
+     line-height: 1.5;
+     text-align: left;
+     letter-spacing: 0.8px;
+     ;
+     line-height: 130%;
+     margin: 10px 0px 10px 0px
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-right .oxi-testimonials-style-testinew-info {
+     text-align: right
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating {
+     width: 100%;
+     float: left;
+     text-align: left;
+     padding: 0px 10px 10px 0px
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-right .oxi-testimonials-style-testinew-rating {
+     text-align: right
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating i {
+     font-size: 14px;
+     color: #0091ea;
+     padding: 0 2px
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name {
+     width: 100%;
+     float: left;
+     color: #616161;
+     font-size: 26px;
+     font-family: "Ubuntu";
+     font-weight: 700;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     ;
+     padding: 0px 0px 0px 0px
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-right .oxi-testimonials-style-testinew-name {
+     text-align: right
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working {
+     width: 100%;
+     float: left;
+     color: #616161;
+     font-size: 14px;
+     font-family: "Open Sans";
+     font-weight: 400;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     ;
+     padding: 5px 0px 20px 0px
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a {
+     color: #0091ea;
+     text-decoration: none
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:hover,
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:focus,
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:active {
+     color: #78c7ff;
+     text-decoration: none
+ }
+ 
+ .oxi-testimonials-testinew-padding .oxi-testimonials-right .oxi-testimonials-style-testinew-working {
+     text-align: right
+ }
+ 
+ @media only screen and (min-width:669px) and (max-width:993px) {
+     .oxi-testimonials-testinew-padding .oxi-testimonials-testinew-padding {
+         padding: 20px 0px 20px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-item-testinew {
+         max-width: 500px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew {
+         border-width: 0px 0px 0px 0px;
+         padding: 10px 10px 10px 10px;
+         border-radius: 5px 5px 5px 5px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image {
+         width: 70px;
+         right: 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-right .oxi-testimonials-style-testinew-image {
+         left: 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image:after {
+         padding-bottom: 70px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image img {
+         border-radius: 100px 100px 100px 100px;
+         border-width: 0px 0px 0px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info {
+         font-size: 16px;
+         margin: 10px 0px 10px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating {
+         padding: 0px 10px 10px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating i {
+         font-size: 14px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name {
+         font-size: 26px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working {
+         font-size: 14px;
+         padding: 5px 0px 20px 0px
+     }
+ }
+ 
+ @media only screen and (max-width:668px) {
+     .oxi-testimonials-testinew-padding .oxi-testimonials-testinew-padding {
+         padding: 20px 0px 20px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-item-testinew {
+         max-width: 500px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew {
+         border-width: 0px 0px 0px 0px;
+         padding: 10px 10px 10px 10px;
+         border-radius: 5px 5px 5px 5px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image {
+         width: 70px;
+         right: 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-right .oxi-testimonials-style-testinew-image {
+         left: 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image:after {
+         padding-bottom: 70px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image img {
+         border-radius: 100px 100px 100px 100px;
+         border-width: 0px 0px 0px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info {
+         font-size: 16px;
+         margin: 10px 0px 10px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating {
+         padding: 0px 10px 10px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating i {
+         font-size: 14px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name {
+         font-size: 26px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working {
+         font-size: 14px;
+         padding: 5px 0px 20px 0px
+     }
+ }

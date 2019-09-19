@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
 
@@ -48,7 +48,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLUMN,
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding ' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding ' => '',
             ]
                 ]
         );
@@ -79,7 +79,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-item-testinew' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-item-testmonialnew' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -88,7 +88,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::BACKGROUND,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew' => '',
             ]
                 ]
         );
@@ -96,7 +96,7 @@ class Style_2 extends AdminStyle {
                 'sa-testimonial-body-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew' => '',
             ]
                 ]
         );
@@ -127,7 +127,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -158,7 +158,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -188,7 +188,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -196,7 +196,7 @@ class Style_2 extends AdminStyle {
                 'sa-testimonial-body-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew' => '',
             ]
                 ]
         );
@@ -241,7 +241,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating i' => 'font-size:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating i' => 'font-size:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -251,8 +251,33 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating i' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating i' => 'color: {{VALUE}};',
             ]
+                ]
+        );
+        $this->add_control(
+                'sa-testimonial-rating_alignment', $this->style, [
+            'label' => __('Alignment', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-left',
+                ],
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-center',
+                ],
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating' => 'text-align: {{VALUE}};'
+            ],
                 ]
         );
         $this->add_responsive_control(
@@ -281,7 +306,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-rating i' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating i' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -322,7 +347,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -353,7 +378,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image:after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image:after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -361,7 +386,7 @@ class Style_2 extends AdminStyle {
                 'sa-testimonial-profile-image-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image img, {{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image img, {{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew' => '',
             ]
                 ]
         );
@@ -386,7 +411,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image' => 'left: {{VALUE}}%;'
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image' => 'left: {{VALUE}}%;'
             ],
                 ]
         );
@@ -416,7 +441,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-image img' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image img' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -438,7 +463,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -447,7 +472,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name' => '',
             ]
                 ]
         );
@@ -456,7 +481,7 @@ class Style_2 extends AdminStyle {
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
+            'default' => 'center',
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -472,7 +497,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -480,7 +505,7 @@ class Style_2 extends AdminStyle {
                 'sa-testimonial-profile-name-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name' => '',
             ]
                 ]
         );
@@ -510,7 +535,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-name' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -527,7 +552,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -536,7 +561,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info' => '',
             ]
                 ]
         );
@@ -545,7 +570,7 @@ class Style_2 extends AdminStyle {
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
+            'default' => 'center',
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -561,7 +586,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -569,7 +594,7 @@ class Style_2 extends AdminStyle {
                 'sa-testimonial-profile-Information-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info' => '',
             ]
                 ]
         );
@@ -599,7 +624,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-info' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -616,7 +641,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -626,7 +651,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -636,7 +661,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:hover' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:hover' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -645,7 +670,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working' => '',
             ]
                 ]
         );
@@ -654,7 +679,7 @@ class Style_2 extends AdminStyle {
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
+            'default' => 'center',
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -670,7 +695,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -678,7 +703,7 @@ class Style_2 extends AdminStyle {
                 'sa-testimonial-profile-company-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working' => '',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working' => '',
             ]
                 ]
         );
@@ -708,7 +733,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
