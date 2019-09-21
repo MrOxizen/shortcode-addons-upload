@@ -86,7 +86,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::ICON,
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'fas fa-angle-double-right',
+            'default' => 'fas fa-arrow-alt-circle-down',
             'loader' => TRUE,
             'condition' => [
                 'sa_btn_icon' => 'yes',
@@ -573,7 +573,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 5,
+                'size' => 20,
             ],
             'range' => [
                 'px' => [

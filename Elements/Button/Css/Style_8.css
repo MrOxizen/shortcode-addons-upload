@@ -71,7 +71,7 @@ and open the template in the editor.
 .oxi-addons-align-btn8 .oxi-button-btn8 .oxi-icons {
     color: #fffafa;
     font-size: 22px;
-    padding: 0px 18px 0px 7px;
+    padding: 0px 15px 0px 0px;
     transition: none !important
 }
 .oxi-addons-align-btn8 .oxi-button-btn8:hover .oxi-icons{

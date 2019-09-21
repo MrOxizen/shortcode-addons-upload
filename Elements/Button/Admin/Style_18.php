@@ -64,7 +64,7 @@ class Style_18 extends AdminStyle {
             'type' => Controls::ICON,
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'fas fa-long-arrow-alt-up',
+            'default' => 'fas fa-fire',
             'loader' => TRUE,
             'condition' => [
                 'sa_btn_icon' => 'yes',
@@ -94,21 +94,11 @@ class Style_18 extends AdminStyle {
         );
 
 
-        $this->add_control(
-                'sa_btn_width_choose', $this->style, [
-            'label' => __('Button Width', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'loader' => TRUE,
-            'default' => 'sa-width-dymanic',
-            'label_on' => __('Dynamic', SHORTCODE_ADDOONS),
-            'label_off' => __('Auto', SHORTCODE_ADDOONS),
-            'return_value' => 'sa-width-dymanic',
-                ]
-        );
+       
 
         $this->add_responsive_control(
                 'sa_btn_width', $this->style, [
-            'label' => __('Max-Size', SHORTCODE_ADDOONS),
+            'label' => __('Button Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
@@ -588,7 +578,10 @@ class Style_18 extends AdminStyle {
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'separator' => TRUE,
-           
+           'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
             'range' => [
                 '%' => [
                     'min' => 0,

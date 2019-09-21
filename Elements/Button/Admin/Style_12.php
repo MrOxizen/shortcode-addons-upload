@@ -242,7 +242,7 @@ class Style_12 extends AdminStyle {
                 'sa-btn-text-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
+            'default' => '#308edb',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn12 .oxi-button-btn12' => 'color:{{VALUE}};'
             ],
@@ -512,7 +512,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
