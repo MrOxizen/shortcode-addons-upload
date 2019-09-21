@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -57,8 +57,9 @@ class Style_1 extends AdminStyle {
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'normal' => esc_html__('Normal View', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Hover View', SHORTCODE_ADDOONS),
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                'active' => esc_html__('Active', SHORTCODE_ADDOONS),
             ]
                 ]
         );
@@ -67,20 +68,14 @@ class Style_1 extends AdminStyle {
                 'sa_before_text_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#000000',
+            'default' => '#ff0303',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-before-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-before-text.oxi-active' => 'color:{{VALUE}};'
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_before_tx_shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-before-text' => ''
-            ],
-                ]
-        );
+
+
 
         $this->end_controls_tab();
 
@@ -97,27 +92,34 @@ class Style_1 extends AdminStyle {
         );
 
 
-
-
-
-        $this->add_group_control(
-                'sa_before_h_tx_shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_before_active_text_color', $this->style, [
+            'label' => __('Active Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#005d82',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-before-text:hover' => ''
+                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-before-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
-
-
         $this->end_controls_tab();
 
         $this->end_controls_tabs();
+        $this->add_group_control(
+                'sa_before_tx_shadow', $this->style, [
+            'type' => Controls::TEXTSHADOW,
+            'separator' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-before-text' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_before_text_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',
@@ -248,8 +250,9 @@ class Style_1 extends AdminStyle {
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'normal' => esc_html__('Normal View', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Hover View', SHORTCODE_ADDOONS),
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                'active' => esc_html__('Active', SHORTCODE_ADDOONS),
             ]
                 ]
         );
@@ -258,7 +261,7 @@ class Style_1 extends AdminStyle {
                 'sa_after_text_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#000000',
+            'default' => '#8500c2',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-CT .oxi-addons-after-text' => 'color:{{VALUE}};'
             ],
@@ -269,14 +272,8 @@ class Style_1 extends AdminStyle {
 
 
 
-        $this->add_group_control(
-                'sa_after_tx_shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-after-text' => ''
-            ],
-                ]
-        );
+
+
 
         $this->end_controls_tab();
 
@@ -295,25 +292,34 @@ class Style_1 extends AdminStyle {
 
 
 
-
-        $this->add_group_control(
-                'sa_after_h_tx_shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_after_active_text_color', $this->style, [
+            'label' => __('Active Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ff0505',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-after-text:hover' => ''
+                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-after-text.oxi-active' => 'color:{{VALUE}};'
             ],
                 ]
         );
-
-
         $this->end_controls_tab();
 
         $this->end_controls_tabs();
+        $this->add_group_control(
+                'sa_after_tx_shadow', $this->style, [
+            'type' => Controls::TEXTSHADOW,
+            'separator' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-CT .oxi-addons-after-text' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_after_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',
