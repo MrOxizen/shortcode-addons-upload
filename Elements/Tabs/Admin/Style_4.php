@@ -198,7 +198,38 @@ class Style_4 extends AdminStyle
                 'showing' => FALSE,
             ]
         );
-        
+        $this->add_control(
+            'sa_tabs_headding_body_w',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '250',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-main-tab-header' => 'width: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
         $this->add_group_control(
             'sa_tabs_headding_body_bg',
             $this->style,
@@ -259,7 +290,8 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -282,7 +314,8 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#1c1c1c',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -293,7 +326,8 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -429,7 +463,8 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

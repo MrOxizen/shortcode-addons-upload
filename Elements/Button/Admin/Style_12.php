@@ -242,7 +242,7 @@ class Style_12 extends AdminStyle {
                 'sa-btn-text-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
+            'default' => '#308edb',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn12 .oxi-button-btn12' => 'color:{{VALUE}};'
             ],
@@ -473,6 +473,15 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
+         $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_icon_color', $this->style, [
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
@@ -483,6 +492,8 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_icon_h_color', $this->style, [
             'label' => __('Icon Hover Color', SHORTCODE_ADDOONS),
@@ -493,13 +504,15 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_btn_icon_padding', $this->style, [
             'label' => __('Icon Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

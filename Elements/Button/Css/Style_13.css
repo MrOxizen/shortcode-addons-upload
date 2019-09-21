@@ -23,9 +23,9 @@ and open the template in the editor.
     margin: 0px 0px 0px 0px;
     color: #000000;
     background: rgba(0, 0, 0, 0.00);
-    border-width: 0px;
+    border-width: 2px;
     border-style: solid;
-    border-color: #000000;
+    border-color: red;
     border-radius: 50px;
     text-align: center;
     transition: none;
@@ -55,9 +55,9 @@ and open the template in the editor.
 .oxi-addons-align-btn13 .oxi-button-btn13:hover {
     color: #ffffff;
     background: rgba(0, 0, 0, 0.00);
-    border-width: 0px;
-    border-style: dotted;
-    border-color: #ff0000;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
     border-radius: 50px;
 }
 .oxi-addons-align-btn13 .oxi-button-btn13::before {

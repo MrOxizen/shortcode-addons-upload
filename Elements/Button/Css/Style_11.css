@@ -47,7 +47,12 @@ and open the template in the editor.
 .oxi-addons-align-btn11 {
     text-align: center;
 }
-
+.oxi-addons-align-btn11 .oxi-button-btn11 .oxi-icons{
+   
+    font-size: 20px;
+    color: #ffffff;
+     padding: 0px 0px 0px 15px;
+}
 .oxi-addons-align-btn11 .oxi-button-btn11:hover {
   
     color: #000000;

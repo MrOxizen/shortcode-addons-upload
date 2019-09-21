@@ -110,13 +110,13 @@ and open the template in the editor.
 
 .oxi-addons-align-btn22 .sa-left-to-right .s-a-button-text{
     position: absolute;
-    right: 10px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
 }
 .oxi-addons-align-btn22 .sa-left-to-right:hover .s-a-button-text{
-     transform: translate(-43%, -50%);
+     transform: translate(-40%, -50%);
     position: absolute;
     color: #f5f5f5
 }
@@ -139,14 +139,14 @@ and open the template in the editor.
 
 .oxi-addons-align-btn22 .sa-right-to-left .s-a-button-text{
     position: absolute;
-    left: 10px;
+    left: 30px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
    
 }
 .oxi-addons-align-btn22 .sa-right-to-left:hover .s-a-button-text{
-    transform: translate(43%, -50%);
+    transform: translate(30%, -50%);
     position: absolute;
     color: #f5f5f5
 }

@@ -38,7 +38,7 @@ and open the template in the editor.
 
     font-size: 20px;
     color: #ffffff;
-    padding: 5px;
+   padding: 0px 0px 0px 15px;
 }
 .oxi-addons-align-btn15 .oxi-button-btn15:hover {
     border: none;

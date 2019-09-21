@@ -229,7 +229,7 @@ class Style_13 extends AdminStyle {
                 'sa-btn-text-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
+            'default' => '#000000',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn13 .oxi-button-btn13' => 'color:{{VALUE}};'
             ],

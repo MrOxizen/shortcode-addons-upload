@@ -231,7 +231,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1 .sa-button-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -310,7 +310,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1:hover .sa-button-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -497,7 +497,7 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

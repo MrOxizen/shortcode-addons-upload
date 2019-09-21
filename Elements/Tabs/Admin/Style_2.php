@@ -348,7 +348,8 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#9e9e9e',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -359,7 +360,8 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -450,7 +452,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -483,7 +486,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -828,7 +832,7 @@ class Style_2 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_tabs_headding_icon_s',
+            'sa_tabs_headding_arrow_m',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),

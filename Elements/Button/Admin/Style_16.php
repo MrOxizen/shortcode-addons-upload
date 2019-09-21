@@ -64,7 +64,7 @@ class Style_16 extends AdminStyle {
             'type' => Controls::ICON,
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'fas fa-angle-double-right',
+            'default' => 'fas fa-fire',
             'loader' => TRUE,
             'condition' => [
                 'sa_btn_icon' => 'yes',
@@ -594,7 +594,7 @@ class Style_16 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_btn_icon_br_radius', $this->style, [
+                'sa_btn_icon_hover_br_radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => FALSE,
             'type' => Controls::DIMENSIONS,
@@ -632,7 +632,7 @@ class Style_16 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 5,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

@@ -18,36 +18,44 @@ class Style_3 extends Templates {
 
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
-            $value = json_decode($v['rawdata'], true);
-            $heading = $content = $link = '';
-            if ($value['sa_image_boxes_heading'] != '') {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            $heading = $content = $links = '';
+            if (array_key_exists('sa_image_boxes_heading', $value) && $value['sa_image_boxes_heading'] != '') {
                 $heading = '<div class="oxi-addons-image-content-heading">
                                   ' . $this->text_render($value['sa_image_boxes_heading']) . '
                             </div>';
             }
-            if ($value['sa_image_boxes_s_description'] != '') {
+            if (array_key_exists('sa_image_boxes_s_description', $value) &&  $value['sa_image_boxes_s_description'] != '') {
                 $content = '<div class="oxi-addons-image-content-body">
                                   ' . $this->text_render($value['sa_image_boxes_s_description']) . '
                             </div> ';
             }
-            if ($value['sa_image_boxes_button'] != '') {
-                $link = '<div class="oxi-addons-image-content-button">
+            if (array_key_exists('sa_image_boxes_button', $value) && $value['sa_image_boxes_button'] != '') {
+                if (array_key_exists('sa_image_boxes_button_url-url', $value) && $value['sa_image_boxes_button_url-url'] != '') {
+                    $links = '<div class="oxi-addons-image-content-button">
                                     <a ' . $this->url_render('sa_image_boxes_button_url', $value) . ' class="oxi-addons-image-content-button-data">
                                         ' . $this->text_render($value['sa_image_boxes_button']) . '
                                     </a>
                                 </div>';
+                } else {
+                    $links = '<div class="oxi-addons-image-content-button">
+                                    <div class="oxi-addons-image-content-button-data">
+                                        ' . $this->text_render($value['sa_image_boxes_button']) . '
+                                    </div>
+                                </div>';
+                }
             }
 
 
             echo '<div class="oxi-addons-image-box-main-area ' . $this->column_render('sa-image-boxes-col', $style) . ' ">
                     <div class="oxi-image-boxes-area-container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
                         <div class="oxi-image-boxes-row">
-                            <div class="oxi-addons-image">
-                                <div class="oxi-addons-image-image "  style="background-image: url(\'' . $this->media_render('sa_image_boxes_media', $value) . '\');">
+                            <div class="oxi-addons-image" ' . $this->animation_render('sa-image-boxes-animation', $style) . '>
+                                <div class="oxi-addons-image-image "  style="background-image: url(\'' . $this->media_render('sa_image_boxes_media', $value) . '\');" >
                                     <div class="oxi-addons-image-content">
                                         ' . $heading . '
                                         ' . $content . '
-                                        ' . $link . '
+                                        ' . $links . '
                                     </div>
                                 </div>
                             </div>
