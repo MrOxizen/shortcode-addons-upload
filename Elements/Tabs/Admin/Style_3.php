@@ -264,7 +264,8 @@ class Style_3 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -287,7 +288,8 @@ class Style_3 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -297,7 +299,8 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -307,7 +310,8 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -317,7 +321,8 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -364,7 +369,8 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header:hover' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header:hover' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two:hover' => '',
                 ],
             ]
         );
@@ -411,7 +417,8 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header.sa-active' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header.sa-active' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two.sa-active' => '',
                 ],
             ]
         );
@@ -446,7 +453,8 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -479,7 +487,8 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -511,7 +520,8 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-3 .sa-addons-header-two' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

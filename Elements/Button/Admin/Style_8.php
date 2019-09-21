@@ -51,6 +51,7 @@ class Style_8 extends AdminStyle {
             'label' => __('Icon Position', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
+            'default' => 'yes',
             'label_on' => __('Left', SHORTCODE_ADDOONS),
             'label_off' => __('Right', SHORTCODE_ADDOONS),
             'return_value' => 'yes',
@@ -64,7 +65,7 @@ class Style_8 extends AdminStyle {
             'type' => Controls::ICON,
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'fas fa-angle-double-right',
+            'default' => 'fas fa-bus-alt',
             'loader' => TRUE,
             'condition' => [
                 'sa_btn_icon' => 'yes',
@@ -460,24 +461,6 @@ class Style_8 extends AdminStyle {
                 ]
         );
 
-        $this->add_control(
-                'sa_btn_icon_distance', $this->style, [
-            'label' => __('Icon Distance', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'loader' => TRUE,
-            'default' => [
-                'unit' => 'px',
-                'size' => 15,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-            ],
-                ]
-        );
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
@@ -511,6 +494,37 @@ class Style_8 extends AdminStyle {
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
+        $this->add_responsive_control(
+                'sa_btn_icon_padding', $this->style, [
+            'label' => __('Icon Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'separator' => TRUE,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn8 .oxi-button-btn8 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
         $this->end_controls_section();
 
 
