@@ -21,15 +21,11 @@ class Style_10 extends Templates
     public function default_render($style, $child, $admin)
     {
         $jquery = $linkopening = '';
-
-
-
-        echo '<div class="sa-addons-tabs-main-wrapper-style-10 ' . $this->array_render('sa_tabs_headding_line', $style) . '">
+        echo '<div class="sa-addons-tabs-main-wrapper-style-10 ' . $this->array_render('sa_tabs_headding_line', $style) . '" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                 <div class="sa-addons-tabs-main-wrapper">
                 <div class="sa-addons-main-tab-header">';
         foreach ($child as $key => $header) {
             $value_header =  $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
-            $icon = '';
             if (array_key_exists('sa_tabs_url_open', $value_header) && $value_header['sa_tabs_url_open'] != '0') :
 
                 if ($value_header['sa_tabs_url-target'] != 'yes') :
@@ -39,19 +35,10 @@ class Style_10 extends Templates
                     $jquery .= 'jQuery(".sa-header-' . $header['id'] . '").click(function() {window.open("' . $value_header['sa_tabs_url-url'] . '" ' . $linkopening . ');});';
                 }
             endif;
-            if (array_key_exists('sa_tabs_tab_icon_on_off', $value_header) && $value_header['sa_tabs_tab_icon_on_off'] != '0') :
-                $icon .= '<div class="sa_tabs_icon">
-                            ' . $this->font_awesome_render($value_header['sa_tabs_tab_icon']) . '
-                            </div>';
-                if ($style['sa_tabs_headding_icon_style'] == 'inline-block') :
-                    $icon_text = ($style['sa_tabs_headding_icon_posi'] == 'left' ? '' . $icon . ' ' . $this->text_render($value_header['sa_tabs_h_text']) . '' : '' . $this->text_render($value_header['sa_tabs_h_text']) . '' . $icon . '');
-                else :
-                    $icon_text = ($style['sa_tabs_headding_icon_posi_block'] == 'top' ? '' . $icon . ' ' . $this->text_render($value_header['sa_tabs_h_text']) . '' : '' . $this->text_render($value_header['sa_tabs_h_text']) . '' . $icon . '');
-                endif;
-            else :
-                $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_header) ? $value_header['sa_tabs_h_text'] : '');
-            endif;
-            echo '<div class="sa-addons-header ' . $style['sa_tabs_headding_icon_style'] . ' sa-header-' . $header['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $header['id'] . '">
+
+            $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_header) ? $value_header['sa_tabs_h_text'] : '');
+
+            echo '<div class="sa-addons-header sa-header-' . $header['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $header['id'] . '">
                     <span class="sa-addons-badge">' . ($key + 1) . ' </span>
                     ' . $icon_text . '
                     <span class="sa-addons-span-arrow"></span>
@@ -70,18 +57,9 @@ class Style_10 extends Templates
                     $jquery .= 'jQuery(".sa-header-' . $body['id'] . '").click(function() {window.open("' . $value_body['sa_tabs_url-url'] . '" ' . $linkopening . ');});';
                 }
             endif;
-            if (array_key_exists('sa_tabs_tab_icon_on_off', $value_body) && $value_body['sa_tabs_tab_icon_on_off'] != '0') :
-                $icon .= '<div class="sa_tabs_icon">
-                            ' . $this->font_awesome_render($value_body['sa_tabs_tab_icon']) . '
-                            </div>';
-                if ($style['sa_tabs_headding_icon_style'] == 'inline-block') :
-                    $icon_text = ($style['sa_tabs_headding_icon_posi'] == 'left' ? '' . $icon . ' ' . $this->text_render($value_body['sa_tabs_h_text']) . '' : '' . $this->text_render($value_body['sa_tabs_h_text']) . '' . $icon . '');
-                else :
-                    $icon_text = ($style['sa_tabs_headding_icon_posi_block'] == 'top' ? '' . $icon . ' ' . $this->text_render($value_body['sa_tabs_h_text']) . '' : '' . $this->text_render($value_body['sa_tabs_h_text']) . '' . $icon . '');
-                endif;
-            else :
-                $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_body) ? $value_body['sa_tabs_h_text'] : '');
-            endif;
+
+            $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_body) ? $value_body['sa_tabs_h_text'] : '');
+
 
             echo '<div class="sa-addons-header-two sa-header-' . $body['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $body['id'] . '">
                     <span class="sa-addons-badge">' . ($key + 1) . ' </span>
@@ -144,7 +122,7 @@ class Style_10 extends Templates
                 var activeTab = jQuery(this).attr("ref");
                 jQuery(activeTab).' . $animationIn . '("slow");
                 var fullwidth = jQuery("html, body").width();';
-                if (array_key_exists('sa_tabs_tab_fix_header', $styledata) && $styledata['sa_tabs_tab_fix_header'] != '0') {
+        if (array_key_exists('sa_tabs_tab_fix_header', $styledata) && $styledata['sa_tabs_tab_fix_header'] != '0') {
             $jquery .= '    if(fullwidth <= 668){
                             jQuery("html, body").animate({
                                 scrollTop: jQuery(".sa-addons-tabs-main-wrapper-style-10").offset().top - ' . $styledata['sa_tabs_tab_fix_h_offset'] . '
@@ -167,52 +145,52 @@ class Style_10 extends Templates
         $styledata = explode('|', $stylefiles[0]);
 
         $css = '';
-            $jquery = $linkopening = '';
-            if ($styledata[9] != 'new-tab') {
-                $linkopening = ", '_self'";
-            }
-            echo '<div class="oxi-addons-container">
+        $jquery = $linkopening = '';
+        if ($styledata[9] != 'new-tab') {
+            $linkopening = ", '_self'";
+        }
+        echo '<div class="oxi-addons-container">
                 <div class="oxi-addons-row">
                     <div class="oxi-addons-main-wrapper-' . $oxiid . ' ">
                         <div class="oxi-addons-wrapper">
                             <div class="oxi-addons-main-tab-header">';
-            foreach ($listdata as $key => $header) {
-                $value_header = explode('||#||', $header['files']);
-                if (!empty($value_header[3])) {
-                    $jquery .= 'jQuery(".oxi-header-' . $header['id'] . '").click(function() {window.open("' . $value_header[3] . '" ' . $linkopening . ');});';
-                }
-                echo '<div class="oxi-addons-header oxi-header-' . $header['id'] . ' " ref="#oxi-tab-' . $oxiid . '-id-' . $header['id'] . '"><span class="oxi-addons-badge">' . ($key + 1) . ' </span> ' . $value_header[1] . ' <span class="oxi-addons-span-arrow"></span></div>';
+        foreach ($listdata as $key => $header) {
+            $value_header = explode('||#||', $header['files']);
+            if (!empty($value_header[3])) {
+                $jquery .= 'jQuery(".oxi-header-' . $header['id'] . '").click(function() {window.open("' . $value_header[3] . '" ' . $linkopening . ');});';
             }
-            echo '</div>
+            echo '<div class="oxi-addons-header oxi-header-' . $header['id'] . ' " ref="#oxi-tab-' . $oxiid . '-id-' . $header['id'] . '"><span class="oxi-addons-badge">' . ($key + 1) . ' </span> ' . $value_header[1] . ' <span class="oxi-addons-span-arrow"></span></div>';
+        }
+        echo '</div>
         <div class="oxi-addons-main-tab-body ">';
-            foreach ($listdata as $body) {
-                $value_body = explode('||#||', $body['files']);
-                if (!empty($value_body[3])) {
-                    $jquery .= 'jQuery(".oxi-header-' . $body['id'] . '").click(function() {window.open("' . $value_body[3] . '" ' . $linkopening . ');});';
-                }
-                echo '<div class="oxi-addons-header-two oxi-header-' . $body['id'] . ' " ref="#oxi-tab-' . $oxiid . '-id-' . $body['id'] . '">  <span class="oxi-addons-badge">' . ($key + 1) . ' </span> ' . $value_body[1] . '</div>';
+        foreach ($listdata as $body) {
+            $value_body = explode('||#||', $body['files']);
+            if (!empty($value_body[3])) {
+                $jquery .= 'jQuery(".oxi-header-' . $body['id'] . '").click(function() {window.open("' . $value_body[3] . '" ' . $linkopening . ');});';
+            }
+            echo '<div class="oxi-addons-header-two oxi-header-' . $body['id'] . ' " ref="#oxi-tab-' . $oxiid . '-id-' . $body['id'] . '">  <span class="oxi-addons-badge">' . ($key + 1) . ' </span> ' . $value_body[1] . '</div>';
 
-                echo '<div class="oxi-addons-body" id="oxi-tab-' . $oxiid . '-id-' . $body['id'] . '" style="display: none;">
+            echo '<div class="oxi-addons-body" id="oxi-tab-' . $oxiid . '-id-' . $body['id'] . '" style="display: none;">
                 ' . $value_body[5] . '
                 
                 ';
 
-                echo '</div>';
-            }
-            echo '</div>
+            echo '</div>';
+        }
+        echo '</div>
                         </div>
                     </div>
                 </div>
             </div>';
-            $animationIn = $animationOut = '';
-            if ($styledata[5] == 'slide') {
-                $animationIn = 'slideDown';
-                $animationOut = 'slideUp';
-            } else {
-                $animationIn = 'fadeIn';
-                $animationOut = 'fadeOut';
-            }
-            $jquery .= ' 
+        $animationIn = $animationOut = '';
+        if ($styledata[5] == 'slide') {
+            $animationIn = 'slideDown';
+            $animationOut = 'slideUp';
+        } else {
+            $animationIn = 'fadeIn';
+            $animationOut = 'fadeOut';
+        }
+        $jquery .= ' 
                 jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header:eq(' . $styledata[3] . ')").addClass("oxi-active");
                 jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two:eq(' . $styledata[3] . ')").addClass("oxi-active");
                 jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body:eq(' . $styledata[3] . ')").' . $animationIn . '("slow");
@@ -237,18 +215,18 @@ class Style_10 extends Templates
                     var activeTab = jQuery(this).attr("ref");
                     jQuery(activeTab).' . $animationIn . '("slow");
                     var fullwidth = jQuery("html, body").width();';
-            if ($styledata[7] == 'true') {
-                $jquery .= '    if(fullwidth <= 668){
+        if ($styledata[7] == 'true') {
+            $jquery .= '    if(fullwidth <= 668){
                                 jQuery("html, body").animate({
                                     scrollTop: jQuery(".oxi-addons-main-wrapper-' . $oxiid . '").offset().top - ' . $stylefiles[2] . '
                                 }, 2000);
                             } ';
-            }
-            $jquery .= '}
+        }
+        $jquery .= '}
             });
         ';
 
-            $css .= '
+        $css .= '
             .oxi-addons-main-wrapper-' . $oxiid . '{
                 width: 100%;  
                 float: left;

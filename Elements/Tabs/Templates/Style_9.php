@@ -24,7 +24,7 @@ class Style_9 extends Templates
 
 
 
-        echo '<div class="sa-addons-tabs-main-wrapper-style-9 ' . $this->array_render('sa_tabs_headding_line', $style) . '">
+        echo '<div class="sa-addons-tabs-main-wrapper-style-9 ' . $this->array_render('sa_tabs_headding_line', $style) . '" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                 <div class="sa-addons-tabs-main-wrapper">
                 <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {
@@ -136,7 +136,7 @@ class Style_9 extends Templates
                 var activeTab = jQuery(this).attr("ref");
                 jQuery(activeTab).' . $animationIn . '("slow");
                 var fullwidth = jQuery("html, body").width();';
-                if (array_key_exists('sa_tabs_tab_fix_header', $styledata) && $styledata['sa_tabs_tab_fix_header'] != '0') {
+        if (array_key_exists('sa_tabs_tab_fix_header', $styledata) && $styledata['sa_tabs_tab_fix_header'] != '0') {
             $jquery .= '    if(fullwidth <= 668){
                             jQuery("html, body").animate({
                                 scrollTop: jQuery(".sa-addons-tabs-main-wrapper-style-9").offset().top - ' . $styledata['sa_tabs_tab_fix_h_offset'] . '

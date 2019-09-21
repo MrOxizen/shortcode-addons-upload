@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_13
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,16 +15,13 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_13 extends Templates
 {
 
     public function default_render($style, $child, $admin)
     {
         $jquery = $linkopening = '';
-
-
-
-        echo '<div class="sa-addons-tabs-main-wrapper-style-1" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
+        echo '<div class="sa-addons-tabs-main-wrapper-style-13" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                     <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {
             $value_header = $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
@@ -112,27 +109,27 @@ class Style_1 extends Templates
         }
 
         $jquery .= ' 
-            jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-header:eq(' . $styledata['sa_tabs_initial'] . ')").addClass("sa-active");
-            jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-header-two:eq(' . $styledata['sa_tabs_initial'] . ')").addClass("sa-active");
-            jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-body:eq(' . $styledata['sa_tabs_initial'] . ')").' . $animationIn . '("slow");
-            jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-header").click(function() {
+            jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-header:eq(' . $styledata['sa_tabs_initial'] . ')").addClass("sa-active");
+            jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-header-two:eq(' . $styledata['sa_tabs_initial'] . ')").addClass("sa-active");
+            jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-body:eq(' . $styledata['sa_tabs_initial'] . ')").' . $animationIn . '("slow");
+            jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-header").click(function() {
             if (jQuery(this).hasClass("sa-active")) {
                 return false
             } else {
-                jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-header").removeClass("sa-active");
+                jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-header").removeClass("sa-active");
                 jQuery(this).addClass("sa-active");
-                jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-body").' . $animationOut . '("slow");
+                jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-body").' . $animationOut . '("slow");
                 var activeTab = jQuery(this).attr("ref");
                 jQuery(activeTab).' . $animationIn . '("slow"); 
             }
         });
-        jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-header-two").click(function() {
+        jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-header-two").click(function() {
             if (jQuery(this).hasClass("sa-active")) {
                 return false
             } else {
-                jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-header-two").removeClass("sa-active");
+                jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-header-two").removeClass("sa-active");
                 jQuery(this).addClass("sa-active");
-                jQuery(".sa-addons-tabs-main-wrapper-style-1 .sa-addons-body").' . $animationOut . '("slow");
+                jQuery(".sa-addons-tabs-main-wrapper-style-13 .sa-addons-body").' . $animationOut . '("slow");
                 var activeTab = jQuery(this).attr("ref");
                 jQuery(activeTab).' . $animationIn . '("slow");
                 var fullwidth = jQuery("html, body").width();';
@@ -140,7 +137,7 @@ class Style_1 extends Templates
         if (array_key_exists('sa_tabs_tab_fix_header', $styledata) && $styledata['sa_tabs_tab_fix_header'] != '0') {
             $jquery .= 'if(fullwidth <= 668){
                             jQuery("html, body").animate({
-                                scrollTop: jQuery(".sa-addons-tabs-main-wrapper-style-1").offset().top - ' . $styledata['sa_tabs_tab_fix_h_offset'] . '
+                                scrollTop: jQuery(".sa-addons-tabs-main-wrapper-style-13").offset().top - ' . $styledata['sa_tabs_tab_fix_h_offset'] . '
                             }, 2000);
                         } ';
         }
@@ -158,41 +155,39 @@ class Style_1 extends Templates
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
-
         $css = '';
         $jquery = $linkopening = '';
         if ($styledata[9] != 'new-tab') {
             $linkopening = ", '_self'";
         }
         echo '<div class="oxi-addons-container">
-          <div class="oxi-addons-row">
-            <div class="oxi-addons-main-wrapper-' . $oxiid . ' ">
-                <div class="oxi-addons-main-tab-header">';
+              <div class="oxi-addons-row">
+                <div class="oxi-addons-main-wrapper-' . $oxiid . ' ">
+                    <div class="oxi-addons-main-tab-header">';
         foreach ($listdata as $header) {
             $value_header = explode('||#||', $header['files']);
-
             if (!empty($value_header[3])) {
                 $jquery .= 'jQuery(".oxi-header-' . $header['id'] . '").click(function() {window.open("' . $value_header[3] . '" ' . $linkopening . ');});';
             }
             echo '<div class="oxi-addons-header oxi-header-' . $header['id'] . ' " ref="#oxi-tab-' . $oxiid . '-id-' . $header['id'] . '">' . $value_header[1] . '</div>';
         }
         echo '</div>
-            <div class="oxi-addons-main-tab-body ">';
+                <div class="oxi-addons-main-tab-body ">';
         foreach ($listdata as $body) {
             $value_body = explode('||#||', $body['files']);
-
             if (!empty($value_body[3])) {
                 $jquery .= 'jQuery(".oxi-header-' . $body['id'] . '").click(function() {window.open("' . $value_body[3] . '" ' . $linkopening . ');});';
             }
             echo '<div class="oxi-addons-header-two oxi-header-' . $body['id'] . ' " ref="#oxi-tab-' . $oxiid . '-id-' . $body['id'] . '">' . $value_body[1] . '</div>';
 
-            echo '<div class="oxi-addons-body" id="oxi-tab-' . $oxiid . '-id-' . $body['id'] . '" style="display: none;">' . $value_body[5] . '';
+            echo '<div class="oxi-addons-body " id="oxi-tab-' . $oxiid . '-id-' . $body['id'] . '" style="display: none;">' . $value_body[5] . '';
+
             echo '</div>';
         }
         echo '</div>
+                </div>
             </div>
-        </div>
-    </div>';
+        </div>';
         $animationIn = $animationOut = '';
         if ($styledata[5] == 'slide') {
             $animationIn = 'slideDown';
@@ -202,53 +197,53 @@ class Style_1 extends Templates
             $animationOut = 'fadeOut';
         }
         $jquery .= ' 
-        jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header:eq(' . $styledata[3] . ')").addClass("oxi-active");
-        jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two:eq(' . $styledata[3] . ')").addClass("oxi-active");
-        jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body:eq(' . $styledata[3] . ')").' . $animationIn . '("slow");
-        jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header").click(function() {
-        if (jQuery(this).hasClass("oxi-active")) {
-            return false
-        } else {
-            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header").removeClass("oxi-active");
-            jQuery(this).addClass("oxi-active");
-            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body").' . $animationOut . '("slow");
-            var activeTab = jQuery(this).attr("ref");
-            jQuery(activeTab).' . $animationIn . '("slow"); 
-        }
-    });
-        jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two").click(function() {
-        if (jQuery(this).hasClass("oxi-active")) {
-            return false
-        } else {
-            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two").removeClass("oxi-active");
-            jQuery(this).addClass("oxi-active");
-            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body").' . $animationOut . '("slow");
-            var activeTab = jQuery(this).attr("ref");
-            jQuery(activeTab).' . $animationIn . '("slow");
-            var fullwidth = jQuery("html, body").width();';
+            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header:eq(' . $styledata[3] . ')").addClass("oxi-active");
+            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two:eq(' . $styledata[3] . ')").addClass("oxi-active");
+            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body:eq(' . $styledata[3] . ')").' . $animationIn . '("slow");
+            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header").click(function() {
+            if (jQuery(this).hasClass("oxi-active")) {
+                return false
+            } else {
+                jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header").removeClass("oxi-active");
+                jQuery(this).addClass("oxi-active");
+                jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body").' . $animationOut . '("slow");
+                var activeTab = jQuery(this).attr("ref");
+                jQuery(activeTab).' . $animationIn . '("slow"); 
+            }
+        });
+            jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two").click(function() {
+            if (jQuery(this).hasClass("oxi-active")) {
+                return false
+            } else {
+                jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two").removeClass("oxi-active");
+                jQuery(this).addClass("oxi-active");
+                jQuery(".oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body").' . $animationOut . '("slow");
+                var activeTab = jQuery(this).attr("ref");
+                jQuery(activeTab).' . $animationIn . '("slow");
+                var fullwidth = jQuery("html, body").width();';
         if ($styledata[7] == 'true') {
             $jquery .= '    if(fullwidth <= 668){
-                        jQuery("html, body").animate({
-                            scrollTop: jQuery(".oxi-addons-main-wrapper-' . $oxiid . '").offset().top - ' . $stylefiles[2] . '
-                        }, 2000);
-                    } ';
+                            jQuery("html, body").animate({
+                                scrollTop: jQuery(".oxi-addons-main-wrapper-' . $oxiid . '").offset().top - ' . $stylefiles[2] . '
+                            }, 2000);
+                        } ';
         }
         $jquery .= '}
-    });
-';
+        });
+    ';
         $textalign = '';
         if ($styledata[11] == 'left') {
             $textalign = '
-            justify-content: flex-start;
-            ';
+                justify-content: flex-start;
+                ';
         } elseif ($styledata[11] == 'center') {
             $textalign = '
-            justify-content: center;
-            ';
+                justify-content: center;
+                ';
         } else {
             $textalign = '
-            justify-content: flex-end;
-        ';
+                justify-content: flex-end;
+            ';
         }
 
         $css .= '
@@ -264,7 +259,18 @@ class Style_1 extends Templates
             overflow: hidden;
             display: flex;
             align-items: center;
-            ' . $textalign . '
+            ' . $textalign . ' 
+        }
+        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two{
+            display: none; 
+        }
+        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header{
+            position: relative;
+            font-size: ' . $styledata[74] . 'px;
+            color: ' . $styledata[72] . ';
+            ' . OxiAddonsFontSettings($styledata, 78) . '; 
+            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 103) . ';
+            cursor: pointer;
             background: ' . $styledata[13] . ';
             border-style: ' . $styledata[15] . ';
             border-color: ' . $styledata[16] . ';
@@ -272,29 +278,10 @@ class Style_1 extends Templates
             border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 34) . ';
             margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 50) . ';
             ' . OxiAddonsBoxShadowSanitize($styledata, 66) . ';
-        }
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two{
-            display: none; 
-        }
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header{
-            font-size: ' . $styledata[74] . 'px;
-            color: ' . $styledata[72] . ';
-            ' . OxiAddonsFontSettings($styledata, 78) . ';
-            border-style: ' . $styledata[84] . ';
-            border-color: ' . $styledata[85] . ';
-            border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 87) . ' ;
-            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 103) . ';
-            cursor: pointer;
-        }
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header:first-child{
-            border-left-width: 0 !important;
-        }
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header:last-child{
-            border-right-width: 0 !important;
-        }
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-active{
+        } 
+        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-active {
             color: ' . $styledata[206] . ' !important;
-            background: ' . $styledata[208] . ' !important;
+            background: ' . $styledata[208] . ' !important; 
             position: relative;
             -webkit-transition: all 0.5s linear;
             -ms-transition: all 0.5s linear;
@@ -302,24 +289,7 @@ class Style_1 extends Templates
             -moz-transition: all 0.5s linear;
             transition: all 0.5s linear;
         }
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header-two:hover{
-            color: ' . $styledata[210] . ';
-            background: ' . $styledata[212] . ';
-                -webkit-transition: all 0.2s linear;
-            -ms-transition: all 0.2s linear;
-            -o-transition: all 0.2s linear;
-            -moz-transition: all 0.2s linear;
-            transition: all 0.2s linear;
-        } 
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header:hover{
-            color: ' . $styledata[210] . ';
-            background: ' . $styledata[212] . ';
-                -webkit-transition: all 0.2s linear;
-            -ms-transition: all 0.2s linear;
-            -o-transition: all 0.2s linear;
-            -moz-transition: all 0.2s linear;
-            transition: all 0.2s linear;
-        } 
+         
         .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-main-tab-body{
             width: 100%;
             float:left;
@@ -336,30 +306,26 @@ class Style_1 extends Templates
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 156) . ';
             ' . OxiAddonsBoxShadowSanitize($styledata, 172) . '; 
         } 
-
+    
     @media only screen and (min-width : 669px) and (max-width : 993px){
         .oxi-addons-main-wrapper-' . $oxiid . '{ 
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 191) . ';
-        } 
-        .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-main-tab-header{ 
-            border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
-            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 35) . ';
-            margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 51) . '; 
-        }
+        }  
         .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-header{
-            font-size: ' . $styledata[75] . 'px;
-            color: ' . $styledata[73] . '; 
-            border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 88) . ' ;
+            font-size: ' . $styledata[75] . 'px; 
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 104) . ';
             cursor: pointer;
-        }  
+              border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
+            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 35) . ';
+            margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 51) . '; 
+        }   
         .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body{
             font-size: ' . $styledata[181] . 'px; 
             border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 125) . ';
             border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 141) . ';
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 157) . '; 
         } 
-
+    
     }
     @media only screen and (max-width : 668px){
         .oxi-addons-main-wrapper-' . $oxiid . '{ 
@@ -374,23 +340,23 @@ class Style_1 extends Templates
             color: ' . $styledata[72] . ';
             ' . OxiAddonsFontSettings($styledata, 78) . '; 
             background: ' . $styledata[13] . '; 
-            border-style: ' . $styledata[15] . ';
-            border-color: ' . $styledata[16] . ';
-            border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 20) . ';
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 105) . '; 
             border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 36) . ';
             margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 52) . '; 
+            border-style: ' . $styledata[15] . ';
+            border-color: ' . $styledata[16] . ';
+            border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 20) . ';
             cursor: pointer;
             text-align: center;
-        }   
-
+        }     
         .oxi-addons-main-wrapper-' . $oxiid . ' .oxi-addons-body{
             font-size: ' . $styledata[182] . 'px; 
             border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 126) . ';
             border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 142) . ';
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 158) . '; 
         } 
-    }';
+    }
+    ';
 
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
