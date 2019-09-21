@@ -16,32 +16,61 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_2 extends Templates {
 
+    public function inline_public_css() {
+        $style = $this->style;
+        $css = '';
+        if ($style['sa_t_b_alignment'] == 'left') {
+            $css .= '.shortcode-addons-wrapper-' . $this->oxiid .' .oxi-addons-text-blocks-border { justify-content : flex-start; }';
+        } elseif ($style['sa_t_b_alignment'] == 'right') {
+            $css .= '.shortcode-addons-wrapper-' . $this->oxiid .' .oxi-addons-text-blocks-border { justify-content : flex-end; }';
+        } else {
+            $css .= '.shortcode-addons-wrapper-' . $this->oxiid .' .oxi-addons-text-blocks-border { justify-content : center; }';
+        }
+        return $css;
+    }
+
     public function default_render($style, $child, $admin) {
-       
+
         $text_1 = $text_2 = $text_3 = '';
         if ($style['sa_t_b_1st_text'] != '') {
-            $text_1 = '
-            <div class="oxi-addons-text-blocks-1st-body">' . $this->text_render($style['sa_t_b_1st_text']) . '</div>
-        ';
-        }
-        if ($style['sa_t_b_2n_text'] != '') {
-            $text_2 = '
-        <div class="oxi-addons-text-blocks-2nd-body">' . $this->text_render($style['sa_t_b_2n_text']) . '</div>
-        ';
-        }
-        if ($style['sa_t_b_3rd_text'] != '') {
-            $text_3 = '
-        <div class="oxi-addons-text-blocks-3rd-body">' . $this->text_render($style['sa_t_b_3rd_text']) . '</div>
-        ';
+            $text_1 = $this->text_render($style['sa_t_b_1st_text']);
         }
 
-  
-            echo ' <div class="oxi-addons-text-blocks" '.$this->animation_render('sa_t_b_animation', $style).'>
-                        ' . $text_1 . '
-                        ' . $text_2 . '
-                        ' . $text_3 . ' 
+        if ($style['sa_t_b_3rd_text'] != '') {
+            $text_3 = $this->text_render($style['sa_t_b_3rd_text']);
+        }
+        echo ' <div class="oxi-addons-row">
+                    <div class="oxi-addons-text-blocks-body" ' . $this->animation_render('sa_t_b_animation', $style) . '>
+                         <div class="oxi-addons-text-blocks">';
+        if ($style['sa_t_b_1st_style'] == 'headingbordercontent') {
+            echo ' <div class="oxi-addons-text-blocks-heading">' . $text_1 . '</div>
+                                        <div class="oxi-addons-text-blocks-border">
+                                            <div class="oxi-addons-text-block-border"></div>
+                                        </div>
+                                        <div class="oxi-addons-text-blocks-content">' . $text_3 . '</div>';
+        } elseif ($style['sa_t_b_1st_style'] == 'contentborderheading') {
+            echo ' <div class="oxi-addons-text-blocks-content">' . $text_3 . '</div>
+                                        <div class="oxi-addons-text-blocks-border">
+                                            <div class="oxi-addons-text-block-border"></div>
+                                        </div>
+                                        <div class="oxi-addons-text-blocks-heading">' . $text_1 . '</div>
+                                                     ';
+        } elseif ($style['sa_t_b_1st_style'] == 'headingcontentborder') {
+            echo ' <div class="oxi-addons-text-blocks-heading">' . $text_1 . '</div>
+                                            <div class="oxi-addons-text-blocks-content">' . $text_3 . '</div>
+                                            <div class="oxi-addons-text-blocks-border">
+                                                <div class="oxi-addons-text-block-border"></div>
+                                            </div>';
+        } elseif ($style['sa_t_b_1st_style'] == 'contentheadingborder') {
+            echo ' <div class="oxi-addons-text-blocks-content">' . $text_3 . '</div>
+                                        <div class="oxi-addons-text-blocks-heading">' . $text_1 . '</div>
+                                        <div class="oxi-addons-text-blocks-border">
+                                          <div class="oxi-addons-text-block-border"></div>
+                                        </div>';
+        }
+
+        echo '           </div>
                     </div>';
-     
     }
 
     public function old_render() {
@@ -50,58 +79,58 @@ class Style_2 extends Templates {
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $css = '';
-  $css = $headingdiv = $contentdiv = '';
-    if ($stylefiles[3] == '') {
-        $headingdiv = 'display:none;';
-    }
-    if ($stylefiles[5] == '') {
-        $contentdiv = 'display:none;';
-    }
-    $styledata = explode('|', $stylefiles[0]);
-    echo '<div class="oxi-addons-container" > 
+        $css = $headingdiv = $contentdiv = '';
+        if ($stylefiles[3] == '') {
+            $headingdiv = 'display:none;';
+        }
+        if ($stylefiles[5] == '') {
+            $contentdiv = 'display:none;';
+        }
+        $styledata = explode('|', $stylefiles[0]);
+        echo '<div class="oxi-addons-container" > 
                 <div class="oxi-addons-row">
                     <div class="oxi-addons-text-blocks-' . $oxiid . '-body" ' . OxiAddonsAnimation($styledata, 19) . '>
                          <div class="oxi-addons-text-blocks-' . $oxiid . '">';
-    if ($stylefiles[7] == 'headingbordercontent') {
-        echo ' <div class="oxi-addons-text-blocks-heading-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[3]) . '</div>
+        if ($stylefiles[7] == 'headingbordercontent') {
+            echo ' <div class="oxi-addons-text-blocks-heading-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[3]) . '</div>
                                 <div class="oxi-addons-text-blocks-border-' . $oxiid . '">
                                     <div class="oxi-addons-text-block-border"></div>
                                 </div>
                                 <div class="oxi-addons-text-blocks-content-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[5]) . '</div>';
-    } elseif ($stylefiles[7] == 'contentborderheading') {
-        echo ' <div class="oxi-addons-text-blocks-content-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[5]) . '</div>
+        } elseif ($stylefiles[7] == 'contentborderheading') {
+            echo ' <div class="oxi-addons-text-blocks-content-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[5]) . '</div>
                                 <div class="oxi-addons-text-blocks-border-' . $oxiid . '">
                                     <div class="oxi-addons-text-block-border"></div>
                                 </div>
                                 <div class="oxi-addons-text-blocks-heading-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[3]) . '</div>
                                  ';
-    } elseif ($stylefiles[7] == 'headingcontentborder') {
-        echo ' <div class="oxi-addons-text-blocks-heading-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[3]) . '</div>
+        } elseif ($stylefiles[7] == 'headingcontentborder') {
+            echo ' <div class="oxi-addons-text-blocks-heading-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[3]) . '</div>
                                 <div class="oxi-addons-text-blocks-content-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[5]) . '</div>
                                 <div class="oxi-addons-text-blocks-border-' . $oxiid . '">
                                     <div class="oxi-addons-text-block-border"></div>
                                 </div>';
-    } elseif ($stylefiles[7] == 'contentheadingborder') {
-        echo ' <div class="oxi-addons-text-blocks-content-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[5]) . '</div>
+        } elseif ($stylefiles[7] == 'contentheadingborder') {
+            echo ' <div class="oxi-addons-text-blocks-content-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[5]) . '</div>
                                 <div class="oxi-addons-text-blocks-heading-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[3]) . '</div>
                                 <div class="oxi-addons-text-blocks-border-' . $oxiid . '">
                                   <div class="oxi-addons-text-block-border"></div>
                                 </div>';
-    }
+        }
 
-    echo '           </div>
+        echo '           </div>
                     </div>
                 </div>
               </div>';
-    $dividertx = explode(':', $styledata[33]);
-    if ($dividertx[0] == 'left') {
-        $dividerdata = 'flex-start';
-    } elseif ($dividertx[0] == 'center') {
-        $dividerdata = 'center';
-    } else {
-        $dividerdata = 'flex-end';
-    }
-    $css .= '.oxi-addons-text-blocks-' . $oxiid . '{
+        $dividertx = explode(':', $styledata[33]);
+        if ($dividertx[0] == 'left') {
+            $dividerdata = 'flex-start';
+        } elseif ($dividertx[0] == 'center') {
+            $dividerdata = 'center';
+        } else {
+            $dividerdata = 'flex-end';
+        }
+        $css .= '.oxi-addons-text-blocks-' . $oxiid . '{
                     width:100%;
                     float:left;
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 3) . ';
