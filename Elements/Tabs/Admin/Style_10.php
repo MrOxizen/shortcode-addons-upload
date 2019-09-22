@@ -108,19 +108,6 @@ class Style_10 extends AdminStyle
             ]
         );
 
-        $this->add_control(
-            'sa_tabs_tab_icon_show',
-            $this->style,
-            [
-                'label' => __('Icon Setting Enable', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'loader' => TRUE,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'show_icon_setting',
-            ]
-        );
         $this->add_responsive_control(
             'sa_tabs_border_r',
             $this->style,
@@ -328,7 +315,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#787878',
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two' => 'color: {{VALUE}};',
@@ -357,7 +344,17 @@ class Style_10 extends AdminStyle
                 ],
             ]
         );
-
+        $this->add_group_control(
+            'sa_tabs_headding_boxshadow',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two' => '',
+                ],
+            ]
+        );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
@@ -366,7 +363,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#363636',
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header:hover' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two:hover' => 'color: {{VALUE}};',
@@ -374,7 +371,7 @@ class Style_10 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_tabs_headding_bg',
+            'sa_tabs_headding_bg_h',
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
@@ -384,7 +381,17 @@ class Style_10 extends AdminStyle
                 ],
             ]
         );
-
+        $this->add_group_control(
+            'sa_tabs_headding_boxshadow_h',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header:hover' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two:hover' => '',
+                ],
+            ]
+        );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
@@ -416,6 +423,17 @@ class Style_10 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.sa-active' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two.sa-active' => '',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_tabs_headding_boxshadow_a',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.sa-active' => '',
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two.sa-active' => '',
@@ -617,7 +635,199 @@ class Style_10 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('Heading Arrow Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_group_control(
+            'sa_tabs_headding_arrow_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-active .sa-addons-span-arrow' => '',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_tabs_headding_arrow_w',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '54',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-active .sa-addons-span-arrow' => 'width: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_tabs_headding_arrow_h',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '52',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-active .sa-addons-span-arrow' => 'height: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_tabs_headding_arrow_position',
+            $this->style,
+            [
+                'label' => __('Y Position', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '6',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => -100,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => -10,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-active .sa-addons-span-arrow' => 'top: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_tabs_headding_arrow_rotate',
+            $this->style,
+            [
+                'label' => __('Rotate', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '50',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-active .sa-addons-span-arrow' => 'transform: rotate({{SIZE}}deg); -webkit-transform: rotate({{SIZE}}deg); -o-transform: rotate({{SIZE}}deg); -moz-transform: rotate({{SIZE}}deg); -ms-transform: rotate({{SIZE}}deg);',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_tabs_headding_arrow_border_r',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                Controls::SEPARATOR => TRUE,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '14',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-active .sa-addons-span-arrow' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_section();
+
+        $this->end_section_devider();
+        $this->end_section_tabs();
+        $this->start_section_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'condition' => [
+                    'shortcode-addons-start-tabs' => 'style-settings'
+                ]
+            ]
+        );
+        $this->start_section_devider();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Badge Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
+            ]
+        );
+        $this->add_group_control(
+            'sa_tabs_badge_typo',
+            $this->style,
+            [
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa-addons-badge' => ''
+                ],
             ]
         );
         $this->start_controls_tabs(
@@ -631,15 +841,28 @@ class Style_10 extends AdminStyle
             ]
         );
         $this->start_controls_tab();
+        
         $this->add_control(
-            'sa_tabs_headding_icon_c',
+            'sa_tabs_badge_c',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa_tabs_icon .sa-icons' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa-addons-badge' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two .sa-addons-badge' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_tabs_badge_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa-addons-badge' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two .sa-addons-badge' => '',
                 ],
             ]
         );
@@ -647,47 +870,126 @@ class Style_10 extends AdminStyle
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_tabs_headding_icon_c_h',
+            'sa_tabs_badge_c_h',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header:hover .sa_tabs_icon .sa-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header:hover .sa-addons-badge' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two:hover .sa-addons-badge' => 'color: {{VALUE}};',
                 ],
             ]
         );
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_tabs_headding_icon_c_a',
+        $this->add_group_control(
+            'sa_tabs_badge_bg',
             $this->style,
             [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.sa-active .sa_tabs_icon .sa-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header:hover .sa-addons-badge' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two:hover .sa-addons-badge' => '',
                 ],
             ]
         );
 
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_tabs_badge_c_a',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#1394bf',
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.sa-active .sa-addons-badge' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two.sa-active .sa-addons-badge' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_tabs_badge_bg_a',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.sa-active .sa-addons-badge' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two.sa-active .sa-addons-badge' => '',
+                ],
+            ]
+        );
+  
         $this->end_controls_tab();
         $this->end_controls_tabs();
-        $this->end_controls_section();
-
-        $this->end_section_devider();
-        $this->end_section_tabs();
-        $this->start_section_tabs(
-            'shortcode-addons-start-tabs',
+        $this->add_control(
+            'sa_tabs_badge_h_w',
+            $this->style,
             [
-                'condition' => [
-                    'shortcode-addons-start-tabs' => 'style-settings'
-                ]
+                'label' => __('Width & Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                Controls::SEPARATOR => TRUE,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '20',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa-addons-badge' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
+                ],
             ]
         );
-
+        $this->add_responsive_control(
+            'sa_tabs_badge_border_r',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '20',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa-addons-badge' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->end_section_devider();
         $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
@@ -773,205 +1075,13 @@ class Style_10 extends AdminStyle
             ]
         );
 
-        
-        $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-                'condition' => [
-                    'sa_tabs_tab_icon_show' => 'show_icon_setting',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_tabs_headding_icon_s',
+        $this->add_group_control(
+            'sa_tabs_content_boxshadow',
             $this->style,
             [
-                'label' => __('Size', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '17',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 1000,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
+                'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa_tabs_icon .sa-icons' => 'font-size: {{SIZE}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->start_controls_tabs(
-            'shortcode-addons-start-tabs',
-            [
-                'options' => [
-                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-                    'active' => esc_html__('Active', SHORTCODE_ADDOONS),
-                ]
-            ]
-        );
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_tabs_headding_icon_c',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa_tabs_icon .sa-icons' => 'color: {{VALUE}};'
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_tabs_headding_icon_c_h',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header:hover .sa_tabs_icon .sa-icons' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_tabs_headding_icon_c_a',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.sa-active .sa_tabs_icon .sa-icons' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-        $this->add_control(
-            'sa_tabs_headding_icon_style',
-            $this->style,
-            [
-                'label' => __('Icon Separator', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT,
-                'loader' => TRUE,
-                'default' => 'inline-block',
-                'options' => [
-                    'inline-block' => __('inline-block', SHORTCODE_ADDOONS),
-                    'block' => __('Block', SHORTCODE_ADDOONS),
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa_tabs_icon' => 'display: {{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_headding_icon_posi',
-            $this->style,
-            [
-                'label' => __('Icon Position', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                Controls::SEPARATOR => TRUE,
-                'loader' => TRUE,
-                'toggle' => TRUE,
-                'default' => 'left',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-left',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-right',
-                    ],
-                ],
-                'condition' => [
-                    'sa_tabs_headding_icon_style' => 'inline-block',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_headding_icon_posi_block',
-            $this->style,
-            [
-                'label' => __('Icon Position', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                Controls::SEPARATOR => TRUE,
-                'loader' => TRUE,
-                'toggle' => TRUE,
-                'default' => 'top',
-                'options' => [
-                    'top' => [
-                        'title' => __('Top', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-up',
-                    ],
-                    'bottom' => [
-                        'title' => __('Bottom', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-down',
-                    ],
-                ],
-                'condition' => [
-                    'sa_tabs_headding_icon_style' => 'block',
-                ]
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_tabs_headding_icon_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa_tabs_icon .sa-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-main-tab-body' => '',
                 ],
             ]
         );
@@ -999,31 +1109,6 @@ class Style_10 extends AdminStyle
                 <div class="modal-body">';
 
         $this->add_control(
-            'sa_tabs_tab_icon_on_off',
-            $this->style,
-            [
-                'label' => __('Icon Show', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'loader' => TRUE,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'icon_yes',
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_tab_icon',
-            $this->style,
-            [
-                'label' => __('Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'default' => 'fas fa-apple-alt',
-                'condition' => [
-                    'sa_tabs_tab_icon_on_off' => 'icon_yes',
-                ]
-            ]
-        );
-        $this->add_control(
             'sa_tabs_h_text',
             $this->style,
             [
@@ -1039,8 +1124,8 @@ class Style_10 extends AdminStyle
             $this->style,
             [
                 'label' => __('Content', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
-                'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.',
+                'type' => Controls::WYSIWYG,
+                'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                 'placeholder' => 'Your Content Here',
             ]
         );

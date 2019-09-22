@@ -24,7 +24,7 @@ class Style_4 extends Templates
 
 
 
-        echo '<div class="sa-addons-tabs-main-wrapper-style-4 ' . $this->array_render('sa_tabs_content_line', $style) . '">
+        echo '<div class="sa-addons-tabs-main-wrapper-style-4 ' . $this->array_render('sa_tabs_content_line', $style) . '" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                 <div class="sa-addons-tabs-main-wrapper">
                 <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {

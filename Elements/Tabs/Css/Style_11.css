@@ -1,0 +1,195 @@
+.sa-addons-tabs-main-wrapper-style-11 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px
+}
+
+.sa-addons-tabs-main-wrapper-style-11 * {
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa_tabs_icon {
+    text-align: center;
+    display: inline-block;
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa_tabs_icon .oxi-icons {
+    font-size: 17px;
+    padding: 0px 0px 0px 0px;
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-header.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-header.inline-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-main-tab-header {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two {
+    display: none
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-header {
+    position: relative;
+    font-size: 18px;
+    color: #696969;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    padding: 15px 40px 15px 40px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 1.00);
+    border-style: solid;
+    border-color: #3ec4e6;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    margin: 6px 6px 6px 0px;
+    box-shadow: 0px 0px 7px 0px rgba(64, 64, 64, 0.47);
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-active {
+    position: relative;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two:hover {
+    color: #115b9c;
+    -webkit-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-header:hover {
+    color: #115b9c;
+    -webkit-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-main-tab-body {
+    width: 100%;
+    float: left
+}
+
+.sa-addons-tabs-main-wrapper-style-11 .sa-addons-body {
+    font-size: 16px;
+    color: #737373;
+    font-family: "Verdana";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    background: rgba(255, 255, 255, 1.00);
+    border-style: none;
+    border-color: #46abc2;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0px 9px 25px -8px rgba(110, 110, 110, 0.47);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa-addons-tabs-main-wrapper-style-11 {
+        padding: 10px 10px 10px 10px
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header {
+        font-size: 18px;
+        padding: 15px 40px 15px 40px;
+        cursor: pointer;
+        border-width: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+        margin: 6px 6px 6px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-active {
+        border-width: 4px 0px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-addons-body {
+        font-size: 16px;
+        border-width: 1px 1px 1px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa-addons-tabs-main-wrapper-style-11 {
+        padding: 10px 10px 10px 10px
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-addons-main-tab-header {
+        display: none
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-addons-icon .oxi-icons {
+        margin-right: 5px
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #696969;
+        font-family: "Ubuntu";
+        font-weight: 100;
+        font-style: normal;
+        background: rgba(255, 255, 255, 1.00);
+        padding: 15px 40px 15px 40px;
+        border-radius: 0px 0px 0px 0px;
+        margin: 6px 6px 6px 0px;
+        border-style: solid;
+        border-color: #3ec4e6;
+        border-width: 0px 0px 0px 0px;
+        cursor: pointer;
+        text-align: center
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-active {
+        border-style: solid;
+        border-color: #3ec4e6;
+        border-width: 0px 0px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 5px
+    }
+    .sa-addons-tabs-main-wrapper-style-11 .sa-addons-body {
+        font-size: 16px;
+        border-width: 1px 1px 1px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}
