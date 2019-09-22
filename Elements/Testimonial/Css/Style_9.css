@@ -1,0 +1,289 @@
+.oxi-addons-container .oxi-testimonials-30-padding {
+    padding: 0px 10px 0px 10px
+}
+
+.oxi-addons-container .oxi-testimonials-item-30 {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.oxi-addons-container .oxi-testimonials-style-30 {
+    width: 100%;
+    float: left;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 8px 30px -5px rgba(166, 166, 166, 0.65);
+}
+
+.oxi-addons-container .oxi-testimonials-style-30:hover {
+    box-shadow: 0px 8px 15px -5px rgba(153, 150, 150, 0.56);
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-info {
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    float: left;
+    position: relative;
+    color: #7a7a7a;
+    font-size: 16px;
+    font-family: "Crete Round";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: .8px;
+    ;
+    text-align: left;
+    border-top: 3px solid #795548;
+    border-bottom: 2px solid #795548
+}
+
+.oxi-addons-container .oxi-testimonials-style-30:hover .oxi-testimonials-style-30-info {
+    border-top: 3px solid #c25f34;
+    border-bottom: 2px solid #c25f34
+}
+
+.oxi-addons-container .oxi-addonsdata-right .oxi-testimonials-style-30-info {
+    text-align: right
+}
+
+.oxi-addons-container .oxi-addonsdata-center .oxi-testimonials-style-30-info {
+    text-align: center
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-info:after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #795548;
+    bottom: -7px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    left: 10px;
+    content: "";
+    display: block
+}
+
+.oxi-addons-container .oxi-testimonials-style-30:hover .oxi-testimonials-style-30-info:after {
+    background-color: #c25f34
+}
+
+.oxi-addons-container .oxi-addonsdata-right .oxi-testimonials-style-30-info:after {
+    text-align: right;
+    left: auto;
+    right: 10px
+}
+
+.oxi-addons-container .oxi-addonsdata-center .oxi-testimonials-style-30-info:after {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-image-parent {
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+    float: left;
+    text-align: left
+}
+
+.oxi-addons-container .oxi-addonsdata-right .oxi-testimonials-style-30-image-parent {
+    text-align: right
+}
+
+.oxi-addons-container .oxi-addonsdata-center .oxi-testimonials-style-30-image-parent {
+    text-align: center
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-image {
+    max-width: 70px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 50px 50px 50px 50px
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-image:after {
+    padding-bottom: 70px;
+    content: "";
+    display: block
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-width: 4px 4px 4px 4px;
+    border-style: solid;
+    border-color: #adadad;
+    border-radius: 50px 50px 50px 50px
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-name-body {
+    width: 100%;
+    float: left;
+    padding: 0px 4px
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-name {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #795548;
+    font-size: 20px;
+    font-family: "Ubuntu";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 15px 10px 0px 10px
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-name:hover {
+    color: #b07156
+}
+
+.oxi-addons-container .oxi-addonsdata-right .oxi-testimonials-style-30-name {
+    text-align: right
+}
+
+.oxi-addons-container .oxi-addonsdata-center .oxi-testimonials-style-30-name {
+    text-align: center
+}
+
+.oxi-addons-container .oxi-testimonials-style-30-working {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #7d7d7d;
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 0px 10px 15px 10px
+}
+
+.oxi-addons-container .oxi-addonsdata-right .oxi-testimonials-style-30-working {
+    text-align: right
+}
+
+.oxi-addons-container .oxi-addonsdata-center .oxi-testimonials-style-30-working {
+    text-align: center
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-container .oxi-testimonials-30-padding {
+        padding: 20px 10px 20px 10px
+    }
+    .oxi-addons-container .oxi-testimonials-item-30 {
+        max-width: 350px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-info {
+        padding: 10px 10px 10px 10px;
+        font-size: 16px;
+        border-top: 3px solid #795548;
+        border-bottom: 2px solid #795548
+    }
+    .oxi-addons-container .oxi-testimonials-style-30:hover .oxi-testimonials-style-30-info {
+        border-top: 3px solid #c25f34;
+        border-bottom: 2px solid #c25f34
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-info:after {
+        width: 10px;
+        height: 10px;
+        bottom: -7px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image-parent {
+        padding: 0px 4px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image {
+        max-width: 70px;
+        margin: 30px 10px 10px 10px;
+        border-radius: 50px 50px 50px 50px;
+        border-width: 4px 4px 4px 4px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image:after {
+        padding-bottom: 70px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image img {
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-name-body {
+        padding: 0px 4px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-name {
+        font-size: 20px;
+        padding: 15px 10px 0px 10px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-working {
+        font-size: 16px;
+        padding: 0px 10px 15px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-container .oxi-testimonials-30-padding {
+        padding: 20px 10px 20px 10px
+    }
+    .oxi-addons-container .oxi-testimonials-item-30 {
+        max-width: 350px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-info {
+        padding: 10px Ubuntupx 10px 20px;
+        font-size: 16px;
+        border-top: 3px solid #795548;
+        border-bottom: 2px solid #795548
+    }
+    .oxi-addons-container .oxi-testimonials-style-30:hover .oxi-testimonials-style-30-info {
+        border-top: 3px solid #c25f34;
+        border-bottom: 2px solid #c25f34
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-info:after {
+        width: 10px;
+        height: 10px;
+        bottom: -7px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image-parent {
+        padding: 0px OxiAddonsTestimonial-p-border-right px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image {
+        max-width: 70px;
+        margin: 30px 10px 10px 10px;
+        border-radius: 50px 50px 50px 50px;
+        border-width: 4px 4px 4px 4px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image:after {
+        padding-bottom: 70px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-image img {
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-name-body {
+        padding: 0px OxiAddonsTestimonial-p-border-right px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-name {
+        font-size: 20px;
+        padding: 15px 10px 0px 10px
+    }
+    .oxi-addons-container .oxi-testimonials-style-30-working {
+        font-size: 16px;
+        padding: 0px 10px 15px 10px
+    }
+}
