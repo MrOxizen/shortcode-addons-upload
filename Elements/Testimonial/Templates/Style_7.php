@@ -20,41 +20,42 @@ class Style_7 extends Templates {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $image = $info = $rating = $name = '';
-            if($this->media_render('sa_testi_profile_picture', $value) != ''){
-              $image = '<div class="oxi-testimonials-style-testi-image">                               
+            if ($this->media_render('sa_testi_profile_picture', $value) != '') {
+                $image = '<div class="oxi-testimonials-style-seven-image">                               
                                 <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
-                            </div>';  
+                            </div>';
             }
-            if(array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != ''){
-              $info = '<div class="oxi-testimonials-style-testi-info">
+            if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
+                $info = '<div class="oxi-testimonials-style-seven-info">
                                 ' . $this->text_render($value['sa_testi_profile_description']) . '
-                            </div>';  
+                            </div>';
             }
-            if(array_key_exists('sa_testi_profile_rating-size', $value) && $value['sa_testi_profile_rating-size'] != ''){
-              $rating = '<div class="oxi-testimonials-style-testi-rating">
-                                ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '  
-                            </div> ';  
-            }
-            if(array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != ''){
-              
-              if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
-                    $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-testi-name">
+            if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
+                $name = '<div  class="oxi-testimonials-style-seven-name">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                            </a>'; 
-                } else {
-                    $name = '<div  class="oxi-testimonials-style-testi-name">
-                                ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                            </div>'; 
-                }
+                            </div>';
             }
-            
-            echo ' <div class="oxi-testimonials-testi-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'" >
-                    <div class="oxi-testimonials-item-testi">
-                        <div class="oxi-testimonials-style-testi" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
-                            '.$image.'
-                            '.$info.'
-                            '.$rating.'
-                            '.$name.'
+            if (array_key_exists('sa_testi_profile_destination', $value) && $value['sa_testi_profile_destination'] || array_key_exists('sa_testi_profile_company', $value) && $value['sa_testi_profile_company'] != '') {
+                $company = '
+                 <div class="oxi-testimonials-style-seven-working">
+                    ' . $this->text_render($value['sa_testi_profile_destination']) . '  at <a ' . $this->url_render('sa_testi_profile_company_url', $value) . '">' . $this->text_render($value['sa_testi_profile_company']) . ' </a>
+                </div>';
+            }
+            if($style['sa-testimonial-profile-body_alignment'] == 'left'){
+                 $class = "sa-testimonial-profile-body-seven-left";
+            }elseif($style['sa-testimonial-profile-body_alignment'] == 'right'){
+                $class = "sa-testimonial-profile-body-seven-right";
+            }else{
+                 $class = "sa-testimonial-profile-body-seven-center";
+            }
+
+            echo ' <div class="oxi-testimonials-seven-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '" >
+                    <div class="oxi-testimonials-item-seven">
+                        <div class="oxi-testimonials-style-seven '.$class.'" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
+                            ' . $image . '
+                            ' . $info . '
+                            ' . $name . '
+                            ' . $company . '
                         </div>
                     </div>';
             if ($admin == 'admin') :
@@ -70,105 +71,61 @@ class Style_7 extends Templates {
             echo '</div>';
         }
     }
-    
-    
-    
-    public function public_rating_render($value = '') {
-            $ratefull = 'fas fa-star';
-            $ratehalf = 'fas fa-star-half-alt';
-            $rateO = 'far fa-star';
-
-            if ($value > 4.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull);
-            } elseif ($value <= 4.75 && $value > 4.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf);
-            } elseif ($value <= 4.25 && $value > 3.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 3.75 && $value > 3.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 3.25 && $value > 2.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 2.75 && $value > 2.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 2.25 && $value > 1.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 1.75 && $value > 1.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 1.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            }
-        }
-
 
     public function old_render() {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
-    $oxiid = $styledata['id'];
-    $stylefiles = explode('||#||', $styledata['css']);
-    $styledata = explode('|', $stylefiles[0]);
-    $css = '';
-    echo '<div class="oxi-addons-container"><div class="oxi-addons-row">';
-    foreach ($listdata as $value) {
-        $data = explode('||#||', $value['files']);
-        $image = $info  = $name = $company =  '';
-        if ($data[1] != '') {
-            $image = '
+        $oxiid = $styledata['id'];
+        $stylefiles = explode('||#||', $styledata['css']);
+        $styledata = explode('|', $stylefiles[0]);
+        $css = '';
+        echo '<div class="oxi-addons-container"><div class="oxi-addons-row">';
+        foreach ($listdata as $value) {
+            $data = explode('||#||', $value['files']);
+            $image = $info = $name = $company = '';
+            if ($data[1] != '') {
+                $image = '
                 <div class="oxi-testimonials-style-' . $oxiid . '-image">
                     <img src="' . OxiAddonsUrlConvert($data[1]) . '">
                 </div>
             ';
-        }
-        if ($data[7] != '') {
-            $info = '
+            }
+            if ($data[7] != '') {
+                $info = '
                   <div class="oxi-testimonials-style-' . $oxiid . '-info">
                         ' . OxiAddonsTextConvert($data[7]) . '
                     </div>    
             ';
-        } 
-        if ($data[3] != '') {
-            $name = '
+            }
+            if ($data[3] != '') {
+                $name = '
                 <div class="oxi-testimonials-style-' . $oxiid . '-name">
                         ' . OxiAddonsTextConvert($data[3]) . '
                     </div>
             ';
-        }
-        if ($data[13] != '') {
-            $company = '
+            }
+            if ($data[13] != '') {
+                $company = '
                  <div class="oxi-testimonials-style-' . $oxiid . '-working">
                     ' . OxiAddonsTextConvert($data[11]) . ' at <a href="' . $data[9] . '" target="' . $styledata[45] . '">' . OxiAddonsTextConvert($data[13]) . '</a>
                 </div>
             ';
-        }
-        echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 63) . ' >
+            }
+            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 63) . ' >
                     <div class="oxi-testimonials-item-' . $oxiid . '">
                             <div class="oxi-testimonials-style-' . $oxiid . ' ' . $styledata[206] . '">
-                                 '.$image.'
-                                 '.$info.'
-                                 '.$name.'
-                                 '.$company.'
+                                 ' . $image . '
+                                 ' . $info . '
+                                 ' . $name . '
+                                 ' . $company . '
                             </div>
                         </div>';
-        if ($user == 'admin') {
-            echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEdittestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                </form>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeletetestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                </form>
-                            </div>
-                        </div>';
+
+            echo '</div>';
         }
-        echo '</div>';
-    }
-    echo '</div></div>';
-    $css .= ' .oxi-addons-container .oxi-testimonials-' . $oxiid . '-padding{
+        echo '</div></div>';
+        $css .= ' .oxi-addons-container .oxi-testimonials-' . $oxiid . '-padding{
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 29) . '; 
             }
              .oxi-addons-container .oxi-testimonials-item-' . $oxiid . '{
@@ -243,7 +200,7 @@ class Style_7 extends Templates {
                 padding:' . OxiAddonsPaddingMarginSanitize($styledata, 130) . ';                 
             }
             .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-info::before,'
-            . '  .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-info::after{             
+                . '  .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-info::after{             
                 font-size: ' . $styledata[208] . 'px;
                 color:   ' . $styledata[212] . ';                 
             }
