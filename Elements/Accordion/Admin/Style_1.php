@@ -61,14 +61,14 @@ class Style_1 extends AdminStyle {
                     'label_off' => __('No', SHORTCODE_ADDOONS),
                     'return_value' => 'yes',
                 ],
-                'sa_accordion_tab_desc' => [
+               
+                 'sa_accordion_tab_desc' => [
                     'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
-                    'type' => Controls::TEXT,
-                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::ICON,
                 ],
                 'sa_accordion_tab_cont' => [
                     'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
-                    'type' => Controls::TEXT,
+                    'type' => Controls::COLOR,
                     'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
                 ],
             ],
