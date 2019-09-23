@@ -31,14 +31,12 @@ class Style_3 extends Templates
                     $left_button = '<div class="oxi_addons__button_left_main" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
                                         <a ' . $this->url_render('sa_banner_button_left_link', $style) . ' class="oxi_addons__button_left">
                                             ' . $this->text_render($style['sa_banner_button_left_text']) . '
-                                            ' . $this->font_awesome_render($style['sa_banner_button_left_icon']) . '
-                                        </a>
+                                          </a>
                                     </div>';
                 } else {
                     $left_button = '<div class="oxi_addons__button_left_main" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
                                         <button class="oxi_addons__button_left">
-                                            ' . $this->text_render($style['sa_banner_button_left_text']) . '
-                                            ' . $this->font_awesome_render($style['sa_banner_button_left_icon']) . '
+                                            ' . $this->text_render($style['sa_banner_button_left_text']) . ' 
                                         </button>
                                     </div>';
                 }
