@@ -50,15 +50,15 @@ class Style_1 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-
+        echo '<pre>';
+        print_r($style);
+        echo '</pre>';
         foreach ($child as $v) {
             $value = json_decode(stripcslashes($v['rawdata']), true);
-            echo '<pre>';
-            print_r($value);
-            echo '</pre>';
+
             $active = $display = '';
-            
-            if (array_key_exists('sa_el_initial_open', $value) && $value['sa_el_initial_open'] ==  'yes'):
+
+            if (array_key_exists('sa_el_initial_open', $value) && $value['sa_el_initial_open'] == 'yes'):
                 $active = 'active';
                 $display = 'display:block';
             endif;
