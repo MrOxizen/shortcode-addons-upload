@@ -37,7 +37,14 @@ class Style_2 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-
+         $this->add_group_control(
+                'sa_fi_col', $this->style, [
+            'type' => Controls::COLUMN,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_fi_width', $this->style, [
             'label' => __('Maximum Width', SHORTCODE_ADDOONS),
@@ -72,7 +79,6 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_fi_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
-            'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_row' => ''
             ],
@@ -88,7 +94,6 @@ class Style_2 extends AdminStyle {
                 'sa_fi_margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',
@@ -261,54 +266,9 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_fi_icon', $this->style, [
-            'label' => __('Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'default' => 'yes',
-            'loader' => TRUE,
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-
-        $this->add_control(
-                'sa_fi_icon_class', $this->style, [
-            'type' => Controls::ICON,
-            'label' => __('Icon Class', SHORTCODE_ADDOONS),
-            'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'fas fa-envelope',
-            'loader' => TRUE,
-            'condition' => [
-                'sa_fi_icon' => 'yes',
-            ],
-                ]
-        );
-
-        $this->add_control(
-                'sa_fi_conten_text', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('First Text', SHORTCODE_ADDOONS),
-            'placeholder' => __('First Text', SHORTCODE_ADDOONS),
-            'default' => 'info@oxilab.org',
-            'loader' => TRUE,
-                ]
-        );
-
-        $this->add_control(
-                'sa_fi_content_text2', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Second Text', SHORTCODE_ADDOONS),
-            'placeholder' => __('Second Text', SHORTCODE_ADDOONS),
-            'default' => 'Contact@oxilab.org',
-            'loader' => TRUE,
-                ]
-        );
         $this->add_group_control(
                 'sa_fi_content_br', $this->style, [
             'type' => Controls::BORDER,
-                    'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_content' => ''
             ],
@@ -318,6 +278,7 @@ class Style_2 extends AdminStyle {
                 'sa_fi_content_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
+            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => 20,
@@ -348,7 +309,7 @@ class Style_2 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Content Text Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'showing' => TRUE,
                 ]
         );
         $this->start_controls_tabs(
@@ -485,11 +446,11 @@ class Style_2 extends AdminStyle {
         $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'showing' => TRUE,
             'condition' => [
                 'sa_fi_icon' => 'yes',
             ],
@@ -566,18 +527,10 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-        $this->add_group_control(
-                'sa_fi_icon_bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => ''
-            ],
-                ]
-        );
+
         $this->add_group_control(
                 'sa_fi_icon_br', $this->style, [
             'type' => Controls::BORDER,
-                    'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => ''
             ],
@@ -587,7 +540,6 @@ class Style_2 extends AdminStyle {
         $this->add_responsive_control(
                 'sa_fi_icon_br_radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
-            'separator' => FALSE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -614,10 +566,9 @@ class Style_2 extends AdminStyle {
                 '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
-         $this->add_group_control(
+        $this->add_group_control(
                 'sa_fi_icon_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
-                    'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => ''
             ],
@@ -632,7 +583,6 @@ class Style_2 extends AdminStyle {
                 'sa_fi_icon_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-                    'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',
@@ -692,6 +642,76 @@ class Style_2 extends AdminStyle {
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
+    }
+
+    public function modal_opener() {
+        $this->add_substitute_control('', [], [
+            'type' => Controls::MODALOPENER,
+            'title' => __('Add New Footer Info', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Footer Info Form', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+        ]);
+    }
+
+    public function modal_form_data() {
+        echo '<div class="modal-header">                    
+                    <h4 class="modal-title">Footer Info</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">';
+
+        $this->add_control(
+                'sa_fi_icon', $this->style, [
+            'label' => __('Icon', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => 'yes',
+            'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+
+        $this->add_control(
+                'sa_fi_icon_class', $this->style, [
+            'type' => Controls::ICON,
+            'label' => __('Icon Class', SHORTCODE_ADDOONS),
+            'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
+            'default' => 'fas fa-envelope',
+            'loader' => TRUE,
+            'condition' => [
+                'sa_fi_icon' => 'yes',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_fi_icon_bg', $this->style, [
+            'label' => __('Icon Background Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'oparetor' => 'RGB',
+            'default' => '',
+                ]
+        );
+        $this->add_control(
+                'sa_fi_conten_text', $this->style, [
+            'type' => Controls::TEXT,
+            'label' => __('Content Text One', SHORTCODE_ADDOONS),
+            'placeholder' => __('First Text', SHORTCODE_ADDOONS),
+            'default' => 'info@oxilab.org',
+            'loader' => TRUE,
+                ]
+        );
+
+        $this->add_control(
+                'sa_fi_content_text2', $this->style, [
+            'type' => Controls::TEXT,
+            'label' => __('Content Text Tow', SHORTCODE_ADDOONS),
+            'placeholder' => __('Second Text', SHORTCODE_ADDOONS),
+            'default' => 'Contact@oxilab.org',
+            'loader' => TRUE,
+                ]
+        );
+        echo '</div>';
     }
 
 }

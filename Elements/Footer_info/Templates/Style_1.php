@@ -23,7 +23,7 @@ class Style_1 extends Templates {
 
             $icon = $text = $headersection = $phone = $email = $contentsection = '';
             if (!empty($value['sa_fi_icon_class'])) {
-                $icon = '<div class="oxi_addons_FI_1_icon">' . $this->font_awesome_render($value['sa_fi_icon_class']) . '</div>';
+                $icon = (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0' ? '<div class="oxi_addons_FI_1_icon">' . $this->font_awesome_render($value['sa_fi_icon_class']) . '</div>': '');
             }
             if (!empty($value['sa_fi_header_text'])) {
                 $text = '<div class="oxi_addons_FI_1_T">' . $this->text_render($value['sa_fi_header_text']) . '</div>';
