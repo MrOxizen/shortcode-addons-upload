@@ -41,6 +41,7 @@ class Style_7 extends Templates {
                     ' . $this->text_render($value['sa_testi_profile_destination']) . '  at <a ' . $this->url_render('sa_testi_profile_company_url', $value) . '">' . $this->text_render($value['sa_testi_profile_company']) . ' </a>
                 </div>';
             }
+            
             if($style['sa-testimonial-profile-body_alignment'] == 'left'){
                  $class = "sa-testimonial-profile-body-seven-left";
             }elseif($style['sa-testimonial-profile-body_alignment'] == 'right'){

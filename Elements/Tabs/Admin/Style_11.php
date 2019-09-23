@@ -905,10 +905,6 @@ class Style_11 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ff6373',
                 'oparetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two' => 'color: {{VALUE}};',
-                ],
             ]
         );
         $this->add_control(

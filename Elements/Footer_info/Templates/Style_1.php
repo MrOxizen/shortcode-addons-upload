@@ -17,42 +17,66 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        $icon = $text = $headersection = $phone = $email = $contentsection = '';
-        if (!empty($style['sa_fi_icon_class'])) {
-            $icon = '<div class="oxi_addons_FI_1_icon">' . $this->font_awesome_render($style['sa_fi_icon_class']) . '</div>';
-        }
-        if (!empty($style['sa_fi_header_text'])) {
-            $text = '<div class="oxi_addons_FI_1_T">' . $this->text_render($style['sa_fi_header_text']) . '</div>';
-        }
-        if ($icon != '' || $text != '') {
-            $headersection = '<div class="oxi_addons-FI_1_header_body">
+        foreach ($child as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
+
+            $icon = $text = $headersection = $phone = $email = $contentsection = '';
+            if (!empty($value['sa_fi_icon_class'])) {
+                $icon = (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0' ? '<div class="oxi_addons_FI_1_icon">' . $this->font_awesome_render($value['sa_fi_icon_class']) . '</div>' : '');
+            }
+            if (!empty($value['sa_fi_header_text'])) {
+                $text = '<div class="oxi_addons_FI_1_T">' . $this->text_render($value['sa_fi_header_text']) . '</div>';
+            }
+            if ($icon != '' || $text != '') {
+                $headersection = '<div class="oxi_addons-FI_1_header_body sa_bg_color-' . $v['id'] . '">
                                             <div class="oxi_addons_FI_1_header">
                                                 ' . $icon . '
                                                 ' . $text . '
                                             </div>
                                         </div>';
-        }
-        if (!empty($style['sa_fi_conten_text'])) {
-            $phone = '<div class="oxi_addons_FI_1_phone">' . $this->text_render($style['sa_fi_conten_text']) . '</div>';
-        }
-        if (!empty($style['sa_fi_content_text2'])) {
-            $email = '<div class="oxi_addons_FI_1_email">' . $this->text_render($style['sa_fi_content_text2']) . '</div>';
-        }
-        if ($phone != '' || $email != '') {
-            $contentsection = '<div class="oxi_addons-FI_1_footer_body">
+            }
+            if (!empty($value['sa_fi_conten_text'])) {
+                $phone = '<div class="oxi_addons_FI_1_phone">' . $this->text_render($value['sa_fi_conten_text']) . '</div>';
+            }
+            if (!empty($value['sa_fi_content_text2'])) {
+                $email = '<div class="oxi_addons_FI_1_email">' . $this->text_render($value['sa_fi_content_text2']) . '</div>';
+            }
+            if ($phone != '' || $email != '') {
+                $contentsection = '<div class="oxi_addons-FI_1_footer_body">
                                     ' . $phone . '
                                     ' . $email . '
                                 </div>';
-        }
-        echo '  <div class="oxi_addons_FI_1 ">
-                    <div class="oxi_addons_FI_1_row ' . $this->animation_render('sa_fi_animation', $style) . '">
+            }
+            echo '<div class="' . $this->column_render('sa_fi_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+            <div class="oxi_addons_FI_1 ">
+                    <div class="oxi_addons_FI_1_row " ' . $this->animation_render('sa_fi_animation', $style) . '>
                         ' . $headersection . '
                         ' . $contentsection . ' 
                     </div>
-               </div>';
+                 </div>';
+            if ($admin == 'admin') :
+                echo'<div class="oxi-addons-admin-absulote">
+                            <div class="oxi-addons-admin-absulate-edit">
+                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
+                            </div>
+                            <div class="oxi-addons-admin-absulate-delete">
+                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
+                            </div>
+                        </div>';
+            endif;
+
+            echo '</div>';
+
+            $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi_addons_FI_1 .sa_bg_color-' . $v['id'] . '{
+                                                           ' . $this->background_render('sa_fi_header_bg', $value) . '
+                                                        }';
+         
+        }
     }
 
-    public function old_render() {
+    public
+            function old_render() {
         $style = $this->dbdata;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);

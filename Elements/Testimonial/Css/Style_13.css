@@ -1,0 +1,228 @@
+.oxi-testimonials-therteen-padding{
+    padding: 0px 10px 0px 10px
+}
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-item-therteen {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen {
+    width: 100%;
+    position: relative;
+    float: left;
+    text-align: left;
+    background: #ffffff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 7px 18px -4px rgba(173, 173, 173, 0.67);
+}
+
+.oxi-testimonials-style-therteen-image-area{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image {
+    max-width: 70px;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    float: left;
+}
+
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image img {
+    width: 100%;
+    height: 70px;
+}
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-info {
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 15px;
+    color: #7a7a7a;
+    font-family: "Crete Round";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: .8px;
+    ;
+    line-height: 130%;
+    padding: 10px 10px 20px 10px
+}
+
+.oxi-testimonials-therteen-padding .oxi-addonsdata-right .oxi-testimonials-style-therteen-info {
+    text-align: right
+}
+
+.oxi-testimonials-therteen-padding .oxi-addonsdata-center .oxi-testimonials-style-therteen-info {
+    text-align: center
+}
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-name {
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 18px;
+    color: #2e2e2e;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 9px 0px 0px 0px
+}
+
+.oxi-testimonials-therteen-padding .oxi-addonsdata-right .oxi-testimonials-style-therteen-name {
+    text-align: right
+}
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working {
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 10px 10px 10px 0px
+}
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a {
+    color: #607d8b
+}
+
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a:hover,
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a:active,
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a:focus {
+    color: #80b5d1;
+    text-decoration: none
+}
+
+.sa-testimonial-profile-body-right .oxi-testimonials-style-therteen-info{
+    text-align: right;
+}
+.sa-testimonial-profile-body-right .oxi-testimonials-style-therteen-image-area{
+    justify-content: flex-end;
+}
+.sa-testimonial-profile-body-right .oxi-testimonials-style-therteen-left{
+    order: 1;
+}
+.sa-testimonial-profile-body-right .oxi-testimonials-style-therteen-right{
+    align-items: end;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.sa-testimonial-profile-body-center .oxi-testimonials-style-therteen-info{
+    text-align: center;
+}
+.sa-testimonial-profile-body-center .oxi-testimonials-style-therteen-image-area{
+    justify-content: center;
+}
+.sa-testimonial-profile-body-center .oxi-testimonials-style-therteen-right{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-testimonials-therteen-padding .oxi-testimonials-therteen-padding {
+        padding: 20px 10px 20px 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-item-therteen {
+        max-width: 450px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen {
+        padding: 10px 10px 10px 10px;
+        border-radius: 5px 5px 5px 5px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-left {
+        width: 70px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-right {
+        width: calc(100% - 70px);
+        padding-left: 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-addonsdata-right .oxi-testimonials-style-therteen-right {
+        padding-right: 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image {
+        max-width: 70px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image:after {
+        padding-bottom: 70px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image img {
+        border-radius: 50px 50px 50px 50px;
+        border-width: 0px 0px 0px 0px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-info {
+        font-size: 15px;
+        padding: 10px 10px 20px 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-name {
+        font-size: 18px;
+        padding: 9px 0px 100px 0px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working {
+        font-size: 14px;
+        padding: 10px 10px 10px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-testimonials-therteen-padding .oxi-testimonials-therteen-padding {
+        padding: 20px 10px 20px 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-item-therteen {
+        max-width: 450px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen {
+        padding: 10px 10px 10px 10px;
+        border-radius: 5px 5px 5px 5px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-left {
+        width: 70px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-right {
+        width: calc(100% - 70px);
+        padding-left: 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-addonsdata-right .oxi-testimonials-style-therteen-right {
+        padding-right: 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image {
+        max-width: 70px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image:after {
+        padding-bottom: 70px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image img {
+        border-radius: 50px 50px 50px 50px;
+        border-width: 0px 0px 0px 0px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-info {
+        font-size: 15px;
+        padding: 10px 10px 20px 10px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-name {
+        font-size: 18px;
+        padding: 9px 0px 0px 0px
+    }
+    .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working {
+        font-size: 14px;
+        padding: 10px 10px 10px 0px
+    }
+}
