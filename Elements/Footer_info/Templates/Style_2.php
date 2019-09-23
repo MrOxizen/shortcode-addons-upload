@@ -17,30 +17,50 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_2 extends Templates {
 
     public function default_render($style, $child, $admin) {
+        foreach ($child as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
 
-        $icon = $addressone = $addresstwo = $addresssection = '';
-        if (!empty($style['sa_fi_icon_class'])) {
-            $icon = '<div class="oxi_addons_FI_2_icon" ' . $this->animation_render('sa_fi_icon_animation', $style) . '>' . $this->font_awesome_render($style['sa_fi_icon_class']) . '</div>';
-        }
-        if (!empty($style['sa_fi_conten_text'])) {
-            $addressone = '<div class="oxi_addons_FI_2_C_A">' . $this->text_render($style['sa_fi_conten_text']) . '</div>';
-        }
-        if (!empty($style['sa_fi_conten_text'])) {
-            $addresstwo = '<div class="oxi_addons_FI_2_C_A2">' . $this->text_render($style['sa_fi_content_text2']) . '</div>';
-        }
-        if ($addressone != '' || $addresstwo != '') {
-            $addresssection = '<div class="oxi_addons_FI_2_content">
+            $icon = $addressone = $addresstwo = $addresssection = '';
+            if (!empty($value['sa_fi_icon_class'])) {
+                $icon = (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0' ? '<div class="oxi_addons_FI_2_icon sa_icon_bg_color_' . $v['id'] . '" ' . $this->animation_render('sa_fi_icon_animation', $style) . '>' . $this->font_awesome_render($value['sa_fi_icon_class']) . '</div>' : '');
+            }
+            if (!empty($value['sa_fi_conten_text'])) {
+                $addressone = '<div class="oxi_addons_FI_2_C_A">' . $this->text_render($value['sa_fi_conten_text']) . '</div>';
+            }
+            if (!empty($value['sa_fi_conten_text'])) {
+                $addresstwo = '<div class="oxi_addons_FI_2_C_A2">' . $this->text_render($value['sa_fi_content_text2']) . '</div>';
+            }
+            if ($addressone != '' || $addresstwo != '') {
+                $addresssection = '<div class="oxi_addons_FI_2_content">
                     ' . $addressone . '
                     ' . $addresstwo . '
                 </div>';
-        }
+            }
 
-        echo '   <div class="oxi_addons_FI_2">
-                    <div class="oxi_addons_FI_2_row" ' . $this->animation_render('sa_fi_animation', $style) . '>
-                        ' . $icon . '
-                        ' . $addresssection . '
-                    </div>
-                </div>';
+            echo '<div class="' . $this->column_render('sa_fi_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+                    <div class="oxi_addons_FI_2">
+                         <div class="oxi_addons_FI_2_row" ' . $this->animation_render('sa_fi_animation', $style) . '>
+                            ' . $icon . '
+                            ' . $addresssection . '
+                        </div>
+                    </div>';
+            if ($admin == 'admin') :
+                echo'<div class="oxi-addons-admin-absulote">
+                            <div class="oxi-addons-admin-absulate-edit">
+                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
+                            </div>
+                            <div class="oxi-addons-admin-absulate-delete">
+                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
+                            </div>
+                        </div>';
+            endif;
+
+            echo '</div>';
+            
+             $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi_addons_FI_2 .sa_icon_bg_color_' . $v['id'] . ' .oxi-icons{
+                background: ' . $value['sa_fi_icon_bg'] . ';
+                }';
+        }
     }
 
     public function old_render() {
