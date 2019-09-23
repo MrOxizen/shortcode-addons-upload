@@ -42,6 +42,41 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+        $this->add_repeater_control(
+                'sa-ac-columnds', $this->style, [
+            'label' => __('Repeater', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'fields' => [
+                'sa_accordion_tab_title' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa_accordion_tab_titlse' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::SWITCHER,
+                    'default' => 'yes',
+                    'loader' => TRUE,
+                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                    'label_off' => __('No', SHORTCODE_ADDOONS),
+                    'return_value' => 'yes',
+                ],
+                'sa_accordion_tab_desc' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa_accordion_tab_cont' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+            ],
+            'title_field' => 'sa_accordion_tab_title',
+            'condition' => ['sa-ac-icon-position' => 'left']
+                ]
+        );
+
         $this->add_group_control(
                 'sa-ac-column', $this->style, [
             'type' => Controls::URL,
@@ -86,7 +121,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-           $this->add_control(
+        $this->add_control(
                 'sa_head_heading_alignment', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'separator' => TRUE,
@@ -846,7 +881,48 @@ class Style_1 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
-
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Social Icon Settings', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
+        $this->add_repeater_control(
+                'sa-ac_initial_open', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'button' => __('Add Social Icons', SHORTCODE_ADDOONS),
+            'title_field' => 'sa-ac_initial_open_title',
+            'fields' => [
+                'sa-ac_initial_open_title' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa-ac_initial_open_titlse' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::SWITCHER,
+                    'default' => 'yes',
+                    'loader' => TRUE,
+                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                    'label_off' => __('No', SHORTCODE_ADDOONS),
+                    'return_value' => 'yes',
+                ],
+                'sa-ac_initial_open_desc' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa-ac_initial_open_cont' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+            ],
+            
+                ]
+        );
+        $this->end_controls_section();
         $this->add_control(
                 'sa_el_text', $this->style, [
             'label' => __('Title', SHORTCODE_ADDOONS),
