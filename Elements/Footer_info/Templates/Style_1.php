@@ -16,10 +16,18 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_1 extends Templates {
 
+    public function inline_public_css() {
+        $rt = '';
+        foreach ($this->child as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            $rt .= $this->background_render('sa_fi_header_bg', $value, '.' . $this->WRAPPER . ' .oxi_addons_FI_1 .sa_bg_color-' . $v['id']);
+        }
+        return $rt;
+    }
+
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-
 
             $icon = $text = $headersection = $phone = $email = $contentsection = '';
             if (!empty($value['sa_fi_icon_class'])) {
@@ -65,13 +73,7 @@ class Style_1 extends Templates {
                             </div>
                         </div>';
             endif;
-
             echo '</div>';
-
-            $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi_addons_FI_1 .sa_bg_color-' . $v['id'] . '{
-                                                           ' . $this->background_render('sa_fi_header_bg', $value) . '
-                                                        }';
-         
         }
     }
 

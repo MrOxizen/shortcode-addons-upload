@@ -1,0 +1,284 @@
+.oxi-testimonials-forteen-padding{
+    padding: 0px 0px 10px 0px
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-item-forteen {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen {
+    width: 100%;
+    float: left
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name-body-parent {
+    width: 100%;
+    float: left
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image-parent {
+    max-width: 80px;
+    width: 100%;
+    float: left;
+    text-align: left;
+    padding-bottom: 10px
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-center .oxi-testimonials-style-forteen-image-parent {
+    width: 100%;
+    max-width: 50%;
+    text-align: right
+}
+
+.oxi-testimonials-forteen-padding .oxi-addonsdata-right .oxi-testimonials-style-forteen-image-parent {
+    max-width: 80px;
+    width: 100%;
+    float: right;
+    text-align: left
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image {
+    max-width: 80px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 50px 50px 50px 50px
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image:after {
+    padding-bottom: 80px;
+    content: "";
+    display: block
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50px 50px 50px 50px
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name-body {
+    float: left;
+    width: calc(100% - 80px)
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-center .oxi-testimonials-style-forteen-name-body {
+    width: 100%;
+    max-width: 50%;
+    text-align: left
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-right .oxi-testimonials-style-forteen-name-body {
+    width: calc(100% - 80px);
+    float: left;
+    text-align: right
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name {
+    width: 100%;
+    float: left;
+    color: #2a615f;
+    font-size: 22px;
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 15px 10px 0px 10px
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name:hover {
+    color: #429624
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-working {
+    width: 100%;
+    float: left;
+    color: #7d7d7d;
+    font-size: 14px;
+    font-family: "Crete Round";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 1px;
+    ;
+    padding: 0px 10px 10px 10px
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-info {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    font-family: "Crete Round";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 1px;
+    ;
+    color: #ffffff;
+    padding: 15px 15px 15px 15px;
+    background-color: #18477b;
+    position: relative;
+    text-align: left
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-info .oxi-before {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #18477b;
+    border-right: 20px solid transparent
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-info .oxi-after {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #18477b;
+    border-left: 20px solid transparent
+}
+
+.oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image-area{
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+ }
+ .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-left{
+     width: 100%;
+ }
+
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-center .oxi-testimonials-style-forteen-info{
+     text-align: center;
+ }
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-center .oxi-testimonials-style-forteen-info .fa-quote-left,
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-center .oxi-testimonials-style-forteen-info .fa-quote-right{
+     text-align: center;
+ }
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-center .oxi-testimonials-style-forteen-image-area{
+     justify-content: center;
+ }
+ 
+ 
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-right .oxi-testimonials-style-forteen-info{
+     text-align: right;
+ }
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-right .oxi-testimonials-style-forteen-info .fa-quote-left{
+      text-align: right;
+ }
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-right .oxi-testimonials-style-forteen-info .fa-quote-right{
+     text-align: left;
+ }
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-right .oxi-testimonials-style-forteen-image-area{
+     justify-content: flex-end;
+ }
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-right .oxi-testimonials-style-forteen-left{
+     order: 1;
+ }
+ .oxi-testimonials-forteen-padding .sa-testimonial-profile-body-forteen-right .oxi-testimonials-style-forteen-right{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+ }
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-testimonials-forteen-padding .oxi-testimonials-forteen-padding {
+        padding: 0px 0px 10px 0px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-item-forteen {
+        max-width: 500px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image-parent {
+        max-width: 80px;
+        padding-bottom: 10px
+    }
+    .oxi-testimonials-forteen-padding .oxi-addonsdata-right .oxi-testimonials-style-forteen-image-parent {
+        max-width: 80px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image {
+        max-width: 80px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image:after {
+        padding-bottom: 80px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image img {
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name-body {
+        width: calc(100% - 80px)
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-right .oxi-testimonials-style-forteen-name-body {
+        width: calc(100% - 80px)
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name {
+        font-size: 22px;
+        padding: 15px 10px 0px 10px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-working {
+        font-size: 14px;
+        padding: 0px 10px 10px 10px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-info {
+        font-size: 16px;
+        padding: 15px 15px 15px 15px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-testimonials-forteen-padding .oxi-testimonials-forteen-padding {
+        padding: 0px 0px 10px 0px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-item-forteen {
+        max-width: 500px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image-parent {
+        max-width: 80px;
+        padding-bottom: 10px
+    }
+    .oxi-testimonials-forteen-padding .oxi-addonsdata-right .oxi-testimonials-style-forteen-image-parent {
+        max-width: 80px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image {
+        max-width: 80px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image:after {
+        padding-bottom: 80px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-image img {
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name-body {
+        width: calc(100% - 80px)
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-right .oxi-testimonials-style-forteen-name-body {
+        width: calc(100% - 80px)
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-name {
+        font-size: 22px;
+        padding: 15px 10px 0px 10px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-working {
+        font-size: 14px;
+        padding: 0px 10px 10px 10px
+    }
+    .oxi-testimonials-forteen-padding .oxi-testimonials-style-forteen-info {
+        font-size: 16px;
+        padding: 15px 15px 15px 15px
+    }
+}

@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_4 extends AdminStyle
+class Style_6 extends AdminStyle
 {
 
     public function register_controls()
@@ -27,7 +27,7 @@ class Style_4 extends AdminStyle
             [
                 'options' => [
                     'general-settings' => esc_html__('General Settings', SHORTCODE_ADDOONS),
-                    'button' => esc_html__('Button', SHORTCODE_ADDOONS),
+                    'button-left' => esc_html__('Button', SHORTCODE_ADDOONS), 
                 ]
             ]
         );
@@ -61,35 +61,8 @@ class Style_4 extends AdminStyle
                 'return_value' => 'yes',
             ]
         ); 
-    
-        $this->add_control(
-            'sa_banner_btn_position',
-            $this->style,
-            [
-                'label' => __('Button Postion', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center',
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-center',
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-right',
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button_main' => 'justify-content: {{VALUE}};'
-                ],
-            ]
-        );
 
+        
         $this->add_control(
             'sa_banner_main_background',
             $this->style,
@@ -105,7 +78,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6' => ''
                 ],
             ]
         );
@@ -138,127 +111,16 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Line Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
-        $this->add_control(
-            'sa_banner_line_switcher',
-            $this->style,
-            [
-                'label' => __('Line', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => 'yes',
-                'loader' => TRUE,
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-            ]
-        ); 
-        $this->add_responsive_control(
-            'sa_banner_line_width',
-            $this->style,
-            [
-                'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 4,
-                ], 
-                'condition' => [
-                    'sa_banner_line_switcher' => 'yes'
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 20,
-                        'step' => 1,
-                    ], 
-                    '%' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => 1,
-                    ], 
-                ], 
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__line::before' => 'width: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_banner_line_height',
-            $this->style,
-            [
-                'label' => __('Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
-                'default' => [
-                    'unit' => '%',
-                    'size' => 120,
-                ], 
-                'condition' => [
-                    'sa_banner_line_switcher' => 'yes'
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 250,
-                        'step' => 1,
-                    ],
-                    'px' => [
-                        'min' => 10,
-                        'max' => 700,
-                        'step' =>  1,
-                    ], 
-                ], 
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__line::before' => 'height: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_banner_line_bg_color',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#28a745',
-                'oparetor' => 'RGB',
-                'condition' => [
-                    'sa_banner_line_switcher' => 'yes'
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__line::before' => 'background-color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_line_animation',
-            $this->style,
-            [
-                'type' => Controls::ANIMATION,
-                'condition' => [
-                    'sa_banner_line_switcher' => 'yes'
-                ],
-            ]
-        );
-        $this->end_controls_section();
-       
-        $this->end_section_devider();
-
-        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Heading Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => FALSE,
             ]
         );
         $this->add_control(
@@ -267,10 +129,10 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Heading', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'MAKE YOUR  <span>BUSINESS</span>',
-                'placeholder' => 'Lorem <span>Ipsum</span>',
+                'default' => 'THE LATEST DENIM TRENDS AND THE TYPES OF JEANS YOU SHOULD KNOW ',
+                'placeholder' => 'Lorem Ipsum is simply dummy text',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__heading' => ''
                 ],
             ]
         );
@@ -301,7 +163,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__heading' => ''
                 ],
             ]
         );
@@ -313,7 +175,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#3fe3af',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__heading' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__heading' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -325,7 +187,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ff4797',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__heading span' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__heading span' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -356,7 +218,7 @@ class Style_4 extends AdminStyle
                     ],
                     'px' => [
                         'min' => 0,
-                        'max' => 500,
+                        'max' => 200,
                         'step' => 1,
                     ],
                     'em' => [
@@ -366,7 +228,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -374,58 +236,246 @@ class Style_4 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Description Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Line Settings', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
             ]
         );
         $this->add_control(
-            'sa_banner_details_text',
+            'sa_banner_line_switcher',
             $this->style,
             [
-                'label' => __('Description', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
-                'default' => 'Share your challenge with our team and we l work with you to deliver a revolutionary digital product.',
-                'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+                'label' => __('Line', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        ); 
+        $this->add_control(
+            'sa_banner_line_position',
+            $this->style,
+            [
+                'label' => __('Line Position', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center',
+                'condition' => [
+                    'sa_banner_line_switcher' => 'yes'
+                ],
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__line_main' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
-        $this->add_group_control(
-            'sa_banner_details_typo',
+        $this->add_responsive_control(
+            'sa_banner_line_width',
             $this->style,
             [
-                'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER, 
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 150,
+                ], 
+                'condition' => [
+                    'sa_banner_line_switcher' => 'yes'
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 500,
+                        'step' => 1,
+                    ], 
+                    '%' => [
+                        'min' => 0,
+                        'max' => 150,
+                        'step' => 1,
+                    ], 
+                ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__line' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_banner_line_heights',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER, 
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 4,
+                ], 
+                'condition' => [
+                    'sa_banner_line_switcher' => 'yes'
+                ],
+                'range' => [ 
+                    'px' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' =>  1,
+                    ], 
+                ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__line' => 'height: {{SIZE}}px;',
                 ],
             ]
         );
         $this->add_control(
-            'sa_banner_details_color',
+            'sa_banner_line_bg_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#28a745',
+                'oparetor' => 'RGB',
+                'condition' => [
+                    'sa_banner_line_switcher' => 'yes'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__line' => 'background-color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_banner_line_animation',
+            $this->style,
+            [
+                'type' => Controls::ANIMATION,
+                'condition' => [
+                    'sa_banner_line_switcher' => 'yes'
+                ],
+            ]
+        );
+        $this->end_controls_section(); 
+        $this->end_section_devider();
+
+        $this->start_section_devider();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_control(
+            'sa_banner_icon_position',
+            $this->style,
+            [
+                'label' => __('Icon Postion', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center', 
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__icon' => 'justify-content: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_banner_icon',
+            $this->style,
+            [
+                'label' => __('Icon', SHORTCODE_ADDOONS),
+                'type' => Controls::ICON,
+                'default' => 'fab fa-adn',
+                'placeholder' => 'example:- fab fa-adn', 
+            ]
+        );
+        $this->add_group_control(
+            'sa_banner_icon_link',
+            $this->style,
+            [
+                'label' => __('Icon Link', SHORTCODE_ADDOONS),
+                'type' => Controls::URL,
+                'loader' => TRUE, 
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_banner_icon_font_size',
+            $this->style,
+            [
+                'label' => __('Icon Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 70,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 5,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                    'rem' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_banner_icon_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__details' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__icon .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
-
-        $this->add_group_control(
-            'sa_banner_details_animation',
+        $this->add_control(
+            'sa_banner_icon_separetor',
             $this->style,
             [
-                'type' => Controls::ANIMATION, 
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => TRUE, 
             ]
         );
-
         $this->add_responsive_control(
-            'sa_banner_details_padding',
+            'sa_banner_main_icon_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -437,27 +487,33 @@ class Style_4 extends AdminStyle
                 'range' => [
                     '%' => [
                         'min' => 0,
-                        'max' => 50,
+                        'max' => 100,
                         'step' => .1,
                     ],
                     'px' => [
                         'min' => 0,
-                        'max' => 500,
+                        'max' => 700,
                         'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 10,
+                        'max' => 50,
                         'step' => .1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
-
-        $this->end_controls_section();
+        $this->add_group_control(
+            'sa_banner_icon_animation',
+            $this->style,
+            [
+                'type' => Controls::ANIMATION,
+            ]
+        );
+        $this->end_controls_section(); 
         $this->end_section_devider();
         $this->end_section_tabs();
 
@@ -466,7 +522,7 @@ class Style_4 extends AdminStyle
             'shortcode-addons-start-tabs',
             [
                 'condition' => [
-                    'shortcode-addons-start-tabs' => 'button',
+                    'shortcode-addons-start-tabs' => 'button-left',
                 ],
                 'section-condition' => [
                     'sa_banner_button_switcher' => 'yes'
@@ -484,6 +540,34 @@ class Style_4 extends AdminStyle
             ]
         );
         $this->add_control(
+            'sa_banner_btn_position',
+            $this->style,
+            [
+                'label' => __('Button Postion', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center',
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button_main' => 'justify-content: {{VALUE}};'
+                ],
+            ]
+        );
+
+        $this->add_control(
             'sa_banner_button_text',
             $this->style,
             [
@@ -492,7 +576,7 @@ class Style_4 extends AdminStyle
                 'default' => 'Get Started',
                 'placeholder' => 'Get Started',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => ''
                 ],
             ]
         );
@@ -504,7 +588,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::URL,
                 'loader' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => ''
                 ],
             ]
         );
@@ -517,7 +601,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -537,7 +621,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -549,7 +633,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -569,7 +653,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -597,7 +681,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => ' ',
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => ' ',
                 ],
             ]
         );
@@ -621,7 +705,8 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => 'color:{{VALUE}};', 
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -634,7 +719,7 @@ class Style_4 extends AdminStyle
                 'default' => '#28a745',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -644,7 +729,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => ''
                 ],
             ]
         );
@@ -656,7 +741,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -665,7 +750,7 @@ class Style_4 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -100,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -676,7 +761,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -687,7 +772,7 @@ class Style_4 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button' => ''
                 ],
             ]
         );
@@ -701,8 +786,8 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button:hover' => 'color:{{VALUE}};',
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button:hover .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button:hover .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -715,7 +800,7 @@ class Style_4 extends AdminStyle
                 'default' => 'rgba(40, 168, 76, 0.01)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button:hover' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button:hover' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -725,7 +810,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button:hover' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button:hover' => ''
                 ],
             ]
         );
@@ -737,7 +822,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -746,7 +831,7 @@ class Style_4 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -100,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -757,7 +842,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -768,7 +853,7 @@ class Style_4 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__button:hover' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_6 .oxi_addons__button:hover' => ''
                 ],
 
             ]

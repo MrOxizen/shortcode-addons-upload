@@ -29,7 +29,7 @@ class Style_4 extends Templates
             $details = '<div class="oxi_addons__details" ' . $this->animation_render('sa_banner_details_animation', $style) . '> ' . $this->text_render($style['sa_banner_details_text']) . ' </div>';
         }
         if (array_key_exists('sa_banner_line_switcher', $style) && $style['sa_banner_line_switcher'] == 'yes') {
-            $line = '<div class="oxi_addons__line" ' . $this->animation_render('sa_banner_line_animation', $style) . '></div>';
+            $line = '<div ' . $this->animation_render('sa_banner_line_animation', $style) . '><div class="oxi_addons__line" ></div></div>';
         }
         if (array_key_exists('sa_banner_button_switcher', $style) && $style['sa_banner_button_switcher'] == 'yes') {
             if (array_key_exists('sa_banner_button_text', $style) && $style['sa_banner_button_text'] != '') {
@@ -49,14 +49,14 @@ class Style_4 extends Templates
                                     </div>';
                 }
             }
-        }
-
-
+        } 
         echo '<div class="oxi_addons__banner_wrapper">
                     <div class="oxi_addons__banner_style_4 row">  
                         <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
+                        ' . $line . ' 
                         ' . $heading . ' 
                         ' . $button . ' 
+                        
                         </div>
                         <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
                             ' . $details . '
