@@ -346,7 +346,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => 15,
                 ],
                 'range' => [
                     '%' => [
@@ -355,8 +355,8 @@ class Style_4 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
-                        'max' => 200,
+                        'min' => 0,
+                        'max' => 500,
                         'step' => 1,
                     ],
                     'em' => [
@@ -432,7 +432,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => 15,
                 ],
                 'range' => [
                     '%' => [
@@ -441,8 +441,8 @@ class Style_4 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
-                        'max' => 200,
+                        'min' => 0,
+                        'max' => 500,
                         'step' => 1,
                     ],
                     'em' => [
