@@ -19,17 +19,17 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-           
+
 
             $icon = $text = $headersection = $phone = $email = $contentsection = '';
             if (!empty($value['sa_fi_icon_class'])) {
-                $icon = (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0' ? '<div class="oxi_addons_FI_1_icon">' . $this->font_awesome_render($value['sa_fi_icon_class']) . '</div>': '');
+                $icon = (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0' ? '<div class="oxi_addons_FI_1_icon">' . $this->font_awesome_render($value['sa_fi_icon_class']) . '</div>' : '');
             }
             if (!empty($value['sa_fi_header_text'])) {
                 $text = '<div class="oxi_addons_FI_1_T">' . $this->text_render($value['sa_fi_header_text']) . '</div>';
             }
             if ($icon != '' || $text != '') {
-                $headersection = '<div class="oxi_addons-FI_1_header_body sa_bg_color' . $v['id'] . '">
+                $headersection = '<div class="oxi_addons-FI_1_header_body sa_bg_color-' . $v['id'] . '">
                                             <div class="oxi_addons_FI_1_header">
                                                 ' . $icon . '
                                                 ' . $text . '
@@ -68,9 +68,10 @@ class Style_1 extends Templates {
 
             echo '</div>';
 
-            $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi_addons_FI_1 .sa_bg_color' . $v['id'] . '{
-                background: ' . $value['sa_fi_header_bg'] . ';
-                }';
+            $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi_addons_FI_1 .sa_bg_color-' . $v['id'] . '{
+                                                           ' . $this->background_render('sa_fi_header_bg', $value) . '
+                                                        }';
+         
         }
     }
 
