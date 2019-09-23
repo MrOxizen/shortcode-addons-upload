@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -37,14 +37,7 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_group_control(
-                'sa_fi_col', $this->style, [
-            'type' => Controls::COLUMN,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
-            ],
-                ]
-        );
+
         $this->add_responsive_control(
                 'sa_fi_width', $this->style, [
             'label' => __('Maximum Width', SHORTCODE_ADDOONS),
@@ -71,7 +64,76 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_row' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_row' => 'max-width:{{SIZE}}{{UNIT}};'
+            ],
+                ]
+        );
+
+        $this->add_group_control(
+                'sa_fi_box_shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'separator' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_row' => ''
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_fi_animation', $this->style, [
+            'type' => Controls::ANIMATION,
+                ]
+        );
+
+        $this->add_responsive_control(
+                'sa_fi_margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'separator' => TRUE,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+
+        $this->end_controls_section();
+
+
+        $this->end_section_devider();
+
+        $this->start_section_devider();
+
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('General Style', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
+        $this->add_group_control(
+                'sa_fi_content_bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_row' => ''
             ],
                 ]
         );
@@ -79,7 +141,7 @@ class Style_1 extends AdminStyle {
                 'sa_fi_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_row' => ''
             ],
                 ]
         );
@@ -111,124 +173,8 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
-        );
-        $this->add_group_control(
-                'sa_fi_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_row' => ''
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_fi_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-                ]
-        );
-
-        $this->add_responsive_control(
-                'sa_fi_margin', $this->style, [
-            'label' => __('Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
-
-        $this->end_controls_section();
-
-
-        $this->end_section_devider();
-
-        $this->start_section_devider();
-
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Header Section Setting', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-        $this->add_control(
-                'sa_fi_header_align', $this->style, [
-            'label' => __('Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_icon' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_T' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
-
-
-        $this->add_group_control(
-                'sa_fi_header_text_typho', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_T' => ''
-            ],
-                ]
-        );
-
-        $this->add_control(
-                'sa_fi_header_text_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#ffffff',
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_T' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
-
-
-        $this->add_group_control(
-                'sa_fi_header_tx_shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_T' => ''
-            ],
-                ]
         );
 
 
@@ -240,104 +186,16 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 40,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons-FI_1_header_body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
-            'condition' => [
-                'sa_fi_icon' => 'yes',
-            ],
-                ]
-        );
-
-
-
-
-        $this->add_responsive_control(
-                'sa_fi_icon_size', $this->style, [
-            'label' => __('Icon Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
                 'size' => 20,
             ],
             'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_icon .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
-
-        $this->add_control(
-                'sa_fi_icon_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#ffffff',
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_icon .oxi-icons' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
-
-
-
-        $this->add_responsive_control(
-                'sa_fi_icon_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
                 '%' => [
                     'min' => 0,
                     'max' => 50,
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -348,15 +206,15 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_row' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
+
+
+
+
         $this->end_controls_section();
-
-
-
-
 
 
         $this->end_section_devider();
@@ -398,17 +256,61 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_phone' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_email' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A2' => 'text-align: {{VALUE}};'
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_fi_icon', $this->style, [
+            'label' => __('Icon', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => 'yes',
+            'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+
+        $this->add_control(
+                'sa_fi_icon_class', $this->style, [
+            'type' => Controls::ICON,
+            'label' => __('Icon Class', SHORTCODE_ADDOONS),
+            'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
+            'default' => 'fas fa-envelope',
+            'loader' => TRUE,
+            'condition' => [
+                'sa_fi_icon' => 'yes',
             ],
                 ]
         );
 
+        $this->add_control(
+                'sa_fi_conten_text', $this->style, [
+            'type' => Controls::TEXT,
+            'label' => __('First Text', SHORTCODE_ADDOONS),
+            'placeholder' => __('First Text', SHORTCODE_ADDOONS),
+            'default' => 'info@oxilab.org',
+            'loader' => TRUE,
+                ]
+        );
+
+        $this->add_control(
+                'sa_fi_content_text2', $this->style, [
+            'type' => Controls::TEXT,
+            'label' => __('Second Text', SHORTCODE_ADDOONS),
+            'placeholder' => __('Second Text', SHORTCODE_ADDOONS),
+            'default' => 'Contact@oxilab.org',
+            'loader' => TRUE,
+                ]
+        );
         $this->add_group_control(
-                'sa_fi_content_bg', $this->style, [
-            'type' => Controls::BACKGROUND,
+                'sa_fi_content_br', $this->style, [
+            'type' => Controls::BORDER,
+                    'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons-FI_1_footer_body' => ''
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_content' => ''
             ],
                 ]
         );
@@ -416,10 +318,9 @@ class Style_1 extends AdminStyle {
                 'sa_fi_content_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 40,
+                'size' => 20,
             ],
             'range' => [
                 '%' => [
@@ -439,18 +340,15 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons-FI_1_footer_body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_section();
-
-        $this->end_section_devider();
-        $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Content Text Setting', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
+            'showing' => FALSE,
                 ]
         );
         $this->start_controls_tabs(
@@ -466,7 +364,7 @@ class Style_1 extends AdminStyle {
                 'sa_first_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_phone' => ''
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A' => ''
             ],
                 ]
         );
@@ -476,7 +374,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_phone' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -484,7 +382,7 @@ class Style_1 extends AdminStyle {
                 'sa_first_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_phone' => ''
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A' => ''
             ],
                 ]
         );
@@ -517,7 +415,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_phone' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -527,7 +425,7 @@ class Style_1 extends AdminStyle {
                 'sa_second_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_email' => ''
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A2' => ''
             ],
                 ]
         );
@@ -537,7 +435,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_email' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A2' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -545,7 +443,7 @@ class Style_1 extends AdminStyle {
                 'sa_second_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_email' => ''
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A2' => ''
             ],
                 ]
         );
@@ -578,95 +476,222 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_email' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->end_controls_section();
-
         $this->end_section_devider();
-        $this->end_section_tabs();
-    }
-
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Footer Info', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Footer Info Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Footer Info</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-        $this->add_control(
-                'sa_fi_icon', $this->style, [
-            'label' => __('Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'default' => 'yes',
-            'loader' => TRUE,
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-
-        $this->add_control(
-                'sa_fi_icon_class', $this->style, [
-            'type' => Controls::ICON,
-            'label' => __('Icon Class', SHORTCODE_ADDOONS),
-            'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'fas fa-envelope',
-            'loader' => TRUE,
+        $this->start_section_devider();
+        
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
             'condition' => [
                 'sa_fi_icon' => 'yes',
             ],
                 ]
         );
+
+
         $this->add_control(
-                'sa_fi_header_text', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Header Text', SHORTCODE_ADDOONS),
-            'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
-            'default' => 'Email',
-            'loader' => TRUE,
+                'sa_fi_icon_align', $this->style, [
+            'label' => __('Icon Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
+                ],
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
+                ],
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon' => 'text-align: {{VALUE}};',
+            ],
                 ]
         );
-        $this->add_control(
-                'sa_fi_header_bg', $this->style, [
-            'label' => __('Background Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => '',
-                ]
-        );
-        $this->add_control(
-                'sa_fi_conten_text', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Content Text One', SHORTCODE_ADDOONS),
-            'placeholder' => __('First Text', SHORTCODE_ADDOONS),
-            'default' => 'info@oxilab.org',
-            'loader' => TRUE,
+
+        $this->add_responsive_control(
+                'sa_fi_icon_size', $this->style, [
+            'label' => __('Icon Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 40,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
+                'rem' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+            ],
                 ]
         );
 
         $this->add_control(
-                'sa_fi_content_text2', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Content Text Tow', SHORTCODE_ADDOONS),
-            'placeholder' => __('Second Text', SHORTCODE_ADDOONS),
-            'default' => 'Contact@oxilab.org',
-            'loader' => TRUE,
+                'sa_fi_icon_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ffffff',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'color:{{VALUE}};'
+            ],
                 ]
         );
-        echo '</div>';
+
+        $this->add_group_control(
+                'sa_fi_icon_bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => ''
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_fi_icon_br', $this->style, [
+            'type' => Controls::BORDER,
+                    'separator' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => ''
+            ],
+                ]
+        );
+
+        $this->add_responsive_control(
+                'sa_fi_icon_br_radius', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
+            'separator' => FALSE,
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 50,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],]
+        );
+         $this->add_group_control(
+                'sa_fi_icon_box_shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+                    'separator' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => ''
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_fi_icon_animation', $this->style, [
+            'type' => Controls::ANIMATION,
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_fi_icon_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+                    'separator' => TRUE,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_fi_icon_margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 20,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->end_section_tabs();
     }
 
 }
