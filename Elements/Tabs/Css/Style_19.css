@@ -1,0 +1,154 @@
+.sa-addons-tabs-main-wrapper-style-19 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px
+}
+
+.sa-addons-tabs-main-wrapper-style-19 * {
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa_tabs_icon {
+    text-align: center;
+    display: inline-block;
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa_tabs_icon .oxi-icons {
+    font-size: 17px;
+    margin: 0px 0px 0px 0px;
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-header.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-header.inline-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-main-tab-header {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-header-two {
+    display: none
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-header {
+    position: relative;
+    bottom: -5px;
+    font-size: 18px;
+    color: #ffffff;
+    background: #3ec4e6;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    padding: 15px 35px 15px 35px;
+    margin: 0px 5px 0px 0px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #3ec4e6;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+    z-index: 111
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-header:last-child {
+    margin-right: 0px !important;
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-header:first-child {
+    margin-left: 0px !important;
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-active {
+    bottom: 0px
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-main-tab-body {
+    width: 100%;
+    float: left
+}
+
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-body {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Verdana";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    border-style: none;
+    border-color: #46abc2;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0px 9px 25px -8px rgba(110, 110, 110, 0.47);
+    z-index: 222
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa-addons-tabs-main-wrapper-style-19 {
+        padding: 0px 0px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-19 .sa-addons-header {
+        font-size: 18px;
+        padding: 15px 35px 15px 35px;
+        cursor: pointer;
+        border-width: 0px 0px 0px 0px;
+        border-radius: 5px 5px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-19 .sa-addons-body {
+        font-size: 16px;
+        border-width: 1px 1px 1px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa-addons-tabs-main-wrapper-style-19 {
+        padding: 0px 0px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-19 .sa-addons-main-tab-header {
+        display: none
+    }
+    .sa-addons-tabs-main-wrapper-style-19 .sa-addons-icon .oxi-icons {
+        margin: 0px 5px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-19 .sa-addons-header-two {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #ffffff;
+        font-family: "Ubuntu";
+        font-weight: 100;
+        font-style: normal;
+        padding: 15px 35px 15px 35px;
+        border-radius: 5px 5px 0px 0px;
+        margin: 10px 0px 10px 0px;
+        border-style: solid;
+        border-color: #3ec4e6;
+        border-width: 0px 0px 0px 0px;
+        cursor: pointer;
+        text-align: center
+    }
+    .sa-addons-tabs-main-wrapper-style-19 .sa-addons-body {
+        font-size: 16px;
+        border-width: 1px 1px 1px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}

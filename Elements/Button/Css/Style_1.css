@@ -21,7 +21,6 @@ and open the template in the editor.
     text-align: center;
     padding: 15px 15px 15px 15px;
     margin: 0px 0px 0px 0px;
-    color: #ffffff;
     background: rgba(0, 137, 123, 1);
     border-width: 0px;
     border-style: solid;
@@ -42,17 +41,23 @@ and open the template in the editor.
    
     font-size: 20px;
     color: #ffffff;
-    padding: 5px;
+     padding: 0px 0px 0px 15px;
 }
 .oxi-addons-align-btn1 .oxi-button-btn1:hover {
-    color: #ffffff;
     background: rgba(46, 204, 113, 1);
     border-width: 0px;
     border-style: dotted;
     border-color: #ff0000;
     border-radius: 50px
 }
-
+.oxi-addons-align-btn27 .oxi-button-btn27 .sa-button-text{
+    color: #ffffff;
+   transition: .3s;
+}
+.oxi-addons-align-btn27 .oxi-button-btn27:hover .sa-button-text{
+    color: #000000;
+   transition: .3s;
+}
 @media only screen and (min-width:669px) and (max-width:993px) {
     .oxi-addons-align-btn1 .oxi-button-btn1  {
         max-width: 220px;

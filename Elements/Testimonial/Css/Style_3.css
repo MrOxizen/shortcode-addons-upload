@@ -1,0 +1,243 @@
+ .oxi-testimonials-testmonialnew-padding {
+     padding: 20px 0px 0px 0px;
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-item-testmonialnew {
+     position: relative;
+     max-width: 350px;
+     width: 100%;
+     margin: 0 auto
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew {
+     width: 100%;
+     position: relative;
+     float: left;
+     text-align: left;
+     background: #ffffff;
+     padding: 10px 10px 10px 10px;
+     border-radius: 0px 0px 0px 0px;
+     box-shadow: 1px 1px 15px 2px rgba(143, 137, 137, 0.63);
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image {
+     width: 70px;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     margin-top: -35px;
+     transform: translateX(-50%);
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image:after {
+     padding-bottom: 70px;
+     content: "";
+     display: block
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: block;
+     border-radius: 100px 100px 100px 100px;
+     border-width: 2px 2px 2px 2px;
+     border-style: solid;
+     border-color: #c01ad6
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info {
+     width: 100%;
+     float: left;
+     font-size: 16px;
+     color: #878787;
+     font-family: "Crete Round";
+     font-weight: 300;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     ;
+     line-height: 130%;
+     padding-top: 35px;
+     margin: 10px 0px 20px 0px
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-right .oxi-testimonials-style-testmonialnew-info {
+     text-align: right
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-center .oxi-testimonials-style-testmonialnew-info {
+     text-align: center
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating {
+     width: 100%;
+     float: left;
+     text-align: left;
+     padding: 10px 0px 15px 0px
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-right .oxi-testimonials-style-testmonialnew-rating {
+     text-align: right
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-center .oxi-testimonials-style-testmonialnew-rating {
+     text-align: center
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating i {
+     font-size: 16px;
+     color: #db1fc2;
+     padding: 0 2px
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name {
+     width: 100%;
+     float: left;
+     text-align: left;
+     font-size: 22px;
+     color: #2a615f;
+     font-family: "";
+     font-weight: 100;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     ;
+     padding: 0px 0px 5px 0px
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-right .oxi-testimonials-style-testmonialnew-name {
+     text-align: right
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-center .oxi-testimonials-style-testmonialnew-name {
+     text-align: center
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working {
+     width: 100%;
+     float: left;
+     text-align: left;
+     font-size: 14px;
+     color: #858585;
+     font-family: "Open Sans";
+     font-weight: 300;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     ;
+     padding: 0px 0px 10px 0px
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a {
+     color: #cc1abd
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:hover,
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:active,
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:focus {
+     color: #0e8f62;
+     text-decoration: none
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-right .oxi-testimonials-style-testmonialnew-working {
+     text-align: right
+ }
+ 
+ .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-center .oxi-testimonials-style-testmonialnew-working {
+     text-align: center
+ }
+ 
+ @media only screen and (min-width:669px) and (max-width:993px) {
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-testmonialnew-padding {
+         padding: 30px 0px 20px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-item-testmonialnew {
+         max-width: 350px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew {
+         padding: 10px 10px 10px 10px;
+         border-radius: 0px 0px 0px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image {
+         width: 70px;
+         left: 0px;
+         margin-top: -35px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-addonsdata-right .oxi-testimonials-style-testmonialnew-image {
+         right: 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image:after {
+         padding-bottom: 70px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image img {
+         border-radius: 100px 100px 100px 100px;
+         border-width: 2px 2px 2px 2px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info {
+         font-size: 16px;
+         padding-top: 35px;
+         margin: 10px 0px 20px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating {
+         padding: 10px 0px 15px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating i {
+         font-size: 16px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name {
+         font-size: 22px;
+         padding: 0px 0px 5px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working {
+         font-size: 14px;
+         padding: 0px 0px 10px 0px
+     }
+ }
+ 
+ @media only screen and (max-width:668px) {
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-testmonialnew-padding {
+         padding: 30px 0px 20px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-item-testmonialnew {
+         max-width: 350px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew {
+         padding: 10px 10px 10px 10px;
+         border-radius: 0px 0px 0px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image {
+         width: 70px;
+         left: 0px;
+         margin-top: -35px;
+         transform: translateX(-50%);
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image:after {
+         padding-bottom: 70px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-image img {
+         border-radius: 100px 100px 100px 100px;
+         border-width: 0px 0px 0px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-info {
+         font-size: 16px;
+         padding-top: 35px;
+         margin: 10px 0px 20px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating {
+         padding: 10px 0px 15px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-rating i {
+         font-size: 16px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-name {
+         font-size: 22px;
+         padding: 0px 0px 5px 0px
+     }
+     .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working {
+         font-size: 14px;
+         padding: 0px 0px 10px 0px
+     }
+ }

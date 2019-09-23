@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+
+.oxi-addons-align-btn27 .oxi-button-btn27 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    margin: 0px 0px 0px 0px;
+    background: rgba(0,132,158,1.00);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.oxi-addons-align-btn27 .oxi-button-btn27.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+.oxi-addons-align-btn27 {
+    text-align: center
+}
+
+.oxi-addons-align-btn27 .oxi-button-btn27 .oxi-icons{
+
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px;
+}
+.oxi-addons-align-btn27 .oxi-button-btn27:hover {
+    background: rgba(255,177,74,0.58);
+}
+.oxi-addons-align-btn27 .oxi-button-btn27 .sa-button-text{
+    color: #ffffff;
+    transition: .3s;
+}
+.oxi-addons-align-btn27 .oxi-button-btn27:hover .sa-button-text{
+    color: #000000;
+    transition: .3s;
+}
+
+
+
+.oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line{
+    position: absolute;
+    display: block;
+    background: #a80000;
+}
+.oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-1{
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    transform: translateY(0);
+}
+.oxi-addons-align-btn27 .oxi-button-btn27:hover .oxi-button-line-1{
+    transition: 0.5s;
+    transform: translateY(-100%);
+}
+.oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-2{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    transform: translateX(0);
+}
+.oxi-addons-align-btn27 .oxi-button-btn27:hover .oxi-button-line-2{
+    transition: 0.75s;
+    transform: translateX(100%);
+    transition-delay: 0.25s;
+}
+.oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    transform: translateX(0);
+}
+.oxi-addons-align-btn27 .oxi-button-btn27:hover .oxi-button-line-3{
+    transition: 0.75s;
+    transform: translateX(-100%);
+    transition-delay: .25s;
+}
+.oxi-addons-align-btn27 .oxi-button-btn27 .oxi-button-line-4{
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    transform: translateY(0);
+}
+.oxi-addons-align-btn27 .oxi-button-btn27:hover .oxi-button-line-4{
+    transition: 0.5s;
+    transform: translateY(100%);
+}
+
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn27 .oxi-button-btn27  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn27 .oxi-button-btn27 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 15px 15px 15px 15px;
+        margin: 0px 5px 0px 0px
+    }
+    .oxi-addons-align-btn27 {
+        text-align: center
+    }
+}

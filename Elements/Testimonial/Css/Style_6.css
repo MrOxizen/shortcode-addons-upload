@@ -1,0 +1,237 @@
+.oxi-testimonials-six-padding{
+     padding: 0px 0px 0px 0px
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-item-six {
+     position: relative;
+     max-width: 500px;
+     width: 100%;
+     margin: 0 auto
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six {
+     width: 100%;
+     position: relative;
+     float: left;
+     text-align: left
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-info {
+     padding: 10px 15px 20px 15px;
+     width: 100%;
+     float: left;
+     font-size: 16px;
+     text-align: left;
+     background-color: rgba(0, 96, 100, 1.00);
+     color: #ffffff;
+     border-radius: 5px 5px 5px 5px;
+     box-shadow: 0px 5px 21px -7px rgba(158, 158, 158, 1);
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-info .fa {
+     font-size: 15px;
+     color: #ffffff;
+     display: block;
+     margin: 0 -7.5px
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-image {
+     margin-top: 15px;
+     max-width: 85px;
+     width: 100%;
+     position: relative;
+     float: left;
+     border-radius: 100px 100px 100px 100px;
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-image:after {
+     padding-bottom: 80px;
+     content: "";
+     display: block
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-image img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: block;
+     border-radius: 100px 100px 100px 100px
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-name {
+     width: 100%;
+     float: left;
+     text-align: left;
+     color: #105a8f;
+     font-size: 18px;
+     font-family: "Open Sans";
+     font-weight: 300;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     ;
+     padding: 30px 10px 0px 10px
+ }
+ 
+.oxi-testimonials-six-padding .oxi-addonsdata-right .oxi-testimonials-style-six-name {
+     text-align: right
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-working {
+     width: 100%;
+     float: left;
+     text-align: left;
+     color: #006064;
+     font-size: 14px;
+     font-family: "Open Sans";
+     font-weight: 200;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     ;
+     padding: 0px 10px 0px 10px
+ }
+ 
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-working a:hover,
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-working a:active,
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-working a:focus {
+     color: #006064;
+     text-decoration: none
+ }
+ 
+.oxi-testimonials-six-padding .oxi-addonsdata-right .oxi-testimonials-style-six-working {
+     text-align: right
+ }
+ .oxi-testimonials-six-padding .oxi-testimonials-style-six-info .fa-quote-left{
+     width: 100%;
+     text-align: left;
+     margin: 0;
+     color: #fff;
+ }
+ .oxi-testimonials-six-padding .oxi-testimonials-style-six-info .fa-quote-right{
+     width: 100%;
+     text-align: right;
+     margin: 0;
+     color: #fff;
+ }
+ .oxi-testimonials-style-six-image-area{
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+ }
+ .oxi-testimonials-six-padding .oxi-testimonials-style-six-left{
+     width: 100%;
+ }
+ 
+ 
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-center .oxi-testimonials-style-six-info{
+     text-align: center;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-center .oxi-testimonials-style-six-info .fa-quote-left,
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-center .oxi-testimonials-style-six-info .fa-quote-right{
+     text-align: center;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-center .oxi-testimonials-style-six-image-area{
+     justify-content: center;
+ }
+ 
+ 
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-info{
+     text-align: right;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-info .fa-quote-left{
+      text-align: right;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-info .fa-quote-right{
+     text-align: left;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-image-area{
+     justify-content: flex-end;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-left{
+     order: 1;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-right{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+ }
+ 
+ @media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-testimonials-six-padding .oxi-testimonials-six-padding {
+         padding: 10px 0px 10px 0px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-item-six {
+         max-width: 500px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-info {
+         padding: 10px 15px 20px 15px;
+         font-size: 16px;
+         border-radius: 5px 5px 5px 5px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-info .fa {
+         font-size: 15px;
+         margin: 0 -7.5px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-image {
+         margin-top: 15px;
+         max-width: 85px;
+         border-radius: 100px 100px 100px 100px;
+         border-width: 5px 5px 5px 5px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-image:after {
+         padding-bottom: 80px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-image img {
+         border-radius: 100px 100px 100px 100px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-name {
+         font-size: 18px;
+         padding: 30px 10px 0px 10px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-working {
+         font-size: 14px;
+         padding: 0px 10px 0px 10px
+     }
+ }
+ 
+ @media only screen and (max-width:668px) {
+    .oxi-testimonials-six-padding .oxi-testimonials-six-padding {
+         padding: 10px 0px 10px 0px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-item-six {
+         max-width: 500px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-info {
+         padding: 10px 15px 20px 15px;
+         font-size: 16px;
+         border-radius: 5px 5px 5px 5px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-info .fa {
+         font-size: 15px;
+         margin: 0 -7.5px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-image {
+         margin-top: 15px;
+         max-width: 85px;
+         border-radius: 100px 100px 100px 100px;
+         border-width: 5px 5px 5px 5px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-image:after {
+         padding-bottom: 80px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-image img {
+         border-radius: 100px 100px 100px 100px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-name {
+         font-size: 18px;
+         padding: 30px 10px 0px 10px
+     }
+    .oxi-testimonials-six-padding .oxi-testimonials-style-six-working {
+         font-size: 14px;
+         padding: 0px 10px 0px 10px
+     }
+ }

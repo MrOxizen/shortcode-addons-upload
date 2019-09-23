@@ -4,8 +4,12 @@
     padding: 1px 1px 1px 1px
 }
 
-.oxi-addons-container * {
-    transition: none
+.sa-addons-tabs-main-wrapper-style-3 * {
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
 }
 
 .sa-addons-tabs-main-wrapper-style-3 .sa_tabs_icon {

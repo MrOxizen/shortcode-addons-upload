@@ -19,43 +19,43 @@ class Style_2 extends Templates {
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-            $image = $info = $rating = $name = '';
+            $image = $info = $rating = $name = $company = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
-                $image = '<div class="oxi-testimonials-style-testi-image">                               
-                                <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
+                $image = ' <div class="oxi-testimonials-style-testinew-image">                               
+                               <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '"> 
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-testi-info">
-                                ' . $this->text_render($value['sa_testi_profile_description']) . '
-                            </div>';
+                $info = '<div class="oxi-testimonials-style-testinew-info">
+                           ' . $this->text_render($value['sa_testi_profile_description']) . '
+                        </div>';
             }
             if (array_key_exists('sa_testi_profile_rating-size', $value) && $value['sa_testi_profile_rating-size'] != '') {
-                $rating = '<div class="oxi-testimonials-style-testi-rating">
-                                ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '  
-                            </div> ';
+                $rating = '<div class="oxi-testimonials-style-testinew-rating">
+                            ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '                            
+                         </div> ';
             }
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
-
-                if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
-                    $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-testi-name">
-                                ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                            </a>';
-                } else {
-                    $name = '<div  class="oxi-testimonials-style-testi-name">
-                                ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                            </div>';
-                }
+                $name = ' <div class="oxi-testimonials-style-testinew-name" >
+                                    ' . $this->text_render($value['sa_testi_profile_name']) . ' 
+                              </div>';
             }
+            if (array_key_exists('sa_testi_profile_company', $value) && $value['sa_testi_profile_company'] || array_key_exists('sa_testi_profile_designation', $value) && $value['sa_testi_profile_designation'] != '') {
+                $company = '<div class="oxi-testimonials-style-testmonialnew-working">
+                                    ' . $this->text_render($value['sa_testi_profile_designation']) . '  at <a ' . $this->url_render('sa_testi_profile_company_url', $value) . '>' . $this->text_render($value['sa_testi_profile_company']) . '</a>
+                                 </div>';
+            }
+            
 
-            echo ' <div class="oxi-testimonials-testi-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '" >
-                    <div class="oxi-testimonials-item-testi">
-                        <div class="oxi-testimonials-style-testi">
-                            ' . $image . '
-                            ' . $info . '
-                            ' . $rating . '
-                            ' . $name . '
-                        </div>
+            echo ' <div class="oxi-testimonials-testinew-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').' " >
+                    <div class="oxi-testimonials-item-testinew">
+                        <div class="oxi-testimonials-style-testinew" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '> 
+                                ' . $image . '
+                                ' . $info . ' 
+                                ' . $rating . '  
+                                ' . $name . '  
+                                ' . $company . '  
+                            </div>
                     </div>';
             if ($admin == 'admin') :
                 echo'<div class="oxi-addons-admin-absulote">
@@ -154,22 +154,6 @@ class Style_2 extends Templates {
                                 ' . $company . '  
                             </div>
                     </div>';
-            if ($user == 'admin') {
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEdittestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                </form>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeletetestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                </form>
-                            </div>
-                        </div>';
-            }
             echo '</div>';
         }
         echo '</div></div>';

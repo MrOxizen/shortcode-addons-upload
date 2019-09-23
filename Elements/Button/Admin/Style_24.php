@@ -77,18 +77,22 @@ class Style_24 extends AdminStyle {
             'loader' => TRUE,
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa_btn_animation_view', $this->style, [
             'label' => __('Icon Animation View', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
             'default' => 'sa-bottom-to-top',
             'loader' => TRUE,
             'options' => [
+                '' => __('None', SHORTCODE_ADDOONS),
                 'sa_bounce_top_bottom' => __('Bounce Top To Bottom', SHORTCODE_ADDOONS),
                 'sa_bounce_left_to_right' => __('Bounce Left To Right', SHORTCODE_ADDOONS),
                 'sa_shake' => __('Shake', SHORTCODE_ADDOONS),
                 'sa_zoom' => __('Zoom', SHORTCODE_ADDOONS),
                 'sa_skew' => __('Skew', SHORTCODE_ADDOONS),
+            ],
+            'condition' => [
+                'sa_btn_icon' => 'yes',
             ],
                 ]
         );
@@ -490,7 +494,7 @@ class Style_24 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24 .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24 .sa-button-icon' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -499,12 +503,12 @@ class Style_24 extends AdminStyle {
                 'sa-btn-icon-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24 .oxi-icons' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24 .sa-button-icon' => ''
             ],]
         );
 
 
- 
+
         $this->end_controls_tab();
 
         $this->start_controls_tab();
@@ -514,20 +518,20 @@ class Style_24 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24:hover .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24:hover .sa-button-icon' => 'color:{{VALUE}};'
             ],
                 ]
         );
-         $this->add_group_control(
+        $this->add_group_control(
                 'sa-btn-icon-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24:hover .oxi-icons' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24:hover .sa-button-icon' => ''
             ],]
         );
-      
-        
-        
+
+
+
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_responsive_control(
@@ -557,7 +561,7 @@ class Style_24 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn24 .oxi-button-btn24 .sa-button-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

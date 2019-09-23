@@ -9,7 +9,8 @@ and open the template in the editor.
 */
 
 .oxi-addons-align-btn18 .oxi-button-btn18 {
-    width: auto;
+     max-width: 220px;
+    width: 100%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -30,10 +31,7 @@ and open the template in the editor.
     transition: none;
 
 }
-.oxi-addons-align-btn18 .oxi-button-btn18.sa-width-dymanic{
-    max-width: 220px;
-    width: 100%;
-}
+
 
 
 

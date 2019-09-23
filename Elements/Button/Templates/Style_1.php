@@ -18,6 +18,7 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         $text = '<div class="sa-button-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
+        $html  = '';
         $icon = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
 
         if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0'):

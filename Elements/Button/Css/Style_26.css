@@ -1,0 +1,204 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addons-align-btn26 {
+    text-align: center;
+}
+
+.oxi-addons-align-btn26 .oxi-button-btn26 {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-size: 20px;
+    font-family: "Cousine";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    letter-spacing: 1.3px;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    background: rgba(97, 97, 97, 1);
+    padding: 15px 15px 15px 15px;
+    width: 200px;
+    border-width: 3px 3px 3px 3px;
+    border-style: solid;
+    border-color: #ffb14c;
+    border-radius: 0px 0px 0px 0px;
+    position: relative;
+    transition: none;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 0.35s;
+}
+
+.oxi-addons-align-btn26 .oxi-button-btn26.sa-width-dymanic{
+    max-width: 220px;
+    width: 100%;
+}
+.oxi-addons-align-btn26 .oxi-button-btn26 .sa-button-text{
+    color: #3498db;
+    transition: 0.2s;;
+}
+.oxi-addons-align-btn26 .oxi-button-btn26:hover .sa-button-text{
+    color: #000000;
+    transition: 0.2s;
+    
+}
+.oxi-addons-align-btn26 .oxi-button-btn26:hover {
+    border-style: double;
+    border-color: #1f1f1f;
+    border-radius: 0px 0px 0px 0px;
+    transition: all 0.35s;
+}
+/*Top*/
+
+.oxi-addons-align-btn26 .sa_left_top_to_bottom::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 177, 76, 1);
+    z-index: -1; 
+    opacity: 1;
+    transform-origin: 0% 100%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(-90deg);
+
+}
+.oxi-addons-align-btn26 .sa_left_top_to_bottom:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    opacity: 1;
+    transform-origin: 0% 100%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(0deg);
+
+}
+
+/*Bottom*/
+.oxi-addons-align-btn26 .sa_right_top_to_bottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 177, 76, 1);
+    opacity: 1;
+     z-index: -1; 
+    transform-origin: 100% 100%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(90deg);
+}
+.oxi-addons-align-btn26 .sa_right_top_to_bottom:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150%;
+    height: 100%;
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(0deg);
+}
+/*Left*/
+.oxi-addons-align-btn26 .sa_left_bottom_to_top::before{
+     content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 177, 76, 1);
+    z-index: -1; 
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(90deg);
+}
+.oxi-addons-align-btn26 .sa_left_bottom_to_top:hover::before{
+   content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(0deg);
+}
+
+/*Right*/
+.oxi-addons-align-btn26 .sa_right_bottom_to_top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 177, 76, 1);
+    opacity: 1;
+     z-index: -1; 
+    transform-origin: 100% 0%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(-90deg);
+}
+.oxi-addons-align-btn26 .sa_right_bottom_to_top:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150%;
+    height: 100%;
+    opacity: 1;
+    transform-origin: 100% 0%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform: rotate(0deg);
+}
+
+.oxi-addons-align-btn26 .oxi-button-btn26 .oxi-icons{
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-align-btn26 .oxi-button-btn26  {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-align-btn26 .oxi-button-btn26 {
+        max-width: 220px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 5px 0px 0px;
+    }
+
+}

@@ -1,0 +1,166 @@
+.sa-addons-tabs-main-wrapper-style-14 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1px 1px 1px 1px
+}
+
+.sa-addons-tabs-main-wrapper-style-14 * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa_tabs_icon {
+    text-align: center;
+    display: inline-block;
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa_tabs_icon .oxi-icons {
+    font-size: 17px;
+    padding: 0px 5px 0px 0px;
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-addons-header.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-addons-header.inline-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-addons-main-tab-header {
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: center
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-addons-header-two {
+    display: none
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-addons-header {
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    padding: 10px 35px 10px 35px;
+    cursor: pointer;
+    background: rgba(255, 105, 155, 1.00);
+    border-style: solid;
+    border-color: #e3e3e3;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
+    margin: 8px 5px 30px 5px;
+    box-shadow: 1px 5px 12px -2px rgba(79, 79, 79, 0.54);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-active {
+    color: #ffffff;
+    background: rgba(242, 92, 250, 1.00);
+    position: relative;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-top: solid 10px rgba(242, 92, 250, 1.00);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    z-index: 999
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-addons-main-tab-body {
+    width: 100%;
+    float: left
+}
+
+.sa-addons-tabs-main-wrapper-style-14 .sa-addons-body {
+    font-size: 16px;
+    color: #7d7d7d;
+    font-family: "Verdana";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    background: rgba(255, 252, 252, 1.00);
+    border-style: solid;
+    border-color: #e8e8e8;
+    border-width: 0px 0px 0px 1px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0px 1px 25px -8px rgba(110, 110, 110, 0.47);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa-addons-tabs-main-wrapper-style-14 {
+        padding: 1px 1px 1px 1px
+    }
+    .sa-addons-tabs-main-wrapper-style-14 .sa-addons-header {
+        font-size: 18px;
+        padding: 10px 35px 10px 35px;
+        cursor: pointer;
+        border-width: 0px 0px 0px 0px;
+        border-radius: 15px 15px 15px 15px;
+        margin: 8px 5px 30px 5px
+    }
+    .sa-addons-tabs-main-wrapper-style-14 .sa-addons-body {
+        font-size: 16px;
+        border-width: 0px 0px 0px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa-addons-tabs-main-wrapper-style-14 {
+        padding: 1px 1px 1px 1px
+    }
+    .sa-addons-tabs-main-wrapper-style-14 .sa-addons-main-tab-header {
+        display: none
+    }
+    .sa-addons-tabs-main-wrapper-style-14 .sa-addons-header-two {
+        display: block;
+        font-size: 18px;
+        color: #ffffff;
+        font-family: "Ubuntu";
+        font-weight: 100;
+        font-style: normal;
+        background: rgba(255, 105, 155, 1.00);
+        padding: 10px 35px 10px 35px;
+        border-radius: 15px 15px 15px 15px;
+        margin: 8px 5px 30px 5px;
+        border-style: solid;
+        border-color: #e3e3e3;
+        border-width: 0px 0px 0px 0px;
+        cursor: pointer;
+        text-align: center
+    }
+    .sa-addons-tabs-main-wrapper-style-14 .sa-addons-body {
+        font-size: 16px;
+        border-width: 0px 0px 0px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}
