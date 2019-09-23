@@ -6,21 +6,26 @@
     padding: 0;
 }
 
+ 
 .oxi_addons__banner_style_4 {
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url("https://www.oxilab.org/wp-content/uploads/2019/04/03.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 150px 80px 150px 80px;
-    overflow: hidden;
+	width: 100%;
+	float: left;
+	background: linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)), url("https://www.oxilab.org/wp-content/uploads/2019/04/03.jpg") no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 180px 100px 180px 100px;
+	overflow: hidden;
+	display: flex;
+    align-items: center;
     transition: all 0.5 ease;
     -webkit-transition: all 0.5 ease;
     -moz-transition: all 0.5 ease;
     -ms-transition: all 0.5 ease;
     -o-transition: all 0.5 ease;
 }
+
 
 .oxi_addons__banner_style_4 .oxi_addons__heading {
     width: 100%;
@@ -29,9 +34,10 @@
     font-weight: bold;
     font-style: normal;
     line-height: 1;
-    text-align: center;
+    text-align: left;
     color: #1cada6;
     padding: 0px 15px 0px 70px;
+    align-items: center;
     line-height: 1;
 }
 
@@ -42,7 +48,7 @@
     font-weight: bold;
     font-style: normal;
     line-height: 1;
-    text-align: center;
+    text-align: left;
     color: #1cada6;
     padding: 0px 15px 0px 15px;
     line-height: 1;
@@ -87,25 +93,19 @@
 }
 
 .oxi_addons__banner_style_4 .oxi_addons__line {
-    width: 100%;
-    position: relative;
+    width: 100%; 
     
 }
 .oxi_addons__banner_style_4 .oxi_addons__line::before {
     content: "";
-	position: absolute;
-	left: 0;
+	position: absolute; 
 	top: -10%;
 	width: 5px;
 	height: 120%;
 	background: #ffffff;
 	right: 0;
 	left: 95%; 
-}
-
- 
-
-
+} 
 @media only screen and (min-width:669px) and (max-width:993px) {
 
     .oxi_addons__banner_style_4 {
@@ -125,6 +125,9 @@
         font-size: 17px;
         padding: 0px 10px 0px 10px;
     }
+    .oxi_addons__banner_style_4 .oxi_addons__line::before { 
+        left: 0; 
+    }
 
     .oxi_addons__banner_style_4 .oxi_addons__button {
         font-size: 15px;
@@ -141,7 +144,9 @@
     .oxi_addons__banner_style_4 {
         padding: 5px;
     }
-
+    .oxi_addons__banner_style_4 .oxi_addons__line::before { 
+        left: 0; 
+    }
     .oxi_addons__banner_style_4 .oxi_addons__heading {
         width: 100%;
         display: flex;

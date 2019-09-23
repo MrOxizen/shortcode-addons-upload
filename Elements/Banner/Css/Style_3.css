@@ -38,19 +38,7 @@
 .oxi_addons__banner_style_3 .oxi_addons__heading span{ 
     color: #297fa7; 
 }
-
-.oxi_addons__banner_style_3 .oxi_addons__icon_text_main {
-    width: 100%;
-}
-
-.oxi_addons__banner_style_3 .oxi_addons__icon .oxi-icons {
-    font-size: 40px;
-    color: #ffffff;
-    line-height: 1;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0px 0px 0px;
-}
+ 
 
 .oxi_addons__banner_style_3  .oxi_addons__text {
     color: #ffffff;
@@ -63,10 +51,7 @@
     font-size: 16px;
     padding: 10px 0px 0px 0px;
 }
-
-.oxi_addons__banner_style_3 .oxi_addons__icon_text_main:hover .oxi-icons {
-    color: #ff0000;
-}
+ 
 
 .oxi_addons__banner_style_3 .oxi_addons__icon_text_main:hover .oxi_addons__text {
     color: #ccc4c4;

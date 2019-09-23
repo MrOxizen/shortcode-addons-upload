@@ -131,7 +131,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 100,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -249,7 +249,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -258,7 +258,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -392,7 +392,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -512,7 +512,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -596,7 +596,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -628,7 +628,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -736,7 +736,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -745,7 +745,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -100,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -817,7 +817,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -826,7 +826,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -100,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -915,7 +915,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -947,7 +947,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -1055,7 +1055,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -1064,7 +1064,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -100,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
