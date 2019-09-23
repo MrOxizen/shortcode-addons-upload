@@ -1,0 +1,167 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi_addons_FI_1 {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi_addons_FI_1 .oxi_addons_FI_1_row {
+    width: 100%;
+    max-width: 310px;
+    margin: auto;
+    border: 0px dotted #f52323;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(110, 110, 110, 1);
+    ;
+    overflow: auto
+}
+
+.oxi_addons_FI_1 .oxi_addons-FI_1_header_body {
+    width: 100%;
+    float: left;
+    background: linear-gradient(rgba(231, 100, 29, 1.00), rgba(231, 100, 29, 1.00)), url("10") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    ;
+    text-align: center;
+    padding: 40px 40px 40px 40px
+}
+
+.oxi_addons_FI_1 .oxi_addons_FI_1_header {
+    width: 100%;
+    float: left
+}
+
+.oxi_addons_FI_1 .oxi_addons_FI_1_icon {
+    width: 100%;
+    float: left
+}
+
+.oxi_addons_FI_1 .oxi_addons_FI_1_icon .oxi-icons {
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi_addons_FI_1 .oxi_addons_FI_1_T {
+    width: 100%;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi_addons_FI_1 .oxi_addons-FI_1_footer_body {
+    width: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 1.00);
+    ;
+    text-align: left;
+    padding: 40px 40px 40px 40px
+}
+
+.oxi_addons_FI_1 .oxi_addons_FI_1_phone {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #333333;
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi_addons_FI_1 .oxi_addons_FI_1_email {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #333333;
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 5px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi_addons_FI_1 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_row {
+        max-width: 310px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons-FI_1_header_body {
+        padding: 40px 40px 40px 40px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_icon .oxi-icons {
+        font-size: 40px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_T {
+        font-size: 22px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons-FI_1_footer_body {
+        padding: 40px 40px 40px 40px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_phone {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_email {
+        font-size: 18px;
+        padding: 5px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi_addons_FI_1 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_row {
+        max-width: 310px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons-FI_1_header_body {
+        padding: 40px 40px 40px 40px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_icon .oxi-icons {
+        font-size: 40px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_T {
+        font-size: 22px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons-FI_1_footer_body {
+        padding: 40px 40px 40px 40px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_phone {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_1 .oxi_addons_FI_1_email {
+        font-size: 18px;
+        padding: 5px 0px 0px 0px
+    }
+}

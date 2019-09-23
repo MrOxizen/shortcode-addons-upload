@@ -1,0 +1,218 @@
+.sa-addons-tabs-main-wrapper-style-21 .oxi-addons-admin-absulote {
+    right: 5px;
+    top: 0
+}
+
+.sa-addons-tabs-main-wrapper-style-21 {
+    width: 100%;
+    float: left;
+    padding: 1px 1px 1px 1px
+}
+
+.sa-addons-tabs-main-wrapper-style-21 * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-tabs-main-wrapper {
+    overflow: hidden;
+    display: flex;
+    background: rgba(255, 255, 255, 1.00);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 1px 25px -8px rgba(110, 110, 110, 0.47);
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa_tabs_icon {
+    text-align: center;
+    display: inline-block;
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header .sa_tabs_icon .oxi-icons {
+    font-size: 17px;
+    padding: 0px 0px 0px 0px;
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header.inline-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-header {
+    width: 25%;
+    float: left
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header-two {
+    display: none
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+    background: rgba(21, 110, 109, 1);
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    border-style: solid;
+    border-color: #e0e0e0;
+    border-width: 0px 0px 0px 0px;
+    padding: 20px 10px 20px 10px;
+    margin: 0px 0px 10px 0px;
+    border-radius: 0px 0px 0px 0px;
+    cursor: pointer
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header:first-child {
+    margin-top: 0 !important
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header:last-child {
+    margin-bottom: 0 !important
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-active {
+    color: #ffffff;
+    background: rgba(65, 129, 148, 1);
+    box-shadow: Inset 1px 0px 10px 0px rgba(59, 59, 59, 0.4);
+    position: relative
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .active {
+    display: block
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header-two:hover {
+    color: #ffffff;
+    -webkit-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-header:hover {
+    color: #ffffff;
+    background: rgba(44, 174, 176, 1);
+    -webkit-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-body {
+    width: 75%;
+    float: left;
+    border-style: none;
+    border-color: #e8e8e8;
+    border-width: 0px 0px 0px 1px;
+}
+
+.sa-addons-tabs-main-wrapper-style-21 .sa-addons-body {
+    font-size: 16px;
+    color: #7d7d7d;
+    font-family: "Verdana";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    padding: 20px 10px 20px 25px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa-addons-tabs-main-wrapper-style-21 {
+        padding: 0px;
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-tabs-main-wrapper {
+        border-radius: 10px 10px 10px 10px
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-header {
+        width: 25%
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-header {
+        font-size: 18px;
+        border-width: 0px 0px 0px 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding: 20px 10px 20px 10px;
+        margin: 0px 0px 10px 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-body {
+        width: 75%;
+        border-width: 0px 0px 0px 1px
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-body {
+        font-size: 16px;
+        padding: 20px 10px 20px 25px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa-addons-tabs-main-wrapper-style-21 {
+        padding: 1px 1px 1px 1px
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-tabs-main-wrapper {
+        display: block;
+        border-radius: 10px 10px 10px 10px;
+        background: rgba(255, 255, 255, 1.00)
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-header {
+        display: none
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-header-two {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #ffffff;
+        background: rgba(135, 34, 153, 1);
+        font-family: "Ubuntu";
+        font-weight: 100;
+        font-style: normal;
+        border-style: solid;
+        border-color: #e0e0e0;
+        border-width: 0px 0px 0px 0px;
+        margin: 10px 0px 0px 0px;
+        cursor: pointer;
+        text-align: center;
+        padding: 20px 10px 20px 10px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-header-two:first-child {
+        margin-top: 0
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-header-two:last-child {
+        margin-bottom: 0 !important
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-header-two span {
+        margin-right: 5px
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-body {
+        width: 100%;
+        border: none !important;
+        background: transparent
+    }
+    .sa-addons-tabs-main-wrapper-style-21 .sa-addons-body {
+        border-width: 0px 0px 0px 1px;
+        font-size: 16px;
+        padding: 20px 10px 20px 25px;
+        border-style: none;
+        border-color: #e8e8e8;
+        box-shadow: none
+    }
+}

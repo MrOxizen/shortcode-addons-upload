@@ -24,7 +24,7 @@ class Style_3 extends Templates
 
 
 
-        echo '<div class="sa-addons-tabs-main-wrapper-style-3">
+        echo '<div class="sa-addons-tabs-main-wrapper-style-3" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                     <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {
             $value_header = $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
@@ -49,7 +49,7 @@ class Style_3 extends Templates
                 endif;
             else :
                 $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_header) ? $value_header['sa_tabs_h_text'] : '');
-            endif;          
+            endif;
             echo '<div class="sa-addons-header ' . $style['sa_tabs_headding_icon_style'] . ' sa-header-' . $header['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $header['id'] . '">' . $icon_text . '</div>';
         }
         echo '</div>
@@ -76,7 +76,7 @@ class Style_3 extends Templates
                 endif;
             else :
                 $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_body) ? $value_body['sa_tabs_h_text'] : '');
-            endif; 
+            endif;
 
             echo '<div class="sa-addons-header-two sa-header-' . $body['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $body['id'] . '">' . $icon_text . '</div>';
             echo '<div class="sa-addons-body ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" id="sa-tab-' . $this->oxiid . '-id-' . $body['id'] . '" style="display: none;">' . $this->text_render(array_key_exists('sa_tabs_h_text', $value_body) ? $value_body['sa_tabs_content'] : '') . '';

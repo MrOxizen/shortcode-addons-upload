@@ -24,7 +24,7 @@ class Style_2 extends Templates
 
 
 
-        echo '<div class="sa-addons-tabs-main-wrapper-style-2">
+        echo '<div class="sa-addons-tabs-main-wrapper-style-2" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                 <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {
             $value_header =  $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];

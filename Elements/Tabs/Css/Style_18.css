@@ -1,0 +1,154 @@
+.sa-addons-tabs-main-wrapper-style-18 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1px 1px 1px 1px
+}
+
+.sa-addons-tabs-main-wrapper-style-18 * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa_tabs_icon {
+    text-align: center;
+    display: inline-block;
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa_tabs_icon .oxi-icons {
+    font-size: 17px;
+    padding: 0px 0px 0px 0px;
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-addons-header.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-addons-header.inline-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-addons-main-tab-header {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two {
+    display: none
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-addons-header {
+    position: relative;
+    font-size: 18px;
+    color: #545454;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    padding: 10px 35px 10px 35px;
+    cursor: pointer;
+    margin: 8px 5px 30px 5px
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-active {
+    color: #9c3636;
+    position: relative
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-top: solid 10px;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    z-index: 999
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #9c3636
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-addons-main-tab-body {
+    width: 100%;
+    float: left
+}
+
+.sa-addons-tabs-main-wrapper-style-18 .sa-addons-body {
+    font-size: 16px;
+    color: #7d7d7d;
+    font-family: "Verdana";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    background: rgba(255, 255, 255, 1.00);
+    border-style: solid;
+    border-color: #e8e8e8;
+    border-width: 0px 0px 0px 1px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0px 1px 25px -8px rgba(255, 255, 255, 0.47);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa-addons-tabs-main-wrapper-style-18 {
+        padding: 1px 1px 1px 1px
+    }
+    .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header {
+        font-size: 18px;
+        padding: 10px 35px 10px 35px;
+        margin: 8px 5px 30px 5px
+    }
+    .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body {
+        font-size: 16px;
+        border-width: 0px 0px 0px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa-addons-tabs-main-wrapper-style-18 {
+        padding: 1px 1px 1px 1px
+    }
+    .sa-addons-tabs-main-wrapper-style-18 .sa-addons-main-tab-header {
+        display: none
+    }
+    .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two {
+        display: block;
+        font-size: 18px;
+        color: #545454;
+        font-family: "Ubuntu";
+        font-weight: 100;
+        font-style: normal;
+        padding: 10px 35px 10px 35px;
+        margin: 8px 5px 30px 5px;
+        cursor: pointer;
+        text-align: center
+    }
+    .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two span {
+        margin-right: 3px
+    }
+    .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body {
+        font-size: 16px;
+        border-width: 0px 0px 0px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+}

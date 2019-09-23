@@ -17,30 +17,6 @@
     -o-transition: none;
 }
 
-.sa-addons-tabs-main-wrapper-style-10 .sa_tabs_icon {
-    text-align: center;
-    display: inline-block;
-}
-
-.sa-addons-tabs-main-wrapper-style-10 .sa-addons-header .sa_tabs_icon .oxi-icons {
-    font-size: 17px;
-    color: #ffffff;
-    padding: 0px 0px 0px 0px;
-}
-
-.sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.sa-addons-tabs-main-wrapper-style-10 .sa-addons-header.inline-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .sa-addons-tabs-main-wrapper-style-10 .sa-addons-main-tab-header {
     padding: 0px 0px 0px 0px;
     width: 30%;
@@ -81,7 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5px;
+    margin: 0px 5px 0px 0px;
     color: white
 }
 
@@ -105,7 +81,12 @@
     transform: translateY(-50%);
     background: #ffffff;
     width: 1px;
-    height: 40px
+    height: 40px;
+    display: none;
+}
+
+.sa-addons-tabs-main-wrapper-style-10.show_line_setting .sa-active::before {
+    display: block;
 }
 
 .sa-addons-tabs-main-wrapper-style-10 .sa-active .sa-addons-span-arrow {
@@ -124,11 +105,11 @@
     -moz-transform: rotate(50deg);
     -ms-transform: rotate(50deg);
     display: block;
-    background: rgba(19, 148, 191, 1.00) !important
+    background: rgba(19, 148, 191, 1.00);
 }
 
 .sa-addons-tabs-main-wrapper-style-10 .active {
-    display: block !important
+    display: block;
 }
 
 .sa-addons-tabs-main-wrapper-style-10 .sa-addons-header-two:hover {

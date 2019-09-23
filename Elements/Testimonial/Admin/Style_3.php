@@ -448,8 +448,6 @@ class Style_3 extends AdminStyle {
        
         
         $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
 
         $this->start_controls_section(
                 'shortcode-addons', [

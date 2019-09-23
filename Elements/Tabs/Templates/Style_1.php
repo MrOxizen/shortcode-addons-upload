@@ -24,7 +24,7 @@ class Style_1 extends Templates
 
 
 
-        echo '<div class="sa-addons-tabs-main-wrapper-style-1">
+        echo '<div class="sa-addons-tabs-main-wrapper-style-1" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                     <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {
             $value_header = $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
@@ -50,7 +50,7 @@ class Style_1 extends Templates
             else :
                 $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_header) ? $value_header['sa_tabs_h_text'] : '');
             endif;
-            echo '<div class="sa-addons-header '.$style['sa_tabs_headding_icon_style'].' sa-header-' . $header['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $header['id'] . '">' . $icon_text . '</div>';
+            echo '<div class="sa-addons-header ' . $style['sa_tabs_headding_icon_style'] . ' sa-header-' . $header['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $header['id'] . '">' . $icon_text . '</div>';
         }
         echo '</div>
                     <div class="sa-addons-main-tab-body ">';
@@ -138,7 +138,7 @@ class Style_1 extends Templates
                 var fullwidth = jQuery("html, body").width();';
 
         if (array_key_exists('sa_tabs_tab_fix_header', $styledata) && $styledata['sa_tabs_tab_fix_header'] != '0') {
-                $jquery .= 'if(fullwidth <= 668){
+            $jquery .= 'if(fullwidth <= 668){
                             jQuery("html, body").animate({
                                 scrollTop: jQuery(".sa-addons-tabs-main-wrapper-style-1").offset().top - ' . $styledata['sa_tabs_tab_fix_h_offset'] . '
                             }, 2000);

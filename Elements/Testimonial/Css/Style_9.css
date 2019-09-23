@@ -1,0 +1,353 @@
+.oxi-testimonials-nine-padding {
+    padding: 0px 10px 0px 10px
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-item-nine {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine {
+    width: 100%;
+    float: left;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 8px 30px -5px rgba(166, 166, 166, 0.65);
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover {
+    box-shadow: 0px 8px 15px -5px rgba(153, 150, 150, 0.56);
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info {
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    float: left;
+    position: relative;
+    color: #7a7a7a;
+    font-size: 16px;
+    font-family: "Crete Round";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: .8px;
+    ;
+    text-align: left;
+    border-top: 3px solid #795548;
+    border-bottom: 2px solid #795548
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info {
+    border-top: 3px solid #c25f34;
+    border-bottom: 2px solid #c25f34
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-right .oxi-testimonials-style-nine-info {
+    text-align: right
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-center .oxi-testimonials-style-nine-info {
+    text-align: center
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info:after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #795548;
+    bottom: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    left: 40px;
+    content: "";
+    display: block;
+    transform: translateY(50%);
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info:after {
+    background-color: #c25f34
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-right .oxi-testimonials-style-nine-info:after {
+    text-align: right;
+    left: auto;
+    right: 10px
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-center .oxi-testimonials-style-nine-info:after {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image-parent {
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+    float: left;
+    text-align: left
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-right .oxi-testimonials-style-nine-image-parent {
+    text-align: right
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-center .oxi-testimonials-style-nine-image-parent {
+    text-align: center
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image {
+    max-width: 70px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 50px 50px 50px 50px
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image:after {
+    padding-bottom: 70px;
+    content: "";
+    display: block
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-width: 4px 4px 4px 4px;
+    border-style: solid;
+    border-color: #adadad;
+    border-radius: 50px 50px 50px 50px
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name-body {
+    width: 100%;
+    float: left;
+    padding: 0px 4px
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #795548;
+    font-size: 20px;
+    font-family: "Ubuntu";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 15px 10px 0px 10px
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name:hover {
+    color: #b07156
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-right .oxi-testimonials-style-nine-name {
+    text-align: right
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-center .oxi-testimonials-style-nine-name {
+    text-align: center
+}
+
+.oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #7d7d7d;
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 0px 10px 15px 10px
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-right .oxi-testimonials-style-nine-working {
+    text-align: right
+}
+
+.oxi-testimonials-nine-padding .oxi-addonsdata-center .oxi-testimonials-style-nine-working {
+    text-align: center
+}
+
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-right .oxi-testimonials-style-nine-image{
+    left: 100%;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-right .oxi-testimonials-style-nine-info{
+    text-align: right;
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-right .oxi-testimonials-style-nine-name{
+    text-align: right;
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-right .oxi-testimonials-style-nine-name:after{
+    left: 100%;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-right .oxi-testimonials-style-nine-working{
+    text-align: right;
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-right .oxi-testimonials-style-nine-info:after{
+    left: 90%;
+    transform: translate(-100%, 50%);
+}
+
+
+
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-center .oxi-testimonials-style-nine-image{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-center .oxi-testimonials-style-nine-info{
+    text-align: center;
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-center .oxi-testimonials-style-nine-name{
+    text-align: center;
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-center .oxi-testimonials-style-nine-name:after{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-center .oxi-testimonials-style-nine-working{
+    text-align: center;
+}
+.oxi-testimonials-nine-padding .sa-testimonial-profile-body-nine-center .oxi-testimonials-style-nine-info:after{
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-testimonials-nine-padding .oxi-testimonials-nine-padding {
+        padding: 20px 10px 20px 10px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-item-nine {
+        max-width: 350px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info {
+        padding: 10px 10px 10px 10px;
+        font-size: 16px;
+        border-top: 3px solid #795548;
+        border-bottom: 2px solid #795548
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info {
+        border-top: 3px solid #c25f34;
+        border-bottom: 2px solid #c25f34
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info:after {
+        width: 10px;
+        height: 10px;
+        bottom: -7px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image-parent {
+        padding: 0px 4px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image {
+        max-width: 70px;
+        margin: 30px 10px 10px 10px;
+        border-radius: 50px 50px 50px 50px;
+        border-width: 4px 4px 4px 4px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image:after {
+        padding-bottom: 70px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img {
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name-body {
+        padding: 0px 4px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name {
+        font-size: 20px;
+        padding: 15px 10px 0px 10px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working {
+        font-size: 16px;
+        padding: 0px 10px 15px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-testimonials-nine-padding .oxi-testimonials-nine-padding {
+        padding: 20px 10px 20px 10px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-item-nine {
+        max-width: 350px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info {
+        padding: 10px Ubuntupx 10px 20px;
+        font-size: 16px;
+        border-top: 3px solid #795548;
+        border-bottom: 2px solid #795548
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info {
+        border-top: 3px solid #c25f34;
+        border-bottom: 2px solid #c25f34
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info:after {
+        width: 10px;
+        height: 10px;
+        bottom: -7px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image-parent {
+        padding: 0px OxiAddonsTestimonial-p-border-right px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image {
+        max-width: 70px;
+        margin: 30px 10px 10px 10px;
+        border-radius: 50px 50px 50px 50px;
+        border-width: 4px 4px 4px 4px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image:after {
+        padding-bottom: 70px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img {
+        border-radius: 50px 50px 50px 50px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name-body {
+        padding: 0px OxiAddonsTestimonial-p-border-right px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name {
+        font-size: 20px;
+        padding: 15px 10px 0px 10px
+    }
+    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working {
+        font-size: 16px;
+        padding: 0px 10px 15px 10px
+    }
+}
