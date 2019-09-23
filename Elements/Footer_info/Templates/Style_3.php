@@ -17,7 +17,38 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_3 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        
+        $contact = $address = $phone = $email = '';
+        if (!empty($style['sa_fi_content_header'])) {
+            $contact = '<div class="oxi_addons_FI_3_contact">' . $this->text_render($style['sa_fi_content_header']) . '</div>';
+        }
+        if (!empty($style['sa_fi_content_address'])) {
+            $address = '<div class="oxi_addons_FI_3_address">' . $this->text_render($style['sa_fi_content_address']) . '</div>';
+        }
+        if (!empty($style['sa_fi_content_mobile'])) {
+            $phone = '<div class="oxi_addons_FI_3_phone">' . $this->text_render($style['sa_fi_content_mobile']) . '</div>';
+        }
+        if (!empty($style['sa_fi_content_email'])) {
+            $email = ' <div class="oxi_addons_FI_3_email">' . $this->text_render($style['sa_fi_content_email']) . '</div>';
+        }
+        $icon = (array_key_exists('sa_fi_icon', $style) && $style['sa_fi_icon'] != '0' ? 
+                '<div class="oxi_addons_FI_3_icon-area">
+                       <a >
+                            
+                      </a> 
+                </div>' : '');
+//        ' .  $this->font_awesome_render($style['sa_btn_icon_class'])  . '
+        echo '<div class="oxi-addons-container">
+                    <div class="oxi_addons_FI_3">
+                        <div class="oxi_addons_FI_3_row">
+                                ' . $contact . '
+                                ' . $address . '
+                                ' . $phone . '
+                                ' . $email . '
+                                ' . $icon . '
+                           
+                        </div>
+                    </div>
+                </div>';
     }
 
     public function old_render() {
