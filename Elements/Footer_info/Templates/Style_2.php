@@ -36,7 +36,7 @@ class Style_2 extends Templates {
                     ' . $addresstwo . '
                 </div>';
             }
-
+            $icon = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
             echo '<div class="' . $this->column_render('sa_fi_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="oxi_addons_FI_2">
                          <div class="oxi_addons_FI_2_row" ' . $this->animation_render('sa_fi_animation', $style) . '>
