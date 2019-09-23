@@ -21,60 +21,54 @@ class Style_9 extends Templates {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $image = $info = $rating = $name = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
-                $image = '<div class="oxi-testimonials-style-eight-image">                               
-                                <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
-                            </div>';
+                $image = '<div class="oxi-testimonials-style-nine-image-parent">
+                            <div class="oxi-testimonials-style-nine-image">
+                                <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '"> 
+                            </div>
+                        </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-eight-info">
+                $info = '<div class="oxi-testimonials-style-nine-info">
                                 ' . $this->text_render($value['sa_testi_profile_description']) . '
                             </div>';
             }
+            
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
-                $name = '<div  class="oxi-testimonials-style-eight-name">
+                if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
+                    $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-nine-name">
+                                ' . $this->text_render($value['sa_testi_profile_name']) . ' 
+                            </a>';
+                } else {
+                    $name = '<div  class="oxi-testimonials-style-nine-name">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                             </div>';
+                }
             }
             if (array_key_exists('sa_testi_profile_destination', $value) && $value['sa_testi_profile_destination'] != '') {
                 $company = '
-                 <div class="oxi-testimonials-style-eight-working">
+                 <div class="oxi-testimonials-style-nine-working">
                     ' . $this->text_render($value['sa_testi_profile_destination']) . '  
                 </div>';
             }
-            if (array_key_exists('sa_testi_profile_icon', $value) && $value['sa_testi_profile_icon'] != '') {
-                if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
-                    $icon = '
-                    <div class="oxi-testimonials-style-eight-name-body-right">
-                        <a ' . $this->url_render('sa_testi_profile_url', $value) . '>' . $this->font_awesome_render($value['sa_testi_profile_icon']) . '</a>  
-                    </div>';
-                } else {
-                    $icon = '
-                    <div class="oxi-testimonials-style-eight-name-body-right">
-                        <div>' . $this->font_awesome_render($value['sa_testi_profile_icon']) . '</div>  
-                    </div>';
-                }
-            }
+            
 
 
             if ($style['sa-testimonial-profile-body_alignment'] == 'left') {
-                $class = "sa-testimonial-profile-body-eight-left";
+                $class = "sa-testimonial-profile-body-nine-left";
             } elseif ($style['sa-testimonial-profile-body_alignment'] == 'right') {
-                $class = "sa-testimonial-profile-body-eight-right";
+                $class = "sa-testimonial-profile-body-nine-right";
             } else {
-                $class = "sa-testimonial-profile-body-eight-center";
+                $class = "sa-testimonial-profile-body-nine-center";
             }
 
-            echo ' <div class="oxi-testimonials-eight-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '" >
-                    <div class="oxi-testimonials-item-eight">
-                        <div class="oxi-testimonials-style-eight ' . $class . '" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
-                            ' . $image . '
+            echo ' <div class="oxi-testimonials-nine-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '" >
+                    <div class="oxi-testimonials-item-nine">
+                        <div class="oxi-testimonials-style-nine ' . $class . '" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
                             ' . $info . ' 
-                            <div class="oxi-testimonials-style-eight-name-body">
-                                <div class="oxi-testimonials-style-eight-name-body-left">
-                                       ' . $name . '
-                                       ' . $company . '
-                                </div>
-                                ' . $icon . '
+                            ' . $image . '
+                            <div class="oxi-testimonials-style-nine-name-body">    
+                                ' . $name . '  
+                                ' . $company . '  
                             </div>
                         </div>
                     </div>';
@@ -145,22 +139,7 @@ class Style_9 extends Templates {
                                 </div>
                             </div>
                         </div>';
-            if ($user == 'admin') {
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEdittestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                </form>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeletetestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                </form>
-                            </div>
-                        </div>';
-            }
+            
             echo '</div>';
         }
         echo '</div></div>';
@@ -267,7 +246,7 @@ class Style_9 extends Templates {
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 100%; 
+                hnine: 100%; 
                 display: block;   
                 border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 82) . ';
                 border-style:' . $styledata[98] . '; 
@@ -331,7 +310,7 @@ class Style_9 extends Templates {
                 }
                 .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-info:after{                  
                     width: ' . $styledata[219] . 'px;
-                    height: ' . $styledata[219] . 'px;               
+                    hnine: ' . $styledata[219] . 'px;               
                     bottom: -' . ($styledata[219] / 2 + $styledata[213]) . 'px;                   
                 }
                 .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-image-parent{
@@ -380,7 +359,7 @@ class Style_9 extends Templates {
                 }
                 .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-info:after{                  
                     width: ' . $styledata[220] . 'px;
-                    height: ' . $styledata[220] . 'px;               
+                    hnine: ' . $styledata[220] . 'px;               
                     bottom: -' . ($styledata[220] / 2 + $styledata[214]) . 'px;                   
                 }
                 .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-image-parent{

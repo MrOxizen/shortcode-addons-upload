@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_9 extends AdminStyle {
+class Style_10 extends AdminStyle {
 
     public function register_controls() {
 
@@ -48,7 +48,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::COLUMN,
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding ' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding ' => '',
             ]
                 ]
         );
@@ -79,7 +79,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-item-nine' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-item-ten' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -88,7 +88,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::BACKGROUND,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten' => '',
             ]
                 ]
         );
@@ -96,7 +96,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-body-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten' => '',
             ]
                 ]
         );
@@ -150,7 +150,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -181,7 +181,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -211,7 +211,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -220,7 +220,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-body-animation', $this->style, [
             'type' => Controls::ANIMATION,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten' => '',
             ]
                 ]
         );
@@ -237,7 +237,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-body-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten' => '',
             ]
                 ]
         );
@@ -247,7 +247,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-body-hover-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding:hover .oxi-testimonials-style-ten' => '',
             ]
                 ]
         );
@@ -291,14 +291,14 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image, {{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-image, {{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-image img' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
         
         $this->add_responsive_control(
-                'sa-testimonial-profile-image-hnine', $this->style, [
-            'label' => __('Hnine', SHORTCODE_ADDOONS),
+                'sa-testimonial-profile-image-height', $this->style, [
+            'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
@@ -322,7 +322,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image:after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-image:after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -330,7 +330,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-profile-image-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-image img' => '',
             ]
                 ]
         );
@@ -361,199 +361,14 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-image img' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
         
         
         $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Information', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
-                ]
-        );
-        $this->add_group_control(
-                'sa-testimonial-profile-Information-typho', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info' => '',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa-testimonial-profile-Information-color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
-        
-        $this->add_group_control(
-                'sa-testimonial-profile-Information-shadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info' => '',
-            ]
-                ]
-        );
-        $this->add_responsive_control(
-                'sa-testimonial-profile-Information-padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 0,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Border Top & Bottom', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
-                ]
-        );
-        $this->add_responsive_control(
-                'sa-testimonial-profile-border-top-size', $this->style, [
-            'label' => __('Border Top Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 3,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 1,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 50,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info' => 'border-top-width:{{SIZE}}{{UNIT}};',
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa-testimonial-profile-border-bottom-size', $this->style, [
-            'label' => __('Border Bottom Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 2,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 1,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 50,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info' => 'border-bottom-width:{{SIZE}}{{UNIT}};',
-            ],
-                ]
-        );
-         $this->add_control(
-                'sa-testimonial-profile-tb-border-color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine .oxi-testimonials-style-nine-info:after' => 'background-color: {{VALUE}};',
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info' => 'border-bottom-color: {{VALUE}}; border-top-color: {{VALUE}};',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa-testimonial-profile-tb-border-hover-color', $this->style, [
-            'label' => __('Hover Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info:after' => 'background-color: {{VALUE}};',
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info' => 'border-top-color: {{VALUE}}; border-bottom-color: {{VALUE}};',
-            ]
-                ]
-        );
-        $this->add_responsive_control(
-                'sa-testimonial-profile-border-bottom-pointer-size', $this->style, [
-            'label' => __('Border Bottom Pointer', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 10,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 1,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 50,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine .oxi-testimonials-style-nine-info:after' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
-            ],
-                ]
-        );
-        
-        
-        $this->end_controls_section();
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Name', SHORTCODE_ADDOONS),
@@ -564,7 +379,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-profile-name-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-name' => '',
             ]
                 ]
         );
@@ -574,25 +389,16 @@ class Style_9 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-name' => 'color: {{VALUE}};',
             ]
                 ]
         );
-        $this->add_control(
-                'sa-testimonial-profile-name-hover-color', $this->style, [
-            'label' => __('Hover Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name:hover' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
+        
         $this->add_group_control(
                 'sa-testimonial-profile-name-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-name' => '',
             ]
                 ]
         );
@@ -622,7 +428,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-name' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -637,7 +443,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-profile-company-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-working' => '',
             ]
                 ]
         );
@@ -647,7 +453,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-working' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -658,7 +464,7 @@ class Style_9 extends AdminStyle {
                 'sa-testimonial-profile-company-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working' => '',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-working' => '',
             ]
                 ]
         );
@@ -688,13 +494,79 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-working' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
         
         
         $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Information', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+                ]
+        );
+        $this->add_group_control(
+                'sa-testimonial-profile-Information-typho', $this->style, [
+            'type' => Controls::TYPOGRAPHY,
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-info' => '',
+            ]
+                ]
+        );
+        $this->add_control(
+                'sa-testimonial-profile-Information-color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-info' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
+        
+        $this->add_group_control(
+                'sa-testimonial-profile-Information-shadow', $this->style, [
+            'type' => Controls::TEXTSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-info' => '',
+            ]
+                ]
+        );
+        $this->add_responsive_control(
+                'sa-testimonial-profile-Information-padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 0,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-info' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+        $this->end_controls_section();
+        
+        
         $this->end_section_devider();
         $this->end_section_tabs();
     }
@@ -744,12 +616,10 @@ class Style_9 extends AdminStyle {
                 'sa_testi_profile_destination', $this->style, [
             'label' => __('Destination', SHORTCODE_ADDOONS),
             'type' => Controls::TEXT,
-            'default' => 'Grapics Designe',
-            'placeholder' => 'Grapics Designe',
+            'default' => 'Grapics Designer',
+            'placeholder' => 'Grapics Designer',
                 ]
         );
-        
-        
         $this->add_control(
                 'sa_testi_profile_description', $this->style, [
             'label' => __('Short Details', SHORTCODE_ADDOONS),
@@ -757,9 +627,6 @@ class Style_9 extends AdminStyle {
             'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua dapibus tellus blandit quis. Cras tempor non mi et vestibulum.',
                 ]
         );
-      
-        
-        
         echo '</div>';
     }
 
