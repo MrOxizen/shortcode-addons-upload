@@ -1,0 +1,114 @@
+.oxi_addons__banner_style_10 {
+    width: 100%; 
+    background: linear-gradient(rgba(247, 254, 255, 0.00), rgba(247, 254, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2019/04/home_coffee_slider_bg.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    padding: 70px 181px 70px 181px;
+    overflow: hidden
+}
+ 
+.oxi_addons__banner_style_10 .oxi_addons__heading {
+    font-size: 57px; 
+    font-family: "Lily Script One";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #7f4836;
+    padding: 0px 0px 13px 0px; 
+    width: 100%;   
+}
+ 
+ 
+.oxi_addons__banner_style_10 .oxi_addons__heading_line{
+    width: 100%;
+    position: relative;
+}
+.oxi_addons__banner_style_10 .oxi_addons__line_main { 
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+.oxi_addons__banner_style_10 .oxi_addons__line { 
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 4px;
+    background: #7f4836;
+}
+
+.oxi_addons__banner_style_10 .oxi_addons__details {
+    font-size: 16px; 
+    font-family: "Poppins";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #7f4836;
+    padding: 20px 0px 20px 0px; 
+    width: 100%;
+}
+ 
+.oxi_addons__banner_style_10 .oxi_addons_image_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.oxi_addons__banner_style_10 .oxi_addons__image {
+    width: 400px;
+    max-width: 100%;
+    height: 100%
+}
+
+ 
+
+.oxi_addons__banner_style_10 .oxi_addons__image:hover {
+    cursor: pointer;
+    -o-transform: translate(5%);
+    -moz-transform: translate(5%);
+    -webkit-transform: translate(5%);
+    transform: translate(5%);
+    -ms-transform: translate(5%);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi_addons__banner_style_10 {
+        padding: 60px 80px 60px 80px
+    }
+    .oxi_addons__banner_style_10 .oxi_addons_heading {
+        font-size: 57px;
+        line-height: 48.5px;
+        padding: 0px 0px 13px 0px
+    }
+ 
+    .oxi_addons__banner_style_10 .oxi_addons__details {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 15px 0px 15px 0px
+    }
+    .oxi_addons__banner_style_10 .oxi_addons__image {
+        width: 600px; 
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi_addons__banner_style_10 {
+        padding: 40px 60px 40px 60px
+    }
+    .oxi_addons__banner_style_10 .oxi_addons_heading {
+        font-size: 57px;
+        line-height: 48.5px;
+        padding: 0px 0px 13px 0px
+    } 
+    .oxi_addons__banner_style_10 .oxi_addons__details {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 0px 10px 0px
+    }
+    .oxi_addons__banner_style_10 .oxi_addons__image {
+        width: 600px; 
+    }
+}
