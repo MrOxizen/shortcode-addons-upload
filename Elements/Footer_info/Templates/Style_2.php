@@ -15,19 +15,29 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_2 extends Templates {
-
+  
+    public function inline_public_css() {
+        $rt = '';
+        foreach ($this->child as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            $rt .= $this->background_render('sa_fi_icon_bg', $value, '.' . $this->WRAPPER . ' .oxi_addons_FI_2 .sa_icon_bg_color_' . $v['id']. ' .oxi-icons');
+          
+        }
+        return $rt;
+    }
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-
             $icon = $addressone = $addresstwo = $addresssection = '';
-            if (!empty($value['sa_fi_icon_class'])) {
-                $icon = (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0' ? '<div class="oxi_addons_FI_2_icon sa_icon_bg_color_' . $v['id'] . '" ' . $this->animation_render('sa_fi_icon_animation', $style) . '>' . $this->font_awesome_render($value['sa_fi_icon_class']) . '</div>' : '');
+            if (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0') {
+                $icon ='<div class="oxi_addons_FI_2_icon sa_icon_bg_color_' . $v['id'] . '" ' . $this->animation_render('sa_fi_icon_animation', $style) . '>
+                         ' . $this->font_awesome_render($value['sa_fi_icon_class']) . '
+                        </div>';
             }
             if (!empty($value['sa_fi_conten_text'])) {
                 $addressone = '<div class="oxi_addons_FI_2_C_A">' . $this->text_render($value['sa_fi_conten_text']) . '</div>';
             }
-            if (!empty($value['sa_fi_conten_text'])) {
+            if (!empty($value['sa_fi_content_text2'])) {
                 $addresstwo = '<div class="oxi_addons_FI_2_C_A2">' . $this->text_render($value['sa_fi_content_text2']) . '</div>';
             }
             if ($addressone != '' || $addresstwo != '') {
@@ -36,7 +46,6 @@ class Style_2 extends Templates {
                     ' . $addresstwo . '
                 </div>';
             }
-            $icon = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
             echo '<div class="' . $this->column_render('sa_fi_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="oxi_addons_FI_2">
                          <div class="oxi_addons_FI_2_row" ' . $this->animation_render('sa_fi_animation', $style) . '>
@@ -57,9 +66,6 @@ class Style_2 extends Templates {
 
             echo '</div>';
             
-             $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi_addons_FI_2 .sa_icon_bg_color_' . $v['id'] . ' .oxi-icons{
-                background: ' . $value['sa_fi_icon_bg'] . ';
-                }';
         }
     }
 

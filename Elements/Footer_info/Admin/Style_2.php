@@ -37,7 +37,7 @@ class Style_2 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-         $this->add_group_control(
+        $this->add_group_control(
                 'sa_fi_col', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
@@ -451,9 +451,7 @@ class Style_2 extends AdminStyle {
                 'shortcode-addons', [
             'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
             'showing' => TRUE,
-            'condition' => [
-                'sa_fi_icon' => 'yes',
-            ],
+           
                 ]
         );
 
@@ -485,6 +483,36 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
+        $this->add_responsive_control(
+                'sa_fi_icon_width_height', $this->style, [
+            'label' => __('Icon Box Width & Height', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 80,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => .1,
+                ],
+                'rem' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_fi_icon_size', $this->style, [
             'label' => __('Icon Size', SHORTCODE_ADDOONS),
@@ -579,36 +607,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::ANIMATION,
                 ]
         );
-        $this->add_responsive_control(
-                'sa_fi_icon_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
+       
         $this->add_responsive_control(
                 'sa_fi_icon_margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -684,13 +683,10 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_group_control(
                 'sa_fi_icon_bg', $this->style, [
-            'label' => __('Icon Background Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => '',
-                ]
+          'type' => Controls::BACKGROUND,
+              ]
         );
         $this->add_control(
                 'sa_fi_conten_text', $this->style, [

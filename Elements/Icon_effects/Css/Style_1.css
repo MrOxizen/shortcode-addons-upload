@@ -1,11 +1,12 @@
-.sa_addons_icon_effectses_container {
-    width: 100%;
-    float: left;
-}
-
 .sa_icon_effects_link {
     width: 100%;
     height: 100%;
+}
+
+.sa_addons_icon_effectses_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .sa_addons_icon_effects_style_1 {
@@ -15,7 +16,11 @@
     height: 100px;
     margin: 0px 0px;
     background: rgba(161, 5, 5, 1.00);
-    border-radius: 50px
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 .sa_addons_icon_effects_style_1:after {

@@ -44,8 +44,8 @@ and open the template in the editor.
     justify-content: center;
     color: #ffffff;
     background: #bf0232;
-   
-    padding: 15px 20px 15px 20px;
+    height: 80px;
+    width: 80px;
     border-radius: 50px 50px 50px 50px;
     font-size: 25px
 }
