@@ -565,29 +565,42 @@ class Style_3 extends AdminStyle {
                 ]
         );
         $this->add_repeater_control(
-                'sa-fi-columnds', $this->style, [
+                'sa_fi_icon_repeater', $this->style, [
             'label' => __('Icon Repeater', SHORTCODE_ADDOONS),
             'type' => Controls::REPEATER,
             'fields' => [
-                'sa_accordion_tab_title' => [
+                'sa_fi_icon_icon' => [
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
-                    'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
                     'loader' => TRUE,
                 ],
-                'sa_accordion_tab_cont' => [
+                'sa_fi_icon_url' => [
                     'type' => Controls::URL,
                     'controller' => 'add_group_control',
                 ],
             ],
-            'title_field' => 'sa_accordion_tab_title',
+            'title_field' => 'sa_fi_icon_icon',
             'condition' => [
                 'sa_fi_icon' => 'yes',
             ],
                 ]
         );
 
+
+
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->start_section_devider();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+            'condition' => [
+                'sa_fi_icon' => 'yes',
+            ],
+                ]
+        );
         $this->add_control(
                 'sa_fi_icon_align', $this->style, [
             'label' => __('Icon Align', SHORTCODE_ADDOONS),
@@ -618,62 +631,6 @@ class Style_3 extends AdminStyle {
                 ]
         );
 
-
-        $this->add_group_control(
-                'sa_fi_icon_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-            'condition' => [
-                'sa_fi_icon' => 'yes',
-            ],
-                ]
-        );
-
-        $this->add_responsive_control(
-                'sa_fi_icon_margin', $this->style, [
-            'label' => __('Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 20,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-            'condition' => [
-                'sa_fi_icon' => 'yes',
-            ],
-                ]
-        );
-
-        $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-            'condition' => [
-                'sa_fi_icon' => 'yes',
-            ],
-                ]
-        );
         $this->add_responsive_control(
                 'sa_fi_icon_size', $this->style, [
             'label' => __('Icon Size', SHORTCODE_ADDOONS),
@@ -704,7 +661,15 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_fi_icon_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -715,54 +680,23 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-
-
-        $this->add_group_control(
-                'sa_fi_icon_br', $this->style, [
-            'type' => Controls::BORDER,
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_fi_icon_hover_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon-area .oxi-icons' => ''
+                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon-area .oxi-icons:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
 
-        $this->add_responsive_control(
-                'sa_fi_icon_br_radius', $this->style, [
-            'label' => __('Border radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 50,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon-area .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],]
-        );
-        $this->add_group_control(
-                'sa_fi_icon_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon-area .oxi-icons' => ''
-            ],
-                ]
-        );
+
+
         $this->add_responsive_control(
                 'sa_fi_icon_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -793,6 +727,7 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();

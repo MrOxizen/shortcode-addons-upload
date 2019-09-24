@@ -50,6 +50,12 @@ class Style_1 extends AdminStyle {
                 'sa_accordion_tab_title' => [
                     'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
                     'type' => Controls::TEXT,
+                    'controller'=> 'add_responsive_control',
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa_accordion_tab_le' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
                     'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
                 ],
                 'sa_accordion_tab_titlse' => [
@@ -61,28 +67,34 @@ class Style_1 extends AdminStyle {
                     'label_off' => __('No', SHORTCODE_ADDOONS),
                     'return_value' => 'yes',
                 ],
-                'sa_accordion_tab_desc' => [
+               
+                 'sa_accordion_tab_desc' => [
                     'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
-                    'type' => Controls::TEXT,
-                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::ICON,
                 ],
                 'sa_accordion_tab_cont' => [
                     'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
-                    'type' => Controls::TEXT,
+                    'type' => Controls::COLOR,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa-ac-column' => [
+                    'label' => esc_html__('Tab URL', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::URL,
+                    'controller'=> 'add_group_control',
                     'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
                 ],
             ],
-            'title_field' => 'sa_accordion_tab_title',
+            'title_field' => 'sa_accordion_tab_le',
             'condition' => ['sa-ac-icon-position' => 'left']
                 ]
         );
 
-        $this->add_group_control(
-                'sa-ac-column', $this->style, [
-            'type' => Controls::URL,
-            'condition' => ['sa-ac-icon-position' => 'left']
-                ]
-        );
+//        $this->add_group_control(
+//                'sa-ac-column', $this->style, [
+//            'type' => Controls::URL,
+//            'condition' => ['sa-ac-icon-position' => 'left']
+//                ]
+//        );
         $this->add_control(
                 'sa_els_text', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),

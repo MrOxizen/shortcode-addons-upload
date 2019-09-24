@@ -23,66 +23,67 @@ class Style_1 extends Templates {
 //        echo $this->url_render('sa_dual_btn_left_link', $style);
         $icon = $heading_one = $heading_two = $button = $detail = '';
 
-        if ($stylefiles[8] != '') {
+        if ($style['sa_headers_h_1'] != '') {
             $heading_one = '
-                <div class="oxi-addons-heading-two" ' . OxiAddonsAnimation($styledata, 184) . '>
-                        ' . OxiAddonsTextConvert($stylefiles[8]) . '
+                <div class="oxi-addons-heading-two" ' . $this->animation_render('sa_headers_head_1_animation', $style) . '>
+                        ' . $this->text_render($style['sa_headers_h_1']) . '
                 </div>
             ';
         }
-        if ($stylefiles[6] != '') {
+        if ($style['sa_headers_h_2'] != '') {
             $heading_two = ' 
                 <div class="oxi-addons-heading-line">
-                    <div class="oxi-addons-heading-one" ' . OxiAddonsAnimation($styledata, 151) . '>
-                        ' . OxiAddonsTextConvert($stylefiles[6]) . '
+                    <div class="oxi-addons-heading-one" ' . $this->animation_render('sa_headers_head_2_animation', $style) . '>
+                        ' . $this->text_render($style['sa_headers_h_2']) . '
                     </div>
-                    <div class="oxi-addons-line" ' . OxiAddonsAnimation($styledata, 199) . '></div>
+                    <div class="oxi-addons-line" ' . $this->animation_render('sa_headers_line_animation', $style) . '></div>
                 </div>
             ';
         }
-        if ($stylefiles[4] != '') {
+
+        if ($style['sa_headers_sd'] != '') {
             $detail = '
-                    <div class="oxi-addons-short-detail" ' . OxiAddonsAnimation($styledata, 118) . '>
-                        ' . OxiAddonsTextConvert($stylefiles[4]) . '
+                    <div class="oxi-addons-short-detail" ' . $this->animation_render('sa_headers_sd_animation', $style) . '>
+                        ' . $this->text_render($style['sa_headers_sd']) . '
                     </div>
             ';
         }
 
-        if ($stylefiles[2] != '' && $stylefiles[12] != '') {
+        if ($style['sa_headers_icon'] != '' && $style['sa_headers_icon_link-url'] != '') {
             $icon = '
             <div class="oxi-addons-main-icon"> 
-                <a href="' . OxiAddonsUrlConvert($stylefiles[12]) . '" id="' . OxiAddonsTextConvert($stylefiles[14]) . '"  class="oxi-addons-link"  target="' . $styledata[343] . '" ' . OxiAddonsAnimation($styledata, 83) . '>
-                    ' . oxi_addons_font_awesome('' . $stylefiles[2] . '') . '
+                <a ' . $this->url_render('sa_headers_icon_link', $style) . '   class="oxi-addons-link"  ' . $this->animation_render('sa_headers_icon_animation', $style) . '>
+                    ' . $this->font_awesome_render($style['sa_headers_icon']) . '
                 </a> 
             </div>
         ';
-        } elseif ($stylefiles[2] != '' && $stylefiles[12] == '') {
+        } elseif ($style['sa_headers_icon'] != '' && $style['sa_headers_icon_link-url'] == '') {
             $icon = '
-            <div class="oxi-addons-main-icon" id="' . OxiAddonsTextConvert($stylefiles[14]) . '"> 
-                   ' . oxi_addons_font_awesome('' . $stylefiles[2] . '') . '
+            <div class="oxi-addons-main-icon"> 
+                    ' . $this->font_awesome_render($style['sa_headers_icon']) . '
             </div>
         ';
         }
 
 
-        if ($stylefiles[10] != '' && $stylefiles[12] != '') {
+        if ($style['sa_headers_button_left_text'] != '' && $style['sa_headers_button_left_link-url'] != '') {
             $button = '
-            <div class="oxi-addons-main-button" ' . OxiAddonsAnimation($styledata, 294) . '></>
-                <a href="' . OxiAddonsUrlConvert($stylefiles[12]) . '" class="oxi-addons-link"  target="' . $styledata[204] . '">
-                    ' . OxiAddonsTextConvert($stylefiles[10]) . '
+            <div class="oxi-addons-main-button" ' . $this->animation_render('sa_headers_button_left_animation', $style) . '></>
+                <a ' . $this->url_render('sa_headers_button_left_link', $style) . ' class="oxi-addons-link"  >
+                    ' . $this->text_render($style['sa_headers_button_left_text']) . '
                 </a>
             </div>
         ';
-        } elseif ($stylefiles[10] != '' && $stylefiles[12] == '') {
+        } elseif ($style['sa_headers_button_left_text'] != '' && $style['sa_headers_button_left_link-url'] == '') {
             $button = '
-        <div class="oxi-addons-main-button" ' . OxiAddonsAnimation($styledata, 294) . '></>
+        <div class="oxi-addons-main-button" ' . $this->animation_render('sa_headers_button_left_animation', $style) . '></>
             <div class="oxi-addons-link">
-                ' . OxiAddonsTextConvert($stylefiles[10]) . '
+                ' . $this->text_render($style['sa_headers_button_left_text']) . '
             </div>
         </div>
     ';
         }
-        if ($styledata[3] == 'left') {
+        if ($style['sa_headers_position_rev'] == 'left') {
             $column = '
             <div class="oxi-addons-wrapper-left-side">
                 ' . $heading_one . '
