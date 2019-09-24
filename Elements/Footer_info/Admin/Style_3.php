@@ -728,42 +728,6 @@ class Style_3 extends AdminStyle {
                 ]
         );
 
-
-
-
-        $this->add_responsive_control(
-                'sa_fi_icon_margin', $this->style, [
-            'label' => __('Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 20,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-            'condition' => [
-                'sa_fi_icon' => 'yes',
-            ],
-                ]
-        );
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
