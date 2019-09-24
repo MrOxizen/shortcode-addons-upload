@@ -70,7 +70,8 @@
 	border-radius: 50px 50px 50px 50px;
 	padding: 10px 30px 10px 30px;
 	margin: 5px 5px 5px 5px;
-	box-shadow: 0px 0px 0px 0px rgba(156, 156, 156, 1);
+    box-shadow: 0px 0px 0px 0px rgba(156, 156, 156, 1);
+    cursor: pointer
 }
 .oxi_addons__banner_style_6 .oxi_addons__icon_line{
     width: 100%;

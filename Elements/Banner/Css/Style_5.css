@@ -30,6 +30,14 @@
     width: 400px;
     height: 350px;
 }
+.oxi_addons__banner_style_5 .oxi_addons__image:hover {
+    cursor: pointer;
+    -o-transform: translate(5%);
+    -moz-transform: translate(5%);
+    -webkit-transform: translate(5%);
+    transform: translate(5%);
+    -ms-transform: translate(5%);
+}
 
 .oxi_addons__banner_style_5 .oxi_addons__heading {
     font-size: 26px;
