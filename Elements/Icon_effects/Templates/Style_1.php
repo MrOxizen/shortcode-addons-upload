@@ -20,9 +20,8 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-
+        $styledata = $this->style;
+        foreach ($styledata['sa_icon_effects_data'] as $key => $value) {
             $icon = $link = $endlink = '';
             if (array_key_exists('sa_icon_effects_icon', $value) && $value['sa_icon_effects_icon'] != '') {
                 $icon .= $this->font_awesome_render($value['sa_icon_effects_icon']);
@@ -33,27 +32,46 @@ class Style_1 extends Templates
                     $endlink .= '</a>';
                 }
             }
-            echo '<div class="' . $this->column_render('sa_icon_effects_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
+            echo '<div class="' . $this->column_render('sa_icon_effects_col', $style) . '">';
             echo $link;
             echo '<div class="sa_addons_icon_effectses_container">
-                        <div class="sa_addons_icon_effects_style_1" ' . $this->animation_render('sa_icon_effects_animation', $style) . '>
-                            ' . $icon . '
-                        </div>
+                    <div class="sa_addons_icon_effects_style_1 sa_icon_effects_unique_' . $key . '" ' . $this->animation_render('sa_icon_effects_animation', $style) . '>
+                        ' . $icon . '
+                    </div>
                 </div>
                 ';
             echo $endlink;
-            if ($admin == 'admin') :
-                echo '<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+
             echo '</div>';
         }
+    }
+    public function inline_public_css()
+    {
+        $styledata = $this->style;
+        echo '<pre>';
+        print_r($styledata['sa_icon_effects_data']);
+        echo '</pre>';
+        $css = '';
+        foreach ($styledata['sa_icon_effects_data'] as $key => $value) {
+            
+            $css .=  '.' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . ' {
+                            background: ' . $value['sa_icon_effects_bg'] . ';
+                        }
+                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . ' .oxi-icons {
+                            color: ' . $value['sa_icon_effects_color'] . ';
+                        }
+                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . ':hover {
+                            background: ' . $value['sa_icon_effects_bg_hover'] . ';
+                        }
+                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . ':hover .oxi-icons {
+                            color: ' . $value['sa_icon_effects_color_hover'] . ';
+                        }
+                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . ':after {
+                            box-shadow: 0 0 0 ' . $styledata['sa_icon_effects_border_w-size'] . 'px ' . $value['sa_icon_effects_bg_hover'] . ';
+                        }
+                        ';
+        }
+        return $css;
     }
 
     public function old_render()

@@ -69,115 +69,25 @@ class Style_1 extends AdminStyle
                         'type' => Controls::ICON,
                         'default' => 'fab fa-linkedin-in',
                     ],
-                    'sa_ico  lor' => [
+                    
+                    'sa_icon_effects_color' => [
                         'label' => __('Color', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
                     ],
-                    'sa_icon_effects_colort' => [
-                        'label' => __('TEXT', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT,
+                    'sa_icon_effects_bg' => [
+                        'label' => __('Background', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'oparetor' => 'RGB',
                     ],
-                    'sa_icon_effects_colorts' => [
-                        'label' => __('TEXTAREA', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXTAREA,
+                    'sa_icon_effects_color_hover' => [
+                        'label' => __('Hover Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
                     ],
-                    'sa_icon_effects_colortsWYSIWYG' => [
-                        'label' => __('WYSIWYG', SHORTCODE_ADDOONS),
-                        'type' => Controls::WYSIWYG,
+                    'sa_icon_effects_bg_hover' => [
+                        'label' => __('Hover Background', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'oparetor' => 'RGB',
                     ],
-                    'sa_icon_effects_color-NUMBER' => [
-                        'label' => __('NUMBER', SHORTCODE_ADDOONS),
-                        'type' => Controls::NUMBER,
-                    ],
-                    'sa_icon_effects_color-SLIDER' => [
-                        'label' => __('SLIDER', SHORTCODE_ADDOONS),
-                        'type' => Controls::SLIDER,
-                        'default' => [
-                            'unit' => 'px',
-                            'size' => '',
-                        ],
-                        'range' => [
-                            'px' => [
-                                'min' => -200,
-                                'max' => 200,
-                                'step' => 1,
-                            ],
-                            '%' => [
-                                'min' => 0,
-                                'max' => 50,
-                                'step' => .1,
-                            ],
-                            'em' => [
-                                'min' => 0,
-                                'max' => 10,
-                                'step' => .1,
-                            ],
-                        ],
-                    ],
-                    'sa_icon_effects_color-CHOOSE' => [
-                        'label' => __('CHOOSE', SHORTCODE_ADDOONS),
-                        'type' => Controls::CHOOSE,
-                        'operator' => Controls::OPERATOR_ICON,
-                        'default' => 'center',
-                        'options' => [
-                            'left' => [
-                                'title' => __('H1', 'plugin-domain'),
-                                'icon' => 'fas fa-sort-amount-up',
-                            ],
-                            'center' => [
-                                'title' => __('H2', 'plugin-domain'),
-                                'icon' => 'fas fa-exchange-alt',
-                            ],
-                            'right' => [
-                                'title' => __('H4', 'plugin-domain'),
-                                'icon' => 'fas fa-sort-amount-down',
-                            ],
-                        ],
-                    ],
-                    'sa_icon_effects_color-BOXSHADOW' => [
-                        'label' => __('BOXSHADOW', SHORTCODE_ADDOONS),
-                        'type' => Controls::BOXSHADOW,
-                        'controller' => 'add_group_control'
-                    ],
-                    'sa_icon_effects_color-TEXTSHADOW' => [
-                        'label' => __('TEXTSHADOW', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXTSHADOW,
-                        'controller' => 'add_group_control'
-                    ],
-                    'sa_icon_effects_color-BORDER' => [
-                        'label' => __('BORDER', SHORTCODE_ADDOONS),
-                        'type' => Controls::BORDER,
-                        'controller' => 'add_group_control'
-                    ],
-                    'sa_icon_effects_color-MEDIA' => [
-                        'label' => __('MEDIA', SHORTCODE_ADDOONS),
-                        'type' => Controls::MEDIA,
-                        'controller' => 'add_group_control'
-                    ],
-                    'sa_icon_effects_color-BACKGROUND' => [
-                        'label' => __('BACKGROUND', SHORTCODE_ADDOONS),
-                        'type' => Controls::BACKGROUND,
-                        'controller' => 'add_group_control'
-                    ],
-                    'sa_icon_effects_color-TYPOGRAPHY' => [
-                        'label' => __('TYPOGRAPHY', SHORTCODE_ADDOONS),
-                        'type' => Controls::TYPOGRAPHY,
-                        'controller' => 'add_group_control'
-                    ],
-                    // 'sa_icon_effects_bg' => [
-                    //     'label' => __('Background', SHORTCODE_ADDOONS),
-                    //     'type' => Controls::COLOR,
-                    //     'oparetor' => 'RGB',
-                    // ],
-                    // 'sa_icon_effects_color_hover' => [
-                    //     'label' => __('Hover Color', SHORTCODE_ADDOONS),
-                    //     'type' => Controls::COLOR,
-                    // ],
-                    // 'sa_icon_effects_bg_hover' => [
-                    //     'label' => __('Hover Background', SHORTCODE_ADDOONS),
-                    //     'type' => Controls::COLOR,
-                    //     'oparetor' => 'RGB',
-                    // ],
                     'sa_icon_effects_type' => [
                         'label' => __('Icon Effects Type', SHORTCODE_ADDOONS),
                         'type' => Controls::SELECT,
@@ -185,14 +95,13 @@ class Style_1 extends AdminStyle
                         'options' => [
                             'sa_effects_inside' => __('Inside', SHORTCODE_ADDOONS),
                             'sa_effects_outside' => __('Outside', SHORTCODE_ADDOONS),
-
                         ],
                     ],
                     'sa_icon_effects_url_open' => [
                         'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
                         'type' => Controls::SWITCHER,
                         'default' => '',
-                        'loader' => TRUE,
+                        // 'loader' => TRUE,
                         'label_on' => __('Yes', SHORTCODE_ADDOONS),
                         'label_off' => __('No', SHORTCODE_ADDOONS),
                         'return_value' => 'yes',
@@ -201,7 +110,11 @@ class Style_1 extends AdminStyle
                     'sa_icon_effects_url' => [
                         'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
                         'type' => Controls::URL,
-                        'controller' => 'add_group_control'
+                        'controller' => 'add_group_control',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_icon_effects_url_open' => 'yes'
+                        ]
                     ],
                 ],
                 'title_field' => 'sa_icon_effects_icon',
@@ -351,9 +264,7 @@ class Style_1 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
-                // 'selector' => [
-                //     '{{WRAPPER}} .sa_addons_icon_effects_style_1' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
-                // ],
+
             ]
         );
 
@@ -390,7 +301,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_icon_effects_w_hei',
+            'sa_icon_effects_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
