@@ -19,12 +19,9 @@ and open the template in the editor.
     border: 0px dotted #f52323;
     border-radius: 0px 0px 0px 0px;
     box-shadow: 0px 0px 0px 0px rgba(247, 247, 247, 1);
-    ;
     padding: 30px 30px 30px 30px;
     background: linear-gradient(rgba(8, 166, 214, 1.00), rgba(8, 166, 214, 1.00)), url("OxiAddonsFI-2-G-M-right") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+   
     background-size: cover;
     ;
     overflow: auto
