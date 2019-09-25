@@ -34,12 +34,14 @@ class Style_4 extends Templates {
         }
         if (array_key_exists('sa_fi_logo', $style) && $style['sa_fi_logo'] != '0') {
             $logo = '<div class="oxi_addons_FI_4_col_1" >
-                        <a ' . $this->url_render('sa_fi_logo_url', $style) . ' >
-                            <div class="oxi_addons_FI_4_logo" ' . $this->animation_render('sa_fi_logo_animation', $style) . '>
-                               ' . $logo_logo . '
-                               ' . $logo_text . '
-                            </div>
-                        </a>
+                        <div class="oxi_addons_FI_4_logo_body" >
+                            <a ' . $this->url_render('sa_fi_logo_url', $style) . ' >
+                                <div class="oxi_addons_FI_4_logo" ' . $this->animation_render('sa_fi_animation', $style) . '>
+                                   ' . $logo_logo . '
+                                   ' . $logo_text . '
+                                </div>
+                            </a>
+                        </div>
                     </div>';
         }
 
@@ -63,7 +65,9 @@ class Style_4 extends Templates {
 
         if (array_key_exists('sa_fi_content', $style) && $style['sa_fi_content'] != '0') {
             $contact = '<div class="oxi_addons_FI_4_col_2">
-                            ' . $details . '
+                            <div class="oxi_addons_FI_4_content" ' . $this->animation_render('sa_fi_animation', $style) . '>
+                                ' . $details . '
+                            </div>
                          </div>';
         }
 
@@ -71,8 +75,8 @@ class Style_4 extends Templates {
         //Icon Section
 
         $icon = $icon_icon = '';
-
-        foreach ($style['sa_fi_icon_repeater'] as $value) {
+        $repeater =  (array_key_exists('sa_fi_icon_repeater', $style) && is_array($style['sa_fi_icon_repeater'])) ? $style['sa_fi_icon_repeater'] : [];
+        foreach ($repeater as $value) {
             $icon .= ' <a ' . $this->url_render('sa_fi_icon_url', $value) . '>
                             ' . $this->font_awesome_render($value['sa_fi_icon_icon']) . '
                          </a> ';
@@ -80,7 +84,7 @@ class Style_4 extends Templates {
 
         if (array_key_exists('sa_fi_icon', $style) && $style['sa_fi_icon'] != '0') {
             $icon_icon = '<div class="oxi_addons_FI_4_col_3">
-                            <div class="oxi_addons_FI_4_icon">
+                            <div class="oxi_addons_FI_4_icon" ' . $this->animation_render('sa_fi_animation', $style) . '>
                             ' . $icon . '
                             </div>
                         </div>';

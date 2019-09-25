@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_header(
@@ -65,7 +65,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Heading One', SHORTCODE_ADDOONS),
             'type' => Controls::TEXT,
             'placeholder' => 'This is Heading One',
-            'default' => 'DESIGN AGENCY',
+            'default' => 'TAKING CARE OF',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading-two' => '',
             ],
@@ -76,7 +76,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Heading Two', SHORTCODE_ADDOONS),
             'type' => Controls::TEXT,
             'placeholder' => 'This is Heading One',
-            'default' => 'Designing World with Togetherness.',
+            'default' => 'Business',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading-one' => '',
             ],
@@ -87,7 +87,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Short Details', SHORTCODE_ADDOONS),
             'type' => Controls::TEXTAREA,
             'placeholder' => 'This is Short Details...',
-            'default' => 'Through brand strategy and design, we craft experiences that help brands stand out as well as stand for something.',
+            'default' => 'We make pancakes better than Barack Obama. To succeed in your mission, you must have single-minded devotion to your goal.',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-short-detail' => '',
             ],
@@ -98,7 +98,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Icon', SHORTCODE_ADDOONS),
             'type' => Controls::ICON,
             Controls::SEPARATOR => TRUE,
-            'default' => 'fas fa-play-circle',
+            'default' => 'fab fa-pinterest',
                 ]
         );
         $this->add_group_control(
@@ -427,7 +427,7 @@ class Style_1 extends AdminStyle {
                 'sa_headers_line_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#404040',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-line::after' => 'background:{{VALUE}};',
             ],
@@ -451,7 +451,7 @@ class Style_1 extends AdminStyle {
                 'sa_headers_head_1_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#1a1a1a',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-one' => 'color:{{VALUE}};',
             ],
@@ -516,7 +516,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
            
-            'default' => '#6b6b6b',
+            'default' => '#e3e3e3',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-two' => 'color:{{VALUE}};',
             ],
@@ -580,7 +580,7 @@ class Style_1 extends AdminStyle {
                 'sa_headers_sd_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#f2f2f2',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-short-detail' => 'color :{{VALUE}};',
             ],
@@ -680,7 +680,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Position ', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
+            'default' => 'center',
             'loader' => TRUE,
             'options' => [
                 'left' => [
@@ -742,7 +742,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::DIMENSIONS,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 0,
+                        'size' => '',
                     ],
                     'range' => [
                         '%' => [
@@ -824,7 +824,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(69, 69, 69, 1)',
+                    'default' => 'rgba(214, 197, 197, 0)',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-main-button .oxi-addons-link' => 'background-color:{{VALUE}};'
@@ -849,7 +849,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::DIMENSIONS,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 0,
+                        'size' => 50,
                     ],
                     'range' => [
                         '%' => [
@@ -892,7 +892,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => '#fff',
+                    'default' => '#242424',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-main-button .oxi-addons-link:hover' => 'color:{{VALUE}};',
                     ],
@@ -904,7 +904,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(133, 133, 133, 1)',
+                    'default' => 'rgba(255, 255, 255, 1)',
                     'separetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-main-button .oxi-addons-link:hover' => 'background-color:{{VALUE}};'
@@ -929,7 +929,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::DIMENSIONS,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 0,
+                        'size' => '',
                     ],
                     'range' => [
                         '%' => [
