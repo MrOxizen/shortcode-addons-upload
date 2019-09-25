@@ -1,0 +1,94 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi_addons_FI_5 {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi_addons_FI_5 .oxi_addons_FI_5_row {
+    width: 100%;
+    margin: auto;
+    border: 0px solid #eb2323;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(207, 195, 195, 1);
+    ;
+    padding: 50px 50px 50px 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url("https://www.oxilab.org/wp-content/uploads/2019/03/maxresdefault.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    ;
+    overflow: auto
+}
+
+.oxi_addons_FI_5 .oxi_addons_FI_5_image {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi_addons_FI_5 .oxi_addons_FI_5_img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+
+}
+
+.oxi_addons_FI_5 .oxi_addons_FI_5_content {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px 10px 10px 10px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi_addons_FI_5 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_5 .oxi_addons_FI_5_row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 50px 50px 50px 50px
+    }
+    .oxi_addons_FI_5 .oxi_addons_FI_5_img {
+        max-width: 300px;
+        padding: 10px
+    }
+    .oxi_addons_FI_5 .oxi_addons_FI_5_content {
+        font-size: 16px;
+        padding: 10px 10px 10px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi_addons_FI_5 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi_addons_FI_5 .oxi_addons_FI_5_row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 50px 50px 50px 50px
+    }
+    .oxi_addons_FI_5 .oxi_addons_FI_5_img {
+        max-width: 300px;
+        padding: 10px
+    }
+    .oxi_addons_FI_5 .oxi_addons_FI_5_content {
+        font-size: 16px;
+        padding: 10px 10px 10px 10px
+    }
+}
