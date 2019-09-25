@@ -1,0 +1,189 @@
+ .oxi-addons-wrapper-image-accordion {
+     max-width: 100%;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-admin-absulote {
+     z-index: 999
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion {
+     width: 100%;
+     max-width: 1000px;
+     padding: 0px 0px 0px 0px
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul {
+     width: 100%;
+     display: table;
+     table-layout: fixed;
+     margin: 0;
+     padding: 0
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul > li {
+     display: table-cell;
+     vertical-align: bottom;
+     position: relative;
+     width: 16.666%;
+     height: auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+     transition: all 500ms ease;
+     background-size: cover
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-overlay {
+     display: block;
+     overflow: hidden;
+     width: 100%
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-link {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     height: 300px;
+     width: 100%;
+     position: relative;
+     z-index: 3;
+     vertical-align: bottom;
+     box-sizing: border-box;
+     text-decoration: none;
+     font-family: Open Sans, sans-serif;
+     transition: all 200ms ease
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-link * {
+     opacity: 0;
+     margin: 0;
+     width: 100%;
+     position: relative;
+     z-index: 5;
+     overflow: hidden;
+     -webkit-transform: translateX(500px);
+     transform: translateX(500px);
+     -webkit-transition: all 400ms ease;
+     transition: all 400ms ease
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-heading {
+     font-size: 18px;
+     font-family: "Oswald";
+     font-weight: 100;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: center;
+     ;
+     color: #ffffff;
+     padding: 0px 0px 0px 0px;
+     width: 100%;
+     float: left
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-details {
+     font-size: 18px;
+     font-family: "Oswald";
+     font-weight: 100;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: center;
+     ;
+     color: #ffffff;
+     padding: 0px 0px 0px 0px;
+     width: 100%;
+     float: left
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul > li:focus {
+     outline: none
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul:hover > li:hover,
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul > li:focus,
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul:focus-within > li:focus {
+     width: 100%
+ }
+ 
+ .oxi-addons-accordion .oxi-addons-accordion-ul:hover > li:hover .oxi-link,
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul > li:focus .oxi-link,
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul:focus-within > li:focus .oxi-link {
+     background: rgba(32, 33, 33, 0.37)
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul:hover > li:hover .oxi-link *,
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul > li:focus .oxi-link *,
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul:focus-within > li:focus .oxi-link * {
+     opacity: 1;
+     -webkit-transform: translateX(0);
+     transform: translateX(0)
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul:hover > li:hover {
+     width: 60% !important
+ }
+ 
+ .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-accordion-ul:hover > li:hover .oxi-link * {
+     opacity: 1 !important;
+     -webkit-transform: translateX(0);
+     transform: translateX(0)
+ }
+ 
+ 
+ .oxi-addons-accordion  .oxi-link.sa-image_accordion-overlay_animation_1 *{
+     -webkit-transform: translateX(500px);
+     transform: translateX(500px);
+ }
+ .oxi-addons-accordion  .oxi-link.sa-image_accordion-overlay_animation_2 *{
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+ }
+ .oxi-addons-accordion  .oxi-link.sa-image_accordion-overlay_animation_3 *{
+     -webkit-transform: translateY(500px);
+     transform: translateY(500px);
+ }
+ .oxi-addons-accordion  .oxi-link.sa-image_accordion-overlay_animation_4 *{
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+ }
+ 
+ @media only screen and (min-width:669px) and (max-width:993px) {
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion {
+         max-width: 1000px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-link {
+         height: 300px
+     }
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-heading {
+         font-size: 18px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-details {
+         font-size: 18px;
+         padding: 0px 0px 0px 0px
+     }
+ }
+ 
+ @media only screen and (max-width:668px) {
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion {
+         height: auto
+     }
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion {
+         max-width: 1000px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-link {
+         height: 300px
+     }
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-heading {
+         font-size: 18px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-details {
+         font-size: 18px;
+         padding: 0px 0px 0px 0px
+     }
+ }

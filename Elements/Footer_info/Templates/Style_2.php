@@ -226,6 +226,7 @@ class Style_2 extends Templates {
                 }';
 
         wp_add_inline_style('shortcode-addons-style', $css);
+        
     }
 
 }

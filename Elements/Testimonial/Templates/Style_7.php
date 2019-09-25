@@ -42,17 +42,10 @@ class Style_7 extends Templates {
                 </div>';
             }
             
-            if($style['sa-testimonial-profile-body_alignment'] == 'left'){
-                 $class = "sa-testimonial-profile-body-seven-left";
-            }elseif($style['sa-testimonial-profile-body_alignment'] == 'right'){
-                $class = "sa-testimonial-profile-body-seven-right";
-            }else{
-                 $class = "sa-testimonial-profile-body-seven-center";
-            }
 
             echo ' <div class="oxi-testimonials-seven-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '" >
                     <div class="oxi-testimonials-item-seven">
-                        <div class="oxi-testimonials-style-seven '.$class.'" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
+                        <div class="oxi-testimonials-style-seven '.$style['sa-testimonial-profile-body_alignment'].'" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
                             ' . $image . '
                             ' . $info . '
                             ' . $name . '
