@@ -48,9 +48,6 @@ class Style_1 extends Templates
     public function inline_public_css()
     {
         $styledata = $this->style;
-        echo '<pre>';
-        print_r($styledata['sa_icon_effects_data']);
-        echo '</pre>';
         $css = '';
         foreach ($styledata['sa_icon_effects_data'] as $key => $value) {
             
@@ -83,9 +80,6 @@ class Style_1 extends Templates
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
         $css = '';
-        // echo '<pre>';
-        // print_r($styledata);
-        // echo '</pre>';
         echo '<div class="oxi-addons-container  "  >'
             . '<div class="oxi-addons-row oxi-addons-center"  ' . OxiAddonsAnimation($styledata, 23) . '>';
         foreach ($listdata as $value) {

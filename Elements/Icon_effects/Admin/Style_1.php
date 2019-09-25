@@ -69,28 +69,61 @@ class Style_1 extends AdminStyle
                         'type' => Controls::ICON,
                         'default' => 'fab fa-linkedin-in',
                     ],
-                    
+
+                    'shortcode-addons-start-tabs' => [
+                        'controller' => 'start_controls_tabs',
+                        'options' => [
+                            'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                            'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                        ]
+                    ],
+
+                    'shortcode-addons-start-tab1' => [
+                        'controller' => 'start_controls_tab',
+                    ],
+
                     'sa_icon_effects_color' => [
                         'label' => __('Color', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
                     ],
+
                     'sa_icon_effects_bg' => [
                         'label' => __('Background', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                     ],
+
+                    'shortcode-addons-start-tab1-end' => [
+                        'controller' => 'end_controls_tab',
+                    ],
+
+                    'shortcode-addons-start-tab2' => [
+                        'controller' => 'start_controls_tab',
+                    ],
+
                     'sa_icon_effects_color_hover' => [
                         'label' => __('Hover Color', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
                     ],
+
                     'sa_icon_effects_bg_hover' => [
                         'label' => __('Hover Background', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                     ],
+
+                    'shortcode-addons-start-tab2-end' => [
+                        'controller' => 'end_controls_tab',
+                    ],
+
+                    'shortcode-addons-start-tabs-end' => [
+                        'controller' => 'end_controls_tabs',
+                    ],
+
                     'sa_icon_effects_type' => [
                         'label' => __('Icon Effects Type', SHORTCODE_ADDOONS),
                         'type' => Controls::SELECT,
+                        Controls::SEPARATOR => TRUE,
                         'default' => 'sa_effects_inside',
                         'options' => [
                             'sa_effects_inside' => __('Inside', SHORTCODE_ADDOONS),
