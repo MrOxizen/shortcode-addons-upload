@@ -92,7 +92,11 @@
         height: 90px;
         box-shadow: 0 0 0 5px #066a73;
         margin: 0px 0px;
-        border-radius: oxi-addons-preview-BG px
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
     }
     .sa_addons_icon_effects_style_3 .oxi-icons {
         font-size: 45px;
@@ -119,7 +123,11 @@
         height: 80px;
         box-shadow: 0 0 0 5px #066a73;
         margin: 0px 0px;
-        border-radius: #ffffffpx
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
     }
     .sa_addons_icon_effects_style_3 .oxi-icons {
         font-size: 40px;

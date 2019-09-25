@@ -21,7 +21,9 @@ class Style_1 extends Templates
     public function default_render($style, $child, $admin)
     {
         $styledata = $this->style;
-        foreach ($styledata['sa_icon_effects_data'] as $key => $value) {
+        
+       $all_data =  (array_key_exists('sa_icon_effects_data', $styledata) && is_array($styledata['sa_icon_effects_data'])) ? $styledata['sa_icon_effects_data'] : [];
+        foreach ($all_data  as $key => $value) {
             $icon = $link = $endlink = '';
             if (array_key_exists('sa_icon_effects_icon', $value) && $value['sa_icon_effects_icon'] != '') {
                 $icon .= $this->font_awesome_render($value['sa_icon_effects_icon']);
