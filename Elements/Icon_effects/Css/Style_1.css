@@ -14,7 +14,7 @@
     max-width: 100px;
     width: 100%;
     height: 100px;
-    margin: 0px 0px;
+    margin: 5px;
     background: rgba(161, 5, 5, 1.00);
     border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -56,7 +56,7 @@
     max-width: 100px;
     width: 100%;
     height: 100px;
-    margin: 0px 0px;
+    margin: 5px;
     animation-duration: .5s;
     background: #910909;
     border-radius: 50px
@@ -80,19 +80,31 @@
 .sa_addons_icon_effects_style_1:hover .oxi-icons {
     color: #ffffff
 }
+.sa_addons_icon_effects_style_1.sa_effects_outside:after {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.sa_addons_icon_effects_style_1.sa_effects_outside:hover:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
 
 @media only screen and (min-width:669px) and (max-width:993px) {
     .sa_addons_icon_effects_style_1 {
         max-width: 90px;
         height: 90px;
-        margin: 0px 0px
     }
     .sa_addons_icon_effects_style_1:hover,
     .sa_addons_icon_effects_style_1:focus,
     .sa_addons_icon_effects_style_1:active {
         max-width: 90px;
         height: 90px;
-        margin: 0px 0px;
         border-radius: 50px;
         -webkit-border-radius: 50px;
         -moz-border-radius: 50px;
@@ -115,14 +127,12 @@
     .sa_addons_icon_effects_style_1 {
         max-width: 80px;
         height: 80px;
-        margin: 0px 0px
     }
     .sa_addons_icon_effects_style_1:hover,
     .sa_addons_icon_effects_style_1:focus,
     .sa_addons_icon_effects_style_1:active {
         max-width: 80px;
         height: 80px;
-        margin: 0px 0px;
         border-radius: 50px;
         -webkit-border-radius: 50px;
         -moz-border-radius: 50px;
@@ -139,4 +149,6 @@
         padding: 5px;
         box-shadow: 0 0 0 5px rgba(145, 9, 9, 1.00)
     }
+
+
 }
