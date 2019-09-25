@@ -307,7 +307,7 @@ class Style_4 extends AdminStyle {
         );
         $this->add_responsive_control(
                 'sa_fi_logo_height', $this->style, [
-            'label' => __('Icon Box Height', SHORTCODE_ADDOONS),
+            'label' => __('Logo Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
@@ -340,7 +340,7 @@ class Style_4 extends AdminStyle {
         );
         $this->add_responsive_control(
                 'sa_fi_logo_width', $this->style, [
-            'label' => __('Icon Box Width', SHORTCODE_ADDOONS),
+            'label' => __('Logo Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',

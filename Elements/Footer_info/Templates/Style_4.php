@@ -75,8 +75,8 @@ class Style_4 extends Templates {
         //Icon Section
 
         $icon = $icon_icon = '';
-
-        foreach ($style['sa_fi_icon_repeater'] as $value) {
+        $repeater =  (array_key_exists('sa_fi_icon_repeater', $style) && is_array($style['sa_fi_icon_repeater'])) ? $style['sa_fi_icon_repeater'] : [];
+        foreach ($repeater as $value) {
             $icon .= ' <a ' . $this->url_render('sa_fi_icon_url', $value) . '>
                             ' . $this->font_awesome_render($value['sa_fi_icon_icon']) . '
                          </a> ';
