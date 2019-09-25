@@ -21,8 +21,8 @@ class Style_1 extends Templates
     public function default_render($style, $child, $admin)
     {
         $styledata = $this->style;
-        
-       $all_data =  (array_key_exists('sa_icon_effects_data', $styledata) && is_array($styledata['sa_icon_effects_data'])) ? $styledata['sa_icon_effects_data'] : [];
+
+        $all_data = (array_key_exists('sa_icon_effects_data', $styledata) && is_array($styledata['sa_icon_effects_data'])) ? $styledata['sa_icon_effects_data'] : [];
         foreach ($all_data  as $key => $value) {
             $icon = $link = $endlink = '';
             if (array_key_exists('sa_icon_effects_icon', $value) && $value['sa_icon_effects_icon'] != '') {
@@ -36,8 +36,8 @@ class Style_1 extends Templates
             }
             echo '<div class="sa_addons_icon_effects_colum ' . $this->column_render('sa_icon_effects_col', $style) . '">';
             echo $link;
-            echo '<div class="sa_addons_icon_effects_container" '.$this->animation_render('sa_icon_effects_animation', $styledata).'>
-                    <div class="sa_addons_icon_effects_style_1 sa_icon_effects_unique_' . $key . ' ' . ($value['sa_icon_effects_type'] == 'sa_effects_outside' ? 'sa_effects_outside' : '') . ' ">
+            echo '<div class="sa_addons_icon_effects_container" ' . $this->animation_render('sa_icon_effects_animation', $styledata) . '>
+                    <div class="sa_addons_icon_effects_style_1 sa_icon_effects_unique_' . $key . ' ' . $value['sa_icon_effects_type'] . ' ">
                         ' . $icon . '
                     </div>
                 </div>
