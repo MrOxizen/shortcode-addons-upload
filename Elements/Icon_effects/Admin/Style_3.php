@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle
+class Style_3 extends AdminStyle
 {
 
     public function register_controls()
@@ -52,6 +52,7 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::COLUMN,
+                'default' => 3,
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_icon_effects_colum' => ''
                 ],
@@ -64,12 +65,22 @@ class Style_1 extends AdminStyle
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
                 'fields' => [
+                    
                     'sa_icon_effects_icon' => [
                         'label' => esc_html__('Icon', SA_ELEMENTOR_TEXTDOMAIN),
                         'type' => Controls::ICON,
                         'default' => 'fab fa-linkedin-in',
                     ],
-
+                    'sa_icon_effects_type' => [
+                        'label' => __('Icon Effects Type', SHORTCODE_ADDOONS),
+                        'type' => Controls::SELECT,
+                        Controls::SEPARATOR => TRUE,
+                        'default' => 'sa_effects_inside',
+                        'options' => [
+                            'sa_effects_inside' => __('Style 01', SHORTCODE_ADDOONS),
+                            'sa_effects_outside' => __('Style 02', SHORTCODE_ADDOONS),
+                        ],
+                    ],
                     'shortcode-addons-start-tabs' => [
                         'controller' => 'start_controls_tabs',
                         'options' => [
@@ -114,6 +125,20 @@ class Style_1 extends AdminStyle
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_icon_effects_type' => 'sa_effects_inside'
+                        ]
+                    ],
+                    'sa_icon_effects_border_hover' => [
+                        'label' => __('Border Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'oparetor' => 'RGB',
+                        'default' => '#2AD4BB',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_icon_effects_type' => 'sa_effects_outside'
+                        ]
                     ],
 
                     'shortcode-addons-start-tab2-end' => [
@@ -124,16 +149,7 @@ class Style_1 extends AdminStyle
                         'controller' => 'end_controls_tabs',
                     ],
 
-                    'sa_icon_effects_type' => [
-                        'label' => __('Icon Effects Type', SHORTCODE_ADDOONS),
-                        'type' => Controls::SELECT,
-                        Controls::SEPARATOR => TRUE,
-                        'default' => 'sa_effects_inside',
-                        'options' => [
-                            'sa_effects_inside' => __('Inside', SHORTCODE_ADDOONS),
-                            'sa_effects_outside' => __('Outside', SHORTCODE_ADDOONS),
-                        ],
-                    ],
+                    
                     'sa_icon_effects_url_open' => [
                         'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
                         'type' => Controls::SWITCHER,
@@ -236,7 +252,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -268,8 +284,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1 .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2 .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -332,7 +348,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -364,7 +380,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1:after' => 'padding: {{SIZE}}{{UNIT}}; top: -{{SIZE}}{{UNIT}}; left: -{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:after' => 'padding: {{SIZE}}{{UNIT}}; top: -{{SIZE}}{{UNIT}}; left: -{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -396,10 +412,10 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1:hover' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_1:active' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:hover' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:active' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

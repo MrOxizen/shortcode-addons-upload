@@ -32,10 +32,10 @@ class Style_1 extends Templates
                     $endlink .= '</a>';
                 }
             }
-            echo '<div class="' . $this->column_render('sa_icon_effects_col', $style) . '">';
+            echo '<div class="sa_addons_icon_effects_colum ' . $this->column_render('sa_icon_effects_col', $style) . '">';
             echo $link;
-            echo '<div class="sa_addons_icon_effectses_container">
-                    <div class="sa_addons_icon_effects_style_1 sa_icon_effects_unique_' . $key . '" ' . $this->animation_render('sa_icon_effects_animation', $style) . '>
+            echo '<div class="sa_addons_icon_effects_container" '.$this->animation_render('sa_icon_effects_animation', $styledata).'>
+                    <div class="sa_addons_icon_effects_style_1 sa_icon_effects_unique_' . $key . ' ' . ($value['sa_icon_effects_type'] == 'sa_effects_outside' ? 'sa_effects_outside' : '') . ' ">
                         ' . $icon . '
                     </div>
                 </div>
@@ -50,7 +50,7 @@ class Style_1 extends Templates
         $styledata = $this->style;
         $css = '';
         foreach ($styledata['sa_icon_effects_data'] as $key => $value) {
-            
+
             $css .=  '.' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . ' {
                             background: ' . $value['sa_icon_effects_bg'] . ';
                         }
@@ -65,6 +65,20 @@ class Style_1 extends Templates
                         }
                         .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . ':after {
                             box-shadow: 0 0 0 ' . $styledata['sa_icon_effects_border_w-size'] . 'px ' . $value['sa_icon_effects_bg_hover'] . ';
+                        }
+                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . '.sa_effects_outside:after {
+                                transform: scale(1.2);
+                                -webkit-transform: scale(1.2);
+                                -moz-transform: scale(1.2);
+                                -ms-transform: scale(1.2);
+                                -o-transform: scale(1.2);
+                        }
+                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_1.sa_icon_effects_unique_' . $key . '.sa_effects_outside:hover:after {
+                                transform: scale(1);
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
                         }
                         ';
         }
