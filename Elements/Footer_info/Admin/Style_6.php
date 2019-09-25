@@ -193,7 +193,7 @@ class Style_6 extends AdminStyle {
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Image Setting', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Icon Section Setting', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
