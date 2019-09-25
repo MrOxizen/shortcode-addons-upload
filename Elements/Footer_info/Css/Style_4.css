@@ -64,13 +64,16 @@ and open the template in the editor.
     ;
     border: 0px solid #f7ad0f
 }
-
-.oxi_addons_FI_4 .oxi_addons_FI_4_logo {
+.oxi_addons_FI_4 .oxi_addons_FI_4_logo_body {
     width: 100%;
-    display: flex;
+    float: left;
+    text-align: center;
+}
+.oxi_addons_FI_4 .oxi_addons_FI_4_logo {
+    display: inline-flex;
     border: 2px solid #ffffff;
     background: rgba(0, 240, 92, 0.30);
-  
+
 }
 .oxi_addons_FI_4 .oxi_addons_FI_4_logo_logo {
     height: 100px;
@@ -86,8 +89,15 @@ and open the template in the editor.
     line-height: 1.3;
     text-align: left;
     padding: 10px 10px 10px 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.oxi_addons_FI_4 .oxi_addons_FI_4_content {
+    width: 100%;
+    float: left;
+}
 .oxi_addons_FI_4 .oxi_addons_FI_4_contact {
     width: 100%;
     float: left;

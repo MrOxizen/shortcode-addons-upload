@@ -42,7 +42,7 @@ class Style_4 extends AdminStyle {
                 'sa_fi_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_row' => ''
             ],
                 ]
         );
@@ -74,14 +74,14 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
         $this->add_group_control(
                 'sa_fi_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_row' => ''
             ],
                 ]
         );
@@ -116,7 +116,9 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
             'condition' => [
                 'sa_fi_logo' => 'yes'
@@ -149,7 +151,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -201,7 +203,7 @@ class Style_4 extends AdminStyle {
         );
         $this->add_control(
                 'sa_fi_logo_logo', $this->style, [
-            'label' => __('Logo', SHORTCODE_ADDOONS),
+            'label' => __('Logo Image?', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'default' => '',
             'loader' => TRUE,
@@ -231,17 +233,27 @@ class Style_4 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-fi-logo-bg', $this->style, [
+                'sa-fi-logo_box-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}}:hover' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_1' => ''
             ],
             'condition' => [
                 'sa_fi_logo' => 'yes'
             ]
                 ]
         );
-
+        $this->add_group_control(
+                'sa_fi_logo_box_br', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_1' => ''
+            ],
+            'condition' => [
+                'sa_fi_logo' => 'yes'
+            ]
+                ]
+        );
         $this->end_controls_section();
         $this->end_section_devider();
 
@@ -278,10 +290,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_address' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_phone' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_email' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_body' => 'text-align: {{VALUE}};',
             ],
                 ]
         );
@@ -289,7 +298,7 @@ class Style_4 extends AdminStyle {
                 'sa_logotext_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_text' => ''
             ],
             'condition' => [
                 'sa_fi_logo_text' => 'yes',
@@ -322,7 +331,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_4_logo_logo' => 'height:{{SIZE}}{{UNIT}};',
             ],
             'condition' => [
                 'sa_fi_logo_logo' => 'yes',
@@ -355,7 +364,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_icon .oxi-icons' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_4_logo_logo' => 'width:{{SIZE}}{{UNIT}}; ',
             ],
             'condition' => [
                 'sa_fi_logo_logo' => 'yes',
@@ -379,26 +388,26 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_text' => 'color:{{VALUE}};'
             ],
+            'condition' => [
+                'sa_fi_logo_text' => 'yes',
+            ]
                 ]
         );
         $this->add_group_control(
                 'sa-fi-logo-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}}:hover' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo' => ''
             ],
-            'condition' => [
-                'sa_fi_logo' => 'yes'
-            ]
                 ]
         );
         $this->add_group_control(
                 'sa_fi_logo_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo' => ''
             ],
                 ]
         );
@@ -430,7 +439,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
         $this->end_controls_tab();
@@ -441,26 +450,26 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_icon-area .oxi-icons:hover' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_text:hover' => 'color:{{VALUE}};'
             ],
+            'condition' => [
+                'sa_fi_logo_text' => 'yes',
+            ]
                 ]
         );
         $this->add_group_control(
                 'sa-fi-logo-hover-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}}:hover' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo:hover' => ''
             ],
-            'condition' => [
-                'sa_fi_logo' => 'yes'
-            ]
                 ]
         );
         $this->add_group_control(
                 'sa_fi_logo_hover_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo:hover' => ''
             ],
                 ]
         );
@@ -492,7 +501,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
         $this->end_controls_tab();
@@ -502,7 +511,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::BOXSHADOW,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo' => ''
             ],
                 ]
         );
@@ -510,17 +519,11 @@ class Style_4 extends AdminStyle {
                 'sa_fi_logo_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_text' => ''
             ],
             'condition' => [
                 'sa_fi_logo_text' => 'yes',
             ]
-                ]
-        );
-
-        $this->add_group_control(
-                'sa_fi_logo_animation', $this->style, [
-            'type' => Controls::ANIMATION,
                 ]
         );
 
@@ -551,7 +554,8 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_logo' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -611,10 +615,10 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_address' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_phone' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_email' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_contact' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_address' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_phone' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_email' => 'text-align: {{VALUE}};',
             ],
             'condition' => [
                 'sa_fi_content' => 'yes',
@@ -673,7 +677,7 @@ class Style_4 extends AdminStyle {
                 'sa-fi-content-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}}:hover' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_2' => ''
             ],
             'condition' => [
                 'sa_fi_content' => 'yes'
@@ -684,9 +688,9 @@ class Style_4 extends AdminStyle {
                 'sa_fi_content_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_2' => ''
             ],
-                    'condition' => [
+            'condition' => [
                 'sa_fi_content' => 'yes'
             ]
                 ]
@@ -721,7 +725,7 @@ class Style_4 extends AdminStyle {
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_contact' => ''
             ],
                 ]
         );
@@ -731,7 +735,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_contact' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -739,7 +743,7 @@ class Style_4 extends AdminStyle {
                 'sa_header_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_contact' => ''
             ],
                 ]
         );
@@ -772,7 +776,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_contact' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_contact' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -782,7 +786,7 @@ class Style_4 extends AdminStyle {
                 'sa_address_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_address' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_address' => ''
             ],
                 ]
         );
@@ -792,7 +796,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_address' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_address' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -800,7 +804,7 @@ class Style_4 extends AdminStyle {
                 'sa_address_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_address' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_address' => ''
             ],
                 ]
         );
@@ -833,7 +837,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_address' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_address' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -843,7 +847,7 @@ class Style_4 extends AdminStyle {
                 'sa_phone_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_phone' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_phone' => ''
             ],
                 ]
         );
@@ -853,7 +857,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_phone' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_phone' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -861,7 +865,7 @@ class Style_4 extends AdminStyle {
                 'sa_phone_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_phone' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_phone' => ''
             ],
                 ]
         );
@@ -894,7 +898,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_phone' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_phone' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -904,7 +908,7 @@ class Style_4 extends AdminStyle {
                 'sa_email_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_email' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_email' => ''
             ],
                 ]
         );
@@ -914,7 +918,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_email' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_email' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -922,7 +926,7 @@ class Style_4 extends AdminStyle {
                 'sa_email_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_email' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_email' => ''
             ],
                 ]
         );
@@ -955,7 +959,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_email' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_email' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -976,7 +980,7 @@ class Style_4 extends AdminStyle {
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Icons Setting', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Icons Section Setting', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
@@ -1017,7 +1021,7 @@ class Style_4 extends AdminStyle {
                 'sa-fi-icon-box-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}}:hover' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_3' => ''
             ],
             'condition' => [
                 'sa_fi_icon' => 'yes'
@@ -1028,7 +1032,7 @@ class Style_4 extends AdminStyle {
                 'sa_fi_icon-box_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4-row' => ''
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_col_3' => ''
             ],
             'condition' => [
                 'sa_fi_icon' => 'yes'
@@ -1071,7 +1075,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_icon-area' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_icon' => 'text-align: {{VALUE}};',
             ],
             'condition' => [
                 'sa_fi_icon' => 'yes',
@@ -1105,7 +1109,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_icon .oxi-icons-area .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_icon .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -1124,7 +1128,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_icon-area .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_icon .oxi-icons' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -1136,7 +1140,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_icon-area .oxi-icons:hover' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_icon .oxi-icons:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -1171,7 +1175,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-FI-4 .oxi-addons-FI-4_icon-area .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
