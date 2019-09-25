@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_5 extends AdminStyle
+class Style_9 extends AdminStyle
 {
 
     public function register_controls()
@@ -27,8 +27,7 @@ class Style_5 extends AdminStyle
             [
                 'options' => [
                     'general-settings' => esc_html__('General Settings', SHORTCODE_ADDOONS),
-                    'button-left' => esc_html__('Button Left', SHORTCODE_ADDOONS),
-                    'button-right' => esc_html__('Button Right', SHORTCODE_ADDOONS),
+                    'button' => esc_html__('Button', SHORTCODE_ADDOONS), 
                 ]
             ]
         );
@@ -50,10 +49,10 @@ class Style_5 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_banner_button_left_switcher',
+            'sa_banner_button_switcher',
             $this->style,
             [
-                'label' => __('Button Left', SHORTCODE_ADDOONS),
+                'label' => __('Button', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
                 'default' => 'yes',
                 'loader' => TRUE,
@@ -62,47 +61,7 @@ class Style_5 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-
-        $this->add_control(
-            'sa_banner_button_right_switcher',
-            $this->style,
-            [
-                'label' => __('Button Right', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => 'yes',
-                'loader' => TRUE,
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-            ]
-        );
-        $this->add_control(
-            'sa_banner_btn_position',
-            $this->style,
-            [
-                'label' => __('Button Postion', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center',
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-center',
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-right',
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_main' => 'justify-content: {{VALUE}};'
-                ],
-            ]
-        );
+  
 
         $this->add_control(
             'sa_banner_main_background',
@@ -119,7 +78,7 @@ class Style_5 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9' => ''
                 ],
             ]
         );
@@ -152,7 +111,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -171,7 +130,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::MEDIA,
                 'default' => [
                     'type' => 'media-library',
-                    'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/all.png',
+                    'link' => 'https://www.oxilab.org/wp-content/uploads/2019/04/png-blank.png',
                 ],
             ]
         );
@@ -183,7 +142,7 @@ class Style_5 extends AdminStyle
                 'label' => __('Image Postion', SHORTCODE_ADDOONS),
                 'separator' => TRUE,
                 'type' => Controls::CHOOSE, 
-                'default' => 'left',
+                'default' => 'right',
                 'loader' => TRUE,
                 'options' => [
                     'left' => [
@@ -234,7 +193,7 @@ class Style_5 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -264,7 +223,7 @@ class Style_5 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -296,7 +255,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons_image_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons_image_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -309,7 +268,7 @@ class Style_5 extends AdminStyle
         );
 
 
-        $this->end_controls_section();
+        $this->end_controls_section(); 
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -323,10 +282,10 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Heading', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Smartphone PNG image',
+                'default' => 'Vehicle Mechanics ',
                 'placeholder' => 'Lorem Ipsum',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => ''
                 ],
             ]
         );
@@ -357,7 +316,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => ''
                 ],
             ]
         );
@@ -369,7 +328,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#3fe3af',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__heading' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => 'color:{{VALUE}};'
                 ],
             ]
         );  
@@ -402,7 +361,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -415,11 +374,15 @@ class Style_5 extends AdminStyle
         );
 
         $this->end_controls_section(); 
+        $this->end_section_devider();
+
+        $this->start_section_devider();
+     
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Line Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => True,
             ]
         );
         $this->add_control(
@@ -461,7 +424,7 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__line_main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line_main' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -491,7 +454,7 @@ class Style_5 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__line' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -516,7 +479,7 @@ class Style_5 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__line' => 'height: {{SIZE}}px;',
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line' => 'height: {{SIZE}}px;',
                 ],
             ]
         );
@@ -532,7 +495,7 @@ class Style_5 extends AdminStyle
                     'sa_banner_line_switcher' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__line' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -547,126 +510,6 @@ class Style_5 extends AdminStyle
             ]
         );
         $this->end_controls_section(); 
-        
-        $this->end_section_devider();
-
-        $this->start_section_devider();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Sub Heading Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-        $this->add_control(
-            'sa_banner_sub_heading_text',
-            $this->style,
-            [
-                'label' => __('Sub Heading', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Best Solution For All Kinds Of <span> Business Services. </span>',
-                'placeholder' => 'Lorem Ipsum is simply dummy text',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__sub_heading' => ''
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_banner_sub_heading_tag',
-            $this->style,
-            [
-                'label' => __('Tag', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT,
-                'default' => 'h3',
-                'loader' => TRUE,
-                'options' => [
-                    'h1' => __('H1', SHORTCODE_ADDOONS),
-                    'h2' => __('H2', SHORTCODE_ADDOONS),
-                    'h3' => __('H3', SHORTCODE_ADDOONS),
-                    'h4' => __('H4', SHORTCODE_ADDOONS),
-                    'h5' => __('H5', SHORTCODE_ADDOONS),
-                    'h6' => __('H6', SHORTCODE_ADDOONS),
-                    'div' => __('DIV', SHORTCODE_ADDOONS),
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_sub_heading_typo',
-            $this->style,
-            [
-                'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__sub_heading' => ''
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_banner_sub_heading_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#3fe3af',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__sub_heading' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_banner_sub_heading_span_color',
-            $this->style,
-            [
-                'label' => __('Span Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ff4797',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__sub_heading span' => 'color:{{VALUE}};'
-                ],
-            ]
-        ); 
-        $this->add_responsive_control(
-            'sa_banner_sub_heading_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__sub_heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_sub_heading_animation',
-            $this->style,
-            [
-                'type' => Controls::ANIMATION,
-            ]
-        );
-        $this->end_controls_section();
-
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -680,10 +523,10 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Description', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXTAREA,
-                'default' => 'A smartphone is a mobile personal computer with an advanced mobile operating system with features useful for mobile or handheld use. Smartphones ',
+                'default' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout ',
                 'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => ''
                 ],
             ]
         );
@@ -695,7 +538,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => ''
                 ],
             ]
         );
@@ -707,7 +550,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__details' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => 'color:{{VALUE}};'
                 ],
             ]
         ); 
@@ -747,13 +590,13 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
 
-        $this->end_controls_section(); 
-        
+        $this->end_controls_section();
+      
         $this->end_section_devider(); 
         $this->end_section_tabs(); 
 
@@ -761,10 +604,10 @@ class Style_5 extends AdminStyle
             'shortcode-addons-start-tabs',
             [
                 'condition' => [
-                    'shortcode-addons-start-tabs' => 'button-left',
+                    'shortcode-addons-start-tabs' => 'button',
                 ],
                 'section-condition' => [
-                    'sa_banner_button_left_switcher' => 'yes'
+                    'sa_banner_button_switcher' => 'yes'
                 ]
 
             ]
@@ -779,7 +622,34 @@ class Style_5 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_banner_button_left_text',
+            'sa_banner_btn_position',
+            $this->style,
+            [
+                'label' => __('Button Postion', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center',
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button_main' => 'justify-content: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_banner_button_text',
             $this->style,
             [
                 'label' => __('Button Text', SHORTCODE_ADDOONS),
@@ -787,25 +657,25 @@ class Style_5 extends AdminStyle
                 'default' => 'Get Started',
                 'placeholder' => 'Get Started',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => ''
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_banner_button_left_link',
+            'sa_banner_button_link',
             $this->style,
             [
                 'label' => __('Link', SHORTCODE_ADDOONS),
                 'type' => Controls::URL,
                 'loader' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => ''
                 ],
             ]
         );
 
         $this->add_responsive_control(
-            'sa_banner_button_left_padding',
+            'sa_banner_button_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -832,12 +702,12 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_banner_button_left_margin',
+            'sa_banner_button_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -864,12 +734,12 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_banner_button_left_animation',
+            'sa_banner_button_animation',
             $this->style,
             [
                 'type' => Controls::ANIMATION,
@@ -887,12 +757,12 @@ class Style_5 extends AdminStyle
         );
 
         $this->add_group_control(
-            'sa_banner_button_left_typo',
+            'sa_banner_button_typo',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => ' ',
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => ' ',
                 ],
             ]
         );
@@ -909,20 +779,20 @@ class Style_5 extends AdminStyle
         );
         $this->start_controls_tab();
         $this->add_control(
-            'sa_banner_button_left_color',
+            'sa_banner_button_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => 'color:{{VALUE}};',
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
         $this->add_control(
-            'sa_banner_button_left_bg_color',
+            'sa_banner_button_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -930,22 +800,22 @@ class Style_5 extends AdminStyle
                 'default' => '#28a745',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_banner_button_left_border',
+            'sa_banner_button_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => ''
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_banner_button_left_radius',
+            'sa_banner_button_radius',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -972,37 +842,37 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_banner_button_left_sadow',
+            'sa_banner_button_sadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button' => ''
                 ],
             ]
         );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_banner_button_left_hover_color',
+            'sa_banner_button_hover_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button:hover' => 'color:{{VALUE}};',
                     ],
             ]
         );
         $this->add_control(
-            'sa_banner_button_left_hover_bg_color',
+            'sa_banner_button_hover_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -1010,22 +880,22 @@ class Style_5 extends AdminStyle
                 'default' => 'rgba(40, 168, 76, 0.01)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left:hover' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button:hover' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_banner_button_left_hover_border',
+            'sa_banner_button_hover_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left:hover' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button:hover' => ''
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_banner_button_left_hover_radius',
+            'sa_banner_button_hover_radius',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -1052,18 +922,18 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_banner_button_left_hover_shadow',
+            'sa_banner_button_hover_shadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left:hover' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__button:hover' => ''
                 ],
 
             ]
@@ -1074,324 +944,7 @@ class Style_5 extends AdminStyle
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
-
-        $this->start_section_tabs(
-            'shortcode-addons-start-tabs',
-            [
-                'condition' => [
-                    'shortcode-addons-start-tabs' => 'button-right',
-                ],
-                'section-condition' => [
-                    'sa_banner_button_right_switcher' => 'yes'
-                ]
-
-            ]
-        );
-
-        $this->start_section_devider();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-        $this->add_control(
-            'sa_banner_button_right_text',
-            $this->style,
-            [
-                'label' => __('Button Text', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Get Started',
-                'placeholder' => 'Get Started',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => ''
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_button_right_link',
-            $this->style,
-            [
-                'label' => __('Link', SHORTCODE_ADDOONS),
-                'type' => Controls::URL,
-                'loader' => TRUE,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => ''
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'sa_banner_button_right_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => 0,
-                        'max' => 300,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_banner_button_right_margin',
-            $this->style,
-            [
-                'label' => __('Margin', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 500,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_button_right_animation',
-            $this->style,
-            [
-                'type' => Controls::ANIMATION,
-            ]
-        );
-        $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Button Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-
-        $this->add_group_control(
-            'sa_banner_button_right_typo',
-            $this->style,
-            [
-                'type' => Controls::TYPOGRAPHY,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => ' ',
-                ],
-            ]
-        );
-
-
-        $this->start_controls_tabs(
-            'shortcode-addons-start-tabs',
-            [
-                'options' => [
-                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-                ]
-            ]
-        );
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_banner_button_right_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#fff',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => 'color:{{VALUE}};',
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right .oxi-icons' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_banner_button_right_bg_color',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => 'rgba(40, 168, 76, 0.01)',
-                'oparetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => 'background-color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_button_right_border',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => ''
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_banner_button_right_radius',
-            $this->style,
-            [
-                'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_button_right_sadow',
-            $this->style,
-            [
-                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right' => ''
-                ],
-            ]
-        );
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_banner_button_right_hover_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#fff',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right:hover' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_banner_button_right_hover_bg_color',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#28a745',
-                'oparetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right:hover' => 'background-color:{{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_button_right_hover_border',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right:hover' => ''
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_banner_button_right_hover_radius',
-            $this->style,
-            [
-                'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -100,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_button_right_hover_shadow',
-            $this->style,
-            [
-                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_right:hover' => ''
-                ],
-
-            ]
-        );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-
-
-        $this->end_controls_section();
-        $this->end_section_devider();
-        $this->end_section_tabs();
+ 
+       
     }
 }

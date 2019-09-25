@@ -30,13 +30,17 @@ class Style_3 extends Templates {
         if (!empty($style['sa_fi_content_email'])) {
             $email = ' <div class="oxi_addons_FI_3_email">' . $this->text_render($style['sa_fi_content_email']) . '</div>';
         }
-        $icon = (array_key_exists('sa_fi_icon', $style) && $style['sa_fi_icon'] != '0' ? 
-                '<div class="oxi_addons_FI_3_icon-area">
-                       <a >
-                            
-                      </a> 
-                </div>' : '');
-//        ' .  $this->font_awesome_render($style['sa_btn_icon_class'])  . '
+        
+        $icon = '';
+        foreach ($style['sa_fi_icon_repeater'] as $value) {
+            $icon .= ' <a ' . $this->url_render('sa_fi_icon_url', $value) . '>
+                            ' . $this->font_awesome_render($value['sa_fi_icon_icon']) . '
+                         </a> ';
+        }
+
+        if (array_key_exists('sa_fi_icon', $style) && $style['sa_fi_icon'] != '0') {
+            $icon_icon = '<div class="oxi_addons_FI_3_icon-area"> ' . $icon . '</div>';
+        }
         echo '<div class="oxi-addons-container">
                     <div class="oxi_addons_FI_3">
                         <div class="oxi_addons_FI_3_row">
@@ -44,7 +48,7 @@ class Style_3 extends Templates {
                                 ' . $address . '
                                 ' . $phone . '
                                 ' . $email . '
-                                ' . $icon . '
+                                ' . $icon_icon . '
                            
                         </div>
                     </div>

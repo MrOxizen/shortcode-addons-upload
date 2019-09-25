@@ -25,7 +25,7 @@ class Style_5 extends Templates
             $heading = '<' . $style['sa_banner_tag'] . ' class="oxi_addons__heading" ' . $this->animation_render('sa_banner_heading_animation', $style) . '>' . $this->text_render($style['sa_banner_heading_text']) . '</' . $style['sa_banner_tag'] . '>';
         }
         if (array_key_exists('sa_banner_sub_heading_text', $style) && $style['sa_banner_sub_heading_text'] != '') {
-            $sub_heading = '<' . $style['sa_banner_sub_heading_tag'] . ' class="oxi_addons__sub_heading" ' . $this->animation_render('sa_banner_sub_heading_animation', $style) . '>' . $this->text_render($style['sa_banner_heading_text']) . '</' . $style['sa_banner_sub_heading_tag'] . '>';
+            $sub_heading = '<' . $style['sa_banner_sub_heading_tag'] . ' class="oxi_addons__sub_heading" ' . $this->animation_render('sa_banner_sub_heading_animation', $style) . '>' . $this->text_render($style['sa_banner_sub_heading_text']) . '</' . $style['sa_banner_sub_heading_tag'] . '>';
         } 
         if (array_key_exists('sa_banner_details_text', $style) && $style['sa_banner_details_text'] != '') {
             $details = '<div class="oxi_addons__details" ' . $this->animation_render('sa_banner_details_animation', $style) . '> ' . $this->text_render($style['sa_banner_details_text']) . ' </div>';
