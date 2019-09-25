@@ -80,6 +80,7 @@
 .sa_addons_icon_effects_style_1:hover .oxi-icons {
     color: #ffffff
 }
+
 .sa_addons_icon_effects_style_1.sa_effects_outside:after {
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
@@ -87,6 +88,7 @@
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
 }
+
 .sa_addons_icon_effects_style_1.sa_effects_outside:hover:after {
     transform: scale(1);
     -webkit-transform: scale(1);
@@ -149,6 +151,4 @@
         padding: 5px;
         box-shadow: 0 0 0 5px rgba(145, 9, 9, 1.00)
     }
-
-
 }
