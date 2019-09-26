@@ -20,15 +20,74 @@ class Style_1 extends Templates {
         wp_enqueue_style('twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
-    public function public_jquery() {
-        $this->JSHANDLE = 'jquery-event-move';
-        $this->JSHANDLE = 'jquery-twentytwenty';
-        wp_enqueue_script('jquery-event-move', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-event-move.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery-twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-twentytwenty.js', false, SA_ADDONS_PLUGIN_VERSION);
-    }
+    
 
     public function default_render($style, $child, $admin) {
         
+        
+        echo '<div class="oxi-addons-main-wrapper-image-comparison">
+				  <div class="oxi-addons-main">
+					<div class="oxi-addons-comparison-image-comparison">
+						<img class="oxi-img" src="' . $this->media_render('sa-image-comparison-image-one', $style) . '" />
+						<img class="oxi-img"  src="' . $this->media_render('sa-image-comparison-image-two', $style) . '" />
+					</div>
+				  </div>
+				</div>';
+    }
+    
+    
+    public function public_jquery() {
+        $this->JSHANDLE = 'jquery-twentytwenty';
+        wp_enqueue_script('jquery-event-move', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-event-move.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-twentytwenty.js', true, SA_ADDONS_PLUGIN_VERSION);
+    }
+    
+    
+    public function inline_public_jquery() {
+        $jquery = '';
+        $styledata = $this->style;
+        
+        $jquery .= ' 
+       
+             $(".oxi-addons-comparison-image-comparison").twentytwenty({
+                default_offset_pct: ' . $styledata['sa-image-comparison-body-offset'] . ', 
+                 before_label: "' . $this->text_render($styledata['sa-image-comparison-before-text']) . '",
+                 after_label: "' . $this->text_render($styledata['sa-image-comparison-after-text']) . '",
+                ';
+        if ($styledata['sa_image_compersion_overlay_controler'] == 'true') {
+            $jquery .= 'no_overlay: false,';
+        } else {
+            $jquery .= 'no_overlay: true,';
+        }
+        if ($styledata['sa_image-comparison_click'] == 'true') {
+            $jquery .= 'click_to_move: true,';
+        } else {
+            $jquery .= 'click_to_move: false,';
+        }
+        if ($styledata['sa_image-comparison_position'] == 'true') {
+            $jquery .= 'orientation: "horizontal",';
+        } else {
+            $jquery .= 'orientation: "vertical",';
+        }
+//        if ($styledata['sa_image-comparison_position'] == 'true') {
+//            $jquery .= 'orientation: "horizontal",';
+//        } else {
+//            $jquery .= 'orientation: "vertical",';
+//            $css .= '
+//       .oxi-addons-main-wrapper-image-comparison .twentytwenty-up-arrow, .twentytwenty-down-arrow{
+//            left: 50% !important;
+//              transform: translateX(-50%);
+//        }
+//        ';
+//        }
+        if ($styledata['sa_image-comparison-hover'] == 'true') {
+            $jquery .= 'move_slider_on_hover: true,';
+        } else {
+            $jquery .= 'move_slider_on_hover: false,';
+        }
+
+        $jquery .= ' });';
+        return $jquery;
     }
 
     public function old_render() {

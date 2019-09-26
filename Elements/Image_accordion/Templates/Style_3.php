@@ -47,14 +47,7 @@ class Style_3 extends Templates {
          </div>';
     }
 
-    public function inline_public_css() {
-        $rt = '';
-        $styledata = $this->style;
-        foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
-            $rt .= $this->background_render('sa_image_accordion_image', $value, '.' . $this->WRAPPER . ' .oxi-addons-background-image-' . $key . '');
-        }
-        return $rt;
-    }
+    
     
     public function inline_public_jquery() {
         $jquery = '';
