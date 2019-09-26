@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addons-is{ 
+    width: 100%;
+    float: left; 
+    padding: 0px 0px 0px 0px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+.oxi-addons-is .oxi-link{ 
+    width: 100%;
+    float: left;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+.oxi-addons-is .oxi-addons-image-main{
+    width: 800px;
+    height: 400px;
+    max-width: 100%; 
+    overflow: hidden;  
+    box-shadow:  0px 15px 45px 0px rgba(128, 128, 128, 0.41);;
+    position: relative; 
+    border-radius: 10px 10px 10px 10px; 
+    transition: all 0.5s;
+}
+
+.oxi-addons-is .oxi-addons-img{
+    width: 100%;
+    float: left; 
+    height: 100%;
+}
+
+.oxi-addons-is .oxi-img{
+    width: auto !important; 
+    max-width: none !important; 
+    height: 100%;
+    max-height: 100%;
+    transition: all 5s ; 
+}  
+
+@media only screen and (min-width : 669px) and (max-width : 993px){ 
+    .oxi-addons-is{  
+        padding: 0px 0px 0px 0px;  
+
+    }  
+    .oxi-addons-is .oxi-addons-image-main{
+        width: 800px;
+        height: 400px;  
+        border-radius: 10px 10px 10px 10px; 
+    }   
+}
+@media only screen and (max-width : 668px){  
+    .oxi-addons-is{  
+        padding: 0px 0px 0px 0px;  
+    }  
+    .oxi-addons-is .oxi-addons-image-main{
+        width: 800px;
+        height: 400px;  
+        border-radius: 10px 10px 10px 10px; 
+    }   
+}
+

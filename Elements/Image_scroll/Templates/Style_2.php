@@ -14,71 +14,70 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_2 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        
+
         $img = '';
-        
-        $repeater =  (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
+
+        $repeater = (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
         foreach ($repeater as $key => $value) {
-            
-        $img = '<a ' . $this->url_render('sa_is_image_url', $value) . ' class="oxi-link sa_is_image_repeater_' . $key . '">
+
+            $img = '<a ' . $this->url_render('sa_is_image_url', $value) . ' class="oxi-link sa_is_image_repeater_' . $key . '">
                     <div class="oxi-addons-image-main" id="oxi-addons-image-main-' . $key . '" >
                         <div class="oxi-addons-img">
                             <img class="oxi-img sa-img-' . $key . '" id="oxi-img-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />
                         </div>
                     </div> 
                 </a>';
-        
+
             echo '<div class="' . $this->column_render('sa_is_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
-                        <div class="oxi-addons-is" ' . $this->animation_render('sa_is_animation', $value) . '>  
+                        <div class="oxi-addons-is" ' . $this->animation_render('sa_is_animation', $style) . ' >  
                             ' . $img . '
                         </div>';
             echo '</div>';
         }
     }
-    
-    
-     public function inline_public_jquery() {
+
+    public function inline_public_jquery() {
         $jquery = '';
         $style = $this->style;
-        $repeater =  (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
+        $repeater = (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
         foreach ($repeater as $key => $value) {
-         if ($value['sa_is_image_view'] == 'top-to-bottom') {
-                $jquery .= 'jQuery("#oxi-img-' . $key . '").mouseover(function(){
-                    var imgHeight= jQuery(this).height();  
-                    var outerHeight = jQuery("#oxi-addons-image-main-' . $key . '").outerHeight(); 
-                    var height = imgHeight-outerHeight; 
-                    jQuery(this).css({"transform":"translateY(-" + height + "px)"});
+            if ($value['sa_is_image_view'] == 'left_to_right') {
+                $jquery .= ' 
+                jQuery("#oxi-img-' . $key . '").mouseover (function(){
+                    var imgWidth = jQuery(this).width();  
+                    var outerWidth = jQuery("#oxi-addons-image-main-' . $key . '").outerWidth(); 
+                    var height = imgWidth-outerWidth; 
+                    jQuery(this).css({"transform":"translateX(-" + height + "px)"});
                 });  
                 jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
-                    jQuery(this).css({"transform":"translateY(0px)"});
+                    jQuery(this).css({"transform":"translateX(0px)"});
                 });   
             ';
-            }
-            elseif ($value['sa_is_image_view'] == 'bottom-to-top') {
-                $jquery .= 'jQuery("#oxi-img-' . $key . '").css({
+            } elseif ($value['sa_is_image_view'] == 'right_to_left') {
+                $jquery .= '  
+                    jQuery("#oxi-img-' . $key . '").css({
                         "position" : "absolute",
-                        "bottom" : "0",
-                        "left" : "0",
-                        "Top" : "auto",
+                        "right" : "0",
+                        "top" : "0"
                     }); 
-                    jQuery("#oxi-img-' . $key . '").mouseover(function(){
-                            var imgHeight= jQuery(this).height();  
-                            var outerHeight = jQuery("#oxi-addons-image-main-' . $key . '").outerHeight(); 
-                            var height = imgHeight-outerHeight; 
-                            jQuery(this).css({"transform":"translateY(" + height + "px)"});
-                        });  
-                        jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
-                            jQuery(this).css({"transform":"translateY(0px)"});
-                        });   
-                    ';
+                jQuery("#oxi-img-' . $key . '").mouseover (function(){
+                    var imgWidth = jQuery(this).width();  
+                    var outerWidth = jQuery("#oxi-addons-image-main-' . $key . '").outerWidth(); 
+                    var height = imgWidth-outerWidth; 
+                    jQuery(this).css({"transform":"translateX(" + height + "px)"});
+                });  
+                jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
+                    jQuery(this).css({"transform":"translateX(0px)"});
+                });   
+            ';
             }
         }
         return $jquery;
     }
-    
+
     public function old_render() {
         $style = $this->dbdata;
         $listdata = $this->child;
@@ -92,9 +91,13 @@ class Style_1 extends Templates {
             $data = explode('||#||', $value['files']);
             $img = $flink = $lastlink = '';
             if ($data[3] != '') {
-                $flink = '<a href="' . OxiAddonsUrlConvert($data[3]) . '" class="oxi-link" target="' . $styledata[64] . '">';
+                $flink = '
+              <a href="' . OxiAddonsUrlConvert($data[3]) . '" class="oxi-link" target="' . $styledata[64] . '">
+        ';
 
-                $lastlink = '</a>';
+                $lastlink = '
+            </a>
+        ';
             }
             if ($data[1] != '') {
                 $img = ' 
@@ -108,48 +111,51 @@ class Style_1 extends Templates {
         ';
             }
 
-            echo ' <div class="oxi-addons-main-wrapper-' . $oxiid . '  ' . OxiAddonsItemRows($styledata, 66) . '  ">
-                        <div class="oxi-addons-wrapper-' . $oxiid . '" >  
-                            ' . $img . '
-                        </div>';
-            echo '</div>';
+            echo '
+        <div class="oxi-addons-main-wrapper-' . $oxiid . '  ' . OxiAddonsItemRows($styledata, 66) . ' ">
+            <div class="oxi-addons-wrapper-' . $oxiid . '" >  
+                ' . $img . '
+            </div>';
+
+            echo '</div></div>';
             if ($data[5] == 'top') {
-                $jquery .= 'jQuery("#oxi-img-' . $value['id'] . '").mouseover(function(){
-                    var imgHeight= jQuery(this).height();  
-                    var outerHeight = jQuery("#oxi-addons-image-main-' . $value['id'] . '").outerHeight(); 
-                    var height = imgHeight-outerHeight; 
-                    jQuery(this).css({"transform":"translateY(-" + height + "px)"});
+                $jquery .= ' 
+                jQuery("#oxi-img-' . $value['id'] . '").mouseover (function(){
+                    var imgWidth = jQuery(this).width();  
+                    var outerWidth = jQuery("#oxi-addons-image-main-' . $value['id'] . '").outerWidth(); 
+                    var height = imgWidth-outerWidth; 
+                    jQuery(this).css({"transform":"translateX(-" + height + "px)"});
                 });  
                 jQuery("#oxi-img-' . $value['id'] . '").mouseout(function(){ 
-                    jQuery(this).css({"transform":"translateY(0px)"});
+                    jQuery(this).css({"transform":"translateX(0px)"});
                 });   
             ';
             } elseif ($data[5] == 'bottom') {
-                $jquery .= 'jQuery("#oxi-img-' . $value['id'] . '").css({
+                $jquery .= '  
+                    jQuery("#oxi-img-' . $value['id'] . '").css({
                         "position" : "absolute",
-                        "bottom" : "0",
-                        "left" : "0",
-                        "Top" : "auto",
+                        "right" : "0",
+                        "top" : "0"
                     }); 
-                    jQuery("#oxi-img-' . $value['id'] . '").mouseover(function(){
-                            var imgHeight= jQuery(this).height();  
-                            var outerHeight = jQuery("#oxi-addons-image-main-' . $value['id'] . '").outerHeight(); 
-                            var height = imgHeight-outerHeight; 
-                            jQuery(this).css({"transform":"translateY(" + height + "px)"});
-                        });  
-                        jQuery("#oxi-img-' . $value['id'] . '").mouseout(function(){ 
-                            jQuery(this).css({"transform":"translateY(0px)"});
-                        });   
-                    ';
+                jQuery("#oxi-img-' . $value['id'] . '").mouseover (function(){
+                    var imgWidth = jQuery(this).width();  
+                    var outerWidth = jQuery("#oxi-addons-image-main-' . $value['id'] . '").outerWidth(); 
+                    var height = imgWidth-outerWidth; 
+                    jQuery(this).css({"transform":"translateX(" + height + "px)"});
+                });  
+                jQuery("#oxi-img-' . $value['id'] . '").mouseout(function(){ 
+                    jQuery(this).css({"transform":"translateX(0px)"});
+                });   
+            ';
             }
         }
-        echo ' </div></div>';
+        echo ' </div>';
 
 
 
         $css = ' 
         
-       .oxi-addons-wrapper-' . $oxiid . '{ 
+        .oxi-addons-wrapper-' . $oxiid . '{ 
             width: 100%;
             float: left; 
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 3) . '; 
@@ -181,12 +187,14 @@ class Style_1 extends Templates {
         .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-img{
             width: 100%;
             float: left; 
+            height: 100%;
         }
        
         .oxi-addons-wrapper-' . $oxiid . ' .oxi-img{
-            width: 100%;
-            max-width: 100%;
-            height:auto;
+            width: auto !important; 
+            max-width: none !important; 
+            height: 100%;
+            max-height: 100%;
             transition: all ' . $styledata[27] . 's ; 
         }  
 
@@ -211,6 +219,7 @@ class Style_1 extends Templates {
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 50) . '; 
             }   
         }';
+
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }

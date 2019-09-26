@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -50,7 +50,7 @@ class Style_1 extends AdminStyle {
                     'controller' => 'add_group_control',
                     'default' => [
                     'type' => 'media-library',
-                    'link' => 'https://www.oxilab.org/wp-content/uploads/2019/03/screencapture-frontend-themextar-net-demos-appko_app_landing_page-2019-03-27-16_25_32.jpg',
+                    'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/modern-illustrated-city-2.png',
                     ],
                 ],
                 'sa_is_image_url' => [
@@ -63,8 +63,8 @@ class Style_1 extends AdminStyle {
                     'default' => 'sa-icon-left-to-right',
                     'loader' => TRUE,
                     'options' => [
-                        'top-to-bottom' => __('Top-to-Bottom', SHORTCODE_ADDOONS),
-                        'bottom-to-top' => __('Bottom-to-Top', SHORTCODE_ADDOONS),
+                        'left_to_right' => __('Left To Right', SHORTCODE_ADDOONS),
+                        'right_to_left' => __('Right To Left', SHORTCODE_ADDOONS),
                     ],
                 ],
                 'sa_is_td' => [
@@ -98,7 +98,6 @@ class Style_1 extends AdminStyle {
 
 
         $this->end_section_devider();
-
         $this->start_section_devider();
 
         $this->start_controls_section(
@@ -166,8 +165,7 @@ class Style_1 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addons-is .oxi-addons-image-main' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
-        );
-        
+        );    
         
 
         $this->add_responsive_control(
