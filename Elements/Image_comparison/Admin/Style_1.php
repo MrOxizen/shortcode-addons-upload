@@ -285,7 +285,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-icon-boxes-area .oxi-addons-icon-box .oxi-addons-icon-body .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => '',
             ]
                 ]
         );
@@ -298,7 +298,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-addons-heading' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -312,7 +312,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-image-accordion .twentytwenty-overlay:hover' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -323,36 +323,11 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-twelve-padding .oxi-testimonials-style-twelve-info' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => '',
             ]
                 ]
         );
-        $this->add_control(
-                'sa-image-comparison-overlay-button-position', $this->style, [
-            'label' => __('Portfolio Position', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'loader' => TRUE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'condition' => [
-                'sa_image_compersion_overlay_controler' => 'true'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa-image-comparison-overlay-button-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -382,7 +357,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-image-accordion' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -415,7 +390,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-image-accordion' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
