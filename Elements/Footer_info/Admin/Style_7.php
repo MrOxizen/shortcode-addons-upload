@@ -23,7 +23,7 @@ class Style_7 extends AdminStyle {
                 'icon-settings' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
             ]
                 ]
-        );
+        );   
         $this->start_section_tabs(
                 'shortcode-addons-start-tabs', [
             'condition' => [
