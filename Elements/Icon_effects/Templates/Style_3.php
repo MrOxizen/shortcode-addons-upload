@@ -21,7 +21,8 @@ class Style_3 extends Templates
     public function default_render($style, $child, $admin)
     {
         $styledata = $this->style;
-        foreach ($styledata['sa_icon_effects_data'] as $key => $value) {
+        $all_data = (array_key_exists('sa_icon_effects_data', $styledata) && is_array($styledata['sa_icon_effects_data'])) ? $styledata['sa_icon_effects_data'] : [];
+        foreach ($all_data as $key => $value) {
             $icon = $link = $endlink = '';
             if (array_key_exists('sa_icon_effects_icon', $value) && $value['sa_icon_effects_icon'] != '') {
                 $icon .= $this->font_awesome_render($value['sa_icon_effects_icon']);
@@ -44,34 +45,6 @@ class Style_3 extends Templates
 
             echo '</div>';
         }
-    }
-    public function inline_public_css()
-    {
-        $styledata = $this->style;
-        $css = '';
-        foreach ($styledata['sa_icon_effects_data'] as $key => $value) {
-
-            $css .=  '.' . $this->WRAPPER . ' .sa_addons_icon_effects_style_2.sa_icon_effects_unique_' . $key . ':after {
-                            background: ' . $value['sa_icon_effects_bg'] . ';
-                        }
-                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_2.sa_icon_effects_unique_' . $key . ' .oxi-icons {
-                            color: ' . $value['sa_icon_effects_color'] . ';
-                        }
-                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_2.sa_icon_effects_unique_' . $key . ':hover:after {
-                            background: ' . $value['sa_icon_effects_bg_hover'] . ';
-                        }
-                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_2.sa_icon_effects_unique_' . $key . ':hover .oxi-icons {
-                            color: ' . $value['sa_icon_effects_color_hover'] . ';
-                        }
-                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_2.sa_icon_effects_unique_' . $key . ' {
-                            box-shadow: 0 0 0 ' . $styledata['sa_icon_effects_border_w-size'] . 'px ' . $value['sa_icon_effects_bg'] . ';
-                        }
-                        .' . $this->WRAPPER . ' .sa_addons_icon_effects_style_2.sa_icon_effects_unique_' . $key . '.sa_effects_outside:hover {
-                            box-shadow: 0 0 0 ' . $styledata['sa_icon_effects_border_w-size'] . 'px ' . $value['sa_icon_effects_border_hover'] . ';
-                        }
-                        ';
-        }
-        return $css;
     }
 
     public function old_render()

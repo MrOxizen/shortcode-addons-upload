@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_2
+ * Description of Style_4
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle {
+class Style_4 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_header(
@@ -62,23 +62,23 @@ class Style_2 extends AdminStyle {
         );
         $this->add_control(
                 'sa_headers_h_1', $this->style, [
-            'label' => __('Heading One', SHORTCODE_ADDOONS),
+            'label' => __('Heading', SHORTCODE_ADDOONS),
             'type' => Controls::TEXT,
-            'placeholder' => 'This is Heading One',
-            'default' => 'TAKING CARE OF',
+            'placeholder' => 'This is Heading ',
+            'default' => 'DAVID REMBRANT',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-two' => '',
+                '{{WRAPPER}} .oxi-addons-name' => '',
             ],
                 ]
         );
         $this->add_control(
                 'sa_headers_h_2', $this->style, [
-            'label' => __('Heading Two', SHORTCODE_ADDOONS),
+            'label' => __('Sub Heading', SHORTCODE_ADDOONS),
             'type' => Controls::TEXT,
-            'placeholder' => 'This is Heading One',
-            'default' => 'Business',
+            'placeholder' => 'This is Sub Heading One',
+            'default' => 'NATURE PHOTOGRAPHY',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-one' => '',
+                '{{WRAPPER}} .oxi-addons-heading' => '',
             ],
                 ]
         );
@@ -87,25 +87,18 @@ class Style_2 extends AdminStyle {
             'label' => __('Short Details', SHORTCODE_ADDOONS),
             'type' => Controls::TEXTAREA,
             'placeholder' => 'This is Short Details...',
-            'default' => 'We make pancakes better than Barack Obama. To succeed in your mission, you must have single-minded devotion to your goal.',
+            'default' => 'Dr. Neil Cambronero is a heart surgeon who specializes in neonatal, pediatric and adult heart surgery for congenital heart defects. He also has expertise in adults with acquired heart disease.',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-short-detail' => '',
             ],
                 ]
         );
-        $this->add_control(
-                'sa_headers_icon', $this->style, [
-            'label' => __('Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::ICON,
-            Controls::SEPARATOR => TRUE,
-            'default' => 'fab fa-pinterest',
-                ]
-        );
-        $this->add_group_control(
-                'sa_headers_icon_link', $this->style, [
-            'type' => Controls::URL,
-            'loader' => TRUE,
-                ]
+          $this->add_group_control(
+                'sa_headers_right_side_bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-headers-wrapper' => ''
+            ],]
         );
         $this->add_responsive_control(
                 'sa_headers_margin', $this->style, [
@@ -143,18 +136,18 @@ class Style_2 extends AdminStyle {
         $this->end_controls_section();
         $this->start_controls_section(
                 'sa_headers_left_set', [
-            'label' => esc_html__('Left-side Setting', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Content box', SHORTCODE_ADDOONS),
                 ]
         );
         $this->add_group_control(
-                'sa_headers_left_side_bg', $this->style, [
+                'sa_headers_content_bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-wrapper-left-side' => ''
             ],]
         );
         $this->add_responsive_control(
-                'sa_headers_left_side_padding', $this->style, [
+                'sa_headers_content_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -185,234 +178,15 @@ class Style_2 extends AdminStyle {
         );
 
         $this->end_controls_section();
-        $this->start_controls_section(
-                'sa_headers_right_set', [
-            'label' => esc_html__('Right-side Setting', SHORTCODE_ADDOONS),
-                ]
-        );
-        $this->add_group_control(
-                'sa_headers_right_side_bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-right-side' => ''
-            ],]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons-icon', [
-            'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
-                ]
-        );
-        $this->start_controls_tabs(
-                'shortcode-addons-start-tabs',
-                [
-                    'options' => [
-                        'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                        'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-                    ]
-                ]
-        );
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa_headers_icon_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#f7f7f7',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons' => 'color:{{VALUE}};',
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_headers_icon_bg_color', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(255, 255, 255, 0)',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons' => 'background:{{VALUE}};'
-            ],
-                ]
-        );
 
-        $this->add_group_control(
-                'sa_headers_icon_border',
-                $this->style,
-                [
-                    'type' => Controls::BORDER,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons' => ''
-                    ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_headers_icon_box_shadow',
-                $this->style,
-                [
-                    'label' => __('Box Shadow', SHORTCODE_ADDOONS),
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons' => ''
-                    ],
-                ]
-        );
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa_headers_icon_h_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#d1d1d1',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons:hover' => 'color:{{VALUE}};',
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_headers_icon_h_bg_color', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(212, 55, 55, 0)',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons:hover' => 'background:{{VALUE}};'
-            ],
-                ]
-        );
-
-        $this->add_group_control(
-                'sa_headers_icon_h_border',
-                $this->style,
-                [
-                    'type' => Controls::BORDER,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons:hover' => ''
-                    ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_headers_icon_h_box_shadow',
-                $this->style,
-                [
-                    'label' => __('Box Shadow', SHORTCODE_ADDOONS),
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-icons:hover' => ''
-                    ],
-                ]
-        );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-        $this->add_control(
-                'sa_dual_btn_left_sep', $this->style, [
-            'label' => __('', SHORTCODE_ADDOONS),
-            'type' => Controls::SEPARATOR,
-            Controls::SEPARATOR => TRUE,
-                ]
-        );
-        $this->add_group_control(
-                'sa_headers_icon_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-                ]
-        );
-
-        $this->end_controls_section();
-
+      
         $this->end_section_devider();
 
         $this->start_section_devider();
-        $this->start_controls_section(
-                'shortcode-addons-line', [
-            'label' => esc_html__('Line', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-        $this->start_popover_control(
-                'shortcode-addons-line', [
-            'label' => __('Line', SHORTCODE_ADDOONS),
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_headers_line_height', $this->style, [
-            'label' => __('Height', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => '2',
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 250,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 15,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 15,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-line::after' => 'height: {{SIZE}}{{UNIT}};',
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_headers_line_width', $this->style, [
-            'label' => __('Width', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => '%',
-                'size' => '20',
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 250,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 15,
-                    'step' => 0.1,
-                ],
-                '%' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-line::after' => 'width: {{SIZE}}{{UNIT}};',
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_headers_line_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#fff',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-line::after' => 'background:{{VALUE}};',
-            ],
-                ]
-        );
-        $this->end_popover_control();
-        $this->add_group_control(
-                'sa_headers_line_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-                ]
-        );
-
-        $this->end_controls_section();
+       
         $this->start_controls_section(
                 'shortcode-addons-head-1', [
-            'label' => esc_html__('Heading One', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Heading ', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
@@ -422,7 +196,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-one' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading' => 'color:{{VALUE}};',
             ],
                 ]
         );
@@ -431,7 +205,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-one' => '',
+                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading' => '',
             ],
                 ]
         );
@@ -462,7 +236,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-one' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -477,7 +251,7 @@ class Style_2 extends AdminStyle {
 
         $this->start_controls_section(
                 'shortcode-addons-head-2', [
-            'label' => esc_html__('Heading Two', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Sub Heading', SHORTCODE_ADDOONS),
                 ]
         );
         $this->add_control(
@@ -486,7 +260,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#e3e3e3',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-two' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-name' => 'color:{{VALUE}};',
             ],
                 ]
         );
@@ -495,7 +269,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-two ' => '',
+                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-name ' => '',
             ],
                 ]
         );
@@ -526,7 +300,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-two' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -643,12 +417,12 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_headers_button_left_pos', $this->style, [
+                'sa_headers_button_left_pos_1', $this->style, [
             'label' => __('Position ', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'loader' => TRUE,
+            'default' => 'left',
+            
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -664,7 +438,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-button' => 'text-align : {{VALUE}};'
+                '{{WRAPPER}}  .oxi-addons-headers-wrapper .oxi-addons-main-button' => 'text-align : {{VALUE}};'
             ],
                 ]
         );
