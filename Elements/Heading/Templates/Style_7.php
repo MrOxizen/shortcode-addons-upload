@@ -23,22 +23,22 @@ class Style_7 extends Templates {
 //      print_r($this->media_render('sa_head_image',$style)) ;
         $heading = $content = $img = '';
         if ($style['sa_head_text'] != '') {
-            $heading = '<div class="oxi-addons-heading">
+            $heading = '<div class="oxi-addons-heading-style-7">
                         <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading-text"> 
                                 ' . $this->text_render($style['sa_head_text']) . '
                         </' . $style['sa_head_heading_tag'] . '>
                     </div>';
         }
         if ($style['sa_sub_head_text'] != '') {
-            $content = '<div class="oxi-addons-sub-heading">
+            $content = '<div class="oxi-addons-sub-heading-style-7">
                         <p class="oxi-addons-sub-heading-text"> 
                             ' . $this->text_render($style['sa_sub_head_text']) . '
                         </p>
                     </div>';
         }
         if ($this->media_render('sa_head_image', $style) != '') {
-            $img = '<div class="oxi-addons-img-body-wrapper">
-                        <div class="oxi-addons-img-body">
+            $img = '<div class="oxi-addons-img-body-wrapper-style-7">
+                        <div class="oxi-addons-img-body-style-7">
                             <img class="oxi-image" src="' . $this->media_render('sa_head_image', $style) . '">
                         </div>
                     </div>';

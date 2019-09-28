@@ -51,7 +51,7 @@ class Style_10 extends AdminStyle {
             'default' => 'Middle Align Heading',
             'placeholder' => 'This is Heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => '',
+                '{{WRAPPER}} .oxi-addons-heading-style-10 .oxi-addons-heading-text' => '',
             ],
                 ]
         );
@@ -79,7 +79,7 @@ class Style_10 extends AdminStyle {
             'default' => 'SUBTITLE HERE',
             'placeholder' => 'This is Sub-heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => '',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10 .oxi-addons-sub-heading-text' => '',
             ],
                 ]
         );
@@ -130,11 +130,11 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_left::before' => 'height: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_right::before' => 'height: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_mid_center::after' => 'height: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_left::after' => 'height: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_right::after' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_left::before' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_right::before' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_mid_center::after' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_left::after' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_right::after' => 'height: {{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -164,11 +164,11 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-               '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_left::before' => 'width: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_right::before' => 'width: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_mid_center::after' => 'width: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_left::after' => 'width: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_right::after' => 'width: {{SIZE}}{{UNIT}};',
+               '{{WRAPPER}} .oxi-addons-sub-heading-style-10   .oxi-addons-sub-heading-text.oxi_line_top_left::before' => 'width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10   .oxi-addons-sub-heading-text.oxi_line_top_right::before' => 'width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10   .oxi-addons-sub-heading-text.oxi_line_mid_center::after' => 'width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10   .oxi-addons-sub-heading-text.oxi_line_btm_left::after' => 'width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10   .oxi-addons-sub-heading-text.oxi_line_btm_right::after' => 'width: {{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -179,11 +179,11 @@ class Style_10 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'rgba(212, 55, 55, 1)',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_left::before' => 'background: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_right::before' => 'background: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_mid_center::after' => 'background: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_left::after' => 'background: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_right::after' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_left::before' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_right::before' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_mid_center::after' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_left::after' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_right::after' => 'background: {{VALUE}};',
             ],
                 ]
         );
@@ -249,7 +249,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#1f0c0c',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-heading-style-10 .oxi-addons-heading-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -258,7 +258,7 @@ class Style_10 extends AdminStyle {
                 'sa_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text ' => '',
+                '{{WRAPPER}} .oxi-addons-heading-style-10 .oxi-addons-heading-text ' => '',
             ],
                 ]
         );
@@ -289,7 +289,7 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-heading-style-10 .oxi-addons-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -309,7 +309,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#4d4d4d',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10 .oxi-addons-sub-heading-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -318,7 +318,7 @@ class Style_10 extends AdminStyle {
                 'sa_sub_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text ' => '',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10 .oxi-addons-sub-heading-text ' => '',
             ],
                 ]
         );
@@ -349,7 +349,7 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-10 .oxi-addons-sub-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );

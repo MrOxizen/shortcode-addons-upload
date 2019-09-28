@@ -3,14 +3,14 @@
     float: left
 }
 
-.oxi-addons-heading {
+.oxi-addons-heading-style-9 {
     width: 100%;
     float: left;
     display: block;
     text-align: center
 }
 
-.oxi-addons-heading .oxi-addons-heading-text {
+.oxi-addons-heading-style-9 .oxi-addons-heading-text {
     position: relative;
     font-size: 50px;
     font-family: "Alegreya Sans SC";
@@ -24,7 +24,7 @@
     display: inline-block
 }
 
-.oxi-addons-heading .oxi-addons-heading-text::before {
+.oxi-addons-heading-style-9 .oxi-addons-heading-text::before {
     background: rgba(212, 55, 55, 1) none repeat scroll 0 0;
     content: "";
     left: 0;
@@ -35,7 +35,7 @@
     transform: translateX(-100%)
 }
 
-.oxi-addons-heading .oxi-addons-heading-text::after {
+.oxi-addons-heading-style-9 .oxi-addons-heading-text::after {
     background: rgba(212, 55, 55, 1) none repeat scroll 0 0;
     content: "";
     right: 0;
@@ -46,13 +46,13 @@
     transform: translateX(100%)
 }
 
-.oxi-addons-sub-heading {
+.oxi-addons-sub-heading-style-9  {
     width: 100%;
     float: left;
     display: block
 }
 
-.oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+.oxi-addons-sub-heading-style-9  .oxi-addons-sub-heading-text {
     width: 100%;
     height: auto;
     font-size: 22px;
@@ -68,19 +68,19 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-heading {
+    .oxi-addons-heading-style-9 {
         width: 100%;
         height: auto;
         text-align: center
     }
-    .oxi-addons-heading .oxi-addons-heading-text {
+    .oxi-addons-heading-style-9 .oxi-addons-heading-text {
         position: relative;
         font-size: 40px;
         margin: 0;
         padding: 0px 0px 0px 0px;
         display: inline-block
     }
-    .oxi-addons-heading .oxi-addons-heading-text::before {
+    .oxi-addons-heading-style-9 .oxi-addons-heading-text::before {
         content: "";
         left: 0;
         position: absolute;
@@ -98,11 +98,11 @@
         height: 3px;
         transform: translateX(100%)
     }
-    .oxi-addons-sub-heading {
+    .oxi-addons-sub-heading-style-9  {
         width: 100%;
         height: auto
     }
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+    .oxi-addons-sub-heading-style-9  .oxi-addons-sub-heading-text {
         width: 100%;
         height: auto;
         font-size: 20px;
@@ -111,19 +111,19 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-heading {
+    .oxi-addons-heading-style-9 {
         width: 100%;
         height: auto;
         text-align: center
     }
-    .oxi-addons-heading .oxi-addons-heading-text {
+    .oxi-addons-heading-style-9 .oxi-addons-heading-text {
         position: relative;
         font-size: 35px;
         margin: 0;
         padding: 0px 0px 0px 0px;
         display: inline-block
     }
-    .oxi-addons-heading .oxi-addons-heading-text::before {
+    .oxi-addons-heading-style-9 .oxi-addons-heading-text::before {
         content: "";
         left: 0;
         position: absolute;
@@ -132,7 +132,7 @@
         height: 3px;
         transform: translateX(-100%)
     }
-    .oxi-addons-heading .oxi-addons-heading-text::after {
+    .oxi-addons-heading-style-9 .oxi-addons-heading-text::after {
         content: "";
         right: 0;
         position: absolute;
@@ -141,11 +141,11 @@
         height: 3px;
         transform: translateX(100%)
     }
-    .oxi-addons-sub-heading {
+    .oxi-addons-sub-heading-style-9 {
         width: 100%;
         height: auto
     }
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+    .oxi-addons-sub-heading-style-9 .oxi-addons-sub-heading-text {
         width: 100%;
         height: auto;
         font-size: 15px;

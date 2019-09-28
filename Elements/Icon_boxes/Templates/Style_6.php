@@ -22,7 +22,7 @@ class Style_6 extends Templates
     {
         foreach ($child as $v) {
 
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+              $value = $this->Json_Decode($v['rawdata']);
             
             $icon = $heading = $link = $endlink = '';
             if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {

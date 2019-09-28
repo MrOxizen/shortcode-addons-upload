@@ -23,7 +23,7 @@ class Style_6 extends Templates {
         $heading = $content = '';
         if ($style['sa_head_text'] != '') {
             $heading = '<div class="oxi-addons-img-body">
-                            <div class="oxi-addons-heading">
+                            <div class="oxi-addons-heading-style-6">
                                 <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading-text"> 
                                         ' . $this->text_render($style['sa_head_text']) . '
                                 </' . $style['sa_head_heading_tag'] . '>
@@ -31,7 +31,7 @@ class Style_6 extends Templates {
                         </div>';
         }
         if ($style['sa_sub_head_text'] != '') {
-            $content = '<div class="oxi-addons-sub-heading">
+            $content = '<div class="oxi-addons-sub-heading-style-6">
                             <p class="oxi-addons-sub-heading-text"> 
                                 ' . $this->text_render($style['sa_sub_head_text']) . '
                             </p>

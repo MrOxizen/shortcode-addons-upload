@@ -88,7 +88,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-section' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-section' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -98,7 +98,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::ANIMATION,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2' => ''
                 ],
             ]
         );
@@ -140,7 +140,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-amount' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -152,7 +152,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#db3328',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-amount' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -162,7 +162,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-amount' => ''
                 ],
             ]
         );
@@ -172,7 +172,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-amount' => ''
                 ],
             ]
         );
@@ -204,7 +204,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-amount' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -215,7 +215,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-amount' => ''
                 ],
             ]
         );
@@ -247,7 +247,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-amount' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-amount' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -270,7 +270,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#545454',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-period' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -280,7 +280,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-period' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-period' => ''
                 ],
             ]
         );
@@ -312,7 +312,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-countdown-period' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-2 .sa-addons-countdown-period' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

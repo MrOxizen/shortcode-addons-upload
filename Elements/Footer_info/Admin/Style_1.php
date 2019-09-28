@@ -663,7 +663,7 @@ class Style_1 extends AdminStyle {
             'loader' => TRUE,
                 ]
         );
-        echo '</div>';
+        echo '</div>';   
     }
 
 }

@@ -20,7 +20,7 @@ class Style_3 extends Templates {
 
         if ($style['sa_head_text'] != '') {
             echo ' 
-                <div class="oxi-addons-heading-container " > 
+                <div class="oxi-addons-heading-container-style-3 " > 
                     <' . $style['sa_head_heading_tag'] . '  '.$this->animation_render('sa_head_animation', $style).' class="oxi-addons-heading">' . $this->text_render($style['sa_head_text']) . '</' . $style['sa_head_heading_tag'] . '>
                </div> ';
         }

@@ -1010,6 +1010,46 @@ class Style_4 extends AdminStyle {
                     'type' => Controls::URL,
                     'controller' => 'add_group_control',
                 ],
+                'shortcode-addons-start-tabs' => [
+                    'controller' => 'start_controls_tabs',
+                    'options' => [
+                        'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                        'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                    ]
+                ],
+                'shortcode-addons-start-tab1' => [
+                    'controller' => 'start_controls_tab',
+                ],
+                'sa_fi_repeater_color' => [
+                    'label' => __('Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => '#ffffff',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_FI_4 .sa_FI_4_icon_repeater_{{KEY}} .oxi-icons' => 'color:{{VALUE}};',
+                    ],
+                ],
+                
+                'shortcode-addons-start-tab1-end' => [
+                    'controller' => 'end_controls_tab',
+                ],
+                'shortcode-addons-start-tab2' => [
+                    'controller' => 'start_controls_tab',
+                ],
+                'sa_fi_repeater_color_hover' => [
+                    'label' => __('Hover Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => '#ffffff',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_FI_4 .sa_FI_4_icon_repeater_{{KEY}} .oxi-icons:hover' => 'color:{{VALUE}};',
+                    ],
+                ],
+               
+                'shortcode-addons-start-tab2-end' => [
+                    'controller' => 'end_controls_tab',
+                ],
+                'shortcode-addons-start-tabs-end' => [
+                    'controller' => 'end_controls_tabs',
+                ],
             ],
             'title_field' => 'sa_fi_icon_icon',
             'condition' => [
@@ -1113,40 +1153,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        $this->start_controls_tabs(
-                'shortcode-addons-start-tabs', [
-            'options' => [
-                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-            ]
-                ]
-        );
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa_fi_icon_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#ffffff',
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_icon .oxi-icons' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa_fi_icon_hover_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#000000',
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_icon .oxi-icons:hover' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-
+        
 
 
         $this->add_responsive_control(

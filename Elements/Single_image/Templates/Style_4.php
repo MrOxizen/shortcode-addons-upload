@@ -22,7 +22,7 @@ class Style_4 extends Templates {
 //        echo '</pre>';
  
         if($this->media_render('sa_s_image_img', $style) != ''){
-        echo ' <div class="oxi-addons-single-image-container" id="' . $style['sa_s_image_ID'] . '">
+        echo ' <div class="oxi-addons-single-image-container-style-4" id="' . $style['sa_s_image_ID'] . '">
                             <div class="oxi-addons-single-image-row">
                                 <div class="oxi-addons-single-image">
                                     <img src="' . $this->media_render('sa_s_image_img', $style) . '">

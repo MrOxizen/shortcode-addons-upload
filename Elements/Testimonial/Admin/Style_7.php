@@ -101,27 +101,28 @@ class Style_7 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa-testimonial-profile-body_alignment', $this->style, [
+                'sa-testimonial-profile-body_alignment', $this->style, [
             'label' => __('Portfolio Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
-            'loader' => TRUE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
+            'default' => 'sa-testimonial-profile-body-seven-left',
             'options' => [
-                'left' => [
+                'sa-testimonial-profile-body-seven-left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-left',
                 ],
-                'center' => [
+                'sa-testimonial-profile-body-seven-center' => [
                     'title' => __('Center', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-center',
                 ],
-                'right' => [
+                'sa-testimonial-profile-body-seven-right' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-right',
                 ],
             ],
-            
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-seven-padding .oxi-testimonials-style-seven' => '',
+            ],
                 ]
         );
         $this->add_responsive_control(
@@ -215,7 +216,7 @@ class Style_7 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa-testimonial-body-animation', $this->style, [
             'type' => Controls::ANIMATION,
@@ -225,7 +226,7 @@ class Style_7 extends AdminStyle {
                 ]
         );
         $this->start_controls_tabs(
-            'shortcode-addons-start-tabs', [
+                'shortcode-addons-start-tabs', [
             'options' => [
                 'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
                 'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
@@ -252,13 +253,13 @@ class Style_7 extends AdminStyle {
                 ]
         );
         $this->end_controls_tab();
-        
+
         $this->end_controls_tabs();
         $this->end_controls_section();
-        
+
         $this->end_section_devider();
         $this->start_section_devider();
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Profile Image', SHORTCODE_ADDOONS),
@@ -295,7 +296,7 @@ class Style_7 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_responsive_control(
                 'sa-testimonial-profile-image-height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
@@ -365,8 +366,8 @@ class Style_7 extends AdminStyle {
             ],
                 ]
         );
-        
-        
+
+
         $this->end_controls_section();
 
         $this->start_controls_section(
@@ -393,7 +394,7 @@ class Style_7 extends AdminStyle {
             ]
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa-testimonial-profile-name-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -457,7 +458,7 @@ class Style_7 extends AdminStyle {
             ]
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa-testimonial-profile-Information-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -580,7 +581,7 @@ class Style_7 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-testimonial-profile-arrow-height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -610,7 +611,7 @@ class Style_7 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa-testimonial-profile-arrow-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
@@ -620,8 +621,8 @@ class Style_7 extends AdminStyle {
             ]
                 ]
         );
-        
-        
+
+
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
@@ -668,7 +669,7 @@ class Style_7 extends AdminStyle {
             ]
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa-testimonial-profile-company-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -707,8 +708,8 @@ class Style_7 extends AdminStyle {
             ]
                 ]
         );
-        
-        
+
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
@@ -763,7 +764,7 @@ class Style_7 extends AdminStyle {
             'placeholder' => 'John Mandis',
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_testi_profile_url', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
@@ -772,7 +773,7 @@ class Style_7 extends AdminStyle {
             'placeholder' => 'https://www.yoururl.com',
                 ]
         );
-        
+
         $this->add_control(
                 'sa_testi_profile_description', $this->style, [
             'label' => __('Short Details', SHORTCODE_ADDOONS),

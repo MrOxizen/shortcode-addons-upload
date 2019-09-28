@@ -32,8 +32,9 @@ class Style_3 extends Templates {
         }
         
         $icon = '';
-        foreach ($style['sa_fi_icon_repeater'] as $value) {
-            $icon .= ' <a ' . $this->url_render('sa_fi_icon_url', $value) . '>
+        $repeater =  (array_key_exists('sa_fi_icon_repeater', $style) && is_array($style['sa_fi_icon_repeater'])) ? $style['sa_fi_icon_repeater'] : [];
+        foreach ($repeater as $key => $value) {
+            $icon .= ' <a ' . $this->url_render('sa_fi_icon_url', $value) . ' class = "sa_FI_3_icon_repeater_' . $key . '">
                             ' . $this->font_awesome_render($value['sa_fi_icon_icon']) . '
                          </a> ';
         }

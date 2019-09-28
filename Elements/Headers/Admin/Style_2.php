@@ -197,37 +197,6 @@ class Style_2 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addons-wrapper-right-side' => ''
             ],]
         );
-        $this->add_responsive_control(
-                'sa_headers_right_side_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-right-side' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons-icon', [
@@ -515,7 +484,6 @@ class Style_2 extends AdminStyle {
                 'sa_headers_head_2_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-           
             'default' => '#e3e3e3',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-heading-two' => 'color:{{VALUE}};',
@@ -672,7 +640,6 @@ class Style_2 extends AdminStyle {
                     'label' => __('Link', SHORTCODE_ADDOONS),
                     'type' => Controls::URL,
                     'loader' => TRUE,
-                   
                 ]
         );
         $this->add_control(
@@ -815,7 +782,7 @@ class Style_2 extends AdminStyle {
                     'default' => '#fff',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-headers-wrapper .oxi-addons-main-button .oxi-addons-link' => 'color:{{VALUE}};',
-                     ],
+                    ],
                 ]
         );
         $this->add_control(
