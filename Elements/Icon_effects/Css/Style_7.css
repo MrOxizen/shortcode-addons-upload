@@ -1,0 +1,153 @@
+.sa_icon_effects_link {
+    width: 100%;
+    height: 100%;
+}
+
+.sa_addons_icon_effects_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sa_addons_icon_effects_style_4 {
+    position: relative;
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    border-radius: 90px;
+    z-index: 1;
+    border: 5px solid #b35656
+}
+
+.sa_addons_icon_effects_style_4:after {
+    pointer-events: none;
+    position: absolute;
+    width: calc(100% - 0px);
+    height: calc(100% - 0px);
+    border-radius: 50%;
+    content: "";
+    z-index: -1;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    top: -5px;
+    left: -5px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: 0;
+    border: 5px dashed transparent
+}
+
+.sa_addons_icon_effects_style_4:hover,
+.sa_addons_icon_effects_style_4:focus,
+.sa_addons_icon_effects_style_4:active {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    animation-duration: 10s;
+    border-radius: 90px;
+    border: 5px solid transparent !important;
+}
+
+.sa_addons_icon_effects_style_4:hover:after {
+    opacity: 1;
+    border: 5px #993838 dashed
+}
+
+.sa_addons_icon_effects_style_4.sa_effects_outside:hover:after {
+    opacity: 1;
+    border: 5px #993838 dashed;
+    animation: spinAround 9s linear infinite;
+    -webkit-animation: spinAround 9s linear infinite;
+}
+
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes spinAround {
+    from {
+        -moz-transform: rotate(0deg)
+    }
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.sa_addons_icon_effects_style_4 .oxi-icons {
+    font-size: 50px;
+    color: #b35656;
+    line-height: 100px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s
+}
+
+.sa_addons_icon_effects_style_4:hover .oxi-icons {
+    color: #993838
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_icon_effects_style_4 {
+        max-width: 90px;
+        height: 90px;
+        margin: 0px 0px
+    }
+    .sa_addons_icon_effects_style_4:hover,
+    .sa_addons_icon_effects_style_4:focus,
+    .sa_addons_icon_effects_style_4:active {
+        max-width: 90px;
+        height: 90px;
+        margin: 0px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    .sa_addons_icon_effects_style_4 .oxi-icons {
+        font-size: 45px;
+        line-height: 80px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_icon_effects_style_4 {
+        max-width: 80px;
+        height: 80px;
+        margin: 0px 0px
+    }
+    .sa_addons_icon_effects_style_4:hover,
+    .sa_addons_icon_effects_style_4:focus,
+    .sa_addons_icon_effects_style_4:active {
+        max-width: 80px;
+        height: 80px;
+        margin: 0px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    .sa_addons_icon_effects_style_4 .oxi-icons {
+        font-size: 40px;
+        line-height: 70px
+    }
+}

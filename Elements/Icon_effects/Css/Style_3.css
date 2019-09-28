@@ -43,6 +43,19 @@
     -o-transition: all 0.2s;
 }
 
+.sa_addons_icon_effects_style_2.sa_icon_effects_style_3:after {
+    opacity: 0;
+}
+
+.sa_addons_icon_effects_style_2.sa_icon_effects_style_3:hover:after {
+    opacity: 1;
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
 .sa_addons_icon_effects_style_2.sa_effects_outside:after {
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -77,6 +90,14 @@
     left: 5px;
     width: calc(100% - 10px);
     height: calc(100% - 10px);
+    padding: 0px
+}
+
+.sa_addons_icon_effects_style_2.sa_icon_effects_style_3:hover:after {
+    top: 0;
+    left: 0;
+    width: calc(100% - 0px);
+    height: calc(100% - 0px);
     padding: 0px
 }
 

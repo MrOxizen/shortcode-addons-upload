@@ -21,6 +21,8 @@ class Style_1 extends Templates
     public function default_render($style, $child, $admin)
     {
         $jquery = $linkopening = '';
+        echo '';
+        print_r($child);
 
 
 
