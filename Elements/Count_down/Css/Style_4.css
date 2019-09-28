@@ -3,7 +3,7 @@
     float: left;
 }
 
-.sa-addons-count-down-container .sa-addons-count-down-content {
+.sa-addons-count-down-container .sa-addons-count-down-content-style-4 {
     width: 100%;
     float: left;
     display: flex;
@@ -11,7 +11,7 @@
     align-items: center
 }
 
-.sa-addons-count-down-content .sa-addons-counter-group {
+.sa-addons-count-down-content-style-4 .sa-addons-counter-group {
     width: 100%;
     float: left;
     margin: 0;
@@ -19,7 +19,7 @@
     justify-content: center
 }
 
-.sa-addons-count-down-content .sa-addons-counter-block .sa-addons-counter-caption {
+.sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-counter-caption {
     width: 100%;
     float: left;
     display: flex;
@@ -33,7 +33,7 @@
     text-align: center
 }
 
-.sa-addons-count-down-content .sa-addons-counter-block {
+.sa-addons-count-down-content-style-4 .sa-addons-counter-block {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,12 +49,12 @@
     box-shadow: 0px 3px 6px 0px rgba(18, 18, 18, 0.44);
 }
 
-.sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter {
+.sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter {
     width: 70px;
     height: 60px;
 }
 
-.sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number {
+.sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number {
     background-color: transparent;
     font-size: 50px;
     color: #fc518a;
@@ -69,47 +69,47 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa-addons-count-down-content .sa-addons-counter-group {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-group {
         flex-wrap: wrap;
         align-items: center
     }
-    .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-counter-caption {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-counter-caption {
         font-size: 18px
     }
-    .sa-addons-count-down-content .sa-addons-counter-block {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block {
         width: 140px;
         height: 140px;
         border-width: 4px 4px 4px 4px;
         margin: 5px 30px 5px 30px
     }
-    .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter {
         width: 68px;
         height: 59px
     }
-    .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number {
         font-size: 50px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .sa-addons-count-down-content .sa-addons-counter-group {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-group {
         flex-wrap: wrap;
         align-items: center
     }
-    .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-counter-caption {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-counter-caption {
         font-size: 18px
     }
-    .sa-addons-count-down-content .sa-addons-counter-block {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block {
         width: 140px;
         height: 140px;
         border-width: 4px 4px 4px 4px;
         margin: 5px 10px 5px 10px
     }
-    .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter {
         width: 67px;
         height: 58px
     }
-    .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number {
+    .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number {
         font-size: 50px
     }
 }

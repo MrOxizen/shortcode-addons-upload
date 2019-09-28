@@ -12,17 +12,14 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_7 extends Templates
-{
+class Style_7 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $icon = $heading = $content = $link = $endlink = $icon_p = '';
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            $value = $this->Json_Decode($v['rawdata']);
             if ($style['sa_icon_box_icon_position'] == 'left') {
                 $icon_p .= 'icon_left';
             }
@@ -78,8 +75,7 @@ class Style_7 extends Templates
         }
     }
 
-    public function old_render()
-    {
+    public function old_render() {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -227,4 +223,5 @@ class Style_7 extends Templates
     }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
+
 }
