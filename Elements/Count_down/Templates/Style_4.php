@@ -36,7 +36,7 @@ class Style_4 extends Templates
 		$trim = ltrim($time[0], '0');
 		$times = array($trim, $time[1]);
 		$times = implode(',', $times);
-		$jquery = 'jQuery(".sa-addons-count-down-content").mbComingsoon({
+		$jquery = 'jQuery(".sa-addons-count-down-content-style-4").mbComingsoon({
 					expiryDate  : new Date(' . $days_marge . ',' . $times . '),
 					localization: {
 						days   : "Days",
@@ -61,7 +61,7 @@ class Style_4 extends Templates
 	public function default_render($style, $child, $admin)
 	{
 		echo ' <div class="sa-addons-count-down-container">
-                  <div class="sa-addons-count-down-content">
+                  <div class="sa-addons-count-down-content-style-4">
                                       
                   </div>      
                 </div>';
@@ -71,7 +71,6 @@ class Style_4 extends Templates
 	{
 
 		$styledata = $this->dbdata;
-		$stylename = $styledata['style_name'];
 		$oxiid = $styledata['id'];
 		$stylefiles = explode('||#||', $styledata['css']);
 		$style = explode('|', $stylefiles[0]);

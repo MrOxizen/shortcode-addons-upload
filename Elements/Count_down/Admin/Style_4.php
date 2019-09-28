@@ -66,7 +66,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::ANIMATION,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block' => ''
                 ],
             ]
         );
@@ -76,7 +76,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block' => ''
                 ],
             ]
         );
@@ -121,7 +121,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -131,7 +131,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block' => ''
                 ],
             ]
         );
@@ -141,7 +141,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block' => ''
                 ],
             ]
         );
@@ -174,7 +174,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -208,7 +208,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -245,7 +245,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#db3328',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -255,7 +255,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number' => ''
                 ],
             ]
         );
@@ -287,7 +287,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -312,7 +312,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#545454',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-counter-caption' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-counter-caption' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -322,7 +322,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-counter-caption' => ''
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-counter-caption' => ''
                 ],
             ]
         );
@@ -354,7 +354,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-count-down-content .sa-addons-counter-block .sa-addons-counter-caption' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-counter-caption' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
