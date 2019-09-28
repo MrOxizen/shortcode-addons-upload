@@ -7,7 +7,7 @@ and open the template in the editor.
     Created on : Sep 1, 2019, 12:29:11 PM
     Author     : biplo
 */
-.oxi-addons-is {
+.oxi-addons-image-scroll-tem-1 {
     width: 100%;
     float: left;
     padding: 0px 0px 0px 0px;
@@ -16,7 +16,7 @@ and open the template in the editor.
     justify-content: center
 }
 
-.oxi-addons-is .oxi-link {
+.oxi-addons-image-scroll-tem-1 .oxi-link {
     width: 100%;
     float: left;
     display: flex;
@@ -24,7 +24,7 @@ and open the template in the editor.
     justify-content: center
 }
 
-.oxi-addons-is .oxi-addons-image-main {
+.oxi-addons-image-scroll-tem-1 .oxi-addons-image-main {
     max-width: 800px;
     height: 400px;
     width: 100%;
@@ -37,12 +37,12 @@ and open the template in the editor.
 }
 
 
-.oxi-addons-is .oxi-addons-img {
+.oxi-addons-image-scroll-tem-1 .oxi-addons-img {
     width: 100%;
     float: left
 }
 
-.oxi-addons-is .oxi-img {
+.oxi-addons-image-scroll-tem-1 .oxi-img {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -50,10 +50,10 @@ and open the template in the editor.
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-is {
+    .oxi-addons-image-scroll-tem-1 {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-is .oxi-addons-image-main {
+    .oxi-addons-image-scroll-tem-1 .oxi-addons-image-main {
         width: 800px;
         height: 400px;
         border-radius: 0px 0px 0px 0px
@@ -61,10 +61,10 @@ and open the template in the editor.
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-is {
+    .oxi-addons-image-scroll-tem-1 {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-is .oxi-addons-image-main {
+    .oxi-addons-image-scroll-tem-1 .oxi-addons-image-main {
         width: 800px;
         height: 400px;
         border-radius: 0px 0px 0px 0px

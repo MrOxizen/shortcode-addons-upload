@@ -83,7 +83,7 @@ class Style_1 extends AdminStyle {
 
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-is .sa-img-{{KEY}} ' => 'transition: all {{SIZE}}s;'
+                        '{{WRAPPER}} .oxi-addons-image-scroll-tem-1 .sa-img-{{KEY}} ' => 'transition: all {{SIZE}}s;'
                     ],
         
                 ],
@@ -133,7 +133,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-is .oxi-addons-image-main' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-image-scroll-tem-1 .oxi-addons-image-main' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -163,7 +163,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-is .oxi-addons-image-main' => 'height:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-image-scroll-tem-1 .oxi-addons-image-main' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -197,14 +197,14 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-is .oxi-addons-image-main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-image-scroll-tem-1 .oxi-addons-image-main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
         $this->add_group_control(
                 'sa_is_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-is .oxi-addons-image-main' => ''
+                '{{WRAPPER}} .oxi-addons-image-scroll-tem-1 .oxi-addons-image-main' => ''
             ],
                 ]
         );
@@ -240,7 +240,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-is' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-image-scroll-tem-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

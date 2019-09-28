@@ -7,7 +7,7 @@ and open the template in the editor.
     Created on : Sep 1, 2019, 12:29:11 PM
     Author     : biplo
 */
-.oxi-addons-is {
+.oxi-addons-image-scroll-style-3 {
     width: 100%;
     float: left;
     padding: 0px 0px 0px 0px;
@@ -16,7 +16,7 @@ and open the template in the editor.
     justify-content: center
 }
 
-.oxi-addons-is .oxi-link {
+.oxi-addons-image-scroll-style-3 .oxi-link {
     width: 100%;
     float: left;
     display: flex;
@@ -24,7 +24,7 @@ and open the template in the editor.
     justify-content: center
 }
 
-.oxi-addons-is .oxi-addons-image-main {
+.oxi-addons-image-scroll-style-3 .oxi-addons-image-main {
     width: 100%;
     height: 350px;
     max-width: 100%;
@@ -33,32 +33,32 @@ and open the template in the editor.
     position: relative
 }
 
-.oxi-addons-is .oxi-addons-img {
+.oxi-addons-image-scroll-style-3 .oxi-addons-img {
     width: 100%;
     float: left
 }
 
-.oxi-addons-is .oxi-img {
+.oxi-addons-image-scroll-style-3 .oxi-img {
     width: 100%;
     height: 100%;
     max-height: 100%
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-is {
+    .oxi-addons-image-scroll-style-3 {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-is .oxi-addons-image-main {
+    .oxi-addons-image-scroll-style-3 .oxi-addons-image-main {
         height: 350px;
         border-radius: px px px px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-is {
+    .oxi-addons-image-scroll-style-3 {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-is .oxi-addons-image-main {
+    .oxi-addons-image-scroll-style-3 .oxi-addons-image-main {
         height: 350px;
         border-radius: px px px px
     }
