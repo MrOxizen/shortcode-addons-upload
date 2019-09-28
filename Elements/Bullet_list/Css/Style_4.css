@@ -120,7 +120,7 @@
      display: none
  }
  
- .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i{
+ .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons{
      display: flex;
      align-items: center;
      justify-content: center;
@@ -139,7 +139,7 @@
      overflow: hidden
  }
  
- .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon i{
+ .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon .oxi-icons{
      color: #ffffff;
      background: rgba(69, 178, 237, 1);
      border-color: #45b2ed;
