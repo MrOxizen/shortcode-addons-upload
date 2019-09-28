@@ -28,7 +28,7 @@ class Style_4 extends Templates
                 <div class="sa-addons-tabs-main-wrapper">
                 <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {
-            $value_header =  $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
+            $value_header = $this->Json_Decode($header['rawdata']);
             $icon = '';
             if (array_key_exists('sa_tabs_url_open', $value_header) && $value_header['sa_tabs_url_open'] != '0') :
 
@@ -57,7 +57,7 @@ class Style_4 extends Templates
             <div class="sa-addons-main-tab-body">
                 <div class="sa-addons-line"></div>';
         foreach ($child as $body) {
-            $value_body = ($body['rawdata'] != '' ? json_decode(stripcslashes($body['rawdata']), true) : []);
+            $value_body = $this->Json_Decode($body['rawdata']);
             if (array_key_exists('sa_tabs_url_open', $value_body) && $value_body['sa_tabs_url_open'] != '0') :
                 if ($value_body['sa_tabs_url-target'] != 'yes') :
                     $linkopening = ", '_self'";
