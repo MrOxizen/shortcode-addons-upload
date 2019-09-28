@@ -22,7 +22,7 @@ class Style_2 extends Templates {
 //        print_r($style);
 //        echo '</pre>';
         if ($style['sa_head_text'] != '') {
-            echo ' <div class="oxi-addons-heading-container " > 
+            echo ' <div class="oxi-addons-heading-container-style-2" > 
                     <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading"  '.$this->animation_render('sa_head_animation', $style).' '
                     . 'style= "background: url(' . $this->media_render('sa_head_image',$style) . ');
                     -moz-background-size: 100% 100%;

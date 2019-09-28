@@ -1,11 +1,11 @@
-.oxi-addons-single-image-container {
+.oxi-addons-single-image-container-style-4 {
     display: inline-block;
     vertical-align: middle;
     max-width: 100%;
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-row {
+.oxi-addons-single-image-container-style-4 .oxi-addons-single-image-row {
     display: block;
     vertical-align: middle;
     max-width: 100%;
@@ -13,7 +13,7 @@
     padding: 10px 10px 10px 10px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image {
+.oxi-addons-single-image-container-style-4 .oxi-addons-single-image {
     display: block;
     width: 100%;
     position: relative;
@@ -22,7 +22,7 @@
     overflow: hidden
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image img {
+.oxi-addons-single-image-container-style-4 .oxi-addons-single-image img {
     display: block;
     width: 100%;
     height: auto;
@@ -33,7 +33,7 @@
     transition: transform 5s
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image::before {
+.oxi-addons-single-image-container-style-4 .oxi-addons-single-image::before {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -51,20 +51,20 @@
     background: rgba(135, 19, 19, 0)
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image:hover {
+.oxi-addons-single-image-container-style-4 .oxi-addons-single-image:hover {
     border-radius: 0px 0px 0px 0px;
     box-shadow: 0px 10px 35px 5px rgba(150, 145, 145, 1);
     over-flow: hidden
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image:hover img {
+.oxi-addons-single-image-container-style-4 .oxi-addons-single-image:hover img {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
     border-radius: 0px 0px 0px 0px;
     transform: scale(1.5)
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image:hover::before {
+.oxi-addons-single-image-container-style-4 .oxi-addons-single-image:hover::before {
     background: rgba(255, 255, 255, 0);
     border-radius: 0px 0px 0px 0px
 }

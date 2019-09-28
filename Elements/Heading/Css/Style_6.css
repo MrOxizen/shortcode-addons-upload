@@ -14,12 +14,12 @@
     background-position: center
 }
 
-.oxi-addons-heading {
+.oxi-addons-heading-style-6 {
     width: 100%;
     float: left
 }
 
-.oxi-addons-heading .oxi-addons-heading-text {
+.oxi-addons-heading-style-6 .oxi-addons-heading-text {
     width: 100%;
     float: left;
     font-size: 50px;
@@ -35,12 +35,12 @@
     padding: 10px 10px 10px 10px
 }
 
-.oxi-addons-sub-heading {
+.oxi-addons-sub-heading-style-6 {
     width: 100%;
     float: left
 }
 
-.oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+.oxi-addons-sub-heading-style-6 .oxi-addons-sub-heading-text {
     width: 100%;
     float: left;
     font-size: 22px;
@@ -65,12 +65,12 @@
         float: left;
         background-position: center
     }
-    .oxi-addons-heading .oxi-addons-heading-text {
+    .oxi-addons-heading-style-6 .oxi-addons-heading-text {
         font-size: 40px;
         margin: 0;
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+    .oxi-addons-sub-heading-style-6 .oxi-addons-sub-heading-text {
         font-size: 18px;
         margin: 0;
         padding: 10px 10px 10px 10px
@@ -86,12 +86,12 @@
         float: left;
         background-position: center
     }
-    .oxi-addons-heading .oxi-addons-heading-text {
+    .oxi-addons-heading-style-6 .oxi-addons-heading-text {
         font-size: 35px;
         margin: 0;
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+    .oxi-addons-sub-heading-style-6 .oxi-addons-sub-heading-text {
         font-size: 15px;
         margin: 0;
         padding: 10px 10px 10px 10px

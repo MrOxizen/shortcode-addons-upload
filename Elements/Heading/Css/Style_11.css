@@ -3,7 +3,7 @@
     float: left
 }
 
-.oxi-addons-heading {
+.oxi-addons-heading-style-11 {
     width: 100%;
     float: left;
     display: block;
@@ -21,14 +21,14 @@
     text-shadow: 0px 0px 2px #ffffff;
 }
 
-.oxi-addons-heading .oxi-addons-heading-text {
+.oxi-addons-heading-style-11 .oxi-addons-heading-text {
     margin: 0;
     padding: 0px 20px 5px 10px;
     background: rgba(60, 217, 123, 1);
     display: inline-block
 }
 
-.oxi-addons-heading .oxi-addons-heading-text {
+.oxi-addons-heading-style-11 .oxi-addons-heading-text {
     margin: 0;
     font-size: 50px;
     font-family: "ABeeZee";
@@ -41,13 +41,13 @@
     color: #1f1f1f
 }
 
-.oxi-addons-sub-heading {
+.oxi-addons-sub-heading-style-11 {
     width: 100%;
     float: left;
     display: block
 }
 
-.oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+.oxi-addons-sub-heading-style-11 .oxi-addons-sub-heading-text {
     width: 100%;
     height: auto;
     font-size: 16px;
@@ -63,7 +63,7 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-heading {
+    .oxi-addons-sub-heading-style-11 {
         width: 100%;
         float: left;
         display: block;
@@ -72,21 +72,21 @@
         border-left-width: 0;
         border-right-width: 0
     }
-    .oxi-addons-heading .oxi-addons-heading-text {
+    .oxi-addons-sub-heading-style-11 .oxi-addons-heading-text {
         margin: 0;
         padding: 0px 20px 5px 10px;
         display: inline-block
     }
-    .oxi-addons-heading .oxi-addons-heading-text h4 {
+    .oxi-addons-sub-heading-style-11 .oxi-addons-heading-text h4 {
         margin: 0;
         font-size: 30px
     }
-    .oxi-addons-sub-heading {
+    .oxi-addons-sub-heading-style-11 {
         width: 100%;
         float: left;
         display: block
     }
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+    .oxi-addons-sub-heading-style-11 .oxi-addons-sub-heading-text {
         width: 100%;
         height: auto;
         font-size: 16px;
@@ -96,7 +96,7 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-heading {
+    .oxi-addons-sub-heading-style-11 {
         width: 100%;
         height: auto;
         border-bottom-width: 2px;
@@ -104,20 +104,20 @@
         border-left-width: 0;
         border-right-width: 0
     }
-    .oxi-addons-heading .oxi-addons-heading-text {
+    .oxi-addons-sub-heading-style-11 .oxi-addons-heading-text {
         margin: 0;
         padding: 0px 20px 5px 10px;
         display: inline-block
     }
-    .oxi-addons-heading .oxi-addons-heading-text h4 {
+    .oxi-addons-sub-heading-style-11 .oxi-addons-heading-text h4 {
         margin: 0;
         font-size: 25px
     }
-    .oxi-addons-sub-heading {
+    .oxi-addons-sub-heading-style-11 {
         width: 100%;
         height: auto
     }
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text {
+    .oxi-addons-sub-heading-style-11 .oxi-addons-sub-heading-text {
         width: 100%;
         height: auto;
         font-size: 16px;

@@ -31,10 +31,10 @@ class Style_11 extends Templates {
         }
 
         echo '  <div class="oxi-addons-heading-container" '.$this->animation_render('sa_head_animation', $style).'>
-                    <div class="oxi-addons-heading">
+                    <div class="oxi-addons-heading-style-11">
                         ' . $heading . '
                     </div>
-                    <div class="oxi-addons-sub-heading">
+                    <div class="oxi-addons-sub-heading-style-11">
                         ' . $content . '
                     </div>
                 </div> ';

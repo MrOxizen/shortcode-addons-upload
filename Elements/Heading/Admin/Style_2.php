@@ -37,7 +37,7 @@ class Style_2 extends AdminStyle {
             'default' => 'This is Heading Text',
             'placeholder' => 'This is Heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container  .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-heading-container-style-2  .oxi-addons-heading' => '',
             ],
                 ]
         );
@@ -94,7 +94,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-heading-container ' => 'text-align:{{VALUE}};',
+                '{{WRAPPER}}  .oxi-addons-heading-container-style-2 ' => 'text-align:{{VALUE}};',
             ],
                 ]
         );
@@ -120,7 +120,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#252b25',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-heading-container-style-2 .oxi-addons-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -129,7 +129,7 @@ class Style_2 extends AdminStyle {
                 'sa_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-heading-container-style-2 .oxi-addons-heading' => '',
             ],
                 ]
         );
@@ -137,7 +137,7 @@ class Style_2 extends AdminStyle {
                 'sa_head_border_btm', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-heading-container-style-2 .oxi-addons-heading' => '',
             ],
                 ]
         );
@@ -167,7 +167,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-heading-container-style-2 .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -197,7 +197,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-heading-container-style-2 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );

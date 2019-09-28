@@ -36,7 +36,7 @@ class Style_11 extends AdminStyle {
             'default' => 'Heading',
             'placeholder' => 'This is Heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => '',
+                '{{WRAPPER}} .oxi-addons-heading-style-11 .oxi-addons-heading-text' => '',
             ],
                 ]
         );
@@ -47,7 +47,7 @@ class Style_11 extends AdminStyle {
             'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicin elit sed.Lorem ipsum dolor sit amet, consectetur adipisicin elit sed.Lorem ipsum dolor sit amet, consectetur adipisicin elit sed.',
             'placeholder' => 'This is Sub-heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => '',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-11 .oxi-addons-sub-heading-text' => '',
             ],
                 ]
         );
@@ -129,7 +129,7 @@ class Style_11 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#1f1f1f',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-heading-style-11 .oxi-addons-heading-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -140,7 +140,7 @@ class Style_11 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'rgba(60, 217, 123, 1)',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'background-color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-heading-style-11 .oxi-addons-heading-text' => 'background-color:{{VALUE}};'
             ],
                 ]
         );
@@ -149,7 +149,7 @@ class Style_11 extends AdminStyle {
                 'sa_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text ' => '',
+                '{{WRAPPER}} .oxi-addons-heading-style-11 .oxi-addons-heading-text ' => '',
             ],
                 ]
         );
@@ -158,7 +158,7 @@ class Style_11 extends AdminStyle {
                 'sa_head_border_btm', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => '',
+                '{{WRAPPER}} .oxi-addons-heading-style-11 .oxi-addons-heading-text' => '',
             ],
                 ]
         );
@@ -188,7 +188,7 @@ class Style_11 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-heading-style-11 .oxi-addons-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -206,7 +206,7 @@ class Style_11 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#706868',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-11 .oxi-addons-sub-heading-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -216,7 +216,7 @@ class Style_11 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text ' => '',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-11 .oxi-addons-sub-heading-text ' => '',
             ],
                 ]
         );
@@ -247,7 +247,7 @@ class Style_11 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-11 .oxi-addons-sub-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
