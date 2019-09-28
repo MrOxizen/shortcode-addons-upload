@@ -32,7 +32,7 @@ class Style_1 extends Templates {
                 </a>';
         
             echo '<div class="' . $this->column_render('sa_is_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
-                        <div class="oxi-addons-is" ' . $this->animation_render('sa_is_animation', $value) . '>  
+                        <div class="oxi-addons-image-scroll-tem-1" ' . $this->animation_render('sa_is_animation', $value) . '>  
                             ' . $img . '
                         </div>';
             echo '</div>';
