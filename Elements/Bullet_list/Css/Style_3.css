@@ -30,7 +30,8 @@
 
 .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 ol.oxi-addons-list-ol li.oxi-addons-list-li {
     padding: 0 0 0 0;
-    margin: 12px 12px 12px 12px
+    margin: 12px 12px 12px 12px;
+    position: relative;
 }
 
 .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link {

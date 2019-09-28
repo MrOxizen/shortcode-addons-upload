@@ -233,9 +233,9 @@ class Style_4 extends AdminStyle {
                 'sa-bl-n-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => 'color:{{VALUE}};',
+                '{{WRAPPER}}  .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -243,7 +243,7 @@ class Style_4 extends AdminStyle {
                 'sa-bl-arrow-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => '',
             ]
                 ]
         );
@@ -251,7 +251,7 @@ class Style_4 extends AdminStyle {
                 'sa-bl-n-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => '',
             ]
                 ]
         );
@@ -267,9 +267,9 @@ class Style_4 extends AdminStyle {
                 'sa-bl-n-hover-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon i' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon .oxi-icons' => 'color:{{VALUE}};',
             ]
                 ]
         );
@@ -277,7 +277,7 @@ class Style_4 extends AdminStyle {
                 'sa-bl-arrow-hover-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon i' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon .oxi-icons' => '',
             ]
                 ]
         );
@@ -285,7 +285,7 @@ class Style_4 extends AdminStyle {
                 'sa-bl-n-hover-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon i' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list:hover .oxi-addons-content-boxes-icon .oxi-icons' => '',
             ]
                 ]
         );
@@ -320,7 +320,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -351,7 +351,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -381,7 +381,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -389,7 +389,7 @@ class Style_4 extends AdminStyle {
                 'sa-bl-n-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => '',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => '',
             ]
                 ]
         );
@@ -419,7 +419,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -449,7 +449,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon .oxi-icons' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -490,7 +490,8 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon i' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon:before' => 'border-color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon:after ' => 'border-color:{{VALUE}};',
             ]
                 ]
         );

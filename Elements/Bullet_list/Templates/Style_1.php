@@ -25,7 +25,7 @@ class Style_1 extends Templates {
 			<div class="oxi-addons-list-type-1 '.$class.'">
                             <ol class="oxi-addons-list-ol ">';
         foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            $value = $this->Json_Decode($v['rawdata']);
             $textheading = '';
             
             if (array_key_exists('sa_bl_text', $value) && $value['sa_bl_text'] != '') {
