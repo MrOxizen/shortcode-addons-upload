@@ -100,7 +100,7 @@ class Style_5 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
 
@@ -110,7 +110,7 @@ class Style_5 extends AdminStyle
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:after' => 'background:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:after' => 'background:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_box_shadow' => [
@@ -135,7 +135,7 @@ class Style_5 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#2AD4BB',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
 
@@ -149,7 +149,7 @@ class Style_5 extends AdminStyle
                             'sa_icon_effects_type' => 'sa_effects_outside'
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:hover:after' => 'background:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:hover:after' => 'background:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_box_shadow_hover' => [

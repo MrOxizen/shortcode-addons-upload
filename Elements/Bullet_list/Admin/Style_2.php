@@ -212,7 +212,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link:before' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link:before' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -280,7 +280,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link' => 'color: {{VALUE}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -335,7 +335,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -366,7 +366,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-li .oxi-addons-admin-edit-list' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-li .oxi-addons-admin-edit-list' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -377,11 +377,17 @@ class Style_2 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link:hover' => 'color: {{VALUE}};',
+            ]
                 ]
         );
         $this->add_group_control(
-                'sa-bl-lc-hover-bg', $this->style, [
+            'sa-bl-lc-hover-bg', $this->style, [
             'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link:hover' => '',
+            ]
                 ]
         );
         $this->add_responsive_control(

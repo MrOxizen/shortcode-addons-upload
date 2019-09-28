@@ -165,7 +165,7 @@ class Style_1 extends AdminStyle {
                 'sa-bl-n-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 oxi-BL-link:before' => '',
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link:before' => '',
             ]
                 ]
         );
@@ -280,7 +280,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link' => 'color: {{VALUE}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -377,11 +377,17 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link:hover' => 'color: {{VALUE}};'
+            ],
                 ]
         );
         $this->add_group_control(
                 'sa-bl-lc-hover-bg', $this->style, [
             'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link:hover' => ''
+            ],
                 ]
         );
         $this->add_responsive_control(

@@ -25,7 +25,7 @@ class Style_3 extends Templates {
 			<div class="oxi-addons-list-type-1 ' . $class . '">
                             <ol class="oxi-addons-list-ol ">';
         foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+            $value = $this->Json_Decode($v['rawdata']);
             $a_tag = $blicon = $textheading ='';
             if (array_key_exists('sa_bl_icon', $value) && $value['sa_bl_icon'] != '') {
                 $blicon = '<div class="oxi-addons-list-li-icon"><i class="' . $value['sa_bl_icon'] . '"></i></div>';
