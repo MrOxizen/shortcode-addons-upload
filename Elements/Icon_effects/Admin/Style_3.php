@@ -78,6 +78,7 @@ class Style_3 extends AdminStyle
                         'options' => [
                             'sa_effects_inside' => __('Style 01', SHORTCODE_ADDOONS),
                             'sa_effects_outside' => __('Style 02', SHORTCODE_ADDOONS),
+                            'sa_icon_effects_style_3' => __('Style 03', SHORTCODE_ADDOONS),
                         ],
                         'selector' => [
                             '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}' => '',
@@ -100,7 +101,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
 
@@ -109,8 +110,13 @@ class Style_3 extends AdminStyle
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_icon_effects_type' => 'sa_effects_inside',
+                            'sa_icon_effects_type' => 'sa_effects_outside',
+                        ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:after' => 'background:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:after' => 'background:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_box_shadow' => [
@@ -135,7 +141,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
 
@@ -146,10 +152,11 @@ class Style_3 extends AdminStyle
                         'default' => '#2AD4BB',
                         'conditional' => Controls::INSIDE,
                         'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_inside'
+                            'sa_icon_effects_type' => 'sa_effects_inside',
+                            'sa_icon_effects_type' => 'sa_icon_effects_style_3',
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover:after' => 'background:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover:after' => 'background:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_box_shadow_hover' => [
@@ -158,7 +165,8 @@ class Style_3 extends AdminStyle
                         'controller' => 'add_group_control',
                         'conditional' => Controls::INSIDE,
                         'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_outside'
+                            'sa_icon_effects_type' => 'sa_effects_outside',
+                            'sa_icon_effects_type' => 'sa_icon_effects_style_3',
                         ],
                         'selector' => [
                             '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover' => '',
