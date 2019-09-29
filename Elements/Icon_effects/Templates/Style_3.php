@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_2
+ * Description of Style_3
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -36,7 +36,7 @@ class Style_3 extends Templates
             echo '<div class="sa_addons_icon_effects_colum ' . $this->column_render('sa_icon_effects_col', $style) . '">';
             echo $link;
             echo '<div class="sa_addons_icon_effects_container" ' . $this->animation_render('sa_icon_effects_animation', $styledata) . '>
-                    <div class="sa_addons_icon_effects_style_2 sa_icon_effects_unique_' . $key . ' ' . ($value['sa_icon_effects_type'] == 'sa_effects_outside' ? 'sa_effects_outside' : '') . ' ">
+                    <div class="sa_addons_icon_effects_style_3 sa_icon_effects_unique_' . $key . ' ' . ($value['sa_icon_effects_type'] == 'sa_effects_outside' ? 'sa_effects_outside' : '') . ' ">
                         ' . $icon . '
                     </div>
                 </div>
@@ -46,4 +46,6 @@ class Style_3 extends Templates
             echo '</div>';
         }
     }
+
+    
 }
