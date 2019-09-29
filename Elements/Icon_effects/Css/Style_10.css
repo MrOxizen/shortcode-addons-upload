@@ -157,11 +157,11 @@
 
 @-webkit-keyframes top_to_bottom {
     49% {
-        -webkit-transform: translateY(-100%)
+        -webkit-transform: translateY(100%)
     }
     50% {
         opacity: 0;
-        -webkit-transform: translateY(100%)
+        -webkit-transform: translateY(-100%)
     }
     51% {
         opacity: 1
@@ -170,11 +170,11 @@
 
 @-moz-keyframes top_to_bottom {
     49% {
-        -moz-transform: translateY(-100%)
+        -moz-transform: translateY(100%)
     }
     50% {
         opacity: 0;
-        -moz-transform: translateY(100%)
+        -moz-transform: translateY(-100%)
     }
     51% {
         opacity: 1
@@ -183,19 +183,19 @@
 
 @keyframes top_to_bottom {
     49% {
-        transform: translateY(-100%);
-        -webkit-transform: translateY(-100%);
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-    }
-    50% {
-        opacity: 0;
         transform: translateY(100%);
         -webkit-transform: translateY(100%);
         -moz-transform: translateY(100%);
         -ms-transform: translateY(100%);
         -o-transform: translateY(100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
     }
     51% {
         opacity: 1
@@ -204,11 +204,11 @@
 
 @-webkit-keyframes bottom_to_top {
     49% {
-        -webkit-transform: translateY(100%)
+        -webkit-transform: translateY(-100%)
     }
     50% {
         opacity: 0;
-        -webkit-transform: translateY(-100%)
+        -webkit-transform: translateY(100%)
     }
     51% {
         opacity: 1
@@ -217,11 +217,11 @@
 
 @-moz-keyframes bottom_to_top {
     49% {
-        -moz-transform: translateY(100%)
+        -moz-transform: translateY(-100%)
     }
     50% {
         opacity: 0;
-        -moz-transform: translateY(-100%)
+        -moz-transform: translateY(100%)
     }
     51% {
         opacity: 1
@@ -230,19 +230,19 @@
 
 @keyframes bottom_to_top {
     49% {
-        transform: translateY(100%);
-        -webkit-transform: translateY(100%);
-        -moz-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-        -o-transform: translateY(100%);
-    }
-    50% {
-        opacity: 0;
         transform: translateY(-100%);
         -webkit-transform: translateY(-100%);
         -moz-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
         -o-transform: translateY(-100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
     }
     51% {
         opacity: 1
