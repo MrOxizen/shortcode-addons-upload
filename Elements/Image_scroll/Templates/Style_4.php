@@ -23,12 +23,12 @@ class Style_4 extends Templates {
         $repeater = (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
         foreach ($repeater as $key => $value) {
 
-            $img = '<img class="oxi-img oxi-image-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />';
+            $img = '<img class="oxi-img oxi-IS4-image-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />';
             
             
             if (array_key_exists('sa_is_btn_on', $value) && $value['sa_is_btn_on'] != '0') {    
                 
-                $btn = ' <div class="oxi-addons-main-button"  id="oxi-img-' . $key . '"> 
+                $btn = ' <div class="oxi-addons-main-button"  id="oxi-IS4-img-' . $key . '"> 
                             <a ' . $this->url_render('sa_is_btn_link', $value) . ' class="oxi-addons-link">
                                      ' . $this->text_render($value['sa_is_btn_text']) . '
                             </a>
@@ -43,7 +43,7 @@ class Style_4 extends Templates {
             
             echo '<div class="' . $this->column_render('sa_is_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                         <div class="oxi-addons-image-scroll-4" ' . $this->animation_render('sa_is_animation', $value) . '>  
-                            <div class="oxi-addons-image-main" id="oxi-addons-image-main-' . $key . '" >
+                            <div class="oxi-addons-image-main" id="oxi-addons-IS4-image-main-' . $key . '" >
                                 <div class="oxi-addons-img">
                                     ' . $img . '
                                     ' . $btn . '
@@ -61,32 +61,32 @@ class Style_4 extends Templates {
         $repeater = (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
         foreach ($repeater as $key => $value) {
             if ($value['sa_is_image_view'] == 'top-to-bottom') {
-                 $jquery .= 'jQuery("#oxi-img-' . $key . '").mouseover(function(){ 
-                    var imgHeight= jQuery(".oxi-image-' . $key . '").height();  
-                    var outerHeight = jQuery("#oxi-addons-image-main-' . $key . '").outerHeight(); 
+                 $jquery .= 'jQuery("#oxi-IS4-img-' . $key . '").mouseover(function(){ 
+                    var imgHeight= jQuery(".oxi-IS4-image-' . $key . '").height();  
+                    var outerHeight = jQuery("#oxi-addons-IS4-image-main-' . $key . '").outerHeight(); 
                     var height = imgHeight-outerHeight; 
-                    jQuery(".oxi-image-' . $key . '").css({"transform":"translateY(-" + height + "px)"});
+                    jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(-" + height + "px)"});
                 });  
-                jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
-                    jQuery(".oxi-image-' . $key . '").css({"transform":"translateY(0px)"});
+                jQuery("#oxi-IS4-img-' . $key . '").mouseout(function(){ 
+                    jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(0px)"});
                 });   
             ';
            
             } elseif ($value['sa_is_image_view'] == 'bottom-to-top') {
-                $jquery .= 'jQuery(".oxi-image-' . $key . '").css({
+                $jquery .= 'jQuery(".oxi-IS4-image-' . $key . '").css({
                         "position" : "absolute",
                         "bottom" : "0",
                         "left" : "0",
                         "Top" : "auto",
                     }); 
-                    jQuery("#oxi-img-' . $key . '").mouseover(function(){
-                            var imgHeight= jQuery(".oxi-image-' . $key . '").height();  
-                            var outerHeight = jQuery("#oxi-addons-image-main-' . $key . '").outerHeight(); 
+                    jQuery("#oxi-IS4-img-' . $key . '").mouseover(function(){
+                            var imgHeight= jQuery(".oxi-IS4-image-' . $key . '").height();  
+                            var outerHeight = jQuery("#oxi-addons-IS4-image-main-' . $key . '").outerHeight(); 
                             var height = imgHeight-outerHeight; 
-                            jQuery(".oxi-image-' . $key . '").css({"transform":"translateY(" + height + "px)"});
+                            jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(" + height + "px)"});
                         });  
                         jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
-                            jQuery(".oxi-image-' . $key . '").css({"transform":"translateY(0px)"});
+                            jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(0px)"});
                         });   
                     ';
             }
