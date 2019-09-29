@@ -22,7 +22,6 @@ class Style_1 extends Templates
     {
         $jquery = $linkopening = '';
         echo '';
-        print_r($child);
 
 
 

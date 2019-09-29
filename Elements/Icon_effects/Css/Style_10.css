@@ -9,7 +9,7 @@
     text-align: center;
 }
 
-.sa_addons_icon_effects_style_10 {
+.sa_addons_icon_effects_style_5 {
     position: relative;
     overflow: hidden;
     max-width: 100px;
@@ -23,9 +23,9 @@
     transition: all 0.4s
 }
 
-.sa_addons_icon_effects_style_10:hover,
-.sa_addons_icon_effects_style_10:focus,
-.sa_addons_icon_effects_style_10:active {
+.sa_addons_icon_effects_style_5:hover,
+.sa_addons_icon_effects_style_5:focus,
+.sa_addons_icon_effects_style_5:active {
     max-width: 100px;
     width: 100%;
     background: rgba(166, 87, 162, 1);
@@ -35,7 +35,7 @@
     box-shadow: 0 0 0 10px #963990
 }
 
-.sa_addons_icon_effects_style_10 .oxi-icons {
+.sa_addons_icon_effects_style_5 .oxi-icons {
     font-size: 50px;
     color: #a657a2;
     line-height: 100px;
@@ -44,26 +44,26 @@
     transition: all 0.4s
 }
 
-.sa_addons_icon_effects_style_10.sa_icon_effect_left_to_right:hover .oxi-icons {
+.sa_addons_icon_effects_style_5.sa_icon_effect_left_to_right:hover .oxi-icons {
     color: #ffffff;
     -webkit-animation: left_to_right 0.3s forwards;
     -moz-animation: left_to_right 0.3s forwards;
     animation: left_to_right 0.3s forwards
 }
 
-.sa_addons_icon_effects_style_10.sa_icon_effect_right_to_left:hover .oxi-icons {
+.sa_addons_icon_effects_style_5.sa_icon_effect_right_to_left:hover .oxi-icons {
     color: #ffffff;
     animation: right_to_left 0.3s forwards;
     -webkit-animation: right_to_left 0.3s forwards;
 }
 
-.sa_addons_icon_effects_style_10.sa_icon_effect_top_to_bottom:hover .oxi-icons {
+.sa_addons_icon_effects_style_5.sa_icon_effect_top_to_bottom:hover .oxi-icons {
     color: #ffffff;
     animation: top_to_bottom 0.3s forwards;
     -webkit-animation: top_to_bottom 0.3s forwards;
 }
 
-.sa_addons_icon_effects_style_10.sa_icon_effect_bottom_to_top:hover .oxi-icons {
+.sa_addons_icon_effects_style_5.sa_icon_effect_bottom_to_top:hover .oxi-icons {
     color: #ffffff;
     animation: bottom_to_top 0.3s forwards;
     -webkit-animation: bottom_to_top 0.3s forwards;
@@ -250,15 +250,15 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_addons_icon_effects_style_10 {
+    .sa_addons_icon_effects_style_5 {
         max-width: 90px;
         height: 90px;
         margin: 0px;
         box-shadow: 0 0 0 5px #a657a2
     }
-    .sa_addons_icon_effects_style_10:hover,
-    .sa_addons_icon_effects_style_10:focus,
-    .sa_addons_icon_effects_style_10:active {
+    .sa_addons_icon_effects_style_5:hover,
+    .sa_addons_icon_effects_style_5:focus,
+    .sa_addons_icon_effects_style_5:active {
         max-width: 90px;
         height: 90px;
         box-shadow: 0 0 0 10px #963990;
@@ -269,22 +269,22 @@
         -ms-border-radius: 50px;
         -o-border-radius: 50px;
     }
-    .sa_addons_icon_effects_style_10 .oxi-icons {
+    .sa_addons_icon_effects_style_5 .oxi-icons {
         font-size: 45px;
         line-height: 90px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .sa_addons_icon_effects_style_10 {
+    .sa_addons_icon_effects_style_5 {
         max-width: 80px;
         height: 80px;
         margin: 0px;
         box-shadow: 0 0 0 5px #a657a2
     }
-    .sa_addons_icon_effects_style_10:hover,
-    .sa_addons_icon_effects_style_10:focus,
-    .sa_addons_icon_effects_style_10:active {
+    .sa_addons_icon_effects_style_5:hover,
+    .sa_addons_icon_effects_style_5:focus,
+    .sa_addons_icon_effects_style_5:active {
         max-width: 80px;
         height: 80px;
         box-shadow: 0 0 0 10px #963990;
@@ -295,7 +295,7 @@
         -ms-border-radius: 50px;
         -o-border-radius: 50px;
     }
-    .sa_addons_icon_effects_style_10 .oxi-icons {
+    .sa_addons_icon_effects_style_5 .oxi-icons {
         font-size: 40px;
         line-height: 80px
     }
