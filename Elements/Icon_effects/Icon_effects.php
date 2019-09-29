@@ -20,7 +20,7 @@ class Icon_effects extends Elements_Frontend
 
     public function pre_active()
     {
-        return array('Style_1');
+        return array('Style_1', 'Style_2', 'Style_3');
     }
 
     public function templates()

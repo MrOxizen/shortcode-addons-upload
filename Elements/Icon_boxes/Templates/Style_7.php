@@ -48,7 +48,7 @@ class Style_7 extends Templates {
                 }
             }
             echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
-                    <div class="sa_addons_icon_boxes_container">';
+                    <div class="sa_addons_icon_boxes_container_style_7">';
 
             echo $link;
 
