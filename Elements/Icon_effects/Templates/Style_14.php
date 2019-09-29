@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_10 extends Templates
+class Style_14 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -37,7 +37,7 @@ class Style_10 extends Templates
             echo '<div class="sa_addons_icon_effects_colum ' . $this->column_render('sa_icon_effects_col', $style) . '">';
             echo $link;
             echo '<div class="sa_addons_icon_effects_container" ' . $this->animation_render('sa_icon_effects_animation', $styledata) . '>
-                    <div class="sa_addons_icon_effects_style_5 sa_icon_effects_unique_' . $key . ' ' . $value['sa_icon_effects_type'] . ' ">
+                    <div class="sa_addons_icon_effects_style_6 sa_icon_effects_unique_' . $key . ' ">
                         ' . $icon . '
                     </div>
                 </div>
