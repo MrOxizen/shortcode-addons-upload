@@ -31,8 +31,8 @@ class Style_10 extends Templates {
             $html = $text . $icon;
         endif;
 
-        echo '  <div class="oxi-addons-align-btn9">
-                    <a ' . $this->animation_render('sa_btn_animation', $style) . ' ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn9 ' . (array_key_exists('sa_btn_width_choose', $style) && $style['sa_btn_width_choose'] != '0' ? $style['sa_btn_width_choose'] : '') . ' " >' . $html . '</a>
+        echo '  <div class="oxi-addons-align-btn10">
+                    <a ' . $this->animation_render('sa_btn_animation', $style) . ' ' . $this->url_render('sa_btn_link', $style) . ' class="oxi-button-btn10 ' . (array_key_exists('sa_btn_width_choose', $style) && $style['sa_btn_width_choose'] != '0' ? $style['sa_btn_width_choose'] : '') . ' " >' . $html . '</a>
                 </div>
                 ';
     }

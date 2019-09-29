@@ -25,22 +25,22 @@ class Style_1 extends Templates {
             $after = '<div class="oxi-addons-after-text oxi-addons-text">' . $this->text_render($style['sa_after_ct_text']) . '</div>';
         }
         if (!empty($style['sa_ct_first_content'])) {
-            $content_one = '<div class="oxi-addons-CT-content-One">' . $this->text_render($style['sa_ct_first_content']) . '</div>';
+            $content_one = '<div class="oxi-addons-CT-1-content-One">' . $this->text_render($style['sa_ct_first_content']) . '</div>';
         }
         if (!empty($style['sa_ct_second_content'])) {
-            $content_two = '<div class="oxi-addons-CT-content-two">' . $this->text_render($style['sa_ct_second_content']) . '</div>';
+            $content_two = '<div class="oxi-addons-CT-1-content-two">' . $this->text_render($style['sa_ct_second_content']) . '</div>';
         }
-        echo '<div class="oxi-addons-CT">
-                    <div class="oxi-addons-CT-row">
-			<div class="oxi-addons-CT-Switch-area">
+        echo '<div class="oxi-addons-CT-1">
+                    <div class="oxi-addons-CT-1-row">
+			<div class="oxi-addons-CT-1-Switch-area">
                             ' . $before . '
-                            <div class="oxi-addons-CT-Switch">
-				<input class="oxi-addons-CT-checkbox" type="checkbox" name="oxi-addons-switch" class="checkbox" />  
+                            <div class="oxi-addons-CT-1-Switch">
+				<input class="oxi-addons-CT-1-checkbox" type="checkbox" name="oxi-addons-switch" class="checkbox" />  
 				<div class="oxi-addons-switch"></div> 
                             </div>
                             ' . $after . '
                         </div>
-                        <div class="oxi-addons-CT-main-content">
+                        <div class="oxi-addons-CT-1-main-content">
                             ' . $content_one . '
                             ' . $content_two . '
                         </div>
@@ -51,15 +51,15 @@ class Style_1 extends Templates {
     public function inline_public_jquery() {
         
          $jquery = 'jQuery(document).ready(function () {
-            jQuery(".oxi-addons-CT .oxi-addons-switch").click(function () {
+            jQuery(".oxi-addons-CT-1 .oxi-addons-switch").click(function () {
                 jQuery(this).toggleClass("oxi-addons-switchOn");
-                jQuery(".oxi-addons-CT .oxi-addons-CT-content-One").toggleClass("oxi-active");
-                jQuery(".oxi-addons-CT .oxi-addons-CT-content-two").toggleClass("oxi-active");
+                jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-One").toggleClass("oxi-active");
+                jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-two").toggleClass("oxi-active");
             });
-            jQuery(".oxi-addons-CT .oxi-addons-text").click(function () {
-                jQuery(".oxi-addons-CT .oxi-addons-switch").toggleClass("oxi-addons-switchOn");
-                jQuery(".oxi-addons-CT .oxi-addons-CT-content-One").toggleClass("oxi-active");
-                jQuery(".oxi-addons-CT .oxi-addons-CT-content-two").toggleClass("oxi-active");
+            jQuery(".oxi-addons-CT-1 .oxi-addons-text").click(function () {
+                jQuery(".oxi-addons-CT-1 .oxi-addons-switch").toggleClass("oxi-addons-switchOn");
+                jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-One").toggleClass("oxi-active");
+                jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-two").toggleClass("oxi-active");
             });
              
         });';
