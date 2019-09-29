@@ -122,7 +122,6 @@ class Style_3 extends AdminStyle {
                 'sa_before_text_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',
