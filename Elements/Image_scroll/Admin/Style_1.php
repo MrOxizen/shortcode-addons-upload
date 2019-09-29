@@ -49,8 +49,8 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::MEDIA,
                     'controller' => 'add_group_control',
                     'default' => [
-                    'type' => 'media-library',
-                    'link' => 'https://www.oxilab.org/wp-content/uploads/2019/03/screencapture-frontend-themextar-net-demos-appko_app_landing_page-2019-03-27-16_25_32.jpg',
+                        'type' => 'media-library',
+                        'link' => 'https://www.oxilab.org/wp-content/uploads/2019/03/screencapture-frontend-themextar-net-demos-appko_app_landing_page-2019-03-27-16_25_32.jpg',
                     ],
                 ],
                 'sa_is_image_url' => [
@@ -67,30 +67,9 @@ class Style_1 extends AdminStyle {
                         'bottom-to-top' => __('Bottom-to-Top', SHORTCODE_ADDOONS),
                     ],
                 ],
-                'sa_is_td' => [
-                    'label' => __('Transition Duration (second)', SHORTCODE_ADDOONS),
-                    'type' => Controls::SLIDER,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => 5,
-                    ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 100,
-                            'step' => 1,
-                        ],
-
-                    ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-image-scroll-tem-1 .sa-img-{{KEY}} ' => 'transition: all {{SIZE}}s;'
-                    ],
-        
-                ],
                 
             ],
             'title_field' => 'sa_is_image_name',
-           
                 ]
         );
 
@@ -167,8 +146,31 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        
-        
+       
+        $this->add_responsive_control(
+                'sa_is_td', $this->style, [
+            'label' => __('Transition Duration (second)', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 5,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-image-scroll-tem-1 .oxi-img ' => 'transition: all {{SIZE}}s;'
+                
+            ],
+                ]
+        );
+
+
 
         $this->add_responsive_control(
                 'sa_is_br_radius', $this->style, [

@@ -67,26 +67,7 @@ class Style_2 extends AdminStyle {
                         'right_to_left' => __('Right To Left', SHORTCODE_ADDOONS),
                     ],
                 ],
-                'sa_is_td' => [
-                    'label' => __('Transition Duration (second)', SHORTCODE_ADDOONS),
-                    'type' => Controls::SLIDER,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => 5,
-                    ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 100,
-                            'step' => 1,
-                        ],
-
-                    ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-image-scroll-style-2 .sa-img-{{KEY}} ' => 'transition: all {{SIZE}}s;'
-                    ],
-        
-                ],
+                
                 
             ],
             'title_field' => 'sa_is_image_name',
@@ -166,7 +147,28 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );    
-        
+        $this->add_responsive_control(
+                'sa_is_td', $this->style, [
+            'label' => __('Transition Duration (second)', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 5,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-image-scroll-style-2 .oxi-img ' => 'transition: all {{SIZE}}s;'
+                
+            ],
+                ]
+        );
 
         $this->add_responsive_control(
                 'sa_is_br_radius', $this->style, [
