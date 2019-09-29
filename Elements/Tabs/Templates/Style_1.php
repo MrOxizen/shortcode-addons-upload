@@ -21,11 +21,6 @@ class Style_1 extends Templates
     public function default_render($style, $child, $admin)
     {
         $jquery = $linkopening = '';
-        echo '';
-        print_r($child);
-
-
-
         echo '<div class="sa-addons-tabs-main-wrapper-style-1" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                     <div class="sa-addons-main-tab-header">';
         foreach ($child as $header) {
