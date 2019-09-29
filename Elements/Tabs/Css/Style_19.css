@@ -37,7 +37,8 @@
 .sa-addons-tabs-main-wrapper-style-19 .sa-addons-main-tab-header {
     display: flex;
     align-items: stretch;
-    justify-content: flex-start
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 .sa-addons-tabs-main-wrapper-style-19 .sa-addons-header-two {

@@ -25,7 +25,7 @@ class Style_10 extends Templates
                 <div class="sa-addons-tabs-main-wrapper">
                 <div class="sa-addons-main-tab-header">';
         foreach ($child as $key => $header) {
-            $value_header =  $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
+            $value_header =  $this->Json_Decode($header['rawdata']);
             if (array_key_exists('sa_tabs_url_open', $value_header) && $value_header['sa_tabs_url_open'] != '0') :
 
                 if ($value_header['sa_tabs_url-target'] != 'yes') :
@@ -48,7 +48,7 @@ class Style_10 extends Templates
         echo '</div>
             <div class="sa-addons-main-tab-body">';
         foreach ($child as $key => $body) {
-            $value_body = ($body['rawdata'] != '' ? json_decode(stripcslashes($body['rawdata']), true) : []);
+            $value_body = $this->Json_Decode($body['rawdata']);
             if (array_key_exists('sa_tabs_url_open', $value_body) && $value_body['sa_tabs_url_open'] != '0') :
                 if ($value_body['sa_tabs_url-target'] != 'yes') :
                     $linkopening = ", '_self'";
