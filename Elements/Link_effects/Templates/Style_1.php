@@ -17,7 +17,21 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        
+        $icon1 = $icon2 = '';
+        $text = '<div class="sa_link_text">' . $this->text_render($style['sa_link_text']) . '</div>';
+        if (array_key_exists('sa_link_icon', $style) && $style['sa_link_icon'] != '0') {
+            $icon1 = '<div class="sa_link_icon1">' . $this->font_awesome_render($style['sa_link_icon1_class']) . '</div> ';
+            $icon2 = '<div class="sa_link_icon2">' . $this->font_awesome_render($style['sa_link_icon2_class']) . '</div> ';
+        }
+
+        $html = $icon1 . $text . $icon2;
+        echo ' <div class="oxi-addons-container">
+                    <div class="oxi-addons-row">
+                        <div class="link-effect-main-style1">
+                            <a class="oxi-links-effects-style1">' . $html . '</a>
+                        </div> 
+                    </div> 
+                   </div>';
     }
 
     public function old_render() {
