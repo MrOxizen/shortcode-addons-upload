@@ -111,7 +111,7 @@ class Style_1 extends AdminStyle
                 ]
             ]
         );
-        $this->end_controls_section(); 
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -130,7 +130,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '17',
+                    'size' => '20',
                 ],
                 'range' => [
                     'px' => [
@@ -165,7 +165,7 @@ class Style_1 extends AdminStyle
         );
         $this->start_controls_tab();
         $this->add_control(
-            'sa_offcavas_btn_c',
+            'sa_offcavas_btn_icon_c',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
@@ -180,7 +180,7 @@ class Style_1 extends AdminStyle
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_offcavas_btn_c_h',
+            'sa_offcavas_btn_icon_c_h',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
@@ -196,7 +196,7 @@ class Style_1 extends AdminStyle
         $this->end_controls_tabs();
 
         $this->add_responsive_control(
-            'sa_offcavas_btn_padding',
+            'sa_offcavas_btn_icon_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -225,13 +225,11 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_cl_btn_icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    
+
                 ],
             ]
         );
-        
-
-        $this->end_controls_section(); 
+        $this->end_controls_section();
         $this->end_section_devider();
 
         $this->start_section_devider();
@@ -363,7 +361,7 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_cl_btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                   
+
                 ],
             ]
         );
@@ -397,7 +395,7 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_cl_btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    
+
                 ],
             ]
         );
@@ -429,8 +427,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_cl_btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_cl_btn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+
                 ],
             ]
         );
@@ -477,47 +475,88 @@ class Style_1 extends AdminStyle
                         'icon' => 'fas fa-angle-double-right',
                     ],
                 ],
-            ]
-        );
-
-        $this->add_control(
-            'sa_offcavas_content_c',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#858585',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-body' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1' => ''
                 ],
             ]
         );
+
+        $this->add_responsive_control(
+            'sa_offcavas_sidebar_w',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '350',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1500,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 90,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_show_content' => 'width: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('SideBar Background', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Overlay Background', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
         $this->add_group_control(
             'sa_offcavas_content_bg',
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-body' => ''
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_show_content' => ''
                 ],
             ]
         );
+
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_group_control(
-            'sa_offcavas_content_border',
+            'sa_offcavas_overlay_bg',
             $this->style,
             [
-                'type' => Controls::BORDER,
+                'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-body' => ''
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay' => ''
                 ],
             ]
         );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
         $this->add_responsive_control(
             'sa_offcavas_content_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
+                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -540,32 +579,33 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_show_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
-        $this->add_group_control(
-            'sa_offcavas_content_boxshadow',
-            $this->style,
-            [
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-body' => ''
-                ],
-            ]
-        );
+
         $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'label' => esc_html__('Close Icon Style', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_control(
+            'sa_offcavas_close_icon',
+            $this->style,
+            [
+                'label' => __('Icon', SHORTCODE_ADDOONS),
+                'type' => Controls::ICON,
+                'default' => 'fas fa-times',
+                'condition' => [
+                    'sa_offcavas_btn_icon_show' => 'icon_show'
+                ]
             ]
         );
         $this->add_responsive_control(
-            'sa_offcavas_btn_icon_s',
+            'sa_offcavas_close_icon_s',
             $this->style,
             [
                 'label' => __('Size', SHORTCODE_ADDOONS),
@@ -592,7 +632,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-1 .sa-addons-header .sa_offcavas_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon' => 'font-size: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -602,20 +642,19 @@ class Style_1 extends AdminStyle
                 'options' => [
                     'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
                     'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-                    'active' => esc_html__('Active', SHORTCODE_ADDOONS),
                 ]
             ]
         );
         $this->start_controls_tab();
         $this->add_control(
-            'sa_offcavas_btn_icon_c',
+            'sa_offcavas_close_icon_c',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#46abc2',
+                'default' => '#000000',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-header .sa_offcavas_icon .oxi-icons' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -623,106 +662,50 @@ class Style_1 extends AdminStyle
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_offcavas_btn_icon_c_h',
+            'sa_offcavas_close_icon_c_h',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#ff0000',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-header:hover .sa_offcavas_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
-        $this->end_controls_tab();
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_offcavas_btn_icon_c_a',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa-addons-header.sa-active .sa_offcavas_icon .oxi-icons' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
-            'sa_offcavas_btn_icon_style',
+            'sa_offcavas_close_icon_align',
             $this->style,
             [
-                'label' => __('Icon Separator', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT,
-                'loader' => TRUE,
-                'default' => 'inline-block',
-                'options' => [
-                    'inline-block' => __('inline-block', SHORTCODE_ADDOONS),
-                    'block' => __('Block', SHORTCODE_ADDOONS),
-
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa_offcavas_icon' => 'display: {{VALUE}};'
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_offcavas_btn_icon_posi',
-            $this->style,
-            [
-                'label' => __('Icon Position', SHORTCODE_ADDOONS),
+                'label' => __('Icon Align', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
-                Controls::SEPARATOR => TRUE,
-                'loader' => TRUE,
+                'separator' => TRUE,
                 'toggle' => TRUE,
                 'default' => 'left',
                 'options' => [
                     'left' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-left',
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
                     ],
                     'right' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-right',
+                        'icon' => 'fa fa-align-right',
                     ],
                 ],
-                'condition' => [
-                    'sa_offcavas_btn_icon_style' => 'inline-block',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_offcavas_btn_icon_posi_block',
-            $this->style,
-            [
-                'label' => __('Icon Position', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                Controls::SEPARATOR => TRUE,
-                'loader' => TRUE,
-                'toggle' => TRUE,
-                'default' => 'top',
-                'options' => [
-                    'top' => [
-                        'title' => __('Top', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-up',
-                    ],
-                    'bottom' => [
-                        'title' => __('Bottom', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-down',
-                    ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon' => 'text-align: {{VALUE}};',
                 ],
-                'condition' => [
-                    'sa_offcavas_btn_icon_style' => 'block',
-                ]
             ]
         );
         $this->add_responsive_control(
-            'sa_offcavas_btn_icon_padding',
+            'sa_offcavas_close_icon_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -749,7 +732,30 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-1 .sa_offcavas_icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->end_section_devider();
+
+        $this->start_section_devider();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Off Canvas Content', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_control(
+            'sa_offcavas_content_value',
+            $this->style,
+            [
+                'label' => __('Button Text', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXTAREA,
+                'default' => 'Insert Short Code Here and Make A Nice Design.....',
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_oc_container_style_1 sa_addons_oc_content_details' => ''
                 ],
             ]
         );

@@ -38,7 +38,7 @@
     display: inline-block;
     font-size: 20px;
     color: #000000;
-    padding: 5px 5px 5px 5px;
+    padding: 0px 5px 5px 0px;
     transition: none;
     -webkit-transition: none;
     -moz-transition: none;
@@ -53,20 +53,6 @@
 .sa_addons_oc_container_style_1 .sa_addons_oc_show_content {
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 99999999;
-    width: 350px;
-    height: 100%;
-    overflow-y: auto;
-    background: rgba(255, 255, 255, 1.00);
-    transition: all 0.5s;
-    padding: 20px 20px 20px 20px;
-}
-
-.sa_addons_oc_container_style_1 .sa_addons_oc_show_content.sa_active {
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 99999999;
     width: 350px;
     height: 100%;
@@ -77,11 +63,26 @@
 }
 
 .sa_addons_oc_container_style_1.sa_offcavas_sidebar_left .sa_addons_oc_show_content {
-    margin-left: -350px;
+    left: 0;
+    margin-left: -100%;
 }
 
 .sa_addons_oc_container_style_1.sa_offcavas_sidebar_left .sa_addons_oc_show_content.sa_active {
-    margin-left: 0px;
+    margin-left: 0%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.sa_addons_oc_container_style_1.sa_offcavas_sidebar_right .sa_addons_oc_show_content {
+    right: 0;
+    margin-right: -100%;
+}
+
+.sa_addons_oc_container_style_1.sa_offcavas_sidebar_right .sa_addons_oc_show_content.sa_active {
+    margin-right: 0%;
 }
 
 .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay {
@@ -108,7 +109,12 @@
     text-align: left;
     color: #000000;
     font-size: 20px;
-    padding: 20px 20px 20px 20px
+    padding: 20px 20px 20px 20px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
 
 .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon .oxi-icons {
