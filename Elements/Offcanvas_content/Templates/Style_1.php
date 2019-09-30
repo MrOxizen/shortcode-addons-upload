@@ -20,25 +20,39 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
+        $btn_icon = $bnt_text = $info = $cicon = $btntext_icon = '';
+        if ($style['sa_offcavas_btn_t'] != '') {
+            $bnt_text .= $this->text_render($style['sa_offcavas_btn_t']);
+        }
+        if (array_key_exists('sa_offcavas_btn_icon_show', $style) && $style['sa_offcavas_btn_icon_show'] != '0') {
+            $btn_icon .= '<div class="sa_addons_oc_cl_btn_icon">
+                            ' . $this->font_awesome_render($style['sa_offcavas_btn_icon']) . '
+                            </div>';
 
+            $btntext_icon .= '<div class="sa_addons_oc_cl_btn">' . ($style['sa_offcavas_btn_icon_posi'] == 'left' ? $btn_icon . $bnt_text : $bnt_text . $btn_icon) . '</div>';
+        } else {
+            $btntext_icon .= '<div class="sa_addons_oc_cl_btn">' . $bnt_text . '</div>';
+        }
+
+        if ($style['sa_offcavas_content_value'] != '') {
+            $info .= '<div class="sa_addons_oc_content_details">
+                        ' . $this->text_render($style['sa_offcavas_content_value']) . '
+                        </div>';
+        }
+        if ($style['sa_offcavas_close_icon'] != '') {
+            $cicon .= '<div class="sa_addons_oc_content_close_icon">
+                            ' . $this->font_awesome_render($style['sa_offcavas_close_icon']) . '
+                            </div>';
+        }
         echo '<div class="sa_addons_oc_container_style_1 ' . $style['sa_offcavas_sidebar_posi'] . '">
                 <div class="sa_addons_oc_style_1">
                     <div class="sa_addons_oc_btn_content">
-                        <div class="sa_addons_oc_cl_btn">      
-                            <div class="sa_addons_oc_cl_btn_icon">
-
-                            </div>
-                        </div>
-                            
+                        ' . $btntext_icon . '      
                     </div>
                     <div class="sa_addons_oc_content_overlay"></div>
                     <div class="sa_addons_oc_show_content">
-                        <div class="sa_addons_oc_content_details">
-                            
-                            <div class="sa_addons_oc_content_close_icon">
-                                
-                            </div>
-                        </div>
+                        ' . $cicon . '
+                        ' . $info . '
                     </div>
                 </div>
             </div>
@@ -49,17 +63,17 @@ class Style_1 extends Templates
         $jquery = '';
 
         $jquery .= 'jQuery(document).ready(function(){
-                        jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_cl_btn").click(function(){
-                            jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_show_content").toggleClass("sa_active");
-                            jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").toggleClass("sa_active");
+                        jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_cl_btn").click(function(){
+                            jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_show_content").toggleClass("sa_active");
+                            jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").toggleClass("sa_active");
                         });
-                        jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon .oxi-icons").click(function(){
-                            jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_show_content").toggleClass("sa_active");
-                            jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").toggleClass("sa_active");
+                        jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_close_icon .oxi-icons").click(function(){
+                            jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_show_content").toggleClass("sa_active");
+                            jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").toggleClass("sa_active");
                         });
-                        jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").click(function(){
-                            jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_show_content").toggleClass("sa_active");
-                            jQuery(". ' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").toggleClass("sa_active");
+                        jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").click(function(){
+                            jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_show_content").toggleClass("sa_active");
+                            jQuery(".' . $this->WRAPPER . ' .sa_addons_oc_container_style_1 .sa_addons_oc_content_overlay").toggleClass("sa_active");
                         });
                     });
                     ';
