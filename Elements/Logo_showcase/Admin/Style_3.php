@@ -212,9 +212,6 @@ class Style_3 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::ANIMATION,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_logo_showcase_container' => ''
-                ],
             ]
         );
 
