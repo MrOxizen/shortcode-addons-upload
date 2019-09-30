@@ -226,7 +226,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-li-icon i' => ':{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-li-icon i' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );

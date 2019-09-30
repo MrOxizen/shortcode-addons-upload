@@ -17,22 +17,19 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function public_css() {
-        wp_enqueue_style('twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-1', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
-    
-
     public function default_render($style, $child, $admin) {
-        
-        
-        echo '<div class="oxi-addons-main-wrapper-image-comparison">
-				  <div class="oxi-addons-main">
-					<div class="oxi-addons-comparison-image-comparison">
-						<img class="oxi-img" src="' . $this->media_render('sa-image-comparison-image-one', $style) . '" />
-						<img class="oxi-img"  src="' . $this->media_render('sa-image-comparison-image-two', $style) . '" />
-					</div>
-				  </div>
-				</div>';
+        $id = $style['shortcode-addons-elements-id'];
+        echo '<div class="oxi-addons-main-wrapper-image-comparison-style-1">
+                <div class="oxi-addons-main">
+                     <div class="oxi-addons-comparison-image-comparison-'.$id.'">
+                        <img class="oxi-img" src="' . $this->media_render('sa-image-comparison-image-one', $style) . '" />
+                        <img class="oxi-img"  src="' . $this->media_render('sa-image-comparison-image-two', $style) . '" />
+                     </div>
+                 </div>
+            </div>';
     }
     
     
@@ -46,10 +43,10 @@ class Style_1 extends Templates {
     public function inline_public_jquery() {
         $jquery = '';
         $styledata = $this->style;
-        
+        $id = $styledata['shortcode-addons-elements-id'];
         $jquery .= ' 
        
-             $(".oxi-addons-comparison-image-comparison").twentytwenty({
+             $(".oxi-addons-comparison-image-comparison-'.$id.'").twentytwenty({
                 default_offset_pct: ' . $styledata['sa-image-comparison-body-offset'] . ', 
                  before_label: "' . $this->text_render($styledata['sa-image-comparison-before-text']) . '",
                  after_label: "' . $this->text_render($styledata['sa-image-comparison-after-text']) . '",
@@ -69,17 +66,6 @@ class Style_1 extends Templates {
         } else {
             $jquery .= 'orientation: "vertical",';
         }
-//        if ($styledata['sa_image-comparison_position'] == 'true') {
-//            $jquery .= 'orientation: "horizontal",';
-//        } else {
-//            $jquery .= 'orientation: "vertical",';
-//            $css .= '
-//       .oxi-addons-main-wrapper-image-comparison .twentytwenty-up-arrow, .twentytwenty-down-arrow{
-//            left: 50% !important;
-//              transform: translateX(-50%);
-//        }
-//        ';
-//        }
         if ($styledata['sa_image-comparison-hover'] == 'true') {
             $jquery .= 'move_slider_on_hover: true,';
         } else {
@@ -105,18 +91,18 @@ class Style_1 extends Templates {
 
 
         echo '<div class="oxi-addons-container">
-			<div class="oxi-addons-row">
-				<div class="oxi-addons-main-wrapper-' . $oxiid . ' "  >
-				  <div class="oxi-addons-main">
-					<div class="oxi-addons-comparison-' . $oxiid . '">
-						<img class="oxi-img" src="' . OxiAddonsUrlConvert($stylefiles[6]) . '" />
-						<img class="oxi-img"  src="' . OxiAddonsUrlConvert($stylefiles[8]) . '" />
-					</div>
-				  </div>
-				</div>
-			</div>
-        </div>
-        ';
+                <div class="oxi-addons-row">
+                        <div class="oxi-addons-main-wrapper-' . $oxiid . ' "  >
+                          <div class="oxi-addons-main">
+                                <div class="oxi-addons-comparison-' . $oxiid . '">
+                                        <img class="oxi-img" src="' . OxiAddonsUrlConvert($stylefiles[6]) . '" />
+                                        <img class="oxi-img"  src="' . OxiAddonsUrlConvert($stylefiles[8]) . '" />
+                                </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            ';
 
         $jquery .= ' 
        jQuery(window).on("load",function() {
