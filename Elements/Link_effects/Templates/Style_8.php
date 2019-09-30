@@ -14,14 +14,14 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_6 extends Templates {
+class Style_8 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
         $text = $this->text_render($style['sa_link_text']);
 
-        echo ' <div class="link-effect-main-style6" >
-                   <a ' . $this->url_render('sa_link_link', $style) . 'class="oxi-links-effects-style6" ' . $this->animation_render('sa_link_animation', $style) . '>' . $text . '</a>
+        echo ' <div class="link-effect-main-style8" >
+                   <a ' . $this->url_render('sa_link_link', $style) . 'class="oxi-links-effects-style8" ' . $this->animation_render('sa_link_animation', $style) . '>' . $text . '</a>
                 </div>';
     }
 
@@ -45,16 +45,13 @@ class Style_6 extends Templates {
                 </div>
             </div>
          </div>';
-
         $css = '
-    
-        .oxi-addons-container .link-effect-main-' . $oxiid . '{
-            width: 100%;
-            float: left;
-            display: flex;
-            justify-content: center;
-        } 
-
+            .oxi-addons-container .link-effect-main-' . $oxiid . '{
+                width: 100%;
+                float: left;
+                display: flex;
+                justify-content: center;
+            } 
             .oxi-addons-container .oxi-links-effects-' . $oxiid . '{  
                     position: relative;
                     display: inline-block;                    
@@ -62,14 +59,13 @@ class Style_6 extends Templates {
                     cursor:pointer;
                     color: ' . $styledata[7] . ';
                     text-decoration: none;
-                    font-family:  ' . oxi_addons_font_familly($styledata[13]) . ';                    
+                    font-family:  ' . oxi_addons_font_familly($styledata[13]) . '; 
                     font-weight: ' . $styledata[15] . ';
                     font-style:  ' . $styledata[17] . ';
                     font-size: ' . $styledata[3] . 'px;
                     padding: ' . $styledata[19] . 'px ' . $styledata[23] . 'px;
                     margin: ' . $styledata[27] . 'px ' . $styledata[31] . 'px;
-                    animation: ' . $styledata[37] . 's;
-                    
+                    animation: ' . $styledata[37] . 's; 
                }
                .oxi-addons-container .oxi-links-effects-' . $oxiid . ':hover, 
                .oxi-addons-container .oxi-links-effects-' . $oxiid . ':focus {
@@ -77,53 +73,49 @@ class Style_6 extends Templates {
                     color: ' . $styledata[9] . ';
                     text-decoration: none;
                }               
-                .oxi-addons-container .oxi-links-effects-' . $oxiid . '::before {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height:' . $styledata[43] . 'px;
-                    background: ' . $styledata[11] . ';
-                    content: "";
-                    -webkit-transition: top 0.3s;
-                    -moz-transition: top 0.3s;
-                    transition: top 0.3s;
+                .oxi-addons-container .oxi-links-effects-' . $oxiid . '::before,
+                .oxi-addons-container .oxi-links-effects-' . $oxiid . '::after{                    
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border-width: ' . $styledata[43] . 'px;
+                  border-color:' . $styledata[11] . ';
+                  border-style: solid;
+                  content: "";
+                  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+                  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+                  transition: transform 0.3s, opacity 0.3s;
                 }
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . '::after {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: ' . $styledata[43] . 'px;
-                    height: ' . $styledata[43] . 'px;
-                    background: ' . $styledata[11] . ';
-                    content: "";
-                    -webkit-transition: height 0.3s;
-                    -moz-transition: height 0.3s;
-                    transition: height 0.3s;
+                    border-color: #fff;
+                    opacity: 0;
+                    -webkit-transform: translateY(-7px) translateX(6px);
+                    -moz-transform: translateY(-7px) translateX(6px);
+                    transform: translateY(-7px) translateX(6px);
                 }
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':hover::before, 
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':focus::before{
-                   top: 100%;
-                   background: ' . $styledata[47] . ';
+                    opacity: 0;
+                    -webkit-transform: translateY(5px) translateX(-5px);
+                    -moz-transform: translateY(5px) translateX(-5px);
+                    transform: translateY(5px) translateX(-5px);
                 }                
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':hover::after,
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':focus::after {
-                   height: 100%;
-                   background: ' . $styledata[47] . ';
+                    opacity: 1;
+                    -webkit-transform: translateY(0px) translateX(0px);
+                    -moz-transform: translateY(0px) translateX(0px);
+                    transform: translateY(0px) translateX(0px);
+                    border-color: ' . $styledata[47] . ';
                 }
                 @media screen and (max-width: 993px){
                     .oxi-addons-container .oxi-links-effects-' . $oxiid . '{                          
                         font-size: ' . $styledata[4] . 'px;
                         padding: ' . $styledata[20] . 'px ' . $styledata[24] . 'px;
                         margin: ' . $styledata[28] . 'px ' . $styledata[32] . 'px;
-                    }
-                    .oxi-addons-container .oxi-links-effects-' . $oxiid . '::before {                  
-                        height:' . $styledata[44] . 'px;
-                    }
-                    .oxi-addons-container .oxi-links-effects-' . $oxiid . '::after {                  
-                        width: ' . $styledata[44] . 'px;
-                        height: ' . $styledata[44] . 'px;
-                    }
+                    }                    
                 }
                 @media only screen and (max-width: 668px){
                     .oxi-addons-container .oxi-links-effects-' . $oxiid . '{                          
@@ -131,15 +123,7 @@ class Style_6 extends Templates {
                         padding: ' . $styledata[21] . 'px ' . $styledata[25] . 'px;
                         margin: ' . $styledata[29] . 'px ' . $styledata[33] . 'px;
                     }
-                    .oxi-addons-container .oxi-links-effects-' . $oxiid . '::before {                  
-                        height:' . $styledata[45] . 'px;
-                    }
-                    .oxi-addons-container .oxi-links-effects-' . $oxiid . '::after {                  
-                        width: ' . $styledata[45] . 'px;
-                        height: ' . $styledata[45] . 'px;
-                    }
                 } ';
-
         wp_add_inline_style('shortcode-addons-style', $css);
     }
 

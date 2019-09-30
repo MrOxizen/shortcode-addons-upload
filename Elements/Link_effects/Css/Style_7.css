@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style7 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center
+}
+
+.link-effect-main-style7 .oxi-links-effects-style7 {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    color: #d90082;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    padding: 10px 10px;
+    margin: 0px 0px;
+}
+
+.link-effect-main-style7 .oxi-links-effects-style7:hover,
+.link-effect-main-style7 .oxi-links-effects-style7:focus {
+    outline: none;
+    color: #00aed1;
+    text-decoration: none
+}
+
+.link-effect-main-style7 .oxi-links-effects-style7::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #d90082;
+    content: "";
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
+    opacity: 0;
+    -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: top 0.3s, opacity 0.3s, transform 0.3s
+}
+
+.link-effect-main-style7 .oxi-links-effects-style7::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #d90082;
+    content: "";
+    webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85)
+}
+
+.link-effect-main-style7 .oxi-links-effects-style7:hover::before,
+.link-effect-main-style7 .oxi-links-effects-style7:focus::before {
+    top: 0%;
+    opacity: 1;
+    background: #00aed1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1)
+}
+
+.link-effect-main-style7 .oxi-links-effects-style7:hover::after,
+.link-effect-main-style7 .oxi-links-effects-style7:focus::after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+    background: #00aed1
+}
+
+@media screen and (max-width:993px) {
+    .link-effect-main-style7 .oxi-links-effects-style7 {
+        font-size: 30px;
+        padding: 10px 10px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style7 .oxi-links-effects-style7::before {
+        height: 2px
+    }
+    .link-effect-main-style7 .oxi-links-effects-style7::after {
+        width: 2px;
+        height: 2px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style7 .oxi-links-effects-style7 {
+        font-size: 25px;
+        padding: 10px 10px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style7 .oxi-links-effects-style7::before {
+        height: 2px
+    }
+    .link-effect-main-style7 .oxi-links-effects-style7::after {
+        height: 2px
+    }
+}

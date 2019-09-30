@@ -14,14 +14,14 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_6 extends Templates {
+class Style_7 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
         $text = $this->text_render($style['sa_link_text']);
 
-        echo ' <div class="link-effect-main-style6" >
-                   <a ' . $this->url_render('sa_link_link', $style) . 'class="oxi-links-effects-style6" ' . $this->animation_render('sa_link_animation', $style) . '>' . $text . '</a>
+        echo ' <div class="link-effect-main-style7" >
+                   <a ' . $this->url_render('sa_link_link', $style) . 'class="oxi-links-effects-style7" ' . $this->animation_render('sa_link_animation', $style) . '>' . $text . '</a>
                 </div>';
     }
 
@@ -41,21 +41,18 @@ class Style_6 extends Templates {
         echo '<div class="oxi-addons-container">
             <div class="oxi-addons-row">
                 <div class="link-effect-main-' . $oxiid . '">
-                    <a ' . $target . ' ' . $href . '  class="oxi-links-effects-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 35) . ' id="' . $stylefiles[5] . '">' . oxi_addons_html_decode($stylefiles[3]) . '</a>
+                     <a ' . $target . ' ' . $href . '  class="oxi-links-effects-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 35) . ' id="' . $stylefiles[5] . '">' . oxi_addons_html_decode($stylefiles[3]) . '</a>
                 </div>
             </div>
          </div>';
-
         $css = '
-    
-        .oxi-addons-container .link-effect-main-' . $oxiid . '{
-            width: 100%;
-            float: left;
-            display: flex;
-            justify-content: center;
+            .oxi-addons-container .link-effect-main-' . $oxiid . '{
+                width: 100%;
+                float: left;
+                display: flex;
+                justify-content: center;
         } 
-
-            .oxi-addons-container .oxi-links-effects-' . $oxiid . '{  
+        .oxi-addons-container .oxi-links-effects-' . $oxiid . '{  
                     position: relative;
                     display: inline-block;                    
                     outline: none;
@@ -79,36 +76,49 @@ class Style_6 extends Templates {
                }               
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . '::before {
                     position: absolute;
-                    top: 0;
+                    top: 100%;
                     left: 0;
                     width: 100%;
                     height:' . $styledata[43] . 'px;
                     background: ' . $styledata[11] . ';
-                    content: "";
-                    -webkit-transition: top 0.3s;
-                    -moz-transition: top 0.3s;
-                    transition: top 0.3s;
+                    content: "";                    
+                    -webkit-transform: scale(0.85);
+                    -moz-transform: scale(0.85);
+                    transform: scale(0.85);
+                    opacity: 0;
+                    -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+                    -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+                    transition: top 0.3s, opacity 0.3s, transform 0.3s;
                 }
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . '::after {
                     position: absolute;
-                    top: 0;
+                    top: 100%;
                     left: 0;
-                    width: ' . $styledata[43] . 'px;
+                    width: 100%;
                     height: ' . $styledata[43] . 'px;
                     background: ' . $styledata[11] . ';
                     content: "";
-                    -webkit-transition: height 0.3s;
-                    -moz-transition: height 0.3s;
-                    transition: height 0.3s;
+                    webkit-transition: -webkit-transform 0.3s;
+                    -moz-transition: -moz-transform 0.3s;
+                    transition: transform 0.3s;
+                    -webkit-transform: scale(0.85);
+                    -moz-transform: scale(0.85);
+                    transform: scale(0.85);
                 }
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':hover::before, 
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':focus::before{
-                   top: 100%;
+                   top: 0%;
+                   opacity: 1;
                    background: ' . $styledata[47] . ';
+                   -webkit-transform: scale(1);
+                   -moz-transform: scale(1);
+                   transform: scale(1);
                 }                
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':hover::after,
                 .oxi-addons-container .oxi-links-effects-' . $oxiid . ':focus::after {
-                   height: 100%;
+                   -webkit-transform: scale(1);
+                   -moz-transform: scale(1);
+                    transform: scale(1);
                    background: ' . $styledata[47] . ';
                 }
                 @media screen and (max-width: 993px){
@@ -134,8 +144,7 @@ class Style_6 extends Templates {
                     .oxi-addons-container .oxi-links-effects-' . $oxiid . '::before {                  
                         height:' . $styledata[45] . 'px;
                     }
-                    .oxi-addons-container .oxi-links-effects-' . $oxiid . '::after {                  
-                        width: ' . $styledata[45] . 'px;
+                    .oxi-addons-container .oxi-links-effects-' . $oxiid . '::after {   
                         height: ' . $styledata[45] . 'px;
                     }
                 } ';
