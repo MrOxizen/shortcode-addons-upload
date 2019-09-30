@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_2 extends Templates {
 
     public function public_css() {
-        wp_enqueue_style('twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-2', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {
@@ -47,13 +47,13 @@ class Style_2 extends Templates {
        
 
         $jquery .= ' 
-                jQuery.fn.BeerSlider = function ( options ) {
+                $.fn.BeerSlider = function ( options ) {
                             options = options || {};
                             return this.each(function() {
                             new BeerSlider(this, options);
                             });
                         };
-                       jQuery("#oxi-addons-beer-image-comparison-'.$id.'").BeerSlider({start: ' . $styledata['sa-image-comparison-body-offset'] . '});
+                       $("#oxi-addons-beer-image-comparison-'.$id.'").BeerSlider({start: ' . $styledata['sa-image-comparison-body-offset'] . '});
                                  ';
         return $jquery;
     }

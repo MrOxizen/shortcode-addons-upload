@@ -69,7 +69,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .oxi-addons-main' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .oxi-addons-main' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -108,7 +108,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -190,12 +190,12 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-handle' => 'border-color: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-up-arrow' => 'border-bottom-color: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-down-arrow' => 'border-top-color: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-left-arrow' => 'border-right-color: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-right-arrow' => 'border-left-color: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-horizontal .twentytwenty-handle::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-horizontal .twentytwenty-handle::after, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-vertical .twentytwenty-handle::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-vertical .twentytwenty-handle::after' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-handle' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-up-arrow' => 'border-bottom-color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-down-arrow' => 'border-top-color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-left-arrow' => 'border-right-color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-right-arrow' => 'border-left-color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-horizontal .twentytwenty-handle::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-horizontal .twentytwenty-handle::after, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-vertical .twentytwenty-handle::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-vertical .twentytwenty-handle::after' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -285,7 +285,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => '',
             ]
                 ]
         );
@@ -298,7 +298,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -312,7 +312,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -323,7 +323,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => '',
             ]
                 ]
         );
@@ -357,7 +357,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -390,7 +390,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_compersion_overlay_controler' => 'true'
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison .twentytwenty-after-label::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

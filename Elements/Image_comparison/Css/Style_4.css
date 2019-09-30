@@ -1,0 +1,79 @@
+ .oxi_addons_image_style_4_box {
+    width: 100%;
+     padding: 0px 0px 0px 0px
+ }
+ 
+ .oxi_addons_image_style_4_box_body {
+      max-width: 800px;
+     margin: 0 auto;
+     width: 100%;
+     position: relative
+ }
+ 
+ .oxi_addons_image_style_4_box_body:after {
+     display: block;
+     content: "";
+     padding-bottom: 62.5%
+ }
+ 
+ .oxi_addons_image_style_4_box .oxi_addons_hover_view_img {
+     white-space: nowrap;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     overflow: hidden;
+     background-position: center center !important;
+     background-size: cover !important;
+     z-index: 5;
+ }
+ 
+ .oxi_addons_image_style_4_box .oxi_addons_font_view_img {
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 6;
+    padding: 2px;
+    transition: all 3.5s ease-in-out;
+    background-size: cover !important;
+    background-position: center center !important;
+    border-radius: 0%;
+    cursor: pointer;
+ }
+ 
+ .oxi_addons_image_style_4_box .oxi_addons_font_view_img:hover {
+     transition: all 0s linear;
+     opacity: 0
+ }
+ 
+ @media only screen and (min-width:669px) and (max-width:993px) {
+     .oxi_addons_image_style_4_box {
+         max-width: 800px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi_addons_image_style_4_box_body:after {
+         display: block;
+         content: "";
+         padding-bottom: 62.5%
+     }
+     .oxi_addons_image_style_4_box .oxi_addons_font_view_img {
+         transition: all 3.5s ease-in-out
+     }
+ }
+ 
+ @media only screen and (max-width:668px) {
+     .oxi_addons_image_style_4_box {
+         max-width: 800px;
+         padding: 0px 0px 0px 0px
+     }
+     .oxi_addons_image_style_4_box_body:after {
+         display: block;
+         content: "";
+         padding-bottom: 62.5%
+     }
+     .oxi_addons_image_style_4_box .oxi_addons_font_view_img {
+         transition: all 3.5s ease-in-out
+     }
+ }
