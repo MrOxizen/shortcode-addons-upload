@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style3 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center
+}
+
+.link-effect-main-style3 .oxi-links-effects-style3 {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    color: #dd12eb;
+    text-decoration: none;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    padding: 10px 10px;
+    margin: 0px 0px;
+    animation: .5s
+}
+
+.link-effect-main-style3 .oxi-links-effects-style3::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #db0f38;
+    content: "";
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px)
+}
+
+.link-effect-main-style3 .oxi-links-effects-style3:hover,
+.link-effect-main-style3 .oxi-links-effects-style3:focus {
+    outline: none;
+    color: #db0f38;
+    text-decoration: none
+}
+
+.link-effect-main-style3 .oxi-links-effects-style3:hover::after,
+.link-effect-main-style3 .oxi-links-effects-style3:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px)
+}
+
+@media screen and (max-width:993px) {
+    .link-effect-main-style3 .oxi-links-effects-style3 {
+        font-size: 30px;
+        padding: 10px 10px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style3 .oxi-links-effects-style3::after {
+        height: 3px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style3 .oxi-links-effects-style3 {
+        font-size: 25px;
+        padding: 10px 10px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style3 .oxi-links-effects-style3::after {
+        height: 3px
+    }
+}
