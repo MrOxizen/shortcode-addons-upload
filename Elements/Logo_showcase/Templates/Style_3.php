@@ -23,7 +23,7 @@ class Style_3 extends Templates
         foreach ($child as $v) {
             $value = $v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : [];
             $img = $link = $endlink = '';
-            
+
             if (array_key_exists('sa_logo_showcase_url_open', $value) && $value['sa_logo_showcase_url_open'] != '0') {
                 if ($value['sa_logo_showcase_url-url'] != '') {
                     $link .= '<a ' . $this->url_render('sa_logo_showcase_url', $value) . ' class="logo_showcase_link">';
@@ -35,12 +35,12 @@ class Style_3 extends Templates
             }
             echo '<div class="' . $this->column_render('sa_logo_showcase_col', $style) . '  ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="sa_addons_logo_showcase_container">';
-                    echo $link;
-                    echo'<div class="sa_addons_logo_showcase_style_3">
+            echo $link;
+            echo '<div class="sa_addons_logo_showcase_style_3" ' . $this->animation_render('sa_logo_showcase_animation', $style) . '>
                             ' . $img . '
                         </div>';
-                    echo $endlink;
-                echo '</div>';
+            echo $endlink;
+            echo '</div>';
             if ($admin == 'admin') :
                 echo '<div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">

@@ -1,7 +1,8 @@
-.sa_addons_icon_boxes_container {
+.sa_addons_icon_boxes_container_style_2 {
     display: flex;
     width: 100%;
-    max-width: 300px;
+    position: relative;
+    max-width: 275px;
     margin: 0 auto;
     padding: 10px 10px 10px 10px
 }
@@ -9,13 +10,13 @@
 .sa_addons_icon_boxes_style_2 {
     width: 100%;
     float: left;
-    background: rgba(15, 140, 189, 1.00);
+    background: linear-gradient(45deg, rgba(255, 41, 41, 1) 2%, rgba(240, 188, 0, 0.84) 100%);
     border-radius: 0px 0px 0px 0px;
     border-width: 0px 0px 0px 0px;
     border-style: solid;
     border-color: #fd3387;
-    padding: 20px 10px 20px 10px;
-    box-shadow: 0px 5px 10px 0px rgba(194, 194, 194, 0.58)
+    padding: 0px 10px 20px 10px;
+    box-shadow: 0px 5px 17px 0px rgba(163, 163, 163, 1)
 }
 
 .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_icon {
@@ -43,31 +44,31 @@
     width: 100%;
     float: left;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Open Sans";
     font-weight: 600;
     font-style: normal;
     line-height: 1.3;
-    text-align: center;
-    padding: 5px 5px 5px 5px;
+    text-align: left;
+    padding: 10px 10px 10px 5px
 }
 
 .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_content {
     width: 100%;
     float: left;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     font-family: "Open Sans";
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
     line-height: 1.3;
-    text-align: center;
-    padding: 5px 5px 5px 5px
+    text-align: left;
+    padding: 5px 11px 5px 5px
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_addons_icon_boxes_container {
-        max-width: 300px;
+    .sa_addons_icon_boxes_container_style_2 {
+        max-width: 275px;
         padding: 10px 10px 10px 10px
     }
     .sa_addons_icon_boxes_style_2 {
@@ -84,18 +85,18 @@
         border-width: 0px 0px 0px 0px
     }
     .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_headding {
-        font-size: 20px;
-        padding: 5px 5px 5px 5px
+        font-size: 22px;
+        padding: 10px 10px 10px 5px
     }
     .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_content {
-        font-size: 15px;
-        padding: 5px 5px 5px 5px
+        font-size: 14px;
+        padding: 5px 11px 5px 5px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .sa_addons_icon_boxes_container {
-        max-width: 300px;
+    .sa_addons_icon_boxes_container_style_2 {
+        max-width: 275px;
         padding: 10px 10px 10px 10px
     }
     .sa_addons_icon_boxes_style_2 {
@@ -112,11 +113,11 @@
         border-width: 0px 0px 0px 0px
     }
     .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_headding {
-        font-size: 20px;
-        padding: 5px 5px 5px 5px
+        font-size: 22px;
+        padding: 10px 10px 10px 5px
     }
     .sa_addons_icon_boxes_style_2 .sa_addons_icon_boxes_content {
-        font-size: 15px;
-        padding: 5px 5px 5px 5px
+        font-size: 14px;
+        padding: 5px 11px 5px 5px
     }
 }

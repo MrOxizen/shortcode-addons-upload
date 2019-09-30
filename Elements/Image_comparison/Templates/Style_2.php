@@ -25,7 +25,7 @@ class Style_2 extends Templates {
         
         echo '<div class="oxi-addons-main-wrapper-image-comparison-style-2">
 				  <div class="oxi-addons-main">
-                                        <div id="oxi-addons-beer-image-comparison-'.$id.'" style="width:100%" class="beer-slider" data-beer-label="' . $this->text_render($style['sa-image-comparison-before-text']) . '">
+                                        <div id="oxi-addons-beer-image-comparison-'.$id.'" class="beer-slider" data-beer-label="' . $this->text_render($style['sa-image-comparison-before-text']) . '">
 						<img src="' . $this->media_render('sa-image-comparison-image-one', $style) . '" alt="">
 						<div class="beer-reveal" data-beer-label="' . $this->text_render($style['sa-image-comparison-after-text']) . '">
 							<img src="' . $this->media_render('sa-image-comparison-image-two', $style) . '" alt="">

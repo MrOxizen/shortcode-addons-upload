@@ -527,7 +527,7 @@ class Style_18 extends AdminStyle {
                 ]
         );
        $this->add_group_control(
-                'sa-btn-icon-bg', $this->style, [
+                'sa-btn-icon-h-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn18 .oxi-button-btn18:hover .oxi-icons' => ''

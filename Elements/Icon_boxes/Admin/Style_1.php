@@ -87,7 +87,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_1' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -97,7 +97,6 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -120,7 +119,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -180,7 +179,6 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -214,7 +212,6 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -305,7 +302,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#f29993',
+                'default' => '#ffffff',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_icon_boxes_style_1 .oxi-icons' => 'color: {{VALUE}};'
                 ],
@@ -345,7 +342,6 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -397,7 +393,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Heading Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#f29993',
+                'default' => '#ffffff',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_icon_boxes_style_1 .sa_addons_icon_boxes_headding' => 'color: {{VALUE}};'
                 ],
@@ -420,7 +416,6 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -466,7 +461,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Content Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#f29993',
+                'default' => '#f5f5f5',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_icon_boxes_style_1 .sa_addons_icon_boxes_content' => 'color: {{VALUE}};'
                 ],
@@ -489,7 +484,6 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -556,7 +550,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Heading', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Lorem Ipsum is simply dummy text',
+                'default' => 'Default Title',
                 'placeholder' => 'Your Heading Here',
             ]
         );

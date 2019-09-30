@@ -38,15 +38,9 @@ and open the template in the editor.
  }
  
  .oxi-addons-CT .oxi-addons-before-text.oxi-active {
-     font-size: 22px;
+     
      color: #c7c7c7;
-     font-family: "Lato";
-     font-weight: 500;
-     font-style: normal;
-     line-height: 1.3;
-     text-align: center;
-     letter-spacing: 1px;
-     padding: 0px 10px 0px 0px
+    
  }
  
  .oxi-addons-CT .oxi-addons-after-text {
@@ -62,15 +56,8 @@ and open the template in the editor.
  }
  
  .oxi-addons-CT .oxi-addons-after-text.oxi-active {
-     font-size: 22px;
      color: #464746;
-     font-family: "Lato";
-     font-weight: 500;
-     font-style: normal;
-     line-height: 1.3;
-     text-align: center;
-     letter-spacing: 1px;
-     padding: 0px 0px 0px 10px
+     
  }
  
  .oxi-addons-CT .oxi-addons-CT-main-content {

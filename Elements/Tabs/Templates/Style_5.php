@@ -12,24 +12,20 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_5 extends Templates
-{
+class Style_5 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
         $jquery = $linkopening = '';
-
-
-
         echo '<div class="sa-addons-tabs-main-wrapper-style-5" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                 <div class="sa-addons-main-tab-header">';
+
         foreach ($child as $header) {
-            $value_header = $this->Json_Decode($header['rawdata']);
+
+            $value_header = $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
             $icon = '';
-            if (array_key_exists('sa_tabs_url_open', $value_header) && $value_header['sa_tabs_url_open'] != '0') :
+            if (array_key_exists('sa_tabs_url_open', $value_header)) :
 
                 if ($value_header['sa_tabs_url-target'] != 'yes') :
                     $linkopening = ", '_self'";
@@ -54,8 +50,9 @@ class Style_5 extends Templates
         }
         echo '</div>
                 <div class="sa-addons-main-tab-body ">';
+        
         foreach ($child as $body) {
-            $value_body = $this->Json_Decode($body['rawdata']);
+            $value_body = $body['rawdata'] != '' ? json_decode(stripcslashes($body['rawdata']), true) : [];
             if (array_key_exists('sa_tabs_url_open', $value_body) && $value_body['sa_tabs_url_open'] != '0') :
                 if ($value_body['sa_tabs_url-target'] != 'yes') :
                     $linkopening = ", '_self'";
@@ -98,8 +95,8 @@ class Style_5 extends Templates
 
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
-    public function inline_public_jquery()
-    {
+
+    public function inline_public_jquery() {
         $styledata = $this->style;
         $animationIn = $animationOut = $jquery = '';
         if ($styledata['sa_tabs_tab_anim'] == 'slide') {
@@ -149,8 +146,7 @@ class Style_5 extends Templates
         return $jquery;
     }
 
-    public function old_render()
-    {
+    public function old_render() {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -431,4 +427,5 @@ class Style_5 extends Templates
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
+
 }

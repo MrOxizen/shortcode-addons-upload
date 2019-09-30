@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_2
+ * Description of Style_3
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -78,10 +78,9 @@ class Style_3 extends AdminStyle
                         'options' => [
                             'sa_effects_inside' => __('Style 01', SHORTCODE_ADDOONS),
                             'sa_effects_outside' => __('Style 02', SHORTCODE_ADDOONS),
-                            'sa_icon_effects_style_3' => __('Style 03', SHORTCODE_ADDOONS),
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}' => '',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}' => '',
                         ],
                     ],
                     'shortcode-addons-start-tabs' => [
@@ -101,7 +100,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}};',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
 
@@ -110,13 +109,8 @@ class Style_3 extends AdminStyle
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
-                        'conditional' => Controls::INSIDE,
-                        'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_inside',
-                            'sa_icon_effects_type' => 'sa_effects_outside',
-                        ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:after' => 'background:{{VALUE}};',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:after' => 'background:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_box_shadow' => [
@@ -124,7 +118,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::BOXSHADOW,
                         'controller' => 'add_group_control',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}' => '',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}' => '',
                         ],
                     ],
 
@@ -139,9 +133,9 @@ class Style_3 extends AdminStyle
                     'sa_icon_effects_color_hover' => [
                         'label' => __('Hover Color', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
-                        'default' => '#ffffff',
+                        'default' => '#2AD4BB',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}};',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
 
@@ -152,11 +146,10 @@ class Style_3 extends AdminStyle
                         'default' => '#2AD4BB',
                         'conditional' => Controls::INSIDE,
                         'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_inside',
-                            'sa_icon_effects_type' => 'sa_icon_effects_style_3',
+                            'sa_icon_effects_type' => 'sa_effects_outside'
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover:after' => 'background:{{VALUE}};',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:hover:after' => 'background:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_box_shadow_hover' => [
@@ -164,12 +157,8 @@ class Style_3 extends AdminStyle
                         'type' => Controls::BOXSHADOW,
                         'controller' => 'add_group_control',
                         'conditional' => Controls::INSIDE,
-                        'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_outside',
-                            'sa_icon_effects_type' => 'sa_icon_effects_style_3',
-                        ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover' => '',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_3.sa_icon_effects_unique_{{KEY}}:hover' => '',
                         ],
                     ],
 
@@ -244,7 +233,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -276,8 +265,8 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2 .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3 .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -310,7 +299,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -342,7 +331,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:after' => 'padding: {{SIZE}}{{UNIT}}; top: -{{SIZE}}{{UNIT}}; left: -{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3:after' => 'padding: {{SIZE}}{{UNIT}}; top: -{{SIZE}}{{UNIT}}; left: -{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -374,10 +363,10 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:hover' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_icon_effects_style_2:active' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3:hover' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_3:active' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
