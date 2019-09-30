@@ -1,0 +1,119 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style2 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2 {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2-span {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 0px 0px;
+    background: linear-gradient(0deg, rgba(176, 14, 152, 1.00) 0%, rgba(247, 15, 216, 1) 97%);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2-span::before {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(176, 14, 152, 1.00) 0%, rgba(247, 15, 216, 1) 97%);
+    padding: 10px 30px;
+    content: attr(data-hover);
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover,
+.link-effect-main-style2 .oxi-links-effects-style2:focus {
+    outline: none;
+    color: #242424;
+    text-decoration: none
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .oxi-links-effects-style2-span,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .oxi-links-effects-style2-span {
+    background: rgba(240, 228, 60, 1.00);
+    -webkit-transform: rotateX(90deg) translateY(-45px);
+    -moz-transform: rotateX(90deg) translateY(-45px);
+    transform: rotateX(90deg) translateY(-45px)
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .oxi-links-effects-style2-span::before,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .oxi-links-effects-style2-span::before {
+    background: rgba(240, 228, 60, 1.00)
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .link-effect-main-style2 .oxi-links-effects-style2 {
+        font-size: 25px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span {
+        padding: 10px 30px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span::before {
+        padding: 10px 30px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style2 .oxi-links-effects-style2 {
+        font-size: 25px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span {
+        padding: 10px 30px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span::before {
+        padding: 10px 30px
+    }
+}

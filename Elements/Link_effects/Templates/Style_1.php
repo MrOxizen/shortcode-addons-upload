@@ -25,18 +25,13 @@ class Style_1 extends Templates {
         }
 
         $html = $icon1 . $text . $icon2;
-        echo ' <div class="oxi-addons-container">
-                    <div class="oxi-addons-row">
-                        <div class="link-effect-main-style1">
-                            <a class="oxi-links-effects-style1">' . $html . '</a>
-                        </div> 
-                    </div> 
-                   </div>';
+        echo '<div class="link-effect-main-style1">
+                <a ' . $this->url_render('sa_link_link', $style) . ' class="oxi-links-effects-style1" ' . $this->animation_render('sa_link_animation', $style) . '>' . $html . '</a>
+             </div>';
     }
 
     public function old_render() {
         $style = $this->dbdata;
-        $listdata = $this->child;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
