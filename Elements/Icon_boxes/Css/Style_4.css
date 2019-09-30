@@ -1,4 +1,4 @@
-.sa_addons_icon_boxes_container {
+.sa_addons_icon_boxes_container_style_4 {
     display: flex;
     width: 100%;
     max-width: 275px;
@@ -74,7 +74,7 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_addons_icon_boxes_container {
+    .sa_addons_icon_boxes_container_style_4 {
         max-width: 275px;
         padding: 20px 20px 20px 20px
     }
@@ -107,7 +107,7 @@
 }
 
 @media only screen and (max-width:668px) {
-    .sa_addons_icon_boxes_container {
+    .sa_addons_icon_boxes_container_style_4 {
         max-width: 275px;
         padding: 20px 20px 20px 20px
     }

@@ -87,7 +87,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_4' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -97,7 +97,6 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '20',
@@ -120,7 +119,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -180,7 +179,6 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -214,7 +212,6 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -430,7 +427,6 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -511,7 +507,6 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -576,7 +571,6 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',

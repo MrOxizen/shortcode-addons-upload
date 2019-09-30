@@ -24,9 +24,9 @@ class Style_1 extends Templates {
         foreach ($repeater as $key => $value) {
             
         $img = '<a ' . $this->url_render('sa_is_image_url', $value) . ' class="oxi-link sa_is_image_repeater_' . $key . '">
-                    <div class="oxi-addons-image-main" id="oxi-addons-image-main-' . $key . '" >
+                    <div class="oxi-addons-image-main" id="oxi-addons-IS1-image-main-' . $key . '" >
                         <div class="oxi-addons-img">
-                            <img class="oxi-img sa-img-' . $key . '" id="oxi-img-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />
+                            <img class="oxi-img sa-img-' . $key . '" id="oxi-IS1-img-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />
                         </div>
                     </div> 
                 </a>';
@@ -46,27 +46,27 @@ class Style_1 extends Templates {
         $repeater =  (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
         foreach ($repeater as $key => $value) {
          if ($value['sa_is_image_view'] == 'top-to-bottom') {
-                $jquery .= 'jQuery("#oxi-img-' . $key . '").mouseover(function(){
+                $jquery .= 'jQuery("#oxi-IS1-img-' . $key . '").mouseover(function(){
                     var imgHeight= jQuery(this).height();  
-                    var outerHeight = jQuery("#oxi-addons-image-main-' . $key . '").outerHeight(); 
+                    var outerHeight = jQuery("#oxi-addons-IS1-image-main-' . $key . '").outerHeight(); 
                     var height = imgHeight-outerHeight; 
                     jQuery(this).css({"transform":"translateY(-" + height + "px)"});
                 });  
-                jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
+                jQuery("#oxi-IS1-img-' . $key . '").mouseout(function(){ 
                     jQuery(this).css({"transform":"translateY(0px)"});
                 });   
             ';
             }
             elseif ($value['sa_is_image_view'] == 'bottom-to-top') {
-                $jquery .= 'jQuery("#oxi-img-' . $key . '").css({
+                $jquery .= 'jQuery("#oxi-IS1-img-' . $key . '").css({
                         "position" : "absolute",
                         "bottom" : "0",
                         "left" : "0",
                         "Top" : "auto",
                     }); 
-                    jQuery("#oxi-img-' . $key . '").mouseover(function(){
+                    jQuery("#oxi-IS1-img-' . $key . '").mouseover(function(){
                             var imgHeight= jQuery(this).height();  
-                            var outerHeight = jQuery("#oxi-addons-image-main-' . $key . '").outerHeight(); 
+                            var outerHeight = jQuery("#oxi-addons-IS1-image-main-' . $key . '").outerHeight(); 
                             var height = imgHeight-outerHeight; 
                             jQuery(this).css({"transform":"translateY(" + height + "px)"});
                         });  

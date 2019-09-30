@@ -24,9 +24,9 @@ class Style_2 extends Templates {
         foreach ($repeater as $key => $value) {
 
             $img = '<a ' . $this->url_render('sa_is_image_url', $value) . ' class="oxi-link sa_is_image_repeater_' . $key . '">
-                    <div class="oxi-addons-image-main" id="oxi-addons-image-main-' . $key . '" >
+                    <div class="oxi-addons-image-main" id="oxi-addons-IS2-image-main-' . $key . '" >
                         <div class="oxi-addons-img">
-                            <img class="oxi-img sa-img-' . $key . '" id="oxi-img-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />
+                            <img class="oxi-img" id="oxi-IS2-img-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />
                         </div>
                     </div> 
                 </a>';
@@ -46,30 +46,30 @@ class Style_2 extends Templates {
         foreach ($repeater as $key => $value) {
             if ($value['sa_is_image_view'] == 'left_to_right') {
                 $jquery .= ' 
-                jQuery("#oxi-img-' . $key . '").mouseover (function(){
+                jQuery("#oxi-IS2-img-' . $key . '").mouseover (function(){
                     var imgWidth = jQuery(this).width();  
-                    var outerWidth = jQuery("#oxi-addons-image-main-' . $key . '").outerWidth(); 
+                    var outerWidth = jQuery("#oxi-addons-IS2-image-main-' . $key . '").outerWidth(); 
                     var height = imgWidth-outerWidth; 
                     jQuery(this).css({"transform":"translateX(-" + height + "px)"});
                 });  
-                jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
+                jQuery("#oxi-IS2-img-' . $key . '").mouseout(function(){ 
                     jQuery(this).css({"transform":"translateX(0px)"});
                 });   
             ';
             } elseif ($value['sa_is_image_view'] == 'right_to_left') {
                 $jquery .= '  
-                    jQuery("#oxi-img-' . $key . '").css({
+                    jQuery("#oxi-IS2-img-' . $key . '").css({
                         "position" : "absolute",
                         "right" : "0",
                         "top" : "0"
                     }); 
-                jQuery("#oxi-img-' . $key . '").mouseover (function(){
+                jQuery("#oxi-IS2-img-' . $key . '").mouseover (function(){
                     var imgWidth = jQuery(this).width();  
-                    var outerWidth = jQuery("#oxi-addons-image-main-' . $key . '").outerWidth(); 
+                    var outerWidth = jQuery("#oxi-addons-IS2-image-main-' . $key . '").outerWidth(); 
                     var height = imgWidth-outerWidth; 
                     jQuery(this).css({"transform":"translateX(" + height + "px)"});
                 });  
-                jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
+                jQuery("#oxi-IS2-img-' . $key . '").mouseout(function(){ 
                     jQuery(this).css({"transform":"translateX(0px)"});
                 });   
             ';
