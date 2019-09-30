@@ -117,6 +117,22 @@ class Style_1 extends AdminStyle
                             '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
+                    'sa_icon_effects_color_hoversss' => [
+                        'label' => __('Slider Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::SLIDER,
+                        'default' => [
+                            'unit' => 'px',
+                            'size' => '17',
+                        ],
+                        'range' => [
+                            'px' => [
+                                'min' => 0,
+                                'max' => 1000,
+                                'step' => 1,
+                            ],
+
+                        ],
+                    ],
                     'sa_icon_effects_bg_hover' => [
                         'label' => __('Hover Background', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
