@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle {
+class Style_10 extends AdminStyle {
 
     public function register_controls() {
 
@@ -32,33 +32,8 @@ class Style_2 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Link Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Link Text', SHORTCODE_ADDOONS),
-            'default' => 'Learn More',
+            'default' => 'Submit',
             'loader' => TRUE,
-                ]
-        );
-        $this->add_control(
-                'sa_link_hover', $this->style, [
-            'label' => __('Hover Text', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-
-        
-        $this->add_control(
-                 'sa_link_hover_text', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('Hover Text', SHORTCODE_ADDOONS),
-            'placeholder' => __('Hover Text', SHORTCODE_ADDOONS),
-            'default' => 'Sign Up',
-            'loader' => TRUE,
-            'condition' => [
-                'sa_link_hover' => 'yes',
-            ],
                 ]
         );
 
@@ -68,25 +43,12 @@ class Style_2 extends AdminStyle {
             'loader' => TRUE,
                 ]
         );
-        $this->add_control(
-                'sa_link_view', $this->style, [
-            'label' => __('Hover View', SHORTCODE_ADDOONS),
-            'type' => Controls::SELECT,
-            'default' => 'sa_link_top_to_bottom',
-            'loader' => TRUE,
-            'options' => [
-                'sa_link_top_to_bottom' => __('Top to Bottom', SHORTCODE_ADDOONS),
-                'sa_link_bottom_to_top' => __('Bottom to Top', SHORTCODE_ADDOONS),
-                'sa_link_left_to_right' => __('Left to Right', SHORTCODE_ADDOONS),
-                'sa_link_right_to_left' => __('Right to Left', SHORTCODE_ADDOONS),
-            ],
-                ]
-        );
+
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('General Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'showing' => TRUE,
                 ]
         );
         $this->add_control(
@@ -107,7 +69,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2' => 'justify-content:{{VALUE}};'
+                '{{WRAPPER}} .link-effect-main-style10' => 'justify-content:{{VALUE}};'
             ],
                 ]
         );
@@ -143,7 +105,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .link-effect-main-style10' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -167,7 +129,7 @@ class Style_2 extends AdminStyle {
                 'sa_link_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2' => ''
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10' => ''
             ],
                 ]
         );
@@ -184,26 +146,18 @@ class Style_2 extends AdminStyle {
                 'sa_link_text_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#00000',
+            'default' => '#0fd11f',
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10' => 'color:{{VALUE}};'
             ],
                 ]
         );
-         $this->add_group_control(
-                'sa_link_bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2-span' => '',
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2-span::before' => ''
-            ],
-                ]
-        );
+
         $this->add_group_control(
                 'sa_link_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2' => ''
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10' => ''
             ],
                 ]
         );
@@ -216,29 +170,19 @@ class Style_2 extends AdminStyle {
                 'sa_link_hover_text_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#2c36c7',
+            'default' => '#e66f0e',
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2:hover' => 'color:{{VALUE}};',
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2:focus' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10:hover' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10:focus' => 'color:{{VALUE}};'
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_link_hover_bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2:hover .oxi-links-effects-style2-span' => '',
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2:focus .oxi-links-effects-style2-span' => '',
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2:hover .oxi-links-effects-style2-span::before' => '',
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2:focus .oxi-links-effects-style2-span::before' => '',
-            ],
-                ]
-        );
+
         $this->add_group_control(
                 'sa_link_hover_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2:hover' => ''
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10:hover' => ''
             ],
                 ]
         );
@@ -274,8 +218,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2-span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2-span::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -284,7 +227,104 @@ class Style_2 extends AdminStyle {
 
 
         $this->end_controls_section();
-       
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Border Setting', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+                ]
+        );
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('First Border', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Second Border', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+                'sa_link_b1_height_width', $this->style, [
+            'label' => __('Height & Width', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 115,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 1500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => .1,
+                ],
+                'rem' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10::after' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};',
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa-link-br1', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10::after' => ''
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+                'sa_link_b2_height_width', $this->style, [
+            'label' => __('Height & Width', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 130,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 1500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => .1,
+                ],
+                'rem' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10::before' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
+             ],
+                ]
+        );
+        $this->add_group_control(
+                'sa-link-br2', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .link-effect-main-style10 .oxi-links-effects-style10::before' => '',
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+
+        $this->end_controls_tabs();
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }

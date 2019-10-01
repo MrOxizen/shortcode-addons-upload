@@ -27,7 +27,7 @@ class Style_2 extends Templates {
         }
 
         echo ' <div class="link-effect-main-style2">
-                   <a ' . $this->url_render('sa_link_link', $style) . 'class="oxi-links-effects-style2" ' . $this->animation_render('sa_link_animation', $style) . '> <span class="oxi-links-effects-style2-span" data-hover="' . $hover . '">' . $text . '<span></a>
+                   <a ' . $this->url_render('sa_link_link', $style) . 'class="oxi-links-effects-style2" ' . $this->animation_render('sa_link_animation', $style) . '> <span class="oxi-links-effects-style2-span '.$style['sa_link_view'].'" data-hover="' . $hover . '">' . $text . '<span></a>
                 </div>';
     }
 
