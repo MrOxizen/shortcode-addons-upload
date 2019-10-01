@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle
+class Style_3 extends AdminStyle
 {
 
     public function register_controls()
@@ -66,15 +66,10 @@ class Style_2 extends AdminStyle
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
                 'fields' => [
-                    'sa_tooltip_img' => [
-                        'label' => esc_html__('Img', SHORTCODE_ADDOONS),
-                        'type' => Controls::MEDIA,
+                    'sa_tooltip_shortcode' => [
+                        'label' => esc_html__('Short code', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXTAREA,
                         'loader' => TRUE,
-                        'controller' => 'add_group_control',
-                        'default' => [
-                            'type' => 'media-library',
-                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/08/travel2-1-1.jpg',
-                        ],
                     ],
                     'sa_tooltip_text' => [
                         'label' => esc_html__('Tooltip Text', SHORTCODE_ADDOONS),
@@ -82,7 +77,7 @@ class Style_2 extends AdminStyle
                         'loader' => TRUE,
                         'default' => 'tooltip',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text' => '',
+                            '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text' => '',
                         ],
                     ],
                     'sa_tooltip_posi' => [
@@ -97,7 +92,7 @@ class Style_2 extends AdminStyle
                             'sa_tooltip_right' => __('Right', SHORTCODE_ADDOONS),
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_2.sa_tooltip_unique_{{KEY}}' => '',
+                            '{{WRAPPER}} .sa_addons_tooltip_style_3.sa_tooltip_unique_{{KEY}}' => '',
                         ],
                     ],
                     'sa_tooltip_m_t' => [
@@ -116,7 +111,7 @@ class Style_2 extends AdminStyle
                             ],
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_2.sa_tooltip_top .sa_addons_tooltip_text' => 'margin-top: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_3.sa_tooltip_top .sa_addons_tooltip_text' => 'margin-top: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -139,7 +134,7 @@ class Style_2 extends AdminStyle
                             ],
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_2.sa_tooltip_bottom .sa_addons_tooltip_text' => 'margin-top: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_3.sa_tooltip_bottom .sa_addons_tooltip_text' => 'margin-top: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -162,7 +157,7 @@ class Style_2 extends AdminStyle
                             ],
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_2.sa_tooltip_left .sa_addons_tooltip_text' => 'margin-left: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_3.sa_tooltip_left .sa_addons_tooltip_text' => 'margin-left: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -185,7 +180,7 @@ class Style_2 extends AdminStyle
                             ],
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_2.sa_tooltip_right .sa_addons_tooltip_text' => 'margin-left: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_3.sa_tooltip_right .sa_addons_tooltip_text' => 'margin-left: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -219,7 +214,7 @@ class Style_2 extends AdminStyle
             'sa_tooltip_img_w',
             $this->style,
             [
-                'label' => __('Img Width', SHORTCODE_ADDOONS),
+                'label' => __('Max Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
@@ -243,39 +238,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_img' => 'max-width: {{SIZE}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_tooltip_img_h',
-            $this->style,
-            [
-                'label' => __('Img Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '300',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 1000,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_img' => 'height: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -303,18 +266,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2' => 'text-align: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_tooltip_boxshadow',
-            $this->style,
-            [
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2' => '',
-
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -330,23 +282,23 @@ class Style_2 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => -200,
                         'max' => 200,
                         'step' => 1,
                     ],
                     '%' => [
-                        'min' => 0,
+                        'min' => -50,
                         'max' => 50,
                         'step' => .1,
                     ],
                     'em' => [
-                        'min' => 0,
+                        'min' => -10,
                         'max' => 10,
                         'step' => .1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 
                 ],
             ]
@@ -369,7 +321,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text' => '',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text' => '',
                 ],
             ]
         );
@@ -381,7 +333,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -391,7 +343,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text' => '',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text' => '',
                 ],
             ]
         );
@@ -423,7 +375,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 
                 ],
             ]
@@ -456,7 +408,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 
                 ],
             ]
@@ -468,7 +420,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text' => '',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text' => '',
                 ],
             ]
         );
@@ -498,7 +450,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2 .sa_addons_tooltip_text::after' => 'border-width: {{SIZE}}px;'
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text::after' => 'border-width: {{SIZE}}px;'
                 ],
             ]
         );
@@ -510,10 +462,10 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#19b9d1',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2.sa_tooltip_top .sa_addons_tooltip_text:after' => 'border-color: {{VALUE}} transparent transparent transparent;',
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2.sa_tooltip_bottom .sa_addons_tooltip_text:after' => 'border-color: transparent transparent {{VALUE}} transparent;',
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2.sa_tooltip_left .sa_addons_tooltip_text:after' => 'border-color: transparent transparent transparent {{VALUE}};',
-                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_style_2.sa_tooltip_right .sa_addons_tooltip_text:after' => 'border-color: transparent {{VALUE}} transparent transparent;',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_top .sa_addons_tooltip_text:after' => 'border-color: {{VALUE}} transparent transparent transparent;',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_bottom .sa_addons_tooltip_text:after' => 'border-color: transparent transparent {{VALUE}} transparent;',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_left .sa_addons_tooltip_text:after' => 'border-color: transparent transparent transparent {{VALUE}};',
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_right .sa_addons_tooltip_text:after' => 'border-color: transparent {{VALUE}} transparent transparent;',
                 ],
             ]
         );
