@@ -65,7 +65,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::REPEATER,
                 'fields' => [
                     'sa_icon_effects_icon' => [
-                        'label' => esc_html__('Icon', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
                         'default' => 'fab fa-linkedin-in',
                     ],
@@ -115,22 +115,6 @@ class Style_1 extends AdminStyle
                         'default' => '#ffffff',
                         'selector' => [
                             '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}};',
-                        ],
-                    ],
-                    'sa_icon_effects_color_hoversss' => [
-                        'label' => __('Slider Color', SHORTCODE_ADDOONS),
-                        'type' => Controls::SLIDER,
-                        'default' => [
-                            'unit' => 'px',
-                            'size' => '17',
-                        ],
-                        'range' => [
-                            'px' => [
-                                'min' => 0,
-                                'max' => 1000,
-                                'step' => 1,
-                            ],
-
                         ],
                     ],
                     'sa_icon_effects_bg_hover' => [
