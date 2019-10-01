@@ -69,6 +69,7 @@ class Style_2 extends AdminStyle
                     'sa_tooltip_img' => [
                         'label' => esc_html__('Img', SHORTCODE_ADDOONS),
                         'type' => Controls::MEDIA,
+                        'loader' => TRUE,
                         'controller' => 'add_group_control',
                         'default' => [
                             'type' => 'media-library',
@@ -192,7 +193,7 @@ class Style_2 extends AdminStyle
                         ]
                     ],
                     'sa_tooltip_url_open' => [
-                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
                         'type' => Controls::SWITCHER,
                         'default' => 'yes',
                         'label_on' => __('Yes', SHORTCODE_ADDOONS),
@@ -201,7 +202,7 @@ class Style_2 extends AdminStyle
                     ],
 
                     'sa_tooltip_url' => [
-                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
                         'type' => Controls::URL,
                         'controller' => 'add_group_control',
                         'conditional' => Controls::INSIDE,
@@ -210,7 +211,7 @@ class Style_2 extends AdminStyle
                         ]
                     ],
                 ],
-                'title_field' => 'sa_tooltip_icon',
+                'title_field' => 'sa_tooltip_text',
                 'button' => 'Add Tooltip Item',
             ]
         );
@@ -273,9 +274,9 @@ class Style_2 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
-                // 'selector' => [
-                //     '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_img' => 'height: {{SIZE}}{{UNIT}};'
-                // ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_tooltip_container_style_2 .sa_addons_tooltip_img' => 'height: {{SIZE}}{{UNIT}};'
+                ],
             ]
         );
         $this->add_control(

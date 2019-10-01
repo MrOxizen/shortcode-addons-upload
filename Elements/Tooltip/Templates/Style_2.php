@@ -24,7 +24,7 @@ class Style_2 extends Templates
         $all_data = (array_key_exists('sa_tooltip_data', $styledata) && is_array($styledata['sa_tooltip_data'])) ? $styledata['sa_tooltip_data'] : [];
         foreach ($all_data as $key => $value) {
             $img = $tooltip = $link = $endlink = '';
-            if (array_key_exists('sa_tooltip_icon', $value) && $value['sa_tooltip_icon'] != '') {
+            if ($this->media_render('sa_tooltip_img', $value) != '') {
                 $img .= '<div class="sa_addons_tooltip_img">
                             <img src="' . $this->media_render('sa_tooltip_img', $value) . '">
                         </div>';
