@@ -17,8 +17,8 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-
-        foreach ($style['sa_Info_image_boxes_data'] as $key => $value) {
+$all_data = (array_key_exists('sa_Info_image_boxes_data', $style) && is_array($style['sa_Info_image_boxes_data'])) ? $style['sa_Info_image_boxes_data'] : [];
+        foreach ($all_data as $key => $value) {
 //            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
             $heading = $details = $images = $content = '';
 
