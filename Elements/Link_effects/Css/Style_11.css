@@ -1,0 +1,116 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style11 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center
+}
+
+.link-effect-main-style11 .oxi-links-effects-style11 {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    color: #f5970a;
+    text-decoration: none;
+    font-family: "Lato";
+    font-weight: 700;
+    font-style: italic;
+    font-size: 30px;
+    padding: 10px 10px;
+    margin: 5px 5px
+}
+
+.link-effect-main-style11 .oxi-links-effects-style11:hover,
+.link-effect-main-style11 .oxi-links-effects-style11:focus {
+    outline: none;
+    color: #ff00cc;
+    text-decoration: none
+}
+
+.link-effect-main-style11 .oxi-links-effects-style11::before,
+.link-effect-main-style11 .oxi-links-effects-style11::after {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #f5970a;
+    content: "";
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none
+}
+
+.link-effect-main-style11 .oxi-links-effects-style11::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0
+}
+
+.link-effect-main-style11 .oxi-links-effects-style11::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0
+}
+
+.link-effect-main-style11 .oxi-links-effects-style11:hover::before,
+.link-effect-main-style11 .oxi-links-effects-style11:focus::before {
+    left: 50%;
+    background: #ff00cc;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%)
+}
+
+.link-effect-main-style11 .oxi-links-effects-style11:hover::after,
+.link-effect-main-style11 .oxi-links-effects-style11:focus::after {
+    right: 50%;
+    background: #ff00cc;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%)
+}
+
+@media screen and (max-width:993px) {
+    .link-effect-main-style11 .oxi-links-effects-style11 {
+        font-size: 30px;
+        padding: 10px 10px;
+        margin: 5px 5px
+    }
+    .link-effect-main-style11 .oxi-links-effects-style11::before,
+    .link-effect-main-style11 .oxi-links-effects-style11::after {
+        width: 50px;
+        height: 2px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style11 .oxi-links-effects-style11 {
+        font-size: 25px;
+        padding: 10px 10px;
+        margin: 5px 5px
+    }
+    .link-effect-main-style11 .oxi-links-effects-style11::before,
+    .link-effect-main-style11 .oxi-links-effects-style11::after {
+        width: 45px;
+        height: 2px
+    }
+}
