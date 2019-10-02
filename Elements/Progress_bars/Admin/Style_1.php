@@ -42,11 +42,11 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-ib-content-box-col', $this->style, [
+                'sa-progress-bar-content-box-col', $this->style, [
             'type' => Controls::COLUMN,
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-icon-boxes-main' => '',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => '',
             ]
                 ]
         );
@@ -121,7 +121,7 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-handle' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -152,7 +152,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -183,7 +183,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -195,17 +195,16 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'default' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-handle' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => '',
             ]
                 ]
         );
+        
         $this->add_group_control(
                 'sa_image_progress_bar_animation', $this->style, [
-            'label' => __('Animation', SHORTCODE_ADDOONS),
             'type' => Controls::ANIMATION,
-            'default' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-handle' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => '',
             ]
                 ]
         );
@@ -227,7 +226,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 300,
+                'size' => 10,
             ],
             'range' => [
                 'px' => [
@@ -235,7 +234,7 @@ class Style_1 extends AdminStyle {
                     'max' => 2000,
                     'step' => 1,
                 ],
-                'em' => [
+                '%' => [
                     'min' => 1,
                     'max' => 200,
                     'step' => .1,
@@ -247,7 +246,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-link' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-bar' => 'padding:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -257,27 +256,27 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 300,
+                'size' => 12,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 200,
                     'step' => 1,
                 ],
-                'em' => [
+                '%' => [
                     'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'rem' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 20,
                     'step' => 0.1,
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-image-accordion .oxi-addons-accordion .oxi-link' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-line' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -307,7 +306,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-bar' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -337,7 +336,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-line' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -348,7 +347,7 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'default' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-handle' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-bar' => '',
             ]
                 ]
         );
@@ -365,7 +364,7 @@ class Style_1 extends AdminStyle {
                 'sa-progress-bar-name-typograpy', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => '',
             ]
                 ]
         );
@@ -375,7 +374,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -383,7 +382,7 @@ class Style_1 extends AdminStyle {
                 'sa-progress-bar-name-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => '',
             ]
                 ]
         );
@@ -414,7 +413,7 @@ class Style_1 extends AdminStyle {
             ],
            
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -428,10 +427,10 @@ class Style_1 extends AdminStyle {
         );
         
         $this->add_group_control(
-                'sa-progress-bar-percent-typograpy', $this->style, [
+            'sa-progress-bar-percent-typograpy', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => '',
             ]
                 ]
         );
@@ -441,16 +440,16 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => 'color: {{VALUE}};',
             ]
                 ]
         );
         $this->add_group_control(
                 'sa-progress-bar-percent-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
-            'condition' => [
-                'sa_image_compersion_overlay_controler' => 'true'
-            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => '',
+            ]
                 ]
         );
         $this->add_responsive_control(
@@ -479,7 +478,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before, {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-before-label::before,  {{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-1 .twentytwenty-after-label::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
