@@ -1,0 +1,112 @@
+.oxi-addons-parent-wrapper-style-5 {
+    padding: 10px 0px 10px 0px
+}
+
+.oxi-addons-main-wrapper-style-5 {
+    width: 100%;
+    float: left;
+    padding: 0px 20px 0px 20px;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+}
+
+.oxi-addons-main-wrapper-style-5 .oxi-addons-progress-bar-main {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-main-wrapper-style-5 .oxi-addons-heading {
+    display: block
+}
+
+.oxi-addons-main-wrapper-style-5 .oxi-addons-progress-title {
+    font-size: 18px;
+    font-family: "Ubuntu";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: 1px;
+    ;
+    color: #ffffff;
+    padding: 5px 5px 5px 10px
+}
+
+.oxi-addons-main-wrapper-style-5 .oxi-addons-progress-percentage {
+    font-size: 36px;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: 1px;
+    ;
+    color: #ffffff;
+    padding: 0px 5px 10px 10px
+}
+
+.oxi-addons-main-wrapper-style-5 .oxi-addons-progress-bar {
+    width: 100%;
+    float: left;
+    padding: 0px;
+    display: block;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.66);
+}
+
+.oxi-addons-main-wrapper-style-5 .oxi-addons-progress-line {
+    height: 5px;
+    display: block;
+    border-radius: 0px 0px 0px 0px;
+    width: 0
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-parent-wrapper-style-5 {
+        padding: 10px 0px 10px 0px
+    }
+    .oxi-addons-main-wrapper-style-5 {
+        padding: 0px 20px 0px 20px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-title {
+        font-size: 18px;
+        padding: 5px 5px 5px 10px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-percentage {
+        font-size: 36px;
+        padding: 0px 5px 10px 10px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-bar {
+        padding: 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-line {
+        height: 5px;
+        border-radius: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-parent-wrapper-style-5 {
+        padding: 10px 0px 10px 0px
+    }
+    .oxi-addons-main-wrapper-style-5 {
+        padding: 0px 20px 0px 20px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-title {
+        font-size: 18px;
+        padding: 5px 5px 5px 10px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-percentage {
+        font-size: 36px;
+        padding: 0px 5px 10px 10px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-bar {
+        padding: 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .oxi-addons-main-wrapper-style-5 .oxi-addons-progress-line {
+        height: 5px;
+        border-radius: 0px 0px 0px 0px
+    }
+}
