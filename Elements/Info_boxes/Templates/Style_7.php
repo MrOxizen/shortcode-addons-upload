@@ -21,59 +21,42 @@ class Style_7 extends Templates
     public function default_render($style, $child, $admin)
     {
 
-        foreach ($child as $v) {
-             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $datas = (array_key_exists('sa_info_info_box_repeater', $style) && is_array($style['sa_info_info_box_repeater']) ? $style['sa_info_info_box_repeater'] : []);
+        foreach ($datas as $key => $value) {
             $image = $heading = $details = $button = '';
 
-            if (array_key_exists('sa_info_boxes_button_link-url', $value) && $value['sa_info_boxes_button_link-url'] != '') {
-                $button = '<div class="oxi_addons__button"><a ' . $this->url_render('sa_info_boxes_button_link', $value) . ' class="oxi-buttons">
-                ' . $this->text_render($value['sa_info_boxes_button_text']) . '
+            if (array_key_exists('sa_info_info_box_button_link-url', $value) && $value['sa_info_info_box_button_link-url'] != '') {
+                $button = '<div class="oxi_addons__button"><a ' . $this->url_render('sa_info_info_box_button_link', $value) . ' class="oxi-buttons">
+                ' . $this->text_render($value['sa_info_info_box_button_text']) . '
             </a></div>';
-            } elseif (array_key_exists('sa_info_boxes_button_text', $value) && $value['sa_info_boxes_button_link-url'] == '' && $value['sa_info_boxes_button_text'] != '') {
-                $button = '<div class="oxi_addons__button"><button class="oxi-buttons" ' . ($value['sa_info_boxes_button_link-id'] != '' ? 'id="' . $value['sa_info_boxes_button_link-id'] . '"' : '') . '>
-                ' . $this->text_render($value['sa_info_boxes_button_text']) . '
+            } elseif (array_key_exists('sa_info_info_box_button_text', $value) && $value['sa_info_info_box_button_link-url'] == '' && $value['sa_info_info_box_button_text'] != '') {
+                $button = '<div class="oxi_addons__button"><button class="oxi-buttons" ' . ($value['sa_info_info_box_button_link-id'] != '' ? 'id="' . $value['sa_info_info_box_button_link-id'] . '"' : '') . '>
+                ' . $this->text_render($value['sa_info_info_box_button_text']) . '
             </button></div>';
             }
 
-            if (array_key_exists('sa_info_boxes_heading', $value) && $value['sa_info_boxes_heading'] != '') {
-                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_7">' . $this->text_render($value['sa_info_boxes_heading']) . '</' . $style['sa_info_tag'] . '>';
+            if (array_key_exists('sa_info_info_box_title', $value) && $value['sa_info_info_box_title'] != '') {
+                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_7">' . $this->text_render($value['sa_info_info_box_title']) . '</' . $style['sa_info_tag'] . '>';
             }
-            if (array_key_exists('sa_info_boxes_details', $value) && $value['sa_info_boxes_details'] != '') {
-                $details = '<div class="oxi_addons__details_style_7"> ' . $this->text_render($value['sa_info_boxes_details']) . ' </div>';
+            if (array_key_exists('sa_info_info_box_desc', $value) && $value['sa_info_info_box_desc'] != '') {
+                $details = '<div class="oxi_addons__details_style_7"> ' . $this->text_render($value['sa_info_info_box_desc']) . ' </div>';
             }
-            if ($this->media_render('sa_info_boxes_image', $value) != '') {
+            if ($this->media_render('sa_info_info_box_image', $value) != '') {
                 $image = '<div class="oxi_addons__image_style_7">
                     <div class="oxi_addons_image">
-                       <img src=" ' . $this->media_render('sa_info_boxes_image', $value) . '" alt="Image Text: ' . $this->text_render($value['sa_info_boxes_heading']) . '" />
+                       <img src=" ' . $this->media_render('sa_info_info_box_image', $value) . '" alt="Image Text: ' . $this->text_render($value['sa_info_info_box_title']) . '" />
                     </div>
                 </div>';
             }
-            echo '  <div class="oxi_addons__info_boxes_wrapper ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_info_boxes_column', $style) . '">
-                            <div class="oxi_addons__info_boxes_main_style_7 oxi_overlay-' . $v['id'] . '">
+            echo '  <div class="oxi_addons__info_boxes_wrapper ' . $this->column_render('sa_info_boxes_column', $style) . '">
+                            <div class="oxi_addons__info_boxes_main_style_7 oxi_overlay-' . $key . ' oxi_addons__info_boxes_main_style_7_' . $key . '">
                                 ' . $image . '
                                 ' . $heading . '
                                 ' . $details . '
-                                ' . $button . '
-                                
+                                ' . $button . ' 
                             </div>
                         ';
-            $this->CSSDATA .= '.oxi_overlay-' . $v['id'] . ':hover::before{  
-                                                background:linear-gradient(' . $style['sa_info_overlay_color'] . ',' . $style['sa_info_overlay_color'] . '), url("' . $this->media_render('sa_info_boxes_image', $value) . '");
-                                                background-repeat: no-repeat;
-                                                background-size:cover;
-                                                }';
 
-
-            if ($admin == 'admin') :
-                echo '  <div class="oxi-addons-admin-absulote">
-                                <div class="oxi-addons-admin-absulate-edit">
-                                    <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                                </div>
-                                <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                                </div>
-                            </div>';
-            endif;
             echo ' </div>';
         }
     }
@@ -82,6 +65,21 @@ class Style_7 extends Templates
         return 'setTimeout(function () {
             oxiequalHeight($(".' . $this->WRAPPER . ' .oxi_addons__info_boxes_main_style_7"));
         }, 500)';
+    }
+    public function inline_public_css()
+    {
+        $css = '';
+        $style = $this->style;
+        $datas = (array_key_exists('sa_info_info_box_repeater', $style) && is_array($style['sa_info_info_box_repeater']) ? $style['sa_info_info_box_repeater'] : []);
+        foreach ($datas as $key => $value) {
+            $css .= '.oxi_overlay-' . $key . ':hover::before{  
+                background: linear-gradient(' . $style['sa_info_overlay_color'] . ',' . $style['sa_info_overlay_color'] . '), url("' . $this->media_render('sa_info_info_box_image', $value) . '");
+                background-repeat: no-repeat;
+                background-size: cover;
+                }'; 
+        }
+        return $css;
+       
     }
     public function old_render()
     {
