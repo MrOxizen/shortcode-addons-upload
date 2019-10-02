@@ -4,4 +4,4 @@
   Version: 2.0.0
  */
 
-return array('2.0.0', 'Content Elements', true);
+return array('2.0.0', 'Marketing Elements', true);
