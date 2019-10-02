@@ -77,7 +77,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => 200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -139,7 +139,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Heading', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Need your service Immediately',
+                'default' => 'Expound the actual teachings of the great explorer of the truth, the master.',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_sub_heading' => ''
                 ],
@@ -151,7 +151,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#f5f5f5',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_sub_heading' => 'color: {{VALUE}};'
                 ],
@@ -195,7 +195,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -259,7 +259,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Heading', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Contact Us !!',
+                'default' => 'You start new business with us!',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_heading' => ''
                 ],
@@ -271,7 +271,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffd012',
+                'default' => '#ffffff',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_heading' => 'color: {{VALUE}};'
                 ],
@@ -315,7 +315,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -420,30 +420,24 @@ class Style_3 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_cta_btn_align',
+            'sa_cta_btn_posi',
             $this->style,
             [
-                'label' => __('Button Align', SHORTCODE_ADDOONS),
+                'label' => __('Button Position', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
                 'toggle' => TRUE,
-                'default' => 'center',
+                'loader' => TRUE,
+                'default' => 'right',
                 'options' => [
                     'left' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'fas fa-angle-double-left',
                     ],
                     'right' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'fas fa-angle-double-right',
                     ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_btn_content' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -497,6 +491,35 @@ class Style_3 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
+        $this->add_control(
+            'sa_cta_btn_align',
+            $this->style,
+            [
+                'label' => __('Button Align', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'toggle' => TRUE,
+                'default' => 'center',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_btn_content' => 'text-align: {{VALUE}};',
+                ],
+            ]
+        );
+
         $this->add_group_control(
             'sa_cta_btn_typho',
             $this->style,
@@ -523,7 +546,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#242424',
+                'default' => '#ffffff',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_btn' => 'color: {{VALUE}};'
                 ],
@@ -557,7 +580,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#242424',
+                'default' => '#0088e3',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_3 .sa_addons_cta_btn:hover' => 'color: {{VALUE}};',
                 ],

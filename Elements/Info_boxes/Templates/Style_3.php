@@ -22,36 +22,26 @@ class Style_3 extends Templates
     {
 
         $datas = (array_key_exists('sa_info_info_box_repeater', $style) && is_array($style['sa_info_info_box_repeater']) ? $style['sa_info_info_box_repeater'] : []);
-        foreach ($datas as $key => $value) {  
+        foreach ($datas as $key => $value) {
             $icon = $heading = $details = '';
             if (array_key_exists('sa_info_info_box_title', $value) &&  $value['sa_info_info_box_title'] != '') {
                 $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_3">' . $this->text_render($value['sa_info_info_box_title']) . '</' . $style['sa_info_tag'] . '>';
             }
             if (array_key_exists('sa_info_info_box_desc', $value) &&  $value['sa_info_info_box_desc'] != '') {
-                $details = '<div class="oxi_addons__details_style_3"> ' . $this->text_render($value['sa_info_info_box_desc']) . ' </div>';
+                $details = '<div class="oxi_addons__details_style_3 "> ' . $this->text_render($value['sa_info_info_box_desc']) . ' </div>';
             }
             if (array_key_exists('sa_info_info_box_icon', $value) &&  $value['sa_info_info_box_icon'] != '') {
                 $icon = '<div class="oxi_addons__icon_style_3">
                 ' . $this->font_awesome_render($value['sa_info_info_box_icon']) . '
             </div>';
             }
-            echo '  <div class="oxi_addons__info_boxes_wrapper ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_info_boxes_column', $style) . '">
-                            <div class="oxi_addons__info_boxes_main_style_3">
+            echo '  <div class="oxi_addons__info_boxes_wrapper ' . $this->column_render('sa_info_boxes_column', $style) . '">
+                            <div class="oxi_addons__info_boxes_main_style_3 oxi_addons__info_boxes_main_style_3_' . $key . '">
                                 ' . $icon . '
                                 ' . $heading . '
                                 ' . $details . '
                             </div>
                         ';
-            if ($admin == 'admin') :
-                echo '  <div class="oxi-addons-admin-absulote">
-                                <div class="oxi-addons-admin-absulate-edit">
-                                    <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                                </div>
-                                <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                                </div>
-                            </div>';
-            endif;
             echo ' </div>';
         }
     }
@@ -69,7 +59,7 @@ class Style_3 extends Templates
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
 
-       $css = '';
+        $css = '';
         echo '  <div class="oxi-addons-container" > 
         <div class="oxi-addons-row">
             <div class="oxi-addons-row oxi-add-info-box' . $oxiid . '">';
@@ -104,7 +94,7 @@ class Style_3 extends Templates
         echo '   </div>
         </div>
     </div>';
- 
+
 
         $css .= ' 
     .oxi-add-info-box' . $oxiid . '{

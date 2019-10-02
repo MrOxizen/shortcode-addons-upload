@@ -35,8 +35,59 @@ class Style_8 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Feature Content', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
+            ]
+        );
+        $this->add_repeater_control(
+            'sa_info_info_box_repeater',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS), 
+                'title_field' => 'sa_info_info_box_title',
+                'fields' => [
+                    'sa_info_info_box_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fab fa-accusoft'
+                    ],
+                    'sa_info_info_box_icon_link' => [
+                        'label' => esc_html__('Link', SHORTCODE_ADDOONS),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_8_{{KEY}} .oxi_addons__icon' => '',
+                        ],
+                    ],
+                    'sa_info_info_box_title' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT, 
+                        'default' => esc_html__('What is Lorem Ipsum? ', SHORTCODE_ADDOONS),
+                        'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_8_{{KEY}} .oxi_addons__heading_style_8' => '',
+                        ],
+                    ],
+                    'sa_info_info_box_desc' => [
+                        'label' => esc_html__('Description', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXTAREA,
+                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SA_ELEMENTOR_TEXTDOMAIN),
+                        'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_8_{{KEY}} .oxi_addons__details_style_8' => '',
+                        ],
+                    ],   
+                  
+                   
+                ],  
+            ]
+        );
+
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
             ]
         );
 
@@ -198,159 +249,7 @@ class Style_8 extends AdminStyle
             ]
         );
         $this->end_controls_section();   
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Heading Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
         
-        $this->add_control(
-            'sa_info_tag',
-            $this->style,
-            [
-                'label' => __('Tag', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT,
-                'default' => 'h3',
-                'loader' => TRUE,
-                'options' => [
-                    'h1' => __('H1', SHORTCODE_ADDOONS),
-                    'h2' => __('H2', SHORTCODE_ADDOONS),
-                    'h3' => __('H3', SHORTCODE_ADDOONS),
-                    'h4' => __('H4', SHORTCODE_ADDOONS),
-                    'h5' => __('H5', SHORTCODE_ADDOONS),
-                    'h6' => __('H6', SHORTCODE_ADDOONS),
-                    'div' => __('DIV', SHORTCODE_ADDOONS),
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_info_boxes_heading_typo',
-            $this->style,
-            [
-                'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_8' => ''
-                ],
-            ]
-        ); 
-        $this->add_control(
-            'sa_info_boxes_heading_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#757575',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_8' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-       
-        $this->add_responsive_control(
-            'sa_info_boxes_heading_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 5,
-                ],
-                //'loader' => TRUE,
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_8' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Description Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
-        $this->add_group_control(
-            'sa_info_boxes_details_typo',
-            $this->style,
-            [
-                'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_8' => ''
-                ],
-            ]
-        );
-         
-        $this->add_control(
-            'sa_info_boxes_details_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#808080',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_8' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-      
-        $this->add_responsive_control(
-            'sa_info_boxes_details_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 5,
-                ],
-                //'loader' => TRUE,
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_8' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->end_controls_section();
         $this->end_section_devider(); 
         $this->start_section_devider();
 
@@ -656,66 +555,161 @@ class Style_8 extends AdminStyle
         );
        
         $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Heading Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
         
-        $this->end_section_devider();
-        $this->end_section_tabs();
-    }
-
-    public function modal_opener()
-    {
-
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Icon', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Icon Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-
         $this->add_control(
-            'sa_info_boxes_fontawesome',
+            'sa_info_tag',
             $this->style,
             [
-                'label' => __('Font Awesome Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'placeholder' => 'example:- fab fa-facebook',
+                'label' => __('Tag', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'default' => 'h3',
+                'loader' => TRUE,
+                'options' => [
+                    'h1' => __('H1', SHORTCODE_ADDOONS),
+                    'h2' => __('H2', SHORTCODE_ADDOONS),
+                    'h3' => __('H3', SHORTCODE_ADDOONS),
+                    'h4' => __('H4', SHORTCODE_ADDOONS),
+                    'h5' => __('H5', SHORTCODE_ADDOONS),
+                    'h6' => __('H6', SHORTCODE_ADDOONS),
+                    'div' => __('DIV', SHORTCODE_ADDOONS),
+                ],
             ]
         );
         $this->add_group_control(
-            'sa_info_boxes_icon_link',
+            'sa_info_boxes_heading_typo',
             $this->style,
             [
-                'label' => __('Icon Link', SHORTCODE_ADDOONS),
-                'type' => Controls::URL,
-            ]
-        );
-        $this->add_control(
-            'sa_info_boxes_heading',
-            $this->style,
-            [
-                'label' => __('Title', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-            ]
-        );
-        $this->add_control(
-            'sa_info_boxes_details',
-            $this->style,
-            [
-                'label' => __('Description', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__heading_style_8' => ''
+                ],
             ]
         ); 
-     
-
-        echo '</div>';
+        $this->add_control(
+            'sa_info_boxes_heading_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#757575',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__heading_style_8' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+       
+        $this->add_responsive_control(
+            'sa_info_boxes_heading_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 5,
+                ],
+                //'loader' => TRUE,
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__heading_style_8' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Description Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_group_control(
+            'sa_info_boxes_details_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__details_style_8' => ''
+                ],
+            ]
+        );
+         
+        $this->add_control(
+            'sa_info_boxes_details_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#808080',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__details_style_8' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+      
+        $this->add_responsive_control(
+            'sa_info_boxes_details_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 5,
+                ],
+                //'loader' => TRUE,
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__details_style_8' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->end_section_tabs();
     }
+ 
 }
