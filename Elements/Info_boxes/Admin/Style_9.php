@@ -303,7 +303,7 @@ class Style_9 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR, 
                 'default' => '#fff',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__icon_style_9 .oxi_addons__icon' => 'background-color:{{VALUE}};'
                 ],

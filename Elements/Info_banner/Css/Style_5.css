@@ -1,0 +1,209 @@
+.oxi_addons__info_banner_style_5 {
+    width: 100%;
+    float: left;
+    background: linear-gradient(315deg, rgba(14, 184, 173, 1.00) 0%, rgba(0, 250, 221, 1.00) 3%, rgba(38, 82, 227, 1) 91%), url("https://www.oxilab.org/wp-content/uploads/2019/01/26_900x.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 80px 20px 80px 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-size: cover
+}
+
+.oxi_addons__info_banner_style_5 .oxi_addons__image_main { 
+    padding: 10px;
+}
+
+.oxi_addons__info_banner_style_5 .oxi_addons__image {
+    width: 100%;
+    height: 100%;
+}
+
+.oxi_addons__info_banner_style_5 .oxi_addons__image:hover {
+    cursor: pointer;
+    -o-transform: translate(5%);
+    -moz-transform: translate(5%);
+    -webkit-transform: translate(5%);
+    transform: translate(5%);
+    -ms-transform: translate(5%);
+}
+
+.oxi_addons__info_banner_style_5 .oxi_addons__heading {
+	width: 100%;
+	float: left;
+	font-size: 30px;
+	color: #ffffff;
+	font-family: "Lato";
+	font-weight: bold;
+	font-style: normal;
+	line-height: 1.3;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+}
+.oxi_addons__info_banner_style_5 .oxi_addons__details {
+	width: 100%;
+	float: left;
+	font-size: 16px;
+	color: #f2f2f2;
+	font-family: "Lato";
+	font-weight: 100;
+	font-style: normal;
+	line-height: 1.3;
+	text-align: left;
+	padding: 10px 10px 20px 10px;
+}
+
+.oxi_addons__info_banner_style_5 .oxi_addons__content_main_wrapper {
+    width: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 0.00);
+    border: 1px none;
+    border-color: #595959;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(179, 179, 179, 1);
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.oxi_addons__info_banner_content_style_5 .oxi_addons__content_main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.oxi_addons__info_banner_content_style_5 .oxi_addons__title {
+    width: 100%;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi_addons__info_banner_content_style_5 .oxi_addons__title {
+    width: 100%;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center
+}
+
+.oxi_addons__info_banner_content_style_5 .oxi_addons__icon_main {
+    width: 100%;
+    padding: 0px 5px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.oxi_addons__info_banner_content_style_5 .oxi_addons__icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 1.00);
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oxi_addons__info_banner_content_style_5 .oxi_addons__icon .oxi-icons {
+    font-size: 26px;
+    line-height: 1;
+    color: #2652e3;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi_addons__info_banner_style_5 {
+        display: block
+    }
+
+    .oxi_addons__info_banner_style_5 {
+        padding: 80px 20px 80px 20px
+    }
+
+ 
+
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__content_main_wrapper {
+
+        border-radius: 0px 0px 0px 0px;
+        box-shadow: 0px 0px 0px 0px rgba(179, 179, 179, 1);
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__title {
+        font-size: 28px;
+        padding: 5px;
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi-addons-content-boxes-icon-title {
+        font-size: 20px;
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__icon {
+        background: rgba(255, 255, 255, 1.00);
+        border-radius: 50px 50px 50px 50px;
+        padding: 10px;
+        -webkit-border-radius: 50px 50px 50px 50px;
+        -moz-border-radius: 50px 50px 50px 50px;
+        -ms-border-radius: 50px 50px 50px 50px;
+        -o-border-radius: 50px 50px 50px 50px;
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__icon .oxi-icons {
+        font-size: 24px;
+    }
+
+}
+
+@media only screen and (max-width:668px) {
+    .oxi_addons__info_banner_style_5 {
+        display: block
+    }
+
+    .oxi_addons__info_banner_style_5 {
+        padding: 60px 20px 60px 20px
+    } 
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__content_main_wrapper {
+
+        border-radius: 0px 0px 0px 0px;
+        box-shadow: 0px 0px 0px 0px rgba(179, 179, 179, 1);
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__title {
+        font-size: 24px;
+        padding: 5px;
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi-addons-content-boxes-icon-title {
+        font-size: 18px;
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__icon {
+        background: rgba(255, 255, 255, 1.00);
+        border-radius: 50px 50px 50px 50px;
+        padding: 5px;
+        -webkit-border-radius: 50px 50px 50px 50px;
+        -moz-border-radius: 50px 50px 50px 50px;
+        -ms-border-radius: 50px 50px 50px 50px;
+        -o-border-radius: 50px 50px 50px 50px;
+    }
+
+    .oxi_addons__info_banner_content_style_5 .oxi_addons__icon .oxi-icons {
+        font-size: 20px;
+    }
+}

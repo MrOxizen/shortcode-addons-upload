@@ -75,7 +75,7 @@ class Style_1 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_btn_position',
             $this->style,
             [
@@ -738,7 +738,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#28a745',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left:hover' => 'background-color:{{VALUE}};'
                 ],

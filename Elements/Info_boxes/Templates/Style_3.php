@@ -21,19 +21,18 @@ class Style_3 extends Templates
     public function default_render($style, $child, $admin)
     {
 
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-
+        $datas = (array_key_exists('sa_info_info_box_repeater', $style) && is_array($style['sa_info_info_box_repeater']) ? $style['sa_info_info_box_repeater'] : []);
+        foreach ($datas as $key => $value) {  
             $icon = $heading = $details = '';
-            if (array_key_exists('sa_info_boxes_heading', $value) &&  $value['sa_info_boxes_heading'] != '') {
-                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_3">' . $this->text_render($value['sa_info_boxes_heading']) . '</' . $style['sa_info_tag'] . '>';
+            if (array_key_exists('sa_info_info_box_title', $value) &&  $value['sa_info_info_box_title'] != '') {
+                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_3">' . $this->text_render($value['sa_info_info_box_title']) . '</' . $style['sa_info_tag'] . '>';
             }
-            if (array_key_exists('sa_info_boxes_details', $value) &&  $value['sa_info_boxes_details'] != '') {
-                $details = '<div class="oxi_addons__details_style_3"> ' . $this->text_render($value['sa_info_boxes_details']) . ' </div>';
+            if (array_key_exists('sa_info_info_box_desc', $value) &&  $value['sa_info_info_box_desc'] != '') {
+                $details = '<div class="oxi_addons__details_style_3"> ' . $this->text_render($value['sa_info_info_box_desc']) . ' </div>';
             }
-            if (array_key_exists('sa_info_boxes_fontawesome', $value) &&  $value['sa_info_boxes_fontawesome'] != '') {
+            if (array_key_exists('sa_info_info_box_icon', $value) &&  $value['sa_info_info_box_icon'] != '') {
                 $icon = '<div class="oxi_addons__icon_style_3">
-                ' . $this->font_awesome_render($value['sa_info_boxes_fontawesome']) . '
+                ' . $this->font_awesome_render($value['sa_info_info_box_icon']) . '
             </div>';
             }
             echo '  <div class="oxi_addons__info_boxes_wrapper ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_info_boxes_column', $style) . '">
@@ -56,7 +55,12 @@ class Style_3 extends Templates
             echo ' </div>';
         }
     }
-
+    public function inline_public_jquery()
+    {
+        return 'setTimeout(function () {
+            oxiequalHeight($(".' . $this->WRAPPER . ' .oxi_addons__info_boxes_main_style_3"));
+        }, 500)';
+    }
     public function old_render()
     {
         $styledata = $this->dbdata;

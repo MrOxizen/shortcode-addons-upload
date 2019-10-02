@@ -41,7 +41,7 @@ class Style_7 extends Templates
             if (array_key_exists('sa_info_boxes_details', $value) && $value['sa_info_boxes_details'] != '') {
                 $details = '<div class="oxi_addons__details_style_7"> ' . $this->text_render($value['sa_info_boxes_details']) . ' </div>';
             }
-            if (array_key_exists('sa_info_boxes_image', $value) && $this->media_render('sa_info_boxes_image', $value) != '') {
+            if ($this->media_render('sa_info_boxes_image', $value) != '') {
                 $image = '<div class="oxi_addons__image_style_7">
                     <div class="oxi_addons_image">
                        <img src=" ' . $this->media_render('sa_info_boxes_image', $value) . '" alt="Image Text: ' . $this->text_render($value['sa_info_boxes_heading']) . '" />
@@ -77,7 +77,12 @@ class Style_7 extends Templates
             echo ' </div>';
         }
     }
-
+    public function inline_public_jquery()
+    {
+        return 'setTimeout(function () {
+            oxiequalHeight($(".' . $this->WRAPPER . ' .oxi_addons__info_boxes_main_style_7"));
+        }, 500)';
+    }
     public function old_render()
     {
         $styledata = $this->dbdata;

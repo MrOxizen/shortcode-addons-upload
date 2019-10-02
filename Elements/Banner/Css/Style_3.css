@@ -56,6 +56,10 @@
 .oxi_addons__banner_style_3 .oxi_addons__icon_text_main:hover .oxi_addons__text {
     color: #ccc4c4;
 }
+.oxi_addons__banner_style_3 .oxi_addons__icon{
+    display: flex;
+    justify-content: center;
+}
 
 .oxi_addons__banner_style_3 .oxi_addons__button_main {
     width: 100%;

@@ -76,7 +76,7 @@ class Style_3 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_btn_position',
             $this->style,
             [
@@ -284,6 +284,7 @@ class Style_3 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
+        
         $this->add_control(
             'sa_banner_icon',
             $this->style,
@@ -301,6 +302,33 @@ class Style_3 extends AdminStyle
                 'label' => __('Icon Link', SHORTCODE_ADDOONS),
                 'type' => Controls::URL,
                 'loader' => TRUE, 
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_banner_icon_position',
+            $this->style,
+            [
+                'label' => __('Icon Postion', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center',
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_3 .oxi_addons__icon' => 'justify-content: {{VALUE}};'
+                ],
             ]
         );
         $this->add_responsive_control(

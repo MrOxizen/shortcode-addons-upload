@@ -68,7 +68,20 @@ class Style_2 extends AdminStyle {
             'loader' => TRUE,
                 ]
         );
-
+        $this->add_control(
+                'sa_link_view', $this->style, [
+            'label' => __('Hover View', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'default' => 'sa_link_top_to_bottom',
+            'loader' => TRUE,
+            'options' => [
+                'sa_link_top_to_bottom' => __('Top to Bottom', SHORTCODE_ADDOONS),
+                'sa_link_bottom_to_top' => __('Bottom to Top', SHORTCODE_ADDOONS),
+                'sa_link_left_to_right' => __('Left to Right', SHORTCODE_ADDOONS),
+                'sa_link_right_to_left' => __('Right to Left', SHORTCODE_ADDOONS),
+            ],
+                ]
+        );
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
@@ -261,7 +274,8 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2-span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2-span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .link-effect-main-style2 .oxi-links-effects-style2-span::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

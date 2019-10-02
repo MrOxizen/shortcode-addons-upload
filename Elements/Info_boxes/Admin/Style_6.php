@@ -245,7 +245,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#41aaa8',
+                'default' => 'rgb(43, 184, 255)',
                 'oparetor'  => 'RGB',
                 'selector' => [
                     '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_6  .oxi-buttons' => 'background-color:{{VALUE}};'
@@ -327,7 +327,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#000272',
+                'default' => '#57baeb',
                 'oparetor'  => 'RGB',
                 'selector' => [
                     '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_6  .oxi-buttons:hover' => 'background-color:{{VALUE}};'

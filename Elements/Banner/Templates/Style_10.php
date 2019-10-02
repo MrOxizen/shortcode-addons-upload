@@ -41,7 +41,7 @@ class Style_10 extends Templates
         }
 
         echo '<div class="oxi_addons__banner_wrapper">
-                    <div class="oxi_addons__banner_style_10 row">  
+                    <div class="oxi_addons__banner_style_10">  
                     <div class="oxi-bt-col-lg-12 oxi-bt-col-md-12 oxi-bt-col-sm-12">
                         <div class="oxi_addons__heading_line">
                             ' . $heading . '

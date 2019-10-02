@@ -26,12 +26,12 @@ class Style_1 extends Templates {
         foreach ($styledata['sa_image_progress_bar_data'] as $key => $value) {
             
             $textheading = '';
-            echo '<div class="oxi-addons-parent-wrapper-style-1 oxi-addons-parent-wrapper-style-1-'.$id.'-' . $key . ' ' . OxiAddonsItemRows($styledata, 3) . '  '.$value['sa-image_accordion-overlay_animation'].'">';
-            echo '<div class="oxi-addons-main-wrapper-style-1" '.$value['sa-image_accordion-overlay_animation'].'>
+            echo '<div class="oxi-addons-parent-wrapper-style-1 oxi-addons-parent-wrapper-style-1-'.$id.'-' . $key . ' ' . $this->column_render('sa-progress-bar-content-box-col', $style) . ' ">';
+            echo '<div class="oxi-addons-main-wrapper-style-1" ' . $this->animation_render('sa_image_progress_bar_animation', $style) . '>
                         <div class="oxi-addons-progress-bar-main"  role="oxi-progress" data-goal="'.$value['sa_image_progress_bar_data_parcent-size'].'" data-speed="'.$value['sa_image_progress_bar_data_animate_speed-size'].'"> 
                             <div class="oxi-addons-heading">
-                                <div class="oxi-addons-progress-title">' . $this->text_render($value['sa_image_progress_bar_data_name']) . '</div>
-                                <div class="oxi-addons-progress-percentage oxi-progress__label"></div>
+                                <div class="oxi-addons-progress-title-'.$key.' oxi-addons-progress-title">' . $this->text_render($value['sa_image_progress_bar_data_name']) . '</div>
+                                <div class="oxi-addons-progress-percentage-'.$key.'  oxi-addons-progress-percentage oxi-progress__label"></div>
                             </div>
                             <div class="oxi-addons-progress-bar" style="background: '.$value['sa_image_progress_bar_data_back-color'].'">
                                 <div class="oxi-addons-progress-line oxi-progress__bar" style="background: '.$value['sa_image_progress_bar_data_front-color'].'"></div>
