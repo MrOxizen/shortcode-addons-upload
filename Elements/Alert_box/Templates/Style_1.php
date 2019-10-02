@@ -18,14 +18,53 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         
+        $firsticon = $heading = $details = $contentsection = $lasticon = '';
+        
+        if (array_key_exists('sa_ab_icon', $style) && $style['sa_ab_icon'] != '0') {
+            $firsticon = '<div class="oxi-addonsAL-col-one">
+                                        <div class="oxi-addonsAL-F-icon">
+                                            ' . $this->font_awesome_render($style['sa_ab_icon_class']) . '
+                                        </div>
+                                    </div>';
+        }
+        if ($style['sa_ab_content_header'] != '') {
+            $heading = '<div class="oxi-addonsAL-H">
+                                ' . $this->text_render($style['sa_ab_content_header']) . '
+                        </div>';
+        }
+        if ($style['sa_ab_content_description'] != '') {
+            $details = '<div class="oxi-addonsAL-DC">
+                                            ' . $this->text_render($style['sa_ab_content_description']) . '
+                                        </div>';
+        }
+        if (array_key_exists('sa_ab_text', $style) && $style['sa_ab_text'] != '0') {
+            $contentsection = '<div class="oxi-addonsAL-col-two">
+                                    ' . $heading . '
+                                    ' . $details . '
+                                </div>';
+        }
+        if (array_key_exists('sa_ab_ci', $style) && $style['sa_ab_ci'] != '0') {
+            $lasticon = '<div class="oxi-addonsAL-col-three">
+                                <div class="oxi-addonsAL-L-icon">
+                                    ' . $this->font_awesome_render($style['sa_ab_ci_class']) . '
+                                </div>
+                            </div>';
+        }
+        echo '<div class="oxi-addons-AL-1" '.$this->animation_render('sa_ab_animation', $style).'>
+                        <div class="oxi-addonsAL-row">
+                            ' . $firsticon . '
+                            ' . $contentsection . '
+                            ' . $lasticon . '
+                    </div>
+                </div>';
     }
     
     
       public function inline_public_jquery() {
         
          $jquery = 'jQuery(document).ready(function(){
-                jQuery(".oxi-addons-AB-1 .oxi-addonsAL-col-three").click(function(){
-                    jQuery(".oxi-addons-AB-1").hide();
+                jQuery(".oxi-addons-AL-1 .oxi-addonsAL-col-three").click(function(){
+                    jQuery(".oxi-addons-AL-1").hide();
                 });
            
             });';
