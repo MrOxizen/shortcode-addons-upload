@@ -6,7 +6,7 @@
     margin:0px 0px 0px 0px 
 }
 
-.oxi-addons-img-body-wrapper{
+.oxi-addons-img-body-wrapper-style-7{
     width:100%;
     float:left;
     text-align:center;
@@ -14,7 +14,7 @@
     margin:-40px 0px -45px 0px 
 }
 
-.oxi-addons-img-body-wrapper .oxi-addons-img-body{
+.oxi-addons-img-body-wrapper-style-7 .oxi-addons-img-body-style-7{
     display:inline-block;
     max-width:100%;
     width:400px;
@@ -22,14 +22,14 @@
     position:relative 
 }
 
-.oxi-addons-img-body-wrapper .oxi-addons-img-body:after{
+.oxi-addons-img-body-wrapper-style-7 .oxi-addons-img-body-style-7:after{
     display:block;
     content:"";
     margin:0;
     padding-bottom:25% 
 }
 
-.oxi-addons-img-body-wrapper .oxi-image{
+.oxi-addons-img-body-wrapper-style-7 .oxi-image{
     position:absolute;
     top:0;
     left:0;
@@ -37,13 +37,13 @@
     height:100% 
 }
 
-.oxi-addons-heading{
+.oxi-addons-heading-style-7{
     width:100%;
     float:left;
     display:block 
 }
 
-.oxi-addons-heading .oxi-addons-heading-text{
+.oxi-addons-heading-style-7 .oxi-addons-heading-text{
     width:100%;
     float:left;
     display:block;
@@ -60,13 +60,13 @@
     padding:0px 0px 0px 0px 
 }
 
-.oxi-addons-sub-heading{
+.oxi-addons-sub-heading-style-7{
     width:100%;
     float:left;
     display:block 
 }
 
-.oxi-addons-sub-heading .oxi-addons-sub-heading-text{
+.oxi-addons-sub-heading-style-7 .oxi-addons-sub-heading-text{
     width:100%;
     font-size:22px;
     font-family:"Montserrat";
@@ -82,26 +82,26 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px){
-    .oxi-addons-img-body-wrapper{
+    .oxi-addons-img-body-wrapper-style-7{
         display:block;
         margin:-40px 0px -45px 0px 
     }
 
-    .oxi-addons-img-body-wrapper .oxi-addons-img-body{
+    .oxi-addons-img-body-wrapper-style-7 .oxi-addons-img-body-style-7{
         display:inline-block;
         max-width:100%;
         width:100px;
         position:relative 
     }
 
-    .oxi-addons-img-body-wrapper .oxi-addons-img-body:after{
+    .oxi-addons-img-body-wrapper-style-7 .oxi-addons-img-body-style-7:after{
         display:block;
         content:"";
         margin:0;
         padding-bottom:80% 
     }
 
-    .oxi-addons-img-body-wrapper .oxi-image{
+    .oxi-addons-img-body-wrapper-style-7 .oxi-image{
         position:absolute;
         top:0;
         left:0;
@@ -109,7 +109,7 @@
         height:100% 
     }
 
-    .oxi-addons-heading .oxi-addons-heading-text{
+    .oxi-addons-heading-style-7 .oxi-addons-heading-text{
         width:100%;
         height:auto;
         font-size:40px;
@@ -117,7 +117,7 @@
         padding:0px 0px 0px 0px 
     }
 
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text{
+    .oxi-addons-sub-heading-style-7 .oxi-addons-sub-heading-text{
         width:100%;
         height:auto;
         font-size:18px;
@@ -129,25 +129,25 @@
 }
 
 @media only screen and (max-width:668px){
-    .oxi-addons-img-body-wrapper{
+    .oxi-addons-img-body-wrapper-style-7{
         display:block;
         margin:-40px 0px -45px 0px 
     }
 
-    .oxi-addons-img-body-wrapper .oxi-addons-img-body{
+    .oxi-addons-img-body-wrapper-style-7 .oxi-addons-img-body-style-7{
         display:inline-block;
         max-width:100%;
         width:80px;
         position:relative 
     }
 
-    .oxi-addons-img-body-wrapper .oxi-addons-img-body:after{
+    .oxi-addons-img-body-wrapper-style-7 .oxi-addons-img-body-style-7:after{
         display:block;
         content:"";
         padding-bottom:125% 
     }
 
-    .oxi-addons-img-body-wrapper .oxi-image{
+    .oxi-addons-img-body-wrapper-style-7 .oxi-image{
         position:absolute;
         top:0;
         left:0;
@@ -155,7 +155,7 @@
         height:100% 
     }
 
-    .oxi-addons-heading .oxi-addons-heading-text{
+    .oxi-addons-heading-style-7 .oxi-addons-heading-text{
         width:100%;
         height:auto;
         font-size:35px;
@@ -163,7 +163,7 @@
         padding:0px 0px 0px 0px 
     }
 
-    .oxi-addons-sub-heading .oxi-addons-sub-heading-text{
+    .oxi-addons-sub-heading-style-7 .oxi-addons-sub-heading-text{
         width:100%;
         height:auto;
         font-size:15px;

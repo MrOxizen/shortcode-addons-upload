@@ -166,12 +166,6 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_btn_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-                ]
-        );
-
 
         $this->add_responsive_control(
                 'sa_btn_margin', $this->style, [

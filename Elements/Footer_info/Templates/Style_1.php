@@ -77,8 +77,7 @@ class Style_1 extends Templates {
         }
     }
 
-    public
-            function old_render() {
+    public function old_render() {
         $style = $this->dbdata;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);

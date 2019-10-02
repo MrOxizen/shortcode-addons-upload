@@ -1,4 +1,4 @@
-.oxi-addons-single-image-container {
+.oxi-addons-single-image-container-style-2 {
     display: inline-block;
     overflow: hidden;
     vertical-align: middle;
@@ -6,7 +6,7 @@
     padding: 10px 10px 10px 10px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-row {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-row {
     display: block;
     overflow: hidden;
     vertical-align: middle;
@@ -15,7 +15,7 @@
     padding: 10px 10px 10px 10px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image {
     display: block;
     width: 100%;
     position: relative;
@@ -27,7 +27,7 @@
     border-radius: 0px 0px 0px 0px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image img {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image img {
     display: block;
     width: 100%;
     height: auto;
@@ -35,7 +35,7 @@
     filter: grayscale(100%)
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-icon {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,13 +50,13 @@
     box-shadow: inset 0px 0px 0px 0px rgba(105, 0, 161, 0.77)
 }
 
-.oxi-addons-single-image-container:hover .oxi-addons-single-image-icon {
+.oxi-addons-single-image-container-style-2:hover .oxi-addons-single-image-icon {
     background: rgba(89, 89, 179, 0.00);
     box-shadow: inset 0px 0px 0px 0px rgba(222, 73, 73, 0.8);
     border-radius: 0px 0px 0px 0px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-icon-data {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data {
     width: 80px;
     height: 80px;
     display: flex;
@@ -71,46 +71,46 @@
     border-radius: 50px 50px 50px 50px
 }
 
-.oxi-addons-single-image-container:hover .oxi-addons-single-image-icon-data {
+.oxi-addons-single-image-container-style-2:hover .oxi-addons-single-image-icon-data {
     opacity: 1
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-icon-data .oxi-icons {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data .oxi-icons {
     color: #ffffff;
     font-size: 30px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-icon-data:hover {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data:hover {
     background: rgba(148, 61, 106, 1.00);
     border-style: solid;
     border-color: #804a4a;
     border-radius: 50px 50px 50px 50px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-icon-data:hover .oxi-icons {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data:hover .oxi-icons {
     color: #ffffff
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image:hover {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image:hover {
     border-width: 0px 0px 0px 0px;
     border-style: solid;
     border-color: #b202c9;
     border-radius: 0px 0px 0px 0px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image:hover img {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image:hover img {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
     border-radius: 0px 0px 0px 0px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image:hover.oxi-addons-single-image-icon {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image:hover.oxi-addons-single-image-icon {
     box-shadow: inset 0px 0px 0px 0px rgba(222, 73, 73, 0.8);
     background: rgba(89, 89, 179, 0.00);
     border-radius: 0px 0px 0px 0px
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-ribbon {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon {
     position: absolute;
     white-space: nowrap;
     display: block;
@@ -121,7 +121,7 @@
     transform: rotate(-45deg)
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-ribbon:before {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon:before {
     display: block;
     position: absolute;
     content: "";
@@ -138,7 +138,7 @@
     z-index: -1
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-ribbon:after {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon:after {
     display: block;
     position: absolute;
     content: "";
@@ -155,7 +155,7 @@
     z-index: -1
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-ribbon-position {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon-position {
     display: table;
     width: 100%;
     height: 100%;
@@ -163,7 +163,7 @@
     position: relative
 }
 
-.oxi-addons-single-image-container .oxi-addons-single-image-ribbon-content {
+.oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon-content {
     display: table-cell;
     width: 100%;
     height: 100%;
@@ -181,66 +181,66 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-single-image-container {
+    .oxi-addons-single-image-container-style-2 {
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-row {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-row {
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image {
         border-width: 0px 0px 0px 0px;
         border-radius: 0px 0px 0px 0px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-icon-data {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data {
         width: 80px;
         height: 80px;
         border-width: 3px 3px 3px 3px;
         border-radius: 50px 50px 50px 50px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-icon-data .oxi-icons {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data .oxi-icons {
         font-size: 30px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-icon-data:hover {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data:hover {
         border-radius: 50px 50px 50px 50px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image:hover {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image:hover {
         border-width: 0px 0px 0px 0px;
         border-radius: 0px 0px 0px 0px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-ribbon-content {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon-content {
         font-size: 20px;
         padding: 10px 10px 10px 10px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-single-image-container {
+    .oxi-addons-single-image-container-style-2 {
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-row {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-row {
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image {
         border-width: 0px 0px 0px 0px;
         border-radius: 0px 0px 0px 0px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-icon-data {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data {
         width: 80px;
         height: 80px;
         border-width: 3px 3px 3px 3px;
         border-radius: 50px 50px 50px 50px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-icon-data .oxi-icons {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data .oxi-icons {
         font-size: 30px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-icon-data:hover {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-icon-data:hover {
         border-radius: 50px 50px 50px 50px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image:hover {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image:hover {
         border-width: 0px 0px 0px 0px;
         border-radius: 0px 0px 0px 0px
     }
-    .oxi-addons-single-image-container .oxi-addons-single-image-ribbon-content {
+    .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon-content {
         font-size: 20px;
         padding: 10px 10px 10px 10px
     }

@@ -16,7 +16,23 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_2 extends Templates {
 
-   
+   public function inline_public_css() {
+        $position = '';
+        $style = $this->style;
+        if (array_key_exists('sa_btn_icon_position', $style)&& $style['sa_btn_icon_position'] != '0') {
+            $position = '.'.$this->WRAPPER . ' .oxi-addons-align-btn2 .oxi-button-btn2:hover .oxi-icons {
+                            margin-right: ' . $style['sa_btn_icon_distance-size'] . 'px;
+                        }';
+        } else {
+            $position = '.'.$this->WRAPPER.' .oxi-addons-align-btn2 .oxi-button-btn2:hover .oxi-icons {
+                            margin-left: ' . $style['sa_btn_icon_distance-size'] . 'px;
+                        }';
+            
+        }
+        $position;
+
+        return $position;
+    }
 
     public function default_render($style, $child, $admin) {
         $html = '';

@@ -1,0 +1,105 @@
+.oxi-addons-permission-class {
+    left: 0 !important;
+    top: 15px !important
+}
+
+.oxi-addons-wrapper-image-accordion-three {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center
+}
+
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-admin-absulote {
+    z-index: 999
+}
+
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-image-text {
+    left: -30%
+}
+
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-image:last-child .oxi-addons-image-text {
+    left: -30%
+}
+
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-image:first-child .oxi-addons-image-text {
+    left: -10%
+}
+
+.oxi-addons-wrapper-image-accordion-three #oxi-addons-slider,
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-slider-content,
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-image,
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-slider-item,
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-item-img-1,
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-item-img-2 {
+    height: 600px
+}
+
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-item-img-1,
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-item-img-2 {
+    width: 150%
+}
+
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-accordion {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-wrapper-image-accordion-three .oxi-addons-accordion .oxi-addons-heading {
+    font-size: 32px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    color: #ffffff;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+    float: left
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-wrapper-image-accordion-three #oxi-addons-slider,
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-slider-content,
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-image,
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-slider-item {
+        height: 600px
+    }
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-accordion {
+        max-width: 1000px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-accordion .oxi-addons-heading {
+        font-size: 32px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-wrapper-image-accordion-three #oxi-addons-slider,
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-slider-content,
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-image,
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-slider-item {
+        height: 600px
+    }
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-accordion {
+        max-width: 1000px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-image-accordion-three .oxi-addons-accordion .oxi-addons-heading {
+        font-size: 32px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+
+
+
+
+
+
+
+
+

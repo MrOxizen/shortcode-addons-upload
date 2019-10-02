@@ -28,7 +28,7 @@ class Style_3 extends Templates
 	{
 		$style = $this->style;
 		$time_date = explode('T', $style['sa_cd_date_time']);
-		$jquery = 'jQuery(".sa-addons-count-down-content").countdown("' . $time_date[0] . ' ' . $time_date[1] . '").on("update.countdown", function(event) {
+		$jquery = 'jQuery(".sa-addons-count-down-content-style-3").countdown("' . $time_date[0] . ' ' . $time_date[1] . '").on("update.countdown", function(event) {
                     var jQuerythis = jQuery(this).html(event.strftime(\'<div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="sa-addons-countdown-section sa-addons-counter-days ' . $this->array_render('sa_cd_d_txt_sps', $style) . '"><div class="sa-addons-countdown-mid"><div class="sa-addons-countdown-amount">%D</div><div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_d_txt']) . '</div></div> </div> </div> <div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"> <div class="sa-addons-countdown-section sa-addons-counter-hours ' . $this->array_render('sa_cd_hours_txt_sps', $style) . '"><div class="sa-addons-countdown-mid"><div class="sa-addons-countdown-amount"> %H</div> <div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_hours_txt']) . '</div></div></div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="sa-addons-countdown-section sa-addons-counter-minutes ' . $this->array_render('sa_cd_min_txt_sps', $style) . '"><div class="sa-addons-countdown-mid"> <div class="sa-addons-countdown-amount"> %M </div> <div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_min_txt']) . '</div> </div> </div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="sa-addons-countdown-section sa-addons-counter-seconds ' . $this->array_render('sa_cd_seco_txt_sps', $style) . '"> <div class="sa-addons-countdown-mid"><div class="sa-addons-countdown-amount"> %S</div> <div class="sa-addons-countdown-period">' . $this->text_render($style['sa_cd_seco_txt']) . ' </div></div></div></div>\'));
                   });';
 		return $jquery;
@@ -37,7 +37,7 @@ class Style_3 extends Templates
 	public function default_render($style, $child, $admin)
 	{
 		echo ' <div class="sa-addons-count-down-container">
-                  <div class="sa-addons-count-down-content">
+                  <div class="sa-addons-count-down-content-style-3">
                                       
                   </div>      
                 </div>';
@@ -47,7 +47,6 @@ class Style_3 extends Templates
 	{
 
 		$styledata = $this->dbdata;
-		$stylename = $styledata['style_name'];
 		$oxiid = $styledata['id'];
 		$stylefiles = explode('||#||', $styledata['css']);
 		$style = explode('|', $stylefiles[0]);

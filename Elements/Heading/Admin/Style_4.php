@@ -36,7 +36,7 @@ class Style_4 extends AdminStyle {
             'default' => 'This is Heading Text',
             'placeholder' => 'This is Heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => '',
+                '{{WRAPPER}} .oxi-addons-heading-style-4 .oxi-addons-heading-text' => '',
             ],
                 ]
         );
@@ -47,7 +47,7 @@ class Style_4 extends AdminStyle {
             'default' => 'This is Sub-heading Text',
             'placeholder' => 'This is Sub-heading Text',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => '',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-4 .oxi-addons-sub-heading-text' => '',
             ],
                 ]
         );
@@ -118,7 +118,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#6fab30',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-heading-style-4 .oxi-addons-heading-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -128,7 +128,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text ' => '',
+                '{{WRAPPER}} .oxi-addons-heading-style-4 .oxi-addons-heading-text ' => '',
             ],
                 ]
         );
@@ -159,7 +159,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading .oxi-addons-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-heading-style-4 .oxi-addons-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -181,7 +181,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#706868',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-4 .oxi-addons-sub-heading-text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -191,7 +191,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text ' => '',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-4 .oxi-addons-sub-heading-text ' => '',
             ],
                 ]
         );
@@ -222,7 +222,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-sub-heading .oxi-addons-sub-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-sub-heading-style-4 .oxi-addons-sub-heading-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );

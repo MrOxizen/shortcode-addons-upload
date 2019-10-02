@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_14 extends Templates {
 
     public function public_jquery() {
-        wp_enqueue_script('button14', SA_ADDONS_UPLOAD_URL . '/Elements/Button/file/button14.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('button14', SA_ADDONS_UPLOAD_URL . '/Elements/Button/File/button14.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {

@@ -1,0 +1,159 @@
+.sa_addons_tooltip_container_style_3 {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.sa_tooltip_link {
+    width: 100%;
+    height: 100%;
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 {
+    max-width: 300px;
+    display: inline-block;
+    position: relative;
+    margin: 0px 0px 0px 0px
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text {
+    visibility: hidden;
+    display: inline-block;
+    color: #ffffff;
+    background: rgba(34, 184, 207, 1.00);
+    text-align: center;
+    padding: 5px 25px 5px 25px;
+    position: absolute;
+    z-index: 1;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: "normal";
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -ms-border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3:hover .sa_addons_tooltip_text {
+    visibility: visible
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_top .sa_addons_tooltip_text {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+    -moz-transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
+    -o-transform: translate(-50%, -100%);
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_bottom .sa_addons_tooltip_text {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_left .sa_addons_tooltip_text {
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    -webkit-transform: translate(-100%, -50%);
+    -moz-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    -o-transform: translate(-100%, -50%);
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_right .sa_addons_tooltip_text {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_top .sa_addons_tooltip_text:after {
+    top: 99.9%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_bottom .sa_addons_tooltip_text:after {
+    top: 0.5%;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+    -webkit-transform: translateY(-100%) translateX(-50%);
+    -moz-transform: translateY(-100%) translateX(-50%);
+    -ms-transform: translateY(-100%) translateX(-50%);
+    -o-transform: translateY(-100%) translateX(-50%);
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_left .sa_addons_tooltip_text:after {
+    top: 50%;
+    left: 99.9%;
+    transform: translateY(-50%) translateX(0%);
+    -webkit-transform: translateY(-50%) translateX(0%);
+    -moz-transform: translateY(-50%) translateX(0%);
+    -ms-transform: translateY(-50%) translateX(0%);
+    -o-transform: translateY(-50%) translateX(0%);
+}
+
+.sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3.sa_tooltip_right .sa_addons_tooltip_text:after {
+    top: 50%;
+    left: 0.5%;
+    transform: translateY(-50%) translateX(-100%);
+    -webkit-transform: translateY(-50%) translateX(-100%);
+    -moz-transform: translateY(-50%) translateX(-100%);
+    -ms-transform: translateY(-50%) translateX(-100%);
+    -o-transform: translateY(-50%) translateX(-100%);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 {
+        border-radius: 0px 5px 0px 0px;
+        border-width: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text {
+        border-radius: 10px 10px 10px 10px;
+        padding: 5px 10px 5px 10px;
+        margin: 0px 0px 0px 7px;
+        font-size: 14px;
+        border-radius: 10px 10px 10px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 {
+        border-radius: 0px 5px 0px 0px;
+        border-width: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_tooltip_container_style_3 .sa_addons_tooltip_style_3 .sa_addons_tooltip_text {
+        border-radius: 10px 10px 10px 10px;
+        padding: 5px 10px 5px 10px;
+        margin: 0px 0px 0px 7px;
+        font-size: 14px;
+        border-radius: 10px 10px 10px 10px
+    }
+}

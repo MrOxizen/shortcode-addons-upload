@@ -65,7 +65,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::REPEATER,
                 'fields' => [
                     'sa_icon_effects_icon' => [
-                        'label' => esc_html__('Icon', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
                         'default' => 'fab fa-linkedin-in',
                     ],
@@ -87,7 +87,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
                         'selector' => [
-                                '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}} .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
 
@@ -97,7 +97,7 @@ class Style_1 extends AdminStyle
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
                         'selector' => [
-                                '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}' => 'background:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}' => 'background:{{VALUE}};',
                         ],
                     ],
 
@@ -114,7 +114,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
                         'selector' => [
-                                '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:hover .oxi-icons' => 'color:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_bg_hover' => [
@@ -123,7 +123,7 @@ class Style_1 extends AdminStyle
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
                         'selector' => [
-                                '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:hover' => 'background:{{VALUE}}',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:hover' => 'background:{{VALUE}};',
                         ],
                     ],
                     'sa_icon_effects_box_shadow_hover' => [
@@ -131,7 +131,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::BOXSHADOW,
                         'controller' => 'add_group_control',
                         'selector' => [
-                                '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:after' => '',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}:after' => '',
                         ],
                     ],
 
@@ -149,11 +149,11 @@ class Style_1 extends AdminStyle
                         Controls::SEPARATOR => TRUE,
                         'default' => '',
                         'options' => [
-                            '' => __('Inside', SHORTCODE_ADDOONS),
-                            'sa_effects_outside' => __('Outside', SHORTCODE_ADDOONS),
+                            '' => __('Style 01', SHORTCODE_ADDOONS),
+                            'sa_effects_outside' => __('Style 02', SHORTCODE_ADDOONS),
                         ],
                         'selector' => [
-                                '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}' => '',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_1.sa_icon_effects_unique_{{KEY}}' => '',
                         ],
                     ],
                     'sa_icon_effects_url_open' => [
@@ -176,6 +176,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'title_field' => 'sa_icon_effects_icon',
+                'button' => 'Add New Icon',
             ]
         );
 
@@ -189,7 +190,7 @@ class Style_1 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        
+
         $this->add_responsive_control(
             'sa_icon_effects_f_s',
             $this->style,
@@ -367,5 +368,4 @@ class Style_1 extends AdminStyle
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-    
 }

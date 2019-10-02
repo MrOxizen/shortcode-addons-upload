@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style5 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5 {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    color: #c70cbe;
+    text-decoration: none;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5-span {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5:hover,
+.link-effect-main-style5 .oxi-links-effects-style5:focus {
+    outline: none;
+    color: #00b5b5;
+    text-decoration: none
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5-span::before {
+    position: absolute;
+    color: #00b5b5;
+    font-weight: 0;
+    font-style: 10;
+    font-family: "0";
+    content: attr(data-hover);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    text-align: center;
+    width: 100%
+}
+
+/* Top To Bottom */
+
+.link-effect-main-style5 .sa_link_top_to_bottom::before {
+    top: 100%;
+
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5:hover .sa_link_top_to_bottom,
+.link-effect-main-style5 .oxi-links-effects-style5:focus .sa_link_top_to_bottom {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+
+/* Bottom To Top */
+
+.link-effect-main-style5 .sa_link_bottom_to_top::before {
+    bottom: 100%;
+
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5:hover .sa_link_bottom_to_top,
+.link-effect-main-style5 .oxi-links-effects-style5:focus .sa_link_bottom_to_top {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%)
+}
+
+/* Left To Right */
+
+.link-effect-main-style5 .sa_link_left_to_right::before {
+    left: 100%;
+
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5:hover .sa_link_left_to_right,
+.link-effect-main-style5 .oxi-links-effects-style5:focus .sa_link_left_to_right {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+
+/* Right To Left */
+
+.link-effect-main-style5 .sa_link_right_to_left::before {
+    right: 100%;
+    color: #00b5b5;
+
+}
+
+.link-effect-main-style5 .oxi-links-effects-style5:hover .sa_link_right_to_left,
+.link-effect-main-style5 .oxi-links-effects-style5:focus .sa_link_right_to_left {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%)
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .link-effect-main-style5 .oxi-links-effects-style5 {
+        font-size: 30px;
+        margin: 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style5 .oxi-links-effects-style5 {
+        font-size: 25px;
+        margin: 0px 0px
+    }
+}

@@ -3,7 +3,7 @@
     float: left
 }
 
-.oxi-addons-heading {
+.oxi-addons-heading-style-10 {
     width: 100%;
     float: left;
     display: block
@@ -17,7 +17,7 @@
     z-index: 1
 }
 
-.oxi-addons-heading .oxi-addons-heading-text {
+.oxi-addons-heading-style-10 .oxi-addons-heading-text {
     width: 100%;
     height: auto;
     font-size: 50px;
@@ -33,25 +33,25 @@
     padding: 0px 10px 0px 10px
 }
 
-.oxi-addons-sub-heading  {
+.oxi-addons-sub-heading-style-10  {
     width: 100%;
     float: left;
     display: block
 }
 
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text,
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_left,
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_mid_center,
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_left,
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_right,
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_right {
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text,
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_left,
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_mid_center,
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_left,
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_right,
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_right {
     width: 100%;
     height: auto;
     position: relative;
     font-size: 22px;
     font-family: "open sans";
     font-weight: 100;
-    font-style: normal;
+    font-style-10: normal;
     line-height: 1.3;
     text-align: center;
     text-shadow: 0px 0px 2px #ffffff;
@@ -60,21 +60,21 @@
     margin: 0;
 }
 
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_left::before{
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_left::before{
     position: absolute;
     content: "";
     left: 0%;
     position: absolute;
     transform: translateX(0%);
 }
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_right::before{
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_right::before{
     content: "";
     right: 0%;
     position: absolute;
     transform: translateX(0%);
 }
 
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_mid_center::after{
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_mid_center::after{
     position: absolute;
     width: 130px;
     height: 3px;
@@ -85,7 +85,7 @@
     transform: translateX(-50%);
     background: rgba(135, 135, 135, 1);
 }
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_left::after{
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_left::after{
     content: "";
     top: 100%;
     bottom: 0;
@@ -93,7 +93,7 @@
     transform: translateX(0%);
     position: absolute;
 }
-.oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_right::after{
+.oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_right::after{
     content: "";
     top: 100%;
     bottom: 0;
@@ -104,18 +104,18 @@
 
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    ..oxi-addons-heading .oxi-addons-heading-text {
+    ..oxi-addons-heading-style-10 .oxi-addons-heading-text {
         font-size: 40px;
         margin: 0;
         padding: 0px 10px 0px 10px;
         text-align: center
     }
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_left,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_mid_center,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_left,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_right,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_right {
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_left,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_mid_center,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_left,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_right,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_right {
         font-size: 20px;
         margin: 0;
         padding: 0px 10px 0px 10px;
@@ -126,17 +126,17 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-heading .oxi-addons-heading-text {
+    .oxi-addons-heading-style-10 .oxi-addons-heading-text {
         font-size: 35px;
         margin: 0;
         text-align: center
     }
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_left,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_mid_center,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_left,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_btm_right,
-    .oxi-addons-sub-heading  .oxi-addons-sub-heading-text.oxi_line_top_right {
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_left,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_mid_center,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_left,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_btm_right,
+    .oxi-addons-sub-heading-style-10  .oxi-addons-sub-heading-text.oxi_line_top_right {
         font-size: 15px;
         margin: 0;
         padding: 0px 10px 0px 10px;

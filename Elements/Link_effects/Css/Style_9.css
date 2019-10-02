@@ -1,0 +1,177 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style9 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center
+}
+
+
+
+.link-effect-main-style9 .oxi-links-effects-style9 {
+    padding: 0px 0px;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0px 0px;
+    background: red;
+    
+}
+.link-effect-main-style9 .oxi-links-effects-style9 .sa_link_text {
+  
+    padding: 10px 25px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    
+}
+
+
+
+
+.link-effect-main-style9 .oxi-links-effects-style9 .sa_link_hover_text {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 139, 166, 1.00);
+    color: #ffffff;
+    padding: 10px 25px;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+
+/* Left To Right*/
+
+.link-effect-main-style9 .sa_link_left_to_right .sa_link_hover_text {   
+    -webkit-transform: translateX(-100%);
+     -webkit-transform: translateX(-100%);
+     transform: translateX(-100%);
+}
+
+.link-effect-main-style9 .sa_link_left_to_right:hover .sa_link_text,
+.link-effect-main-style9 .sa_link_left_to_right:focus .sa_link_text {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%)
+}
+
+.link-effect-main-style9 .sa_link_left_to_right:hover .sa_link_hover_text,
+.link-effect-main-style9 .sa_link_left_to_right:focus .sa_link_hover_text {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    transform: translateX(0%)
+}
+
+
+/* Right To Left*/
+
+.link-effect-main-style9 .sa_link_right_to_left .sa_link_hover_text {   
+    -webkit-transform: translateX(100%);
+     -webkit-transform: translateX(100%);
+     transform: translateX(100%);
+}
+
+.link-effect-main-style9 .sa_link_right_to_left:hover .sa_link_text,
+.link-effect-main-style9 .sa_link_right_to_left:focus .sa_link_text {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+
+.link-effect-main-style9 .sa_link_right_to_left:hover .sa_link_hover_text,
+.link-effect-main-style9 .sa_link_right_to_left:focus .sa_link_hover_text {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    transform: translateX(0%)
+}
+
+
+/* top_to_bottom*/
+
+.link-effect-main-style9 .sa_link_top_to_bottom .sa_link_hover_text {   
+    -webkit-transform: translateY(100%);
+     -webkit-transform: translateY(100%);
+     transform: translateY(100%);
+}
+
+.link-effect-main-style9 .sa_link_top_to_bottom:hover .sa_link_text,
+.link-effect-main-style9 .sa_link_top_to_bottom:focus .sa_link_text {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+
+.link-effect-main-style9 .sa_link_top_to_bottom:hover .sa_link_hover_text,
+.link-effect-main-style9 .sa_link_top_to_bottom:focus .sa_link_hover_text {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%)
+}
+
+
+/* bottom_to_top*/
+
+.link-effect-main-style9 .sa_link_bottom_to_top .sa_link_hover_text {   
+    -webkit-transform: translateY(-100%);
+     -webkit-transform: translateY(-100%);
+     transform: translateY(-100%);
+}
+
+.link-effect-main-style9 .sa_link_bottom_to_top:hover .sa_link_text,
+.link-effect-main-style9 .sa_link_bottom_to_top:focus .sa_link_text {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%)
+}
+
+.link-effect-main-style9 .sa_link_bottom_to_top:hover .sa_link_hover_text,
+.link-effect-main-style9 .sa_link_bottom_to_top:focus .sa_link_hover_text {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%)
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .link-effect-main-style9 .oxi-links-effects-style9 {
+        font-size: 25px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style9 .oxi-links-effects-style9-span {
+        padding: 10px 25px
+    }
+    .link-effect-main-style9 .oxi-links-effects-style9::before {
+        padding: 10px 25px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style9 .oxi-links-effects-style9 {
+        font-size: 25px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style9 .oxi-links-effects-style9-span {
+        padding: 10px 25px
+    }
+    .link-effect-main-style9 .oxi-links-effects-style9::before {
+        padding: 10px 25px
+    }
+}

@@ -24,7 +24,7 @@ class Style_4 extends Templates {
         echo ' <div class="oxi-addons-main-wrapper-full-area ">
                         <div class="oxi-icon-last ' . $class . '">';
                             foreach ($child as $v) {
-                                $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+                                $value = $this->Json_Decode($v['rawdata']);
                                 $icon = $heading = $textarea = '';
                                 if (array_key_exists('sa_bl_four_icon', $value) && $value['sa_bl_four_icon'] != '') {
                                     $icon = '<div class="oxi-addons-content-boxes-icon">

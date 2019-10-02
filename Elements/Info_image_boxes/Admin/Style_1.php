@@ -43,17 +43,72 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_group_control(
+        $this->add_repeater_control(
+                'sa_Info_image_boxes_data',
+                $this->style,
+                [
+                    'label' => __('', SHORTCODE_ADDOONS),
+                    'type' => Controls::REPEATER,
+                    'fields' => [
+                        'sa_info_image_h_text' => [
+                            'label' => __('Heading', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXT,
+                            'placeholder' => 'Your Heading Here',
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-addons-main-wrapper.oxi-addons-main-wrapper-{{KEY}} .oxi-addons-main-content .oxi-addons-heading' => '',
+                            ],
+                        ],
+                        'sa_info_image_content_text' => [
+                            'label' => __('Content', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXTAREA,
+                            'placeholder' => 'Your Content Here',
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-addons-main-wrapper-{{KEY}}   .oxi-addons-main-content .oxi-addons-details' => '',
+                            ],
+                        ],
+                        'sa_info_image_img_src' => [
+                            'type' => Controls::MEDIA,
+                            'default' => [
+                                'type' => 'media-library',
+                                'link' => '',
+                            ],
+                            'loader' =>TRUE,
+                            'controller' => 'add_group_control',
+                        ],
+                        'sa_info_image_url_open' => [
+                            'label' => __('Link Active', SHORTCODE_ADDOONS),
+                            'type' => Controls::SWITCHER,
+                            'default' => '',
+                            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                            'label_off' => __('No', SHORTCODE_ADDOONS),
+                            'return_value' => 'link_show',
+                        ],
+                        'sa_info_image_url' => [
+                            'type' => Controls::URL,
+                            'loader' => TRUE,
+                            'conditional' => Controls::INSIDE,
+                            'condition' => [
+                                'sa_info_image_url_open' => 'link_show',
+                            ],
+                        'controller' => 'add_group_control',
+                        ],
+                    ],
+                    'title_field' => 'sa_info_image_h_text',
+                    'button' => 'Add New Boxes',
+                ]
+        );
+
+        $this->add_group_control(
                 'sa_info_image_bg_color',
                 $this->style,
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                       '{{WRAPPER}}  .oxi-addons-main-wrapper ' => ''
+                        '{{WRAPPER}}  .oxi-addons-main-wrapper ' => ''
                     ],
                 ]
         );
- 
+
         $this->add_group_control(
                 'sa_info_image_border', $this->style, [
             'type' => Controls::BORDER,
@@ -380,7 +435,6 @@ class Style_1 extends AdminStyle {
                 'sa_info_image_head_title', $this->style, [
             'label' => __('Heading', SHORTCODE_ADDOONS),
             'type' => Controls::HEADING,
-          
                 ]
         );
         $this->add_control(
@@ -403,7 +457,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_info_image_heading_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -433,11 +487,10 @@ class Style_1 extends AdminStyle {
             ]
                 ]
         );
-       $this->add_control(
+        $this->add_control(
                 'sa_info_image_span_head_title', $this->style, [
             'label' => __('Heading Span', SHORTCODE_ADDOONS),
             'type' => Controls::HEADING,
-          
                 ]
         );
         $this->add_control(
@@ -466,7 +519,7 @@ class Style_1 extends AdminStyle {
             'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
                 ]
         );
-         
+
         $this->add_control(
                 'sa_info_image_short_det_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -486,7 +539,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-          $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_info_image_short_det_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -540,58 +593,7 @@ class Style_1 extends AdminStyle {
                 <div class="modal-body">';
 
 
-        $this->add_control(
-                'sa_info_image_h_text',
-                $this->style,
-                [
-                    'label' => __('Heading', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXT,
-                    'placeholder' => 'Your Heading Here',
-                ]
-        );
 
-        $this->add_control(
-                'sa_info_image_content_text',
-                $this->style,
-                [
-                    'label' => __('Content', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXTAREA,
-                     'placeholder' => 'Your Content Here',
-                ]
-        );
-        $this->add_group_control(
-                'sa_info_image_img_src', $this->style, [
-            'type' => Controls::MEDIA,
-            'default' => [
-                'type' => 'media-library',
-                'link' => '',
-            ],   
-                ]
-        );
-        $this->add_control(
-                'sa_info_image_url_open',
-                $this->style,
-                [
-                    'label' => __('Link Active', SHORTCODE_ADDOONS),
-                    'type' => Controls::SWITCHER,
-                    'default' => '',
-                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                    'label_off' => __('No', SHORTCODE_ADDOONS),
-                    'return_value' => 'link_show',
-                ]
-        );
-        $this->add_group_control(
-                'sa_info_image_url',
-                $this->style,
-                [
-                    'type' => Controls::URL,
-                    'loader' => TRUE,
-                    'condition' => [
-                        'sa_info_image_url_open' => 'link_show',
-                    ],
-                ]
-        );
-   
         echo '</div>';
     }
 

@@ -1,0 +1,233 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style2 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2 {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2-span {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 0px 0px;
+    background: linear-gradient(0deg, rgba(176, 14, 152, 1.00) 0%, rgba(247, 15, 216, 1) 97%);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d
+}
+/*.link-effect-main-style2 .oxi-links-effects-style2-span {
+   
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+   
+}*/
+
+.link-effect-main-style2 .oxi-links-effects-style2-span::before {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(176, 14, 152, 1.00) 0%, rgba(247, 15, 216, 1) 97%);
+    padding: 10px 30px;
+    content: attr(data-hover);
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover,
+.link-effect-main-style2 .oxi-links-effects-style2:focus {
+    outline: none;
+    color: #242424;
+    text-decoration: none
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .oxi-links-effects-style2-span::before,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .oxi-links-effects-style2-span::before {
+    background: rgba(240, 228, 60, 1.00)
+}
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .oxi-links-effects-style2-span,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .oxi-links-effects-style2-span {
+    background: rgba(240, 228, 60, 1.00);
+
+}
+
+
+
+/*TOp TO Bottom*/
+
+.link-effect-main-style2 .sa_link_top_to_bottom {
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+
+}
+.link-effect-main-style2 .sa_link_top_to_bottom::before {
+    top: 100%;
+    left: 0;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0
+}
+
+
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .sa_link_top_to_bottom,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .sa_link_top_to_bottom {
+    -webkit-transform: rotateX(90deg) translateY(-45px);
+    -moz-transform: rotateX(90deg) translateY(-45px);
+    transform: rotateX(90deg) translateY(-45px)
+}
+
+
+/*Bottom TO Top*/
+
+.link-effect-main-style2 .sa_link_bottom_to_top {
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+}
+.link-effect-main-style2 .sa_link_bottom_to_top::before {
+    bottom: 100%;
+    left: 0;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .sa_link_bottom_to_top,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .sa_link_bottom_to_top {
+    -webkit-transform: rotateX(-90deg) translateY(45px);
+    -moz-transform: rotateX(-90deg) translateY(45px);
+    transform: rotateX(-90deg) translateY(45px);
+}
+
+
+/*Left To Right*/
+
+.link-effect-main-style2 .sa_link_left_to_right {
+    -webkit-transform-origin: 50% 50% -100px;
+    -moz-transform-origin: 50% 50% -100px;
+    transform-origin: 50% 50% -100px;
+
+}
+.link-effect-main-style2 .sa_link_left_to_right::before {
+    top: 0;
+    right: 100%;
+   -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+   -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .sa_link_left_to_right,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .sa_link_left_to_right {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+}
+
+/*Right To Left */
+
+.link-effect-main-style2 .sa_link_right_to_left {
+    -webkit-transform-origin: 50% 50% -100px;
+    -moz-transform-origin: 50% 50% -100px;
+    transform-origin: 50% 50% -100px;
+
+}
+.link-effect-main-style2 .sa_link_right_to_left::before {
+    top: 0;
+    left: 100%;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+
+
+
+.link-effect-main-style2 .oxi-links-effects-style2:hover .sa_link_right_to_left,
+.link-effect-main-style2 .oxi-links-effects-style2:focus .sa_link_right_to_left {
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+}
+
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .link-effect-main-style2 .oxi-links-effects-style2 {
+        font-size: 25px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span {
+        padding: 10px 30px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span::before {
+        padding: 10px 30px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style2 .oxi-links-effects-style2 {
+        font-size: 25px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span {
+        padding: 10px 30px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style2 .oxi-links-effects-style2-span::before {
+        padding: 10px 30px
+    }
+}

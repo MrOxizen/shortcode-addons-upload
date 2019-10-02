@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.link-effect-main-style1 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.link-effect-main-style1 .oxi-links-effects-style1 {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    color: #f06060;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-weight: 800;
+    font-style: normal;
+    font-size: 26px;
+    padding: 10px 10px;
+    margin: 0px 0px;
+    transition: transform 0.3s;
+}
+
+.link-effect-main-style1 .oxi-links-effects-style1:hover,
+.link-effect-main-style1 .oxi-links-effects-style1:focus {
+    outline: none;
+    color: #3c12e6;
+    text-decoration: none
+}
+
+.link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon1,
+.link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon2 {
+    display: inline-block;
+    opacity: 0;
+    color: #3c12e6;
+    vertical-align: top;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s
+}
+
+.link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon1 {
+    margin-right: 10px;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px)
+}
+
+.link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon2 {
+    margin-left: 10px;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px)
+}
+
+.link-effect-main-style1 .oxi-links-effects-style1:hover .sa_link_icon1,
+.link-effect-main-style1 .oxi-links-effects-style1:hover .sa_link_icon2,
+.link-effect-main-style1 .oxi-links-effects-style1:focus .sa_link_icon1,
+.link-effect-main-style1 .oxi-links-effects-style1:focus .sa_link_icon2 {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px)
+}
+
+@media screen and (max-width:993px) {
+    .link-effect-main-style1 .oxi-links-effects-style1 {
+        font-size: 26px;
+        padding: 10px 10px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon1 {
+        margin-right: 10px
+    }
+    .link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon2 {
+        margin-left: 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .link-effect-main-style1 .oxi-links-effects-style1 {
+        font-size: 26px;
+        padding: 10px 10px;
+        margin: 0px 0px
+    }
+    .link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon1 {
+        margin-right: 10px
+    }
+    .link-effect-main-style1 .oxi-links-effects-style1 .sa_link_icon2 {
+        margin-left: 10px
+    }
+}

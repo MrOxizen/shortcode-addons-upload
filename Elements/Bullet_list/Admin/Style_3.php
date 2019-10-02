@@ -126,7 +126,7 @@ class Style_3 extends AdminStyle {
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('List Number', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
@@ -226,7 +226,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-li-icon i' => ':{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-li-icon i' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -343,7 +343,7 @@ class Style_3 extends AdminStyle {
         );
         $this->add_control(
                 'sa-bl-n-hover-bg-color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
+            'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
             'default' => '#787878',
@@ -448,7 +448,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -479,7 +479,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-li .oxi-addons-admin-edit-list' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-li .oxi-addons-admin-edit-list' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -490,11 +490,18 @@ class Style_3 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:hover' => 'color: {{VALUE}};',
+            ]
+                    
                 ]
         );
         $this->add_group_control(
                 'sa-bl-lc-hover-bg', $this->style, [
             'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link:hover' => 'transform: scale({{VALUE}});'
+            ],
                 ]
         );
         $this->add_responsive_control(

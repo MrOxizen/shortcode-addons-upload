@@ -1,8 +1,8 @@
 
-.oxi-addons-heading-container{
+.oxi-addons-heading-container-style-3{
     text-align: center;
 }
-.oxi-addons-heading-container .oxi-addons-heading{
+.oxi-addons-heading-container-style-3 .oxi-addons-heading{
     font-size: 55px;
     display: inline-block;
     color: #595959;
@@ -17,7 +17,7 @@
     animation-duration: 2s;
     line-height: 1;
 }
-.oxi-addons-heading-container .oxi-addons-heading span{
+.oxi-addons-heading-container-style-3 .oxi-addons-heading span{
     display: inline-block;
     color: #d4c711;
     font-family:  "Lato";
@@ -26,7 +26,7 @@
     font-style:  normal;
 }
 @media only screen and (min-width : 669px) and (max-width : 993px){
-    .oxi-addons-heading-container .oxi-addons-heading{ 
+    .oxi-addons-heading-container-style-3 .oxi-addons-heading{ 
         font-size: 55px;  
         padding: 0px 0px 10px 0px;
         margin-top: 0px;
@@ -34,7 +34,7 @@
     } 
 } 
 @media only screen and (max-width : 668px){
-    .oxi-addons-heading-container .oxi-addons-heading{ 
+    .oxi-addons-heading-container-style-3 .oxi-addons-heading{ 
         font-size: 55px;  
         padding: 0px 0px 10px 0px;
         margin-top: 0px;

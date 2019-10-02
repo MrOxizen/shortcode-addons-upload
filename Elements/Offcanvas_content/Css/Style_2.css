@@ -1,0 +1,141 @@
+.sa_addons_oc_container_style_2 {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 0px
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_style_2 {
+    max-width: 300px;
+    width: 100%;
+    border: 5px solid;
+    border-color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 0px 0px 0px;
+    box-shadow: 1px 1px 15px 2px rgba(189, 174, 174, 1);
+    margin: 0 auto;
+    overflow: auto
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_btn_content {
+    width: 100%;
+    height: 100%;
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_cl_btn {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_cl_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_show_content {
+    position: fixed;
+    top: 0;
+    z-index: 99999999;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 1.00);
+    transition: all 0.5s;
+    padding: 20px 20px 20px 20px;
+}
+
+.sa_addons_oc_container_style_2.sa_offcavas_sidebar_left .sa_addons_oc_show_content {
+    left: 0;
+    margin-left: -100%;
+}
+
+.sa_addons_oc_container_style_2.sa_offcavas_sidebar_left .sa_addons_oc_show_content.sa_active {
+    margin-left: 0%;
+}
+
+.sa_addons_oc_container_style_2.sa_offcavas_sidebar_right .sa_addons_oc_show_content {
+    right: 0;
+    margin-right: -100%;
+}
+
+.sa_addons_oc_container_style_2.sa_offcavas_sidebar_right .sa_addons_oc_show_content.sa_active {
+    margin-right: 0%;
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_content_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.41);
+    display: none
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_content_overlay.sa_active {
+    display: block;
+    cursor: pointer
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_content_close_icon {
+    width: 100%;
+    text-align: right;
+    color: #000000;
+    font-size: 20px;
+    padding: 20px 20px 20px 20px
+}
+
+.sa_addons_oc_container_style_2 .sa_addons_oc_content_close_icon .oxi-icons {
+    cursor: pointer
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_oc_container_style_2 .sa_addons_oc_style_2 {
+        max-width: 300px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_cl_btn {
+        border-radius: 5px 5px 5px 5px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_show_content {
+        width: 300px;
+        padding: 20px 20px 20px 20px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_show_content.sa_active {
+        width: 300px;
+        padding: 20px 20px 20px 20px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_content_close_icon {
+        font-size: 20px;
+        padding: 20px 20px 20px 20px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_oc_container_style_2 .sa_addons_oc_style_2 {
+        max-width: 300px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_cl_btn {
+        border-radius: 5px 5px 5px 5px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_show_content {
+        width: 300px;
+        padding: 20px 20px 20px 20px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_show_content.sa_active {
+        width: 300px;
+        padding: 20px 20px 20px 20px
+    }
+    .sa_addons_oc_container_style_2 .sa_addons_oc_content_close_icon {
+        font-size: 20px;
+        padding: 20px 20px 20px 20px
+    }
+}

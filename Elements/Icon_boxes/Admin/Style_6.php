@@ -87,7 +87,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_6' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -119,7 +119,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'height: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_6' => 'height: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -152,7 +152,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

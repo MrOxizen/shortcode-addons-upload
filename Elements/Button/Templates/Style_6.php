@@ -20,7 +20,7 @@ class Style_6 extends Templates {
         $style = $this->style;
         $animation = '.' . $this->WRAPPER . ' .oxi-addons-align-btn6 .' . $style['sa_btn_effect_view'] . ':hover{
             -webkit-animation: ' . $style['sa_btn_effect_view'] . ' ' . $style['sa_btn_duration-size'] . 'ms linear infinite;
-            animation: ' . $this->animation_render('sa_btn_animation', $style) . ' ' . $style['sa_btn_effect_view'] . ' ' . $style['sa_btn_duration-size'] . 'ms linear infinite;
+            animation:  ' . $style['sa_btn_effect_view'] . ' ' . $style['sa_btn_duration-size'] . 'ms linear infinite;
         }';
 
 

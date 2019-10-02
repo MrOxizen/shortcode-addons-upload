@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+    .link-effect-main-style8 {
+        width: 100%;
+        float: left;
+        display: flex;
+        justify-content: center
+    }
+    
+    .link-effect-main-style8 .oxi-links-effects-style8 {
+        position: relative;
+        display: inline-block;
+        outline: none;
+        cursor: pointer;
+        color: #f83b00;
+        text-decoration: none;
+        font-family: "Roboto";
+        font-weight: 500;
+        font-style: normal;
+        font-size: 25px;
+        padding: 10px 20px;
+        margin: 0px 0px;
+       
+    }
+    
+    .link-effect-main-style8 .oxi-links-effects-style8:hover,
+    .link-effect-main-style8 .oxi-links-effects-style8:focus {
+        outline: none;
+        color: #139bf5;
+        text-decoration: none
+    }
+    
+    .link-effect-main-style8 .oxi-links-effects-style8::before,
+    .link-effect-main-style8 .oxi-links-effects-style8::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-width: 3px;
+        border-color: #f83b00;
+        border-style: solid;
+        content: "";
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s
+    }
+    
+    .link-effect-main-style8 .oxi-links-effects-style8::after {
+        border-color: #fff;
+        opacity: 0;
+        -webkit-transform: translateY(-7px) translateX(6px);
+        -moz-transform: translateY(-7px) translateX(6px);
+        transform: translateY(-7px) translateX(6px)
+    }
+    
+    .link-effect-main-style8 .oxi-links-effects-style8:hover::before,
+    .link-effect-main-style8 .oxi-links-effects-style8:focus::before {
+        opacity: 0;
+        -webkit-transform: translateY(5px) translateX(-5px);
+        -moz-transform: translateY(5px) translateX(-5px);
+        transform: translateY(5px) translateX(-5px)
+    }
+    
+    .link-effect-main-style8 .oxi-links-effects-style8:hover::after,
+    .link-effect-main-style8 .oxi-links-effects-style8:focus::after {
+        opacity: 1;
+        -webkit-transform: translateY(0px) translateX(0px);
+        -moz-transform: translateY(0px) translateX(0px);
+        transform: translateY(0px) translateX(0px);
+        border-color: #139bf5
+    }
+     
+    @media screen and (max-width:993px) {
+        .link-effect-main-style8 .oxi-links-effects-style8 {
+            font-size: 25px;
+            padding: 10px 20px;
+            margin: 0px 0px
+        }
+    }
+    
+    
+    @media only screen and (max-width:668px) {
+        .link-effect-main-style8 .oxi-links-effects-style8 {
+            font-size: 25px;
+            padding: 10px 20px;
+            margin: 0px 0px
+        }
+    }

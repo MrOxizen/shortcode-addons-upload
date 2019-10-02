@@ -22,7 +22,7 @@ class Style_6 extends Templates
     {
         foreach ($child as $v) {
 
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+              $value = $this->Json_Decode($v['rawdata']);
             
             $icon = $heading = $link = $endlink = '';
             if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {
@@ -43,7 +43,7 @@ class Style_6 extends Templates
             }
             echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
             echo $link;
-                echo '<div class="sa_addons_icon_boxes_container">
+                echo '<div class="sa_addons_icon_boxes_container_style_6">
                         <div class="sa_addons_icon_boxes_style_6">
                             ' . ($style['sa_icon_box_icon_position'] == 'top' ? $icon . $heading : $heading . $icon) . '
                         </div>';

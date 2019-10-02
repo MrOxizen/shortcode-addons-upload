@@ -42,10 +42,10 @@ $align = '';
         }
         echo '  <div class="oxi-addons-heading-container"   >
                     <div class="oxi-addons-main-heading-body"  '.$this->animation_render('sa_head_animation', $style).'>
-                        <div class="oxi-addons-sub-heading">
+                        <div class="oxi-addons-sub-heading-style-10 ">
                             ' . $content . '
                         </div>
-                        <div class="oxi-addons-heading">
+                        <div class="oxi-addons-heading-style-10">
                             ' . $heading . '
                         </div>
                     </div>

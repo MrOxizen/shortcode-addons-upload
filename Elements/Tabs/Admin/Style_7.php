@@ -263,70 +263,7 @@ class Style_7 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        $this->add_control(
-            'sa_tabs_headding_aling',
-            $this->style,
-            [
-                'label' => __('Text Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'condition' => [
-                    'sa_tabs_headding_icon_style' => 'inline-block',
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-7 .sa-addons-header' => 'justify-content: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-7 .sa-addons-header-two' => 'justify-content: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_headding_aling_block',
-            $this->style,
-            [
-                'label' => __('Text align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'condition' => [
-                    'sa_tabs_headding_icon_style' => 'block',
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-7 .sa-addons-header' => 'align-items: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-7 .sa-addons-header-two' => 'align-items: {{VALUE}};',
-                ],
-            ]
-        );
+        
         $this->add_group_control(
             'sa_tabs_headding_typo',
             $this->style,

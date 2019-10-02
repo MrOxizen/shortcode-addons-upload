@@ -1,0 +1,157 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplop
+*/
+.oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-multi-ripple {
+    width: 5.6rem;
+    height: 5.6rem;
+    margin: 5rem
+}
+
+.oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-multi-ripple div {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.3rem solid #ff6600;
+    -webkit-animation: 1.5s oxi_ripple infinite;
+    animation: 1.5s oxi_ripple infinite
+}
+
+.oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-multi-ripple div:nth-child(2) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s
+}
+
+@-webkit-keyframes oxi_ripple {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0
+    }
+}
+
+@keyframes oxi_ripple {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0
+    }
+}
+
+.oxi-addons-Interactive-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px
+}
+
+ .oxi-addons-IC {
+    width: 100%;
+    float: left;
+    box-shadow: px px px px rgba(255, 255, 255, 0);
+    position: relative
+}
+
+ .oxi-addons-ICfull-content {
+    width: 100%;
+    float: left;
+    padding: 180px 0px 180px 0px;
+    background: rgba(13, 13, 13, 1.00);
+    position: relative;
+    z-index: 2;
+}
+
+ .oxi-opacity-0 {
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+  .oxi-addons-IC-box {
+    width: 100%;
+    float: left
+}
+
+  .oxi-addons-IC-body {
+    width: 100%;
+    float: left
+}
+
+  .oxi-addons-image {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+ .oxi-addons-image .oxi-addons-img {
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+        
+}
+
+ .oxi-addons-load-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(13, 13, 13, 1.00);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0
+}
+
+.oxi-addons-back-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: auto
+}
+
+.oxi-addons-back-content-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.oxi-close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    font-size: 18px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.00);
+    width: 25px;
+    height: 25px;
+    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 6px 0px 0px
+}
+
+.oxi-close-icon:hover {
+    cursor: pointer
+}
