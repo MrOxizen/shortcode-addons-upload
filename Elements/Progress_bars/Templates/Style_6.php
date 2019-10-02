@@ -14,10 +14,10 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_3 extends Templates {
+class Style_6 extends Templates {
 
 //    public function public_css() {
-//        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-3', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
+//        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-6', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
 //    }
 
     public function default_render($style, $child, $admin) {
@@ -26,12 +26,12 @@ class Style_3 extends Templates {
         foreach ($styledata['sa_image_progress_bar_data'] as $key => $value) {
 
             $textheading = '';
-            echo '<div class="oxi-addons-parent-wrapper-style-3 oxi-addons-parent-wrapper-style-3-' . $id . '-' . $key . ' ' . $this->column_render('sa-progress-bar-content-box-col', $style) . ' ">';
-            echo '<div class="oxi-addons-main-wrapper-style-3" ' . $this->animation_render('sa_image_progress_bar_animation', $style) . '>
+            echo '<div class="oxi-addons-parent-wrapper-style-6 oxi-addons-parent-wrapper-style-6-' . $id . '-' . $key . ' ' . $this->column_render('sa-progress-bar-content-box-col', $style) . ' ">';
+            echo '<div class="oxi-addons-main-wrapper-style-6" ' . $this->animation_render('sa_image_progress_bar_animation', $style) . '>
                         <div class="oxi-addons-progress-bar-main"  role="oxi-progress" data-goal="' . $value['sa_image_progress_bar_data_parcent-size'] . '" data-speed="' . $value['sa_image_progress_bar_data_animate_speed-size'] . '"> 
                             <div class="oxi-addons-heading">
-                                <div class="oxi-addons-progress-percentage oxi-progress__label oxi-addons-progress-percentage-' . $key . '"></div>
-                                <div class="oxi-addons-progress-title oxi-addons-progress-title-' . $key . '">' . $this->text_render($value['sa_image_progress_bar_data_name']) . '</div> 
+                                <div class="oxi-addons-progress-title-' . $key . ' oxi-addons-progress-title">' . $this->text_render($value['sa_image_progress_bar_data_name']) . '</div>
+                                <div class="oxi-addons-progress-percentage-' . $key . ' oxi-addons-progress-percentage oxi-progress__label"></div>
                             </div>
                             <div class="oxi-addons-progress-bar" style="background: ' . $value['sa_image_progress_bar_data_back-color'] . '">
                                 <div class="oxi-addons-progress-line oxi-progress__bar" style="background: ' . $value['sa_image_progress_bar_data_front-color'] . '"></div>
@@ -44,9 +44,9 @@ class Style_3 extends Templates {
     }
 
     public function public_jquery() {
-        $this->JSHANDLE = 'jquery-asProgressdfs-style-3-js';
+        $this->JSHANDLE = 'jquery-asProgressdfs-style-6-js';
         echo oxi_addons_public_waypoints();
-        wp_enqueue_script('jquery-asProgressdfs-style-3-js', SA_ADDONS_UPLOAD_URL . '/Elements/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-asProgressdfs-style-6-js', SA_ADDONS_UPLOAD_URL . '/Elements/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery() {
@@ -55,9 +55,9 @@ class Style_3 extends Templates {
         $id = $styledata['shortcode-addons-elements-id'];
         foreach ($styledata['sa_image_progress_bar_data'] as $key => $value) {
 
-            $jquery .= '$(".oxi-addons-parent-wrapper-style-3-' . $id . '-' . $key . ' .oxi-addons-progress-bar-main").waypoint(function () {
-                    $(".oxi-addons-parent-wrapper-style-3-' . $id . '-' . $key . ' .oxi-addons-progress-bar-main").asProgress({"namespace": "oxi-progress"});
-                    $(".oxi-addons-parent-wrapper-style-3-' . $id . '-' . $key . ' .oxi-addons-progress-bar-main").asProgress("start");
+            $jquery .= '$(".oxi-addons-parent-wrapper-style-6-' . $id . '-' . $key . ' .oxi-addons-progress-bar-main").waypoint(function () {
+                    $(".oxi-addons-parent-wrapper-style-6-' . $id . '-' . $key . ' .oxi-addons-progress-bar-main").asProgress({"namespace": "oxi-progress"});
+                    $(".oxi-addons-parent-wrapper-style-6-' . $id . '-' . $key . ' .oxi-addons-progress-bar-main").asProgress("start");
                 }, {
                     offset: "80%"
                 });';
@@ -72,7 +72,7 @@ class Style_3 extends Templates {
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
         echo oxi_addons_public_waypoints();
-        wp_enqueue_script('jquery-asProgressdfs-js-style-3', SA_ADDONS_UPLOAD_URL . '/Elements/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-asProgress-style-6', SA_ADDONS_UPLOAD_URL . '/Elements/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
         $css = '';
         $jquery = '';
 
@@ -82,16 +82,16 @@ class Style_3 extends Templates {
             $data = explode('||#||', $value['files']);
             echo '<div class="oxi-addons-parent-wrapper-' . $oxiid . ' oxi-addons-parent-wrapper-' . $oxiid . '-' . $value['id'] . ' ' . OxiAddonsItemRows($styledata, 3) . '  ' . OxiAddonsAdminDefine($user) . '">';
             echo '<div class="oxi-addons-main-wrapper-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 39) . '>
-                            <div class="oxi-addons-progress-bar-main"  role="oxi-progress" data-goal="' . $data[1] . '" data-speed="' . $data[9] . '"> 
-                                <div class="oxi-addons-heading">
-                                    <div class="oxi-addons-progress-title">' . $data[3] . '</div>
-                                    <div class="oxi-addons-progress-percentage oxi-progress__label"></div>
-                                </div>
-                                <div class="oxi-addons-progress-bar" style="background: ' . $data[5] . '">
-                                    <div class="oxi-addons-progress-line oxi-progress__bar" style="background: ' . $data[7] . '"></div>
-                                </div>
-                            </div> 
-                        </div>';
+                        <div class="oxi-addons-progress-bar-main"  role="oxi-progress" data-goal="' . $data[1] . '" data-speed="' . $data[9] . '"> 
+                            <div class="oxi-addons-heading">
+                                <div class="oxi-addons-progress-title">' . $data[3] . '</div>
+                                <div class="oxi-addons-progress-percentage oxi-progress__label"></div>
+                            </div>
+                            <div class="oxi-addons-progress-bar" style="background: ' . $data[5] . '">
+                                <div class="oxi-addons-progress-line oxi-progress__bar" style="background: ' . $data[7] . '"></div>
+                            </div>
+                        </div> 
+                    </div>';
             $jquery .= 'jQuery(".oxi-addons-parent-wrapper-' . $oxiid . '-' . $value['id'] . ' .oxi-addons-progress-bar-main").waypoint(function () {
                     jQuery(".oxi-addons-parent-wrapper-' . $oxiid . '-' . $value['id'] . ' .oxi-addons-progress-bar-main").asProgress({"namespace": "oxi-progress"});
                     jQuery(".oxi-addons-parent-wrapper-' . $oxiid . '-' . $value['id'] . ' .oxi-addons-progress-bar-main").asProgress("start");
@@ -100,19 +100,19 @@ class Style_3 extends Templates {
                 });';
             if ($user == 'admin') {
                 echo '  <div class="oxi-addons-admin-absulote">
-                                    <div class="oxi-addons-admin-absulate-edit">
-                                        <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditprogress_barsdata") . '
-                                            <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                            <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                        </form>
-                                    </div>
-                                    <div class="oxi-addons-admin-absulate-delete">
-                                        <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeleteprogress_barsdata") . '
-                                            <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                            <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                        </form>
-                                    </div>
-                                </div>';
+                                <div class="oxi-addons-admin-absulate-edit">
+                                    <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditprogress_barsdata") . '
+                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
+                                        <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
+                                    </form>
+                                </div>
+                                <div class="oxi-addons-admin-absulate-delete">
+                                    <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeleteprogress_barsdata") . '
+                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
+                                        <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
+                                    </form>
+                                </div>
+                            </div>';
             }
             echo '</div>';
         }
@@ -212,10 +212,9 @@ class Style_3 extends Templates {
             height: ' . $styledata[118] . 'px; 
             border-radius:  ' . OxiAddonsPaddingMarginSanitize($styledata, 138) . '; 
         }
-    }
-';
+    }';
         wp_add_inline_style('shortcode-addons-style', $css);
-        wp_add_inline_script('jquery-asProgressdfs-js-style-3', $jquery);
+        wp_add_inline_script('jquery-asProgress-style-6', $jquery);
     }
 
 }
