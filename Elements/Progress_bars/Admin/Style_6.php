@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_6 extends AdminStyle {
 
     public function register_controls() {
 
@@ -46,7 +46,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLUMN,
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6' => '',
             ]
                 ]
         );
@@ -70,8 +70,8 @@ class Style_1 extends AdminStyle {
                             'step' => 1,
                         ],
                     ],
-                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-progress-percentage-{{KEY}}' => '',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-progress-percentage-{{KEY}}' => '',
                     ],
                 ],
                 'sa_image_progress_bar_data_name' => [
@@ -79,7 +79,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Progress Name',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-progress-title-{{KEY}}' => '',
+                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-progress-title-{{KEY}}' => '',
                     ],
                 ],
                 'sa_image_progress_bar_data_back-color' => [
@@ -125,7 +125,7 @@ class Style_1 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-wrapper-style-6' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -156,7 +156,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-wrapper-style-6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -187,7 +187,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -199,7 +199,7 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'default' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-wrapper-style-6' => '',
             ]
                 ]
         );
@@ -208,7 +208,7 @@ class Style_1 extends AdminStyle {
                 'sa_image_progress_bar_animation', $this->style, [
             'type' => Controls::ANIMATION,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-wrapper-style-6' => '',
             ]
                 ]
         );
@@ -250,7 +250,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-bar' => 'padding:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-bar' => 'padding:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -280,7 +280,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-line' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-line' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -310,7 +310,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-bar' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-bar' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -340,7 +340,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-line' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-line' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -351,7 +351,7 @@ class Style_1 extends AdminStyle {
             'separator' => TRUE,
             'default' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-bar' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-bar' => '',
             ]
                 ]
         );
@@ -368,7 +368,7 @@ class Style_1 extends AdminStyle {
                 'sa-progress-bar-name-typograpy', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-title' => '',
             ]
                 ]
         );
@@ -378,7 +378,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-title' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -386,7 +386,7 @@ class Style_1 extends AdminStyle {
                 'sa-progress-bar-name-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-title' => '',
             ]
                 ]
         );
@@ -417,7 +417,7 @@ class Style_1 extends AdminStyle {
             ],
            
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -434,7 +434,7 @@ class Style_1 extends AdminStyle {
             'sa-progress-bar-percent-typograpy', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-percentage' => '',
             ]
                 ]
         );
@@ -444,7 +444,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-percentage' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -452,7 +452,7 @@ class Style_1 extends AdminStyle {
                 'sa-progress-bar-percent-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => '',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-percentage' => '',
             ]
                 ]
         );
@@ -482,7 +482,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-style-1 .oxi-addons-progress-percentage' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-6 .oxi-addons-progress-percentage' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

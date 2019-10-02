@@ -1,0 +1,154 @@
+.sa_icon_effects_link {
+    width: 100%;
+    height: 100%;
+}
+
+.sa_addons_icon_effects_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sa_addons_icon_effects_style_1 {
+    position: relative;
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    margin: 5px;
+    background: rgba(161, 5, 5, 1.00);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.sa_addons_icon_effects_style_1:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: "";
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    top: -5px;
+    left: -5px;
+    padding: 5px;
+    box-shadow: 0 0 0 5px rgba(145, 9, 9, 1.00);
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s;
+    -ms-transition: transform 0.2s, opacity 0.2s;
+    -o-transition: transform 0.2s, opacity 0.2s;
+    -webkit-transition: transform 0.2s, opacity 0.2s;
+    -moz-transition: transform 0.2s, opacity 0.2s;
+}
+
+.sa_addons_icon_effects_style_1:hover,
+.sa_addons_icon_effects_style_1:focus,
+.sa_addons_icon_effects_style_1:active {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    margin: 5px;
+    animation-duration: .5s;
+    background: #910909;
+    border-radius: 50px
+}
+
+.sa_addons_icon_effects_style_1:hover:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    opacity: 1;
+}
+
+.sa_addons_icon_effects_style_1 .oxi-icons {
+    font-size: 50px;
+    color: #ffffff;
+    line-height: 100px
+}
+
+.sa_addons_icon_effects_style_1:hover .oxi-icons {
+    color: #ffffff
+}
+
+.sa_addons_icon_effects_style_1.sa_effects_outside:after {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.sa_addons_icon_effects_style_1.sa_effects_outside:hover:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_icon_effects_style_1 {
+        max-width: 90px;
+        height: 90px;
+    }
+    .sa_addons_icon_effects_style_1:hover,
+    .sa_addons_icon_effects_style_1:focus,
+    .sa_addons_icon_effects_style_1:active {
+        max-width: 90px;
+        height: 90px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    .sa_addons_icon_effects_style_1 .oxi-icons {
+        line-height: 90px;
+        font-size: 45px
+    }
+    .sa_addons_icon_effects_style_1:after {
+        top: -5px;
+        left: -5px;
+        padding: 5px;
+        box-shadow: 0 0 0 5px rgba(145, 9, 9, 1.00)
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_icon_effects_style_1 {
+        max-width: 80px;
+        height: 80px;
+    }
+    .sa_addons_icon_effects_style_1:hover,
+    .sa_addons_icon_effects_style_1:focus,
+    .sa_addons_icon_effects_style_1:active {
+        max-width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    .sa_addons_icon_effects_style_1 .oxi-icons {
+        line-height: 80px;
+        font-size: 40px
+    }
+    .sa_addons_icon_effects_style_1:after {
+        top: -5px;
+        left: -5px;
+        padding: 5px;
+        box-shadow: 0 0 0 5px rgba(145, 9, 9, 1.00)
+    }
+}
