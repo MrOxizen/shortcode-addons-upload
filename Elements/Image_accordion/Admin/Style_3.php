@@ -49,7 +49,7 @@ class Style_3 extends AdminStyle{
             'button' => 'Add New Accordion',
             'fields' => [
                 'sa_image_accordion_image_1' => [
-                    'label' => esc_html__('First Image', SA_ELEMENTOR_TEXTDOMAIN),
+                    'label' => esc_html__('First Image', SHORTCODE_ADDOONS),
                     'type' => Controls::MEDIA,
                     'default' => [
                         'type' => 'media-library',
@@ -61,7 +61,7 @@ class Style_3 extends AdminStyle{
                     ],
                 ],
                 'sa_image_accordion_image_2' => [
-                    'label' => esc_html__('Second Image', SA_ELEMENTOR_TEXTDOMAIN),
+                    'label' => esc_html__('Second Image', SHORTCODE_ADDOONS),
                     'type' => Controls::MEDIA,
                     'default' => [
                         'type' => 'media-library',
@@ -73,7 +73,7 @@ class Style_3 extends AdminStyle{
                     ],
                 ],
                 'sa_image_accordion_item_title' => [
-                    'label' => esc_html__('Heading', SA_ELEMENTOR_TEXTDOMAIN),
+                    'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
                     'default' => 'Accordion Item Title',
                 ],

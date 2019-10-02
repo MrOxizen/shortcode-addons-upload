@@ -58,7 +58,7 @@ class Style_1 extends AdminStyle
                 'fields' => [
                     
                     'sa_image_accordion_image' => [
-                        'label' => esc_html__('Background', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Background', SHORTCODE_ADDOONS),
                         'type' => Controls::BACKGROUND,
                         'default' => '',
                         'controller' => 'add_group_control',
@@ -69,7 +69,7 @@ class Style_1 extends AdminStyle
                     
 
                     'sa_image_accordion_url_open' => [
-                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
                         'type' => Controls::SWITCHER,
                         'default' => '',
                         // 'loader' => TRUE,
@@ -79,7 +79,7 @@ class Style_1 extends AdminStyle
                     ],
 
                     'sa_image_accordion_url' => [
-                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
                         'type' => Controls::URL,
                         'controller' => 'add_group_control',
                         'conditional' => Controls::INSIDE,
@@ -88,12 +88,12 @@ class Style_1 extends AdminStyle
                         ]
                     ],
                     'sa_icon_accordion_item_title' => [
-                        'label' => esc_html__('Heading', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
                         'default' => 'Accordion Item Title',
                     ],
                     'sa_icon_accordion_item_description' => [
-                        'label' => esc_html__('Short Details', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXTAREA,
                         'default' => 'Accordion Short Details goes here ',
                     ],
@@ -459,3 +459,6 @@ class Style_1 extends AdminStyle
     //     echo '</div>';
     // }
 }
+
+
+
