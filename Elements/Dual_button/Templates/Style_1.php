@@ -17,10 +17,6 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-//        echo '<pre>';
-//        print_r($style['sa_s_image_ribbon_pos']);
-//        echo '</pre>';
-//        echo $this->url_render('sa_dual_btn_left_link', $style);
         $href = '';
         $target = '';
         $middle_text = $href_left = $left_btn_text = $icon_left = $icon_text = $href_right = $target_right = $right_btn_text = $pos = $icon_right = $middle_text = '';

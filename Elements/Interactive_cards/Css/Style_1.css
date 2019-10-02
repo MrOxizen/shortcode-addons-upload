@@ -76,6 +76,7 @@ and open the template in the editor.
     background: rgba(13, 13, 13, 1.00);
     position: relative;
     z-index: 2;
+    cursor: pointer;
 }
 
  .oxi-opacity-0 {
@@ -135,7 +136,7 @@ and open the template in the editor.
     flex-direction: column
 }
 
-.oxi-close-icon {
+span.oxi-close-icon {
     position: absolute;
     right: 0;
     top: 0;

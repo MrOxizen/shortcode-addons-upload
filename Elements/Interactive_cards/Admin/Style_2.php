@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -205,7 +205,7 @@ class Style_1 extends AdminStyle {
                 'sa_interactive_cards_cl_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#000000',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon .oxi-icons' => 'color:{{VALUE}};'
             ],
@@ -216,7 +216,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => 'rgba(255,255,255,0.00)',
+            'default' => 'rgba(26,26,26,1.00)',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon' => 'background : {{VALUE}}; '
             ],
@@ -303,108 +303,13 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_group_control(
-                'sa_interactive_cards_fp_img', $this->style, [
-            'label' => __('URL', SHORTCODE_ADDOONS),
-            'type' => Controls::MEDIA,
-            'default' => [
-                'type' => 'media-library',
-                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/04/my_logo.png',
-            ]
-                ]
-        );
-
         $this->add_control(
-                'sa_interactive_cards_fp_bg', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(13, 13, 13, 1.00)',
+                'sa_interactive_cards_fp_shortcode', $this->style, [
+            'label' => __('Shortcode', SHORTCODE_ADDOONS),
+            'type' => Controls::TEXTAREA,
+            'placeholder' => 'Place Your Front Part Shortcode Here.',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-ICfull-content' => 'background : {{VALUE}}; '
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_interactive_cards_fp_w', $this->style, [
-            'label' => __('Width', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 250,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 20,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-image .oxi-addons-img' => 'width : {{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
-
-        $this->add_responsive_control(
-                'sa_interactive_cards_fp_h', $this->style, [
-            'label' => __('Height', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 250,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 20,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-image .oxi-addons-img' => 'height : {{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
-
-
-        $this->add_responsive_control(
-                'sa_interactive_cards_fp_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-ICfull-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-back-content-inner' => '',
             ]
                 ]
         );
@@ -412,13 +317,14 @@ class Style_1 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons-back-part', [
             'label' => esc_html__('Back Part', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
                 ]
         );
         $this->add_control(
                 'sa_interactive_cards_bp_shortcode', $this->style, [
             'label' => __('Shortcode', SHORTCODE_ADDOONS),
             'type' => Controls::TEXTAREA,
-            'placeholder' => 'Place Your Shortcode Here.',
+            'placeholder' => 'Place Your Back Part Shortcode Here.',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-back-content-inner' => '',
             ]
