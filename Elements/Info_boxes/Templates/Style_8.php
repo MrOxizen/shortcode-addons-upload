@@ -42,7 +42,7 @@ class Style_8 extends Templates
                     $icon = '<div class="oxi_addons__icon_style_8" ' . ($value['sa_info_boxes_icon_link-id'] != '' ? 'id="' . $value['sa_info_boxes_button_link-id'] . '"' : '') . '> 
                             <div class="oxi_addons__icon">
                                 ' . $this->font_awesome_render($value['sa_info_boxes_fontawesome']) . ' 
-                            /div>
+                            </div>
                          </div>';
                 }
                
@@ -71,7 +71,12 @@ class Style_8 extends Templates
             echo ' </div>';
         }
     }
-
+    public function inline_public_jquery()
+    {
+        return 'setTimeout(function () {
+            oxiequalHeight($(".' . $this->WRAPPER . ' .oxi_addons__info_boxes_main_style_8"));
+        }, 500)';
+    }
     public function old_render()
     {
         $styledata = $this->dbdata;

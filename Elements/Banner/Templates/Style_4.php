@@ -19,7 +19,7 @@ class Style_4 extends Templates
 {
 
     public function default_render($style, $child, $admin)
-    {
+    { 
         $heading =  $details =  $button = $line = '';
         if (array_key_exists('sa_banner_heading_text', $style) && $style['sa_banner_heading_text'] != '') {
             $heading = '<' . $style['sa_banner_tag'] . ' class="oxi_addons__heading" ' . $this->animation_render('sa_banner_heading_animation', $style) . '>' . $this->text_render($style['sa_banner_heading_text']) . '</' . $style['sa_banner_tag'] . '>';
@@ -51,7 +51,7 @@ class Style_4 extends Templates
             }
         } 
         echo '<div class="oxi_addons__banner_wrapper">
-                    <div class="oxi_addons__banner_style_4 row">  
+                    <div class="oxi_addons__banner_style_4">  
                         <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
                         ' . $line . ' 
                         ' . $heading . ' 

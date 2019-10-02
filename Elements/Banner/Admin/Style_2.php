@@ -89,7 +89,7 @@ class Style_2 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_btn_position',
             $this->style,
             [
@@ -190,7 +190,7 @@ class Style_2 extends AdminStyle
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_logo_position',
             $this->style,
             [
@@ -383,93 +383,93 @@ class Style_2 extends AdminStyle
         );
         $this->end_controls_section();
 
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Description Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
-        $this->add_control(
-            'sa_banner_details_text',
-            $this->style,
-            [
-                'label' => __('Description', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
-                'default' => 'Share your challenge with our team and we l work with you to deliver a revolutionary digital product.',
-                'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => ''
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_banner_details_typo',
-            $this->style,
-            [
-                'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => ''
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_banner_details_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#fff',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            'sa_banner_details_animation',
-            $this->style,
-            [
-                'type' => Controls::ANIMATION, 
-            ]
-        );
-
-        $this->add_responsive_control(
-            'sa_banner_details_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
+            $this->start_controls_section(
+                'shortcode-addons',
+                [
+                    'label' => esc_html__('Description Settings', SHORTCODE_ADDOONS),
+                    'showing' => FALSE,
+                ]
+            );
+            $this->add_control(
+                'sa_banner_details_text',
+                $this->style,
+                [
+                    'label' => __('Description', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXTAREA,
+                    'default' => 'Share your challenge with our team and we l work with you to deliver a revolutionary digital product.',
+                    'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => ''
                     ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
+                ]
+            );
+            $this->add_group_control(
+                'sa_banner_details_typo',
+                $this->style,
+                [
+                    'label' => __('Typography', SHORTCODE_ADDOONS),
+                    'type' => Controls::TYPOGRAPHY,
+                    'include' => Controls::ALIGNNORMAL,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => ''
                     ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
+                ]
+            );
+            $this->add_control(
+                'sa_banner_details_color',
+                $this->style,
+                [
+                    'label' => __('Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => '#fff',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => 'color:{{VALUE}};'
                     ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
+                ]
+            );
 
-        $this->end_controls_section();
+            $this->add_group_control(
+                'sa_banner_details_animation',
+                $this->style,
+                [
+                    'type' => Controls::ANIMATION, 
+                ]
+            );
+
+            $this->add_responsive_control(
+                'sa_banner_details_padding',
+                $this->style,
+                [
+                    'label' => __('Padding', SHORTCODE_ADDOONS),
+                    'type' => Controls::DIMENSIONS,
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => '',
+                    ],
+                    'range' => [
+                        '%' => [
+                            'min' => 0,
+                            'max' => 50,
+                            'step' => .1,
+                        ],
+                        'px' => [
+                            'min' => -200,
+                            'max' => 200,
+                            'step' => 1,
+                        ],
+                        'em' => [
+                            'min' => 0,
+                            'max' => 10,
+                            'step' => .1,
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons__banner_style_2 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    ],
+                ]
+            );
+
+            $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
 

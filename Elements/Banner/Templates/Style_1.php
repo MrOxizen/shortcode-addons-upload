@@ -51,9 +51,9 @@ class Style_1 extends Templates
             if (array_key_exists('sa_banner_button_right_text', $style) && $style['sa_banner_button_right_text'] != '') {
                 $icon_right = '';
                 if (array_key_exists('sa_banner_button_right_icon_postion', $style) && $style['sa_banner_button_right_icon_postion'] == 'left') {
-                    $icon_right = '' . $this->font_awesome_render($style['sa_banner_button_right_icon']) . '' . $this->text_render($style['sa_banner_button_right_text']) . '';
+                    $icon_right = '' . $this->font_awesome_render($style['sa_banner_button_right_icon']) . ' ' . $this->text_render($style['sa_banner_button_right_text']) . '';
                 } else {
-                    $icon_right = '' . $this->text_render($style['sa_banner_button_right_text']) . '' . $this->font_awesome_render($style['sa_banner_button_right_icon']) . '';
+                    $icon_right = '' . $this->text_render($style['sa_banner_button_right_text']) . ' ' . $this->font_awesome_render($style['sa_banner_button_right_icon']) . '';
                 }
                 if (array_key_exists('sa_banner_button_right_link-url', $style) && $style['sa_banner_button_right_link-url'] != '') {
                     $right_button = '<div class="oxi_addons__button_right_main" ' . $this->animation_render('oxi_addons__button_right_main', $style) . '>
@@ -73,8 +73,8 @@ class Style_1 extends Templates
         if ($this->media_render('sa_banner_front_image', $style) != '') {
             $image = '
             <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
-                <div ' . $this->animation_render('sa_banner_front_image_animation', $style) . ' class="oxi_addons_image_main" ' . (array_key_exists('sa_banner_image_position', $style) && $style['sa_banner_image_position'] != 'left' ? 'style="transform: translateX(0%)"' : '') . '>
-                    <img ' . (array_key_exists('sa_banner_image_switcher', $style) && $style['sa_banner_image_switcher'] != 'yes' ? 'style="width: 150%; max-width: 150%"' : '') . ' src="' . $this->media_render('sa_banner_front_image', $style) . '" class="oxi_addons__image" alt="front image"/>
+                <div  class="oxi_addons_image_main" ' . (array_key_exists('sa_banner_image_position', $style) && $style['sa_banner_image_position'] != 'left' ? 'style="transform: translateX(0%)"' : '') . '>
+                    <img  ' . $this->animation_render('sa_banner_front_image_animation', $style) . ' ' . (array_key_exists('sa_banner_image_switcher', $style) && $style['sa_banner_image_switcher'] != 'yes' ? 'style="width: 100%; max-width: 100%"' : '') . ' src="' . $this->media_render('sa_banner_front_image', $style) . '" class="oxi_addons__image" alt="front image"/>
                 </div> 
             </div>
             ';
@@ -106,7 +106,7 @@ class Style_1 extends Templates
         }
 
         echo '<div class="oxi_addons__banner_wrapper">
-                    <div class="oxi_addons__banner_style_1 row"> 
+                    <div class="oxi_addons__banner_style_1"> 
                         ' . $image_and_content . '
                     </div>';
         echo ' </div>';

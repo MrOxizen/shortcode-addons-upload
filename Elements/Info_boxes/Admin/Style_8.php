@@ -456,7 +456,7 @@ class Style_8 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR, 
                 'default' => '#28a745',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__icon_style_8 .oxi_addons__icon' => 'background-color:{{VALUE}};'
                 ],

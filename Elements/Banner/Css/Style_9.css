@@ -15,7 +15,8 @@
 	padding: 140px 140px 140px 140px;
 	overflow: hidden;
 	display: flex;
-	align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .oxi_addons__banner_style_9 .oxi_addons_image_main {
     display: flex;

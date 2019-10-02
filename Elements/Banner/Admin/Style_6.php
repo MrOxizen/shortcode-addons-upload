@@ -253,7 +253,7 @@ class Style_6 extends AdminStyle
                 'return_value' => 'yes',
             ]
         ); 
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_line_position',
             $this->style,
             [
@@ -375,7 +375,7 @@ class Style_6 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_icon_position',
             $this->style,
             [
@@ -539,7 +539,7 @@ class Style_6 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_btn_position',
             $this->style,
             [

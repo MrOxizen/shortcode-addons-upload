@@ -62,7 +62,7 @@ class Style_4 extends AdminStyle
             ]
         ); 
     
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_btn_position',
             $this->style,
             [
@@ -209,12 +209,12 @@ class Style_4 extends AdminStyle
                 'range' => [
                     '%' => [
                         'min' => 0,
-                        'max' => 250,
+                        'max' => 500,
                         'step' => 1,
                     ],
                     'px' => [
                         'min' => 10,
-                        'max' => 700,
+                        'max' => 1200,
                         'step' =>  1,
                     ], 
                 ], 

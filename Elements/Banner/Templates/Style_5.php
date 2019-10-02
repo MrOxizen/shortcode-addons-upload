@@ -109,7 +109,7 @@ class Style_5 extends Templates
             ' . $image . ' ';
         }
         echo '<div class="oxi_addons__banner_wrapper">
-                    <div class="oxi_addons__banner_style_5 row">  
+                    <div class="oxi_addons__banner_style_5">  
                         '.$image_and_content.'
                     </div>';
         echo ' </div>';

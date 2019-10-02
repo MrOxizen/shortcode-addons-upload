@@ -351,7 +351,7 @@ class Style_5 extends AdminStyle
                 'label' => __('Tooltip Position', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
                 'loader' => TRUE,
-                'default' => 'top',
+                'default' => 'sa_tooltip_top',
                 'options' => [
                     'sa_tooltip_top' => __('Top', SHORTCODE_ADDOONS),
                     'sa_tooltip_bottom' => __('Bottom', SHORTCODE_ADDOONS),

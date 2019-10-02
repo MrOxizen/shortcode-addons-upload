@@ -427,7 +427,7 @@ class Style_4 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR, 
                 'default' => '#28a745',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__icon_style_4 .oxi-icons' => 'background-color:{{VALUE}};'
                 ],
@@ -487,7 +487,7 @@ class Style_4 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR, 
                 'default' => '#28aaa5',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__info_boxes_main_style_4:hover .oxi-icons' => 'background-color:{{VALUE}};'
                 ],

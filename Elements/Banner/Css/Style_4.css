@@ -8,8 +8,7 @@
 
  
 .oxi_addons__banner_style_4 {
-	width: 100%;
-	float: left;
+	width: 100%; 
 	background: linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)), url("https://www.oxilab.org/wp-content/uploads/2019/04/03.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -24,6 +23,7 @@
     -moz-transition: all 0.5 ease;
     -ms-transition: all 0.5 ease;
     -o-transition: all 0.5 ease;
+    flex-wrap: wrap;
 }
 
 
@@ -36,9 +36,9 @@
     line-height: 1;
     text-align: left;
     color: #1cada6;
-    padding: 0px 15px 0px 70px;
-    align-items: center;
+    padding: 0px 15px 0px 70px; 
     line-height: 1;
+
 }
 
 .oxi_addons__banner_style_4 .oxi_addons__details {
@@ -60,7 +60,10 @@
 
 
 .oxi_addons__banner_style_4 .oxi_addons__button_main {
-    display: inline-block
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
 }
 
 .oxi_addons__banner_style_4 .oxi_addons__button {
@@ -113,10 +116,10 @@
     }
 
     .oxi_addons__banner_style_4 .oxi_addons__heading {
-        width: 100%;
-        display: flex;
+        width: 100%; 
         font-size: 35px;
         padding: 0px 15px 0px 50px;
+        flex-wrap: wrap;
     }
 
     .oxi_addons__banner_style_4 .oxi_addons__details {
@@ -148,8 +151,7 @@
         left: 0; 
     }
     .oxi_addons__banner_style_4 .oxi_addons__heading {
-        width: 100%;
-        display: flex;
+        width: 100%; 
         font-size: 26px;
         padding: 0px 10px 0px 10px;
     }

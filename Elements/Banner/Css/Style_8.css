@@ -9,7 +9,8 @@
     padding: 110px 60px 110px 60px;
     overflow: hidden;
     display: flex;
-   justify-content: center
+   justify-content: center;
+   flex-wrap: wrap;
 }
 .oxi_addons__banner_style_8 .oxi_addons__overlay{
     background: rgba(10,119,173,0.73);

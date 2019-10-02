@@ -19,6 +19,7 @@
     -moz-transition: all 0.5 ease;
     -ms-transition: all 0.5 ease;
     -o-transition: all 0.5 ease;
+    flex-wrap: wrap;
 }
 .oxi_addons__banner_style_5 .oxi_addons_image_main {
     display: flex;
