@@ -47,7 +47,7 @@ class Style_10 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_10' => ''
                 ],
             ]
         );
@@ -80,7 +80,7 @@ class Style_10 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -162,7 +162,7 @@ class Style_10 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -192,7 +192,7 @@ class Style_10 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -224,7 +224,7 @@ class Style_10 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons_image_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons_image_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -254,7 +254,7 @@ class Style_10 extends AdminStyle
                 'default' => 'Vehicle Mechanics ',
                 'placeholder' => 'Lorem Ipsum',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__heading' => ''
                 ],
             ]
         );
@@ -285,7 +285,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__heading' => ''
                 ],
             ]
         );
@@ -297,7 +297,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#3fe3af',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__heading' => 'color:{{VALUE}};'
                 ],
             ]
         );  
@@ -330,7 +330,7 @@ class Style_10 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -367,7 +367,7 @@ class Style_10 extends AdminStyle
                 'return_value' => 'yes',
             ]
         ); 
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_banner_line_position',
             $this->style,
             [
@@ -393,7 +393,7 @@ class Style_10 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line_main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__line_main' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -423,7 +423,7 @@ class Style_10 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__line' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -448,7 +448,7 @@ class Style_10 extends AdminStyle
                     ], 
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line' => 'height: {{SIZE}}px;',
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__line' => 'height: {{SIZE}}px;',
                 ],
             ]
         );
@@ -464,7 +464,7 @@ class Style_10 extends AdminStyle
                     'sa_banner_line_switcher' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__line' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__line' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -495,7 +495,7 @@ class Style_10 extends AdminStyle
                 'default' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout ',
                 'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__details' => ''
                 ],
             ]
         );
@@ -507,7 +507,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__details' => ''
                 ],
             ]
         );
@@ -519,7 +519,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__details' => 'color:{{VALUE}};'
                 ],
             ]
         ); 
@@ -559,7 +559,7 @@ class Style_10 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_9 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_10 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

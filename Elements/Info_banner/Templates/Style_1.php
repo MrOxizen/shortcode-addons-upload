@@ -33,38 +33,37 @@ class Style_1 extends Templates
 
         echo '
             <div class="oxi_addons__info_banner_style_1">
-            ' . $image . '';
+            ' . $image . ' 
+            <div class="oxi-addons-rows">'; 
             $datas = (array_key_exists('sa_info_banner_repeater', $style) && is_array($style['sa_info_banner_repeater']) ? $style['sa_info_banner_repeater'] : []);
-        ?>
-            <div class="oxi-addons-row">
-        <?php
-        foreach ($datas as $key => $value) {
-            $heading  = $details = $icon = '';
-            if (array_key_exists('sa_info_banner_title', $value) && $value['sa_info_banner_title'] != '') {
-                $heading = '<' . $style['sa_banner_title_tag'] . ' class="oxi_addons__heading heading-'.$key.'" >' . $this->text_render($value['sa_info_banner_title']) . '</' . $style['sa_banner_title_tag'] . '>';
-            }
-            if (array_key_exists('sa_info_banner_desc', $value) && $value['sa_info_banner_desc'] != '') {
-                $details = '<div class="oxi_addons__details details-'.$key.'" > ' . $this->text_render($value['sa_info_banner_desc']) . ' </div>';
-            }
-            if (array_key_exists('sa_info_banner_icon', $value) && $value['sa_info_banner_icon'] != '') {
-                $icon = '<div class="oxi_addons__icon_main">
-                                <div class="oxi_addons__icon">
-                                ' . $this->font_awesome_render($value['sa_info_banner_icon']) . '
+            foreach ($datas as $key => $value) {
+                $heading  = $details =  $icon = '';
+                if (array_key_exists('sa_info_banner_title', $value) && $value['sa_info_banner_title'] != '') {
+                    $heading = '<' . $style['sa_banner_title_tag'] . ' class="oxi_addons__heading heading-'.$key.'" >' . $this->text_render($value['sa_info_banner_title']) . '</' . $style['sa_banner_title_tag'] . '>';
+                }
+                if (array_key_exists('sa_info_banner_desc', $value) && $value['sa_info_banner_desc'] != '') {
+                    $details = '<div class="oxi_addons__details details-'.$key.'" > ' . $this->text_render($value['sa_info_banner_desc']) . ' </div>';
+                }
+                if (array_key_exists('sa_info_banner_icon', $value) && $value['sa_info_banner_icon'] != '') {
+                    $icon = '<div class="oxi_addons__icon_main">
+                                    <div class="oxi_addons__icon">
+                                    ' . $this->font_awesome_render($value['sa_info_banner_icon']) . '
+                                    </div>
+                                </div>';
+                }
+                echo '<div class="oxi_addons__info_banner_content_style_1 '.$this->column_render('sa_addons_info_banner_column', $style).'" >
+                            <div class="oxi_addons__content_main_wrapper" ' . $this->animation_render('sa_addons_info_banner_animation', $style) . '>
+                                <div class="oxi_addons__content_main">
+                                    ' . $icon . '
+                                    ' . $heading . '
+                                    ' . $details . '
                                 </div>
-                            </div>';
-            }
-            echo '<div class="oxi_addons__info_banner_content_style_1 '.$this->column_render('sa_addons_info_banner_column', $style).'" >
-                        <div class="oxi_addons__content_main_wrapper" ' . $this->animation_render('sa_addons_info_banner_animation', $style) . '>
-                            <div class="oxi_addons__content_main">
-                                ' . $icon . '
-                                ' . $heading . '
-                                ' . $details . '
                             </div>
                         </div>
-                    </div>
-                ';
-        }
-        '</div></div>';
+                    ';
+            }
+             echo '</div>
+        </div>';
     }
 
     public function old_render()

@@ -32,7 +32,7 @@ class Style_2 extends Templates
         }
 
         echo '
-            <div class="oxi_addons__info_banner_style_2 oxi-addons-row">';
+            <div class="oxi_addons__info_banner_style_2">';
         if ($style['sa_info_banner_image_position'] == 'left') {
             echo '<div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">' . $image . '</div> ';
         }
@@ -41,10 +41,10 @@ class Style_2 extends Templates
         foreach ($datas as $key => $value) {
             $heading  = $details = $icon = '';
             if (array_key_exists('sa_info_banner_title', $value) && $value['sa_info_banner_title'] != '') {
-                $heading = '<' . $style['sa_banner_title_tag'] . ' class="oxi_addons__heading heading-'.$key.'" >' . $this->text_render($value['sa_info_banner_title']) . '</' . $style['sa_banner_title_tag'] . '>';
+                $heading = '<' . $style['sa_banner_title_tag'] . ' class="oxi_addons__heading heading-' . $key . '" >' . $this->text_render($value['sa_info_banner_title']) . '</' . $style['sa_banner_title_tag'] . '>';
             }
             if (array_key_exists('sa_info_banner_desc', $value) && $value['sa_info_banner_desc'] != '') {
-                $details = '<div class="oxi_addons__details details-'.$key.'" > ' . $this->text_render($value['sa_info_banner_desc']) . ' </div>';
+                $details = '<div class="oxi_addons__details details-' . $key . '" > ' . $this->text_render($value['sa_info_banner_desc']) . ' </div>';
             }
             if (array_key_exists('sa_info_banner_icon', $value) && $value['sa_info_banner_icon'] != '') {
                 $icon = '<div class="oxi_addons__icon_main">
@@ -70,7 +70,7 @@ class Style_2 extends Templates
             echo '<div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">' . $image . '</div> ';
         }
 
-        '</div>';
+        echo '</div>';
     }
 
     public function old_render()

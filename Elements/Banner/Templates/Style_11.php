@@ -92,7 +92,7 @@ class Style_11 extends Templates
             ' . $image . ' ';
         }
         echo '<div class="oxi_addons__banner_wrapper">
-                    <div class="oxi_addons__banner_style_11 row">  
+                    <div class="oxi_addons__banner_style_11">  
                         ' . $image_and_content . '
                     </div>';
         echo ' </div>';

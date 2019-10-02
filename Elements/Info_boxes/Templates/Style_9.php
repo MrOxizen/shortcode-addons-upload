@@ -64,7 +64,12 @@ class Style_9 extends Templates
             echo ' </div>';
         }
     }
-
+    public function inline_public_jquery()
+    {
+        return 'setTimeout(function () {
+            oxiequalHeight($(".' . $this->WRAPPER . ' .oxi_addons__info_boxes_main_style_9"));
+        }, 500)';
+    }
     public function old_render()
     {
         $styledata = $this->dbdata;

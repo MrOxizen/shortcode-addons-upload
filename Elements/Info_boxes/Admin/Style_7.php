@@ -574,7 +574,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi_addons_image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons_image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -608,7 +608,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__image_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__image_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -648,7 +648,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_7' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__heading_style_7' => ''
                 ],
             ]
         );
@@ -670,7 +670,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#757575',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_7' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__heading_style_7' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -722,7 +722,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__heading_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -742,7 +742,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_7' => ''
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__details_style_7' => ''
                 ],
             ]
         );
@@ -765,7 +765,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#808080',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_7' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__details_style_7' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -815,7 +815,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__details_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons__details_style_7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

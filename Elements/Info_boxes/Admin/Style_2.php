@@ -35,8 +35,50 @@ class Style_2 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Feature Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
+            ]
+        );
+        $this->add_repeater_control(
+            'sa_info_info_box_repeater',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER, 
+                'fields' => [
+                    'sa_info_info_box_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fab fa-accusoft'
+                    ],
+                    'sa_info_info_box_title' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT, 
+                        'default' => esc_html__('What is Lorem Ipsum? ', SHORTCODE_ADDOONS),
+                        'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2 .heading-{{KEY}}' => '',
+                        ],
+                    ],
+                    'sa_info_info_box_desc' => [
+                        'label' => esc_html__('Description', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXTAREA,
+                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SA_ELEMENTOR_TEXTDOMAIN),
+                         'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2 .details-{{KEY}}' => '',
+                        ],
+                    ],   
+                ], 
+                'title_field' => 'sa_info_info_box_title',
+            ]
+        );
+
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
             ]
         );
 
@@ -138,7 +180,12 @@ class Style_2 extends AdminStyle
         );
         $this->end_controls_section();
 
-        $this->start_controls_section(
+       
+
+        $this->end_section_devider();
+
+        $this->start_section_devider();
+         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
@@ -226,7 +273,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR, 
-                'default' => ' #ffdd33',
+                'default' => ' #fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__icon_style_2 .oxi-icons' => 'color:{{VALUE}};'
                 ],
@@ -239,7 +286,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR, 
                 'default' => '#28a745',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__icon_style_2 .oxi-icons' => 'background-color:{{VALUE}};'
                 ],
@@ -299,7 +346,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR, 
                 'default' => '#28aaa5',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2:hover .oxi-icons' => 'background-color:{{VALUE}};'
                 ],
@@ -404,10 +451,6 @@ class Style_2 extends AdminStyle
             ]
         );
         $this->end_controls_section();
-
-        $this->end_section_devider();
-
-        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [

@@ -17,6 +17,7 @@
     padding: 100px 35px 100px 35px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     transition: all 0.5 ease;
     -webkit-transition: all 0.5 ease;
     -moz-transition: all 0.5 ease;
@@ -84,7 +85,7 @@
 }
 
 .oxi_addons__banner_style_1 .oxi_addons__button_left .oxi-icons {
-    padding-right: 5px;
+    padding-left: 5px;
     color: #ffffff;
 }
 

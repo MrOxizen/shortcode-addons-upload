@@ -47,22 +47,22 @@ class Style_1 extends AdminStyle
                 'type' => Controls::REPEATER, 
                 'fields' => [
                     'sa_info_banner_icon' => [
-                        'label' => esc_html__('Icon', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
                         'default' => 'fab fa-accusoft'
                     ],
                     'sa_info_banner_title' => [
-                        'label' => esc_html__('Title', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT, 
-                        'default' => esc_html__('What is Lorem Ipsum? ', SA_ELEMENTOR_TEXTDOMAIN),
+                        'default' => esc_html__('What is Lorem Ipsum? ', SHORTCODE_ADDOONS),
                         'selector' => [
                             '{{WRAPPER}} .oxi_addons__info_banner_content_style_1 .heading-{{KEY}}' => '',
                         ],
                     ],
                     'sa_info_banner_desc' => [
-                        'label' => esc_html__('Description', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Description', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXTAREA,
-                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SA_ELEMENTOR_TEXTDOMAIN),
+                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SHORTCODE_ADDOONS),
                          'selector' => [
                             '{{WRAPPER}} .oxi_addons__info_banner_content_style_1 .details-{{KEY}}' => '',
                         ],
@@ -528,11 +528,11 @@ class Style_1 extends AdminStyle
                 'showing' => FALSE,
             ]
         );
-        $this->add_control(
-            'sa_banner_btn_position',
+        $this->add_responsive_control(
+            'sa_banner_icon_position',
             $this->style,
             [
-                'label' => __('Button Postion', SHORTCODE_ADDOONS), 
+                'label' => __('Icon Postion', SHORTCODE_ADDOONS), 
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'center',
@@ -650,7 +650,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#28a745',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__info_banner_content_style_1 .oxi_addons__icon' => 'background-color:{{VALUE}};'
                 ],

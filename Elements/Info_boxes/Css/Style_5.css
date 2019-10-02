@@ -5,25 +5,18 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    box-shadow: 0px 3px 5px 0px rgb(179, 179, 179);
-    border-style: solid;
-    border-width: 2px 2px 2px 2px;
-    border-color: #ff8c78;
+    padding: 20px; 
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -ms-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    background:  rgba(216, 225, 255, 0.69) ;
+    -o-transition: 0.5s all; 
 }
  .oxi_addons__info_boxes_main_style_5:hover {  
-	box-shadow: 2px 5px 11px 2px rgba(130, 130, 130, 0.68);
-	border-width: 2px 2px 2px 2px;
-	border-style: solid;
-	border-color: #7fb9fa; 
+	box-shadow: 2px 5px 11px 2px rgba(130, 130, 130, 0.68); 
 }
  .oxi_addons__heading_style_5 {
+     width: 100%;
     color: #757575;
     font-size: 22px;
     font-weight: bold;
@@ -32,17 +25,17 @@
     margin: 0;
     padding: 10px 0;
 }
-
  .oxi_addons__details_style_5 {
-    color: #808080;
-    font-size: 16px;
-    font-weight: normal;
+     width: 100%;
+    color: #757575;
+    font-size: 22px;
+    font-weight: bold;
     text-transform: capitalize;
     text-align: center;
     margin: 0;
     padding: 10px 0;
 }
-
+ 
  .oxi_addons__icon_style_5 {
     width: 100%;
     display: flex;
