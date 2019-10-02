@@ -160,6 +160,15 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+         $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal Icon', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Cross Icon', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_ab_icon', $this->style, [
             'label' => __('Icon', SHORTCODE_ADDOONS),
@@ -275,13 +284,8 @@ class Style_1 extends AdminStyle {
                 ]
         );
 
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Cross Icon Setting', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
-                ]
-        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_ab_ci', $this->style, [
             'label' => __('Cross Icon', SHORTCODE_ADDOONS),
@@ -396,7 +400,8 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-
+         $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
