@@ -1,8 +1,7 @@
-.oxi_addons__drop_caps_main {
-    display: inline-block;  
-    float: left;
+.oxi_addons__drop_caps_main_style_2 {
+    display: inline-block;   
 }
-.oxi_addons__text {
+.oxi_addons__drop_caps_main_style_2 .oxi_addons__text {
     display: flex;
     justify-content: center;
     align-items: center;

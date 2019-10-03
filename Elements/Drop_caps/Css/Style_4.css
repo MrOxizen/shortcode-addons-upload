@@ -1,8 +1,7 @@
-.oxi_addons__drop_caps_main {
-    display: inline-block;  
-    float: left;
+.oxi_addons__drop_caps_main_style_4 {
+    display: inline-block;   
 }
-.oxi_addons__text {
+.oxi_addons__drop_caps_main_style_4 .oxi_addons__text {
     position: relative;
     display: flex;
     justify-content: center;
@@ -11,11 +10,10 @@
     height: 70px; 
     color: #fff;
     font-size: 22px;
-    margin: 5px; 
-    border: 2px solid #545454;
+    margin: 5px;  
     overflow: hidden;
 }
-.oxi_addons__text::after {
+.oxi_addons__drop_caps_main_style_4 .oxi_addons__text::after {
 	position: absolute;
 	content: "";
 	background: rgba(186,23,23,0.00);

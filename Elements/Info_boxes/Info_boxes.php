@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Accordion
+ * Description of Info Box
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Elements_Frontend;
 class Info_boxes extends Elements_Frontend {
 
     public function pre_active() {
-        return array('style-1');
+        return array('Style_1','Style_2','Style_3');
     }
 
     public function templates() {
