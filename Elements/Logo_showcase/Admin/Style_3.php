@@ -58,6 +58,49 @@ class Style_3 extends AdminStyle
                 ],
             ]
         );
+        $this->add_repeater_control(
+            'sa_logo_showcase_data',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_logo_showcase_text' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT,
+                        'default' => 'Logo 01',
+                    ],
+                    'sa_logo_showcase_img' => [
+                        'type' => Controls::MEDIA,
+                        'controller' => 'add_group_control',
+                        'default' => [
+                            'type' => 'media-library',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/08/logo-5.png',
+                        ],
+                    ],
+                    'sa_logo_showcase_url_open' => [
+                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'type' => Controls::SWITCHER,
+                        'default' => '',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'return_value' => 'link_show',
+                    ],
+
+                    'sa_logo_showcase_url' => [
+                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_logo_showcase_url_open' => 'link_show'
+                        ]
+                    ],
+                ],
+                'title_field' => 'sa_logo_showcase_text',
+                'button' => 'Add New Logo',
+            ]
+        );
         $this->add_responsive_control(
             'sa_logo_showcase_logo_w',
             $this->style,

@@ -20,8 +20,9 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        foreach ($child as $v) {
-            $value = $v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : [];
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_logo_showcase_data', $styledata) && is_array($styledata['sa_logo_showcase_data'])) ? $styledata['sa_logo_showcase_data'] : [];
+        foreach ($all_data as $value) {
             $img = $link = $endlink = '';
 
             if (array_key_exists('sa_logo_showcase_url_open', $value) && $value['sa_logo_showcase_url_open'] != '0') {
@@ -43,16 +44,6 @@ class Style_1 extends Templates
                         </div>';
             echo $endlink;
             echo '</div>';
-            if ($admin == 'admin') :
-                echo '<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
             echo '</div>';
         }
     }
