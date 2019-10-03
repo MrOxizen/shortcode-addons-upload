@@ -73,6 +73,11 @@ and open the template in the editor.
     text-shadow: 0px 0px 2px #ffffff;
     padding: 4px 4px 4px 30px
 }
+.oxi-addons-AL-SE-7 .oxi-addonsAL-SE-col-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons {
     display: flex;
