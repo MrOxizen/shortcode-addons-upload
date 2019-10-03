@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Elements_Frontend;
 class Info_banner extends Elements_Frontend {
 
     public function pre_active() {
-        return array('Style_1','Style_2');
+        return array('Style_1','Style_2', 'Style_3');
     }
 
     public function templates() {

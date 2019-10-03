@@ -44,7 +44,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::TEXT,
             'placeholder' => 'w',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => '',
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_3 .oxi_addons__text' => '',
             ],
                 ]
         );
@@ -63,7 +63,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__drop_caps_main' => 'float:{{VALUE}};',
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_3' => 'float:{{VALUE}};',
             ],
                 ]
         );
@@ -73,12 +73,12 @@ class Style_3 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 100,
             ],
             'range' => [
                 'px' => [
                     'min' => 50,
-                    'max' => 500,
+                    'max' => 200,
                     'step' => 1,
                 ],
                 'em' => [
@@ -93,7 +93,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};', 
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_3 .oxi_addons__text' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};', 
             ],
                 ]
         );
@@ -125,7 +125,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons__drop_caps_main_style_3 .oxi_addons__text' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -150,7 +150,7 @@ class Style_3 extends AdminStyle {
             'default' => '#545454',
             //  'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => 'color:{{VALUE}};'
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_3 .oxi_addons__text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -159,7 +159,7 @@ class Style_3 extends AdminStyle {
                 'sa_drop_caps_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => ''
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_3 .oxi_addons__text' => ''
             ],
                 ]
         );
@@ -167,7 +167,7 @@ class Style_3 extends AdminStyle {
                 'sa_drop_caps_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => ''
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_3 .oxi_addons__text' => ''
             ],
                 ]
         );
@@ -203,7 +203,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_3 .oxi_addons__text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

@@ -22,7 +22,7 @@ class Style_1 extends Templates
     {
         $heading = $details = $left_button = $right_button = $image = $image_and_content = '';
         if (array_key_exists('sa_banner_heading_text', $style) && $style['sa_banner_heading_text'] != '') {
-            $heading = '<' . $style['sa_banner_tag'] . ' class="oxi_addons__heading" ' . $this->animation_render('sa_banner_heading_animation', $style) . '>' . $this->text_render($style['sa_banner_heading_text']) . '</' . $style['sa_banner_tag'] . '>';
+            $heading = '<' . $style['sa_banner_tag'] . ' class="oxi_addons__heading"    >' . $this->text_render($style['sa_banner_heading_text']) . '</' . $style['sa_banner_tag'] . '>';
         }
         if (array_key_exists('sa_banner_details_text', $style) && $style['sa_banner_details_text'] != '') {
             $details = '<div class="oxi_addons__details" ' . $this->animation_render('sa_banner_details_animation', $style) . '> ' . $this->text_render($style['sa_banner_details_text']) . ' </div>';

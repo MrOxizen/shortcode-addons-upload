@@ -50,7 +50,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::TEXT,
             'placeholder' => 'w',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => '',
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_1 .oxi_addons__text' => '',
             ],
                 ]
         );
@@ -69,7 +69,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__drop_caps_main' => 'float:{{VALUE}};',
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_1' => 'float:{{VALUE}};',
             ],
                 ]
         );
@@ -101,7 +101,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => 'Padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_1 .oxi_addons__text' => 'Padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -125,7 +125,7 @@ class Style_1 extends AdminStyle {
             'default' => '#787878',
             //  'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => 'color:{{VALUE}};'
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_1 .oxi_addons__text' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -134,7 +134,7 @@ class Style_1 extends AdminStyle {
                 'sa_drop_caps_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons__text' => ''
+                '{{WRAPPER}}.oxi_addons__drop_caps_main_style_1 .oxi_addons__text' => ''
             ],
                 ]
         );
