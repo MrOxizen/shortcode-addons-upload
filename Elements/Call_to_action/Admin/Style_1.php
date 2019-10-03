@@ -77,7 +77,7 @@ class Style_1 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => 200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -195,7 +195,7 @@ class Style_1 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -315,7 +315,7 @@ class Style_1 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -613,7 +613,7 @@ class Style_1 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => 200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -645,7 +645,7 @@ class Style_1 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => 200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],

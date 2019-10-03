@@ -20,9 +20,10 @@ class Style_5 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        foreach ($child as $v) {
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_logo_showcase_data', $styledata) && is_array($styledata['sa_logo_showcase_data'])) ? $styledata['sa_logo_showcase_data'] : [];
+        foreach ($all_data as $key => $value) {
             $img = $tooltip = $link = $endlink = '';
-            $value = $v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : [];
             if (array_key_exists('sa_logo_showcase_url_open', $value) && $value['sa_logo_showcase_url_open'] != '0') {
                 if ($value['sa_logo_showcase_url-url'] != '') {
                     $link .= '<a ' . $this->url_render('sa_logo_showcase_url', $value) . ' class="logo_showcase_link">';
@@ -40,22 +41,12 @@ class Style_5 extends Templates
             echo '<div class="' . $this->column_render('sa_logo_showcase_col', $style) . '  ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="sa_addons_logo_showcase_container">';
             echo $link;
-            echo '<div class="sa_addons_logo_showcase_style_5 ' . $this->array_render('sa_logo_showcase_tooltip_posi', $style) . '" ' . $this->animation_render('sa_logo_showcase_animation', $style) . '>
+            echo '<div class="sa_addons_logo_showcase_style_5 sa_addons_logo_showcase_style_5_' . $key . ' ' . $this->array_render('sa_logo_showcase_tooltip_posi', $style) . '" ' . $this->animation_render('sa_logo_showcase_animation', $style) . '>
                             ' . $img . '
                             ' . $tooltip . '
                         </div>';
             echo $endlink;
             echo '</div>';
-            if ($admin == 'admin') :
-                echo '<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
             echo '</div>';
         }
     }

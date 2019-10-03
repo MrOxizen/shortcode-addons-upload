@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_4 extends AdminStyle {
+class Style_7 extends AdminStyle {
 
     public function register_controls() {
 
@@ -41,15 +41,7 @@ class Style_4 extends AdminStyle {
                 'sa_ab_bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-row' => ''
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_ab_br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-row' => ''
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-row' => ''
             ],
                 ]
         );
@@ -60,7 +52,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => '',
+                'size' => 0,
             ],
             'range' => [
                 '%' => [
@@ -80,15 +72,14 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-BI' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
         $this->add_group_control(
                 'sa_ab_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-row' => ''
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-row' => ''
             ],
                 ]
         );
@@ -124,7 +115,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-row' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-row' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -154,7 +145,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -169,15 +160,7 @@ class Style_4 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->start_controls_tabs(
-                'shortcode-addons-start-tabs', [
-            'options' => [
-                'normal' => esc_html__('Normal Icon', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Cross Icon', SHORTCODE_ADDOONS),
-            ]
-                ]
-        );
-        $this->start_controls_tab();
+
         $this->add_control(
                 'sa_ab_icon', $this->style, [
             'label' => __('Icon', SHORTCODE_ADDOONS),
@@ -194,7 +177,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::ICON,
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-            'default' => 'far fa-bell',
+            'default' => 'fas fa-exclamation-triangle',
             'loader' => TRUE,
             'condition' => [
                 'sa_ab_icon' => 'yes',
@@ -227,7 +210,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-F-icon' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
@@ -239,16 +222,34 @@ class Style_4 extends AdminStyle {
                 'sa_ab_icon_color', $this->style, [
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#b51717',
+            'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-F-icon' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon' => 'color:{{VALUE}};'
             ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
             ],
                 ]
         );
-       
+        $this->add_group_control(
+                'sa_ab_icon_bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-col-one' => ''
+            ],
+            'condition' => [
+                'sa_ab_icon' => 'yes',
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_ab_icon_br', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-col-one' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_ab_icon_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -275,16 +276,21 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-F-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
             ],
                 ]
         );
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Cross Icon Setting', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+                ]
+        );
 
-        $this->end_controls_tab();
-        $this->start_controls_tab();
         $this->add_control(
                 'sa_ab_ci', $this->style, [
             'label' => __('Cross Icon', SHORTCODE_ADDOONS),
@@ -296,6 +302,7 @@ class Style_4 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
+
         $this->add_control(
                 'sa_ab_ci_class', $this->style, [
             'type' => Controls::ICON,
@@ -334,7 +341,40 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-L-icon' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+            ],
+            'condition' => [
+                'sa_ab_ci' => 'yes',
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_ab_ci_height_width', $this->style, [
+            'label' => __('Height & Width Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 33,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
+                'rem' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
@@ -346,16 +386,79 @@ class Style_4 extends AdminStyle {
                 'sa_ab_ci_color', $this->style, [
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#b51717',
+            'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-L-icon' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => 'color:{{VALUE}};'
             ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
             ],
                 ]
         );
-       
+        $this->add_group_control(
+                'sa_ab_ci_bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => ''
+            ],
+            'condition' => [
+                'sa_ab_ci' => 'yes',
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_ab_ci_br_radius', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
+            'separator' => FALSE,
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 100,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+            'condition' => [
+                'sa_ab_ci' => 'yes',
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_ab_ci_box_shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => ''
+            ],
+            'condition' => [
+                'sa_ab_ci' => 'yes',
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_header_tx_shadow', $this->style, [
+            'type' => Controls::TEXTSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_ab_ci_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -382,71 +485,15 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-L-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
             ],
                 ]
         );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-        $this->end_controls_section();
 
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Inner Border', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
-                ]
-        );
-        $this->add_group_control(
-                'sa_ab_inner_bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-BI' => ''
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_ab_inner_br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-BI' => ''
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_ab_inner_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 10,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-BI' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
         $this->end_controls_section();
-
         $this->end_section_devider();
         $this->end_section_tabs();
 
@@ -498,8 +545,8 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-H' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-DC' => 'text-align: {{VALUE}};',
             ],
             'condition' => [
                 'sa_ab_text' => 'yes',
@@ -511,7 +558,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
-            'default' => 'Alert',
+            'default' => 'ERROR',
             'loader' => TRUE,
             'condition' => [
                 'sa_ab_text' => 'yes',
@@ -523,14 +570,21 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TEXTAREA,
             'label' => __('Description', SHORTCODE_ADDOONS),
             'placeholder' => __('Description', SHORTCODE_ADDOONS),
-            'default' => 'This is a Nice Alert Box',
+            'default' => 'This a Error Message Box, Looks Pretty Slick',
             'loader' => TRUE,
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
                 ]
         );
-
+        $this->add_group_control(
+                'sa_ab_content_br', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-col-two' => ''
+            ],
+                ]
+        );
 
         $this->end_controls_section();
 
@@ -558,7 +612,7 @@ class Style_4 extends AdminStyle {
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => ''
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-H' => ''
             ],
                 ]
         );
@@ -566,9 +620,9 @@ class Style_4 extends AdminStyle {
                 'sa_header_color', $this->style, [
             'label' => __('Header Text Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#b51717',
+            'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-H' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -576,7 +630,7 @@ class Style_4 extends AdminStyle {
                 'sa_header_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => ''
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-H' => ''
             ],
                 ]
         );
@@ -609,7 +663,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-H' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -619,7 +673,7 @@ class Style_4 extends AdminStyle {
                 'sa_address_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => ''
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-DC' => ''
             ],
                 ]
         );
@@ -627,9 +681,9 @@ class Style_4 extends AdminStyle {
                 'sa_address_color', $this->style, [
             'label' => __('Description Text Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#b51717',
+            'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-DC' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -637,7 +691,7 @@ class Style_4 extends AdminStyle {
                 'sa_address_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => ''
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-DC' => ''
             ],
                 ]
         );
@@ -670,7 +724,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-DC' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

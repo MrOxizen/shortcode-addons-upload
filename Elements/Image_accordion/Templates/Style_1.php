@@ -19,16 +19,11 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         
-        
         $styledata = $this->style;
-        
         echo '<div class="oxi-addons-wrapper-image-accordion">
                 <div class="oxi-addons-accordion">
                     <ul class="oxi-addons-accordion-ul">';
         foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
-            $data = explode('||#||', $value['files']);
-            
-            
             if (array_key_exists('sa_image_accordion_url-url', $value) && $value['sa_image_accordion_url-url'] != '') {
                 $linkstart = '<a ' . $this->url_render('sa_image_accordion_url', $value) . ' class="oxi-link '.$style['sa-image_accordion-overlay_animation'].'" >';
             } else {

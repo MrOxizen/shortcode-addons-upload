@@ -20,10 +20,9 @@ class Style_6 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        foreach ($child as $v) {
-
-              $value = $this->Json_Decode($v['rawdata']);
-            
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_icon_box_data', $styledata) && is_array($styledata['sa_icon_box_data'])) ? $styledata['sa_icon_box_data'] : [];
+        foreach ($all_data as $key => $value) {
             $icon = $heading = $link = $endlink = '';
             if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {
                 $icon .= '<div class="sa_addons_icon_boxes_icon">
@@ -43,25 +42,13 @@ class Style_6 extends Templates
             }
             echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
             echo $link;
-                echo '<div class="sa_addons_icon_boxes_container_style_6">
-                        <div class="sa_addons_icon_boxes_style_6">
+            echo '<div class="sa_addons_icon_boxes_container_style_6">
+                        <div class="sa_addons_icon_boxes_style_6 sa_addons_icon_boxes_style_6_' . $key . '">
                             ' . ($style['sa_icon_box_icon_position'] == 'top' ? $icon . $heading : $heading . $icon) . '
                         </div>';
-            
-                echo '</div>';
-            if ($admin == 'admin') :
-                echo '<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
-
+            echo '</div>';
             echo $endlink;
-            echo'</div>';
+            echo '</div>';
         }
     }
 

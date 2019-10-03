@@ -20,14 +20,13 @@ class Style_2 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-
+        
         $styledata = $this->style;
-
+        
         echo '<div class="oxi-addons-wrapper-image-two-accordion">
                 <div class="oxi-addons-accordion">
                     <ul class="oxi-addons-accordion-ul">';
         foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
-            $data = explode('||#||', $value['files']);
 
 
             if (array_key_exists('sa_image_accordion_url-url', $value) && $value['sa_image_accordion_url-url'] != '') {
@@ -40,7 +39,6 @@ class Style_2 extends Templates {
             } else {
                 $linkend = '</div>';
             }
-
             echo '<li class="oxi-addons-background-image-' . $key . '">
                     <div class="oxi-addons-overlay oxi-over-' . $key . '">
                         ' . $linkstart . '

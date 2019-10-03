@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_2
+ * Description of Style_6
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle
+class Style_6 extends AdminStyle
 {
 
     public function register_controls()
@@ -48,17 +48,6 @@ class Style_2 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-
-        $this->add_group_control(
-            'sa_cta_bg',
-            $this->style,
-            [
-                'type' => Controls::BACKGROUND,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2' => '',
-                ],
-            ]
-        );
         $this->add_responsive_control(
             'sa_cta_max_w',
             $this->style,
@@ -67,7 +56,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '800',
+                    'size' => '1180',
                 ],
                 'range' => [
                     '%' => [
@@ -77,7 +66,7 @@ class Style_2 extends AdminStyle
                     ],
                     'px' => [
                         'min' => 0,
-                        'max' => 1200,
+                        'max' => 2000,
                         'step' => 1,
                     ],
                     'em' => [
@@ -87,7 +76,71 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_full_content' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_full_content' => 'max-width: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cta_bg',
+            $this->style,
+            [
+                'type' => Controls::BACKGROUND,
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_full_content' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_cta_btn_posi',
+            $this->style,
+            [
+                'label' => __('Icon & Button Reverse', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'toggle' => TRUE,
+                'loader' => TRUE,
+                'default' => 'right',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-angle-double-left',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-angle-double-right',
+                    ],
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_cta_b_r',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '7',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_full_content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -119,7 +172,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_full_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_full_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -151,7 +204,17 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_cta_box_shad',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_full_content' => '',
                 ],
             ]
         );
@@ -169,10 +232,10 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Heading', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
-                'default' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.',
+                'type' => Controls::TEXT,
+                'default' => 'Sign Up Here to get Letest Update.',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_sub_heading' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_sub_heading' => ''
                 ],
             ]
         );
@@ -182,9 +245,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#f5f5f5',
+                'default' => '#272727',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_sub_heading' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_sub_heading' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -195,7 +258,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_sub_heading' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_sub_heading' => ''
                 ],
             ]
         );
@@ -205,7 +268,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_sub_heading' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_sub_heading' => ''
                 ],
             ]
         );
@@ -237,7 +300,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_sub_heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_sub_heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -269,7 +332,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_sub_heading' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_sub_heading' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -290,9 +353,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Heading', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Take your sit, & don’t forget to recive all updates',
+                'default' => 'Subscribe to Newsletter',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_heading' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_heading' => ''
                 ],
             ]
         );
@@ -302,9 +365,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#EB5732',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_heading' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_heading' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -315,7 +378,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_heading' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_heading' => ''
                 ],
             ]
         );
@@ -325,7 +388,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_heading' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_heading' => ''
                 ],
             ]
         );
@@ -357,7 +420,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -389,10 +452,166 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+
+        $this->add_control(
+            'sa_cta_icon',
+            $this->style,
+            [
+                'label' => __('Icon', SHORTCODE_ADDOONS),
+                'type' => Controls::ICON,
+                'default' => 'fas fa-street-view',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_cta_icon_s',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '60',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_cta_icon_c',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#EB5732',
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_cta_icon_align',
+            $this->style,
+            [
+                'label' => __('Icon Align', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'toggle' => TRUE,
+                'default' => 'left',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content' => 'text-align: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_cta_icon_p',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_cta_icon_m',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
@@ -422,7 +641,35 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TEXT,
                 'default' => 'Contact Now',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_cta_btn_align',
+            $this->style,
+            [
+                'label' => __('Button Align', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'toggle' => TRUE,
+                'default' => 'right',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn_content' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -445,39 +692,13 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Url', SHORTCODE_ADDOONS),
                 'type' => Controls::URL,
+                'loader' => TRUE,
                 'condition' => [
                     'sa_cta_btn_link_on_off' => 'link_yes'
                 ]
             ]
         );
-        $this->add_control(
-            'sa_cta_btn_align',
-            $this->style,
-            [
-                'label' => __('Button Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn_content' => 'text-align: {{VALUE}};',
-                ],
-            ]
-        );
+
         $this->add_responsive_control(
             'sa_cta_btn_m',
             $this->style,
@@ -506,7 +727,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -528,13 +749,15 @@ class Style_2 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
+
+
         $this->add_group_control(
             'sa_cta_btn_typho',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => ''
                 ],
             ]
         );
@@ -554,9 +777,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#0059ff',
+                'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -566,7 +789,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => '',
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => '',
                 ],
             ]
         );
@@ -576,7 +799,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => '',
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => '',
                 ],
             ]
         );
@@ -590,7 +813,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -600,7 +823,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn:hover' => '',
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn:hover' => '',
                 ],
             ]
         );
@@ -610,7 +833,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn:hover' => '',
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn:hover' => '',
                 ],
             ]
         );
@@ -623,7 +846,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TEXTSHADOW,
                 'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => ''
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => ''
                 ],
             ]
         );
@@ -644,8 +867,8 @@ class Style_2 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => 0,
-                        'max' => 500,
+                        'min' => 200,
+                        'max' => 200,
                         'step' => 1,
                     ],
                     'em' => [
@@ -655,8 +878,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -688,7 +911,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_2 .sa_addons_cta_btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

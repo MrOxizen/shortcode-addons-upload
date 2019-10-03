@@ -1,4 +1,5 @@
 <?php
+
 namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_accordion\Templates;
 
 if (!defined('ABSPATH')) {
@@ -15,7 +16,6 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_3 extends Templates {
 
-
     public function public_jquery() {
         $this->JSHANDLE = 'jquery_image_accordion_style3';
         wp_enqueue_script('jquery_image_accordion_style3', SA_ADDONS_UPLOAD_URL . '/Elements/Image_accordion/file/jquery_image_accordion.js', false, SA_ADDONS_PLUGIN_VERSION);
@@ -31,8 +31,6 @@ class Style_3 extends Templates {
                     <section id="oxi-addons-slider">
                             <div class="oxi-addons-slider-content">';
         foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
-            $data = explode('||#||', $value['files']);
-
             echo '<div class="oxi-addons-image oxi-addons-image-first">
                         <div class="oxi-addons-slider-item">
                             <div class="oxi-addons-item-img-1" data-src="' . $this->media_render('sa_image_accordion_image_1', $value) . '"></div>
@@ -47,16 +45,12 @@ class Style_3 extends Templates {
          </div>';
     }
 
-    
-    
     public function inline_public_jquery() {
         $jquery = '';
         $styledata = $this->style;
         $jquery .= 'jQuery(".oxi-addons-admin-absulote").addClass("oxi-addons-permission-class"); ';
         return $jquery;
     }
-
-   
 
     public function old_render() {
 
@@ -84,7 +78,7 @@ class Style_3 extends Templates {
                                         <div class="oxi-addons-item-img-2" data-src="' . OxiAddonsUrlConvert($data[3]) . '"></div>
                                     </div>
                                     	<span class="oxi-addons-image-text oxi-addons-heading">   ' . OxiAddonsTextConvert($data[5]) . '</span>';
-            
+
             echo '</div>';
         }
         echo '</div>
