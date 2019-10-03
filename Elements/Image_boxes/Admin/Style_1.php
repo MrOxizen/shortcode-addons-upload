@@ -22,7 +22,7 @@ class Style_1 extends AdminStyle {
         $this->start_section_header(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'general-settings' => esc_html__('Bullet List Settings', SHORTCODE_ADDOONS),
+                'general-settings' => esc_html__('Image Box Settings', SHORTCODE_ADDOONS),
             ]
                 ]
         );

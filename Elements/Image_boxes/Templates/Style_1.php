@@ -18,7 +18,7 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
-        $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $value = $this->Json_Decode($v['rawdata']);
         $link = $endlink = $heading = $image = '';
         if (array_key_exists('sa_ib_url-url', $value) && $value['sa_ib_url-url'] != '') {
                 $link .= '<a class="oxi-addons-link" ' . $this->url_render('sa_ib_url', $value) . '>';
@@ -29,8 +29,9 @@ class Style_1 extends Templates {
                                 ' . $this->text_render($value['sa_ib_heading']) . '
                              </div>';
         }
-        if (array_key_exists('sa_ib_media', $value) && $this->media_render('sa_ib_media', $value) != '') {
-                $image .= '<div class="oxi-addons-image">
+         
+        if (array_key_exists('sa_ib_media-image', $value) && $this->media_render('sa_ib_media', $value) != '') {
+               $image .= '<div class="oxi-addons-image">
                                 <img class="oxi-addons-img" src="' . $this->media_render('sa_ib_media', $value) . '">
                             </div>';
         }

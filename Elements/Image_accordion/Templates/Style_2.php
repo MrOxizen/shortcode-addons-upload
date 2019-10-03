@@ -20,9 +20,9 @@ class Style_2 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-
+        
         $styledata = $this->style;
-
+        
         echo '<div class="oxi-addons-wrapper-image-two-accordion">
                 <div class="oxi-addons-accordion">
                     <ul class="oxi-addons-accordion-ul">';
@@ -40,7 +40,6 @@ class Style_2 extends Templates {
             } else {
                 $linkend = '</div>';
             }
-
             echo '<li class="oxi-addons-background-image-' . $key . '">
                     <div class="oxi-addons-overlay oxi-over-' . $key . '">
                         ' . $linkstart . '

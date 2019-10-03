@@ -20,9 +20,9 @@ class Style_4 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        foreach ($child as $v) {
-              $value = $this->Json_Decode($v['rawdata']);
-            
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_icon_box_data', $styledata) && is_array($styledata['sa_icon_box_data'])) ? $styledata['sa_icon_box_data'] : [];
+        foreach ($all_data as $key => $value) {
             $icon = $heading = $content = $link = $endlink = '';
             if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {
                 $icon .= '<div class="sa_addons_icon_boxes_icon">
@@ -47,24 +47,14 @@ class Style_4 extends Templates
             }
             echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="sa_addons_icon_boxes_container_style_4">';
-                echo $link;
-                echo '<div class="sa_addons_icon_boxes_style_4">
+            echo $link;
+            echo '<div class="sa_addons_icon_boxes_style_4 sa_addons_icon_boxes_style_4_' . $key . '">
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '
                         </div>';
-                echo $endlink;
+            echo $endlink;
             echo '</div>';
-            if ($admin == 'admin') :
-                echo '<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
             echo '</div>';
         }
     }
@@ -103,15 +93,15 @@ class Style_4 extends Templates
                         </div>';
             }
             echo '<div class="' . OxiAddonsItemRows($styledata, 205) . '">';
-                echo $linkfirst;
-                echo '<div class="oxi-addons-icon-boxes-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 89) . '>
+            echo $linkfirst;
+            echo '<div class="oxi-addons-icon-boxes-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 89) . '>
                         <div class="oxi-addons-icon-boxes-' . $oxiid . '-data">
                             ' . $fontawesome . '
                             ' . $heading . '
                             ' . $content . '
                         </div>
                     </div>';
-                echo $linklast;
+            echo $linklast;
             echo '</div>';
         }
         echo '</div>';
