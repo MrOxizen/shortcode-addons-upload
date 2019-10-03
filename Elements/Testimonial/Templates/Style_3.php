@@ -17,31 +17,31 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_3 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $styledata = $this->style;
+        foreach ($styledata['sa_testimonial_data_style_3'] as $key => $value) {
             $image = $info = $rating = $name = $company = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
-                $image = ' <div class="oxi-testimonials-style-testmonialnew-image">                               
+                $image = ' <div class="oxi-testimonials-style-testmonialnew-image oxi-testimonials-style-testmonialnew-image-'.$key.'">                               
                                <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '"> 
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-testmonialnew-info">
+                $info = '<div class="oxi-testimonials-style-testmonialnew-info oxi-testimonials-style-testmonialnew-info-'.$key.'">
                            ' . $this->text_render($value['sa_testi_profile_description']) . '
                         </div>';
             }
             if (array_key_exists('sa_testi_profile_rating-size', $value) && $value['sa_testi_profile_rating-size'] != '') {
-                $rating = '<div class="oxi-testimonials-style-testmonialnew-rating">
+                $rating = '<div class="oxi-testimonials-style-testmonialnew-rating oxi-testimonials-style-testmonialnew-rating-'.$key.'">
                             ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '                            
                          </div> ';
             }
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
-                $name = ' <div class="oxi-testimonials-style-testmonialnew-name" >
+                $name = ' <div class="oxi-testimonials-style-testmonialnew-name oxi-testimonials-style-testmonialnew-name-'.$key.'" >
                                     ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                               </div>';
             }
             if (array_key_exists('sa_testi_profile_company', $value) && $value['sa_testi_profile_company'] || array_key_exists('sa_testi_profile_designation', $value) && $value['sa_testi_profile_designation'] != '') {
-                $company = '<div class="oxi-testimonials-style-testmonialnew-working">
+                $company = '<div class="oxi-testimonials-style-testmonialnew-working oxi-testimonials-style-testmonialnew-working-'.$key.'">
                                     ' . $this->text_render($value['sa_testi_profile_designation']) . '  at <a ' . $this->url_render('sa_testi_profile_company_url', $value) . '>' . $this->text_render($value['sa_testi_profile_company']) . '</a>
                                  </div>';
             }
@@ -57,16 +57,7 @@ class Style_3 extends Templates {
                                 ' . $company . '  
                             </div>
                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+           
             echo '</div>';
         }
     }

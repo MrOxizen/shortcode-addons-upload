@@ -17,46 +17,42 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_4 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $styledata = $this->style;
+        foreach ($styledata['sa_testimonial_data_style_4'] as $key => $value) {
             $image = $info = $rating = $name = $company = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
-                $image = ' <div class="oxi-testimonials-style-testifournew-image">                               
+                $image = ' <div class="oxi-testimonials-style-testifournew-image oxi-testimonials-style-testifournew-image-'.$key.'">                               
                                <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '"> 
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-testifournew-info">
+                $info = '<div class="oxi-testimonials-style-testifournew-info oxi-testimonials-style-testifournew-info-'.$key.'">
                            ' . $this->text_render($value['sa_testi_profile_description']) . '
                         </div>';
             }
-            if (array_key_exists('sa_testi_profile_rating-size', $value) && $value['sa_testi_profile_rating-size'] != '') {
-                $rating = '<div class="oxi-testimonials-style-testifournew-rating">
-                            ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '                            
-                         </div> ';
-            }
+            
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
-                $name = ' <div class="oxi-testimonials-style-testifournew-name" >
+                $name = ' <div class="oxi-testimonials-style-testifournew-name oxi-testimonials-style-testifournew-name-'.$key.'" >
                                     ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                               </div>';
             }
             if (array_key_exists('sa_testi_profile_company', $value) && $value['sa_testi_profile_company'] || array_key_exists('sa_testi_profile_designation', $value) && $value['sa_testi_profile_designation'] != '') {
-                $company = '<div class="oxi-testimonials-style-testifournew-working">
+                $company = '<div class="oxi-testimonials-style-testifournew-working oxi-testimonials-style-testifournew-working-'.$key.'">
                                     <a ' . $this->url_render('sa_testi_profile_company_url', $value) . '>@ ' . $this->text_render($value['sa_testi_profile_company']) . '</a>
                                  </div>';
             }
-            
-            if($style['sa-testimonial-profile-body_alignment'] == 'left'){
-                 $class = "sa-testimonial-profile-body-left";
-            }elseif($style['sa-testimonial-profile-body_alignment'] == 'right'){
+
+            if ($style['sa-testimonial-profile-body_alignment'] == 'left') {
+                $class = "sa-testimonial-profile-body-left";
+            } elseif ($style['sa-testimonial-profile-body_alignment'] == 'right') {
                 $class = "sa-testimonial-profile-body-right";
-            }else{
-                 $class = "sa-testimonial-profile-body-center";
+            } else {
+                $class = "sa-testimonial-profile-body-center";
             }
 
             echo ' <div class="oxi-testimonials-testifournew-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . ' " >
                     <div class="oxi-testimonials-item-testifournew">
-                        <div class="oxi-testimonials-style-testifournew '.$class.'" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '> 
+                        <div class="oxi-testimonials-style-testifournew ' . $class . '" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '> 
                                  ' . $info . '
                                 <div class="oxi-testimonials-style-testifournew-image-area">
                                     <div class="oxi-testimonials-style-testifournew-left">
@@ -69,24 +65,15 @@ class Style_4 extends Templates {
                                 </div> 
                             </div>
                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+            
             echo '</div>';
         }
     }
 
-
     public function old_render() {
         $styledata = $this->dbdata;
         $listdata = $this->child;
+        $user = $this->admin;
         $stylename = $styledata['style_name'];
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
@@ -137,7 +124,7 @@ class Style_4 extends Templates {
                                 </div>
                             </div>
                         </div>';
-           
+
             echo '</div>';
         }
         echo '</div></div>';
