@@ -59,6 +59,52 @@ class Style_6 extends AdminStyle
                 ],
             ]
         );
+        $this->add_repeater_control(
+            'sa_logo_showcase_data',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_logo_showcase_hover_text' => [
+                        'label' => esc_html__('Hover Text', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT,
+                        'default' => 'Git',
+                        'selector' => [
+                            '{{WRAPPER}} .sa_addons_logo_showcase_style_6.sa_addons_logo_showcase_style_6_{{KEY}} .sa_addons_logo_showcase_hover_text' => ''
+                        ],
+                    ],
+                    'sa_logo_showcase_img' => [
+                        'type' => Controls::MEDIA,
+                        'controller' => 'add_group_control',
+                        'default' => [
+                            'type' => 'media-library',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/08/logo-5.png',
+                        ],
+                    ],
+                    'sa_logo_showcase_url_open' => [
+                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'type' => Controls::SWITCHER,
+                        'default' => '',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'return_value' => 'link_show',
+                    ],
+
+                    'sa_logo_showcase_url' => [
+                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_logo_showcase_url_open' => 'link_show'
+                        ]
+                    ],
+                ],
+                'title_field' => 'sa_logo_showcase_hover_text',
+                'button' => 'Add New Logo',
+            ]
+        );
         $this->add_responsive_control(
             'sa_logo_showcase_logo_w',
             $this->style,
@@ -412,68 +458,5 @@ class Style_6 extends AdminStyle
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
-    }
-    public function modal_opener()
-    {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Logo Showcase', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Logo Showcase Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Logo Showcase Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-        $this->add_control(
-            'sa_logo_showcase_hover_text',
-            $this->style,
-            [
-                'label' => __('Hover Text', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Default Text',
-            ]
-        );
-        $this->add_group_control(
-            'sa_logo_showcase_img',
-            $this->style,
-            [
-                'type' => Controls::MEDIA,
-                'default' => [
-                    'type' => 'media-library',
-                    'link' => '',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'sa_logo_showcase_url_open',
-            $this->style,
-            [
-                'label' => __('Link Active', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'link_show',
-            ]
-        );
-        $this->add_group_control(
-            'sa_logo_showcase_url',
-            $this->style,
-            [
-                'type' => Controls::URL,
-                'loader' => TRUE,
-                'condition' => [
-                    'sa_logo_showcase_url_open' => 'link_show',
-                ],
-            ]
-        );
-        echo '</div>';
     }
 }
