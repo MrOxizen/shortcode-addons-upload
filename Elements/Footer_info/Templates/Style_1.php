@@ -16,18 +16,11 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_1 extends Templates {
 
-    public function inline_public_css() {
-        $rt = '';
-        foreach ($this->child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-            $rt .= $this->background_render('sa_fi_header_bg', $value, '.' . $this->WRAPPER . ' .oxi_addons_FI_1 .sa_bg_color-' . $v['id']);
-        }
-        return $rt;
-    }
+
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $repeater = (array_key_exists('sa_fi_repeater', $style) && is_array($style['sa_fi_repeater'])) ? $style['sa_fi_repeater'] : [];
+        foreach ($repeater as $key => $value) {
 
             $icon = $text = $headersection = $phone = $email = $contentsection = '';
             if (!empty($value['sa_fi_icon_class'])) {
@@ -37,7 +30,7 @@ class Style_1 extends Templates {
                 $text = '<div class="oxi_addons_FI_1_T">' . $this->text_render($value['sa_fi_header_text']) . '</div>';
             }
             if ($icon != '' || $text != '') {
-                $headersection = '<div class="oxi_addons-FI_1_header_body sa_bg_color-' . $v['id'] . '">
+                $headersection = '<div class="oxi_addons-FI_1_header_body">
                                             <div class="oxi_addons_FI_1_header">
                                                 ' . $icon . '
                                                 ' . $text . '
@@ -57,23 +50,13 @@ class Style_1 extends Templates {
                                 </div>';
             }
             echo '<div class="' . $this->column_render('sa_fi_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
-            <div class="oxi_addons_FI_1 ">
+            <div class="oxi_addons_FI_1 oxi_addons_FI_1_' . $key . '">
                     <div class="oxi_addons_FI_1_row " ' . $this->animation_render('sa_fi_animation', $style) . '>
                         ' . $headersection . '
                         ' . $contentsection . ' 
                     </div>
+                 </div>
                  </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
-            echo '</div>';
         }
     }
 
