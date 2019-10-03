@@ -12,15 +12,18 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_1 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
+    public function default_render($style, $child, $admin)
+    {
+        $styledata = $this->style;
 
-            $value = $this->Json_Decode($v['rawdata']);
-
+        $all_data = (array_key_exists('sa_icon_box_data', $styledata) && is_array($styledata['sa_icon_box_data'])) ? $styledata['sa_icon_box_data'] : [];
+        foreach ($all_data as $key => $value) {
             $icon = $heading = $content = $link = $endlink = '';
             if (array_key_exists('sa_icon_box_icon', $value) && $value['sa_icon_box_icon'] != '') {
                 $icon .= '<div class="sa_addons_icon_boxes_icon">
@@ -43,31 +46,22 @@ class Style_1 extends Templates {
                     $endlink .= '</a>';
                 }
             }
-            echo'<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+            echo '<div class="' . $this->column_render('sa_icon_box_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
                     <div class="sa_addons_icon_boxes_container_style_1">';
             echo $link;
-            echo'<div class="sa_addons_icon_boxes_style_1" ' . $this->animation_render('sa_icon_box_animation', $style) . '>
+            echo '<div class="sa_addons_icon_boxes_style_1 sa_addons_icon_boxes_style_1_' . $key . '" ' . $this->animation_render('sa_icon_box_animation', $style) . '>
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '
                         </div>';
             echo $endlink;
-            echo'</div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
-            echo'</div>';
+            echo '</div>
+            </div>';
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -215,5 +209,4 @@ class Style_1 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $js);
     }
-
 }

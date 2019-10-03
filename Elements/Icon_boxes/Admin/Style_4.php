@@ -91,38 +91,59 @@ class Style_4 extends AdminStyle
                 ],
             ]
         );
-        $this->add_responsive_control(
-            'sa_icon_box_margin',
+        $this->add_repeater_control(
+            'sa_icon_box_data',
             $this->style,
             [
-                'label' => __('Margin', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '20',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_icon_box_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fas fa-apple-alt',
                     ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
+                    'sa_icon_box_h_text' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT,
+                        'default' => 'Default Title',
+                        'selector' => [
+                            '{{WRAPPER}} .sa_addons_icon_boxes_style_4.sa_addons_icon_boxes_style_4_{{KEY}} .sa_addons_icon_boxes_headding' => ''
+                        ],
                     ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
+                    'sa_icon_box_content' => [
+                        'label' => esc_html__('Content', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXTAREA,
+                        'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.',
+                        'selector' => [
+                            '{{WRAPPER}} .sa_addons_icon_boxes_style_4.sa_addons_icon_boxes_style_4_{{KEY}} .sa_addons_icon_boxes_content' => ''
+                        ],
+                    ],
+      
+                    'sa_icon_box_url_open' => [
+                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'type' => Controls::SWITCHER,
+                        'default' => '',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'return_value' => 'link_show',
+                    ],
+
+                    'sa_icon_box_url' => [
+                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_icon_box_url_open' => 'link_show'
+                        ]
                     ],
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
+                'title_field' => 'sa_icon_box_h_text',
+                'button' => 'Add New Icon Box',
             ]
         );
+        
         $this->add_group_control(
             'sa_icon_box_boxshadow',
             $this->style,
@@ -238,7 +259,38 @@ class Style_4 extends AdminStyle
                 ],
             ]
         );
-
+        $this->add_responsive_control(
+            'sa_icon_box_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '20',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_icon_boxes_container_style_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
         $this->end_controls_section();
 
         $this->end_section_devider();
@@ -599,82 +651,8 @@ class Style_4 extends AdminStyle
         );
 
         $this->end_controls_section();
-
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-    public function modal_opener()
-    {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Icon Box', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Icon Box Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Icon Boxes Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-        $this->add_control(
-            'sa_icon_box_icon',
-            $this->style,
-            [
-                'label' => __('Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'default' => 'fas fa-apple-alt',
-            ]
-        );
-
-        $this->add_control(
-            'sa_icon_box_h_text',
-            $this->style,
-            [
-                'label' => __('Heading', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Default Title',
-                'placeholder' => 'Your Heading Here',
-            ]
-        );
-
-        $this->add_control(
-            'sa_icon_box_content',
-            $this->style,
-            [
-                'label' => __('Content', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
-                'default' => 'Now there’s really no need to purchase and overload your WordPress website with another plugin! Supreme Shortcodes introduce a brand new shortcode for your collection, Icon Boxes!',
-                'placeholder' => 'Your Content Here',
-            ]
-        );
-        $this->add_control(
-            'sa_icon_box_url_open',
-            $this->style,
-            [
-                'label' => __('Link Active', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'link_show',
-            ]
-        );
-        $this->add_group_control(
-            'sa_icon_box_url',
-            $this->style,
-            [
-                'type' => Controls::URL,
-                'loader' => TRUE,
-                'condition' => [
-                    'sa_icon_box_url_open' => 'link_show',
-                ],
-            ]
-        );
-        echo '</div>';
-    }
+    
 }

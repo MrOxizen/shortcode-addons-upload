@@ -12,14 +12,18 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_7 extends Templates {
+class Style_7 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
+    public function default_render($style, $child, $admin)
+    {
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_icon_box_data', $styledata) && is_array($styledata['sa_icon_box_data'])) ? $styledata['sa_icon_box_data'] : [];
+        foreach ($all_data as $key => $value) {
             $icon = $heading = $content = $link = $endlink = $icon_p = '';
-            $value = $this->Json_Decode($v['rawdata']);
             if ($style['sa_icon_box_icon_position'] == 'left') {
                 $icon_p .= 'icon_left';
             }
@@ -52,7 +56,7 @@ class Style_7 extends Templates {
 
             echo $link;
 
-            echo '<div class="sa_addons_icon_boxes_style_7 ' . $icon_p . '">
+            echo '<div class="sa_addons_icon_boxes_style_7 sa_addons_icon_boxes_style_7_' . $key . ' ' . $icon_p . '">
                                 <div>
                                     ' . $icon . '
                                     ' . $heading . '
@@ -61,21 +65,12 @@ class Style_7 extends Templates {
                         </div>';
             echo $endlink;
             echo '</div>';
-            if ($admin == 'admin') :
-                echo '<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
             echo '</div>';
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -223,5 +218,4 @@ class Style_7 extends Templates {
     }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }
