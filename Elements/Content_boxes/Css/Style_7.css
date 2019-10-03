@@ -1,0 +1,195 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+.oxi-addons-content-boxes
+*/
+
+
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplo
+*/
+
+.sa_cb_temp_7{
+    width:100%;
+    position:relative;
+    max-width:auto;
+    margin:0 auto;
+    overflow:hidden;
+    padding:10px 10px 10px 10px ;
+}
+.oxi-addons-content-boxes-images-body{
+    width:100%;
+    float:left;
+    overflow:hidden ;
+}
+.oxi-addons-content-boxes-data{
+    width:100%;
+    float:left;
+    background:rgba(8,95,138,1.00);
+    padding:10px 10px 10px 10px;
+    box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1) ;
+}
+.sa_cb_temp_7 .oxi-addons-content-boxes-images-data{
+    position: relative;
+    width:100%;
+    height:100%;
+    float:left;
+    overflow: hidden;
+}
+.sa_cb_temp_7 .oxi-addons-content-boxes-images-data::after{
+    display: block;
+    content: "";
+    padding-bottom: 60%;
+}
+.sa_cb_temp_7 .oxi-addons-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+.sa_cb_temp_7:hover .oxi-addons-img{
+    transform:scale(1.2) ;
+}
+.sa_cb_temp_7 .oxi-addons-content-boxes-button{
+    width:100%;
+    float:left;
+    text-align:center ;
+}
+.oxi-addons-content-boxes-button .oxi-button{
+    display:inline-block;
+    padding:8px 20px 8px 20px;
+    font-size:16px;
+    font-family:"Open Sans";
+    font-weight:300;
+    font-style:normal;
+    line-height:1;
+    text-align:left;
+    background:rgba(48, 169, 173, 1);
+    color:#ffffff;
+    margin:5px 5px 5px 5px;
+    border-radius:5px 5px 5px 5px;
+    border-width:0px 0px 0px 0px;
+    border-style:none;
+    border-color:#ffffff ;
+}
+.oxi-addons-content-boxes-button .oxi-button:hover,
+.oxi-addons-content-boxes-button .oxi-button:focus,
+.oxi-addons-content-boxes-button .oxi-button:active{
+    color:#ffffff;
+    background:rgba(19, 124, 143, 1);
+    border-radius:2px 2px 2px 2px;
+    border-width:1px 1px 1px 1px;
+    border-style:none;
+    border-color:#ededed ;
+}
+.sa_cb_temp_7 .oxi-addons-content-boxes-content{
+    width:100%;
+    padding:10px 10px 10px 10px;
+    float:left ;
+}
+.sa_cb_temp_7 .oxi-addons-content-boxes-heading{
+    width:100%;
+    float:left;
+    color:#ffffff;
+    font-size:22px;
+    font-family:"Open Sans";
+    font-weight:600;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    padding:5px 5px 5px 5px ;
+}
+.sa_cb_temp_7 .oxi-addons-content-boxes-content{
+    width:100%;
+    float:left;
+    color:#ffffff;
+    font-size:14px;
+    font-family:"Open Sans";
+    font-weight:300;
+    font-style:normal;
+    line-height:1.5;
+    text-align:center;
+    padding:10px 10px 20px 10px ;
+}
+.oxi-addons-content-boxes-content-outside{
+    float: left;
+    width: 100%;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px){
+    .sa_cb_temp_7{
+        max-width:325px;
+        padding:10px 10px 10px 10px ;
+    }
+    .oxi-addons-content-boxes-data{
+        padding:10px 10px 10px 10px ;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-images{
+        height:125px ;
+    }
+    .oxi-addons-content-boxes-button .oxi-button{
+        padding:8px 20px 8px 20px;
+        font-size:16px;
+        margin:5px 5px 5px 5px;
+        border-radius:0px 0px 0px 0px;
+        border-width:0px 0px 0px 0px;
+    }
+    .oxi-addons-content-boxes-button .oxi-button:hover,
+    .oxi-addons-content-boxes-button .oxi-button:focus,
+    .oxi-addons-content-boxes-button .oxi-button:active{
+        border-radius:2px 2px 2px 2px;
+        border-width:1px 1px 1px 1px ;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-content{
+        padding:10px 10px 10px 10px ;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-heading{
+        font-size:22px;
+        padding:5px 5px 5px 5px ;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-content{
+        font-size:14px;
+        padding:10px 5px 20px 5px ;
+    }
+}
+@media only screen and (max-width:668px){
+    .sa_cb_temp_7{
+        max-width:325px;
+        padding:10px 10px 10px 10px ;
+    }
+    .oxi-addons-content-boxes-data{
+        padding:10px 10px 10px 10px ;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-images{
+        height:125px ;
+    }
+    .oxi-addons-content-boxes-button .oxi-button{
+        padding:8px 20px 8px 20px;
+        font-size:14px;
+        margin:5px 5px 5px 5px;
+        border-radius:0px 0px 0px 0px;
+        border-width:0px 0px 0px 0px;
+    }
+    .oxi-addons-content-boxes-button .oxi-button:hover,
+    .oxi-addons-content-boxes-button .oxi-button:focus,
+    .oxi-addons-content-boxes-button .oxi-button:active{
+        border-radius:2px 2px 2px 2px;
+        border-width:1px 1px 1px 1px ;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-content{
+        padding:10px 10px 10px 10px;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-heading{
+        font-size:20px;
+        padding:325px 10px px px;
+    }
+    .sa_cb_temp_7 .oxi-addons-content-boxes-content{
+        font-size:14px;
+        padding:10px 5px 20px 5px;
+    }
+}

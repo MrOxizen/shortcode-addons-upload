@@ -1,0 +1,201 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*.oxi-addonsFM-SV-wrapper-103
+.oxi-addonsFM-SV-wrapper-103-360
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplob
+*/
+
+.oxiAddons_foodMenu_temPlate_7.oxi-addonsFM-SV-wrapper .oxi-addonsFM-SV-image{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-9.jpeg');*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100%;
+    box-shadow:0px 0px 0px 0px rgba(168, 166, 166, 1);
+}
+.oxiAddons_foodMenu_temPlate_7.oxi-addonsFM-SV-wrapper .oxi-addonsFM-SV-image{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-8.jpeg');*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100%;
+    box-shadow:0px 0px 0px 0px rgba(168, 166, 166, 1);
+}
+.oxiAddons_foodMenu_temPlate_7.oxi-addonsFM-SV-wrapper .oxi-addonsFM-SV-image{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-7.jpeg');*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100%;
+    box-shadow:0px 0px 0px 0px rgba(168, 166, 166, 1); 
+}
+.oxiAddons_foodMenu_temPlate_7{
+    width:100%;
+    max-width: auto;
+    margin:0 auto;
+    overflow:auto;
+    padding:5px 10px 5px 10px ;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-row{
+    width:100%;
+    float:left;
+    padding:14px 14px 14px 14px ;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-image:after{
+    display:block;
+    content:"";
+    padding-bottom:70% ;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-content-body{
+    width:100%;
+    float:left;
+    position:relative;
+    border:0px solid #ffffff;
+    border-radius:0px 0px 0px 0px;
+    box-shadow:1px 1px 10px 1px rgba(199, 199, 199, 1);
+    background:#fff;
+    padding:15px 15px 15px 15px;
+    margin:-60px 0px 0px 0px;
+}
+.oxi-addonsFM-SV-C-sape:before,
+.oxi-addonsFM-SV-C-sape:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:-60px;
+    height:50px;
+    background:radial-gradient(closest-side,rgba(255, 255, 255, 1),rgba(255, 255, 255, 1) 50%,transparent 50%);
+    background-size:40px 50px;
+    background-position:30px 24px;
+    background-repeat:repeat-x ;
+}
+.oxi-addonsFM-SV-C-sape:after{
+    background:radial-gradient(closest-side,transparent,transparent 50%, rgba(255, 255, 255, 1) 50%);
+    background-size:40px 50px;
+    background-position:10px -25px;
+    top:-13px;
+    background-repeat:repeat-x ;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-B-T-I{
+    position:absolute;
+    background:url(https://www.oxilab.org/wp-content/uploads/2019/02/arrow.png) repeat;
+    width:100%;
+    height:12px;
+    top:-10px;
+    left:0 ;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-price{
+    width:100%;
+    float:left;
+    font-size:24px;
+    color:#aeaeb2;
+    font-family:"Montserrat";
+    font-weight:bold;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    margin:0px 0px 0px 0px;
+    line-height:1 ;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-heading{
+    width:100%;
+    float:left;
+    font-size:28px;
+    color:#000000;
+    font-family:"Playfair Display";
+    font-weight:700;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    padding:10px 10px 10px 10px;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-rating{
+    width:100%;
+    float:left;
+    font-size:20px;
+    color:#f0a00c;
+    text-align:center;
+    padding:10px 10px 0px 10px ;
+}
+.oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-info{
+    width:100%;
+    float:left;
+    font-size:14px;
+    color:#7a7878;
+    font-family:"Open Sans";
+    font-weight:normal;
+    font-style:normal;
+    line-height:2;
+    text-align:center;
+    padding:14px 0px 0px 0px ;
+}
+@media only screen and (min-width:669px) and (max-width:993px){
+    .oxiAddons_foodMenu_temPlate_7{
+        padding:5px 10px 5px 10px;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-row{
+        border-radius:0px 0px 0px 0px;
+        padding:14px 14px 14px 14px ;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-content-body{
+        padding:15px 15px 15px 15px;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-price{
+        font-size:24px;
+        margin:0px 0px 0px 0px ;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-heading{
+        font-size:28px;
+        padding:10px 10px 10px 10px ;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-rating{
+        font-size:20px;
+        padding:10px 10px 0px 10px;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-info{
+        font-size:14px;
+        padding:14px 0px 0px 0px;
+    }
+}
+@media only screen and (max-width:668px){
+    .oxiAddons_foodMenu_temPlate_7{
+        padding:5px 10px 5px 10px ;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-row{
+        border-radius:0px 0px 0px 0px;
+        padding:14px 14px 14px 14px;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-content-body{
+        padding:15px 15px 15px 15px ;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-price{
+        font-size:24px;
+        margin:0px 0px 0px 0px;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-heading{
+        font-size:28px;
+        padding:10px 10px 10px 10px ;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-rating{
+        font-size:20px;
+        padding:10px 10px 0px 10px ;
+    }
+    .oxiAddons_foodMenu_temPlate_7 .oxi-addonsFM-SV-info{
+        font-size:14px;
+        padding:14px 0px 0px 0px;
+    }
+}

@@ -68,12 +68,12 @@ class Style_1 extends Templates
             </div>';
         }
     }
-    // public function inline_public_jquery()
-    // {
-    //     return 'setTimeout(function () {
-    //         oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-main-wrapper-style-1"));
-    //     }, 500)';
-    // }
+    public function inline_public_jquery()
+    {
+        return 'setTimeout(function () {
+            oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-main-wrapper-style-1"));
+        }, 500)';
+    }
 
     public function old_render()
     {

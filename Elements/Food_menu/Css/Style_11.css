@@ -1,0 +1,116 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+.oxi-addonsFM-SI-wrapper-104
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplob
+*/
+
+
+
+
+.sa_fm_template_11{
+    margin:0 auto;
+}
+.sa_fm_box_outer{
+    margin: 10px;
+    width: 100%;
+}
+.sa_fm_template_11 .oxi-addons-box-main{
+    max-width: auto;    
+    border-width:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    height:auto;
+    overflow: hidden;
+}
+.sa_fm_template_11 .oxi-addons-box-food-heading{
+    font-family:"Tangerine";
+    font-weight:600;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    padding:25px 0px 5px 0px;
+    color:#100e0e;
+    font-size:50px;
+}
+.sa_fm_template_11 .oxi-addons-box-food-desc{
+    font-family:"Open Sans";
+    font-weight:300;
+    font-style:normal;
+    line-height:2;
+    text-align:center;
+    letter-spacing:2px;
+    padding:0px 10px 15px 10px;
+    color:#a9a9a9;
+    font-size:17px;
+}
+.sa_fm_template_11 .oxi-addons-box-food-img-area-outer{
+    height:auto;
+    width:100% ;
+    overflow: hidden;
+}
+.sa_fm_template_11 .sa_fm_box_outer{
+    overflow: hidden;
+}
+.sa_fm_template_11 .oxi-addons-box-food-img-area{
+    border-width:0px 0px 0px 0px;
+    background-size:cover;
+    background-position:center;
+    width:100% ;
+    position: relative;
+}
+.sa_fm_template_11 .oxi-addons-box-food-img-area::after{
+    display:block;
+    content:"";
+    padding-bottom:70% ;
+}
+.sa_fm_template_11 .oxi-addons-foodMenu-price{
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+.sa_fm_template_11 .oxi-addons-foodMenu-price.sa-fm-temp-1-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sa_fm_template_11 .oxi-addons-foodMenu-price.sa-fm-temp-1-right {
+    right: 0;
+}
+.sa_fm_template_11 .oxi-addons-foodMenu-price.sa-fm-temp-1-left {
+    left: 0;
+}
+
+
+
+
+@media only screen and (min-width:669px) and (max-width:993px){
+    .sa_fm_template_11 .oxi-addons-box-main{
+        max-width:346px ;
+    }
+    .sa_fm_template_11 .oxi-addons-box-food-heading{
+        font-size:50px ;
+    }
+    .sa_fm_template_11 .oxi-addons-box-food-desc{
+        font-size:17px ;
+    }
+    .sa_fm_template_11 .oxi-addons-box-food-img-area{
+        height:250px ;
+    }
+}
+@media only screen and (max-width:668px){
+    .sa_fm_template_11 .oxi-addons-box-main{
+        max-width:346px ;
+    }
+    .sa_fm_template_11 .oxi-addons-box-food-heading{
+        font-size:50px;
+    }
+    .sa_fm_template_11 .oxi-addons-box-food-desc{
+        font-size:17px ;
+    }
+    .sa_fm_template_11 .oxi-addons-box-food-img-area{
+        height:250px;
+    }
+}
