@@ -105,7 +105,7 @@ class Style_5 extends Templates {
                 </a>
             ';
             }
-            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 49) . ' >
+            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . '" ' . OxiAddonsAnimation($styledata, 49) . ' >
                     <div class="oxi-testimonials-item-' . $oxiid . '">
                             <div class="oxi-testimonials-style-' . $oxiid . '  ' . $styledata[11] . '">
                                 ' . $image . '

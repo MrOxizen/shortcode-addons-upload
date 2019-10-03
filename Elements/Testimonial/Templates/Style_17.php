@@ -147,7 +147,7 @@ class Style_17 extends Templates {
                             ';
                         } 
                 echo'
-                    <div class="oxi_addons_testimonial_container ' . OxiAddonsItemRows($styledata, 3) . ' ' . OxiAddonsAdminDefine($user) . '">
+                    <div class="oxi_addons_testimonial_container ' . OxiAddonsItemRows($styledata, 3) . '">
                         <div class="oxi_addons_testimonial_' . $oxiid . '_box"  ' . OxiAddonsAnimation($styledata, 97) . '>
                             <div class="oxi_addons_testimonial_content">
                                 <div class="oxi_addons_testimonial_top_content">
