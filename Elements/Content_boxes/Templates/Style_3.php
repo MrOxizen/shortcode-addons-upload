@@ -33,39 +33,39 @@ class Style_3 extends Templates {
             $admin_class = '';
         }
 
-        foreach ($child as $v) {
-            $data = json_decode($v['rawdata'], true);
+         foreach ($child as $v) {
+            $data = $this->Json_Decode($v['rawdata']);
 
             $icon = $heading = $content = $button = '';
 
-            if ($data['sa_el_fa_icon'] != '') {
-                $icon .= '<div class="oxi-addons-content-boxes-icon" >
-                            <div class="oxi-addons-content-boxes-icon-data">
-                                <div class="oxi-addons-content-boxes-oxi-icons">
+            if (array_key_exists('sa_el_fa_icon', $data) &&  $data['sa_el_fa_icon'] != '') {
+                $icon .= '<div class="sa-cb-tem-3-icon" >
+                            <div class="sa-cb-tem-3-icon-data">
+                                <div class="sa-cb-tem-3-oxi-icons">
                                     '.$this->font_awesome_render( $data['sa_el_fa_icon']).'
                                 </div>
                             </div>
                           </div>';
             }
-            if ($data['sa_el_title'] != '') {
-                $heading .= '<div class="oxi-addons-content-boxes-heading">
+            if (array_key_exists('sa_el_title', $data) &&  $data['sa_el_title'] != '') {
+                $heading .= '<div class="sa-cb-tem-3-heading">
                                 ' . $this->text_render($data['sa_el_title']) . '
                             </div>';
             }
-            if ($data['sa_el_content'] != '') {
-                $content .= '<div class="oxi-addons-content-boxes-content">
+            if (array_key_exists('sa_el_content', $data) &&  $data['sa_el_content'] != '') {
+                $content .= '<div class="sa-cb-tem-3-content">
                                 ' . $this->text_render($data['sa_el_content']) . '
                             </div> ';
             }
-            if ($data['sa_el_btn_text'] != '') {
-                $button .= '<div class="oxi-addons-content-boxes-button">
+            if (array_key_exists('sa_el_btn_text', $data) &&  $data['sa_el_btn_text'] != '') {
+                $button .= '<div class="sa-cb-tem-3-button" ' . $this->animation_render('sa-cb-btn-animation', $style) . '>
                                 <a  class="oxi-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
                             </div> ';
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="oxi-addons-content-boxes ' . $class . ' ">
-                        <div class="oxi-addons-content-boxes-data"  >     
+            echo '<div class="sa-cb-tem-3 ' . $class . ' " ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+                        <div class="sa-cb-tem-3-data"  >     
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '

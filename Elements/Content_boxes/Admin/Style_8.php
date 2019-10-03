@@ -96,11 +96,21 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_cb_tem_8.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa-max-width-condition' => 'dynamic',
             ]
+                ]
+        );
+        $this->add_control(
+                'sa-ac-box-background', $this->style, [
+            'label' => __('Background', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'oparetor' => 'RGB',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'background:{{VALUE}};'
+            ],
                 ]
         );
          $this->add_group_control(
@@ -112,7 +122,7 @@ class Style_8 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-ac-content-box-animation', $this->style, [
+                'sa-ac-content-box-box-animation', $this->style, [
             'type' => Controls::ANIMATION,
                 ]
         );
@@ -143,7 +153,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content-outer' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -218,7 +228,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-icon' => 'height:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-icon-boxes-data' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -248,7 +258,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-icon' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-icon-boxes-data' => 'width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -258,7 +268,7 @@ class Style_8 extends AdminStyle {
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-icon' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-icon-boxes-data' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -286,22 +296,21 @@ class Style_8 extends AdminStyle {
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
+                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-icon' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
         $this->add_group_control(
-                'sa-ac-button-border', $this->style, [
+                'sa-ac-icon-body-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-icon-boxes-data' => ''
             ],
                 ]
         );
         $this->add_responsive_control(
                 'sa-ac-button-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
             'loader' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -326,7 +335,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-icon-boxes-data' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -369,7 +378,7 @@ class Style_8 extends AdminStyle {
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -378,7 +387,7 @@ class Style_8 extends AdminStyle {
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-icons' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -405,7 +414,7 @@ class Style_8 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -413,15 +422,15 @@ class Style_8 extends AdminStyle {
                 'sa-ac-title-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => ''
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-heading' => ''
             ],
                 ]
         );
         $this->add_group_control(
-                'sa-ac-title-tx-shadow', $this->style, [
+                'sa-ac-heading-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => ''
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-heading' => ''
             ],
                 ]
         );
@@ -449,7 +458,7 @@ class Style_8 extends AdminStyle {
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
+                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
                 ],
             ]
         );
@@ -479,7 +488,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -499,7 +508,7 @@ class Style_8 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -507,15 +516,15 @@ class Style_8 extends AdminStyle {
                 'sa-ac-content-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => ''
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-content' => ''
             ],
                 ]
         );
         $this->add_group_control(
-                'sa-ac-content-tx-shadow', $this->style, [
+                'sa-ac-content-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => ''
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-content' => ''
             ],
                 ]
         );
@@ -543,7 +552,7 @@ class Style_8 extends AdminStyle {
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'text-align: {{VALUE}};'
+                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-content' => 'text-align: {{VALUE}};'
                 ],
             ]
         );
@@ -573,7 +582,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -586,8 +595,8 @@ class Style_8 extends AdminStyle {
     public function modal_opener() {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
+            'title' => __('Add New Content', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Content Box Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);
     }

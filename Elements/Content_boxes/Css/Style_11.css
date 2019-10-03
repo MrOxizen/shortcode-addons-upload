@@ -1,0 +1,166 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplob
+*/
+
+.oxi-addons-cb-tem-11{
+    max-width:100%;
+    margin:0 auto;
+    overflow:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px 20px 20px 20px;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-body{
+    max-width:auto;
+    float:left;
+    background:rgba(26, 29, 71, 1);
+    border-style:solid;
+    border-color:#000000;
+    border-width:0px 0px 0px 0px;
+    border-radius:5px 5px 5px 5px;
+    box-shadow:px px px px;
+    overflow:hidden;
+    padding:30px 30px 30px 30px ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-icon{
+    width:100%;
+    float:left;
+    text-align:center ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-icon-icon{
+    font-size:80px;
+    color:#ffffff;
+    display:inline-flex;
+    padding:0px 0px 0px 0px;
+    margin-top:40px;
+    transition:all 0.5s ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-hrbox{
+    width:100%;
+    float:left;
+    text-align:center;
+    padding:0px 0px 0px 0px;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-hrbox-box{
+    display:inline-block;
+    width:70%;
+    height:2px;
+    background:rgba(255, 255, 255, 1);
+    transition:all 0.5s ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-title{
+    width:100%;
+    float:left;
+    font-size:30px;
+    color:#ffffff;
+    font-family:"Lato";
+    font-weight:700;
+    font-style:normal;
+    line-height:1.5;
+    text-align:center;
+    padding:10px 0px 0px 0px;
+    transition:all 0.5s ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-description{
+    width:100%;
+    float:left;
+    font-size:15px;
+    color:#ffffff;
+    font-family:"Roboto";
+    font-weight:300;
+    font-style:normal;
+    line-height:1.4;
+    text-align:center;
+    padding:0px 0px 0px 0px;
+    opacity:0;
+    transform:translateY(-40px);
+    transition:all 0.5s ;
+}
+.oxi-cb11-body:hover{
+    background:rgba(61, 35, 35, 1);
+    transition:all 0s ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-body:hover .oxi-cb11-icon-icon{
+    transform:translateY(-40px);
+    transition:all 0.5s ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-body:hover .oxi-cb11-hrbox-box{
+    transform:translateY(10px);
+    transition:all 0.5s;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-body:hover .oxi-cb11-title{
+    transform:translateY(-60px);
+    transition:all 0.5s ;
+}
+.oxi-addons-cb-tem-11 .oxi-cb11-body:hover .oxi-cb11-description{
+    transform:translateY(-20px);
+    transition:all 0.5s;
+    opacity:1 ;
+}
+@media only screen and (min-width:669px) and (max-width:993px){
+    .oxi-addons-cb-tem-11{
+        padding:20px 20px 20px 20px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-body{
+        width:270px;
+        border-width:0px 0px 0px 0px;
+        border-radius:5px 5px 5px 5px;
+        padding:30px 30px 30px 30px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-icon-icon{
+        font-size:80px;
+        padding:0px 0px 0px 0px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-hrbox{
+        padding:0px 0px 0px 0px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-hrbox-box{
+        width:70%;
+        height:2px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-title{
+        font-size:30px;
+        padding:10px 0px 0px 0px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-description{
+        font-size:15px;
+        padding:0px 0px 0px 0px;
+    }
+}
+@media only screen and (max-width:668px){
+    .oxi-addons-cb-tem-11{
+        padding:20px 20px 20px 20px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-body{
+        width:270px;
+        border-width:0px 0px 0px 0px;
+        border-radius:5px 5px 5px 5px;
+        padding:30px 30px 30px 30px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-icon-icon{
+        font-size:80px;
+        padding:0px 0px 0px 0px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-hrbox{
+        padding:0px 0px 0px 0px;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-hrbox-box{
+        width:70%;
+        height:2px ;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-title{
+        font-size:30px;
+        padding:10px 0px 0px 0px;
+    }
+    .oxi-addons-cb-tem-11 .oxi-cb11-description{
+        font-size:oxi-cb11-content-color px;
+        padding:0px 0px 0px 0px ;
+    }
+}

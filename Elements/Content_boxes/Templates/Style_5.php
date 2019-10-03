@@ -32,41 +32,43 @@ class Style_5 extends Templates {
         }
 
         foreach ($child as $v) {
-            $data = json_decode($v['rawdata'], true);
+            $data = $this->Json_Decode($v['rawdata']);
 //            echo '<pre>';
 //        print_r($data);
 //        echo '</pre>';
             $icon = $heading = $content = '';
 
-            if ($data['sa_el_content_box_fa_icon'] != '') {
+            if (array_key_exists('sa_el_content_box_fa_icon', $data) &&  $data['sa_el_content_box_fa_icon'] != '') {
                 $icon .= '
-                <div class="oxi-addons-content-boxes-icon">
-                    <div class="oxi-addons-content-boxes-icon-data">
+                <div class="sa-cb-tem-5-icon">
+                    <div class="sa-cb-tem-5-icon-data">
                         ' . $this->font_awesome_render($data['sa_el_content_box_fa_icon']) . '
                     </div>
                 </div>
                  ';
             }
-            if ($data['sa_el_content_box_heading'] != '') {
+            if (array_key_exists('sa_el_content_box_heading', $data) &&  $data['sa_el_content_box_heading'] != '') {
                 $heading .= '
-                    <div class="oxi-addons-content-boxes-heading">
+                    <div class="sa-cb-tem-5-heading">
                         ' . $this->text_render($data['sa_el_content_box_heading']) . '
                     </div>
                             ';
             }
-            if ($data['sa_el_content_box_content'] != '') {
+            if (array_key_exists('sa_el_content_box_content', $data) &&  $data['sa_el_content_box_content'] != '') {
                 $content .= '
-                    <div class="oxi-addons-content-boxes-content">
+                    <div class="sa-cb-tem-5-content">
                         ' . $this->text_render($data['sa_el_content_box_content']) . '
                     </div> 
                     ';
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="oxi-addons-content-boxes ' . $class . '">
-                    <div class="oxi-addons-content-boxes-data">  
-                    ' . $icon . '
-                        <div class="oxi-addons-content-boxes-content-outer"> 
+            echo '<div class="sa-cb-tem-5 ' . $class . '" ' . $this->animation_render('sa-cb-content-box-animation', $style) . '>
+                    <div class="sa-cb-tem-5-data">  
+                        <div class="sa-cb-h-ratio">
+                        ' . $icon . '
+                        </div>
+                        <div class="sa-cb-tem-5-content-outer"> 
                         ' . $heading . '
                         ' . $content . '  
                         </div>    

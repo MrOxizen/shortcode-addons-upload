@@ -1,0 +1,164 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*.oxi-addonsFM-wrapper-109
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplob
+*/
+
+.oa_fm_style_9{
+    width:100%;
+    float:left;
+    padding:0px 5px 0px 5px ;
+}
+.oa_fm_style_9 .oxi-addonsFM-row{
+    width:100%;
+    max-width: auto;
+    margin:0 auto;
+    overflow:auto;
+    /*background:linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url("https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-5.jpeg") no-repeat center center;*/
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    border-radius:0px 0px 0px 0px;
+    box-shadow:1px 1px 10px 1px rgba(199, 199, 199, 1);
+    padding:10px 10px 10px 10px ;
+}
+.oa_fm_style_9 .oxi-addonsFM-content-body{
+    width:100%;
+    float:left;
+    display:flex;
+    border:5px solid #ffffff;
+    /*background:linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)), url("https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-5.jpeg") no-repeat center center;*/
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    padding:16px 16px 16px 16px;
+}
+.oa_fm_style_9 .oxi-addonsFM-text-body{
+    flex-grow:10;
+}
+.oa_fm_style_9 .oxi-addonsFM-TH-heading-body{
+    width:100%;
+    float:left;
+    display:flex;
+    padding:20px 20px 20px 20px ;
+}
+.oa_fm_style_9 .oxi-addonsFM-TH-price{
+    flex-grow:60;
+    font-size:26px;
+    color:#ffffff;
+    font-family:"Pacifico";
+    font-weight:100;
+    font-style:normal;
+    line-height:1.3;
+    text-align:right;
+    padding:0px 0px 0px 0px ;
+}
+.oa_fm_style_9 .oxi-addonsFM-TH-price:after{
+    content:"";
+    width:100%;
+    float:left;
+}
+.oa_fm_style_9 .oxi-addonsFM-TH-heading{
+    flex-grow:1;
+    font-size:25px;
+    color:#ffffff;
+    font-family:"Pacifico";
+    font-weight:100;
+    font-style:normal;
+    line-height:1.3;
+    text-align:left; 
+}
+@media only screen and (min-width:669px) and (max-width:993px){
+    .oa_fm_style_9{
+        padding:0px 5px 0px 5px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-row{
+        border-radius:0px 0px 0px 0px;
+        padding:8px 8px 8px 8px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-content-body{
+        flex-direction:column;
+        text-align:center;
+        padding:16px 16px 16px 16px;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-text-body{
+        width:100%;
+        float:left ;
+    }
+    .oxi-addonsFM-TH-heading-body{
+        flex-direction:column;
+        padding:20px 20px 20px 20px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-price{
+        width:100%;
+        float:left;
+        text-align:center;
+        font-size:26px;
+        padding:5px 5px 5px 5px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-price:after{
+        border:none;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-price:before{
+        content:"";
+        width:100%;
+        float:left;
+        border-bottom:1px dashed #ffffff ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-heading{
+        width:100%;
+        float:left;
+        font-size:25px;
+        text-align:center ;
+    }
+}
+@media only screen and (max-width:668px){
+    .oa_fm_style_9{
+        padding:0px 5px 0px 5px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-row{
+        border-radius:0px 0px 0px 0px;
+        padding:5px 5px 5px 5px;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-content-body{
+        flex-direction:column;
+        text-align:center;
+        padding:16px 16px 16px 16px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-text-body{
+        width:100%;
+        float:left ;
+    }
+    .oxi-addonsFM-TH-heading-body{
+        flex-direction:column;
+        padding:20px 20px 20px 20px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-price{
+        width:100%;
+        float:left;
+        text-align:center;
+        font-size:26px;
+        padding:5px 5px 5px 5px ;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-price:after{
+        border:none;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-price:before{
+        content:"";
+        width:100%;
+        float:left;
+        border-bottom:1px dashed #ffffff;
+    }
+    .oa_fm_style_9 .oxi-addonsFM-TH-heading{
+        width:100%;
+        float:left;
+        font-size:25px;
+        text-align:center ;
+    }
+}

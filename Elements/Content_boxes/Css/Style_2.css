@@ -8,13 +8,13 @@ and open the template in the editor.
     Author     : biplo
 */
 
-.oxi-addons-content-boxes{
+.sa-conten-box-style-2{
     width:100%;
     position:relative;
-    max-width:300px;
+    max-width:auto;
     margin:0 auto;
 }
-.oxi-addons-content-boxes-data{
+.sa-conten-box-style-2-data{
     width:100%;
     float:left;
     background:rgba(245,245,245,1.00);
@@ -26,18 +26,18 @@ and open the template in the editor.
     margin:10px 10px 10px 10px;
     box-shadow:0px 2px 6px 0px rgba(219, 219, 219, 1) ;
 }
-.oxi-addons-content-boxes .oxi-addons-content-boxes-icon{
+.sa-conten-box-style-2 .sa-conten-box-style-2-icon{
     width:100%;
     float:left;
     text-align:center;
 }
-.oxi-addons-content-boxes .oxi-icons{
+.sa-conten-box-style-2 .oxi-icons{
     display:inlne-block;
     font-size:50px;
     color:#96c346;
     padding:10px 10px 10px 10px ;
 }
-.oxi-addons-content-boxes .oxi-addons-content-boxes-heading{
+.sa-conten-box-style-2 .sa-conten-box-style-2-heading{
     width:100%;
     float:left;
     color:#1a1a1a;
@@ -49,7 +49,7 @@ and open the template in the editor.
     text-align:center;
     padding:10px 10px 10px 10px;
 }
-.oxi-addons-content-boxes .oxi-addons-content-boxes-content{
+.sa-conten-box-style-2 .sa-conten-box-style-2-content{
     width:100%;
     float:left;
     color:#1a1a1a;
@@ -61,18 +61,18 @@ and open the template in the editor.
     text-align:center;
     padding:0px 0px 14px 0px ;
 }
-.oxi-addons-content-boxes .oxi-addons-content-boxes-button{
+.sa-conten-box-style-2 .sa-conten-box-style-2-button{
     width:100%;
     float:left;
     text-align:center 
 }
-.oxi-addons-content-boxes-button .oxi-button{
+.sa-conten-box-style-2-button .oxi-button{
     display:inline-block;
     font-size:18px;
     font-family:"Open Sans";
     font-weight:300;
     font-style:normal;
-    line-height:18px;
+    line-height:1;
     text-align:center;
     padding:9px 15px 9px 15px;
     margin:20px 20px 20px 20px;
@@ -93,68 +93,68 @@ and open the template in the editor.
     border-color:#0776ad ;
 }
 @media only screen and (min-width:669px) and (max-width:993px){
-    .oxi-addons-content-boxes{
+    .sa-conten-box-style-2{
         max-width:300px 
     }
-    .oxi-addons-content-boxes-data{
+    .sa-conten-box-style-2-data{
         border-radius:0px 0px 0px 0px;
         border-width:0px 0px 0px 0px;
         padding:20px 20px 20px 20px;
         margin:10px 10px 10px 10px ;
     }
-    .oxi-addons-content-boxes .oxi-icons{
+    .sa-conten-box-style-2 .oxi-icons{
         font-size:50px;
         padding:10px 10px 10px 10px ;
     }
-    .oxi-addons-content-boxes .oxi-addons-content-boxes-heading{
+    .sa-conten-box-style-2 .sa-conten-box-style-2-heading{
         font-size:22px;padding:10px 10px 10px 10px ;
     }
-    .oxi-addons-content-boxes .oxi-addons-content-boxes-content{
+    .sa-conten-box-style-2 .sa-conten-box-style-2-content{
         font-size:16px;padding:0px 0px 14px 0px ;
     }
-    .oxi-addons-content-boxes-button .oxi-button{
+    .sa-conten-box-style-2-button .oxi-button{
         font-size:18px;
         padding:9px 15px 9px 15px;
         margin:20px 20px 20px 20px;
         border-radius:5px 5px 5px 5px;
         border-width:0px 0px 0px 0px ;
     }
-    .oxi-addons-content-boxes-button .oxi-button:hover,
-    .oxi-addons-content-boxes-button .oxi-button:focus,
-    .oxi-addons-content-boxes-button .oxi-button:active{
+    .sa-conten-box-style-2-button .oxi-button:hover,
+    .sa-conten-box-style-2-button .oxi-button:focus,
+    .sa-conten-box-style-2-button .oxi-button:active{
         border-radius:5px 5px 5px 5px ;
     }
 }
 @media only screen and (max-width:668px){
-    .oxi-addons-content-boxes{
+    .sa-conten-box-style-2{
         max-width:300px ;
     }
-    .oxi-addons-content-boxes-data{
+    .sa-conten-box-style-2-data{
         border-radius:0px 0px 0px 0px;
         border-width:0px 0px 0px 0px;
         padding:20px 20px 20px 20px;
         margin:10px 10px 10px 10px;
     }
-    .oxi-addons-content-boxes .oxi-icons{
+    .sa-conten-box-style-2 .oxi-icons{
         font-size:50px;
         padding:10px 10px 10px 10px;
     }
-    .oxi-addons-content-boxes .oxi-addons-content-boxes-heading{
+    .sa-conten-box-style-2 .sa-conten-box-style-2-heading{
         font-size:22px;padding:10px 10px 10px 10px ;
     }
-    .oxi-addons-content-boxes .oxi-addons-content-boxes-content{
+    .sa-conten-box-style-2 .sa-conten-box-style-2-content{
         font-size:16px;padding:0px 0px 14px 0px ;
     }
-    .oxi-addons-content-boxes-button .oxi-button{
+    .sa-conten-box-style-2-button .oxi-button{
         font-size:18px;
         padding:9px 15px 9px 15px;
         margin:20px 20px 20px 20px;
         border-radius:5px 5px 5px 5px;
         border-width:0px 0px 0px 0px ;
     }
-    .oxi-addons-content-boxes-button .oxi-button:hover,
-    .oxi-addons-content-boxes-button .oxi-button:focus,
-    .oxi-addons-content-boxes-button .oxi-button:active{
+    .sa-conten-box-style-2-button .oxi-button:hover,
+    .sa-conten-box-style-2-button .oxi-button:focus,
+    .sa-conten-box-style-2-button .oxi-button:active{
         border-radius:5px 5px 5px 5px ;
     }
 }

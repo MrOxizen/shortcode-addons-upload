@@ -58,7 +58,7 @@ class Style_6 extends AdminStyle {
             'loader' => true,
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
-            'default' => 'default',
+            'default' => 'dynamic',
             'options' => [
                 'dynamic' => [
                     'title' => __('Dynamic', SHORTCODE_ADDOONS),
@@ -96,7 +96,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa-max-width-condition' => 'dynamic',
@@ -109,7 +109,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6-data' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -117,12 +117,12 @@ class Style_6 extends AdminStyle {
                 'sa-ac-box-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => ''
+                '{{WRAPPER}} .sa-cb-temp-6-data' => ''
             ],
                 ]
         );
         $this->add_group_control(
-                'sa-ac-animation', $this->style, [
+                'sa-cb-box-animation', $this->style, [
             'type' => Controls::ANIMATION,
                 ]
         );
@@ -153,7 +153,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data .oxi-addons-content-boxes-content-outside' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6-data .sa-cb-temp-6-content-outside' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -183,7 +183,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6-data' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -213,7 +213,12 @@ class Style_6 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 500,
+                    'max' => 300,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
@@ -228,7 +233,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-img-button' => 'height:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-outer-div::after' => 'padding-bottom:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -246,7 +251,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -254,7 +259,7 @@ class Style_6 extends AdminStyle {
                 'sa-ac-title-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => ''
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-heading' => ''
             ],
                 ]
         );
@@ -262,7 +267,7 @@ class Style_6 extends AdminStyle {
                 'sa-ac-heading-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => ''
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-heading' => ''
             ],
                 ]
         );
@@ -288,7 +293,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-heading' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -318,7 +323,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -338,7 +343,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -346,7 +351,7 @@ class Style_6 extends AdminStyle {
                 'sa-ac-content-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => ''
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => ''
             ],
                 ]
         );
@@ -354,7 +359,7 @@ class Style_6 extends AdminStyle {
                 'sa-ac-content-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => ''
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => ''
             ],
                 ]
         );
@@ -380,7 +385,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -410,7 +415,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -422,7 +427,7 @@ class Style_6 extends AdminStyle {
         //start
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Button Content', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Button Settings', SHORTCODE_ADDOONS),
             'showing' => false,
                 ]
         );
@@ -430,7 +435,7 @@ class Style_6 extends AdminStyle {
                 'sa-ac-button-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
             ],
                 ]
         );
@@ -450,7 +455,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -461,7 +466,7 @@ class Style_6 extends AdminStyle {
             'default' => '#787878',
             'oparetor' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -469,15 +474,13 @@ class Style_6 extends AdminStyle {
                 'sa-ac-button-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
             ],
                 ]
         );
-
         $this->add_responsive_control(
                 'sa-ac-button-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -501,7 +504,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -514,7 +517,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button:hover' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -525,7 +528,7 @@ class Style_6 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#222',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-content-boxes-button .oxi-button:hover' => 'background:{{VALUE}};'
+                '{{WRAPPER}}  .sa-cb-temp-6-button .oxi-button:hover' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -533,14 +536,13 @@ class Style_6 extends AdminStyle {
                 'sa-ac-button-hover-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button:hover' => ''
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button:hover' => ''
             ],
                 ]
         );
         $this->add_responsive_control(
-                'sa-ac-button-hover-border-radius', $this->style, [
+                'sa-cb-button-hover-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -564,7 +566,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button:hover' => 'border-radius:{{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -579,6 +581,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Button Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
+            'separator' => true,
             'toggle' => TRUE,
             'default' => 'center',
             'options' => [
@@ -596,7 +599,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-button' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-button' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -604,7 +607,7 @@ class Style_6 extends AdminStyle {
                 'sa-ac-btn-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
             ],
                 ]
         );
@@ -612,12 +615,12 @@ class Style_6 extends AdminStyle {
                 'sa-ac-content_box-button-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
             ],
                 ]
         );
         $this->add_group_control(
-                'sa-ac-animation', $this->style, [
+                'sa-cb-box-button-animation', $this->style, [
             'type' => Controls::ANIMATION,
                 ]
         );
@@ -648,7 +651,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -678,7 +681,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -726,7 +729,7 @@ class Style_6 extends AdminStyle {
     public function modal_opener() {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
+            'title' => __('Add New Content', SHORTCODE_ADDOONS),
             'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);

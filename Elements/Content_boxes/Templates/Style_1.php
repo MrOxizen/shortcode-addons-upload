@@ -16,52 +16,57 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_1 extends Templates {
-    
-    
 
     public function default_render($style, $child, $admin) {
         $class = '';
-        if($style['sa-max-w-condition'] == 'custom'){
-            $class = 'sa-max-w-auto';
-        }elseif($style['sa-max-w-condition'] == 'dynamic'){
+        if ($style['sa-max-w-condition'] == 'dynamic') {
+            $class = 'sa-max-w-dynamic';
+        } elseif ($style['sa-max-w-condition'] == 'default') {
             $class = '';
         }
-        
-        if($admin == 'admin'){
+
+        if ($admin == 'admin') {
             $admin_class = 'oxi-addons-admin-edit-list';
-        }else{
+        } else {
             $admin_class = '';
         }
 
+
+//            echo '<pre>';
+//            print_r($style);
+//            echo '</pre>';
+
+
+
         foreach ($child as $v) {
-            $data = json_decode($v['rawdata'], true);
-            
+            $data = $this->Json_Decode($v['rawdata']);
+
             $heading = $content = $button = '';
-            if ($data['sa_el_title'] != '') {
-                $heading .= '<div class="oxi-addons-content-boxes-heading">
+            if (array_key_exists('sa_el_title', $data) && $data['sa_el_title'] != '') {
+                $heading .= '<div class="sa-cb-temp-1-heading">
                                 ' . $this->text_render($data['sa_el_title']) . '
                             </div>';
             }
-            if ($data['sa_el_content'] != '') {
-                $content .= '<div class="oxi-addons-content-boxes-content">
+            if (array_key_exists('sa_el_content', $data) && $data['sa_el_content'] != '') {
+                $content .= '<div class="sa-cb-temp-1-content">
                                 ' . $this->text_render($data['sa_el_content']) . '
                             </div> ';
             }
-            if ($data['sa_el_btn_text'] != '') {
-                $button .= '<div class="oxi-addons-content-boxes-button" >
-                                <a  class="oxi-button" ' . $this->url_render('sa_el_btn_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) .'</a>
+            if (array_key_exists('sa_el_btn_text', $data) && $data['sa_el_btn_text'] != '') {
+                $button .= '<div class="sa-cb-temp-1-button"  ' . $this->animation_render('sa-cb-btn-animation-temp-1', $style) . '>
+                                <a  class="oxi-button" ' . $this->url_render('sa_el_btn_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
                             </div>';
             }
-            
-            echo '<div class="'.$this->column_render('sa-ac-column', $style).' '.$admin_class.'">';
-            echo '<div class="oxi-addons-content-boxes '.$class.' ">
-                        <div class="oxi-addons-content-boxes-data"  >
+
+            echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
+            echo '<div class="sa-cb-temp-1 ' . $class . ' "  ' . $this->animation_render('sa-cb-animation-temp-1', $style) . '>
+                        <div class="sa-cb-temp-1-data"  >
                             ' . $heading . '
                             ' . $content . '
                             ' . $button . '
                         </div>
                     </div>';
-             if ($admin == 'admin'):
+            if ($admin == 'admin'):
                 echo '  <div class="oxi-addons-admin-absulote">
                             <div class="oxi-addons-admin-absulate-edit">
                                 <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
@@ -72,9 +77,6 @@ class Style_1 extends Templates {
                         </div>';
             endif;
             echo '</div>';
-
-
-           
         }
     }
 

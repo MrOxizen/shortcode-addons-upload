@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*.oxi-addonsFM-FV-wrapper-101
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplob
+*/
+
+.oa-fm-style-5.oxi-addonsFM-FV-wrapper .oxi-addonsFM-FV-image{
+    top:0;
+    left:0;
+    width:100%;
+    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-8.jpeg');*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100% ;
+}
+.oa-fm-style-5.oxi-addonsFM-FV-wrapper .oxi-addonsFM-FV-image{
+    top:0;
+    left:0;
+    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-7.jpeg');*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100% ;
+}
+.oa-fm-style-5.oxi-addonsFM-FV-wrapper .oxi-addonsFM-FV-image{
+    top:0;
+    left:0;
+    width:100%;
+    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-6.jpeg');*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100% ;
+}
+.oa-fm-style-5{
+    width:100%;
+    float:left;
+    padding:5px 10px 5px 10px;
+}
+.oa_shortcode_inner_div {
+    margin: auto;
+}
+.oa-fm-style-5 .oxi-addonsFM-FV-row{
+    width:100%;
+    max-width: px;
+    margin:0 auto;
+    border:0px solid #a89f9f;
+    border-radius:0px 0px 0px 0px;
+    box-shadow:0px 0px 0px 0px rgba(199, 199, 199, 1);
+    overflow:hidden;
+}
+.oa-fm-style-5 .oxi-addonsFM-FV-image:after{
+    display:block;
+    content:"";
+    padding-bottom:70% ;
+}
+.oa-fm-style-5 .oxi-addonsFM-FV-content-body{
+    width:100%;
+    float:left;
+    background:rgba(199, 80, 80, 1);
+    padding:15px 15px 15px 15px ;
+}
+.oa-fm-style-5 .oxi-addonsFM-FV-price{
+    width:100%;
+    float:left;
+    font-size:18px;
+    color:#ffffff;
+    font-family:"Arvo";
+    font-weight:bold;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    margin:0px 0px 0px 0px;
+    line-height:1;
+}
+.oa-fm-style-5 .oxi-addonsFM-FV-heading{
+    width:100%;
+    float:left;
+    font-size:24px;
+    color:#ffffff;
+    font-family:"Lato";
+    font-weight:700;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    padding:10px 10px 10px 10px ;
+}
+.oa-fm-style-5 .oxi-addonsFM-FV-rating{
+    width:100%;
+    float:left;
+    font-size:20px;
+    color:#f0a00c;
+    text-align:center;
+    padding:10px 10px 0px 10px ;
+}
+.oa-fm-style-5 .oxi-addonsFM-FV-info{
+    width:100%;
+    float:left;
+    font-size:15px;
+    color:#e3e0e0;
+    font-family:"Montserrat";
+    font-weight:bold;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    padding:0px 0px 0px 0px ;
+}
+@media only screen and (min-width:669px) and (max-width:993px){
+    .oa-fm-style-5{
+        padding:5px 10px 5px 10px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-row{
+        border-radius:0px 0px 0px 0px;
+        padding:10px 10px 10px 10px;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-content-body{
+        padding:15px 15px 15px 15px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-price{
+        font-size:18px;
+        margin:0px 0px 0px 0px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-heading{
+        font-size:24px;
+        padding:10px 10px 10px 10px;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-rating{
+        font-size:20px;
+        padding:10px 10px 0px 10px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-info{
+        font-size:15px;
+        padding:0px 0px 0px 0px ;
+    }
+}
+@media only screen and (max-width:668px){
+    .oa-fm-style-5{
+        padding:5px 10px 5px 10px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-row{
+        border-radius:0px 0px 0px 0px;
+        padding:10px 10px 10px 10px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-content-body{
+        padding:15px 15px 15px 15px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-price{
+        font-size:18px;
+        margin:0px 0px 0px 0px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-heading{
+        font-size:24px;
+        padding:10px 10px 10px 10px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-rating{
+        font-size:20px;
+        padding:10px 10px 0px 10px ;
+    }
+    .oa-fm-style-5 .oxi-addonsFM-FV-info{
+        font-size:15px;
+        padding:0px 0px 0px 0px ;
+    }
+}

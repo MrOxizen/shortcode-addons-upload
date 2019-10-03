@@ -31,40 +31,47 @@ class Style_4 extends Templates {
             $admin_class = '';
         }
 
-        foreach ($child as $v) {
-            $data = json_decode($v['rawdata'], true);
+         foreach ($child as $v) {
+            $data = $this->Json_Decode($v['rawdata']);
 //            echo '<pre>';
 //        print_r($data);
 //        echo '</pre>';
             $heading = $content = $img = '';
 
             
-            if ($data['sa_el_box_heading'] != '') {
-                $heading .= '<div class="oxi-addons-content-boxes-heading">
+            if (array_key_exists('sa_el_box_heading', $data) &&  $data['sa_el_box_heading'] != '') {
+                $heading .= '<div class="sa-cb-tem-4-heading">
                                 ' . $this->text_render($data['sa_el_box_heading']) . '
                             </div>';
             }
             
-            if ($data['sa_el_box_content'] != '') {
-                $content .= '<div class="oxi-addons-content-boxes-content">
+            if (array_key_exists('sa_el_box_content', $data) &&  $data['sa_el_box_content'] != '') {
+                $content .= '<div class="sa-cb-tem-4-content">
                                 ' . $this->text_render($data['sa_el_box_content']) . '
                             </div> ';
             }
             
             if ($this->media_render('sa_el_box_image',$data) != '') {
-                $img = ' <img src="'.$this->media_render('sa_el_box_image',$data).'" alt="images" class="oxi-addons-img">';
+                $img = '<div class="oxi-addons-img" style="background: url(\'' . $this->media_render('sa_el_box_image', $data) . '\');
+                            background-size: cover;">
+                          </div>';
             }
+            
             
 
            
            echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="oxi-addons-content-boxes ' . $class . '" >
-                    <div class="oxi-addons-content-boxes-data">  
-                      ' . $img . ' 
-                        <div class="oxi-addons-content-boxes-content-inside">
-                          ' . $heading . '
-                          ' . $content . ' 
-                        </div>    
+            echo '<div class="sa-cb-tem-4 ' . $class . '" ' . $this->animation_render('sa-ac-animation', $style) . '>
+                    <div class="sa-cb-tem-innar">
+                        <div class="sa-cb-tem-4-data">  
+                            <div class="sa-cb-image-body">
+                                ' . $img . ' 
+                            </div>
+                            <div class="sa-cb-tem-4-content-inside">
+                                ' . $heading . '
+                                ' . $content . ' 
+                            </div>    
+                        </div>
                     </div>
                 </div>';
             if ($admin == 'admin'):

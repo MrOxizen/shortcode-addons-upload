@@ -32,41 +32,43 @@ class Style_6 extends Templates {
         }
 
         foreach ($child as $v) {
-            $data = json_decode($v['rawdata'], true);
-//            echo '<pre>';
-//        print_r($data);
+            $data = $this->Json_Decode($v['rawdata']);
+//         echo '<pre>';
+//       print_r($data);
 //        echo '</pre>';
             $heading = $content = $img = $button = '';
 
 
-            if ($data['sa_el_box_heading'] != '') {
-                $heading .= '<div class="oxi-addons-content-boxes-heading">
+            if (array_key_exists('sa_el_box_heading', $data) &&  $data['sa_el_box_heading'] != '') {
+                $heading .= '<div class="sa-cb-temp-6-heading">
                                 ' . $this->text_render($data['sa_el_box_heading']) . '
                             </div>';
             }
-            if ($data['sa_el_box_content'] != '') {
-                $content .= '<div class="oxi-addons-content-boxes-content">
+            if (array_key_exists('sa_el_box_content', $data) &&  $data['sa_el_box_content'] != '') {
+                $content .= '<div class="sa-cb-temp-6-content">
                                 ' . $this->text_render($data['sa_el_box_content']) . '
                             </div> ';
             }
             if ($this->media_render('sa_el_box_image', $data) != '') {
                 $img .= '<img src="' . $this->media_render('sa_el_box_image', $data) . '" alt="images" class="oxi-addons-img">';
             }
-            if ($data['sa_el_button_text'] != '') {
-                $button .= ' <div class="oxi-addons-content-boxes-button">
+            if (array_key_exists('sa_el_button_text', $data) &&  $data['sa_el_button_text'] != '') {
+                $button .= ' <div class="sa-cb-temp-6-button" ' . $this->animation_render('sa-cb-box-button-animation', $style) . '>
                                 <a  class="oxi-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_button_text']) . '</a>
                             </div>';
             }
             
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo ' <div class="oxi-addons-content-boxes ' . $class . '" >
-                    <div class="oxi-addons-content-boxes-data"> 
+            echo ' <div class="sa-cb-temp-6 ' . $class . '" ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+                    <div class="sa-cb-temp-6-data"> 
                         <div class="oxi-addons-img-button">
-                            '.$img.'
+                            <div class="sa-outer-div">
+                                '.$img.'
+                            </div>
                             '.$button.'
                         </div>
-                        <div class="oxi-addons-content-boxes-content-outside">
+                        <div class="sa-cb-temp-6-content-outside">
                             '.$heading.'
                             '.$content.'
                         </div>    

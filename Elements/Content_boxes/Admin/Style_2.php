@@ -52,7 +52,7 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa-max-width-condition', $this->style, [
+                'sa-max-width-condition', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'separator' => true,
             'loader' => true,
@@ -95,7 +95,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa-max-width-condition' => 'dynamic',
@@ -106,7 +106,7 @@ class Style_2 extends AdminStyle {
                 'sa-ac-box-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2-data' => ''
             ],
                 ]
         );
@@ -114,14 +114,13 @@ class Style_2 extends AdminStyle {
                 'sa-ac-box-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2-data' => ''
             ],
                 ]
         );
-           $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-ac-box-border-radius-style-2', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -145,20 +144,20 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
-         $this->add_group_control(
-                'sa-ac-box-shdw', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2-data' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->add_group_control(
-                'sa-ac-animation', $this->style, [
+                'sa-ac-box-shdw', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2-data' => ''
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa-cb-box-animation', $this->style, [
             'type' => Controls::ANIMATION,
                 ]
         );
@@ -188,7 +187,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2-data' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -218,13 +217,13 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2-data' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_section();
-        
-        
+
+
         $this->end_section_devider();
 
 
@@ -237,7 +236,7 @@ class Style_2 extends AdminStyle {
             'showing' => false,
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-ac-op-cl-icon-size', $this->style, [
             'label' => __('Icon Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -263,7 +262,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -273,39 +272,37 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'color:{{VALUE}};'
             ],
                 ]
         );
         $this->add_control(
-            'sa_icon_box_icon_align',
-            $this->style,
-            [
-                'label' => __('Icon Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
+                'sa_icon_box_icon_align', $this->style, [
+            'label' => __('Icon Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-icons' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-ac-icon-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -331,12 +328,12 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_section();
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Heading Settings', SHORTCODE_ADDOONS),
@@ -349,7 +346,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -357,7 +354,7 @@ class Style_2 extends AdminStyle {
                 'sa-ac-title-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-heading' => ''
             ],
                 ]
         );
@@ -365,37 +362,35 @@ class Style_2 extends AdminStyle {
                 'sa-ac-title-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-heading' => ''
             ],
                 ]
         );
-                $this->add_control(
-            'sa_icon_box_heading_align_style_2',
-            $this->style,
-            [
-                'label' => __('Text Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
+        $this->add_control(
+                'sa_icon_box_heading_align_style_2', $this->style, [
+            'label' => __('Text Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-heading' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_responsive_control(
                 'sa-ac-heading-padding', $this->style, [
@@ -423,13 +418,13 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_section();
-        
-        
+
+
 
         $this->start_controls_section(
                 'shortcode-addons', [
@@ -443,7 +438,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-content' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -451,7 +446,7 @@ class Style_2 extends AdminStyle {
                 'sa-ac-content-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-content' => ''
             ],
                 ]
         );
@@ -459,37 +454,35 @@ class Style_2 extends AdminStyle {
                 'sa-ac-content-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-content' => ''
             ],
                 ]
         );
-                $this->add_control(
-            'sa_icon_box_content_align_style_2',
-            $this->style,
-            [
-                'label' => __('Text Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
+        $this->add_control(
+                'sa_icon_box_content_align_style_2', $this->style, [
+            'label' => __('Text Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-content' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_responsive_control(
                 'sa-ac-content-padding', $this->style, [
@@ -517,14 +510,14 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Button Content', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Button Settings', SHORTCODE_ADDOONS),
             'showing' => false,
                 ]
         );
@@ -532,7 +525,7 @@ class Style_2 extends AdminStyle {
                 'sa-ac-button-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => ''
             ],
                 ]
         );
@@ -552,7 +545,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -562,8 +555,8 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
             'default' => '#787878',
-                    'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'background:{{VALUE}};'
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -571,7 +564,7 @@ class Style_2 extends AdminStyle {
                 'sa-ac-button-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => ''
             ],
                 ]
         );
@@ -579,7 +572,6 @@ class Style_2 extends AdminStyle {
         $this->add_responsive_control(
                 'sa-ac-button-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -603,7 +595,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -615,8 +607,8 @@ class Style_2 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#787878',
-            'selector' => [ 
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button:hover' => 'color:{{VALUE}};'
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -627,22 +619,21 @@ class Style_2 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#222',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-content-boxes-button .oxi-button:hover' => 'background:{{VALUE}};'
+                '{{WRAPPER}}  .sa-conten-box-style-2-button .oxi-button:hover' => 'background:{{VALUE}};'
             ],
                 ]
         );
         $this->add_group_control(
-                'sa-ac-button-hover-border', $this->style, [
+                'sa-ac-button-hoober-border', $this->style, [
             'type' => Controls::BORDER,
-                    'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button:hover' => ''
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button:hover' => ''
             ],
                 ]
         );
         $this->add_responsive_control(
-                'sa-ac-button-hover-border-radius', $this->style, [
+                'sa-cb-button-hoover-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -666,66 +657,65 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button:hover' => 'border-radius:{{VALUE}};'
+                '{{WRAPPER}}  .oxi-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_tab();
 
-        
+
         $this->end_controls_tabs();
 
-        
+
         $this->add_control(
-            'sa_icon_box_button_align',
-            $this->style,
-            [
-                'label' => __('Button Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
+                'sa_icon_box_button_align', $this->style, [
+            'label' => __('Button Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'separator' => TRUE,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes .oxi-addons-content-boxes-button' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-button' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_group_control(
                 'sa-ac-btn-text-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => ''
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => ''
             ],
                 ]
         );
         $this->add_group_control(
                 'sa-ac-cont-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-data' => 'box-shadow:{{VALUE}};'
+            'selector' => [
+                '{{WRAPPER}} .sa-conten-box-style-2-data' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
         $this->add_group_control(
-                'sa-ac-animation', $this->style, [
+                'sa-cb-btn-animation', $this->style, [
             'type' => Controls::ANIMATION,
                 ]
         );
-        
+
         $this->add_responsive_control(
                 'sa-ac-button-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -752,7 +742,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -782,18 +772,18 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
-        
-        
-        
-        
+
+
+
+
         $this->end_section_devider();
 
         $this->end_section_tabs();
-        
+
 
 
         $this->start_section_tabs(
@@ -805,9 +795,9 @@ class Style_2 extends AdminStyle {
         );
 
         $this->start_section_devider();
-        
 
-        
+
+
         $this->add_group_control(
                 'sa-ac-animation', $this->style, [
             'type' => Controls::ANIMATION,
@@ -823,7 +813,7 @@ class Style_2 extends AdminStyle {
     public function modal_opener() {
         $this->add_substitute_control('', [], [
             'type' => Controls::MODALOPENER,
-            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
+            'title' => __('Add New Content', SHORTCODE_ADDOONS),
             'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
             'showing' => TRUE,
         ]);
@@ -834,7 +824,7 @@ class Style_2 extends AdminStyle {
                     <h4 class="modal-title">Content Box Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div cecholass="modal-body">';
+                <div class="modal-body">';
         $this->add_control(
                 'sa_el_fa_icon', $this->style, [
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
@@ -859,7 +849,7 @@ class Style_2 extends AdminStyle {
             'placeholder' => 'Write Button Link Here',
                 ]
         );
-        
+
         $this->add_control(
                 'sa_el_content', $this->style, [
             'label' => __('Content', SHORTCODE_ADDOONS),
@@ -868,7 +858,7 @@ class Style_2 extends AdminStyle {
             'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
                 ]
         );
-        
+
         $this->add_control(
                 'sa_el_btn_text', $this->style, [
             'label' => __('Button Text', SHORTCODE_ADDOONS),
