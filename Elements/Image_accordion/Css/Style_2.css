@@ -48,7 +48,9 @@
 .oxi-addons-wrapper-image-two-accordion .oxi-addons-accordion .oxi-addons-overlay {
     display: block;
     overflow: hidden;
-    width: 100%
+    width: 100%;
+    cursor: pointer;
+        
 }
 
 .oxi-addons-wrapper-image-two-accordion .oxi-addons-accordion .oxi-addons-overlay {

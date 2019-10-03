@@ -27,7 +27,6 @@ class Style_2 extends Templates {
                 <div class="oxi-addons-accordion">
                     <ul class="oxi-addons-accordion-ul">';
         foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
-            $data = explode('||#||', $value['files']);
 
 
             if (array_key_exists('sa_image_accordion_url-url', $value) && $value['sa_image_accordion_url-url'] != '') {
