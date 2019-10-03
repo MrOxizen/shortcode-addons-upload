@@ -1,0 +1,187 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplo
+*/
+
+.sa-cb-temp-6 .sa-cb-temp-6-images{
+    /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/10/content1.png");*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100% ;
+}
+.sa-cb-temp-6 .sa-cb-temp-6-images{
+    /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/12/2.jpg");*/
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100% ;
+}
+.sa-cb-temp-6 .sa-cb-temp-6-images{
+    /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/12/Girl-with-guitar-nature.jpg")*/
+        ;-moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100% ;
+}
+.sa-cb-temp-6{
+    width:100%;
+    position:relative;
+    max-width:auto;
+    margin:0 auto ;
+}
+.sa-cb-temp-6-data{
+    width:100%;
+    float:left;
+    background:rgba(34,174,179,1.00);
+    margin:10px 10px 10px 10px;
+    box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1) ;
+}
+.sa-cb-temp-6 .oxi-addons-img-button{
+    width:100%;
+    height:auto;
+    float:left;
+    position:relative ;
+}
+.sa-cb-temp-6 .sa-cb-temp-6-images{
+    width:100%;
+    height:100%;
+}
+.sa-cb-temp-6 .sa-cb-temp-6-button{
+    width:100%;
+    float:left;
+    position:absolute;
+    bottom:0;
+    left:0;
+    text-align:left;
+}
+.sa-cb-temp-6 .oxi-addons-img{
+    width:100%;
+    height:100%;
+    float:left;
+}
+.sa-outer-div{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.sa-outer-div::after{
+    display: block;
+    content: "";
+    padding-bottom: 60%;
+}
+.oxi-addons-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.sa-cb-temp-6-button .oxi-button{
+    display:inline-block;
+    padding:6px 20px 6px 20px;
+    font-size:18px;
+    font-family:"Open Sans";
+    font-weight:300;
+    font-style:normal;
+    line-height:1;
+    text-align:left;
+    background:rgba(214,45,121,1.00);
+    color:#ffffff ;
+}
+.sa-cb-temp-6-button .oxi-button:hover,
+.sa-cb-temp-6-button .oxi-button:focus,
+.sa-cb-temp-6-button .oxi-button:active{
+    color:#ffffff;
+    background:rgba(46,247,187,0.64) ;
+}
+.sa-cb-temp-6-content-outside{
+    float: left;
+    width: 100%;
+}
+.sa-cb-temp-6 .sa-cb-temp-6-content{
+    width:100%;
+    padding:10px 10px 10px 10px;
+    float:left ;
+}
+.sa-cb-temp-6 .sa-cb-temp-6-heading{
+    width:100%;
+    float:left;
+    color:#ffffff;
+    font-size:23px;
+    font-family:"Open Sans";
+    font-weight:bold;
+    font-style:normal;
+    line-height:1.3;
+    text-align:left;
+    padding:14px 10px 14px 10px ;
+}
+.sa-cb-temp-6 .sa-cb-temp-6-content{
+    width:100%;
+    float:left;
+    color:#ffffff;
+    font-size:15px;
+    font-family:"Open Sans";
+    font-weight:300;
+    font-style:normal;
+    line-height:1.3;
+    text-align:left;
+    padding:0px 10px 10px 10px ;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px){
+    .sa-cb-temp-6{
+        max-width:325px ;
+    }
+    .sa-cb-temp-6-data{
+        margin:10px 10px 10px 10px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-images{
+        height:150px ;
+    }
+    .sa-cb-temp-6-button .oxi-button{
+        padding:6px 20px 6px 20px;
+        font-size:18px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-content{
+        padding:10px 10px 10px 10px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-heading{
+        font-size:23px;
+        padding:14px 10px 14px 10px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-content{
+        font-size:15px;
+        padding:0px 10px 10px 10px ;
+    }
+}
+@media only screen and (max-width:668px){
+    .sa-cb-temp-6{
+        max-width:325px ;
+    }
+    .sa-cb-temp-6-data{
+        margin:10px 10px 10px 10px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-images{
+        height:150px ;
+    }
+    .sa-cb-temp-6-button .oxi-button{
+        padding:6px 20px 6px 20px;
+        font-size:18px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-content{
+        padding:10px 10px 10px 10px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-heading{
+        font-size:23px;
+        padding:325px 10px px px ;
+    }
+    .sa-cb-temp-6 .sa-cb-temp-6-content{
+        font-size:15px;
+        padding:0px 10px 10px 10px ;
+    }
+}

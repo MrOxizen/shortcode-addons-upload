@@ -1,0 +1,263 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplo
+*/
+
+.sa-contentbox-temp-10{
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0px 0px 0px 0px;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-main{
+    max-width:auto;
+    float:left;
+    background:rgba(107, 86, 209, 1);
+    background-size: cover;
+    border-style:solid;
+    border-color:#000000;
+    border-width:0px 0px 0px 0px;
+    border-radius:0px 0px 0px 0px;
+    box-shadow:Inset 0px 0px 0px 0px rgba(41, 40, 40, 1);
+    cursor:pointer;
+    overflow:hidden;
+    transition: 0.7s;
+    width: 100%;    
+    display: table;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-body{
+    width:100%;
+    float:left;
+    padding:30px 30px 30px 30px ;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-icon{
+    width:100%;
+    float:left;
+    text-align:left;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-icon-icon{
+    position:relative;
+    width:100%;
+    float:left;
+    font-size:80px;
+    color:#ffffff;
+    padding:0px 0px 0px 0px ;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-title{
+    position:relative;
+    width:100%;
+    float:left;
+    font-size:30px;
+    color:#ffffff;
+    font-family:"Lato";
+    font-weight:700;
+    font-style:normal;
+    line-height:1.5;
+    text-align:left;
+    padding:10px 0px 0px 0px;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-description{
+    position:relative;
+    width:100%;
+    float:left;
+    font-size:15px;
+    color:#ffffff;
+    font-family:"Roboto";
+    font-weight:300;
+    font-style:normal;
+    line-height:1.4;
+    text-align:left;
+    padding:0px 0px 0px 0px;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-arrow{
+    width:100%;
+    text-align:right;
+    padding:0px 0px 0px 0px;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-arrow-arrow{
+    display:inline-block;
+    width:70px;
+    height:70px;
+    background:rgba(10, 0, 0, 0.55);
+}
+.sa-contentbox-temp-10 .oxi-contentbox-arrow-icon{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:25px;
+    color:#ffffff;
+}
+.sa-contentbox-temp-10 .oxi-contentbox-main:hover{
+    background:rgba(54, 54, 54, 1);
+}
+.sa-contentbox-temp-10 .oxi-contentbox-main:hover .oxi-contentbox-icon-icon{
+    -webkit-animation:icon 0.5s;
+    animation:icon 0.5s;
+}
+@-webkit-keyframes icon{
+    from{
+        bottom:-50px;
+        opacity:0;
+    }
+    to{
+        bottom:0;
+        opacity:1 ;
+    }
+}
+@keyframes icon{
+    from{
+        bottom:-50px;
+        opacity:0 ;
+    }
+    to{
+        bottom:0;
+        opacity:1;
+    }
+}
+.oxi-contentbox-main:hover .oxi-contentbox-title{
+    -webkit-animation:title 0.5s;
+    animation:title 0.5s ;
+}
+@-webkit-keyframes title{
+    from{
+        right:-300px;
+        opacity:0 ;
+    }
+    to{
+        right:0;
+        opacity:1; 
+    }
+}
+@keyframes title{
+    from{
+        right:-300px;
+        opacity:0 ;
+    }
+    to{
+        right:0;
+        opacity:1 ;
+    }
+}
+    .oxi-contentbox-main:hover .oxi-contentbox-description{
+        -webkit-animation:description 0.5s;
+        animation:description 0.5s ;
+    }
+    @-webkit-keyframes description{
+        from{
+            left:-300px;
+            opacity:0 ;
+        }
+        to{
+            left:0;
+            opacity:1 ;
+        }
+    }
+    @keyframes description{
+        from{
+            left:-300px;
+            opacity:0 ;
+        }
+        to{
+            left:0;
+            opacity:1 ;
+        }
+    }
+    .oxi-contentbox-main:hover .oxi-contentbox-arrow-icon{
+        -webkit-animation:arrow 0.5s;
+        animation:arrow 0.5s infinite ;
+    }
+    @-webkit-keyframes arrow{
+        from{
+            bottom:-50px;
+            opacity:0 ;
+        }
+        to{
+            bottom:0;
+            opacity:1 ;
+        }
+    }
+    @keyframes arrow{
+        from{
+            left:-5px ;
+        }
+        to{
+            left:0 ;
+        }
+    }
+    @media only screen and (min-width:669px) and (max-width:993px){
+        .sa-contentbox-temp-10{
+            padding:0px 0px 0px 0px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-main{
+            width:360px;
+            float:left;
+            border-width:0px 0px 0px 0px;
+            border-radius:0px 0px 0px 0px ;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-body{
+            padding:30px 30px 30px 30px ;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-icon-icon{
+            font-size:80px;
+            padding:0px 0px 0px 0px ;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-title{
+            font-size:30px;
+            color:#ffffff;
+            padding:10px 0px 0px 0px ;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-description{
+            font-size:15px;
+            padding:0px 0px 0px 0px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-arrow-arrow{
+            width:70px;
+            height:70px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-arrow-icon{
+            font-size:25px;
+        }
+    }
+    @media only screen and (max-width:668px){
+        .sa-contentbox-temp-10{
+            padding:0px 0px 0px 0px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-main{
+            width:360px;
+            float:left;
+            border-width:0px 0px 0px 0px;
+            border-radius:0px 0px 0px 0px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-body{
+            padding:30px 30px 30px 30px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-icon-icon{
+            font-size:80px;
+            padding:0px 0px 0px 0px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-title{
+            font-size:30px;
+            padding:10px 0px 0px 0px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-description{
+            font-size:15px;
+            padding:0px 0px 0px 0px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-arrow-arrow{
+            width:70px;
+            height:70px;
+        }
+        .sa-contentbox-temp-10 .oxi-contentbox-arrow-icon{
+            font-size:25px;
+        }
+    }

@@ -15,22 +15,14 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_2 extends Templates {
-  
-    public function inline_public_css() {
-        $rt = '';
-        foreach ($this->child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-            $rt .= $this->background_render('sa_fi_icon_bg', $value, '.' . $this->WRAPPER . ' .oxi_addons_FI_2 .sa_icon_bg_color_' . $v['id']. ' .oxi-icons');
-          
-        }
-        return $rt;
-    }
+
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
+        $repeater = (array_key_exists('sa_fi_repeater', $style) && is_array($style['sa_fi_repeater'])) ? $style['sa_fi_repeater'] : [];
+        foreach ($repeater as $key => $value) {
             $icon = $addressone = $addresstwo = $addresssection = '';
             if (array_key_exists('sa_fi_icon', $value) && $value['sa_fi_icon'] != '0') {
-                $icon ='<div class="oxi_addons_FI_2_icon sa_icon_bg_color_' . $v['id'] . '" ' . $this->animation_render('sa_fi_icon_animation', $style) . '>
+                $icon = '<div class="oxi_addons_FI_2_icon" ' . $this->animation_render('sa_fi_icon_animation', $style) . '>
                          ' . $this->font_awesome_render($value['sa_fi_icon_class']) . '
                         </div>';
             }
@@ -47,25 +39,15 @@ class Style_2 extends Templates {
                 </div>';
             }
             echo '<div class="' . $this->column_render('sa_fi_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
-                    <div class="oxi_addons_FI_2">
+                    <div class="oxi_addons_FI_2 oxi_addons_FI_2' . $key . '">
                          <div class="oxi_addons_FI_2_row" ' . $this->animation_render('sa_fi_animation', $style) . '>
                             ' . $icon . '
                             ' . $addresssection . '
                         </div>
                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+            
 
             echo '</div>';
-            
         }
     }
 
@@ -226,7 +208,6 @@ class Style_2 extends Templates {
                 }';
 
         wp_add_inline_style('shortcode-addons-style', $css);
-        
     }
 
 }

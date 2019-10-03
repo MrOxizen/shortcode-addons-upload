@@ -1,0 +1,241 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplo
+*/
+
+.sa-cb-tem-3{
+    width:100%;
+    position:relative;
+    max-width:auto;
+    margin:0 auto;
+}
+.sa-cb-tem-3-data{
+    width:100%;
+    float:left;
+    background:rgba(255, 255, 255, 0);
+    border-radius:5px 5px 5px 5px;
+    border-width:0px 0px 0px 0px;
+    border-style:solid;
+    border-color:#341969;
+    padding:30px 10px 20px 10px;
+    margin:10px 10px 10px 10px;
+    box-shadow:1px 5px 10px 1px rgba(186, 164, 119, 0.57) ;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-icon{
+    display:block;
+    width:100%;
+    float:left;
+    text-align:center ;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-icon-data{
+    display:inline-block;
+    position:relative;
+    padding:5px 5px 5px 5px ;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-icon-data::before{
+    display:block;
+    position:absolute;
+    content:"";
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    border-radius:120px 120px 120px 120px;
+    border-width:2px 2px 2px 2px;
+    border-style:solid;
+    border-color:#ab1bdb;
+    -webkit-transition:all 0.35s ease-in-out;
+    -moz-transition:all 0.35s ease-in-out;
+    transition:all 0.35s ease-in-out;
+    opacity:0;
+    transform:scale(0.5) ;
+}
+.sa-cb-tem-3:hover .sa-cb-tem-3-icon-data::before{
+    transform:scale(1);
+    opacity:1;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-oxi-icons{
+    position:relative;
+    width:120px;
+    height:120px;
+    padding:5px 5px 5px 5px;
+    display:flex;
+    justify-content:center;
+    align-items:center ;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-oxi-icons::before{
+    display:block;
+    position:absolute;
+    content:"";
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    border-radius:120px 120px 120px 120px;
+    border-width:2px 2px 2px 2px;
+    border-style:solid;
+    border-color:#ab1bdb ;
+}
+.sa-cb-tem-3 .oxi-icons{
+    font-size:70px;
+    color:#5c5c5c ;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-heading{
+    width:100%;
+    float:left;
+    color:#7d6262;
+    font-size:20px;
+    font-family:"Open Sans";
+    font-weight:700;
+    font-style:normal;
+    line-height:1.3;
+    text-align:center;
+    padding:10px 10px 10px 10px ;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-content{
+    width:100%;
+    float:left;
+    color:#826666;
+    font-size:14px;
+    font-family:"Open Sans";
+    font-weight:400;
+    font-style:normal;
+    line-height:1.5;
+    text-align:center;
+    padding:5px 5px 15px 5px ;
+}
+.sa-cb-tem-3 .sa-cb-tem-3-button{
+    width:100%;
+    float:left;
+    text-align:center ;
+}
+.sa-cb-tem-3-button .oxi-button{
+    display:inline-block;
+    font-size:16px;
+    font-family:"Open Sans";
+    font-weight:300;
+    font-style:normal;
+    line-height:1;
+    text-align:center;
+    padding:9px 15px 9px 15px;
+    margin:10px 10px 10px 10px;
+    color:#ffffff;
+    background:rgba(171, 27, 219, 1);
+    border-radius:5px 5px 5px 5px;
+    border-width:0px 0px 0px 0px;
+    border-style:none;
+    border-color:#ffffff ;
+}
+.sa-cb-tem-3-button .oxi-button:hover,
+.sa-cb-tem-3-button .oxi-button:focus,
+.sa-cb-tem-3-button .oxi-button:active{
+    color:#ffffff;
+    background:rgba(78, 95, 163, 1);
+}
+@media only screen and (min-width:669px) and (max-width:993px){
+    .sa-cb-tem-3{
+        max-width:300px ;
+    }
+    .sa-cb-tem-3-data{
+        border-radius:5px 5px 5px 5px;
+        border-width:0px 0px 0px 0px;
+        padding:30px 10px 20px 10px;
+        margin:10px 10px 10px 10px ;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-icon-data{
+        padding:5px 5px 5px 5px ;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-icon-data::before{
+        border-radius:120px 120px 120px 120px;
+        border-width:2px 2px 2px 2px ;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-oxi-icons{
+        position:relative;
+        width:120px;
+        height:120px;
+        padding:5px 5px 5px 5px ;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-oxi-icons::before{
+        border-radius:120px 120px 120px 120px;
+        border-width:2px 2px 2px 2px ;
+    }
+    .sa-cb-tem-3 .oxi-icons{
+        font-size:70px ;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-heading{
+        font-size:20px;
+        padding:10px 10px 10px 10px ;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-content{
+        font-size:14px;
+        padding:5px 5px 15px 5px ;
+    }
+    .sa-cb-tem-3-button .oxi-button{
+        font-size:16px;
+        padding:9px 15px 9px 15px;
+        margin:10px 10px 10px 10px;
+        border-radius:5px 5px 5px 5px;
+        border-width:0px 0px 0px 0px;
+    }
+    .sa-cb-tem-3-button .oxi-button:hover,
+    .sa-cb-tem-3-button .oxi-button:focus,
+    .sa-cb-tem-3-button .oxi-button:active{
+        border-radius:5px 5px 5px 5px;
+    }
+}
+@media only screen and (max-width:668px){
+    .sa-cb-tem-3{
+        max-width:300px;
+    }
+    .sa-cb-tem-3-data{
+        border-radius:5px 5px 5px 5px;
+        border-width:0px 0px 0px 0px;
+        padding:30px 10px 20px 10px;
+        margin:10px 10px 10px 10px;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-icon-data{
+        padding:5px 5px 5px 5px;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-icon-data::before{
+        border-radius:120px 120px 120px 120px;
+        border-width:2px 2px 2px 2px;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-oxi-icons{
+        position:relative;
+        width:120px;
+        height:120px;
+        padding:5px 5px 5px 5px;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-oxi-icons::before{
+        border-radius:120px 120px 120px 120px;
+        border-width:2px 2px 2px 2px;
+    }
+    .sa-cb-tem-3 .oxi-icons{
+        font-size:70px;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-heading{
+        font-size:20px;
+        padding:10px 10px 10px 10px;
+    }
+    .sa-cb-tem-3 .sa-cb-tem-3-content{
+        font-size:14px;
+        padding:5px 5px 15px 5px;
+    }
+    .sa-cb-tem-3-button .oxi-button{
+        font-size:16px;
+        padding:9px 15px 9px 15px;
+        margin:10px 10px 10px 10px;
+        border-radius:5px 5px 5px 5px;
+        border-width:0px 0px 0px 0px;
+    }
+    .sa-cb-tem-3-button .oxi-button:hover,
+    .sa-cb-tem-3-button .oxi-button:focus,
+    .sa-cb-tem-3-button .oxi-button:active{
+        border-radius:5px 5px 5px 5px;
+    }
+}
