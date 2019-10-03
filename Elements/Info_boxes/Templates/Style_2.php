@@ -22,13 +22,13 @@ class Style_2 extends Templates
     {
 
         $datas = (array_key_exists('sa_info_info_box_repeater', $style) && is_array($style['sa_info_info_box_repeater']) ? $style['sa_info_info_box_repeater'] : []);
-        foreach ($datas as $key => $value) {  
+        foreach ($datas as $key => $value) {
             $icon = $heading = $details = '';
             if (array_key_exists('sa_info_info_box_title', $value) &&  $value['sa_info_info_box_title'] != '') {
-                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_2 heading-'.$key.'">' . $this->text_render($value['sa_info_info_box_title']) . '</' . $style['sa_info_tag'] . '>';
+                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_2">' . $this->text_render($value['sa_info_info_box_title']) . '</' . $style['sa_info_tag'] . '>';
             }
             if (array_key_exists('sa_info_info_box_desc', $value) &&  $value['sa_info_info_box_desc'] != '') {
-                $details = '<div class="oxi_addons__details_style_2 details-'.$key.'"> ' . $this->text_render($value['sa_info_info_box_desc']) . ' </div>';
+                $details = '<div class="oxi_addons__details_style_2"> ' . $this->text_render($value['sa_info_info_box_desc']) . ' </div>';
             }
             if (array_key_exists('sa_info_info_box_icon', $value) &&  $value['sa_info_info_box_icon'] != '') {
                 $icon = '<div class="oxi_addons__icon_style_2">
@@ -36,13 +36,13 @@ class Style_2 extends Templates
             </div>';
             }
             echo '  <div class="oxi_addons__info_boxes_wrapper ' . $this->column_render('sa_info_boxes_column', $style) . '">
-                            <div class="oxi_addons__info_boxes_main_style_2">
+                            <div class="oxi_addons__info_boxes_main_style_2 oxi_addons__info_boxes_main_style_2_' . $key . '">
                                 ' . $icon . '
                                 ' . $heading . '
                                 ' . $details . '
                             </div>
                         ';
-            
+
             echo ' </div>';
         }
     }
@@ -60,7 +60,7 @@ class Style_2 extends Templates
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
 
-        $image = $css ='';
+        $image = $css = '';
         echo '  <div class="oxi-addons-container" > 
                     <div class="oxi-addons-row">
                         <div class="oxi-addons-row oxi-add-info-box' . $oxiid . '">';
@@ -97,7 +97,7 @@ class Style_2 extends Templates
                 </div>';
 
 
-     
+
         $css .= ' 
                 .oxi-add-info-box' . $oxiid . '{
                     width: 100%;

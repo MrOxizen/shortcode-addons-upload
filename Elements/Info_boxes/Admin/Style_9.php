@@ -35,6 +35,58 @@ class Style_9 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
+                'label' => esc_html__('Feature Content', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_repeater_control(
+            'sa_info_info_box_repeater',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS), 
+                'title_field' => 'sa_info_info_box_title',
+                'fields' => [
+                    'sa_info_info_box_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fab fa-accusoft'
+                    ],
+                   
+                    'sa_info_info_box_title' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT, 
+                        'default' => esc_html__('Scalable on Devices.', SHORTCODE_ADDOONS),
+                        'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_9_{{KEY}} .oxi_addons__heading_style_9' => '',
+                        ],
+                    ],
+                    'sa_info_info_box_sub_title' => [
+                        'label' => esc_html__('Sub Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT, 
+                        'default' => esc_html__('RESPONSIVE & RETINA', SHORTCODE_ADDOONS),
+                        'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_9_{{KEY}} .oxi_addons__sub_heading_style_9' => '',
+                        ],
+                    ],
+                    'sa_info_info_box_desc' => [
+                        'label' => esc_html__('Description', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXTAREA,
+                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SA_ELEMENTOR_TEXTDOMAIN),
+                        'selector' => [
+                            '{{WRAPPER}} .oxi_addons__info_boxes_main_style_9_{{KEY}} .oxi_addons__details_style_9' => '',
+                        ],
+                    ],   
+                  
+                   
+                ],  
+            ]
+        );
+
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
                 'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
@@ -360,7 +412,7 @@ class Style_9 extends AdminStyle
             ]
 
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_icon_alignment',
             $this->style,
             [
@@ -682,63 +734,5 @@ class Style_9 extends AdminStyle
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
-    public function modal_opener()
-    {
-
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Icon', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Icon Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-
-        $this->add_control(
-            'sa_info_boxes_fontawesome',
-            $this->style,
-            [
-                'label' => __('Font Awesome Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'placeholder' => 'example:- fab fa-facebook',
-            ]
-        );
-        
-        $this->add_control(
-            'sa_info_boxes_heading',
-            $this->style,
-            [
-                'label' => __('Title', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-            ]
-        );
-        $this->add_control(
-            'sa_info_boxes_sub_heading',
-            $this->style,
-            [
-                'label' => __('Sub Title', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-            ]
-        );
-        $this->add_control(
-            'sa_info_boxes_details',
-            $this->style,
-            [
-                'label' => __('Description', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXTAREA,
-            ]
-        ); 
-     
-
-        echo '</div>';
-    }
+ 
 }

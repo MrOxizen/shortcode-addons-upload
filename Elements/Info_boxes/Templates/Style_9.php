@@ -21,29 +21,29 @@ class Style_9 extends Templates
     public function default_render($style, $child, $admin)
     {
 
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $datas = (array_key_exists('sa_info_info_box_repeater', $style) && is_array($style['sa_info_info_box_repeater']) ? $style['sa_info_info_box_repeater'] : []);
+        foreach ($datas as $key => $value) {
 
             $icon = $heading = $details = $sub_heading = '';
-            if (array_key_exists('sa_info_boxes_sub_heading', $value) && $value['sa_info_boxes_sub_heading'] != '') {
-                $sub_heading = '<p class="oxi_addons__sub_heading_style_9">' . $this->text_render($value['sa_info_boxes_heading']) . '</p>';
+            if (array_key_exists('sa_info_info_box_sub_title', $value) && $value['sa_info_info_box_sub_title'] != '') {
+                $sub_heading = '<p class="oxi_addons__sub_heading_style_9">' . $this->text_render($value['sa_info_info_box_title']) . '</p>';
             }
-            if (array_key_exists('sa_info_boxes_heading', $value) && $value['sa_info_boxes_heading'] != '') {
-                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_9">' . $this->text_render($value['sa_info_boxes_heading']) . '</' . $style['sa_info_tag'] . '>';
+            if (array_key_exists('sa_info_info_box_title', $value) && $value['sa_info_info_box_title'] != '') {
+                $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_9">' . $this->text_render($value['sa_info_info_box_title']) . '</' . $style['sa_info_tag'] . '>';
             }
-            if (array_key_exists('sa_info_boxes_details', $value) && $value['sa_info_boxes_details'] != '') {
-                $details = '<div class="oxi_addons__details_style_9"> ' . $this->text_render($value['sa_info_boxes_details']) . ' </div>';
+            if (array_key_exists('sa_info_info_box_desc', $value) && $value['sa_info_info_box_desc'] != '') {
+                $details = '<div class="oxi_addons__details_style_9"> ' . $this->text_render($value['sa_info_info_box_desc']) . ' </div>';
             }
-            if (array_key_exists('sa_info_boxes_fontawesome', $value) && $value['sa_info_boxes_fontawesome'] != '') {
+            if (array_key_exists('sa_info_info_box_icon', $value) && $value['sa_info_info_box_icon'] != '') {
 
                 $icon = '<div class="oxi_addons__icon_style_9" ' . ($value['sa_info_boxes_icon_link-id'] != '' ? 'id="' . $value['sa_info_boxes_button_link-id'] . '"' : '') . '> 
                             <div class="oxi_addons__icon">
-                                ' . $this->font_awesome_render($value['sa_info_boxes_fontawesome']) . ' 
+                                ' . $this->font_awesome_render($value['sa_info_info_box_icon']) . ' 
                             </div>
                          </div>';
             }
 
-            echo '  <div class="oxi_addons__info_boxes_wrapper ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_info_boxes_column', $style) . '">
+            echo '  <div class="oxi_addons__info_boxes_wrapper  ' . $this->column_render('sa_info_boxes_column', $style) . '">
                             <div class="oxi_addons__info_boxes_main_style_9" ' . $this->animation_render('sa_info_boxes_animation', $style) . '>
                                     ' . $icon . ' 
                                     ' . $heading . '
@@ -51,16 +51,7 @@ class Style_9 extends Templates
                                     ' . $details . ' 
                             </div>
                         ';
-            if ($admin == 'admin') :
-                echo '  <div class="oxi-addons-admin-absulote">
-                                <div class="oxi-addons-admin-absulate-edit">
-                                    <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                                </div>
-                                <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                                </div>
-                            </div>';
-            endif;
+             
             echo ' </div>';
         }
     }
