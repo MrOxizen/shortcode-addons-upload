@@ -521,7 +521,7 @@ class Style_2 extends AdminStyle {
                 'sa-image-box-button-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-button' => '',
+                '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-button-data' => '',
             ]
                 ]
         );

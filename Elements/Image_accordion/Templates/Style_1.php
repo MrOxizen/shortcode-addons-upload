@@ -19,9 +19,7 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         
-        
         $styledata = $this->style;
-        
         echo '<div class="oxi-addons-wrapper-image-accordion">
                 <div class="oxi-addons-accordion">
                     <ul class="oxi-addons-accordion-ul">';
