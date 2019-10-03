@@ -31,8 +31,6 @@ class Style_3 extends Templates {
                     <section id="oxi-addons-slider">
                             <div class="oxi-addons-slider-content">';
         foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
-            $data = explode('||#||', $value['files']);
-
             echo '<div class="oxi-addons-image oxi-addons-image-first">
                         <div class="oxi-addons-slider-item">
                             <div class="oxi-addons-item-img-1" data-src="' . $this->media_render('sa_image_accordion_image_1', $value) . '"></div>

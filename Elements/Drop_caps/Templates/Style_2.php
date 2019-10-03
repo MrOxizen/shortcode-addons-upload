@@ -15,14 +15,21 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\Templates; 
 class Style_2 extends Templates {
 
-   
+   /**
+     * load current element render since 2.0.0
+     *
+     * @since 2.0.0
+     */
+    public function render() {
+        $this->default_render($this->style, $this->child, $this->admin);
+    }
     public function default_render($style, $child, $admin) {
 
         $text  = '';
         if (array_key_exists('sa_drop_caps_text', $style) && $style['sa_drop_caps_text'] != '') {
-            $text = ' <div class="oxi_addons__text">'. $this->text_render($style['sa_drop_caps_text']) .'</div>';
+            $text = ' <div class="oxi_addons__text" ' . $this->animation_render('sa_drop_caps_animation', $style) . '>'. $this->text_render($style['sa_drop_caps_text']) .'</div>';
         }
-        echo '<div class="oxi_addons__drop_caps_main">
+        echo '<div class="'.$this->WRAPPER.' oxi_addons__drop_caps_main_style_2">
                '. $text .'
               </div>';
        
