@@ -19,15 +19,15 @@ class Style_6 extends Templates
 {
 	public function default_render($style, $child, $admin)
 	{
-		$heading = $sub_heading = $button = $link = $leftbutton = $rightbutton = $line = '';
+		$heading = $sub_heading = $button = $link = $leftbutton = $rightbutton = $icon = '';
 		if ($style['sa_cta_h_text'] != '') {
 			$heading .= '<div class="sa_addons_cta_heading">' . $this->text_render($style['sa_cta_h_text']) . '</div>';
 		}
 		if ($style['sa_cta_s_h_text'] != '') {
 			$sub_heading .= '<div class="sa_addons_cta_sub_heading">' . $this->text_render($style['sa_cta_s_h_text']) . '</div>';
 		}
-		if (array_key_exists('sa_cta_line_on_off', $style) && $style['sa_cta_line_on_off'] != '0') {
-			$line .= 'sa_cta_line_yes';
+		if ($style['sa_cta_icon'] != '') {
+			$icon .= '<div class="sa_addons_cta_icon_content">' . $this->font_awesome_render($style['sa_cta_icon']) . '</div>';
 		}
 		if (array_key_exists('sa_cta_btn_link_on_off', $style) && $style['sa_cta_btn_link_on_off'] != '0') {
 			if ($style['sa_cta_btn_link-url'] != '') {
@@ -42,20 +42,27 @@ class Style_6 extends Templates
 					</div>';
 		}
 		if ($style['sa_cta_btn_posi'] == 'left') {
-			$leftbutton .= '<div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">' . $button . ' </div>';
+			$leftbutton .= '<div class="oxi-bt-col-lg-3 oxi-bt-col-md-12 oxi-bt-col-sm-12">' . $button . ' </div>';
 		} else {
-			$rightbutton .= '<div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">' . $button . ' </div>';
+			$rightbutton .= '<div class="oxi-bt-col-lg-3 oxi-bt-col-md-12 oxi-bt-col-sm-12">' . $button . ' </div>';
 		}
 
-		echo '<div class="sa_addons_cta_style_6 ' . $line . '">
-			<div class="sa_addons_cta_full_content">
-			' . $leftbutton . '
-				<div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
-					' . $sub_heading . '
-					' . $heading . '
-				</div>
-				' . $rightbutton . '
-			</div>
+		echo '<div class="sa_addons_cta_style_6 ">
+			<div class="sa_addons_cta_full_content">';
+
+		echo $leftbutton;
+		if ($style['sa_cta_btn_posi'] == 'right') {
+			echo $icon;
+		}
+		echo '<div class="oxi-bt-col-lg-7 oxi-bt-col-md-12 oxi-bt-col-sm-12">
+				' . $heading . '
+				' . $sub_heading . '
+				</div>';
+		echo $rightbutton;
+		if ($style['sa_cta_btn_posi'] == 'left') {
+			echo $icon;
+		}
+		echo '</div>
 		</div>';
 	}
 
