@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_4 extends Templates {
 
     public function default_render($style, $child, $admin) {
-
+        
         $firsticon = $heading = $details = $contentsection = $lasticon = '';
         if (array_key_exists('sa_ab_icon', $style) && $style['sa_ab_icon'] != '0') {
             $firsticon = '<div class="oxi-addonsAL-FO-col-one">
