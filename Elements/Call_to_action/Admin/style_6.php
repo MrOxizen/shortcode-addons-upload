@@ -90,7 +90,28 @@ class Style_6 extends AdminStyle
                 ],
             ]
         );
-
+        $this->add_control(
+            'sa_cta_btn_posi',
+            $this->style,
+            [
+                'label' => __('Icon & Button Reverse', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'toggle' => TRUE,
+                'loader' => TRUE,
+                'default' => 'right',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-angle-double-left',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-angle-double-right',
+                    ],
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_cta_b_r',
             $this->style,
@@ -99,7 +120,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '105',
+                    'size' => '7',
                 ],
                 'range' => [
                     '%' => [
@@ -198,7 +219,7 @@ class Style_6 extends AdminStyle
             ]
         );
         $this->end_controls_section();
-        
+
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -224,7 +245,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#f5f5f5',
+                'default' => '#272727',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_sub_heading' => 'color: {{VALUE}};'
                 ],
@@ -344,7 +365,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#EB5732',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_heading' => 'color: {{VALUE}};'
                 ],
@@ -444,13 +465,13 @@ class Style_6 extends AdminStyle
             ]
         );
 
-        $this->add_group_control(
+        $this->add_control(
             'sa_cta_icon',
             $this->style,
             [
                 'label' => __('Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::Icon,
-                'default' => 'fas fa-apple-alt',
+                'type' => Controls::ICON,
+                'default' => 'fas fa-street-view',
             ]
         );
 
@@ -482,19 +503,59 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_full_content:after' => 'height: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_cta_icon_c',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#EB5732',
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_cta_icon_align',
+            $this->style,
+            [
+                'label' => __('Icon Align', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'toggle' => TRUE,
+                'default' => 'left',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_cta_line_w',
+            'sa_cta_icon_p',
             $this->style,
             [
-                'label' => __('Line Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '2',
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -514,7 +575,39 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_full_content:after' => 'width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_cta_icon_m',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_icon_content .oxi-icons' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -553,6 +646,34 @@ class Style_6 extends AdminStyle
             ]
         );
         $this->add_control(
+            'sa_cta_btn_align',
+            $this->style,
+            [
+                'label' => __('Button Align', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'toggle' => TRUE,
+                'default' => 'right',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn_content' => 'text-align: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
             'sa_cta_btn_link_on_off',
             $this->style,
             [
@@ -577,28 +698,7 @@ class Style_6 extends AdminStyle
                 ]
             ]
         );
-        $this->add_control(
-            'sa_cta_btn_posi',
-            $this->style,
-            [
-                'label' => __('Button Position', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'loader' => TRUE,
-                'default' => 'right',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-left',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-angle-double-right',
-                    ],
-                ],
-            ]
-        );
+
         $this->add_responsive_control(
             'sa_cta_btn_m',
             $this->style,
@@ -649,34 +749,7 @@ class Style_6 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        $this->add_control(
-            'sa_cta_btn_align',
-            $this->style,
-            [
-                'label' => __('Button Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'right',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn_content' => 'text-align: {{VALUE}};',
-                ],
-            ]
-        );
+
 
         $this->add_group_control(
             'sa_cta_btn_typho',
@@ -704,7 +777,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#272727',
+                'default' => '#ffffff',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_cta_style_6 .sa_addons_cta_btn' => 'color: {{VALUE}};'
                 ],
