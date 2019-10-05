@@ -19,7 +19,7 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
         $value = $this->Json_Decode($v['rawdata']);
-        $link = $endlink = $heading = $image = '';
+        $link = $endlink = $heading = $image = $imageposition = '';
         if (array_key_exists('sa_ib_url-url', $value) && $value['sa_ib_url-url'] != '') {
                 $link .= '<a class="oxi-addons-link" ' . $this->url_render('sa_ib_url', $value) . '>';
                 $endlink .= '</a>';
