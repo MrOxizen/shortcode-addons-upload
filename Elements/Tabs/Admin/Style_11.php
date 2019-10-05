@@ -48,12 +48,90 @@ class Style_11 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
+        $this->add_repeater_control(
+            'sa_tabs_data',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_tabs_tab_icon_on_off' => [
+                        'label' => esc_html__('Icon Enable', SHORTCODE_ADDOONS),
+                        'type' => Controls::SWITCHER,
+                        'loader' => TRUE,
+                        'default' => 'icon_yes',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'return_value' => 'icon_yes',
+                    ],
 
+                    'sa_tabs_tab_icon' => [
+                        'label' => __('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fas fa-apple-alt',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_tabs_tab_icon_on_off' => 'icon_yes',
+                        ]
+                    ],
+                    'sa_tabs_color' => [
+                        'label' => __('Border & Active Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'default' => '#ff6373',
+                        'oparetor' => 'RGB',
+                        'selector' => [
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header.sa-header-{{KEY}}::before' => ' background: {{VALUE}}',
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two.sa-header-{{KEY}}::before' => ' background: {{VALUE}}',
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header.sa-header-{{KEY}}.sa-active' => ' color: {{VALUE}}',
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two.sa-header-{{KEY}}.sa-active' => ' color: {{VALUE}}',
+                        ],
+                    ],
+                    'sa_tabs_h_text' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT,
+                        'default' => 'Default Title',
+                        'selector' => [
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-header-{{KEY}}' => '',
+                        ],
+                    ],
+                    'sa_tabs_content' => [
+                        'label' => esc_html__('Content', SHORTCODE_ADDOONS),
+                        'type' => Controls::WYSIWYG,
+                        'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                        'selector' => [
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-body-{{KEY}}' => '',
+                        ],
+                    ],
+
+                    'sa_tabs_url_open' => [
+                        'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
+                        'type' => Controls::SWITCHER,
+                        'default' => '',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'return_value' => 'link_show',
+                    ],
+
+                    'sa_tabs_url' => [
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_tabs_url_open' => 'link_show'
+                        ]
+                    ],
+                ],
+                'title_field' => 'sa_tabs_h_text',
+                'button' => 'Add New Tabs',
+            ]
+        );
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_tabs_data', $styledata) && is_array($styledata['sa_tabs_data'])) ? $styledata['sa_tabs_data'] : [];
         $all_initial = [];
         $i = 0;
-        foreach ($this->child as $value) :
-            $all_value = json_decode(stripcslashes($value['rawdata']), true);
-            $all_initial[$i] =  $all_value['sa_tabs_h_text'];
+        foreach ($all_data as $value) :
+            $all_initial[$i] =  $value['sa_tabs_h_text'];
             $i++;
         endforeach;
         $this->add_control(
@@ -62,6 +140,7 @@ class Style_11 extends AdminStyle
             [
                 'label' => __('Tabbing Initial', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
+                'description' => __('New date working after save and reload', SHORTCODE_ADDOONS),
                 'loader' => TRUE,
                 'default' => '0',
                 'options' => $all_initial,
@@ -257,70 +336,7 @@ class Style_11 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        $this->add_control(
-            'sa_tabs_headding_aling',
-            $this->style,
-            [
-                'label' => __('Text Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'condition' => [
-                    'sa_tabs_headding_icon_style' => 'inline-block',
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header' => 'justify-content: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two' => 'justify-content: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_headding_aling_block',
-            $this->style,
-            [
-                'label' => __('Text align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'condition' => [
-                    'sa_tabs_headding_icon_style' => 'block',
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header' => 'align-items: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two' => 'align-items: {{VALUE}};',
-                ],
-            ]
-        );
+        
         $this->add_group_control(
             'sa_tabs_headding_typo',
             $this->style,
@@ -727,7 +743,7 @@ class Style_11 extends AdminStyle
                 ],
             ]
         );
-       
+
         $this->add_control(
             'sa_tabs_headding_icon_style',
             $this->style,
@@ -832,104 +848,5 @@ class Style_11 extends AdminStyle
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
-    }
-    public function modal_opener()
-    {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Tabs', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Tabs Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Tabs Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-        $this->add_control(
-            'sa_tabs_tab_icon_on_off',
-            $this->style,
-            [
-                'label' => __('Icon Show', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'loader' => TRUE,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'icon_yes',
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_tab_icon',
-            $this->style,
-            [
-                'label' => __('Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'default' => 'fas fa-apple-alt',
-                'condition' => [
-                    'sa_tabs_tab_icon_on_off' => 'icon_yes',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_h_text',
-            $this->style,
-            [
-                'label' => __('Heading', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Default Title',
-                'placeholder' => 'Your Heading Here',
-            ]
-        );
-
-        $this->add_control(
-            'sa_tabs_content',
-            $this->style,
-            [
-                'label' => __('Content', SHORTCODE_ADDOONS),
-                'type' => Controls::WYSIWYG,
-                'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.',
-                'placeholder' => 'Your Content Here',
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_color',
-            $this->style,
-            [
-                'label' => __('Border & Active Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ff6373',
-                'oparetor' => 'RGB',
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_url_open',
-            $this->style,
-            [
-                'label' => __('Link Active', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'link_show',
-            ]
-        );
-        $this->add_group_control(
-            'sa_tabs_url',
-            $this->style,
-            [
-                'type' => Controls::URL,
-                'loader' => TRUE,
-                'condition' => [
-                    'sa_tabs_url_open' => 'link_show',
-                ],
-            ]
-        );
-        echo '</div>';
     }
 }

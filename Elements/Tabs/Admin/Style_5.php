@@ -49,11 +49,78 @@ class Style_5 extends AdminStyle
             ]
         );
 
+        $this->add_repeater_control(
+            'sa_tabs_data',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_tabs_tab_icon_on_off' => [
+                        'label' => esc_html__('Icon Enable', SHORTCODE_ADDOONS),
+                        'type' => Controls::SWITCHER,
+                        'loader' => TRUE,
+                        'default' => 'icon_yes',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'return_value' => 'icon_yes',
+                    ],
+
+                    'sa_tabs_tab_icon' => [
+                        'label' => __('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fas fa-apple-alt',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_tabs_tab_icon_on_off' => 'icon_yes',
+                        ]
+                    ],
+                    'sa_tabs_h_text' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT,
+                        'default' => 'Default Title',
+                        'selector' => [
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-5 .sa-header-{{KEY}}' => '',
+                        ],
+                    ],
+                    'sa_tabs_content' => [
+                        'label' => esc_html__('Content', SHORTCODE_ADDOONS),
+                        'type' => Controls::WYSIWYG,
+                        'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                        'selector' => [
+                            '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-5 .sa-addons-body-{{KEY}}' => '',
+                        ],
+                    ],
+
+                    'sa_tabs_url_open' => [
+                        'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
+                        'type' => Controls::SWITCHER,
+                        'default' => '',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'return_value' => 'link_show',
+                    ],
+
+                    'sa_tabs_url' => [
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'sa_tabs_url_open' => 'link_show'
+                        ]
+                    ],
+                ],
+                'title_field' => 'sa_tabs_h_text',
+                'button' => 'Add New Tabs',
+            ]
+        );
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_tabs_data', $styledata) && is_array($styledata['sa_tabs_data'])) ? $styledata['sa_tabs_data'] : [];
         $all_initial = [];
         $i = 0;
-        foreach ($this->child as $value) :
-            $all_value = json_decode(stripcslashes($value['rawdata']), true);
-            $all_initial[$i] = $all_value['sa_tabs_h_text'];
+        foreach ($all_data as $value) :
+            $all_initial[$i] =  $value['sa_tabs_h_text'];
             $i++;
         endforeach;
         $this->add_control(
@@ -62,6 +129,7 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Tabbing Initial', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
+                'description' => __('New date working after save and reload', SHORTCODE_ADDOONS),
                 'loader' => TRUE,
                 'default' => '0',
                 'options' => $all_initial,

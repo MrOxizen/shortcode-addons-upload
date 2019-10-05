@@ -12,18 +12,21 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_5 extends Templates {
+class Style_5 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $jquery = $linkopening = '';
         echo '<div class="sa-addons-tabs-main-wrapper-style-5" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                 <div class="sa-addons-main-tab-header">';
 
-        foreach ($child as $header) {
-
-            $value_header = $header['rawdata'] != '' ? json_decode(stripcslashes($header['rawdata']), true) : [];
+        $styledata = $this->style;
+        $all_data = (array_key_exists('sa_tabs_data', $styledata) && is_array($styledata['sa_tabs_data'])) ? $styledata['sa_tabs_data'] : [];
+        foreach ($all_data  as $key => $value_header) {
             $icon = '';
             if (array_key_exists('sa_tabs_url_open', $value_header)) :
 
@@ -31,7 +34,7 @@ class Style_5 extends Templates {
                     $linkopening = ", '_self'";
                 endif;
                 if ($value_header['sa_tabs_url-url'] != '') {
-                    $jquery .= 'jQuery(".sa-header-' . $header['id'] . '").click(function() {window.open("' . $value_header['sa_tabs_url-url'] . '" ' . $linkopening . ');});';
+                    $jquery .= 'jQuery(".sa-header-' . $key . '").click(function() {window.open("' . $value_header['sa_tabs_url-url'] . '" ' . $linkopening . ');});';
                 }
             endif;
             if (array_key_exists('sa_tabs_tab_icon_on_off', $value_header) && $value_header['sa_tabs_tab_icon_on_off'] != '0') :
@@ -46,19 +49,18 @@ class Style_5 extends Templates {
             else :
                 $icon_text = $this->text_render(array_key_exists('sa_tabs_h_text', $value_header) ? $value_header['sa_tabs_h_text'] : '');
             endif;
-            echo '<div class="sa-addons-header ' . $style['sa_tabs_headding_icon_style'] . ' sa-header-' . $header['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $header['id'] . '">' . $icon_text . '</div>';
+            echo '<div class="sa-addons-header ' . $style['sa_tabs_headding_icon_style'] . ' sa-header-' . $key . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $key . '">' . $icon_text . '</div>';
         }
         echo '</div>
                 <div class="sa-addons-main-tab-body ">';
-        
-        foreach ($child as $body) {
-            $value_body = $body['rawdata'] != '' ? json_decode(stripcslashes($body['rawdata']), true) : [];
+
+        foreach ($all_data  as $key => $value_body) {
             if (array_key_exists('sa_tabs_url_open', $value_body) && $value_body['sa_tabs_url_open'] != '0') :
                 if ($value_body['sa_tabs_url-target'] != 'yes') :
                     $linkopening = ", '_self'";
                 endif;
                 if ($value_body['sa_tabs_url-url'] != '') {
-                    $jquery .= 'jQuery(".sa-header-' . $body['id'] . '").click(function() {window.open("' . $value_body['sa_tabs_url-url'] . '" ' . $linkopening . ');});';
+                    $jquery .= 'jQuery(".sa-header-' . $key . '").click(function() {window.open("' . $value_body['sa_tabs_url-url'] . '" ' . $linkopening . ');});';
                 }
             endif;
 
@@ -76,18 +78,8 @@ class Style_5 extends Templates {
             endif;
 
 
-            echo '<div class="sa-addons-header-two sa-header-' . $body['id'] . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $body['id'] . '">' . $icon_text . '</div>';
-            echo '<div class="sa-addons-body ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" id="sa-tab-' . $this->oxiid . '-id-' . $body['id'] . '" style="display: none;">' . $this->text_render(array_key_exists('sa_tabs_content', $value_body) ? $value_body['sa_tabs_content'] : '') . '';
-            if ($admin == 'admin') :
-                echo '<div class="oxi-addons-admin-absulote">
-                                    <div class="oxi-addons-admin-absulate-edit">
-                                        <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $body['id'] . '">Edit</button>
-                                    </div>
-                                    <div class="oxi-addons-admin-absulate-delete">
-                                        <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $body['id'] . '">Delete</button>
-                                    </div>
-                                </div>';
-            endif;
+            echo '<div class="sa-addons-header-two  sa-header-' . $key . ' " ref="#sa-tab-' . $this->oxiid . '-id-' . $key . '">' . $icon_text . '</div>';
+            echo '<div class="sa-addons-body sa-addons-body-' . $key . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" id="sa-tab-' . $this->oxiid . '-id-' . $key . '" style="display: none;">' . $this->text_render(array_key_exists('sa_tabs_content', $value_body) ? $value_body['sa_tabs_content'] : '') . '';
             echo '</div>';
         }
         echo '</div>';
@@ -96,7 +88,8 @@ class Style_5 extends Templates {
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
-    public function inline_public_jquery() {
+    public function inline_public_jquery()
+    {
         $styledata = $this->style;
         $animationIn = $animationOut = $jquery = '';
         if ($styledata['sa_tabs_tab_anim'] == 'slide') {
@@ -106,11 +99,11 @@ class Style_5 extends Templates {
             $animationIn = 'fadeIn';
             $animationOut = 'fadeOut';
         }
-
+        $initial = array_key_exists('sa_tabs_initial', $styledata) ? $styledata['sa_tabs_initial'] : '0';
         $jquery .= ' 
-            jQuery(".sa-addons-tabs-main-wrapper-style-5 .sa-addons-header:eq(' . $styledata['sa_tabs_initial'] . ')").addClass("sa-active");
-            jQuery(".sa-addons-tabs-main-wrapper-style-5 .sa-addons-header-two:eq(' . $styledata['sa_tabs_initial'] . ')").addClass("sa-active");
-            jQuery(".sa-addons-tabs-main-wrapper-style-5 .sa-addons-body:eq(' . $styledata['sa_tabs_initial'] . ')").' . $animationIn . '("slow");
+            jQuery(".sa-addons-tabs-main-wrapper-style-5 .sa-addons-header:eq(' . $initial . ')").addClass("sa-active");
+            jQuery(".sa-addons-tabs-main-wrapper-style-5 .sa-addons-header-two:eq(' . $initial . ')").addClass("sa-active");
+            jQuery(".sa-addons-tabs-main-wrapper-style-5 .sa-addons-body:eq(' . $initial . ')").' . $animationIn . '("slow");
             jQuery(".sa-addons-tabs-main-wrapper-style-5 .sa-addons-header").click(function() {
             if (jQuery(this).hasClass("sa-active")) {
                 return false
@@ -146,7 +139,8 @@ class Style_5 extends Templates {
         return $jquery;
     }
 
-    public function old_render() {
+    public function old_render()
+    {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -427,5 +421,4 @@ class Style_5 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
-
 }

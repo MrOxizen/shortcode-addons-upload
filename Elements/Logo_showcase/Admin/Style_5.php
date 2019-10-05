@@ -83,7 +83,7 @@ class Style_5 extends AdminStyle
                         ],
                     ],
                     'sa_logo_showcase_url_open' => [
-                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
                         'type' => Controls::SWITCHER,
                         'default' => '',
                         'label_on' => __('Yes', SHORTCODE_ADDOONS),
@@ -92,7 +92,7 @@ class Style_5 extends AdminStyle
                     ],
 
                     'sa_logo_showcase_url' => [
-                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
                         'type' => Controls::URL,
                         'controller' => 'add_group_control',
                         'conditional' => Controls::INSIDE,

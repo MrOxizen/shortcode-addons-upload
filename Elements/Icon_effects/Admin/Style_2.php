@@ -67,7 +67,7 @@ class Style_2 extends AdminStyle
                 'fields' => [
 
                     'sa_icon_effects_icon' => [
-                        'label' => esc_html__('Icon', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
                         'default' => 'fab fa-linkedin-in',
                     ],
@@ -183,7 +183,7 @@ class Style_2 extends AdminStyle
 
 
                     'sa_icon_effects_url_open' => [
-                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
                         'type' => Controls::SWITCHER,
                         Controls::SEPARATOR => TRUE,
                         'default' => '',
@@ -193,7 +193,7 @@ class Style_2 extends AdminStyle
                     ],
 
                     'sa_icon_effects_url' => [
-                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
                         'type' => Controls::URL,
                         'controller' => 'add_group_control',
                         'conditional' => Controls::INSIDE,
