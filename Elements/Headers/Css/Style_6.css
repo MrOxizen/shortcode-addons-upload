@@ -1,5 +1,5 @@
 
-  .oxi-addons-headers-wrapper {
+  .oxi-addons-headers-wrapper-style-6 {
     width: 100%;
     float: left;
     overflow: hidden;
@@ -14,7 +14,7 @@
     cursor: pointer
 }
 
-.oxi-addons-headers-wrapper::after {
+.oxi-addons-headers-wrapper-style-6::after {
     content: "";
     position: absolute;
     left: 0;
@@ -26,17 +26,17 @@
     z-index: 10
 }
 
-.oxi-addons-headers-wrapper:hover::after {
+.oxi-addons-headers-wrapper-style-6:hover::after {
     background: rgba(0, 30, 59, 0.35)
 }
 
-.oxi-addons-headers-wrapper::before {
+.oxi-addons-headers-wrapper-style-6::before {
     content: "";
     display: block;
     padding-bottom: 50%
 }
 
- .oxi-addons-main-icon {
+ .oxi-addons-headers-wrapper-style-6 .oxi-addons-main-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@
     z-index: 11
 }
 
- .oxi-icons {
+ .oxi-addons-headers-wrapper-style-6 .oxi-icons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +65,7 @@
     overflow: hidden
 }
 
- .oxi-icons:hover {
+ .oxi-addons-headers-wrapper-style-6 .oxi-icons:hover {
     color: #bababa;
     background: rgba(217, 52, 46, 0);
     border-color: #ffffff;
@@ -73,13 +73,13 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-headers-wrapper::before {
+    .oxi-addons-headers-wrapper-style-6::before {
       
     }
-     .oxi-addons-main-icon {
+    .oxi-addons-headers-wrapper-style-6  .oxi-addons-main-icon {
         padding: 10px 10px 10px 10px
     }
-     .oxi-icons {
+    .oxi-addons-headers-wrapper-style-6  .oxi-icons {
         font-size: 60px;
         border-radius: 1px 1px 1px 1px;
         box-shadow: 0px 0px 0px OxiAddonsHeaders-I-HTC px 0;
@@ -88,13 +88,13 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-headers-wrapper::before {
+    .oxi-addons-headers-wrapper-style-6::before {
       
     }
-     .oxi-addons-main-icon {
+    .oxi-addons-headers-wrapper-style-6  .oxi-addons-main-icon {
         padding: 10px 10px 10px 10px
     }
-     .oxi-icons {
+    .oxi-addons-headers-wrapper-style-6  .oxi-icons {
         font-size: 60px;
         border-radius: 1px 1px 1px 1px;
         box-shadow: 0px 0px OxiAddonsHeaders-I-HTC px #bababapx 0;

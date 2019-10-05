@@ -68,7 +68,7 @@ class Style_1 extends Templates {
 
         if ($style['sa_headers_button_left_text'] != '' && $style['sa_headers_button_left_link-url'] != '') {
             $button = '
-            <div class="oxi-addons-main-button" ' . $this->animation_render('sa_headers_button_left_animation', $style) . '></>
+            <div class="oxi-addons-main-button" ' . $this->animation_render('sa_headers_button_left_animation', $style) . '>
                 <a ' . $this->url_render('sa_headers_button_left_link', $style) . ' class="oxi-addons-link"  >
                     ' . $this->text_render($style['sa_headers_button_left_text']) . '
                 </a>
@@ -76,7 +76,7 @@ class Style_1 extends Templates {
         ';
         } elseif ($style['sa_headers_button_left_text'] != '' && $style['sa_headers_button_left_link-url'] == '') {
             $button = '
-        <div class="oxi-addons-main-button" ' . $this->animation_render('sa_headers_button_left_animation', $style) . '></>
+        <div class="oxi-addons-main-button" ' . $this->animation_render('sa_headers_button_left_animation', $style) . '>
             <div class="oxi-addons-link">
                 ' . $this->text_render($style['sa_headers_button_left_text']) . '
             </div>
@@ -107,7 +107,7 @@ class Style_1 extends Templates {
                 ' . $button . ' 
             </div> ';
         }
-        echo '<div class="oxi-addons-headers-wrapper">
+        echo '<div class="oxi-addons-headers-wrapper-style-1">
                     ' . $column . '
             </div>';
     }
@@ -165,7 +165,7 @@ class Style_1 extends Templates {
 
         if ($stylefiles[10] != '' && $stylefiles[12] != '') {
             $button = '
-            <div class="oxi-addons-main-button" ' . OxiAddonsAnimation($styledata, 294) . '></>
+            <div class="oxi-addons-main-button" ' . OxiAddonsAnimation($styledata, 294) . '>
                 <a href="' . OxiAddonsUrlConvert($stylefiles[12]) . '" class="oxi-addons-link"  target="' . $styledata[204] . '">
                     ' . OxiAddonsTextConvert($stylefiles[10]) . '
                 </a>
@@ -173,7 +173,7 @@ class Style_1 extends Templates {
         ';
         } elseif ($stylefiles[10] != '' && $stylefiles[12] == '') {
             $button = '
-        <div class="oxi-addons-main-button" ' . OxiAddonsAnimation($styledata, 294) . '></>
+        <div class="oxi-addons-main-button" ' . OxiAddonsAnimation($styledata, 294) . '>
             <div class="oxi-addons-link">
                 ' . OxiAddonsTextConvert($stylefiles[10]) . '
             </div>

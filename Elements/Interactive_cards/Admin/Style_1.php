@@ -57,7 +57,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card' => 'max-width : {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1' => 'max-width : {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -99,7 +99,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-addons-IC' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-addons-IC' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -171,7 +171,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon' => ' width : {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-close-icon' => ' width : {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -197,7 +197,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon' => 'height : {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-close-icon' => 'height : {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -207,7 +207,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-close-icon .oxi-icons' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -218,7 +218,7 @@ class Style_1 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'rgba(255,255,255,0.00)',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon' => 'background : {{VALUE}}; '
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-close-icon' => 'background : {{VALUE}}; '
             ],
                 ]
         );
@@ -228,7 +228,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::NUMBER,
             'default' => 18,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon' => 'font-size:{{VALUE}}px',
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-close-icon' => 'font-size:{{VALUE}}px',
             ],
                 ]
         );
@@ -258,7 +258,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-close-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -288,7 +288,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-Interactive-card .oxi-close-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1 .oxi-close-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -321,7 +321,7 @@ class Style_1 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'rgba(13, 13, 13, 1.00)',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-ICfull-content' => 'background : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-Interactive-card-style-1  .oxi-addons-ICfull-content' => 'background : {{VALUE}}; '
             ],
                 ]
         );
@@ -346,7 +346,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image .oxi-addons-img' => 'width : {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}}  .oxi-addons-Interactive-card-style-1  .oxi-addons-image .oxi-addons-img' => 'width : {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -372,7 +372,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image .oxi-addons-img' => 'height : {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1   .oxi-addons-image .oxi-addons-img' => 'height : {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -404,7 +404,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-ICfull-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1   .oxi-addons-ICfull-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -420,7 +420,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::TEXTAREA,
             'placeholder' => 'Place Your Shortcode Here.',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-back-content-inner' => '',
+                '{{WRAPPER}} .oxi-addons-Interactive-card-style-1   .oxi-addons-back-content-inner' => '',
             ]
                 ]
         );

@@ -110,7 +110,7 @@ class Style_3 extends Templates {
             </div> 
             ';
         }
-        echo '<div class="oxi-addons-headers-wrapper">
+        echo '<div class="oxi-addons-headers-wrapper-style-3">
                     ' . $column . '
             </div>';
     }

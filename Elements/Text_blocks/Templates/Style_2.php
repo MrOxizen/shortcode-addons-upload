@@ -39,11 +39,11 @@ class Style_2 extends Templates {
         if ($style['sa_t_b_3rd_text'] != '') {
             $text_3 = $this->text_render($style['sa_t_b_3rd_text']);
         }
-        echo ' <div class="oxi-addons-row">
+        echo ' 
                     <div class="oxi-addons-text-blocks-body" ' . $this->animation_render('sa_t_b_animation', $style) . '>
-                         <div class="oxi-addons-text-blocks">';
-        if ($style['sa_t_b_1st_style'] == 'headingbordercontent') {
-            echo ' <div class="oxi-addons-text-blocks-heading">' . $text_1 . '</div>
+                         <div class="oxi-addons-text-blocks-style-2">';
+                            if ($style['sa_t_b_1st_style'] == 'headingbordercontent') {
+                                echo ' <div class="oxi-addons-text-blocks-heading">' . $text_1 . '</div>
                                         <div class="oxi-addons-text-blocks-border">
                                             <div class="oxi-addons-text-block-border"></div>
                                         </div>
@@ -70,7 +70,8 @@ class Style_2 extends Templates {
         }
 
         echo '           </div>
-                    </div>';
+            </div>
+                    ';
     }
 
     public function old_render() {
