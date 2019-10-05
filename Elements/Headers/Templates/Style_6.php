@@ -37,7 +37,7 @@ class Style_6 extends Templates {
             </div>
         ';
         }
-        echo '	<div class="oxi-addons-headers-wrapper"> 
+        echo '	<div class="oxi-addons-headers-wrapper-style-6"> 
                     ' . $icon . ' 
                 </div>';
     }

@@ -77,7 +77,7 @@ class Style_1 extends Templates {
                             </div>';
         }
 
-        echo ' <div class="oxi-addons-Interactive-card">
+        echo ' <div class="oxi-addons-Interactive-card-style-1">
                         <div class="oxi-addons-IC"  ' . $this->animation_render('sa_interactive_cards_animation', $style) . '>
                             <div class="oxi-addons-ICfull-content" id="oxi-front-part-' . $this->oxiid . '">
                                 <div class="oxi-addons-IC-box">
@@ -139,11 +139,11 @@ class Style_1 extends Templates {
         $css  = '';
         if ($style['sa_interactive_cards_loader_style'] == 'style-1') {
 
-            $css .= '       .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-loading {
+            $css .= '       .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-loading {
                                 display: flex;
                                 justify-content: center;
                               }
-                               .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-loading div {
+                               .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-loading div {
                                 width: 1rem;
                                 height: 1rem;
                                 margin: 2rem 0.3rem;
@@ -152,11 +152,11 @@ class Style_1 extends Templates {
                                 -webkit-animation: 0.9s oxi_bounce infinite alternate;
                                         animation: 0.9s oxi_bounce infinite alternate;
                               }
-                               .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-loading div:nth-child(2) {
+                               .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-loading div:nth-child(2) {
                                 -webkit-animation-delay: 0.3s;
                                         animation-delay: 0.3s;
                               }
-                               .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-loading div:nth-child(3) {
+                               .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-loading div:nth-child(3) {
                                 -webkit-animation-delay: 0.6s;
                                         animation-delay: 0.6s;
                               }
@@ -178,37 +178,37 @@ class Style_1 extends Templates {
                               }';
         } elseif ($style['sa_interactive_cards_loader_style'] == 'style-2') {
 
-            $css .= '.oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-fancy-spinner {
+            $css .= '.oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner {
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
                                         width: 5rem;
                                         height: 5rem;
                                     }
-                                    .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-fancy-spinner div {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div {
                                         position: absolute;
                                         width: 4rem;
                                         height: 4rem;
                                         border-radius: 50%;
                                     }
-                                    .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-fancy-spinner div.oxi-addons-ring {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div.oxi-addons-ring {
                                         border-width: 0.5rem;
                                         border-style: solid;
                                         border-color: transparent;
                                         -webkit-animation: 2s oxi_fancy infinite alternate;
                                         animation: 2s oxi_fancy infinite alternate;
                                     }
-                                    .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(1) {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(1) {
                                         border-left-color: ' . $style['sa_interactive_cards_loader_color'] . ';
                                         border-right-color: ' . $style['sa_interactive_cards_loader_color'] . ';
                                     }
-                                    .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(2) {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(2) {
                                         border-top-color: ' . $style['sa_interactive_cards_loader_color'] . ';
                                         border-bottom-color: ' . $style['sa_interactive_cards_loader_color'] . ';
                                         -webkit-animation-delay: 1s;
                                         animation-delay: 1s;
                                     }
-                                    .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-fancy-spinner div.oxi-addons-dot {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div.oxi-addons-dot {
                                         width: 1rem;
                                         height: 1rem;
                                         background: ' . $style['sa_interactive_cards_loader_color'] . ';
@@ -231,12 +231,12 @@ class Style_1 extends Templates {
 
 
             $css .= '
-                                    .oxi-addons-container .oxi-addons-Interactive-card  .oxi-addons-multi-ripple {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1  .oxi-addons-multi-ripple {
                                          width: 5.6rem;
                                          height: 5.6rem;
                                          margin: 5rem;
                                        }
-                                    .oxi-addons-container .oxi-addons-Interactive-card  .oxi-addons-multi-ripple div {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1  .oxi-addons-multi-ripple div {
                                          position: absolute;
                                          width: 5rem;
                                          height: 5rem;
@@ -245,7 +245,7 @@ class Style_1 extends Templates {
                                          -webkit-animation: 1.5s oxi_ripple infinite;
                                                  animation: 1.5s oxi_ripple infinite;
                                        }
-                                    .oxi-addons-container .oxi-addons-Interactive-card  .oxi-addons-multi-ripple div:nth-child(2) {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1  .oxi-addons-multi-ripple div:nth-child(2) {
                                          -webkit-animation-delay: 0.5s;
                                                  animation-delay: 0.5s;
                                        }
@@ -277,7 +277,7 @@ class Style_1 extends Templates {
                                      }';
         } else {
             $css .= '
-                                    .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-donut {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-donut {
                                      width: 5rem;
                                      height: 5rem;
                                      margin: 5rem;
@@ -287,7 +287,7 @@ class Style_1 extends Templates {
                                      -webkit-animation: 1.5s oxi_spin infinite linear;
                                              animation: 1.5s oxi_spin infinite linear;
                                    }
-                                    .oxi-addons-container .oxi-addons-Interactive-card .oxi-addons-donut.oxi-addons-multi {
+                                    .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-donut.oxi-addons-multi {
                                      border-bottom-color: ' . $style['sa_interactive_cards_loader_color'] . ';
                                    }
 

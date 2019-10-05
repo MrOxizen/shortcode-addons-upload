@@ -74,7 +74,7 @@ class Style_4 extends Templates {
              right: 0;
          ';
         }
-        echo '<div class="oxi-addons-headers-wrapper">
+        echo '<div class="oxi-addons-headers-wrapper-style-4">
                 <div class="oxi-addons-wrapper-left-side" style="'.$position.'"> 
                     <div class="oxi-addons-main"> 
                     ' . $sub_heading . '

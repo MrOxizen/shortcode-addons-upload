@@ -36,7 +36,7 @@ class Style_1 extends Templates {
         }
 
   
-            echo ' <div class="oxi-addons-text-blocks" '.$this->animation_render('sa_t_b_animation', $style).'>
+            echo ' <div class="oxi-addons-text-blocks-style-1" '.$this->animation_render('sa_t_b_animation', $style).'>
                         ' . $text_1 . '
                         ' . $text_2 . '
                         ' . $text_3 . ' 
