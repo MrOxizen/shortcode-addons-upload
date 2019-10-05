@@ -678,12 +678,12 @@ class Style_1 extends AdminStyle
             'title_field' => 'sa-ac_initial_open_title',
             'fields' => [
                 'sa-ac_initial_open_title' => [
-                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'label' => esc_html__('Tab Title', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'default' => esc_html__('Tab Title', SHORTCODE_ADDOONS),
                 ],
                 'sa-ac_initial_open_titlse' => [
-                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'label' => esc_html__('Tab Title', SHORTCODE_ADDOONS),
                     'type' => Controls::SWITCHER,
                     'default' => 'yes',
                     'loader' => TRUE,
@@ -692,14 +692,14 @@ class Style_1 extends AdminStyle
                     'return_value' => 'yes',
                 ],
                 'sa-ac_initial_open_desc' => [
-                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'label' => esc_html__('Tab Title', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'default' => esc_html__('Tab Title', SHORTCODE_ADDOONS),
                 ],
                 'sa-ac_initial_open_cont' => [
-                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'label' => esc_html__('Tab Title', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'default' => esc_html__('Tab Title', SHORTCODE_ADDOONS),
                 ],
             ],
             

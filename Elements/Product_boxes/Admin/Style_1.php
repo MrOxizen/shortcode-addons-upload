@@ -83,7 +83,7 @@ class Style_1 extends AdminStyle
                     'sa_product_boxes_details' => [
                         'label' => esc_html__('Description', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXTAREA,
-                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SA_ELEMENTOR_TEXTDOMAIN),
+                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SHORTCODE_ADDOONS),
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-details' => '',
                         ],
