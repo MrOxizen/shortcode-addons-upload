@@ -17,27 +17,27 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_7 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_accordion_data_style_7'] as $key => $value) {
             $image = $info = $rating = $name = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
-                $image = '<div class="oxi-testimonials-style-seven-image">                               
+                $image = '<div class="oxi-testimonials-style-seven-image oxi-testimonials-style-seven-image-'.$key.'">                               
                                 <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-seven-info">
+                $info = '<div class="oxi-testimonials-style-seven-info oxi-testimonials-style-seven-info-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_description']) . '
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
-                $name = '<div  class="oxi-testimonials-style-seven-name">
+                $name = '<div  class="oxi-testimonials-style-seven-name oxi-testimonials-style-seven-name-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_destination', $value) && $value['sa_testi_profile_destination'] || array_key_exists('sa_testi_profile_company', $value) && $value['sa_testi_profile_company'] != '') {
                 $company = '
-                 <div class="oxi-testimonials-style-seven-working">
+                 <div class="oxi-testimonials-style-seven-working oxi-testimonials-style-seven-working-'.$key.'">
                     ' . $this->text_render($value['sa_testi_profile_destination']) . '  at <a ' . $this->url_render('sa_testi_profile_company_url', $value) . '">' . $this->text_render($value['sa_testi_profile_company']) . ' </a>
                 </div>';
             }
@@ -52,16 +52,7 @@ class Style_7 extends Templates {
                             ' . $company . '
                         </div>
                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+            
             echo '</div>';
         }
     }
