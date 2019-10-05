@@ -36,7 +36,7 @@ class Style_9 extends Templates
             }
             if (array_key_exists('sa_info_info_box_icon', $value) && $value['sa_info_info_box_icon'] != '') {
 
-                $icon = '<div class="oxi_addons__icon_style_9" ' . ($value['sa_info_boxes_icon_link-id'] != '' ? 'id="' . $value['sa_info_boxes_button_link-id'] . '"' : '') . '> 
+                $icon = '<div class="oxi_addons__icon_style_9"> 
                             <div class="oxi_addons__icon">
                                 ' . $this->font_awesome_render($value['sa_info_info_box_icon']) . ' 
                             </div>
