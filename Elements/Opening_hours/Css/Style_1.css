@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addonsOH-wrapper-1 {
+    width: 100%;
+    float: left;
+    padding: 5px 10px 5px 10px
+}
+
+.oxi-addonsOH-wrapper-1 .oxi-addonsOH-row {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 250px;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)), url("http://127.0.0.1/wordpress/wp-content/uploads/2019/03/phonepicutres-TA.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    ;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(194, 194, 194, 1);
+    ;
+    overflow: hidden;
+    border-width: 4px 4px 4px 4px;
+    border-style: solid;
+    border-color: #fcaf0a;
+    padding: 50px 15px 50px 15px
+}
+
+.oxi-addonsOH-wrapper-1 .oxi-addonsOH-content {
+    width: 100%;
+    float: left
+}
+
+.oxi-addonsOH-wrapper-1 .oxi-addonsOH-heading {
+    width: 100%;
+    float: left;
+    font-size: 35px;
+    color: #f73b3b;
+    font-family: "Pacifico";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addonsOH-wrapper-1 .oxi-addonsOH-date {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #000000;
+    font-family: "Neuton";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    padding: 15px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addonsOH-wrapper-1 {
+        padding: 5px 10px 5px 10px
+    }
+    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 50px 15px 50px 15px
+    }
+    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-heading {
+        font-size: 35px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-date {
+        font-size: 20px;
+        margin: 15px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addonsOH-wrapper-1 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 50px 15px 50px 15px
+    }
+    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-heading {
+        font-size: 35px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-date {
+        font-size: px;
+        margin: 15px 0px 0px 0px
+    }
+}

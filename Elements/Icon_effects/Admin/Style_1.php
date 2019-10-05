@@ -73,7 +73,7 @@ class Style_1 extends AdminStyle
                     'shortcode-addons-start-tabs' => [
                         'controller' => 'start_controls_tabs',
                         'options' => [
-                            'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                            'normal' => esc_html__('Normal ssssssssssss', SHORTCODE_ADDOONS),
                             'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
                         ]
                     ],
@@ -157,7 +157,7 @@ class Style_1 extends AdminStyle
                         ],
                     ],
                     'sa_icon_effects_url_open' => [
-                        'label' => esc_html__('Link Enable', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
                         'type' => Controls::SWITCHER,
                         'default' => '',
                         'label_on' => __('Yes', SHORTCODE_ADDOONS),
@@ -166,7 +166,7 @@ class Style_1 extends AdminStyle
                     ],
 
                     'sa_icon_effects_url' => [
-                        'label' => esc_html__('Url', SA_ELEMENTOR_TEXTDOMAIN),
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
                         'type' => Controls::URL,
                         'controller' => 'add_group_control',
                         'conditional' => Controls::INSIDE,

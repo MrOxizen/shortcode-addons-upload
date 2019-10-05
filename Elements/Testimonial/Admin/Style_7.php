@@ -22,7 +22,7 @@ class Style_7 extends AdminStyle {
         $this->start_section_header(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'general-settings' => esc_html__('Bullet List Settings', SHORTCODE_ADDOONS),
+                'general-settings' => esc_html__('Testimonial Settings', SHORTCODE_ADDOONS),
             ]
                 ]
         );
@@ -68,7 +68,7 @@ class Style_7 extends AdminStyle {
                         'link' => '#asdas',
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi-testimonials-style-seven-image-{{key}}' => '',
+                        '{{WRAPPER}} .oxi-testimonials-style-seven-image-{{KEY}}' => '',
                     ]
                 ],
                 'sa_testi_profile_name' => [
@@ -77,7 +77,7 @@ class Style_7 extends AdminStyle {
                     'default' => 'John Mandis',
                     'placeholder' => 'John Mandis',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-testimonials-style-seven-name-{{key}}' => '',
+                        '{{WRAPPER}} .oxi-testimonials-style-seven-name-{{KEY}}' => '',
                     ]
                 ],
                 'sa_testi_profile_destination' => [
@@ -86,7 +86,7 @@ class Style_7 extends AdminStyle {
                     'default' => 'Grapics Designe',
                     'placeholder' => 'Grapics Designe',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-testimonials-style-seven-working-{{key}}' => '',
+                        '{{WRAPPER}} .oxi-testimonials-style-seven-working-{{KEY}}' => '',
                     ]
                 ],
                 'sa_testi_profile_company' => [
@@ -95,7 +95,7 @@ class Style_7 extends AdminStyle {
                     'default' => 'Google',
                     'placeholder' => 'Google',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-testimonials-style-six-image-{{key}}' => '',
+                        '{{WRAPPER}} .oxi-testimonials-style-six-image-{{KEY}}' => '',
                     ]
                 ],
                 'sa_testi_profile_url' => [
@@ -110,7 +110,7 @@ class Style_7 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua dapibus tellus blandit quis. Cras tempor non mi et vestibulum.',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-testimonials-style-seven-info-{{key}}' => '',
+                        '{{WRAPPER}} .oxi-testimonials-style-seven-info-{{KEY}}' => '',
                     ]
                 ],
             ],
