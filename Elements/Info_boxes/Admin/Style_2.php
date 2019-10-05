@@ -62,7 +62,7 @@ class Style_2 extends AdminStyle
                     'sa_info_info_box_desc' => [
                         'label' => esc_html__('Description', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXTAREA,
-                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SA_ELEMENTOR_TEXTDOMAIN),
+                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SHORTCODE_ADDOONS),
                          'selector' => [
                             '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2_{KEY}} .oxi_addons__details_style_2' => '',
                         ],

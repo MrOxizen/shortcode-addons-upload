@@ -230,7 +230,7 @@ class Style_23 extends AdminStyle {
         $this->add_control(
                 'sa_btn_text_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Select Background Color', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Select Background Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
@@ -310,7 +310,7 @@ class Style_23 extends AdminStyle {
                 'sa_btn_text_h_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'description' => __('Select Hover Color', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Select Hover Color', SHORTCODE_ADDOONS),
             'default' => '#bdbdbd',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn23 .oxi-button-btn23:hover' => 'color:{{VALUE}};'
