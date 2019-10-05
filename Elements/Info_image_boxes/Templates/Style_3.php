@@ -18,9 +18,8 @@ class Style_3 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-        foreach ($child as $v) {
-
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $all_data = (array_key_exists('sa_Info_image_boxes_data', $style) && is_array($style['sa_Info_image_boxes_data'])) ? $style['sa_Info_image_boxes_data'] : [];
+        foreach ($all_data as $key => $value) {
 //            echo '<pre>';
 //        print_r($value);
 //        echo '</pre>';
@@ -43,7 +42,7 @@ class Style_3 extends Templates {
                 </div>';
                 }
             }
-            $content = '<div class="oxi-addons-main-wrapper " >
+            $content = '<div class="oxi-addons-main-wrapper-style-3 oxi-addons-main-wrapper-style-3-' . $key . '" >
                             <div class="oxi-addons-image-main">
                                 ' . $images . ' 
                             </div> 
@@ -52,8 +51,8 @@ class Style_3 extends Templates {
                                 ' . $details . '  
                             </div>
                         </div>';
-            echo '<div class=" oxi-addons-info-image-parent-wrapper ' . $this->column_render('sa_info_image_column', $style) . '">
-                      <div class="sa_addons_icon_boxes_container ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
+            echo '<div class=" oxi-addons-info-image-parent-wrapper-style-3 ' . $this->column_render('sa_info_image_column', $style) . '">
+                      <div class="sa_addons_icon_boxes_container ">';
             if (array_key_exists('sa_info_image_url-url', $value)) :
                 if ($value['sa_info_image_url-url'] != '') {
                     echo '<a ' . $this->url_render('sa_info_image_url', $value) . '  >
@@ -63,16 +62,7 @@ class Style_3 extends Templates {
                     echo $content;
                 }
             endif;
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                                        <div class="oxi-addons-admin-absulate-edit">
-                                            <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                                        </div>
-                                        <div class="oxi-addons-admin-absulate-delete">
-                                            <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                                        </div>
-                                    </div>';
-            endif;
+           
             echo '</div>';
             echo '</div>';
         }

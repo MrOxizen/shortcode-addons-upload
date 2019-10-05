@@ -39,8 +39,62 @@ class Style_4 extends AdminStyle {
                 'sa_info_image_column', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper' => '',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4' => '',
             ],
+                ]
+        );
+        $this->add_repeater_control(
+                'sa_Info_image_boxes_data',
+                $this->style,
+                [
+                    'label' => __('', SHORTCODE_ADDOONS),
+                    'type' => Controls::REPEATER,
+                    'fields' => [
+                        'sa_info_image_h_text' => [
+                            'label' => __('Heading', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXT,
+                            'placeholder' => 'Your Heading Here',
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4.oxi-addons-main-wrapper-style-4-{{KEY}} .oxi-addons-main-content .oxi-addons-heading' => '',
+                            ],
+                        ],
+                        'sa_info_image_content_text' => [
+                            'label' => __('Content', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXTAREA,
+                            'placeholder' => 'Your Content Here',
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4-{{KEY}}   .oxi-addons-main-content .oxi-addons-details' => '',
+                            ],
+                        ],
+                        'sa_info_image_img_src' => [
+                            'type' => Controls::MEDIA,
+                            'default' => [
+                                'type' => 'media-library',
+                                'link' => '',
+                            ],
+                            'loader' => TRUE,
+                            'controller' => 'add_group_control',
+                        ],
+                        'sa_info_image_url_open' => [
+                            'label' => __('Link Active', SHORTCODE_ADDOONS),
+                            'type' => Controls::SWITCHER,
+                            'default' => '',
+                            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                            'label_off' => __('No', SHORTCODE_ADDOONS),
+                            'return_value' => 'link_show',
+                        ],
+                        'sa_info_image_url' => [
+                            'type' => Controls::URL,
+                            'loader' => TRUE,
+                            'conditional' => Controls::INSIDE,
+                            'condition' => [
+                                'sa_info_image_url_open' => 'link_show',
+                            ],
+                            'controller' => 'add_group_control',
+                        ],
+                    ],
+                    'title_field' => 'sa_info_image_h_text',
+                    'button' => 'Add New Boxes',
                 ]
         );
 
@@ -48,8 +102,15 @@ class Style_4 extends AdminStyle {
                 'sa_info_image_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-main-wrapper ' => ''
+                '{{WRAPPER}}  .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4 ' => ''
             ],
+                ]
+        );
+        $this->add_control(
+                'sa_info_image_sep', $this->style, [
+            'type' => Controls::SEPARATOR,
+            'label' => __('', SHORTCODE_ADDOONS),
+            Controls::SEPARATOR => TRUE,
                 ]
         );
         $this->start_controls_tabs(
@@ -68,7 +129,7 @@ class Style_4 extends AdminStyle {
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                        '{{WRAPPER}}  .oxi-addons-main-wrapper' => ''
+                        '{{WRAPPER}}  .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4' => ''
                     ],
                 ]
         );
@@ -78,7 +139,7 @@ class Style_4 extends AdminStyle {
                 [
                     'type' => Controls::BOXSHADOW,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-main-wrapper' => ''
+                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4' => ''
                     ],
                 ]
         );
@@ -108,7 +169,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -121,7 +182,7 @@ class Style_4 extends AdminStyle {
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                        '{{WRAPPER}}  .oxi-addons-main-wrapper:hover' => ''
+                        '{{WRAPPER}}  .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4:hover' => ''
                     ],
                 ]
         );
@@ -131,7 +192,7 @@ class Style_4 extends AdminStyle {
                 [
                     'type' => Controls::BOXSHADOW,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-main-wrapper:hover' => ''
+                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4:hover' => ''
                     ],
                 ]
         );
@@ -161,7 +222,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -195,7 +256,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -225,7 +286,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-info-image-parent-wrapper-style-4 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -233,7 +294,7 @@ class Style_4 extends AdminStyle {
                 'sa_head_animation', $this->style, [
             'type' => Controls::ANIMATION,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container' => ''
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-heading-container' => ''
             ],
                 ]
         );
@@ -253,9 +314,9 @@ class Style_4 extends AdminStyle {
                 'sa_info_image_img_width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-            'default' => 78,
+            'default' => 90,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image-main .oxi-addons-img' => 'width: {{VALUE}}px;',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main .oxi-addons-img' => 'width: {{VALUE}}px;',
             ]
                 ]
         );
@@ -263,9 +324,9 @@ class Style_4 extends AdminStyle {
                 'sa_info_image_img_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-            'default' => 104,
+            'default' => 90,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image-main .oxi-addons-img' => 'height: {{VALUE}}px;',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main .oxi-addons-img' => 'height: {{VALUE}}px;',
             ]
                 ]
         );
@@ -290,7 +351,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main ' => 'align-items:{{VALUE}};',
+                '{{WRAPPER}}  .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main ' => 'align-items:{{VALUE}};',
             ],
                 ]
         );
@@ -312,7 +373,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                '{{WRAPPER}}  .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main ' => '',
             ],
                 ]
         );
@@ -322,7 +383,7 @@ class Style_4 extends AdminStyle {
                 'sa_info_image_img_bor', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main .oxi-addons-img' => '',
+                '{{WRAPPER}}  .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main .oxi-addons-img' => '',
             ],
                 ]
         );
@@ -354,7 +415,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main .oxi-addons-img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}}  .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main .oxi-addons-img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -384,7 +445,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-image-main  .oxi-addons-img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main  .oxi-addons-img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -394,7 +455,7 @@ class Style_4 extends AdminStyle {
                 [
                     'type' => Controls::BOXSHADOW,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-image-main .oxi-addons-img' => ''
+                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main .oxi-addons-img' => ''
                     ],
                 ]
         );
@@ -420,7 +481,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-content .oxi-addons-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -432,7 +493,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper:hover .oxi-addons-heading' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4:hover .oxi-addons-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -443,7 +504,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading' => '',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-content .oxi-addons-heading' => '',
             ],
                 ]
         );
@@ -473,7 +534,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-content .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -502,7 +563,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-details' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-content .oxi-addons-details' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -515,7 +576,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper:hover .oxi-addons-details' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4:hover .oxi-addons-details' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -526,7 +587,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-details' => '',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-content .oxi-addons-details' => '',
             ],
                 ]
         );
@@ -556,7 +617,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-content .oxi-addons-details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-content .oxi-addons-details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -565,78 +626,6 @@ class Style_4 extends AdminStyle {
 
         $this->end_section_devider();
         $this->end_section_tabs();
-    }
-
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Box', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Box Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Info Image Boxes Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-
-        $this->add_control(
-                'sa_info_image_h_text',
-                $this->style,
-                [
-                    'label' => __('Heading', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXT,
-                    'placeholder' => 'Your Heading Here',
-                ]
-        );
-
-        $this->add_control(
-                'sa_info_image_content_text',
-                $this->style,
-                [
-                    'label' => __('Content', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXTAREA,
-                    'placeholder' => 'Your Content Here',
-                ]
-        );
-        $this->add_group_control(
-                'sa_info_image_img_src', $this->style, [
-            'type' => Controls::MEDIA,
-            'default' => [
-                'type' => 'media-library',
-                'link' => '',
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_info_image_url_open',
-                $this->style,
-                [
-                    'label' => __('Link Active', SHORTCODE_ADDOONS),
-                    'type' => Controls::SWITCHER,
-                    'default' => '',
-                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                    'label_off' => __('No', SHORTCODE_ADDOONS),
-                    'return_value' => 'link_show',
-                ]
-        );
-        $this->add_group_control(
-                'sa_info_image_url',
-                $this->style,
-                [
-                    'type' => Controls::URL,
-                    'loader' => TRUE,
-                    'condition' => [
-                        'sa_info_image_url_open' => 'link_show',
-                    ],
-                ]
-        );
-
-        echo '</div>';
     }
 
 }

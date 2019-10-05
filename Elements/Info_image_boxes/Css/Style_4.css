@@ -1,8 +1,7 @@
-.oxi-addons-info-image-parent-wrapper {
+.oxi-addons-info-image-parent-wrapper-style-4 {
     padding: 10px 10px 10px 10px
 }
-
-.oxi-addons-main-wrapper {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4 {
     position: relative;
     display: flex;
     width: 100%;
@@ -13,19 +12,16 @@
     padding: 30px 10px 30px 10px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.21);
 }
-
-.oxi-addons-main-wrapper:hover {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style--style--style--style-4:hover {
     background: linear-gradient(225deg, rgba(19, 191, 47, 1.00) 0%, rgba(30, 157, 168, 1.00) 100%);
     box-shadow: 0px 8px 12px 0px rgba(222, 222, 222, 1);
 }
-
-.oxi-addons-image-main {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-image-main {
     width: auto;
     display: flex;
     align-items: flex-start;
 }
-
-.oxi-addons-img {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,13 +34,11 @@
     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
     padding: 0px 0px 0px 0px
 }
-
-.oxi-addons-main-content {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-content {
     width: 100%;
     float: left
 }
-
-.oxi-addons-heading {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-heading {
     font-size: 26px;
     font-family: "Roboto";
     font-weight: 700;
@@ -57,12 +51,10 @@
     width: 100%;
     float: left
 }
-
-.oxi-addons-heading {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-heading {
     color: #ffffff
 }
-
-.oxi-addons-details {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-details {
     font-size: 18px;
     font-family: "Roboto";
     font-weight: 100;
@@ -75,56 +67,55 @@
     width: 100%;
     float: left
 }
-
-.oxi-addons-details {
+.oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-details {
     color: #ffffff
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-info-image-parent-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-4 {
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-main-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style--style--style--style-4 {
         border-radius: 5px 5px 5px 5px;
         padding: 30px 10px 30px 10px
     }
-    .oxi-addons-img {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-img {
         width: 90px;
         height: 90px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-heading {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-heading {
         font-size: 25px;
         padding: 0px 5px 10px 15px
     }
 
-    .oxi-addons-details {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-details {
         font-size: 16px;
         padding: 5px 5px 5px 15px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-info-image-parent-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-4 {
         padding: 10px 10px 10px 10px
     }
-    .oxi-addons-main-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-main-wrapper-style-4 {
         border-radius: 5px 5px 5px 5px;
         padding: 30px 10px 30px 10px
     }
-    .oxi-addons-img {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-img {
         width: 90px;
         height: 90px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-heading {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-heading {
         font-size: 22px;
         padding: 0px 5px 10px 15px
     }
 
-    .oxi-addons-details {
+    .oxi-addons-info-image-parent-wrapper-style-4 .oxi-addons-details {
         font-size: 14px;
         padding: 5px 5px 5px 15px
     }
