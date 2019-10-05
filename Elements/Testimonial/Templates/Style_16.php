@@ -139,7 +139,7 @@ class Style_16 extends Templates {
                     </div>
             ';
         } 
-        echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 31) . ' >
+        echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . '" ' . OxiAddonsAnimation($styledata, 31) . ' >
                     <div class="oxi-testimonials-item-' . $oxiid . '">
                         <div class="oxi-testimonials-style-' . $oxiid . ' ' . $styledata[149] . '">                                  
                             '.$image.'
@@ -154,22 +154,7 @@ class Style_16 extends Templates {
                             </div>
                         </div>
                     </div>';
-        if ($user == 'admin') {
-            echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEdittestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                </form>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeletetestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                </form>
-                            </div>
-                        </div>';
-        }
+       
         echo '</div>';
     }
     echo '</div></div>';

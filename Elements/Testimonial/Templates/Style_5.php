@@ -17,26 +17,26 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_5 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_accordion_data_style_5'] as $key => $value) {
             $image = $info = $rating = $name = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
-                $image = '<div class="oxi-testimonials-style-five-image">                               
+                $image = '<div class="oxi-testimonials-style-five-image oxi-testimonials-style-five-image-'.$key.'">                               
                                 <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-five-info">
+                $info = '<div class="oxi-testimonials-style-five-info oxi-testimonials-style-five-info-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_description']) . '
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
                 if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
-                    $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-five-name">
+                    $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-five-name oxi-testimonials-style-five-name-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                             </a>';
                 } else {
-                    $name = '<div  class="oxi-testimonials-style-five-name">
+                    $name = '<div  class="oxi-testimonials-style-five-name oxi-testimonials-style-five-name-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                             </div>';
                 }
@@ -58,16 +58,7 @@ class Style_5 extends Templates {
                             ' . $info . '
                         </div>
                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+            
             echo '</div>';
         }
     }
@@ -105,7 +96,7 @@ class Style_5 extends Templates {
                 </a>
             ';
             }
-            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 49) . ' >
+            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . '" ' . OxiAddonsAnimation($styledata, 49) . ' >
                     <div class="oxi-testimonials-item-' . $oxiid . '">
                             <div class="oxi-testimonials-style-' . $oxiid . '  ' . $styledata[11] . '">
                                 ' . $image . '

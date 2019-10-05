@@ -159,6 +159,12 @@
      flex-direction: column;
      justify-content: flex-end;
  }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-working{
+     text-align: right;
+ }
+ .oxi-testimonials-six-padding .sa-testimonial-profile-body-six-right .oxi-testimonials-style-six-name{
+     text-align: right;
+ }
  
  @media only screen and (min-width:669px) and (max-width:993px) {
     .oxi-testimonials-six-padding .oxi-testimonials-six-padding {

@@ -132,7 +132,7 @@ class Style_14 extends Templates {
                 </div>
             ';
             }
-            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 31) . ' >
+            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . ' " ' . OxiAddonsAnimation($styledata, 31) . ' >
                     <div class="oxi-testimonials-item-' . $oxiid . '">
                             <div class="oxi-testimonials-style-' . $oxiid . ' ' . $styledata[11] . '">                                
                                 <div class="oxi-testimonials-style-' . $oxiid . '-name-body-parent">
