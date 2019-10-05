@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Product_boxes\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Elements\Price_table\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -47,68 +47,7 @@ class Style_1 extends AdminStyle
                 'label' => esc_html__('Feature Content', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
-        );
-        $this->add_repeater_control(
-            'sa_product_boxes_repeater',
-            $this->style,
-            [
-                'label' => __('', SHORTCODE_ADDOONS), 
-                'title_field' => 'sa_product_boxes_heading_one',
-                'fields' => [ 
-                    'sa_product_boxes_image' => [
-                        'type' => Controls::MEDIA,
-                        'default' => [
-                            'type' => 'media-library',
-                            'link' => 'https://www.oxilab.org/wp-content/uploads/2019/02/Printed-color-block-T-shirt2-571x714.jpg',
-                        ],
-                        'loader' =>TRUE,
-                        'controller' => 'add_group_control',
-                    ],
-                    'sa_product_boxes_heading_one' => [
-                        'label' => esc_html__('Heading One', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT, 
-                        'default' => esc_html__('Quality Products from Stall to Your Door ', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-heading-one' => '',
-                        ],
-                    ],
-                    'sa_product_boxes_heading_two' => [
-                        'label' => esc_html__('Heading Two', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT, 
-                        'default' => esc_html__('Seasonal Picked ', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-heading-two' => '',
-                        ],
-                    ],
-                    'sa_product_boxes_details' => [
-                        'label' => esc_html__('Description', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXTAREA,
-                        'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SA_ELEMENTOR_TEXTDOMAIN),
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-details' => '',
-                        ],
-                    ],   
-                    'sa_product_boxes_button_text' => [
-                        'label' => esc_html__('Button Text  ', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT, 
-                        'default' => esc_html__('Get Started', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-button-link' => '',
-                        ],
-                    ],
-                    'sa_product_boxes_button_link' => [
-                        'label' => esc_html__('Link', SHORTCODE_ADDOONS),
-                        'type' => Controls::URL,
-                        'controller' => 'add_group_control',
-                        'selector' => [
-                            '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-button-link' => '',
-                        ],
-                    ],
-                ],  
-            ]
-        );
-
-
+        ); 
         $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
@@ -119,7 +58,7 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_group_control(
-            'sa_product_boxes_column',
+            'sa_price_table_column',
             $this->style,
             [
                 'type' => Controls::COLUMN,
@@ -131,7 +70,7 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_control(
-            'sa_product_boxes_bg_color',
+            'sa_price_table_bg_color',
             $this->style,
             [ 
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -143,7 +82,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_product_boxes_bg_color_width',
+            'sa_price_table_bg_color_width',
             $this->style,
             [
                 'label' => __('Max  Width', SHORTCODE_ADDOONS),
@@ -170,7 +109,17 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_shadow',
+            'sa_price_table_button_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-button-link' => ''
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_price_table_shadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
@@ -181,7 +130,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_product_boxes_padding',
+            'sa_price_table_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -213,7 +162,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_product_boxes_margin',
+            'sa_price_table_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -246,25 +195,23 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_animation',
+            'sa_price_table_animation',
             $this->style,
             [
                 'type' => Controls::ANIMATION,
             ]
         );
         $this->end_controls_section();  
-        $this->end_section_devider(); 
-        $this->start_section_devider(); 
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Heading One Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Title Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
         );
         
         $this->add_control(
-            'sa_product_boxes_heading_one_tag',
+            'sa_price_table_title_tag',
             $this->style,
             [
                 'label' => __('Tag', SHORTCODE_ADDOONS),
@@ -283,7 +230,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_heading_one_typo',
+            'sa_price_table_title_typo',
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
@@ -295,7 +242,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_product_boxes_heading_one_color',
+            'sa_price_table_title_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
@@ -309,7 +256,7 @@ class Style_1 extends AdminStyle
       
 
         $this->add_responsive_control(
-            'sa_product_boxes_heading_one_padding',
+            'sa_price_table_title_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -341,159 +288,9 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Heading Two Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-        
-        $this->add_control(
-            'sa_product_boxes_heading_two_tag',
-            $this->style,
-            [
-                'label' => __('Tag', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT,
-                'default' => 'h3',
-                'loader' => TRUE,
-                'options' => [
-                    'h1' => __('H1', SHORTCODE_ADDOONS),
-                    'h2' => __('H2', SHORTCODE_ADDOONS),
-                    'h3' => __('H3', SHORTCODE_ADDOONS),
-                    'h4' => __('H4', SHORTCODE_ADDOONS),
-                    'h5' => __('H5', SHORTCODE_ADDOONS),
-                    'h6' => __('H6', SHORTCODE_ADDOONS),
-                    'div' => __('DIV', SHORTCODE_ADDOONS),
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_product_boxes_heading_two_typo',
-            $this->style,
-            [
-                'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-heading-two' => ''
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_product_boxes_heading_two_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#757575',
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-heading-two' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-      
-
-        $this->add_responsive_control(
-            'sa_product_boxes_heading_two_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 5,
-                ], 
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-heading-two' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Description Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
-        $this->add_group_control(
-            'sa_product_boxes_details_typo',
-            $this->style,
-            [
-                'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-details' => ''
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_product_boxes_details_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#808080',
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-details' => 'color:{{VALUE}};'
-                ],
-            ]
-        );
-   
-
-        $this->add_responsive_control(
-            'sa_product_boxes_details_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 5,
-                ],
-                //'loader' => TRUE,
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->end_controls_section();
+        $this->end_section_devider(); 
+        $this->start_section_devider();  
+          
         $this->end_section_devider();
         $this->end_section_tabs();
         
@@ -515,7 +312,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_product_boxes_button_switter',
+            'sa_price_table_button_switter',
             $this->style,
             [
                 'label' => __('Button', SHORTCODE_ADDOONS),
@@ -528,7 +325,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_product_boxes_button_position',
+            'sa_price_table_button_position',
             $this->style,
             [
                 'label' => __('Button Position', SHORTCODE_ADDOONS),
@@ -536,7 +333,7 @@ class Style_1 extends AdminStyle
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'center',
                 'condition' => [
-                    'sa_product_boxes_button_switter' => 'yes'
+                    'sa_price_table_button_switter' => 'yes'
                 ],
                 'options' => [
                     'flex-start' => [
@@ -558,7 +355,7 @@ class Style_1 extends AdminStyle
             ]
         ); 
         $this->add_responsive_control(
-            'sa_product_boxes_button_padding',
+            'sa_price_table_button_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -568,7 +365,7 @@ class Style_1 extends AdminStyle
                     'size' => '',
                 ],
                 'condition' => [
-                    'sa_product_boxes_button_switter' => 'yes'
+                    'sa_price_table_button_switter' => 'yes'
                 ],
                 'range' => [
                     '%' => [
@@ -593,7 +390,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_product_boxes_button_margin',
+            'sa_price_table_button_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -603,7 +400,7 @@ class Style_1 extends AdminStyle
                     'size' => '',
                 ],
                 'condition' => [
-                    'sa_product_boxes_button_switter' => 'yes'
+                    'sa_price_table_button_switter' => 'yes'
                 ],
                 'range' => [
                     '%' => [
@@ -628,13 +425,13 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_button_animation',
+            'sa_price_table_button_animation',
             $this->style,
             [
                 
                 'type' => Controls::ANIMATION,
                 'condition' => [
-                    'sa_product_boxes_button_switter' => 'yes'
+                    'sa_price_table_button_switter' => 'yes'
                 ],
             ]
         );
@@ -647,13 +444,13 @@ class Style_1 extends AdminStyle
                 'label' => esc_html__('Button Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
                 'condition' => [
-                    'sa_product_boxes_button_switter' => 'yes'
+                    'sa_price_table_button_switter' => 'yes'
                 ],
             ]
         );
 
         $this->add_group_control(
-            'sa_product_boxes_button_typo',
+            'sa_price_table_button_typo',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
@@ -675,7 +472,7 @@ class Style_1 extends AdminStyle
         );
         $this->start_controls_tab();
         $this->add_control(
-            'sa_product_boxes_button_color',
+            'sa_price_table_button_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
@@ -687,7 +484,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_product_boxes_button_bg_color',
+            'sa_price_table_button_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -700,7 +497,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_button_border',
+            'sa_price_table_button_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
@@ -710,7 +507,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_product_boxes_button_radius',
+            'sa_price_table_button_radius',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -742,7 +539,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_button_sadow',
+            'sa_price_table_button_sadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
@@ -755,7 +552,7 @@ class Style_1 extends AdminStyle
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_product_boxes_button_hover_color',
+            'sa_price_table_button_hover_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
@@ -767,7 +564,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_product_boxes_button_hover_bg_color',
+            'sa_price_table_button_hover_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -780,7 +577,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_button_hover_border',
+            'sa_price_table_button_hover_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
@@ -790,7 +587,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_product_boxes_button_hover_radius',
+            'sa_price_table_button_hover_radius',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -822,7 +619,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_product_boxes_button_hover_shadow',
+            'sa_price_table_button_hover_shadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
@@ -840,5 +637,92 @@ class Style_1 extends AdminStyle
         $this->end_section_devider();
         $this->end_section_tabs(); 
     }
- 
+    public function modal_opener() {
+        $this->add_substitute_control('', [], [
+            'type' => Controls::MODALOPENER,
+            'title' => __('Add New Accordions', SHORTCODE_ADDOONS),
+            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+        ]);
+    }
+
+    public function modal_form_data() {
+        echo '<div class="modal-header">                    
+                    <h4 class="modal-title">Accordions Form</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">';
+
+        $this->add_control(
+                'sa_el_initial_open', $this->style, [
+            'label' => __('Initial Open?', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => '',
+            'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Social Icon Settings', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
+        $this->add_repeater_control(
+                'sa-ac_initial_open', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'button' => __('Add Social Icons', SHORTCODE_ADDOONS),
+            'title_field' => 'sa-ac_initial_open_title',
+            'fields' => [
+                'sa-ac_initial_open_title' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa-ac_initial_open_titlse' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::SWITCHER,
+                    'default' => 'yes',
+                    'loader' => TRUE,
+                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                    'label_off' => __('No', SHORTCODE_ADDOONS),
+                    'return_value' => 'yes',
+                ],
+                'sa-ac_initial_open_desc' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+                'sa-ac_initial_open_cont' => [
+                    'label' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                    'type' => Controls::TEXT,
+                    'default' => esc_html__('Tab Title', SA_ELEMENTOR_TEXTDOMAIN),
+                ],
+            ],
+            
+                ]
+        );
+        $this->end_controls_section();
+        $this->add_control(
+                'sa_el_text', $this->style, [
+            'label' => __('Title', SHORTCODE_ADDOONS),
+            'type' => Controls::TEXT,
+            'default' => 'Lorem Ipsum is simply dummy text',
+            'placeholder' => 'Lorem Ipsum is simply dummy text',
+                ]
+        );
+
+        $this->add_control(
+                'sa_el_content', $this->style, [
+            'label' => __('Content', SHORTCODE_ADDOONS),
+            'type' => Controls::TEXTAREA,
+            'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+                ]
+        );
+        echo '</div>';
+    }
 }
