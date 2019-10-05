@@ -42,7 +42,7 @@ class Style_1 extends AdminStyle {
         $this->add_control(
                 'sa_s_image_ribbon', $this->style, [
             'label' => __('Ribbon', SHORTCODE_ADDOONS),
-            'description' => __('Are you want ribbon?', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Are you want ribbon?', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::SWITCHER,
             'default' => '',

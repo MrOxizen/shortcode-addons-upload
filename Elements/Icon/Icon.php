@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Drop_caps;
+namespace SHORTCODE_ADDONS_UPLOAD\Elements\Icon;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -14,10 +14,10 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Elements_Frontend;
 
-class Drop_caps extends Elements_Frontend {
+class Icon extends Elements_Frontend {
 
     public function pre_active() {
-        return array('style-1');
+        return array('Style_1');
     }
 
     public function templates() {
