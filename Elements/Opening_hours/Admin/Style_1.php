@@ -55,16 +55,16 @@ class Style_1 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addonsOH-wrapper-1.oxi-addonsOH-wrapper-1-{{KEY}} .oxi-addonsOH-row' => ''
                     ],
                 ],
-//                'sa_oh_start_tabs' => [
-//                    'controller' => 'start_controls_tabs',
-//                    'options' => [
-//                            'normal' => esc_html__('a;LSdkjf', SHORTCODE_ADDOONS),
-//                            'hover' => esc_html__('Hasdfover', SHORTCODE_ADDOONS),
-//                        ]
-//                ],
-//                'sa_oh_start_tab_1' => [
-//                    'controller' => 'start_controls_tab',
-//                ],
+                'sa_oh_start_tabs' => [
+                    'controller' => 'start_controls_tabs',
+                    'options' => [
+                            'day' => esc_html__('Day Text', SHORTCODE_ADDOONS),
+                            'time' => esc_html__('Time Text', SHORTCODE_ADDOONS),
+                        ]
+                ],
+                'sa_oh_start_tab_1' => [
+                    'controller' => 'start_controls_tab',
+                ],
                 'sa_oh_day_text' => [
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
@@ -79,12 +79,12 @@ class Style_1 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addonsOH-wrapper-1.oxi-addonsOH-wrapper-1-{{KEY}} .oxi-addonsOH-heading' => 'color:{{VALUE}};'
                     ],
                 ],
-//                'sa_oh_end_tab_1' => [
-//                    'controller' => 'end_controls_tab',
-//                ],
-//                'sa_oh_start_tab_2' => [
-//                    'controller' => 'start_controls_tab',
-//                ],
+                'sa_oh_end_tab_1' => [
+                    'controller' => 'end_controls_tab',
+                ],
+                'sa_oh_start_tab_2' => [
+                    'controller' => 'start_controls_tab',
+                ],
                 'sa_oh_time_text' => [
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
@@ -99,12 +99,12 @@ class Style_1 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addonsOH-wrapper-1.oxi-addonsOH-wrapper-1-{{KEY}} .oxi-addonsOH-date' => 'color:{{VALUE}};'
                     ],
                 ],
-//                'sa_oh_end_tab_2' => [
-//                    'controller' => 'end_controls_tab',
-//                ],
-//                'sa_oh_end_tabs' => [
-//                    'controller' => 'end_controls_tabs',
-//                ],
+                'sa_oh_end_tab_2' => [
+                    'controller' => 'end_controls_tab',
+                ],
+                'sa_oh_end_tabs' => [
+                    'controller' => 'end_controls_tabs',
+                ],
             ],
             'title_field' => 'sa_oh_day_text',
                 ]
