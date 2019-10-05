@@ -141,7 +141,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => '%',
-                'size' => 100,
+                'size' => 30,
             ],
             'range' => [
                 '%' => [
@@ -255,7 +255,7 @@ class Style_4 extends AdminStyle {
                 'sa_s_image_h_scale', $this->style, [
             'label' => __('Scale', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-            'default' => 1,
+            'default' => 1.5,
             'max' => 10,
             'min' => 0,
             'step' => '0.1',

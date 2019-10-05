@@ -1,5 +1,5 @@
 
-.oxi-addons-headers-wrapper  {
+.oxi-addons-headers-wrapper-style-2  {
     width: 100%;
     float: left;
     overflow: hidden;
@@ -7,14 +7,14 @@
     display: flex
 }
 
-.oxi-addons-wrapper-left-side {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-wrapper-left-side {
     width: 50%;
     float: left;
     background: rgba(21, 92, 70, 1);
     padding: 50px 100px 70px 100px
 }
 
-.oxi-addons-wrapper-right-side {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-wrapper-right-side {
     width: 50%;
     float: left;
     background: linear-gradient(rgba(37, 124, 222, 0), rgba(37, 124, 222, 0)), url("https://images.pexels.com/photos/53350/seoul-skyscraper-building-architecture-53350.jpeg") no-repeat center center;
@@ -28,7 +28,7 @@
     align-items: center
 }
 
-.oxi-addons-main-icon {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-main-icon {
     position: relative;
     width: 100%;
     float: left;
@@ -37,7 +37,7 @@
     padding: 5px 5px 50px 5px
 }
 
-.oxi-icons {
+.oxi-addons-headers-wrapper-style-2 .oxi-icons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,14 +55,14 @@
     overflow: hidden
 }
 
-.oxi-icons:hover {
+.oxi-addons-headers-wrapper-style-2 .oxi-icons:hover {
     color: #999999;
     background: rgba(224, 224, 224, 0);
     border-color: #c4c4c4;
     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0)
 }
 
-.oxi-addons-heading-one {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-heading-one {
     font-size: 45px;
     font-family: "Lato";
     font-weight: 700;
@@ -76,7 +76,7 @@
     float: left
 }
 
-.oxi-addons-heading-two {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-heading-two {
     font-size: 18px;
     font-family: "Lato";
     font-weight: bold;
@@ -91,18 +91,18 @@
     float: left
 }
 
-.oxi-addons-heading-line {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-heading-line {
     position: relative;
     width: 100%;
     float: left
 }
 
-.oxi-addons-line {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-line {
     width: 100%;
     float: left
 }
 
-.oxi-addons-line::after {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-line::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -116,7 +116,7 @@
     transform: translateX(-50%)
 }
 
-.oxi-addons-short-detail {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-short-detail {
     font-size: 16px;
     font-family: "Lato";
     font-weight: 100;
@@ -130,13 +130,13 @@
     float: left
 }
 
-.oxi-addons-main-button {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-main-button {
     width: 100%;
     float: left;
     text-align: center
 }
 
-.oxi-addons-main-button .oxi-addons-link {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-main-button .oxi-addons-link {
     background: rgba(214, 197, 197, 0);
     color: #ffffff;
     display: inline-block;
@@ -154,7 +154,7 @@
     box-shadow: 0px 0px 0px 0px rgba(189, 59, 59, 1);
 }
 
-.oxi-addons-main-button .oxi-addons-link:hover {
+.oxi-addons-headers-wrapper-style-2 .oxi-addons-main-button .oxi-addons-link:hover {
     background: rgba(255, 255, 255, 1);
     color: #242424;
     box-shadow: 0px 0px 0px 0px rgba(201, 106, 102, 0);
@@ -163,46 +163,46 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-headers-wrapper  {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-headers-wrapper-style-2  {
         padding: 0px 0px 0px 0px;
         display: block
     }
-    .oxi-addons-wrapper-left-side {
+    .oxi-addons-headers-wrapper-style-2   .oxi-addons-wrapper-left-side {
         width: 100%;
         float: left;
         padding: 40px 70px 30px 70px
     }
-    .oxi-addons-wrapper-right-side {
+    .oxi-addons-headers-wrapper-style-2   .oxi-addons-wrapper-right-side {
         width: 100%;
         float: left
     }
-    .oxi-icons {
+    .oxi-addons-headers-wrapper-style-2   .oxi-icons {
         font-size: 80px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
         width: 100px;
         height: 100px
     }
-    .oxi-addons-main-icon {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-main-icon {
         padding: 5px 5px 50px 5px
     }
-    .oxi-addons-heading-one {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-heading-one {
         font-size: 45px;
         padding: 10px 0px 15px 0px
     }
-    .oxi-addons-heading-two {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-heading-two {
         font-size: 18px;
         padding: 5px 0px 5px 0px
     }
-    .oxi-addons-line::after {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-line::after {
         width: 20%;
         height: 2px
     }
-    .oxi-addons-short-detail {
+    .oxi-addons-headers-wrapper-style-2 .oxi-addons-short-detail {
         font-size: 16px;
         padding: 10px 0px 20px 0px
     }
-    .oxi-addons-main-button .oxi-addons-link {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-main-button .oxi-addons-link {
         font-size: 16px;
         border-radius: 50px 50px 50px 50px;
         padding: 15px 50px 15px 50px;
@@ -211,46 +211,46 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-headers-wrapper  {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-headers-wrapper-style-2  {
         padding: 0px 0px 0px 0px;
         display: block
     }
-    .oxi-addons-wrapper-left-side {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-wrapper-left-side {
         width: 100%;
         float: left;
         padding: 30px 20px 40px 20px
     }
-    .oxi-addons-wrapper-right-side {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-wrapper-right-side {
         width: 100%;
         float: left
     }
-    .oxi-icons {
+    .oxi-addons-headers-wrapper-style-2  .oxi-icons {
         font-size: 80px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
         width: 100px;
         height: 100px
     }
-    .oxi-addons-main-icon {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-main-icon {
         padding: 5px 5px 50px 5px
     }
-    .oxi-addons-heading-one {
+    .oxi-addons-headers-wrapper-style-2   .oxi-addons-heading-one {
         font-size: 45px;
         padding: 10px 0px 15px 0px
     }
-    .oxi-addons-headers-wrapper  .oxi-addons-heading-two {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-headers-wrapper-style-2  .oxi-addons-heading-two {
         font-size: 18px;
         padding: 5px 0px 5px 0px
     }
-    .oxi-addons-line::after {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-line::after {
         width: 20%;
         height: 2px
     }
-    .oxi-addons-short-detail {
+    .oxi-addons-headers-wrapper-style-2   .oxi-addons-short-detail {
         font-size: 16px;
         padding: 10px 0px 20px 0px
     }
-    .oxi-addons-main-button .oxi-addons-link {
+    .oxi-addons-headers-wrapper-style-2  .oxi-addons-main-button .oxi-addons-link {
         font-size: 16px;
         border-radius: 50px 50px 50px 50px;
         padding: 15px 50px 15px 50px;

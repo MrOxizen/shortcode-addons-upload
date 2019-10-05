@@ -5,15 +5,15 @@ and open the template in the editor.
 */
 /* 
     Created on : Sep 2, 2019, 10:30:51 AM
-    Author     : biplo
+    Author     : biplop
 */
-.oxi-addons-text-blocks {
+.oxi-addons-text-blocks-style-1 {
     width: 100%;
     float: left;
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-text-blocks-1st-body {
+.oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-1st-body {
     width: 100%;
     float: left;
     font-size: 40px;
@@ -26,7 +26,7 @@ and open the template in the editor.
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-text-blocks-2nd-body {
+.oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-2nd-body {
     width: 100%;
     float: left;
     font-size: 80px;
@@ -39,7 +39,7 @@ and open the template in the editor.
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-text-blocks-3rd-body {
+.oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-3rd-body {
     width: 100%;
     float: left;
     font-size: 30px;
@@ -53,36 +53,36 @@ and open the template in the editor.
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-text-blocks {
+    .oxi-addons-text-blocks-style-1 {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-1st-body {
+    .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-1st-body {
         font-size: 40px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-2nd-body {
+    .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-2nd-body {
         font-size: 50px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-3rd-body {
+    .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-3rd-body {
         font-size: 30px;
         padding: 0px 0px 0px 0px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-text-blocks {
+    .oxi-addons-text-blocks-style-1 {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-1st-body {
+    .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-1st-body {
         font-size: 40px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-2nd-body {
+    .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-2nd-body {
         font-size: 50px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-3rd-body {
+    .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-3rd-body {
         font-size: 30px;
         padding: 0px 0px 0px 0px
     }

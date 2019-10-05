@@ -1,8 +1,8 @@
-.oxi-addons-info-image-parent-wrapper {
+.oxi-addons-info-image-parent-wrapper-style-3 {
     padding: 13px 13px 13px 13px
 }
 
-.oxi-addons-main-wrapper {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3 {
     position: relative;
     width: 100%;
     float: left;
@@ -14,19 +14,19 @@
     box-shadow: 0px 5px 10px 0px rgba(214, 214, 214, 0.7);
 }
 
-.oxi-addons-main-wrapper:hover {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3:hover {
     background: linear-gradient(90deg, rgba(2, 179, 176, 1.00) 0%, rgba(0, 191, 48, 0.96) 98%);
     box-shadow: 0px 8px 12px 0px rgba(222, 222, 222, 1);
 }
 
-.oxi-addons-image-main {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-image-main {
     width: 100%;
     float: left;
     display: flex;
     justify-content: center
 }
 
-.oxi-addons-img {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,12 +40,12 @@
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-main-content {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-content {
     width: 100%;
     float: left
 }
 
-.oxi-addons-heading {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-heading {
     font-size: 26px;
     font-family: "Roboto";
     font-weight: 700;
@@ -59,11 +59,11 @@
     float: left
 }
 
-.oxi-addons-heading {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-heading {
     color: #ffffff
 }
 
-.oxi-addons-details {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-details {
     font-size: 18px;
     font-family: "Roboto";
     font-weight: 300;
@@ -77,59 +77,59 @@
     float: left
 }
 
-.oxi-addons-details {
+.oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-details {
     color: #ffffff
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-info-image-parent-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-info-image-parent-wrapper {
         padding: 13px 13px 13px 13px
     }
-    .oxi-addons-main-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3 {
         border-radius: 0px 0px 0px 0px;
         padding: 20px 10px 20px 10px
     }
-    .oxi-addons-img {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-img {
         width: 100px;
         height: 100px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-heading {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-heading {
         font-size: 26px;
         padding: 10px 5px 10px 10px
     }
-    .oxi-addons-heading span {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-heading span {
         font-size: px
     }
-    .oxi-addons-details {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-details {
         font-size: 18px;
         padding: 5px 5px 5px 10px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-info-image-parent-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-info-image-parent-wrapper {
         padding: 13px 13px 13px 13px
     }
-    .oxi-addons-main-wrapper {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3 {
         border-radius: 0px 0px 0px 0px;
         padding: 20px 10px 20px 10px
     }
-    .oxi-addons-img {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-img {
         width: 100px;
         height: 100px;
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-heading {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-heading {
         font-size: 26px;
         padding: 10px 5px 10px 10px
     }
-    .oxi-addons-heading span {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-heading span {
         font-size: px
     }
-    .oxi-addons-details {
+    .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-details {
         font-size: 18px;
         padding: 5px 5px 5px 10px
     }

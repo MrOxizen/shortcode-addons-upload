@@ -17,39 +17,39 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_8 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_accordion_data_style_8'] as $key => $value) {
             $image = $info = $rating = $name = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
-                $image = '<div class="oxi-testimonials-style-eight-image">                               
+                $image = '<div class="oxi-testimonials-style-eight-image oxi-testimonials-style-eight-image-'.$key.'">                               
                                 <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-eight-info">
+                $info = '<div class="oxi-testimonials-style-eight-info oxi-testimonials-style-eight-info-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_description']) . '
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
-                $name = '<div  class="oxi-testimonials-style-eight-name">
+                $name = '<div  class="oxi-testimonials-style-eight-name oxi-testimonials-style-eight-name-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_destination', $value) && $value['sa_testi_profile_destination'] != '') {
                 $company = '
-                 <div class="oxi-testimonials-style-eight-working">
+                 <div class="oxi-testimonials-style-eight-working oxi-testimonials-style-eight-working-'.$key.'">
                     ' . $this->text_render($value['sa_testi_profile_destination']) . '  
                 </div>';
             }
             if (array_key_exists('sa_testi_profile_icon', $value) && $value['sa_testi_profile_icon'] != '') {
                 if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
                 $icon = '
-                    <div class="oxi-testimonials-style-eight-name-body-right">
+                    <div class="oxi-testimonials-style-eight-name-body-right oxi-testimonials-style-eight-name-body-right-'.$key.'">
                         <a ' . $this->url_render('sa_testi_profile_url', $value) . '>' . $this->font_awesome_render($value['sa_testi_profile_icon']) . '</a>  
                     </div>';
                 }else{
                     $icon = '
-                    <div class="oxi-testimonials-style-eight-name-body-right">
+                    <div class="oxi-testimonials-style-eight-name-body-right oxi-testimonials-style-eight-name-body-right-'.$key.'">
                         <div>' . $this->font_awesome_render($value['sa_testi_profile_icon']) . '</div>  
                     </div>';
                 }
@@ -79,16 +79,7 @@ class Style_8 extends Templates {
                             </div>
                         </div>
                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+            
             echo '</div>';
         }
     }

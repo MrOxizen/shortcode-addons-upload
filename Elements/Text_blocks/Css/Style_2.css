@@ -7,20 +7,20 @@ and open the template in the editor.
     Created on : Sep 2, 2019, 10:30:51 AM
     Author     : biplo
 */
-.oxi-addons-text-blocks {
+.oxi-addons-text-blocks-style-2 {
     width: 100%;
     float: left;
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-text-blocks-body {
+.oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-body {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     display: flex
 }
 
-.oxi-addons-text-blocks-heading {
+.oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-heading {
     width: 100%;
     float: left;
     font-size: 50px;
@@ -33,7 +33,7 @@ and open the template in the editor.
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-text-blocks-content {
+.oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-content {
     width: 100%;
     float: left;
     font-size: 18px;
@@ -46,7 +46,7 @@ and open the template in the editor.
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-text-blocks-border {
+.oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border {
     width: 100%;
     float: left;
     display: flex;
@@ -54,7 +54,7 @@ and open the template in the editor.
     justify-content: flex-start
 }
 
-.oxi-addons-text-blocks-border .oxi-addons-text-block-border {
+.oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border .oxi-addons-text-block-border {
     width: 50px;
     max-width: 100%;
     display: inline-block;
@@ -62,47 +62,47 @@ and open the template in the editor.
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-text-blocks {
+    .oxi-addons-text-blocks-style-2 {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-body {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-body {
         max-width: 600px
     }
-    .oxi-addons-text-blocks-heading {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-heading {
         font-size: 50px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-content {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-content {
         font-size: 18px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-border {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border {
         padding: 6px 0px 6px 3px
     }
-    .oxi-addons-text-blocks-border .oxi-addons-text-block-border {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border .oxi-addons-text-block-border {
         width: 50px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-text-blocks {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks {
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-body {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-body {
         max-width: 600px
     }
-    .oxi-addons-text-blocks-heading {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-heading {
         font-size: 50px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-content {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-content {
         font-size: 18px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-text-blocks-border {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border {
         padding: 6px 0px 6px 3px
     }
-    .oxi-addons-text-blocks-border .oxi-addons-text-block-border {
+    .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border .oxi-addons-text-block-border {
         width: 50px
     }
 }

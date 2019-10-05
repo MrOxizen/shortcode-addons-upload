@@ -7,7 +7,7 @@ and open the template in the editor.
     Created on : Sep 2, 2019, 10:30:51 AM
     Author     : biplop
 */
-.oxi-addons-fancy-spinner {
+.oxi-addons-Interactive-card-style-2  .oxi-addons-fancy-spinner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,14 +15,14 @@ and open the template in the editor.
     height: 5rem
 }
 
-.oxi-addons-fancy-spinner div {
+.oxi-addons-Interactive-card-style-2  .oxi-addons-fancy-spinner div {
     position: absolute;
     width: 4rem;
     height: 4rem;
     border-radius: 50%
 }
 
-.oxi-addons-fancy-spinner div.oxi-addons-ring {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-ring {
     border-width: 0.5rem;
     border-style: solid;
     border-color: transparent;
@@ -30,19 +30,19 @@ and open the template in the editor.
     animation: 2s oxi_fancy infinite alternate
 }
 
-.oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(1) {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(1) {
     border-left-color: #780000;
     border-right-color: #780000
 }
 
-.oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(2) {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(2) {
     border-top-color: #780000;
     border-bottom-color: #780000;
     -webkit-animation-delay: 1s;
     animation-delay: 1s
 }
 
-.oxi-addons-fancy-spinner div.oxi-addons-dot {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-dot {
     width: 1rem;
     height: 1rem;
     background: #780000
@@ -62,7 +62,7 @@ and open the template in the editor.
     }
 }
 
-.oxi-addons-Interactive-card {
+.oxi-addons-Interactive-card-style-2 {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -70,7 +70,7 @@ and open the template in the editor.
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-IC {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC {
     width: 100%;
     float: left;
     box-shadow: px px px px rgba(255, 255, 255, 0);
@@ -78,7 +78,7 @@ and open the template in the editor.
     position: relative
 }
 
-.oxi-addons-IC .oxi-addons-ICfull-content-s2 {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC .oxi-addons-ICfull-content-s2 {
     width: 100%;
     float: left;
     padding: px px px px;
@@ -87,19 +87,19 @@ and open the template in the editor.
     cursor: pointer;
 }
 
-.oxi-opacity-0 {
+.oxi-addons-Interactive-card-style-2 .oxi-opacity-0 {
     opacity: 0;
     z-index: -1;
     width: 100%;
     position: absolute
 }
 
-.oxi-addons-IC .oxi-addons-IC-box {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC .oxi-addons-IC-box {
     width: 100%;
     float: left
 }
 
-.oxi-addons-IC .oxi-addons-IC-box .oxi-addons-IC-body {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC .oxi-addons-IC-box .oxi-addons-IC-body {
     width: 100%;
     float: left
 }
@@ -117,7 +117,7 @@ and open the template in the editor.
     left: 0
 }
 
-.oxi-addons-back-content {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-back-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -126,13 +126,13 @@ and open the template in the editor.
     overflow-y: auto
 }
 
-.oxi-addons-back-content-inner {
+.oxi-addons-Interactive-card-style-2 .oxi-addons-back-content-inner {
     display: flex;
     align-items: center;
     flex-direction: column
 }
 
-span.oxi-close-icon {
+.oxi-addons-Interactive-card-style-2 .oxi-close-icon {
     position: absolute;
     right: 0;
     top: 0;
@@ -149,6 +149,6 @@ span.oxi-close-icon {
     margin: 17px 17px 0px 0px
 }
 
-.oxi-close-icon:hover {
+.oxi-addons-Interactive-card-style-2 .oxi-close-icon:hover {
     cursor: pointer
 }

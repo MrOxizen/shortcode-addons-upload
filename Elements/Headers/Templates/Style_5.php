@@ -96,7 +96,7 @@ class Style_5 extends Templates {
             transform: translateY(-50%);';
         }
 
-        echo   '<div class="oxi-addons-headers-wrapper">
+        echo   '<div class="oxi-addons-headers-wrapper-style-5">
                     <div class="oxi-addons-wrapper-left-side" style="'.$position.'"> 
                         <div class="oxi-addons-main"> 
                         ' . $sub_heading . '
