@@ -39,7 +39,7 @@ $all_data = (array_key_exists('sa_Info_image_boxes_data', $style) && is_array($s
                 </div>';
                 }
             endif;
-            $content .= '<div class="oxi-addons-main-wrapper oxi-addons-main-wrapper-' . $key . '" >
+            $content .= '<div class="oxi-addons-main-wrapper-style-1 oxi-addons-main-wrapper-style-1-' . $key . '" >
                             <div class="oxi-addons-image-main">
                             ' . $images . ' 
                             </div> 
@@ -48,7 +48,7 @@ $all_data = (array_key_exists('sa_Info_image_boxes_data', $style) && is_array($s
                                 ' . $details . '  
                             </div>
                         </div>';
-            echo '<div class=" oxi-addons-info-image-parent-wrapper ' . $this->column_render('sa_info_image_column', $style) . '">
+            echo '<div class=" oxi-addons-info-image-parent-wrapper-style-1 ' . $this->column_render('sa_info_image_column', $style) . '">
                       <div class="sa_addons_icon_boxes_container ">';
                         if (array_key_exists('sa_info_image_content_text', $value)) :
                             if ($value['sa_info_image_url-url'] != '') {

@@ -548,7 +548,7 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa_interactive_cards_back_bg_color', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
@@ -626,7 +626,16 @@ class Style_3 extends AdminStyle {
             'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
                 ]
         );
-
+        $this->add_control(
+                'sa_interactive_cards_back_head_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#4a4a4a',
+            'selector' => [
+                '{{WRAPPER}}  .oxi-addons-back-text-inner .oxi-addons-back-title' => 'color : {{VALUE}}; '
+            ],
+                ]
+        );
         $this->add_group_control(
                 'sa_interactive_cards_back_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
@@ -672,7 +681,16 @@ class Style_3 extends AdminStyle {
             'label' => esc_html__('Details', SHORTCODE_ADDOONS),
                 ]
         );
-
+        $this->add_control(
+                'sa_interactive_cards_back_det_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#4d4d4d',
+            'selector' => [
+                '{{WRAPPER}}  .oxi-addons-back-text-inner .oxi-addons-back-paragraph' => 'color : {{VALUE}}; '
+            ],
+                ]
+        );
         $this->add_group_control(
                 'sa_interactive_cards_back_det_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
