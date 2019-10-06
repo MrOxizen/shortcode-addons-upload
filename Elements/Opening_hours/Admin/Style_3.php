@@ -299,7 +299,36 @@ class Style_3 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-       
+       $this->add_responsive_control(
+                'sa_oh_width', $this->style, [
+            'label' => __('Maximum Width', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 600,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 1500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => .1,
+                ],
+                'rem' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-TH-wrapper-3 .oxi-addonsOH-TH-row' => 'max-width:{{SIZE}}{{UNIT}};'
+            ],
+                ]
+        );
         $this->add_group_control(
                 'sa_oh_br', $this->style, [
             'type' => Controls::BORDER,
