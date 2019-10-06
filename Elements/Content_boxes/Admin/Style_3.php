@@ -37,12 +37,78 @@ class Style_3 extends AdminStyle {
         $this->start_section_devider();
 
         // start
+        
+        
+        
+         $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Add New Content', SHORTCODE_ADDOONS),
+            'showing' => true,
+                ]
+        );
+
+        $this->add_repeater_control(
+                'sa_icon_effects_data', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'fields' => [
+                'sa_el_fa_icon' => [
+                    'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                    'type' => Controls::ICON,
+                    'default' => 'fas fa-apple-alt',
+                ],
+                'sa_el_title' => [
+                    'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Lorem Ipsum',
+                    'selector' => [
+                        '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-heading' => '',
+                    ],
+                ],
+                'sa_el_content' => [
+                    'label' => esc_html__('Content', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXTAREA,
+                    'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+                    'selector' => [
+                        '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-content' => '',
+                    ],
+                ],
+                'sa_el_btn_text' => [
+                    'label' => esc_html__('Button Text', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Buy Now',
+                    'selector' => [
+                        '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-button' => '',
+                    ],
+                ],
+                'sa_el_button_link' => [
+                    'label' => esc_html__('Button Link', SHORTCODE_ADDOONS),
+                    'type' => Controls::URL,
+                    'default' => 'https://www.example.com',
+                    'controller' => 'add_group_control',
+                ],
+            ],
+            'title_field' => 'sa_el_title',
+            'button' => 'Add New Item',
+                ]
+        );
+
+        $this->end_controls_section();
+        
+        
+        
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
             'showing' => true,
                 ]
         );
+        
+       
+        
+        
+        
+        
         $this->add_group_control(
                 'sa-ac-column', $this->style, [
             'type' => Controls::COLUMN,
@@ -994,65 +1060,6 @@ class Style_3 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Content', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Content Box Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-        $this->add_control(
-                'sa_el_fa_icon', $this->style, [
-            'label' => __('Icon Class', SHORTCODE_ADDOONS),
-            'type' => Controls::ICON,
-            'default' => 'fab fa-facebook',
-                ]
-        );
-        $this->add_control(
-                'sa_el_title', $this->style, [
-            'label' => __('Title', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Lorem Ipsum is simply dummy text',
-            'placeholder' => 'Lorem Ipsum is simply dummy text',
-                ]
-        );
-
-        $this->add_group_control(
-                'sa_el_button_link', $this->style, [
-            'label' => __('Button Link', SHORTCODE_ADDOONS),
-            'type' => Controls::URL,
-            'default' => 'https://www.sumonmia.com',
-            'placeholder' => 'Write Button Link Here',
-                ]
-        );
-
-        $this->add_control(
-                'sa_el_content', $this->style, [
-            'label' => __('Content', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXTAREA,
-            'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-            'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                ]
-        );
-
-        $this->add_control(
-                'sa_el_btn_text', $this->style, [
-            'label' => __('Button Text', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Buy Now',
-            'placeholder' => 'Write Button Text',
-                ]
-        );
-
-        echo '</div>';
-    }
+    
 
 }

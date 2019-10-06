@@ -17,13 +17,11 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_2 extends Templates {
 
-    
-
     public function default_render($style, $child, $admin) {
         $class = '';
         if ($style['sa-max-width-condition'] == 'dynamic') {
             $class = 'sa-max-w-dynamic';
-        }elseif($style['sa-max-width-condition'] == 'default'){
+        } elseif ($style['sa-max-width-condition'] == 'default') {
             $class = '';
         }
 
@@ -33,34 +31,35 @@ class Style_2 extends Templates {
             $admin_class = '';
         }
 
-        foreach ($child as $v) {
-            $data = $this->Json_Decode($v['rawdata']);
-            
+        $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
+
+        foreach ($all_data as $key => $data) {
+
             $icon = $heading = $content = $button = '';
-            
-            if (array_key_exists('sa_el_fa_icon', $data) &&  $data['sa_el_fa_icon'] != '') {
+
+            if (array_key_exists('sa_el_fa_icon', $data) && $data['sa_el_fa_icon'] != '') {
                 $icon .= '<div class="oxi-icons">
-                                '.$this->font_awesome_render( $data['sa_el_fa_icon']).'
+                                ' . $this->font_awesome_render($data['sa_el_fa_icon']) . '
                             </div>';
             }
-            if (array_key_exists('sa_el_title', $data) &&  $data['sa_el_title'] != '') {
+            if (array_key_exists('sa_el_title', $data) && $data['sa_el_title'] != '') {
                 $heading .= '<div class="sa-conten-box-style-2-heading">
                                 ' . $this->text_render($data['sa_el_title']) . '
                             </div>';
             }
-            if (array_key_exists('sa_el_content', $data) &&  $data['sa_el_content'] != '') {
+            if (array_key_exists('sa_el_content', $data) && $data['sa_el_content'] != '') {
                 $content .= '<div class="sa-conten-box-style-2-content">
                                 ' . $this->text_render($data['sa_el_content']) . '
                             </div> ';
             }
-            if (array_key_exists('sa_el_btn_text', $data) &&  $data['sa_el_btn_text'] != '') {
+            if (array_key_exists('sa_el_btn_text', $data) && $data['sa_el_btn_text'] != '') {
                 $button .= '<div class="sa-conten-box-style-2-button" ' . $this->animation_render('sa-cb-btn-animation', $style) . '>
                                 <a  class="oxi-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
                             </div> ';
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-conten-box-style-2 ' . $class . ' "   ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+            echo '<div class="sa-conten-box-style-2  sa-conten-box-style-2-' . $key . ' ' . $class . ' "   ' . $this->animation_render('sa-cb-box-animation', $style) . '>
                         <div class="sa-conten-box-style-2-data">     
                             ' . $icon . '
                             ' . $heading . '
@@ -68,16 +67,6 @@ class Style_2 extends Templates {
                             ' . $button . '    
                         </div>
                     </div>';
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
-                        </div>';
-            endif;
             echo '</div>';
         }
     }
