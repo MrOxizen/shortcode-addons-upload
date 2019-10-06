@@ -17,63 +17,47 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_16 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_accordion_data_style_16'] as $key => $value) {
             $image = $info = $rating = $name = $company = '';
             if ($this->media_render('sa_testi_profile_picture', $value) != '') {
                 $image = '<div class="oxi-testimonials-style-sixteen-image-parent">
-                                <div class="oxi-testimonials-style-sixteen-image">
+                                <div class="oxi-testimonials-style-sixteen-image oxi-testimonials-style-sixteen-image-'.$key.'">
                                    <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '"> 
                                 </div>
                             </div>';
             }
             if (array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != '') {
-                $info = '<div class="oxi-testimonials-style-sixteen-info">
+                $info = '<div class="oxi-testimonials-style-sixteen-info oxi-testimonials-style-sixteen-info-'.$key.'">
                            ' . $this->text_render($value['sa_testi_profile_description']) . '
                         </div>';
             }
-            if (array_key_exists('sa_testi_profile_rating-size', $value) && $value['sa_testi_profile_rating-size'] != '') {
-                $rating = '<div class="oxi-testimonials-style-sixteen-rating">
-                            ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '                            
-                         </div> ';
-            }
-            if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
-                $name = ' <div class="oxi-testimonials-style-sixteen-name" >
-                                    ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                              </div>';
-            }
             if (array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != '') {
                 if (array_key_exists('sa_testi_profile_name_url-url', $value) && $value['sa_testi_profile_name_url-url'] != '') {
-                    $name = '<a ' . $this->url_render('sa_testi_profile_name_url', $value) . ' class="oxi-testimonials-style-sixteen-name">
+                    $name = '<a ' . $this->url_render('sa_testi_profile_name_url', $value) . ' class="oxi-testimonials-style-sixteen-name oxi-testimonials-style-sixteen-name-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                             </a>';
                 } else {
-                    $name = '<div  class="oxi-testimonials-style-sixteen-name">
+                    $name = '<div  class="oxi-testimonials-style-sixteen-name oxi-testimonials-style-sixteen-name-'.$key.'">
                                 ' . $this->text_render($value['sa_testi_profile_name']) . ' 
                             </div>';
                 }
             }
             if (array_key_exists('sa_testi_profile_company', $value) && $value['sa_testi_profile_company'] != '') {
-                $company = '<div class="oxi-testimonials-style-sixteen-working">
+                $company = '<div class="oxi-testimonials-style-sixteen-working oxi-testimonials-style-sixteen-working-'.$key.'">
                                     ' . $this->text_render($value['sa_testi_profile_company']) . '
                                  </div>';
             }
             
-            if($style['sa-testimonial-profile-body_alignment'] == 'left'){
-                 $class = "sa-testimonial-profile-body-left";
-            }elseif($style['sa-testimonial-profile-body_alignment'] == 'right'){
-                $class = "sa-testimonial-profile-body-right";
-            }else{
-                 $class = "sa-testimonial-profile-body-center";
-            }
+           
 
             echo ' <div class="oxi-testimonials-sixteen-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . ' " >
                     <div class="oxi-testimonials-item-sixteen">
-                        <div class="oxi-testimonials-style-sixteen '.$class.'" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '> 
+                        <div class="oxi-testimonials-style-sixteen" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '> 
                                '.$image.'
-                                <div class="oxi-testimonials-style-' . $oxiid . '-name-body-parent">
+                                <div class="oxi-testimonials-style-' . $key . '-name-body-parent">
                                     '.$info.'
-                                    <div class="oxi-testimonials-style-' . $oxiid . '-name-body">    
+                                    <div class="oxi-testimonials-style-' . $key . '-name-body">    
                                         '.$name.'
                                         '.$company.'
                                     </div>
@@ -82,16 +66,7 @@ class Style_16 extends Templates {
                                 </div>
                             </div>
                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+            
             echo '</div>';
         }
     }

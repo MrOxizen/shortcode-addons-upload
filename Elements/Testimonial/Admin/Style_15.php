@@ -18,7 +18,7 @@ use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 class Style_15 extends AdminStyle {
 
     public function register_controls() {
-        
+
         $this->start_section_header(
                 'shortcode-addons-start-tabs', [
             'options' => [
@@ -52,6 +52,59 @@ class Style_15 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_repeater_control(
+                'sa_image_accordion_data_style_15', $this->style, [
+            'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'separator' => TRUE,
+            'button' => 'Add New Testimonial',
+            'fields' => [
+                'sa_testi_profile_icon' => [
+                    'label' => __('Icon', SHORTCODE_ADDOONS),
+                    'type' => Controls::ICON,
+                    'default' => 'fas fa-globe',
+                    'placeholder' => 'fas fa-globe',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-before-{{KEY}}' => '',
+                    ]
+                ],
+                'sa_testi_profile_name' => [
+                    'label' => __('Name', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'John Mandis',
+                    'placeholder' => 'John Mandis',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-testimonials-style-fifteen-name-{{KEY}}' => '',
+                    ]
+                ],
+                'sa_testi_profile_company_url' => [
+                    'label' => __('Company URL', SHORTCODE_ADDOONS),
+                    'type' => Controls::URL,
+                    'controller' => 'add_group_control',
+                    'default' => '',
+                    'placeholder' => 'https://www.yoururl.com',
+                ],
+                'sa_testi_profile_company' => [
+                    'label' => __('Designation', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Graphics designer',
+                    'placeholder' => 'Graphics designer',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-testimonials-style-fifteen-working-{{KEY}}' => '',
+                    ]
+                ],
+                'sa_testi_profile_description' => [
+                    'label' => __('Short Details', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXTAREA,
+                    'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua dapibus tellus blandit quis. Cras tempor non mi et vestibulum.',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-testimonials-style-fifteen-info-{{KEY}}' => '',
+                    ]
+                ],
+            ],
+            'title_field' => 'sa_testi_profile_name',
+                ]
+        );
 
         $this->add_responsive_control(
                 'sa-testimonial-body-width', $this->style, [
@@ -83,8 +136,8 @@ class Style_15 extends AdminStyle {
             ],
                 ]
         );
-       
-        
+
+
         $this->add_responsive_control(
                 'sa-testimonial-body-margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -132,123 +185,15 @@ class Style_15 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-        
+
         $this->end_section_devider();
         $this->start_section_devider();
+
         
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Profile Image', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-        $this->add_responsive_control(
-                'sa-testimonial-profile-image-width', $this->style, [
-            'label' => __('Width', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 70,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 2000,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-image, {{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-left' => 'max-width:{{SIZE}}{{UNIT}};',
-            ],
-                ]
-        );
-        
-        $this->add_responsive_control(
-                'sa-testimonial-profile-image-height', $this->style, [
-            'label' => __('Height', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 70,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 2000,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-image, {{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-image img' => 'height:{{SIZE}}{{UNIT}};',
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa-testimonial-profile-image-border', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-image img' => '',
-            ]
-                ]
-        );
-        
-        $this->add_responsive_control(
-                'sa-testimonial-profile-image-border-radius', $this->style, [
-            'label' => __('Border Raidus', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => 0,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                '%' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => .1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 20,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-image img' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ],
-                ]
-        );
-       
-        
-        $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Information', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'showing' => TRUE,
                 ]
         );
         $this->add_group_control(
@@ -282,7 +227,7 @@ class Style_15 extends AdminStyle {
             ]
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa-testimonial-profile-Information-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -389,7 +334,7 @@ class Style_15 extends AdminStyle {
             'showing' => FALSE,
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-testimonial-profile-icon-width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -419,7 +364,7 @@ class Style_15 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-testimonial-profile-icon-size', $this->style, [
             'label' => __('Icon Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -449,7 +394,7 @@ class Style_15 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa-testimonial-profile-icon-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
@@ -459,7 +404,7 @@ class Style_15 extends AdminStyle {
             ]
                 ]
         );
-          $this->add_control(
+        $this->add_control(
                 'sa-testimonial-profile-icon-background-color', $this->style, [
             'label' => __('Background Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
@@ -470,7 +415,7 @@ class Style_15 extends AdminStyle {
             ]
                 ]
         );
-           $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-testimonial-profile-icon-top-arrow', $this->style, [
             'label' => __('Top Arrow', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -480,19 +425,18 @@ class Style_15 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' =>-100,
+                    'min' => -100,
                     'max' => 2000,
                     'step' => 1,
                 ],
-                
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-info .oxi-before' => 'left:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
-        
-        
+
+
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
@@ -591,9 +535,9 @@ class Style_15 extends AdminStyle {
             ]
                 ]
         );
-        
-        
-       
+
+
+
         $this->add_group_control(
                 'sa-testimonial-profile-company-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -632,75 +576,73 @@ class Style_15 extends AdminStyle {
             ]
                 ]
         );
-        
-        
+
+
         $this->end_controls_section();
-        
-        
-        
+
+
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
 
-   
-    public function modal_opener() {
-        
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Testimonial', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Testimonial Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Testimonial Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-        $this->add_control(
-                'sa_testi_profile_icon', $this->style, [
-            'label' => __('Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::ICON,
-            'default' => 'fas fa-globe',
-            'placeholder' => 'fas fa-globe',
-                ]
-        );
-        $this->add_control(
-                'sa_testi_profile_name', $this->style, [
-            'label' => __('Name', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'John Mandis',
-            'placeholder' => 'John Mandis',
-                ]
-        );
-        $this->add_group_control(
-                'sa_testi_profile_company_url', $this->style, [
-            'label' => __('Company URL', SHORTCODE_ADDOONS),
-            'type' => Controls::URL,
-            'default' => '',
-            'placeholder' => 'https://www.yoururl.com',
-                ]
-        );
-        $this->add_control(
-                'sa_testi_profile_company', $this->style, [
-            'label' => __('Designation', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Graphics designer',
-            'placeholder' => 'Graphics designer',
-                ]
-        );
-        
-        
-        $this->add_control(
-                'sa_testi_profile_description', $this->style, [
-            'label' => __('Short Details', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXTAREA,
-            'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua dapibus tellus blandit quis. Cras tempor non mi et vestibulum.',
-                ]
-        );
-        echo '</div>';
-    }
-
+//    public function modal_opener() {
+//        
+//        $this->add_substitute_control('', [], [
+//            'type' => Controls::MODALOPENER,
+//            'title' => __('Add New Testimonial', SHORTCODE_ADDOONS),
+//            'sub-title' => __('Open Testimonial Form', SHORTCODE_ADDOONS),
+//            'showing' => TRUE,
+//        ]);
+//    }
+//
+//    public function modal_form_data() {
+//        echo '<div class="modal-header">                    
+//                    <h4 class="modal-title">Testimonial Form</h4>
+//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+//                </div>
+//                <div class="modal-body">';
+//        $this->add_control(
+//                'sa_testi_profile_icon', $this->style, [
+//            'label' => __('Icon', SHORTCODE_ADDOONS),
+//            'type' => Controls::ICON,
+//            'default' => 'fas fa-globe',
+//            'placeholder' => 'fas fa-globe',
+//                ]
+//        );
+//        $this->add_control(
+//                'sa_testi_profile_name', $this->style, [
+//            'label' => __('Name', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXT,
+//            'default' => 'John Mandis',
+//            'placeholder' => 'John Mandis',
+//                ]
+//        );
+//        $this->add_group_control(
+//                'sa_testi_profile_company_url', $this->style, [
+//            'label' => __('Company URL', SHORTCODE_ADDOONS),
+//            'type' => Controls::URL,
+//            'default' => '',
+//            'placeholder' => 'https://www.yoururl.com',
+//                ]
+//        );
+//        $this->add_control(
+//                'sa_testi_profile_company', $this->style, [
+//            'label' => __('Designation', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXT,
+//            'default' => 'Graphics designer',
+//            'placeholder' => 'Graphics designer',
+//                ]
+//        );
+//        
+//        
+//        $this->add_control(
+//                'sa_testi_profile_description', $this->style, [
+//            'label' => __('Short Details', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXTAREA,
+//            'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua dapibus tellus blandit quis. Cras tempor non mi et vestibulum.',
+//                ]
+//        );
+//        echo '</div>';
+//    }
 }
