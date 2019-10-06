@@ -237,7 +237,7 @@ class Style_11 extends AdminStyle {
         $this->add_control(
                 'sa-btn-text-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Select Background Color', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Select Background Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
@@ -318,7 +318,7 @@ class Style_11 extends AdminStyle {
                 'sa-btn-text-h-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'description' => __('Select Hover Color', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Select Hover Color', SHORTCODE_ADDOONS),
             'default' => '#000000',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn11 .oxi-button-btn11:hover' => 'color:{{VALUE}};'

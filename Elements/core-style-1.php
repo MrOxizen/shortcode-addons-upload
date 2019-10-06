@@ -50,7 +50,7 @@ class Button_Style1 extends Templates {
          $this->add_control(
                 'sa_el_pricing_select-choose', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::CHOOSE,
             'toggle' => TRUE,
@@ -75,7 +75,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_true_false', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => FALSE,
             'type' => Controls::SWITCHER,
             'default' => 'yes',
@@ -89,7 +89,7 @@ class Button_Style1 extends Templates {
          * $this->add_control(
           'sa_el_pricing_table_title', $this->style, [
           'label' => __('Autoplay', SHORTCODE_ADDOONS),
-          'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+          'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
           'separator' => TRUE,
           'type' => Controls::TEXT,
 
@@ -104,7 +104,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_text', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::TEXT,
             'default' => '10',
@@ -118,7 +118,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pric_title', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::TEXTAREA,
             'default' => 'Typography – Font size, font family, font weight, text transform, font style, line hadUK LADAUVFAUDFAOU VFDVAFVAUFVAL KNKJBHKJ LHNKJLHNJK HKLHKL OIJIOJUIO UJUIOUIO PUJIOPUPO IUJPOIUIU OUOIUIO PUIOP,.SREJLKSDLKFJK JDSHZFeight and letter sp acing.',
@@ -131,7 +131,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_table_title', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::WYSIWYG,
             'default' => 'Typography – Font size, font family, font weight, text transform, font style, line height and letter spacing.',
@@ -150,7 +150,7 @@ class Button_Style1 extends Templates {
           $this->add_control(
           'sa_el_pricing_table_title', $this->style, [
           'label' => __('Autoplay', SHORTCODE_ADDOONS),
-          'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+          'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
           'separator' => TRUE,
           'type' => Controls::NUMBER,
           'min' => 5,
@@ -167,7 +167,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_table_title', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::NUMBER,
             'default' => 10,
@@ -179,7 +179,7 @@ class Button_Style1 extends Templates {
           $this->add_control(
           'sa_el_pricing_table_title', $this->style, [
           'label' => __('Autoplay', SHORTCODE_ADDOONS),
-          'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+          'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
           'separator' => TRUE,
           'type' => Controls::SLIDER,
           'default' => [
@@ -205,7 +205,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_table_title', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::SLIDER,
             'default' => [
@@ -240,7 +240,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_table_tssitle', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::SLIDER,
             'default' => [
@@ -259,7 +259,7 @@ class Button_Style1 extends Templates {
 //        $this->add_control(
 //                'sa_el_pricing_select', $this->style, [
 //            'label' => __('Autoplay', SHORTCODE_ADDOONS),
-//            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+//            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
 //            'separator' => TRUE,
 //            'type' => Controls::SELECT,
 //            'default' => 'dashed',
@@ -276,7 +276,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_select-select', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::SELECT,
             'default' => 'dashed',
@@ -311,7 +311,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_select-choose', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::CHOOSE,
             'toggle' => TRUE,
@@ -335,7 +335,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selects', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
@@ -363,7 +363,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
@@ -384,7 +384,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selects', $this->style, [
             'label' => __('First Content', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
             'default' => 'dashed',
@@ -411,7 +411,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
@@ -423,7 +423,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selects', $this->style, [
             'label' => __('2nd Content', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
             'default' => 'dashed',
@@ -450,7 +450,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
@@ -463,7 +463,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::ICON,
             'default' => 'fab fa-github',
@@ -472,7 +472,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_icon', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::FONT,
             'default' => 'fas fa-address-book',
@@ -481,7 +481,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_select', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::SELECT,
             'default' => 'dashed',
@@ -518,7 +518,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'type' => Controls::GRADIENT,
             'separator' => TRUE,
             'default' => 'rgba(47,0,186,1.01)',
@@ -527,7 +527,7 @@ class Button_Style1 extends Templates {
         $this->add_responsive_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
@@ -555,7 +555,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_icon', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::ICON,
             'default' => 'fas fa-address-book',
@@ -564,7 +564,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
             'default' => 'dashed',
@@ -573,7 +573,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pricing_selectw', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
@@ -639,7 +639,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_text', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::TEXT,
             'default' => '10',
@@ -653,7 +653,7 @@ class Button_Style1 extends Templates {
         $this->add_control(
                 'sa_el_pric_title', $this->style, [
             'label' => __('Autoplay', SHORTCODE_ADDOONS),
-            'description' => __('Duration of transition between slides (in ms)', SA_ELEMENTOR_TEXTDOMAIN),
+            'description' => __('Duration of transition between slides (in ms)', SHORTCODE_ADDOONS),
             'separator' => TRUE,
             'type' => Controls::TEXTAREA,
             'default' => 'Typography – Font size, font family, font weight, text transform, font style, line hadUK LADAUVFAUDFAOU VFDVAFVAUFVAL KNKJBHKJ LHNKJLHNJK HKLHKL OIJIOJUIO UJUIOUIO PUJIOPUPO IUJPOIUIU OUOIUIO PUIOP,.SREJLKSDLKFJK JDSHZFeight and letter sp acing.',
