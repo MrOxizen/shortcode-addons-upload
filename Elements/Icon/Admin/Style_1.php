@@ -30,8 +30,52 @@ class Style_1 extends AdminStyle
                 ]
             ]
         );
-
         $this->start_section_devider();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Feature Content', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_repeater_control(
+            'sa_icon_repeater',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS), 
+                'title_field' => 'sa_icon_icon',
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_icon_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fab fa-accusoft'
+                    ],
+                    'sa_icon_icon_id' => [
+                        'label' => esc_html__('Icon ID', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT, 
+                        'default' => esc_html__('Order Now', SHORTCODE_ADDOONS),
+                        'selector' => [
+                            '{{WRAPPER}}  .oxi_addons__icon_main-{{KEY}} .oxi_addons__icon' => '',
+                        ],
+                    ],
+                    'sa_icon_icon_link' => [
+                        'label' => esc_html__('Icon Link', SHORTCODE_ADDOONS),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'selector' => [
+                            '{{WRAPPER}}  .oxi_addons__icon_main-{{KEY}} .oxi_addons__icon' => '',
+                        ],
+                    ],
+                       
+                ],  
+            ]
+        );
+
+
+        $this->end_controls_section();
+
+      
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -39,6 +83,7 @@ class Style_1 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
+
 
         $this->add_group_control(
             'sa_icon_column',
@@ -74,7 +119,7 @@ class Style_1 extends AdminStyle
                     ],
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -115,7 +160,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -143,7 +188,7 @@ class Style_1 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 10,
-                        'max' => 500,
+                        'max' => 150,
                         'step' => 1,
                     ],
                     'em' => [
@@ -158,7 +203,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -174,8 +219,8 @@ class Style_1 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 50,
-                        'max' => 500,
+                        'min' => 20,
+                        'max' => 200,
                         'step' => 1,
                     ],
                     'em' => [ 
@@ -190,7 +235,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1 .oxi_addons__icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -204,7 +249,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => ' #fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1 .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -216,18 +261,51 @@ class Style_1 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => ''
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1 .oxi_addons__icon' => ''
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_icon_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 50,
+                ],
+                //'loader' => TRUE,
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -100,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1 .oxi_addons__icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_icon_box_shadow',
+            'sa_icon_shadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => ''
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_1 .oxi_addons__icon' => ''
                 ],
             ]
         ); 
@@ -235,54 +313,7 @@ class Style_1 extends AdminStyle
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
-    public function modal_opener()
-    {
-
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Icon', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Icon Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-
-        $this->add_control(
-            'sa_icon_fontawesome',
-            $this->style,
-            [
-                'label' => __('Font Awesome Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'placeholder' => 'example:- fab fa-facebook',
-            ]
-        );
-        $this->add_control(
-            'sa_icon_id',
-            $this->style,
-            [
-                'label' => __('Icon Id', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-            ]
-        );
-        $this->add_group_control(
-            'sa_icon_link',
-            $this->style,
-            [
-                'label' => __('Icon Link', SHORTCODE_ADDOONS),
-                'type' => Controls::URL,
-            ] 
-        );
-        echo '</div>';
-    }
+ 
 }
 
 

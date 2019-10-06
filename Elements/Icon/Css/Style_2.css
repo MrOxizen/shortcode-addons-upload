@@ -1,8 +1,8 @@
-.oxi_addons__icon_main{
+.oxi_addons__icon_main_style_2{
     display: flex;
     justify-content: center;
 }
-.oxi_addons__icon{
+.oxi_addons__icon_main_style_2 .oxi_addons__icon{
     position: relative;
     width: 80px;
     height: 80px;
@@ -14,12 +14,12 @@
     cursor: pointer;
     border-radius: 80px;
 }
-.oxi-icons{
+.oxi_addons__icon_main_style_2 .oxi-icons{
     font-size: 32px;
     color: white;
 }
 
-.oxi_addons__icon::after {
+.oxi_addons__icon_main_style_2 .oxi_addons__icon::after {
 	pointer-events: none;
 	position: absolute;
 	width: 100%;

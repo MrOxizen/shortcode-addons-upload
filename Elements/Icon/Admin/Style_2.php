@@ -35,6 +35,49 @@ class Style_2 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
+                'label' => esc_html__('Feature Content', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_repeater_control(
+            'sa_icon_repeater',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS), 
+                'title_field' => 'sa_icon_icon',
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_icon_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fab fa-accusoft'
+                    ],
+                    'sa_icon_icon_id' => [
+                        'label' => esc_html__('Icon ID', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT, 
+                        'default' => esc_html__('Order Now', SHORTCODE_ADDOONS),
+                        'selector' => [
+                            '{{WRAPPER}}  .oxi_addons__icon_main-{{KEY}} .oxi_addons__icon' => '',
+                        ],
+                    ],
+                    'sa_icon_icon_link' => [
+                        'label' => esc_html__('Icon Link', SHORTCODE_ADDOONS),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'selector' => [
+                            '{{WRAPPER}}  .oxi_addons__icon_main-{{KEY}} .oxi_addons__icon' => '',
+                        ],
+                    ],
+                       
+                ],  
+            ]
+        );
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
                 'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
@@ -75,7 +118,7 @@ class Style_2 extends AdminStyle
                     ],
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -116,7 +159,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -160,7 +203,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -192,7 +235,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi_addons__icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -206,7 +249,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -220,7 +263,7 @@ class Style_2 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => '#ff00cc',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi_addons__icon' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -253,7 +296,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi_addons__icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi_addons__icon::after' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         ); 
@@ -270,7 +314,7 @@ class Style_2 extends AdminStyle
             'sa-ac-title-bx-shadow', $this->style, [
         'type' => Controls::BOXSHADOW,
         'selector' => [
-            '{{WRAPPER}} .oxi_addons__icon::after' => '',
+            '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi_addons__icon::after' => '',
         ],
             ]
     );
@@ -287,7 +331,7 @@ class Style_2 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 100,
+                        'max' => 50,
                         'step' => 1,
                     ],
                     'em' => [
@@ -302,7 +346,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon::after' => 'padding: {{SIZE}}{{UNIT}}; top: -{{SIZE}}{{UNIT}}; left: -{{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_2 .oxi_addons__icon::after' => 'padding: {{SIZE}}{{UNIT}}; top: -{{SIZE}}{{UNIT}}; left: -{{SIZE}}{{UNIT}}',
                 ],
             ]
         ); 
@@ -312,52 +356,5 @@ class Style_2 extends AdminStyle
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
-    public function modal_opener()
-    {
-
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Icon', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Icon Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body" >';
-
-
-        $this->add_control(
-            'sa_icon_fontawesome',
-            $this->style,
-            [
-                'label' => __('Font Awesome Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'placeholder' => 'example:- fab fa-facebook',
-            ]
-        );
-        $this->add_control(
-            'sa_icon_id',
-            $this->style,
-            [
-                'label' => __('Icon Id', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-            ]
-        );
-        $this->add_group_control(
-            'sa_icon_link',
-            $this->style,
-            [
-                'label' => __('Icon Link', SHORTCODE_ADDOONS),
-                'type' => Controls::URL,
-            ]
-        );
-        echo '</div>';
-    }
+ 
 }
