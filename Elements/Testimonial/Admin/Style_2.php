@@ -114,7 +114,7 @@ class Style_2 extends AdminStyle {
                     'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua dapibus tellus blandit quis. Cras tempor non mi et vestibulum.',
                 ]
             ],
-            'title_field' => 'sa_icon_accordion_item_title',
+            'title_field' => 'sa_testi_profile_name',
                 ]
         );
 
