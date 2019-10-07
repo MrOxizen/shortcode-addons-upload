@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Link_effects;
+namespace SHORTCODE_ADDONS_UPLOAD\Link_effects;
 
 if (!defined('ABSPATH')) {
     exit;

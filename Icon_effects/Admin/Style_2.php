@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Icon_effects\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Icon_effects\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

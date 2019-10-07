@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Content_boxes\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Content_boxes\Templates;
 
 if (!defined('ABSPATH')) {
     exit;

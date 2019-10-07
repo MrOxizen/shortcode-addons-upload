@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Testimonial\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Testimonial\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Button\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Button\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

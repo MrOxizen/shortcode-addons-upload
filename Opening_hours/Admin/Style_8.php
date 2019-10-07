@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Opening_hours\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Opening_hours\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

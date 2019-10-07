@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Count_down\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Count_down\Templates;
 
 if (!defined('ABSPATH')) {
   exit;
@@ -21,7 +21,7 @@ class Style_2 extends Templates
   public function public_jquery()
   {
     $this->JSHANDLE = 'jquery.countdown.min';
-    wp_enqueue_script('jquery.countdown.min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/jquery.countdown.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+    wp_enqueue_script('jquery.countdown.min', SA_ADDONS_UPLOAD_URL . '/Count_down/file/jquery.countdown.min.js', false, SA_ADDONS_PLUGIN_VERSION);
   }
 
   public function inline_public_jquery()
@@ -185,7 +185,7 @@ class Style_2 extends Templates
     }
 
     wp_add_inline_style('shortcode-addons-style', $css);
-    wp_enqueue_script('jquery.countdown.min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/jquery.countdown.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+    wp_enqueue_script('jquery.countdown.min', SA_ADDONS_UPLOAD_URL . '/Count_down/file/jquery.countdown.min.js', false, SA_ADDONS_PLUGIN_VERSION);
     wp_add_inline_script('jquery.countdown.min', $jquery);
   }
 }
