@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Interactive_cards\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Interactive_cards\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
