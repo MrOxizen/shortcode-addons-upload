@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Footer_info;
+namespace SHORTCODE_ADDONS_UPLOAD\Footer_info;
 
 if (!defined('ABSPATH')) {
     exit;
