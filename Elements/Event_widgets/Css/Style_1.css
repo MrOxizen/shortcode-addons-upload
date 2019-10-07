@@ -29,7 +29,7 @@
     position: absolute;
     display: table;
     bottom: 0;
-    right: 0;
+   
     width: 80px;
     height: 80px;
     background: linear-gradient(rgba(20, 179, 179, 1), rgba(20, 179, 179, 1)), url("") no-repeat center center;
