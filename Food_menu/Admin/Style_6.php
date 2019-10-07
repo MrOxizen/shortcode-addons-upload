@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Food_menu\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Food_menu\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
