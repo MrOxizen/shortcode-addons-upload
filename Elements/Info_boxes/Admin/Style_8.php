@@ -45,6 +45,7 @@ class Style_8 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS), 
                 'title_field' => 'sa_info_info_box_title',
+                'type' => Controls::REPEATER,
                 'fields' => [
                     'sa_info_info_box_icon' => [
                         'label' => esc_html__('Icon', SHORTCODE_ADDOONS),

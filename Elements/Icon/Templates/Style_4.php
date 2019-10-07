@@ -18,35 +18,25 @@ class Style_4 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+       $datas = (array_key_exists('sa_icon_repeater', $style) && is_array($style['sa_icon_repeater']) ? $style['sa_icon_repeater'] : []);
+        foreach ($datas as $key => $value) {
             $icon = '';
-            if (array_key_exists('sa_icon_link-url', $value) && $value['sa_icon_link-url'] != '') {
-                $icon = '<a ' . $this->url_render('sa_icon_link', $value) . ' class="oxi_addons__icon">
-                ' . $this->font_awesome_render($value['sa_icon_fontawesome']) . '
+            if (array_key_exists('sa_icon_icon_link-url', $value) && $value['sa_icon_icon_link-url'] != '') {
+                $icon = '<a ' . $this->url_render('sa_icon_icon_link', $value) . ' class="oxi_addons__icon" ' . ($value['sa_icon_icon_id'] != '' ? 'id="' . $value['sa_icon_icon_id'] . '"' : '') . '>
+                ' . $this->font_awesome_render($value['sa_icon_icon']) . '
             </a>';
             } else {
-                $icon = '<div class="oxi_addons__icon" ' . ($value['sa_icon_link-id'] != '' ? 'id="' . $value['sa_icon_link-id'] . '"' : '') . '>
-                ' . $this->font_awesome_render($value['sa_icon_fontawesome']) . '
+                $icon = '<div class="oxi_addons__icon" ' . ($value['sa_icon_icon_id'] != '' ? 'id="' . $value['sa_icon_icon_id'] . '"' : '') . '>
+                ' . $this->font_awesome_render($value['sa_icon_icon']) . '
             </div>';
             }
 
 
-            echo '  <div class="oxi_addons__icon_main_wrapper ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_icon_column', $style) . '">
-                            <div class="oxi_addons__icon_main">
+            echo '  <div class="oxi_addons__icon_main_wrapper  ' . $this->column_render('sa_icon_column', $style) . '">
+                            <div class="oxi_addons__icon_main_style_4 oxi_addons__icon_main-' . $key . '">
                                 ' . $icon . '
                             </div>
-                        ';
-            if ($admin == 'admin') :
-                echo '  <div class="oxi-addons-admin-absulote">
-                                <div class="oxi-addons-admin-absulate-edit">
-                                    <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                                </div>
-                                <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                                </div>
-                            </div>';
-            endif;
+                        '; 
             echo ' </div>';
         }
     }

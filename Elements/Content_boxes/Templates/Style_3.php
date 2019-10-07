@@ -33,8 +33,9 @@ class Style_3 extends Templates {
             $admin_class = '';
         }
 
-         foreach ($child as $v) {
-            $data = $this->Json_Decode($v['rawdata']);
+          $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
+
+        foreach ($all_data as $key => $data) {
 
             $icon = $heading = $content = $button = '';
 
@@ -64,7 +65,7 @@ class Style_3 extends Templates {
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-cb-tem-3 ' . $class . ' " ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+            echo '<div class="sa-cb-tem-3 sa-cb-tem-3-'.$key.' ' . $class . ' " ' . $this->animation_render('sa-cb-box-animation', $style) . '>
                         <div class="sa-cb-tem-3-data"  >     
                             ' . $icon . '
                             ' . $heading . '
@@ -72,16 +73,6 @@ class Style_3 extends Templates {
                             ' . $button . '    
                         </div>
                     </div>';
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
-                        </div>';
-            endif;
             echo '</div>';
         }
     }

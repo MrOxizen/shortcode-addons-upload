@@ -45,6 +45,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS), 
                 'title_field' => 'sa_info_info_box_title',
+                'type' => Controls::REPEATER,
                 'fields' => [
                     'sa_info_info_box_image' => [
                         'type' => Controls::MEDIA,

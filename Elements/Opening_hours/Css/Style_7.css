@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-addonsOH-SV-wrapper-7 {
+    width: 100%;
+    float: left;
+    padding: 5px 10px 5px 10px
+}
+
+.oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-row {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 250px;
+    background: linear-gradient(rgba(60, 214, 21, 0.00), rgba(60, 214, 21, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2019/03/j.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    ;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(194, 194, 194, 1);
+    ;
+    overflow: hidden;
+    border-width: 4px 4px 4px 4px;
+    border-style: solid;
+    border-color: #b34610
+}
+
+.oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-title {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "Pacifico";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    ;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-content {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 30px 0px
+}
+
+.oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-heading {
+    width: 100%;
+    float: left;
+    font-size: 25px;
+    color: #b34610;
+    font-family: "Play";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-date {
+    width: 100%;
+    float: left;
+    font-size: 35px;
+    color: #000000;
+    font-family: "bold";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    padding: 60px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addonsOH-SV-wrapper-7 {
+        padding: 5px 10px 5px 10px
+    }
+
+    .oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 10px 0px 30px 0px
+    }
+
+    .oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-heading {
+        font-size: 25px;
+        padding: 0px 0px 0px 0px
+    }
+
+    .oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-date {
+        font-size: 35px;
+        margin: 60px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addonsOH-SV-wrapper-7 {
+        padding: 0px 0px 0px 0px
+    }
+
+    .oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 10px 0px 30px 0px
+    }
+
+    .oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-heading {
+        font-size: 25px;
+        padding: 0px 0px 0px 0px
+    }
+
+    .oxi-addonsOH-SV-wrapper-7 .oxi-addonsOH-SV-date {
+        font-size: 35px;
+        margin: 60px 0px 0px 0px
+    }
+}

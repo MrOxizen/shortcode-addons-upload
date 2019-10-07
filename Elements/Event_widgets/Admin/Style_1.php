@@ -34,17 +34,17 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_icon_effects_col',
+                'sa_event_widgets_col',
                 $this->style,
                 [
                     'type' => Controls::COLUMN,
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_icon_effects_colum' => ''
+                        '{{WRAPPER}} .oxi-addons-EW-col' => ''
                     ],
                 ]
         );
         $this->add_repeater_control(
-                'sa_icon_effects_data',
+                'sa_event_widgets_data',
                 $this->style,
                 [
                     'label' => __('', SHORTCODE_ADDOONS),
@@ -56,14 +56,14 @@ class Style_1 extends AdminStyle {
                             'label' => __('Date', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-back-text-inner .oxi-addons-back-title' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-D-date' => '',
                             ],
                         ],
                         'sa_event_t_month' => [
                             'label' => __('Month', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-back-text-inner .oxi-addons-back-title' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-D-month' => '',
                             ],
                         ],
                         'sa_event_t_media' => [
@@ -78,29 +78,27 @@ class Style_1 extends AdminStyle {
                             'label' => __('Heading Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-back-text-inner .oxi-addons-back-title' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-C-heading' => '',
                             ],
                         ],
                         'sa_event_t_info_text' => [
                             'label' => __('Info text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-back-text-inner .oxi-addons-back-title' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-C-text' => '',
                             ],
                         ],
                         'sa_event_t_button' => [
                             'label' => __('Button Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-back-text-inner .oxi-addons-back-title' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-C-button-link' => '',
                             ],
                         ],
                         'sa_event_t_button_link' => [
                             'label' => __('Button Url', SHORTCODE_ADDOONS),
                             'type' => Controls::URL,
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-back-text-inner .oxi-addons-back-title' => '',
-                            ],
+                           
                             'controller' => 'add_group_control',
                         ],
                     ],
@@ -114,7 +112,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-ac-title-bg', $this->style, [
+                'sa_event_widgets_bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}}' => ''
@@ -123,7 +121,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_responsive_control(
-                'sa_icon_effects_border_r',
+                'sa_event_widgets_border_r',
                 $this->style,
                 [
                     'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -155,7 +153,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_icon_effects_padding',
+                'sa_event_widgets_padding',
                 $this->style,
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -187,7 +185,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_icon_effects_margin',
+                'sa_event_widgets_margin',
                 $this->style,
                 [
                     'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -222,7 +220,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_btn_box_shadow', $this->style, [
+                'sa_event_widgets_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn13 .oxi-button-btn13' => ''
@@ -230,7 +228,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_btn_animation', $this->style, [
+                'sa_event_widgets_animation', $this->style, [
             'type' => Controls::ANIMATION,
                 ]
         );
@@ -248,7 +246,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_responsive_control(
-                'sa_interactive_cards_cl_h', $this->style, [
+                'sa_event_widgets_img_h', $this->style, [
             'label' => __('Height Ratio', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
@@ -257,6 +255,11 @@ class Style_1 extends AdminStyle {
             ],
             'range' => [
                 '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'px' => [
                     'min' => 0,
                     'max' => 100,
                     'step' => 1,
@@ -275,7 +278,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_interactive_cards_ei_head_color', $this->style, [
+                'sa_event_widgets_head_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
@@ -285,7 +288,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_interactive_cards_ei_head_typo', $this->style, [
+                'sa_event_widgets_head_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
@@ -294,7 +297,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_interactive_cards_ei_head_padding', $this->style, [
+                'sa_event_widgets_head_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -330,7 +333,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_interactive_cards__ei_details_color', $this->style, [
+                'sa_event_widgets_details_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
@@ -341,7 +344,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_group_control(
-                'sa_interactive_cards_ei_details_typo', $this->style, [
+                'sa_event_widgets_details_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
@@ -350,7 +353,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_interactive_cards_ei_details_padding', $this->style, [
+                'sa_event_widgets_details_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -387,7 +390,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_group_control(
-                'sa_interactive_cards_back_btn_typo', $this->style, [
+                'sa_event_widgets_btn_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-back-text-inner a.oxi-addons-back-link' => '',
@@ -405,7 +408,7 @@ class Style_1 extends AdminStyle {
         $this->start_controls_tab();
 
         $this->add_control(
-                'sa_interactive_cards_back_btn_color', $this->style, [
+                'sa_event_widgets_btn_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
@@ -415,7 +418,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_interactive_cards_back_btn_bg_color', $this->style, [
+                'sa_event_widgets_btn_bg_color', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
@@ -426,7 +429,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_interactive_cards_back_btn_border', $this->style, [
+                'sa_event_widgets_btn_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}}  .oxi-addons-back-text-inner a.oxi-addons-back-link' => ''
@@ -435,7 +438,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_responsive_control(
-                'sa_interactive_cards_back_btn_border_radius', $this->style, [
+                'sa_event_widgets_btn_border_radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -468,7 +471,7 @@ class Style_1 extends AdminStyle {
         $this->start_controls_tab();
 
         $this->add_control(
-                'sa_interactive_cards_back_btn_h_color', $this->style, [
+                'sa_event_widgets_btn_h_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
@@ -478,7 +481,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_interactive_cards_back_btn_h_bg_color', $this->style, [
+                'sa_event_widgets_btn_h_bg_color', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
@@ -489,7 +492,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_interactive_cards_back_btn_h_border', $this->style, [
+                'sa_event_widgets_btn_h_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-back-text-inner a.oxi-addons-back-link:hover' => ''
@@ -498,7 +501,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_responsive_control(
-                'sa_interactive_cards_back_btn_h_border_radius', $this->style, [
+                'sa_event_widgets_btn_h_border_radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -531,7 +534,7 @@ class Style_1 extends AdminStyle {
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_responsive_control(
-                'sa_interactive_cards_back_btn_padding', $this->style, [
+                'sa_event_widgets_btn_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             Controls::SEPARATOR => TRUE,
@@ -562,7 +565,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_interactive_cards_back_btn_margin', $this->style, [
+                'sa_event_widgets_btn_margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -599,7 +602,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_interactive_cards_btn_pos', $this->style, [
+                'sa_event-widgets_date_and_month_pos', $this->style, [
             'label' => __('Button Position ', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
@@ -625,7 +628,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_interactive_cards_cl_w', $this->style, [
+                'sa_event-widgets_date_and_month_w', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
@@ -651,7 +654,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_responsive_control(
-                'sa_interactive_cards_cl_h', $this->style, [
+                'sa_event-widgets_date_and_month_H', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
@@ -676,7 +679,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa-ac-title-bg', $this->style, [
+                'sa_event-widgets_date_and_month_img', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}}' => ''
@@ -684,7 +687,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_interactive_cards_back_btn_border', $this->style, [
+                'sa_event-widgets_date_and_month_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}}  .oxi-addons-back-text-inner a.oxi-addons-back-link' => ''
@@ -693,7 +696,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_responsive_control(
-                'sa_interactive_cards_back_btn_border_radius', $this->style, [
+                'widgets_date_and_month_border-radius', $this->style, [
             'label' => __('Border radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -723,7 +726,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_interactive_cards_back_btn_margin', $this->style, [
+                'widgets_date_and_month_margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -761,7 +764,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_interactive_cards__ei_date_color', $this->style, [
+                'sa_event_widgets_date_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
@@ -772,7 +775,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_group_control(
-                'sa_interactive_cards_ei_date_typo', $this->style, [
+                'sa_event_widgets_date_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
@@ -781,7 +784,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_interactive_cards_ei_date_padding', $this->style, [
+                'sa_event_widgets_date_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -817,7 +820,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_interactive_cards__ei_month_color', $this->style, [
+                'sa_event_widgets_ei_month_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#ffffff',
@@ -828,7 +831,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_group_control(
-                'sa_interactive_cards_ei_month_typo', $this->style, [
+                'sa_event_widgets_month_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
@@ -837,7 +840,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_interactive_cards_ei_month_padding', $this->style, [
+                'sa_event_widgets_month_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
