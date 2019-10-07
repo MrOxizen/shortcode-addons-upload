@@ -83,7 +83,7 @@ class Style_1 extends AdminStyle {
                         ],
                         'sa_event_t_info_text' => [
                             'label' => __('Info text', SHORTCODE_ADDOONS),
-                            'type' => Controls::TEXT,
+                            'type' => Controls::TEXTAREA,
                             'selector' => [
                                 '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-C-text' => '',
                             ],
