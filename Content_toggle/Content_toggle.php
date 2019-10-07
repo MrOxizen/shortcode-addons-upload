@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Content_toggle;
+namespace SHORTCODE_ADDONS_UPLOAD\Content_toggle;
 
 if (!defined('ABSPATH')) {
     exit;

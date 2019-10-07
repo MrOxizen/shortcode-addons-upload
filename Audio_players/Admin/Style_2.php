@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Audio_players\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Audio_players\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

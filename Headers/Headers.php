@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Headers;
+namespace SHORTCODE_ADDONS_UPLOAD\Headers;
 
 if (!defined('ABSPATH')) {
     exit;

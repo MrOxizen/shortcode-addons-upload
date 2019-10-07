@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Audio_players\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Audio_players\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -79,7 +79,7 @@ class Style_2 extends Templates
     public function public_jquery()
     {
         $this->JSHANDLE = 'mediaelement-min';
-        wp_enqueue_script('mediaelement-min', SA_ADDONS_UPLOAD_URL . '/Elements/Audio_players/file/mediaelement-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('mediaelement-min', SA_ADDONS_UPLOAD_URL . '/Audio_players/file/mediaelement-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function inline_public_jquery()
     {
@@ -121,7 +121,7 @@ class Style_2 extends Templates
         $styledata = explode('|', $stylefiles[0]);
 
         echo  wp_enqueue_media();
-        wp_enqueue_script('mediaelement-min', SA_ADDONS_UPLOAD_URL . '/Elements/Audio_players/file/mediaelement-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('mediaelement-min', SA_ADDONS_UPLOAD_URL . '/Audio_players/file/mediaelement-min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $title = $image = $author = $audio = '';
         $css = '';
         if ($stylefiles[12] != '') {

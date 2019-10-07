@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Tooltip\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Tooltip\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

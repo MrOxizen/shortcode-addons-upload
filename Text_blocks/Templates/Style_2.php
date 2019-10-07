@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Text_blocks\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Text_blocks\Templates;
 
 if (!defined('ABSPATH')) {
     exit;

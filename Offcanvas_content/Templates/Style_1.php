@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Offcanvas_content\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Offcanvas_content\Templates;
 
 if (!defined('ABSPATH')) {
     exit;

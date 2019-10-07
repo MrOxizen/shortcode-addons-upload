@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Call_to_action\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Call_to_action\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Event_widgets\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Event_widgets\Templates;
 
 if (!defined('ABSPATH')) {
     exit;

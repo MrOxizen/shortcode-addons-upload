@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Price_table\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Price_table\Templates;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Banner;
+namespace SHORTCODE_ADDONS_UPLOAD\Banner;
 
 if (!defined('ABSPATH')) {
     exit;

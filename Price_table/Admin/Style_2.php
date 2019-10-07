@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Price_table\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Price_table\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

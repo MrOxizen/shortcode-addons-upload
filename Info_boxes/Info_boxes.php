@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Info_boxes;
+namespace SHORTCODE_ADDONS_UPLOAD\Info_boxes;
 
 if (!defined('ABSPATH')) {
     exit;

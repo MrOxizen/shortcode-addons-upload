@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Single_image\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Single_image\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -18,11 +18,11 @@ class Style_3 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'MagnificPopup';
-        wp_enqueue_script('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Elements/Single_image/file/MagnificPopup.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Single_image/file/MagnificPopup.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function public_css() {
-        wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Elements/Single_image/file/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Single_image/file/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery() {
@@ -406,9 +406,9 @@ class Style_3 extends Templates {
                      }
                      ';
         $jquery .= '';
-        wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Elements/Single_image/file/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Single_image/file/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_add_inline_style('MagnificPopup', $css);
-        wp_enqueue_script('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Elements/Single_image/file/MagnificPopup.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Single_image/file/MagnificPopup.js', false, SA_ADDONS_PLUGIN_VERSION);
         wp_add_inline_script('MagnificPopup', $jquery);
     }
 
