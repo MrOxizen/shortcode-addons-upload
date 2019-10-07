@@ -37,6 +37,58 @@ class Style_8 extends AdminStyle {
         $this->start_section_devider();
 
         // start
+
+
+
+
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Add New Content', SHORTCODE_ADDOONS),
+            'showing' => true,
+                ]
+        );
+
+
+        $this->add_repeater_control(
+                'sa_icon_effects_data', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'fields' => [
+                'sa_el_content_box_fa_icon' => [
+                    'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
+                    'type' => Controls::ICON,
+                    'default' => 'fab fa-facebook',
+                    'selector' => [
+                        '{{WRAPPER}} .sa_cb_tem_8_{{KEY}} .oxi-addons-content-icon-boxes-data' => '',
+                    ],
+                ],
+                'sa_el_content_box_heading' => [
+                    'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Lorem Ipsum Dolor',
+                    'selector' => [
+                        '{{WRAPPER}} .sa_cb_tem_8_{{KEY}} .oxi-addons-content-boxes-heading' => '',
+                    ],
+                ],
+                'sa_el_content_box_content' => [
+                    'label' => esc_html__('Content', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXTAREA,
+                    'default' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ',
+                    'selector' => [
+                        '{{WRAPPER}} .sa_cb_tem_8_{{KEY}} .oxi-addons-content-boxes-content' => '',
+                    ],
+                ],
+            ],
+            'title_field' => 'sa_el_content_box_heading',
+            'button' => 'Add New Item',
+                ]
+        );
+
+        $this->end_controls_section();
+
+
+
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
@@ -113,7 +165,7 @@ class Style_8 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_group_control(
+        $this->add_group_control(
                 'sa-ac-box-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
@@ -273,32 +325,30 @@ class Style_8 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa_content_box_icon_align',
-            $this->style,
-            [
-                'label' => __('Icon Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
+                'sa_content_box_icon_align', $this->style, [
+            'label' => __('Icon Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-icon' => 'justify-content: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-icon' => 'justify-content: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_group_control(
                 'sa-ac-icon-body-border', $this->style, [
@@ -340,10 +390,10 @@ class Style_8 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-        
-        
-        
-        
+
+
+
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
@@ -351,36 +401,34 @@ class Style_8 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-            'sa_content_boxes_icon_font_size',
-            $this->style,
-            [
-                'label' => __('Icon Size', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '30',
+                'sa_content_boxes_icon_font_size', $this->style, [
+            'label' => __('Icon Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '30',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
                 ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 5,
-                        'step' => .1,
-                    ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                'em' => [
+                    'min' => 0,
+                    'max' => 5,
+                    'step' => .1,
                 ],
-            ]
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+            ],
+                ]
         );
         $this->add_control(
                 'sa-ac-box-icon-color', $this->style, [
@@ -397,15 +445,15 @@ class Style_8 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-        
-        
-        
-        
+
+
+
+
 
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Heading Settings', SHORTCODE_ADDOONS),
-            'showing' => false,
+            'showing' => true,
                 ]
         );
         $this->add_control(
@@ -435,32 +483,30 @@ class Style_8 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa_content_box_heading_text_align',
-            $this->style,
-            [
-                'label' => __('Text Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
+                'sa_content_box_heading_text_align', $this->style, [
+            'label' => __('Text Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-heading' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_responsive_control(
                 'sa-ac-heading-padding', $this->style, [
@@ -529,32 +575,30 @@ class Style_8 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa_content_box_content_text_align',
-            $this->style,
-            [
-                'label' => __('Text Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
+                'sa_content_box_content_text_align', $this->style, [
+            'label' => __('Text Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'toggle' => TRUE,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-content' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_cb_tem_8 .oxi-addons-content-boxes-content' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_responsive_control(
                 'sa-ac-content-padding', $this->style, [
@@ -590,54 +634,6 @@ class Style_8 extends AdminStyle {
         $this->end_section_devider();
 
         $this->end_section_tabs();
-    }
-
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Content', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Content Box Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Content Box Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-        
-        
-        $this->add_control(
-                'sa_el_content_box_fa_icon', $this->style, [
-            'label' => __('Icon Class', SHORTCODE_ADDOONS),
-            'type' => Controls::ICON,
-            'default' => 'fab fa-facebook',
-                ]
-        );
-        
-        
-        $this->add_control(
-                'sa_el_content_box_heading', $this->style, [
-            'label' => __('Heading', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'This is Lorem',
-            'placeholder' => 'Lorem Ipsum is simply dummy text',
-                ]
-        );
-        $this->add_control(
-                'sa_el_content_box_content', $this->style, [
-            'label' => __('Content', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXTAREA,
-            'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-            'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                ]
-        );
-
-        
-
-        echo '</div>';
     }
 
 }

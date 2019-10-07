@@ -31,11 +31,13 @@ class Style_4 extends Templates {
             $admin_class = '';
         }
 
-         foreach ($child as $v) {
-            $data = $this->Json_Decode($v['rawdata']);
-//            echo '<pre>';
+         $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
+
+        foreach ($all_data as $key => $data) {
+//        echo '<pre>';
 //        print_r($data);
 //        echo '</pre>';
+            
             $heading = $content = $img = '';
 
             
@@ -61,7 +63,7 @@ class Style_4 extends Templates {
 
            
            echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-cb-tem-4 ' . $class . '" ' . $this->animation_render('sa-ac-animation', $style) . '>
+            echo '<div class="sa-cb-tem-4 sa-cb-tem-4-'.$key.' ' . $class . '" ' . $this->animation_render('sa-ac-animation', $style) . '>
                     <div class="sa-cb-tem-innar">
                         <div class="sa-cb-tem-4-data">  
                             <div class="sa-cb-image-body">
@@ -74,16 +76,6 @@ class Style_4 extends Templates {
                         </div>
                     </div>
                 </div>';
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
-                        </div>';
-            endif;
             echo '</div>';
         }
     }

@@ -88,7 +88,7 @@ class Style_1 extends Templates {
         wp_enqueue_script('jquery-twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-twentytwenty.js', false, SA_ADDONS_PLUGIN_VERSION);
 
         $css = $jquery = '';
-
+        
 
         echo '<div class="oxi-addons-container">
                 <div class="oxi-addons-row">

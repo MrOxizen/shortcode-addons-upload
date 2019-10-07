@@ -20,6 +20,14 @@ class Style_1 extends Templates {
         $date = $month = $heading = $content = $button = '';
         $css = '';
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
+        if ($style['sa_event-widgets_date_and_month_pos'] == 'left') {
+            $pos = 'left: 0;';
+        } elseif ($style['sa_event-widgets_date_and_month_pos'] == 'right') {
+            $pos = 'right: 0;';
+        } else {
+
+            $pos = '  right: 50%; transform: translateX(50%);';
+        }
         foreach ($all_data as $key => $listitemdata) {
 //            echo '<pre>';
 //            print_r($this->url_render('sa_event_t_button_link',$listitemdata));
@@ -42,21 +50,20 @@ class Style_1 extends Templates {
             }
             if ($listitemdata['sa_event_t_button_link-url'] != '' && $listitemdata['sa_event_t_button'] != '') {
                 $button = '<div class="oxi-addons-EW-C-button">
-                                <a href="' . $this->url_render('sa_event_t_button_link',$style) . '"  class="oxi-addons-EW-C-button-link">' . $this->text_render($listitemdata['sa_event_t_button']) . '</a>
+                                <a href="' . $this->url_render('sa_event_t_button_link', $style) . '"  class="oxi-addons-EW-C-button-link">' . $this->text_render($listitemdata['sa_event_t_button']) . '</a>
                             </div>';
             } elseif ($listitemdata['sa_event_t_button_link-url'] == '' && $listitemdata['sa_event_t_button'] != '') {
                 $button = '<div class="oxi-addons-EW-C-button">
                                 <div  class="oxi-addons-EW-C-button-link">' . $this->text_render($listitemdata['sa_event_t_button']) . '</div>
                             </div>';
             }
-            if($this->media_render('sa_event_t_media', $listitemdata) != ''){
-                $media = $this->media_render('sa_event_t_media', $listitemdata) ;
+            if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
+                $media = $this->media_render('sa_event_t_media', $listitemdata);
             } else {
-                $media = 'https://www.oxilab.org/wp-content/uploads/2019/01/pexels-photo-756248.jpeg' ;
-                
+                $media = 'https://www.oxilab.org/wp-content/uploads/2019/01/pexels-photo-756248.jpeg';
             }
             echo '<div class="oxi-addons-EW-col ' . $this->column_render('sa_event_widgets_col', $style) . '">
-                  <div class="oxi-addons-EW-wrapper-style-1 oxi-addons-EW-wrapper-style-1-'. $key .'">
+                  <div class="oxi-addons-EW-wrapper-style-1 oxi-addons-EW-wrapper-style-1-' . $key . '">
                     <div class="oxi-addons-EW-row" ' . $this->animation_render('sa_event_widgets_animation', $style) . '>
                         <div class="oxi-addons-EW-image">
                             <div class="oxi-addons-EW-image-body" style="
@@ -65,12 +72,12 @@ class Style_1 extends Templates {
                                     left: 0;
                                     width: 100%;
                                     height: 100%;
-                                    background: url(\'' . $media  . '\');
+                                    background: url(\'' . $media . '\');
                                     -moz-background-size: cover;
                                     -o-background-size: cover;
                                     background-size: cover;                            
                             ">
-                                <div class="oxi-addons-EW-image-date">
+                                <div class="oxi-addons-EW-image-date" style="'.$pos.'">
                                     <div class="oxi-addons-EW-image-date-table-cell">
                                         ' . $date . '
                                         ' . $month . '
@@ -86,7 +93,6 @@ class Style_1 extends Templates {
                     </div>
                 </div> 
             </div>';
-          
         }
     }
 

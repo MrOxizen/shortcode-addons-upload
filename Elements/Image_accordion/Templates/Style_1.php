@@ -94,22 +94,7 @@ class Style_1 extends Templates {
                     <p class="oxi-addons-details" >' . OxiAddonsTextConvert($data[5]) . ' </p>';
             echo $linkend;
             echo ' </div>';
-            if ($user == 'admin') {
-                echo '  <div class="oxi-addons-admin-absulote">
-                                <div class="oxi-addons-admin-absulate-edit">
-                                    <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditimage_accordiondata") . '
-                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                        <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                    </form>
-                                </div>
-                                <div class="oxi-addons-admin-absulate-delete">
-                                    <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeleteimage_accordiondata") . '
-                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                        <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                    </form>
-                                </div>
-                            </div>';
-            }
+            
             echo '</li>';
         }
         echo ' </ul>
