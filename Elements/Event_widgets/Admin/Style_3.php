@@ -49,23 +49,9 @@ class Style_3 extends AdminStyle {
                 [
                     'label' => __('', SHORTCODE_ADDOONS),
                     'type' => Controls::REPEATER,
-                    'title_field' => 'sa_event_t_head',
+                    'title_field' => 'sa_event_t_image_heading',
                     'button' => 'Add New Event',
                     'fields' => [
-                        'sa_event_t_date' => [
-                            'label' => __('Date', SHORTCODE_ADDOONS),
-                            'type' => Controls::TEXT,
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-D-date' => '',
-                            ],
-                        ],
-                        'sa_event_t_month' => [
-                            'label' => __('Month', SHORTCODE_ADDOONS),
-                            'type' => Controls::TEXT,
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-2-month' => '',
-                            ],
-                        ],
                         'sa_event_t_media' => [
                             'type' => Controls::MEDIA,
                             'default' => [
@@ -74,30 +60,46 @@ class Style_3 extends AdminStyle {
                             ],
                             'controller' => 'add_group_control',
                         ],
-                        'sa_event_t_head' => [
-                            'label' => __('Heading Text', SHORTCODE_ADDOONS),
+                        'sa_event_t_price' => [
+                            'label' => __('Price', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-2-H' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-price' => '',
+                            ],
+                        ],
+                        'sa_event_t_image_heading' => [
+                            'label' => __('Image Heading', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXT,
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-heading' => '',
                             ],
                         ],
                         'sa_event_t_info_text' => [
                             'label' => __('Info text', SHORTCODE_ADDOONS),
-                            'type' => Controls::TEXT,
+                            'type' => Controls::TEXTAREA,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addon-EW-2-Adress' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-details' => '',
                             ],
                         ],
-                        'sa_event_t_location_icon' => [
-                            'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
-                            'type' => Controls::ICON,
-                            'default' => 'fas fa-map-marker-alt',
+                        'sa_event_t_location_address' => [
+                            'label' => __('Address', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXT,
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-title' => '',
+                            ],
+                        ],
+                        'sa_event_t_location_time' => [
+                            'label' => __('Time', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXT,
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-time' => '',
+                            ],
                         ],
                         'sa_event_t_button' => [
                             'label' => __('Button Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-2-button-link' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-button-link' => '',
                             ],
                         ],
                         'sa_event_t_button_link' => [
@@ -120,48 +122,8 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-C-body' => '',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body' => '',
             ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_event_widgets_border', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-wrapper-row' => ''
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_event_widgets_border_r',
-                $this->style,
-                [
-                    'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                    'type' => Controls::DIMENSIONS,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => '',
-                    ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 200,
-                            'step' => 1,
-                        ],
-                        '%' => [
-                            'min' => 0,
-                            'max' => 50,
-                            'step' => .1,
-                        ],
-                        'em' => [
-                            'min' => 0,
-                            'max' => 10,
-                            'step' => .1,
-                        ],
-                    ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-wrapper-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                    ],
                 ]
         );
         $this->add_responsive_control(
@@ -192,7 +154,7 @@ class Style_3 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-C-body' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                     ],
                 ]
         );
@@ -225,7 +187,7 @@ class Style_3 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
         );
@@ -233,7 +195,7 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-wrapper-row' => ''
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-row' => ''
             ],
                 ]
         );
@@ -259,9 +221,9 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_img_h', $this->style, [
             'label' => __('Height Ratio', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-            'default' => 30,
+            'default' => 70,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-image::after' => 'padding-bottom : {{VALUE}}%;',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image::after' => 'padding-bottom : {{VALUE}}%;',
             ],
                 ]
         );
@@ -296,9 +258,9 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_tp_rib_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#4a4a4a',
+            'default' => '#fff',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-price-main' => 'color : {{VALUE}}; '
             ],
                 ]
         );
@@ -307,9 +269,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#4a4a4a',
+            'default' => 'rgba(255, 92, 92, 1)',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => 'background : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-price-main' => 'background : {{VALUE}}; '
             ],
                 ]
         );
@@ -340,7 +302,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-date-month ' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-2-date-month ' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -354,8 +316,8 @@ class Style_3 extends AdminStyle {
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'normal' => esc_html__('Heading', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Short Details', SHORTCODE_ADDOONS),
+                'heading' => esc_html__('Heading', SHORTCODE_ADDOONS),
+                'short-details' => esc_html__('Short Details', SHORTCODE_ADDOONS),
             ]
                 ]
         );
@@ -366,7 +328,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#4a4a4a',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-heading' => 'color : {{VALUE}}; '
             ],
                 ]
         );
@@ -375,7 +337,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => '',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-heading' => '',
             ],
                 ]
         );
@@ -405,7 +367,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -415,9 +377,9 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_details_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#4a4a4a',
+            'default' => '#dedada',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addon-EW-2-Adress' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-details' => 'color : {{VALUE}}; '
             ],
                 ]
         );
@@ -427,7 +389,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addon-EW-2-Adress' => '',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-details' => '',
             ],
                 ]
         );
@@ -457,7 +419,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addon-EW-2-Adress' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -473,33 +435,33 @@ class Style_3 extends AdminStyle {
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'normal' => esc_html__('Title', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Time', SHORTCODE_ADDOONS),
+                'address' => esc_html__('Address', SHORTCODE_ADDOONS),
+                'time' => esc_html__('Time', SHORTCODE_ADDOONS),
             ]
                 ]
         );
         $this->start_controls_tab();
         $this->add_control(
-                'sa_event_widgets_b_title_color', $this->style, [
+                'sa_event_widgets_address_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#4a4a4a',
+            'default' => '#fff7f7',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-title' => 'color : {{VALUE}}; '
             ],
                 ]
         );
         $this->add_group_control(
-                'sa_event_widgets_b_title_typo', $this->style, [
+                'sa_event_widgets_address_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => '',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-title' => '',
             ],
                 ]
         );
         $this->add_responsive_control(
-                'sa_event_widgets_b_title_padding', $this->style, [
+                'sa_event_widgets_address_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -524,7 +486,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-H' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -537,9 +499,9 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_body_time_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#4a4a4a',
+            'default' => '#e3e0e0',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addon-EW-2-Adress' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-time' => 'color : {{VALUE}}; '
             ],
                 ]
         );
@@ -549,7 +511,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addon-EW-2-Adress' => '',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-time' => '',
             ],
                 ]
         );
@@ -579,7 +541,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addon-EW-2-Adress' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -598,7 +560,7 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_btn_typo', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link' => '',
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link' => '',
             ],
                 ]
         );
@@ -618,7 +580,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link' => 'color : {{VALUE}}; '
             ],
                 ]
         );
@@ -627,9 +589,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => 'rgba(15,160,189,1.00)',
+            'default' => 'rgba(184,71,11,1.00)',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link' => 'background : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link' => 'background : {{VALUE}}; '
             ],
                 ]
         );
@@ -637,7 +599,7 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_btn_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link' => ''
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link' => ''
             ],
                 ]
         );
@@ -668,7 +630,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -679,9 +641,9 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_btn_h_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
+            'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link:hover' => 'color : {{VALUE}}; '
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:hover' => 'color : {{VALUE}}; '
             ],
                 ]
         );
@@ -690,9 +652,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => 'rgba(10,91,107,1.00)',
+            'default' => 'rgba(255,255,255,1.00)',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link:hover' => 'background : {{VALUE}}; '
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:hover' => 'background : {{VALUE}}; '
             ],
                 ]
         );
@@ -700,7 +662,7 @@ class Style_3 extends AdminStyle {
                 'sa_event_widgets_btn_h_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link:hover' => ''
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:hover' => ''
             ],
                 ]
         );
@@ -731,7 +693,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -765,7 +727,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -795,7 +757,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}}  .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
