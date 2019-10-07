@@ -14,12 +14,12 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_6 extends Templates {
+class Style_8 extends Templates {
 
     public function default_render($style, $child, $admin) {
         $repeater = (array_key_exists('sa_oh_repeater', $style) && is_array($style['sa_oh_repeater'])) ? $style['sa_oh_repeater'] : [];
 
-        echo '<div class="oxi-addonsOH-SX-wrapper-6">
+        echo '<div class="oxi-addonsOH-SX-wrapper-8">
                     <div class="oxi-addonsOH-SX-row" ' . $this->animation_render('sa_oh_animation', $style) . '>';
         foreach ($repeater as $key => $value) {
 
@@ -42,8 +42,7 @@ class Style_6 extends Templates {
 
             echo '<div class="oxi-addonsOH-SX-child oxi-addonsOH-SX-child-' . $key . '">
                   
-                        
-                            <div class="oxi-addonsOH-SX-content">
+                            <div class="oxi-addonsOH-SX-content sa_oh_wrapper_' . $key . '">
                                 ' . $icon . '
                                 ' . $day . '
                                 ' . $times . '
@@ -71,28 +70,30 @@ class Style_6 extends Templates {
             $day = $times = $icon = '';
             if ($listitemdata[2] != '') {
                 $day = '<div class="oxi-addonsOH-SX-heading">
-                                <div class="oxi-addonsOH-SX-heading-text">
+                                <div class="oxi-addonsOH-SX-heading-text oxi-addonsOH-SX-heading-text-' . $value['id'] . '">
                                        ' . OxiAddonsTextConvert($listitemdata[2]) . '
                                 </div>
                             </div>';
             }
             if ($listitemdata[4] != '') {
-                $times = '<div class="oxi-addonsOH-SX-date">' . OxiAddonsTextConvert($listitemdata[4]) . '</div>';
-            }
-            if ($stylefiles[2] != '') {
-                $icon = '<div class="oxi-addonsOH-SX-icon">' . oxi_addons_font_awesome($stylefiles[2]) . '</div>';
+                $times = '<div class="oxi-addonsOH-SX-date oxi-addonsOH-SX-date-' . $value['id'] . '">' . OxiAddonsTextConvert($listitemdata[4]) . '</div>';
             }
 
 
 
             echo '<div class="oxi-addonsOH-SX-child ' . OxiAddonsItemRows($styledata, 3) . ' ">
-                        <div class="oxi-addonsOH-SX-content">
+                        <div class="oxi-addonsOH-SX-content ">
                             ' . $icon . '
                             ' . $day . '
                             ' . $times . '
                         ';
 
             echo '</div></div>';
+            $css .= '.oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-heading-text-' . $value['id'] . '{
+            color: ' . $listitemdata[6] . ';
+        }
+        .oxi-addonsOH-SX-date-' . $value['id'] . '{
+                color: ' . $listitemdata[8] . ';}';
         }
         echo '</div> </div> </div></div>';
         $css .= '.oxi-addonsOH-SX-wrapper-' . $oxiid . '{
@@ -117,8 +118,8 @@ class Style_6 extends Templates {
             width: 100%;
             float: left;
             display: flex;
-            border-bottom: ' . $styledata[171] . 'px ' . $styledata[172] . '  ' . $styledata[175] . ';
-            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 177) . ';
+            border-bottom: ' . $styledata[149] . 'px ' . $styledata[150] . '  ' . $styledata[153] . ';
+            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 155) . ';
             transition: .8s;
             
         }
@@ -129,19 +130,6 @@ class Style_6 extends Templates {
             padding-left: 14px;
             padding-right: 14px;
         }
-        .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-icon{
-            display: flex;
-            justify-content: center;
-        }
-        .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-icon .oxi-icons{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: ' . $styledata[149] . 'px;
-            color: ' . $styledata[153] . ';
-            margin:  ' . OxiAddonsPaddingMarginSanitize($styledata, 155) . ';
-        }
         .oxi-addonsOH-SX-wrapper-' . $oxiid . '  .oxi-addonsOH-SX-heading{
             width: 100%;
             float: left;
@@ -149,7 +137,6 @@ class Style_6 extends Templates {
         .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-heading-text{
             width: 100%;
             font-size: ' . $styledata[89] . 'px;
-            color: ' . $styledata[93] . ';
             ' . OxiAddonsFontSettings($styledata, 95) . ';
             margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 101) . ';
         }
@@ -157,7 +144,6 @@ class Style_6 extends Templates {
             width: 100%;
             float: left;
             font-size: ' . $styledata[117] . 'px;
-            color: ' . $styledata[121] . ';
             ' . OxiAddonsFontSettings($styledata, 123) . ';
              margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 129) . ';
         }
@@ -173,12 +159,8 @@ class Style_6 extends Templates {
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 48) . ';
         }
         .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-content{
-           padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 178) . ';
+           padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 156) . ';
             
-        }
-        .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-icon .oxi-icons{
-            font-size: ' . $styledata[150] . 'px;
-            margin:  ' . OxiAddonsPaddingMarginSanitize($styledata, 156) . ';
         }
         .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-heading-text{
             font-size: ' . $styledata[90] . 'px;
@@ -200,12 +182,8 @@ class Style_6 extends Templates {
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 49) . ';
         }
         .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-content{
-            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 179) . ';
+           padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 157) . ';
             
-        }
-        .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-icon .oxi-icons{
-            font-size: ' . $styledata[151] . 'px;
-            margin:  ' . OxiAddonsPaddingMarginSanitize($styledata, 157) . ';
         }
         .oxi-addonsOH-SX-wrapper-' . $oxiid . ' .oxi-addonsOH-SX-heading-text{
             font-size: ' . $styledata[91] . 'px;

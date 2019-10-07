@@ -20,50 +20,49 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        $datas = (array_key_exists('sa_product_boxes_repeater', $style) && is_array($style['sa_product_boxes_repeater']) ? $style['sa_product_boxes_repeater'] : []);
+        $datas = (array_key_exists('sa_price_table_repeater', $style) && is_array($style['sa_price_table_repeater']) ? $style['sa_price_table_repeater'] : []);
         foreach ($datas as $key => $value) {
-         $heading_one  = $heading_two = $details = $images = $button = '';
-            if (array_key_exists('sa_product_boxes_heading_one', $value) && $value['sa_product_boxes_heading_one'] != '') {
-                $heading_one = '<' . $style['sa_product_boxes_heading_one_tag'] . ' class="oxi-addons-heading-one">' . $this->text_render($value['sa_product_boxes_heading_one']) . '</' . $style['sa_product_boxes_heading_one_tag'] . '>';
+            $title   = $price    = $button = $ribbon = '';
+            if (array_key_exists('sa_price_table_title', $value) && $value['sa_price_table_title'] != '') {
+                $title = '<' . $style['sa_price_table_title_tag'] . ' class="oxi-addons-price-title">' . $this->text_render($value['sa_price_table_title']) . '</' . $style['sa_price_table_title_tag'] . '>';
             }
-            if (array_key_exists('sa_product_boxes_heading_two', $value) && $value['sa_product_boxes_heading_two'] != '') {
-                $heading_two = '<' . $style['sa_product_boxes_heading_two_tag'] . ' class="oxi-addons-heading-two">' . $this->text_render($value['sa_product_boxes_heading_two']) . '</' . $style['sa_product_boxes_heading_two_tag'] . '>';
+
+            if (array_key_exists('sa_price_table_price', $value) && $value['sa_price_table_price'] != '') {
+                $price = '<div class="oxi-addons-price">' . $this->text_render($value['sa_price_table_price']) . '</div>';
             }
-            if (array_key_exists('sa_product_boxes_details', $value) && $value['sa_product_boxes_details'] != '') {
-                $details = '<div class="oxi-addons-details"> ' . $this->text_render($value['sa_product_boxes_details']) . ' </div>';
+            if (array_key_exists('sa_price_table_ribbon_switter', $style) && $style['sa_price_table_ribbon_switter'] == 'yes') {
+
+                if (array_key_exists('sa_price_table_ribbon_text', $value) && $value['sa_price_table_ribbon_text'] != '') {
+                    $ribbon = '<div class="oxi-addons-ribon ' . $style['sa_price_table_ribbon_position_left_right'] . '">' . $this->text_render($value['sa_price_table_ribbon_text']) . '</div>';
+                }
             }
-       
-            if (array_key_exists('sa_product_boxes_button_switter', $style) && $style['sa_product_boxes_button_switter'] == 'yes') {
-                if (array_key_exists('sa_product_boxes_button_text', $value) && $value['sa_product_boxes_button_text'] != '') {
-                    if (array_key_exists('sa_product_boxes_button_link-url', $value) && $value['sa_product_boxes_button_link-url'] != '') {
-                        $button = '<div class="oxi-addons-button" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
-                                            <a ' . $this->url_render('sa_product_boxes_button_link', $value) . ' class="oxi-addons-button-link">
-                                            ' . $this->text_render($value['sa_product_boxes_button_text']) . ' 
+
+            if (array_key_exists('sa_price_table_button_switter', $style) && $style['sa_price_table_button_switter'] == 'yes') {
+                if (array_key_exists('sa_price_table_button_text', $value) && $value['sa_price_table_button_text'] != '') {
+                    if (array_key_exists('sa_price_table_button_link-url', $value) && $value['sa_price_table_button_link-url'] != '') {
+                        $button = '<div class="oxi-addons-main-button">
+                                            <a ' . $this->url_render('sa_price_table_button_link', $value) . ' class="oxi-addons-link">
+                                            ' . $this->text_render($value['sa_price_table_button_text']) . ' 
                                             </a>
                                         </div>';
                     } else {
-                        $button = '<div class="oxi-addons-button" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
-                                            <button class="oxi-addons-button-link">
-                                                ' . $this->text_render($value['sa_product_boxes_button_text']) . ' 
+                        $button = '<div class="oxi-addons-main-button" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
+                                            <button class="oxi-addons-link">
+                                                ' . $this->text_render($value['sa_price_table_button_text']) . ' 
                                             </button>
                                         </div>';
                     }
                 }
             }
-            if ($this->media_render('sa_product_boxes_image', $value) != '') {
-                $images = '<img  src="' . $this->media_render('sa_product_boxes_image', $value) . '" class="oxi-addons-img" alt="front image"/>';
-            }
-            echo '<div class="oxi-addons-parent-wrapper-style-1 oxi-addons-parent-wrapper-style-1-'.$key.'  ' . $this->column_render('sa_product_boxes_column', $style) . '">
-                    <div class="oxi-addons-main-wrapper oxi-addons-main-wrapper-style-1"  ' . $this->animation_render('sa_product_boxes_animation', $style) . '>
-                    <div class="oxi-addons-image-overlay">
-                       ' . $images . '
-                        <div class="oxi-addons-wrapper">
-                            ' . $heading_one . '
-                            ' . $heading_two . '
-                            ' . $details . '  
-                            ' . $button . '  
-                        </div>
-                    </div> 
+
+            echo '<div class="oxi-addons-parent-wrapper-style-1 oxi-addons-parent-wrapper-style-1-' . $key . '  ' . $this->column_render('sa_price_table_column', $style) . '">
+                   <div class="oxi-addons-wrapper-style-1" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
+                    ' . $ribbon . '
+                    <div class="oxi-addons-main">
+                        ' . $price . '
+                        ' . $title . '
+                    </div>
+                    ' . $button . '
                 </div>
             </div>';
         }
@@ -71,9 +70,10 @@ class Style_1 extends Templates
     public function inline_public_jquery()
     {
         return 'setTimeout(function () {
-            oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-main-wrapper-style-1"));
+            oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-wrapper-style-1"));
         }, 500)';
     }
+
 
     public function old_render()
     {
@@ -105,7 +105,7 @@ class Style_1 extends Templates
                 </div>
                 ';
         }
-    
+
         if ($styledata[216] === 'right') {
             $ribon_position = '
                     right: ' . $styledata[218] . 'px; 
@@ -145,8 +145,8 @@ class Style_1 extends Templates
             }
             ';
         }
-    
-    
+
+
         if ($stylefiles[14] != '' && $stylefiles[16] != '') {
             $button = '
                 <div class="oxi-addons-main-button">
