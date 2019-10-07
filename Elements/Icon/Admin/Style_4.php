@@ -68,8 +68,15 @@ class Style_4 extends AdminStyle
                         'selector' => [
                             '{{WRAPPER}}  .oxi_addons__icon_main-{{KEY}} .oxi_addons__icon' => '',
                         ],
-                    ],
-                       
+                    ],  
+                    'sa_icon_icon_link' => [
+                        'label' => esc_html__('Icon Link', SHORTCODE_ADDOONS),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                        'selector' => [
+                            '{{WRAPPER}}  .oxi_addons__icon_main-{{KEY}} .oxi_addons__icon' => '',
+                        ],
+                    ],   
                 ],  
             ]
         );
