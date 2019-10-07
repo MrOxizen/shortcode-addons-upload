@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\User_control;
+namespace SHORTCODE_ADDONS_UPLOAD\User_control;
 
 if (!defined('ABSPATH')) {
     exit;
