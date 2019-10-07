@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Product_boxes\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Product_boxes\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Drop_caps;
+namespace SHORTCODE_ADDONS_UPLOAD\Drop_caps;
 
 if (!defined('ABSPATH')) {
     exit;
