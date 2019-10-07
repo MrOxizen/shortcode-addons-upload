@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle
+class Style_2 extends AdminStyle
 {
 
     public function register_controls()
@@ -44,68 +44,6 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Feature Content', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-        $this->add_repeater_control(
-            'sa_price_table_repeater',
-            $this->style,
-            [
-                'label' => __('', SHORTCODE_ADDOONS),
-                'type' => Controls::REPEATER,
-                'button' => __('Add New Item', SHORTCODE_ADDOONS),
-                'title_field' => 'sa_price_table_title',
-                'fields' => [
-                    'sa_price_table_title' => [
-                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT,
-                        'default' => esc_html__('Standard', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-price-title' => '',
-                        ],
-                    ],
-                    'sa_price_table_price' => [
-                        'label' => esc_html__('Price', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT,
-                        'default' => esc_html__('78$', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-price' => '',
-                        ],
-                    ],
-                    'sa_price_table_ribbon_text' => [
-                        'label' => esc_html__('Ribbon Title', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT,
-                        'default' => esc_html__('Business ', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-ribon' => '',
-                        ],
-                    ],
-                    'sa_price_table_button_text' => [
-                        'label' => esc_html__('Button Text', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT,
-                        'default' => esc_html__('Buy Now', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-link' => '',
-                        ],
-                    ],
-                    'sa_price_table_button_link' => [
-                        'label' => esc_html__('Button Link', SHORTCODE_ADDOONS),
-                        'type' => Controls::URL,
-                        'controller' => 'add_group_control',
-                        'selector' => [
-                            '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-link' => '',
-                        ],
-                    ],
-
-                ],
-
-            ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
                 'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
                 'showing' =>   TRUE,
             ]
@@ -118,7 +56,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLUMN,
                 'default' => 'oxi-bt-col-lg-4',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => '',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2' => '',
                 ],
             ]
         );
@@ -131,7 +69,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-wrapper-style-2' => 'background: {{VALUE}};'
                 ],
             ]
         );
@@ -158,17 +96,17 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-wrapper-style-2' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_price_table_button_border',
+            'sa_price_table_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-wrapper-style-2' => ''
                 ],
             ]
         );
@@ -179,7 +117,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-wrapper-style-2' => ''
                 ],
             ]
         );
@@ -211,7 +149,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-wrapper-style-2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -244,7 +182,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -253,6 +191,108 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::ANIMATION,
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Feature Settings', SHORTCODE_ADDOONS),
+                'showing' =>   TRUE,
+            ]
+        );
+
+        $this->add_group_control(
+            'sa_price_table_feature_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature' => ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_feature_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#0da4bf',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_feature_span_color',
+            $this->style,
+            [
+                'label' => __('Span Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#747474',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_bg_feature_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => 'rgba(255,255,255,0.00)',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature' => 'background: {{VALUE}};'
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            'sa_price_table_feature_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature' => ''
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_price_table_feature_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
             ]
         );
         $this->end_controls_section();
@@ -294,7 +334,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-price-title' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price-title' => ''
                 ],
             ]
         );
@@ -304,9 +344,34 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#0071bd',
+                'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-price-title' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price-title' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_bg_title_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#0071bd',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price-title' => 'background: {{VALUE}};'
+                ],
+            ]
+        );
+        
+        $this->add_group_control(
+            'sa_price_table_title_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price-title' => ''
                 ],
             ]
         );
@@ -340,7 +405,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-price-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -360,7 +425,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-price' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price' => ''
                 ],
             ]
         );
@@ -370,13 +435,24 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#0071bd',
+                'default' => '#666',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-price' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price' => 'color:{{VALUE}};'
                 ],
             ]
         );
-
+        $this->add_control(
+            'sa_price_table_price_span_color',
+            $this->style,
+            [
+                'label' => __('Span Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#0071bd',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price' => 'color: {{VALUE}};'
+                ],
+            ]
+        );
 
         $this->add_responsive_control(
             'sa_price_table_price_padding',
@@ -406,7 +482,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-price' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-price' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -455,9 +531,9 @@ class Style_1 extends AdminStyle
                 ],
                 'condition' => [
                     'sa_price_table_ribbon_switter' => 'yes'
-                ],    
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon ' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon ' => ''
                 ],
             ]
         );
@@ -470,7 +546,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon' => ''
                 ],
 
                 'condition' => [
@@ -486,7 +562,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon' => 'color:{{VALUE}};'
                 ],
                 'condition' => [
                     'sa_price_table_ribbon_switter' => 'yes'
@@ -502,7 +578,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(0, 113, 189, 1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                 ],
                 'condition' => [
                     'sa_price_table_ribbon_switter' => 'yes'
@@ -535,7 +611,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'width:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon' => 'width:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -550,7 +626,7 @@ class Style_1 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 80,
+                    'size' => 40,
                 ],
                 'range' => [
                     'px' => [
@@ -565,7 +641,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'height:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon' => 'height:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -581,7 +657,7 @@ class Style_1 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => -70,
+                    'size' => -66,
                 ],
                 'range' => [
                     'px' => [
@@ -596,7 +672,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon.ribon_left' => 'left:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon.ribon_left' => 'left:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -612,7 +688,7 @@ class Style_1 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => -70,
+                    'size' => -66,
                 ],
                 'range' => [
                     'px' => [
@@ -627,7 +703,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon.ribon_right' => 'right:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon.ribon_right' => 'right:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -642,7 +718,7 @@ class Style_1 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => -9,
+                    'size' => 15,
                 ],
                 'range' => [
                     'px' => [
@@ -657,7 +733,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'top:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon' => 'top:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -684,7 +760,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon.ribon_left' => 'transform: rotate({{SIZE}}deg) ;'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon.ribon_left' => 'transform: rotate({{SIZE}}deg) ;'
                 ],
             ]
         );
@@ -710,7 +786,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon.ribon_right' => 'transform: rotate({{SIZE}}deg) ;'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon.ribon_right' => 'transform: rotate({{SIZE}}deg) ;'
                 ],
             ]
         );
@@ -725,7 +801,7 @@ class Style_1 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -745,7 +821,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-ribon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -761,6 +837,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+
 
         $this->start_section_devider();
         $this->start_controls_section(
@@ -783,7 +860,34 @@ class Style_1 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-
+        $this->add_control(
+            'sa_price_table_button_alignment',
+            $this->style,
+            [
+                'label' => __('Alignment', SHORTCODE_ADDOONS),
+                'separator' => TRUE,
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center',
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-button' => 'justify-content: {{VALUE}};'
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_price_table_button_padding',
             $this->style,
@@ -794,16 +898,13 @@ class Style_1 extends AdminStyle
                     'unit' => 'px',
                     'size' => '',
                 ],
-                'condition' => [
-                    'sa_price_table_button_switter' => 'yes'
-                ],
                 'range' => [
                     '%' => [
                         'min' => 0,
                         'max' => 50,
                         'step' => .1,
                     ],
-                    'px' => [
+                    'px' => [   
                         'min' => 0,
                         'max' => 300,
                         'step' => 1,
@@ -815,11 +916,42 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
-
+        $this->add_responsive_control(
+            'sa_price_table_button_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -200,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
 
         $this->end_controls_section();
         $this->end_section_devider();
@@ -829,9 +961,6 @@ class Style_1 extends AdminStyle
             [
                 'label' => esc_html__('Button Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
-                'condition' => [
-                    'sa_price_table_button_switter' => 'yes'
-                ],
             ]
         );
 
@@ -841,7 +970,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-link' => ' ',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link' => ' ',
                 ],
             ]
         );
@@ -863,9 +992,9 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#fff',
+                'default' => '#333',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-link' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -875,14 +1004,66 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(0, 113, 189, 1.00)',
+                'default' => '#28a745',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-link' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
-
+        $this->add_group_control(
+            'sa_price_table_button_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link' => ''
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_price_table_button_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -100,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_price_table_button_sadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link' => ''
+                ],
+            ]
+        );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
@@ -893,7 +1074,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-link:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link:hover' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -903,19 +1084,167 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(0, 81, 138, 1.00)',
+                'default' => '#28a745',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-link:hover' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link:hover' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
+        $this->add_group_control(
+            'sa_price_table_button_hover_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link:hover' => ''
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_price_table_button_hover_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -100,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_price_table_button_hover_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-link:hover' => ''
+                ],
 
+            ]
+        );
         $this->end_controls_tab();
         $this->end_controls_tabs();
+        $this->add_control(
+            'sa_price_table_button_separetor',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => TRUE,
+            ]
+        );
 
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
+    }
+
+    public function modal_form_data()
+    {
+        echo '<div class="modal-header">                    
+                    <h4 class="modal-title">Accordions Form</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">';
+        $this->add_control(
+            'sa_price_table_title',
+            $this->style,
+            [
+                'label' => __('Title', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Standard',
+                'placeholder' => 'Standard',
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_price',
+            $this->style,
+            [
+                'label' => __('Price', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => '78$ / <span> Month</span>',
+                'placeholder' => '78$ / <span> Month</span>',
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_ribbon_text',
+            $this->style,
+            [
+                'label' => __('Ribbon Text', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Business',
+                'placeholder' => 'Business',
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_button_text',
+            $this->style,
+            [
+                'label' => __('Button Text', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Business',
+                'placeholder' => 'Business',
+            ]
+        );
+        $this->add_group_control(
+            'sa_price_table_button_link',
+            $this->style,
+            [
+                'label' => __('Link', SHORTCODE_ADDOONS),
+                'type' => Controls::URL,
+                'default' => 'Business',
+                'placeholder' => 'Business',
+            ]
+        );
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Feature Setting', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_repeater_control(
+            'sa_price_table_repeater',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER,
+                'button' => __('Add New Item', SHORTCODE_ADDOONS),
+                'title_field' => 'sa_price_table_feature',
+                'fields' => [
+                    'sa_price_table_feature' => [
+                        'label' => esc_html__('Feature', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT,
+                        'default' => esc_html__(' 25 Email <span>Account</span> ', SHORTCODE_ADDOONS), 
+                    ],
+                ],
+
+            ]
+        );
+        $this->end_controls_section();
+        echo '</div>';
     }
 }
