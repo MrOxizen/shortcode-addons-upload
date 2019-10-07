@@ -40,7 +40,7 @@ class Style_8 extends Templates {
 
 
 
-            echo '<div class="oxi-addonsOH-SX-child ' . $this->column_render('sa_oh_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+            echo '<div class="oxi-addonsOH-SX-child oxi-addonsOH-SX-child-' . $key . '">
                   
                             <div class="oxi-addonsOH-SX-content sa_oh_wrapper_' . $key . '">
                                 ' . $icon . '
