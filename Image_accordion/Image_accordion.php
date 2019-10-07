@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_accordion;
+namespace SHORTCODE_ADDONS_UPLOAD\Image_accordion;
 
 if (!defined('ABSPATH')) {
     exit;

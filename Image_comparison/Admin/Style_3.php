@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_comparison\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Image_comparison\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

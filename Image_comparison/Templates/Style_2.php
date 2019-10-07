@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_comparison\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Image_comparison\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_2 extends Templates {
 
     public function public_css() {
-        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-2', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-2', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {
@@ -37,7 +37,7 @@ class Style_2 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-BeerSlider';
-        wp_enqueue_script('jquery-BeerSlider', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/BeerSlider.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-BeerSlider', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.js', true, SA_ADDONS_PLUGIN_VERSION);
       }
 
     public function inline_public_jquery() {
@@ -64,8 +64,8 @@ class Style_2 extends Templates {
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
  
-        wp_enqueue_style('BeerSlider', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('BeerSlider-js', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/BeerSlider.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('BeerSlider', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('BeerSlider-js', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.js', false, SA_ADDONS_PLUGIN_VERSION);
         
 
         $css = $jquery = '';

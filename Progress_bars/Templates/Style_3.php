@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Progress_bars\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Progress_bars\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_3 extends Templates {
 
 //    public function public_css() {
-//        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-3', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
+//        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-3', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
 //    }
 
     public function default_render($style, $child, $admin) {
@@ -46,7 +46,7 @@ class Style_3 extends Templates {
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-asProgressdfs-style-3-js';
         echo oxi_addons_public_waypoints();
-        wp_enqueue_script('jquery-asProgressdfs-style-3-js', SA_ADDONS_UPLOAD_URL . '/Elements/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-asProgressdfs-style-3-js', SA_ADDONS_UPLOAD_URL . '/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery() {
@@ -72,7 +72,7 @@ class Style_3 extends Templates {
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
         echo oxi_addons_public_waypoints();
-        wp_enqueue_script('jquery-asProgressdfs-js-style-3', SA_ADDONS_UPLOAD_URL . '/Elements/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-asProgressdfs-js-style-3', SA_ADDONS_UPLOAD_URL . '/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
         $css = '';
         $jquery = '';
 

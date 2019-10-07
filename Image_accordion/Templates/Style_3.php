@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_accordion\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Image_accordion\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -18,7 +18,7 @@ class Style_3 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'jquery_image_accordion_style3';
-        wp_enqueue_script('jquery_image_accordion_style3', SA_ADDONS_UPLOAD_URL . '/Elements/Image_accordion/file/jquery_image_accordion.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery_image_accordion_style3', SA_ADDONS_UPLOAD_URL . '/Image_accordion/file/jquery_image_accordion.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {
