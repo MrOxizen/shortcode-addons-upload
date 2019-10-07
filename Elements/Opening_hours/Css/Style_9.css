@@ -95,7 +95,7 @@ and open the template in the editor.
 }
 
 .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-child:last-child .oxi-addonsOH-SX-content {
-    border-bottom: 0px
+       border-bottom: 0px !important;
 }
 
 .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-content:hover {

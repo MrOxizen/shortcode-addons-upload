@@ -46,7 +46,7 @@ class Style_9 extends Templates {
                 $times = '<div class="oxi-addonsOH-SX-date">' . $this->text_render($value['sa_oh_time_text']) . '</div>';
             }
 
-            echo '<div class="oxi-addonsOH-SX-child ' . $this->column_render('sa_oh_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+            echo '<div class="oxi-addonsOH-SX-child ">
                   
                             <div class="oxi-addonsOH-SX-content sa_oh_wrapper_' . $key . '">
                                 ' . $day . '
@@ -56,8 +56,8 @@ class Style_9 extends Templates {
         }
 
         $footer = $button = '';
-        if (!empty($style['sa_oh_fotter'])) {
-            $footer = '<div class="oxi-addonsOH-SX-footertext">' . $this->text_render($style['sa_oh_fotter']) . '</div>';
+        if (!empty($style['sa_oh_footer'])) {
+            $footer = '<div class="oxi-addonsOH-SX-footertext">' . $this->text_render($style['sa_oh_footer']) . '</div>';
         }
         if (!empty($style['sa_oh_button'])) {
             $button = '<div class="oxi-addonsOH-SX-button">

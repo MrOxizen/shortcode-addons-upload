@@ -1,0 +1,547 @@
+.sa_addons_ap_container_style_2 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px 5px 5px
+}
+
+.sa_addons_ap_container_style_2 .sa_addons_ap_main {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(68, 138, 255, 1.00);
+    box-shadow: 0px 6px 12px -5px rgba(125, 125, 125, 0.75);
+    border-radius: 0px 0px 0px 0px;
+    overflow: hidden
+}
+
+.sa_addons_ap_container_style_2 .sa_addons_ap_main_content {
+    width: 100%;
+    float: left;
+    text-align: center
+}
+
+.sa_addons_ap_container_style_2 .sa_addons_ap_img_content {
+    width: 100%;
+    float: left;
+    padding: 30px 5px 5px 5px
+}
+
+.sa_addons_ap_container_style_2 .sa_ap_img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 100px 100px 100px 100px
+}
+
+.sa_addons_ap_container_style_2 .sa_addons_ap_title {
+    width: 100%;
+    float: left;
+    font-size: 28px;
+    font-family: "Hammersmith One";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 5px 0px 6px
+}
+
+.sa_addons_ap_container_style_2 .sa_addons_ap_author {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    color: #fff2f2;
+    padding: 0px 5px 15px 5px
+}
+
+.sa_addons_ap_container_style_2 .sa_addons_ap_author span {
+    font-weight: bold
+}
+
+.sa_addons_ap_container_style_2 .mejs-controls {
+    padding: 0px
+}
+
+.sa_addons_ap_container_style_2 .mejs-button>button {
+    background: none;
+    margin: 0;
+    top: auto
+}
+
+.sa_addons_ap_container_style_2 .mejs-container,
+.sa_addons_ap_container_style_2 .mejs-controls {
+    background: rgba(0, 94, 203, 1.00);
+    height: 70px;
+    display: flex;
+    align-items: center
+}
+
+.sa_addons_ap_container_style_2 .mejs-container {
+    clear: both;
+    max-width: 100%;
+    width: 100% !important;
+}
+
+.sa_addons_ap_container_style_2 .mejs-playpause-button {
+    margin: 0px 0px 0px 0px;
+    height: 70px;
+    width: 70px;
+    background: rgba(131, 185, 255, 1.00);
+    display: flex;
+    justify-content: center;
+    top: auto
+}
+
+.sa_addons_ap_container_style_2 .mejs-play button::after,
+.sa_addons_ap_container_style_2 .mejs-replay button::after,
+.sa_addons_ap_container_style_2 .mejs-pause button::after {
+    font-family: "Font Awesome\ 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+    content: "\f04b";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #fafafa
+}
+
+.sa_addons_ap_container_style_2 .mejs-replay button::after {
+    content: "\f04b";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #fafafa;
+    font-size: 18px
+}
+
+.sa_addons_ap_container_style_2 .mejs-pause button::after {
+    content: "\f04c";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.sa_addons_ap_container_style_2 .mejs-time {
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    text-shadow: 0px 0px 2px #ffffff;
+    color: #ffffff;
+    padding: 0;
+    position: absolute;
+    left: 80px;
+    bottom: 8px
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-rail {
+    margin: 0px 10px 0px 10px;
+    padding: 0
+}
+
+.sa_addons_ap_container_style_2 .mejs-button,
+.mejs-time,
+.mejs-time-rail {
+    display: flex;
+    align-items: center
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-total {
+    background: #ffffff
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-current,
+.sa_addons_ap_container_style_2 .mejs-time-total,
+.sa_addons_ap_container_style_2 .mejs-time-loaded,
+.sa_addons_ap_container_style_2 .mejs-time-buffering {
+    border-radius: 100px 100px 100px 100px;
+    height: 10px
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-hovered {
+    display: none
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-float {
+    border-radius: 1px 1px 1px 1px
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-handle {
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -5px;
+    top: -5px;
+    background: rgba(0, 157, 219, 1);
+    border: 2px solid;
+    border-color: #ffffff;
+    border-radius: 50px 50px 50px 50px
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-loaded {
+    background: #e6e6e6
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-current {
+    background: #009ddb
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-float {
+    width: 70px;
+    height: 25px;
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    text-shadow: 0px 0px 2px #ffffff;
+    color: #333333;
+    background: rgba(255, 255, 255, 1);
+    margin: 0px 0px 10px 0px
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-float-current {
+    width: 70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-float-corner {
+    border-color: rgba(255, 255, 255, 1) transparent transparent
+}
+
+.sa_addons_ap_container_style_2 .mejs-time-handle-content {
+    display: none
+}
+
+.sa_addons_ap_container_style_2 .mejs-mute button,
+.sa_addons_ap_container_style_2 .mejs-unmute button {
+    margin: 4px 5px 0px 5px
+}
+
+.sa_addons_ap_container_style_2 .mejs-mute button::after,
+.sa_addons_ap_container_style_2 .mejs-unmute button::after {
+    font-family: "Font Awesome\ 5 Free";
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 900;
+    content: "\f6a9";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff
+}
+
+.sa_addons_ap_container_style_2 .mejs-mute button::after {
+    content: "\f028";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 16px
+}
+
+.sa_addons_ap_container_style_2 .mejs-volume-button {
+    font-size: 10px;
+    height: 40px;
+    line-height: 1;
+    margin: 0;
+    width: 40px;
+    padding-left: 5px;
+    position: absolute;
+    right: 106px;
+    bottom: -6px
+}
+
+.sa_addons_ap_container_style_2 .mejs-horizontal-volume-slider {
+    width: 100px;
+    position: absolute;
+    right: 6px;
+    bottom: -6px;
+}
+
+.sa_addons_ap_container_style_2 .mejs-horizontal-volume-total {
+    background: #fafafa;
+    width: 100px;
+    height: 10px;
+    margin: -6px -6px -6px -6px;
+    border-radius: 7px 7px 7px 7px
+}
+
+.sa_addons_ap_container_style_2 .mejs-horizontal-volume-current {
+    border-radius: 7px 7px 7px 7px;
+    background: #24bdff
+}
+
+.sa_addons_ap_container_style_2 .mejs-horizontal-volume-handle {
+    display: none;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -4px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px none;
+    border-color: #ffffff;
+    border-radius: 50px 50px 50px 50px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_ap_container_style_2 {
+        padding: 5px 5px 5px 5px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_main {
+        max-width: 500px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_img_content {
+        padding: 30px 5px 5px 5px
+    }
+    .sa_addons_ap_container_style_2 .sa_ap_img {
+        max-width: 200px;
+        height: 200px;
+        border-radius: 100px 100px 100px 100px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_title {
+        font-size: 28px;
+        padding: 10px 5px 0px 6px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_author {
+        font-size: 16px;
+        padding: 0px 5px 15px 5px
+    }
+    .sa_addons_ap_container_style_2 .mejs-container,
+    .sa_addons_ap_container_style_2 .mejs-controls {
+        height: 70px
+    }
+    .sa_addons_ap_container_style_2 .mejs-playpause-button {
+        margin: 0px 0px 0px 0px;
+        height: 70px;
+        width: 70px
+    }
+    .sa_addons_ap_container_style_2 .mejs-play button::after,
+    .sa_addons_ap_container_style_2 .mejs-replay button::after,
+    .sa_addons_ap_container_style_2 .mejs-pause button::after {
+        font-size: 18px
+    }
+    .sa_addons_ap_container_style_2 .mejs-replay button::after {
+        font-size: 18px
+    }
+    .sa_addons_ap_container_style_2 .mejs-playpause-button>button {
+        height: 18px;
+        width: 18px
+    }
+    .sa_addons_ap_container_style_2 .mejs-pause button::after {
+        font-size: 18px;
+    }
+    .sa_addons_ap_container_style_2 .mejs-time {
+        font-size: 16px;
+        height: 16px;
+        left: 80px;
+        bottom: 8px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-rail {
+        margin: 0px 10px 0px 10px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-current,
+    .sa_addons_ap_container_style_2 .mejs-time-total,
+    .sa_addons_ap_container_style_2 .mejs-time-loaded,
+    .sa_addons_ap_container_style_2 .mejs-time-buffering {
+        border-radius: 100px 100px 100px 100px;
+        height: 10px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-float {
+        border-radius: 1px 1px 1px 1px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-handle {
+        display: none;
+        width: 20px;
+        height: 20px;
+        left: -5px;
+        top: -5px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-float {
+        width: 70px;
+        height: 25px;
+        font-size: 16px;
+        margin: 0px 0px 10px 0px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-float-current {
+        width: 70px;
+        height: 25px
+    }
+    .sa_addons_ap_container_style_2 .mejs-mute button,
+    .sa_addons_ap_container_style_2 .mejs-unmute button {
+        margin: 4px 5px 0px 5px
+    }
+    .sa_addons_ap_container_style_2 .mejs-mute button::after,
+    .sa_addons_ap_container_style_2 .mejs-unmute button::after {
+        font-size: 16px
+    }
+    .sa_addons_ap_container_style_2 .mejs-mute button::after {
+        font-size: 16px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-slider {
+        width: 80px;
+        right: 6px;
+        bottom: -6px
+    }
+    .sa_addons_ap_container_style_2 .mejs-volume-button {
+        right: 86px;
+        bottom: -6px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-total {
+        width: 80px;
+        height: 10px;
+        margin: -6px -6px -6px -6px;
+        border-radius: 7px 7px 7px 7px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-current {
+        border-radius: 7px 7px 7px 7px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-handle {
+        width: 25px;
+        height: 18px;
+        top: -4px;
+        border-radius: 50px 50px 50px 50px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_ap_container_style_2 {
+        padding: 5px 5px 5px 5px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_main {
+        max-width: 500px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_img_content {
+        padding: 30px 5px 5px 5px
+    }
+    .sa_addons_ap_container_style_2 .sa_ap_img {
+        max-width: 200px;
+        height: 200px;
+        border-radius: 100px 100px 100px 100px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_title {
+        font-size: 28px;
+        padding: 10px 5px 0px 6px
+    }
+    .sa_addons_ap_container_style_2 .sa_addons_ap_author {
+        font-size: 16px;
+        padding: 0px 5px 15px 5px
+    }
+    .sa_addons_ap_container_style_2 .mejs-container,
+    .sa_addons_ap_container_style_2 .mejs-controls {
+        height: 70px
+    }
+    .sa_addons_ap_container_style_2 .mejs-playpause-button {
+        margin: 0px 0px 0px 0px;
+        height: 70px;
+        width: 70px
+    }
+    .sa_addons_ap_container_style_2 .mejs-play button::after,
+    .sa_addons_ap_container_style_2 .mejs-replay button::after,
+    .sa_addons_ap_container_style_2 .mejs-pause button::after {
+        font-size: 18px
+    }
+    .sa_addons_ap_container_style_2 .mejs-replay button::after {
+        font-size: 18px
+    }
+    .sa_addons_ap_container_style_2 .mejs-playpause-button>button {
+        height: 18px;
+        width: 18px
+    }
+    .sa_addons_ap_container_style_2 .mejs-pause button::after {
+        font-size: 18px;
+        height: 18px;
+        width: 18px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time {
+        font-size: 16px;
+        height: 16px;
+        left: 80px;
+        bottom: 8px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-rail {
+        margin: 0px 10px 0px 10px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-current,
+    .sa_addons_ap_container_style_2 .mejs-time-total,
+    .sa_addons_ap_container_style_2 .mejs-time-loaded,
+    .sa_addons_ap_container_style_2 .mejs-time-buffering {
+        border-radius: 100px 100px 100px 100px;
+        height: 10px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-float {
+        border-radius: 1px 1px 1px 1px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-handle {
+        display: none;
+        width: 20px;
+        height: 20px;
+        left: -5px;
+        top: -5px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-float {
+        width: 70px;
+        height: 25px;
+        font-size: 16px;
+        margin: 0px 0px 10px 0px
+    }
+    .sa_addons_ap_container_style_2 .mejs-time-float-current {
+        width: 70px;
+        height: 25px
+    }
+    .sa_addons_ap_container_style_2 .mejs-mute button,
+    .sa_addons_ap_container_style_2 .mejs-unmute button {
+        margin: 4px 5px 0px 5px
+    }
+    .sa_addons_ap_container_style_2 .mejs-mute button::after,
+    .sa_addons_ap_container_style_2 .mejs-unmute button::after {
+        font-size: 16px
+    }
+    .sa_addons_ap_container_style_2 .mejs-mute button::after {
+        font-size: 16px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-slider {
+        width: 50px;
+        right: 6px;
+        bottom: -6px
+    }
+    .sa_addons_ap_container_style_2 .mejs-volume-button {
+        right: 56px;
+        bottom: -6px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-total {
+        width: 50px;
+        height: 10px;
+        margin: -6px -6px -6px -6px;
+        border-radius: 7px 7px 7px 7px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-current {
+        border-radius: 7px 7px 7px 7px
+    }
+    .sa_addons_ap_container_style_2 .mejs-horizontal-volume-handle {
+        width: 18px;
+        height: 18px;
+        top: -4px;
+        border-radius: 50px 50px 50px 50px
+    }
+}

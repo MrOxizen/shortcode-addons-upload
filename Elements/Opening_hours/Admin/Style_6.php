@@ -27,14 +27,7 @@ class Style_6 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_group_control(
-                'sa_oh_col', $this->style, [
-            'type' => Controls::COLUMN,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
-            ],
-                ]
-        );
+       
 
         $this->add_repeater_control(
                 'sa_oh_repeater', $this->style, [
