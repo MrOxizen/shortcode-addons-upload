@@ -70,7 +70,7 @@ class Style_2 extends Templates {
             echo '</div>';
         }
     }
-
+    
     public function old_render() {
         $styledata = $this->dbdata;
         $listdata = $this->child;

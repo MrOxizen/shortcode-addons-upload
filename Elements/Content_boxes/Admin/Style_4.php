@@ -39,6 +39,53 @@ class Style_4 extends AdminStyle {
         // start
         $this->start_controls_section(
                 'shortcode-addons', [
+            'label' => esc_html__('Add New Content', SHORTCODE_ADDOONS),
+            'showing' => true,
+                ]
+        );
+
+        $this->add_repeater_control(
+                'sa_icon_effects_data', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'fields' => [
+                'sa_el_box_image' => [
+                    'type' => Controls::MEDIA,
+                    'default' => [
+                        'type' => 'media-library',
+                        'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/uc_mobile_bullets.png',
+                    ],
+                    'controller' => 'add_group_control',
+                ],
+                'sa_el_box_heading' => [
+                    'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'This is Lorem',
+                    'selector' => [
+                        '{{WRAPPER}} .sa-cb-tem-4-{{KEY}} .sa-cb-tem-4-heading' => '',
+                    ],
+                ],
+                'sa_el_box_content' => [
+                    'label' => esc_html__('Content', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXTAREA,
+                    'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
+                    'selector' => [
+                        '{{WRAPPER}} .sa-cb-tem-4-{{KEY}} .sa-cb-tem-4-content' => '',
+                    ],
+                ],
+            ],
+            'title_field' => 'sa_el_box_heading',
+            'button' => 'Add New Item',
+                ]
+        );
+
+        $this->end_controls_section();
+
+
+
+
+        $this->start_controls_section(
+                'shortcode-addons', [
             'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
             'showing' => true,
                 ]
@@ -113,7 +160,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_group_control(
+        $this->add_group_control(
                 'sa-ac-box-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
@@ -308,7 +355,7 @@ class Style_4 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Content Settings', SHORTCODE_ADDOONS),
-            'showing' => false,
+            'showing' => true,
                 ]
         );
         $this->add_control(
@@ -373,51 +420,6 @@ class Style_4 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Content', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Accourdions Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Content Box Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-        
-        
-        $this->add_group_control(
-                'sa_el_box_image', $this->style, [
-            'label' => __('Image', SHORTCODE_ADDOONS),
-            'type' => Controls::MEDIA,
-                ]
-        );
-        
-        
-        $this->add_control(
-                'sa_el_box_heading', $this->style, [
-            'label' => __('Heading', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'This is Lorem',
-            'placeholder' => 'Lorem Ipsum is simply dummy text',
-                ]
-        );
-        $this->add_control(
-                'sa_el_box_content', $this->style, [
-            'label' => __('Content', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXTAREA,
-            'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-            'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                ]
-        );
-
-        
-
-        echo '</div>';
-    }
+   
 
 }
