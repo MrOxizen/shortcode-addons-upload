@@ -273,7 +273,7 @@ class User_control extends Elements_Frontend {
                                     </div>
                                     <div class="oxi-addons-import-requirement-text">
                                         <div class="oxi-addons-import-requirement-heading">
-                                           ' . oxi_addons_shortcode_admin_name_validation($name[0]) . ' install successfully 😃 😃
+                                           ' . $this->admin_name_validation($name[0]) . ' install successfully 😃 😃
                                         </div>
                                     </div>
                                 </div>
