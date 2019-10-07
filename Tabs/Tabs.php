@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Tabs;
+namespace SHORTCODE_ADDONS_UPLOAD\Tabs;
 
 if (!defined('ABSPATH')) {
     exit;

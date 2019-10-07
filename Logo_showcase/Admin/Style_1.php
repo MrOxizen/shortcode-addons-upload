@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Logo_showcase\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Logo_showcase\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

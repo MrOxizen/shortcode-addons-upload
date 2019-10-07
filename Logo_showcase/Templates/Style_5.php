@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Logo_showcase\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Logo_showcase\Templates;
 
 if (!defined('ABSPATH')) {
     exit;

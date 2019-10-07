@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Count_down;
+namespace SHORTCODE_ADDONS_UPLOAD\Count_down;
 
 if (!defined('ABSPATH')) {
     exit;

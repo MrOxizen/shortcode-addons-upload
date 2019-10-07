@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Count_down\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Count_down\Templates;
 
 if (!defined('ABSPATH')) {
 	exit;
@@ -18,12 +18,12 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_4 extends Templates
 {
 	public function public_css() {
-        wp_enqueue_style('mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/mb-comingsoon-min.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Count_down/file/mb-comingsoon-min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 	public function public_jquery()
 	{
 		$this->JSHANDLE = 'jquery-mb-comingsoon-min';
-		wp_enqueue_script('jquery-mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/jquery-mb-comingsoon-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+		wp_enqueue_script('jquery-mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Count_down/file/jquery-mb-comingsoon-min.js', false, SA_ADDONS_PLUGIN_VERSION);
 	}
 
 	public function inline_public_jquery()
@@ -76,8 +76,8 @@ class Style_4 extends Templates
 		$style = explode('|', $stylefiles[0]);
 		$css = '';
 
-		wp_enqueue_style('mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/mb-comingsoon-min.css', false, SA_ADDONS_PLUGIN_VERSION);
-		wp_enqueue_script('jquery-mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Elements/Count_down/file/jquery-mb-comingsoon-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+		wp_enqueue_style('mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Count_down/file/mb-comingsoon-min.css', false, SA_ADDONS_PLUGIN_VERSION);
+		wp_enqueue_script('jquery-mb-comingsoon-min', SA_ADDONS_UPLOAD_URL . '/Count_down/file/jquery-mb-comingsoon-min.js', false, SA_ADDONS_PLUGIN_VERSION);
 		echo '<div class="oxi-addons-container">
 					<div class="oxi-addons-row">
 						<div class="oxi-addons-counter-' . $oxiid . '">
