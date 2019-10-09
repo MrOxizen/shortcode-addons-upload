@@ -133,7 +133,7 @@ class Style_1 extends Templates {
         }
         return $jquery;
     }
-
+   
     public function inline_public_css() {
         $style = $this->style;
         $css  = '';
