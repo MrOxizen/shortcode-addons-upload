@@ -195,6 +195,10 @@
     border-radius: 50px 50px 50px 50px
 }
 
+.sa_addons_ap_container_style_4.sa_show_progress_time_handle .mejs-time-handle {
+    display: block;
+}
+
 .sa_addons_ap_container_style_3 .mejs-time-loaded {
     background: #e6e6e6
 }
@@ -303,6 +307,10 @@
     border: 1px none;
     border-color: #ffffff;
     border-radius: 50px 50px 50px 50px
+}
+
+.sa_addons_ap_container_style_4.sa_show_volume_handle .mejs-horizontal-volume-handle {
+    display: block;
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {

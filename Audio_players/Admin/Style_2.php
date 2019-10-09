@@ -1112,7 +1112,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Time Handle', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
-                'default' => 'yes',
+                'default' => '',
                 'loader' => TRUE,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -1237,7 +1237,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Volume Handle', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
-                'default' => 'yes',
+                'default' => '',
                 'loader' => TRUE,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -1673,7 +1673,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Volume Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
                 'loader' => TRUE, 
-                'default' => 'f6a9',
+                'default' => 'f028',
             ]
         );
         $this->add_responsive_control(
@@ -1827,7 +1827,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Mute Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
                 'loader' => TRUE, 
-                'default' => 'f028',
+                'default' => 'f6a9',
             ]
         );
         $this->add_responsive_control(
