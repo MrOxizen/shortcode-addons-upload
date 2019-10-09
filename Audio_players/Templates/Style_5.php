@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_4
+ * Description of Style_5
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,17 +15,19 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_4 extends Templates
+class Style_5 extends Templates
 {
 
     public function default_render($style, $child, $admin)
     {
-        $title = $author = $audio = $show_progress_handle = $show_volume_handle = '';
-        if (array_key_exists('sa_ap_audio_prog_volu_han', $style) && $style['sa_ap_audio_prog_volu_han'] != '0') :
-            $show_volume_handle .= 'sa_show_volume_handle';
-        endif;
+        $title = $image = $author = $audio = $show_progress_handle = '';
         if (array_key_exists('sa_ap_audio_prog_time_han', $style) && $style['sa_ap_audio_prog_time_han'] != '0') :
             $show_progress_handle .= 'sa_show_progress_time_handle';
+        endif;
+        if ($this->media_render('sa_ap_img', $style) != '') :
+            $image .= '<div class="sa_addons_ap_img_content">
+                            <img class="sa_ap_img" src="' . $this->media_render('sa_ap_img', $style) . '" alt="front image">
+                        </div>';
         endif;
         if ($style['sa_ap_title_text'] != '') :
             $title .= '<div class="sa_addons_ap_title">' . $this->text_render($style['sa_ap_title_text']) . '</div>';
@@ -38,32 +40,35 @@ class Style_4 extends Templates
                         <source src="' . $this->text_render($style['sa_ap_audio_url']) . '" />
                     </audio>';
         endif;
-        echo '<div class="sa_addons_ap_container_style_4 ' . $show_volume_handle . '  ' . $show_progress_handle . '">
-                <div class="sa_addons_ap_main">
-                    ' . $audio . '
-                    <div class="sa_addons_ap_main_content">
-                        ' . $title . '
-                        ' . $author . '
+        echo '<div class="sa_addons_ap_container_style_5 ' . $show_progress_handle . '">
+                <div class="sa_addons_ap_container_main>
+                    ' . $image . '
+                    <div class="sa_addons_ap_main">
+                        <div class="sa_addons_ap_main_content">
+                            ' . $title . '
+                            ' . $author . '
+                        </div>
+                        ' . $audio . '
                     </div>
-                        
                 </div>
             </div>
             ';
-        $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 .mejs-replay button::after, .' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 .mejs-play button::after {
+        $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 .mejs-replay button::after, .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 .mejs-play button::after {
             content: "\\' . $this->text_render($this->style['sa_ap_audio_ply_icon'] != '' ? $this->style['sa_ap_audio_ply_icon'] : '') . '" !important;
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 .mejs-pause button::after {
+        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 .mejs-pause button::after {
             content: "\\' . $this->text_render($this->style['sa_ap_audio_pau_icon'] != '' ? $this->style['sa_ap_audio_pau_icon'] : '') . '" !important;
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 .mejs-unmute button::after {
+        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 .mejs-unmute button::after {
             content: "\\' . $this->text_render($this->style['sa_ap_audio_s_v_icon'] != '' ? $this->style['sa_ap_audio_s_v_icon'] : '') . '" !important;
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 .mejs-mute button::after {
+        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 .mejs-mute button::after {
             content: "\\' . $this->text_render($this->style['sa_ap_audio_p_v_icon'] != '' ? $this->style['sa_ap_audio_p_v_icon'] : '') . '" !important;
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 .mejs-playpause-button>button {
+        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 .mejs-playpause-button>button {
             content: "\\' . $this->text_render($this->style['sa_ap_audio_p_v_icon'] != '' ? $this->style['sa_ap_audio_p_v_icon'] : '') . '" !important;
-        } ';
+        }';
+
     }
     public function public_jquery()
     {
@@ -75,7 +80,7 @@ class Style_4 extends Templates
         $style = $this->style;
         $jquery = '';
         if ((array_key_exists('sa_ap_audio_play_pause', $style) && $style['sa_ap_audio_play_pause'] != '0') || (array_key_exists('sa_ap_audio_time', $style) && $style['sa_ap_audio_time'] != '0') || (array_key_exists('sa_ap_audio_volume', $style) && $style['sa_ap_audio_volume'] != '0') || (array_key_exists('sa_ap_audio_progress', $style) && $style['sa_ap_audio_progress'] != '0')) {
-            $jquery .= '  jQuery(" .' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 #mediaplayer").mediaelementplayer({
+            $jquery .= '  jQuery(" .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 #mediaplayer").mediaelementplayer({
                     features: [';
 
             if ($style['sa_ap_audio_play_pause'] == 'yes') {
@@ -96,7 +101,7 @@ class Style_4 extends Templates
             }); 
             ';
         } else {
-            $jquery = '.' . $this->WRAPPER . ' .sa_addons_ap_container_style_4 #mediaplayer{display: none}';
+            $jquery = '.' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 #mediaplayer{display: none}';
         }
         return $jquery;
     }
@@ -111,99 +116,113 @@ class Style_4 extends Templates
 
         echo  wp_enqueue_media();
         wp_enqueue_script('mediaelement-min', SA_ADDONS_UPLOAD_URL . '/Audio_players/file/mediaelement-min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        $title = $image = $author = $audio = '';
         $css = '';
-        if ($stylefiles[12] != '') {
-            $title = '<div class="oxi-addons-title">
+    $title = $image = $author = $audio = '';
+    if ($stylefiles[12] != '') {
+        $title = '<div class="oxi-addons-title">
                     ' . OxiAddonsTextConvert($stylefiles[12]) . '
                  </div>';
-        }
-        if ($stylefiles[14] != '') {
-            $author = '<div class="oxi-addons-author">
+    }
+    if ($stylefiles[16] != '') {
+        $image = '<div class="oxi-addons-image">
+                    <img class="oxi-img" src="' . OxiAddonsUrlConvert($stylefiles[16]) . '" alt="front image">
+                </div>';
+    }
+    if ($stylefiles[14] != '') {
+        $author = '<div class="oxi-addons-author">
                     ' . OxiAddonsTextConvert($stylefiles[14]) . '
                 </div>';
-        }
-        if ($stylefiles[2] != '') {
-            $audio = ' <audio controls id="mediaplayer">
+    }
+    if ($stylefiles[2] != '') {
+        $audio = ' <audio controls id="mediaplayer">
                     <source src="' . OxiAddonsUrlConvert($stylefiles[2]) . '" />
                 </audio>';
-        }
+    }
 
 
-        echo '<div class="oxi-addons-container">
+    echo '<div class="oxi-addons-container">
         <div class="oxi-addons-row">
-            <div class="oxi-addons-wrapper-' . $oxiid . ' ' . OxiAddonsAnimation($styledata, 51) . '"> 
+            <div class="oxi-addons-wrapper-' . $oxiid . ' ' . OxiAddonsAnimation($styledata, 51) . '">
+               <div class="oxi-addons-audio-main">
+               ' . $image . '
                 <div class="oxi-addons-audio">
-                ' . $audio . '
                     <div class="oxi-addons-main-content"> 
                         ' . $title . '
                         ' . $author . '
-                    </div> 
-                </div>  
-            </div>
+                    </div>
+                    ' . $audio . '
+                </div>   
+               </div>
             </div>
         </div>
+        </div>
         ';
-        $jquery = '';
-        if ($styledata[34] == 'true' || $styledata[36] == 'true' || $styledata[38] == 'true' || $styledata[40] == 'true') {
-            $jquery .= '  jQuery(".oxi-addons-wrapper-' . $oxiid . ' #mediaplayer").mediaelementplayer({
+    $jquery = '';
+    if ($styledata[34] == 'true' || $styledata[36] == 'true' || $styledata[38] == 'true' || $styledata[40] == 'true') {
+        $jquery .= '  jQuery(".oxi-addons-wrapper-' . $oxiid . ' #mediaplayer").mediaelementplayer({
                 features: [';
 
-            if ($styledata[34] == 'true') {
-                $jquery .= '"playpause",';
-            }
-            if ($styledata[36] == 'true') {
-                $jquery .= '"current",';
-            }
-            if ($styledata[38] == 'true') {
-                $jquery .= '"progress",';
-            }
-            if ($styledata[40] == 'true') {
-                $jquery .= '"volume"';
-            }
-            $jquery .= '],
+        if ($styledata[34] == 'true') {
+            $jquery .= '"playpause",';
+        }
+        if ($styledata[36] == 'true') {
+            $jquery .= '"current",';
+        }
+        if ($styledata[38] == 'true') {
+            $jquery .= '"progress",';
+        }
+        if ($styledata[40] == 'true') {
+            $jquery .= '"volume"';
+        }
+        $jquery .= '],
        success: function (mediaElement, domObject) {
-            mediaElement.setVolume(0.5);
+            mediaElement.setVolume(0.8);
         }
     }); ';
-        } else {
-            $css = '.oxi-addons-container .oxi-addons-wrapper-' . $oxiid . ' #mediaplayer{display: none}';
-        }
+    } else {
+        $css = '.oxi-addons-container .oxi-addons-wrapper-' . $oxiid . ' #mediaplayer{display: none}';
+    }
 
 
 
 
-        if ($styledata[416] == 'false') {
-            $show_progress_handle = 'display: none';
-        } else {
-            $show_progress_handle = 'display: block';
-        }
-        if ($styledata[418] == 'false') {
-            $show_volume_handle = 'display: none';
-        } else {
-            $show_volume_handle = 'display: block';
-        }
+    if ($styledata[416] == 'false') {
+        $show_progress_handle = 'display: none';
+    } else {
+        $show_progress_handle = 'display: block';
+    }
+    if ($styledata[418] == 'false') {
+        $show_volume_handle = 'display: none';
+    } else {
+        $show_volume_handle = 'display: block';
+    }
 
-        $css .= '
+    $css .= '
         .oxi-addons-wrapper-' . $oxiid . '{ 
             width: 100%;
             float: left; 
+            overflow: hidden;
             display: flex;
             justify-content:center; 
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 11) . '; 
         }
         .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio{
-            max-width: ' . $styledata[7] . 'px;
-            width: 100%;  
-            background: ' . $styledata[32] . ' !important;
-            ' . OxiAddonsBoxShadowSanitize($styledata, 472) . ';
-            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 58) . ';  
-            overflow: hidden;
+            width: 100%; 
+            ' . OxiAddonsBGImage($styledata, 3) . ';   
         } 
         .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main-content{
           width: 100%;
           float: left;
           text-align: center;
+        }
+   
+        .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-main{ 
+            display: flex;
+            ' . OxiAddonsBoxShadowSanitize($styledata, 472) . ';
+            overflow: hidden;
+            width: 100%;
+            max-width: ' . $styledata[7] . 'px;
+            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 58) . '  !important;   
         } 
         .oxi-addons-wrapper-' . $oxiid . ' .oxi-img{ 
             width: 100%;
@@ -234,18 +253,19 @@ class Style_4 extends Templates
         .oxi-addons-wrapper-' . $oxiid . ' .mejs-controls { 
             padding: 0px; 
         }
-        .oxi-addons-wrapper-' . $oxiid . ' .mejs-button > button {
+        .oxi-addons-wrapper-' . $oxiid . '  .mejs-button > button {
             background: none !important;
             top: auto !important;
+            margin: 0 !important; 
         }
         .oxi-addons-wrapper-' . $oxiid . ' .mejs-container, 
-        .oxi-addons-wrapper-' . $oxiid . ' .mejs-container .mejs-controls { 
-            ' . OxiAddonsBGImage($styledata, 3) . '; 
+        .oxi-addons-wrapper-' . $oxiid . ' .mejs-controls {
+            background: ' . $styledata[32] . ' !important;
             height: ' . $styledata[42] . 'px !important;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
         }
-        .oxi-addons-wrapper-' . $oxiid . ' .mejs-container {
+        .mejs-container {
             clear: both;
             max-width: 100%;
             width: 100% !important;
@@ -253,15 +273,15 @@ class Style_4 extends Templates
 
         .oxi-addons-wrapper-' . $oxiid . ' .mejs-playpause-button{  
             margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 96) . ';
-            height: ' . $styledata[534] . 'px !important;
-            width: ' . $styledata[538] . 'px !important;
+            height: ' . $styledata[534] . 'px ;
+            width: ' . $styledata[538] . 'px;
             background: ' . $styledata[542] . ';
-            display: flex !important; 
-            justify-content: center; 
-        }
-        .oxi-addons-wrapper-' . $oxiid . ' .mejs-button > button { 
-            margin: 0; 
-        }
+            display: flex; 
+            justify-content: center;
+            position: absolute;  
+            left: ' . $styledata[368] . '% !important;
+            bottom: ' . $styledata[372] . '% !important;
+        } 
         .oxi-addons-wrapper-' . $oxiid . ' .mejs-play button::after,
         .oxi-addons-wrapper-' . $oxiid . '  .mejs-replay button::after,
         .oxi-addons-wrapper-' . $oxiid . '  .mejs-pause button::after{ 
@@ -302,24 +322,15 @@ class Style_4 extends Templates
         }
     
         .oxi-addons-wrapper-' . $oxiid . '  .mejs-time {  
-            font-size: ' . $styledata[118] . 'px;  
-            ' . OxiAddonsFontSettings($styledata, 124) . ';
-            color: ' . $styledata[122] . '; 
-            padding: 0;  
-            position: absolute; 
-            left: ' . $styledata[130] . '%;
-            bottom: ' . $styledata[134] . '%;
-            height: ' . $styledata[118] . 'px; 
+             display: none !important;
         }  
 
-        .oxi-addons-wrapper-' . $oxiid . '  .mejs-time-rail { 
+        .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-rail { 
             margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 180) . '; 
-            padding: 0 !important; 
-            top: auto !important;
-            height: ' . ($styledata[421] + 40) . 'px !important;  
+            padding: 0 !important;
         }
 
-        .oxi-addons-wrapper-' . $oxiid . '  .mejs-button, .mejs-time, .mejs-time-rail { 
+        .mejs-button, .mejs-time, .mejs-time-rail { 
             display: flex;
             align-items: center;
         }
@@ -382,7 +393,7 @@ class Style_4 extends Templates
 
         .oxi-addons-wrapper-' . $oxiid . ' .mejs-mute button,
         .oxi-addons-wrapper-' . $oxiid . '  .mejs-unmute button{   
-            margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 310) . ';
+            margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 310) . ' !important;
         }
 
         .oxi-addons-wrapper-' . $oxiid . ' .mejs-mute button::after,
@@ -410,67 +421,48 @@ class Style_4 extends Templates
             height: 40px !important;
             line-height: 10px;
             margin: 0;
-            width: 40px;
-            padding-left: 5px; 
-        }
-        .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-slider { 
-            width: ' . ($styledata[342] + 15) . 'px;  
-        }
-        .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-total {
-            background: ' . $styledata[332] . ' !important;
-            width: ' . $styledata[342] . 'px;
-            height: ' . $styledata[346] . 'px; 
-            margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 350) . ';
-            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 424) . ' !important;
-        }
-        .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-current {
-            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 424) . ' !important;
-            background: ' . $styledata[366] . ' !important;
-        }
-        .oxi-addons-wrapper-' . $oxiid . '  .mejs-horizontal-volume-handle {
-             ' . $show_volume_handle . ';
-             position: absolute;
-             width: ' . $styledata[368] . 'px;
-             height: ' . $styledata[372] . 'px; 
-             top: ' . $styledata[380] . 'px;
-             background: ' . $styledata[384] . ';
-             border:  ' . $styledata[386] . 'px ' . $styledata[387] . ';
-             border-color: ' . $styledata[390] . ';
-             border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 392) . '; 
+            width: 40px; 
+        } 
+        .oxi-addons-wrapper-' . $oxiid . '  .mejs-controls .mejs-horizontal-volume-slider{
+            display: none !important;
         }
         
 
         @media only screen and (min-width : 669px) and (max-width : 993px){ 
-            
             .oxi-addons-wrapper-' . $oxiid . '{  
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 12) . '; 
             }
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio{
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-main{
                 max-width: ' . $styledata[8] . 'px;  
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 58) . ';  
-            }   
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-img{  
+            }  
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-main{  
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 59) . ';   
+            } 
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-img{ 
                 max-width: ' . $styledata[409] . 'px;
                 height: ' . $styledata[413] . 'px;
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 457) . ';  
             }
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-title{ 
                 font-size: ' . $styledata[479] . 'px;  
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 491) . '; 
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 491) . ';
+               
             }
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-author{ 
                 font-size: ' . $styledata[507] . 'px; 
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 519) . ';
             }  
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-container,  
+            .oxi-addons-wrapper-' . $oxiid . ' .mejs-container, 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-controls { 
                 height: ' . $styledata[43] . 'px !important; 
             } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-playpause-button{  
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 97) . ';
-                height: ' . $styledata[535] . 'px ;
-                width: ' . $styledata[539] . 'px;
-            }
+                width: ' . $styledata[539] . 'px !important;
+                height: ' . $styledata[535] . 'px !important; 
+                left: ' . $styledata[389] . '% !important;
+                 bottom: ' . $styledata[372] . '% !important;
+            } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-play button::after,
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-replay button::after,
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-pause button::after{  
@@ -481,36 +473,28 @@ class Style_4 extends Templates
             }
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-playpause-button > button { 
                 height: ' . $styledata[75] . 'px !important; 
-                width: ' . $styledata[75] . 'px !important;
-            } 
+                width: ' . $styledata[75] . 'px !important; 
+            }
+         
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-pause button::after {  
-                font-size: ' . $styledata[112] . 'px;
+                font-size: ' . $styledata[113] . 'px;
                 height: ' . $styledata[75] . 'px !important; 
                 width: ' . $styledata[75] . 'px !important;  
-            }
-        
-            .oxi-addons-wrapper-' . $oxiid . '  .mejs-time {  
-                font-size: ' . $styledata[119] . 'px;    
-                left: ' . $styledata[131] . '%;
-                bottom: ' . $styledata[135] . '%;
-            }   
-    
+            } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-rail { 
-                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 181) . ';  
-               height: ' . ($styledata[421] + 40) . 'px !important;  
+                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 181) . '; 
             }  
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-current ,
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-total ,
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-loaded , 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-buffering {
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 165) . ' !important;
-                height: ' . $styledata[421] . 'px; 
+                height: ' . $styledata[421] . 'px;
             } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-float{
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 81) . ' !important;
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-handle {
-                ' . $show_progress_handle . '; 
+            } 
+            .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-handle { 
                 width: ' . $styledata[197] . 'px;
                 height: ' . $styledata[201] . 'px;
                 left: ' . $styledata[205] . 'px;
@@ -522,14 +506,14 @@ class Style_4 extends Templates
                 height: ' . $styledata[269] . 'px;
                 font-size: ' . $styledata[243] . 'px;   
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 273) . '; 
-            } 
+            }
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-time-float-current{
                 width: ' . $styledata[265] . 'px;
                 height: ' . $styledata[269] . 'px;  
             } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-mute button,
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-unmute button{   
-                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 311) . ';
+                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 311) . ' !important ;
             }
     
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-mute button::after,
@@ -539,46 +523,28 @@ class Style_4 extends Templates
      
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-mute button::after {  
                 font-size: ' . $styledata[327] . 'px;  
-            } 
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-slider { 
-                width: ' . ($styledata[343] + 15) . 'px;  
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-total { 
-                width: ' . $styledata[343] . 'px;
-                height: ' . $styledata[347] . 'px; 
-                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 351) . ';
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 425) . ' !important;
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-current {
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 425) . ' !important; 
-            }
-            .oxi-addons-wrapper-' . $oxiid . '  .mejs-horizontal-volume-handle {
-                 width: ' . $styledata[369] . 'px;
-                 height: ' . $styledata[373] . 'px; 
-                 top: ' . $styledata[381] . 'px; 
-                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 393) . '; 
-            }
-             
+            }   
         }
         @media only screen and (max-width : 668px){
             .oxi-addons-wrapper-' . $oxiid . '{  
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 13) . ';  
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 13) . '; 
             }
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio{
-                max-width: ' . $styledata[9] . 'px; 
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 58) . ';  
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-main{
+                max-width: ' . $styledata[9] . 'px;  
             }  
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-main{ 
-                display: block;
-            }  
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-img{  
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-main{  
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 60) . ';   
+                flex-direction: column;
+            } 
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-img{ 
                 max-width: 100%;
                 height: 100%;
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 458) . ';  
             }
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-title{ 
                 font-size: ' . $styledata[480] . 'px;  
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 492) . '; 
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 492) . ';
+               
             }
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-author{ 
                 font-size: ' . $styledata[508] . 'px; 
@@ -590,56 +556,48 @@ class Style_4 extends Templates
             } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-playpause-button{  
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 98) . ';
-                height: ' . $styledata[536] . 'px !important;
                 width: ' . $styledata[540] . 'px !important;
-            }
+                height: ' . $styledata[536] . 'px !important;  
+                position: static;
+            } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-play button::after,
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-replay button::after,
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-pause button::after{  
                 font-size: ' . $styledata[76] . 'px !important; 
             }
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-replay button::after {  
-                font-size: ' . $styledata[76] . 'px !important;
+                font-size: ' . $styledata[78] . 'px !important;
             }
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-playpause-button > button { 
-                height: ' . $styledata[76] . 'px !important; 
-                width: ' . $styledata[76] . 'px !important;
-            } 
-            .oxi-addons-wrapper-' . $oxiid . '  .mejs-pause button::after {  
-                font-size: ' . $styledata[112] . 'px !important;
-                height: ' . $styledata[76] . 'px !important; 
-                width: ' . $styledata[76] . 'px !important;  
+                height: ' . $styledata[78] . 'px !important; 
+                width: ' . $styledata[78] . 'px !important; 
             }
-        
-            .oxi-addons-wrapper-' . $oxiid . '  .mejs-time {  
-                font-size: ' . $styledata[120] . 'px !important;  
-                left: ' . $styledata[132] . '% !important;
-                bottom: ' . $styledata[136] . '% !important;  
-                transform: translateX(-' . ($styledata[132] - 20) . '%) !important;
-            }   
-    
+         
+            .oxi-addons-wrapper-' . $oxiid . '  .mejs-pause button::after {  
+                font-size: ' . $styledata[114] . 'px !important;
+                height: ' . $styledata[78] . 'px !important; 
+                width: ' . $styledata[78] . 'px !important;  
+            } 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-rail { 
-                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 182) . ';  
+                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 181) . '; 
             }  
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-current ,
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-total ,
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-loaded , 
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-buffering {
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 166) . ' !important;
-                height: ' . $styledata[422] . 'px !important; 
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-float{
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 82) . ' !important;
+                height: ' . $styledata[422] . 'px !important;
             } 
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-handle {
-                ' . $show_progress_handle . ' ; 
+            .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-float{
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 81) . ' !important;
+            } 
+            .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-handle { 
                 width: ' . $styledata[198] . 'px !important;
                 height: ' . $styledata[202] . 'px !important;
                 left: ' . $styledata[206] . 'px !important;
                 top: ' . $styledata[210] . 'px !important; 
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 222) . ' !important;
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 221) . ' !important;
             } 
-          
             .oxi-addons-wrapper-' . $oxiid . ' .mejs-time-float {  
                 width: ' . $styledata[266] . 'px !important;
                 height: ' . $styledata[270] . 'px !important;
@@ -662,26 +620,7 @@ class Style_4 extends Templates
      
             .oxi-addons-wrapper-' . $oxiid . '  .mejs-mute button::after {  
                 font-size: ' . $styledata[328] . 'px !important;  
-            } 
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-slider { 
-                width: ' . ($styledata[344] + 35) . 'px !important;  
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-total { 
-                width: ' . $styledata[344] . 'px !important;
-                height: ' . $styledata[348] . 'px !important; 
-                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 352) . ' !important;
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 426) . ' !important;
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .mejs-horizontal-volume-current {
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 426) . ' !important; 
-            }
-            .oxi-addons-wrapper-' . $oxiid . '  .mejs-horizontal-volume-handle {
-                 width: ' . $styledata[370] . 'px !important;
-                 height: ' . $styledata[374] . 'px !important; 
-                 top: ' . $styledata[382] . 'px !important; 
-                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 394) . ' !important; 
-            }
-        
+            }   
         }
         ';
         wp_add_inline_style('shortcode-addons-style', $css);
