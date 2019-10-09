@@ -43,6 +43,7 @@ class User_control extends Elements_Frontend {
 
     public function User() {
         $this->USer_Save();
+        $jquery = '';
         ?>
         <form method="post" id="oxi-addons-form-submits">
             <div class="oxi-addons-tabs-content-tabs" id="oxi-addons-tabs-id-1">
@@ -57,7 +58,7 @@ class User_control extends Elements_Frontend {
                             <div class="oxi-addons-content-div">
                                 <div class="oxi-head col-sm-12">
                                     <?php echo str_replace('-', ' ', str_replace('oxi-user-data-', '', $value)); ?>
-                                    <a href="#" class="oxi-user-control"><?php echo oxi_addons_admin_font_awesome('fa-trash'); ?></a>
+                                    <a href="#" class="oxi-user-control"><?php echo $this->font_awesome_render('fas fa-trash'); ?></a>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="list-group col-sm-12 mb-2" id="<?php echo $value; ?>-sortable">
@@ -67,8 +68,8 @@ class User_control extends Elements_Frontend {
                                             $serialize = explode('{|}', $eachuser);
                                             foreach ($serialize as $serial) {
                                                 echo '<div class="list-group-item list-group-item-action" id="' . $serial . '">';
-                                                echo '' . oxi_addons_shortcode_name_converter($serial) . '';
-                                                echo '<a href="#" class="btn btn-outline-danger btn-sm float-right">' . oxi_addons_admin_font_awesome('fa-trash') . '</a>';
+                                                echo '' . $this->admin_name_validation($serial) . '';
+                                                echo '<a href="#" class="btn btn-outline-danger btn-sm float-right">' . $this->font_awesome_render('fas fa-trash') . '</a>';
                                                 echo '</div>';
                                             }
                                         }
@@ -86,103 +87,96 @@ class User_control extends Elements_Frontend {
                                 </div>                                               
                             </div>
                         </div>
-                        <script type="text/javascript">
-                            jQuery(document).ready(function () {
-                                jQuery('#<?php echo $value; ?>-sortable').sortable({
-                                    axis: 'y',
-                                    opacity: 0.7,
-                                    update: function (event, ui) {
-                                        var list_sortable = jQuery(this).sortable('toArray').join('{|}');
-                                        jQuery("#parmanent-<?php echo $value; ?>").val(list_sortable);
-                                    }
-                                });
-                                jQuery('#<?php echo $value; ?>-btn').on('click', function () {
-                                    var data = jQuery('#<?php echo $value; ?>-elements').val().split(' ').join('-');
-                                    if (data === '') {
-                                        var file = "<strong>Empty </strong> Elements not Accepted";
-                                        alert(file);
-                                        return false;
-                                    } else {
-                                        jQuery("#<?php echo $value; ?>-sortable").append('<div class="list-group-item list-group-item-action" id="' + data + '">' + data.split('-').join(' ') + '<a href="#" class="btn btn-outline-danger btn-sm float-right"><?php echo oxi_addons_admin_font_awesome('fa-trash'); ?></a> </div>');
-                                        jQuery('#<?php echo $value; ?>-elements').val("");
-                                        jQuery('#<?php echo $value; ?>-sortable').sortable();
-                                        jQuery('#<?php echo $value; ?>-sortable').on('sortupdate', function () {
-                                            var list_sortable = jQuery(this).sortable('toArray').join('{|}');
-                                            jQuery("#parmanent-<?php echo $value; ?>").val(list_sortable);
-                                        });
-                                        jQuery('#<?php echo $value; ?>-sortable').trigger('sortupdate');
-                                        var file = "<strong>New </strong> elements will works after saved Data";
-                                        alert(file);
-                                    }
-                                });
-                                jQuery('#<?php echo $value; ?>-sortable a').live('click', function () {
-                                    r = confirm('Delete this Elements?');
-                                    if (r) {
-                                        jQuery(this).parent().remove();
-                                        jQuery('#<?php echo $value; ?>-sortable').sortable();
-                                        jQuery('#<?php echo $value; ?>-sortable').on('sortupdate', function () {
-                                            var list_sortable = jQuery(this).sortable('toArray').join('{|}');
-                                            jQuery("#parmanent-<?php echo $value; ?>").val(list_sortable);
-                                        });
-                                        jQuery('#<?php echo $value; ?>-sortable').trigger('sortupdate');
-                                    }
-                                });
-                            });
-
-                        </script>
                         <?php
+                        $jquery .= '$("#' . $value . '-sortable").sortable({
+                                        axis: "y",
+                                        opacity: 0.7,
+                                        update: function (event, ui) {
+                                            var list_sortable = $(this).sortable("toArray").join("{|}");
+                                            $("#parmanent-' . $value . '").val(list_sortable);
+                                        }
+                                    });
+                                    $("#' . $value . '-btn").on("click", function () {
+                                        var data = $("#' . $value . '-elements").val().split(" ").join("-");
+                                        if (data === "") {
+                                            var file = "<strong>Empty </strong> Elements not Accepted";
+                                            alert(file);
+                                            return false;
+                                        } else {
+                                            $("#' . $value . '-sortable").append(\'<div class="list-group-item list-group-item-action" id="\' + data + \'">\' + data.split(\'-\').join(\' \') + \'<a href="#" class="btn btn-outline-danger btn-sm float-right">' . $this->font_awesome_render('fas fa-trash') . '</a> </div>\');
+                                            $("#' . $value . '-elements").val("");
+                                            $("#' . $value . '-sortable").sortable();
+                                            $("#' . $value . '-sortable").on("sortupdate", function () {
+                                                var list_sortable = $(this).sortable("toArray").join("{|}");
+                                                $("#parmanent-' . $value . '").val(list_sortable);
+                                            });
+                                            $("#' . $value . '-sortable").trigger("sortupdate");
+                                            var file = "<strong>New </strong> elements will works after saved Data";
+                                            alert(file);
+                                        }
+                                    });
+                                    $("#' . $value . '-sortable a").live("click", function () {
+                                        r = confirm("Delete this Elements?");
+                                        if (r) {
+                                            $(this).parent().remove();
+                                            $("#' . $value . '-sortable").sortable();
+                                            $("#' . $value . '-sortable").on("sortupdate", function () {
+                                                var list_sortable = $(this).sortable("toArray").join("{|}");
+                                                $("#parmanent-' . $value . '").val(list_sortable);
+                                            });
+                                            $("#' . $value . '-sortable").trigger(\'sortupdate\');
+                                        }
+                                    });';
                     }
                 }
-                ?>
-                <script type="text/javascript">
-                    jQuery(".custom-file-input").on("change", function () {
-                        var fileName = jQuery(this).val().split("\\").pop();
-                        jQuery(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-                    });
-                    jQuery(document).ready(function () {
-                        jQuery('#oxi-addons-tabs-id-1').sortable({
-                            axis: 'y',
-                            opacity: 0.7,
-                            update: function (event, ui) {
-                                var list_sortable = jQuery(this).sortable('toArray').join('{|}');
-                                jQuery("#oxi-addons-user-data").val(list_sortable);
-                            }
-                        });
-                        jQuery('#oxi-addons-new-user-btn').on('click', function () {
-                            var data = jQuery('#oxi-addons-new-user').val().split(' ').join('-');
-                            if (data === '') {
-                                var file = "<strong>Empty </strong> user name not Accepted";
-                                alert(file);
-                                return false;
-                            } else {
-                                jQuery("#oxi-addons-tabs-id-1").append('<div class="oxi-addons-col-6" id="oxi-user-data-' + data + '"> <div class="oxi-addons-content-div">  <div class="oxi-head">' + data.split('-').join(' ') + ' <a href="#" class="oxi-user-control"><?php echo oxi_addons_admin_font_awesome('fa-trash'); ?></a></div><div class="oxi-addons-content-div-body"></div>  </div></div>');
-                                jQuery('#oxi-addons-new-user').val("");
-                                jQuery('#oxi-addons-tabs-id-1').sortable();
-                                jQuery('#oxi-addons-tabs-id-1').on('sortupdate', function () {
-                                    var list_sortable = jQuery(this).sortable('toArray').join('{|}');
-                                    jQuery("#oxi-addons-user-data").val(list_sortable);
-                                });
-                                jQuery('#oxi-addons-tabs-id-1').trigger('sortupdate');
-                                var file = "<strong>New </strong> users will works after saved Data";
-                                alert(file);
-                            }
-                        });
-                        jQuery('.oxi-addons-content-div .oxi-head a').live('click', function () {
-                            r = confirm('Delete this Users?');
-                            if (r) {
-                                jQuery(this).parent().parent().parent().remove();
-                                jQuery('#oxi-addons-tabs-id-1').sortable();
-                                jQuery('#oxi-addons-tabs-id-1').on('sortupdate', function () {
-                                    var list_sortable = jQuery(this).sortable('toArray').join('{|}');
-                                    jQuery("#oxi-addons-user-data").val(list_sortable);
 
-                                });
-                                jQuery('#oxi-addons-tabs-id-1').trigger('sortupdate');
-                                return false;
-                            }
-                        });
-                    });
-                </script>
+                $jquery .= '$(".custom-file-input").on("change", function () {
+                                var fileName = $(this).val().split("\\\").pop();
+                                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                            });
+                            $(\'#oxi-addons-tabs-id-1\').sortable({
+                              axis: \'y\',
+                              opacity: 0.7,
+                                update: function (event, ui) {
+                                    var list_sortable = $(this).sortable(\'toArray\').join(\'{|}\');
+                                    $("#oxi-addons-user-data").val(list_sortable);
+                                }
+                            });
+                            $(\'#oxi-addons-new-user-btn\').on(\'click\', function () {
+                                var data = $(\'#oxi-addons-new-user\').val().split(\' \').join(\'-\');
+                                if (data === \'\') {
+                                    var file = "<strong>Empty </strong> user name not Accepted";
+                                    alert(file);
+                                    return false;
+                                } else {
+                                    $("#oxi-addons-tabs-id-1").append(\'<div class="oxi-addons-col-6" id="oxi-user-data-\' + data + \'"> <div class="oxi-addons-content-div">  <div class="oxi-head">\' + data.split(\'-\').join(\' \') + \' <a href="#" class="oxi-user-control">' . $this->font_awesome_render('fas fa-trash') . '</a></div><div class="oxi-addons-content-div-body"></div>  </div></div>\');
+                                    $(\'#oxi-addons-new-user\').val("");
+                                    $(\'#oxi-addons-tabs-id-1\').sortable();
+                                    $(\'#oxi-addons-tabs-id-1\').on(\'sortupdate\', function () {
+                                        var list_sortable = $(this).sortable(\'toArray\').join(\'{|}\');
+                                        $("#oxi-addons-user-data").val(list_sortable);
+                                    });
+                                    $(\'#oxi-addons-tabs-id-1\').trigger(\'sortupdate\');
+                                    var file = "<strong>New </strong> users will works after saved Data";
+                                    alert(file);
+                                }
+                            });
+                            $(\'.oxi-addons-content-div .oxi-head a\').live(\'click\', function () {
+                                r = confirm(\'Delete this Users?\');
+                                if (r) {
+                                    $(this).parent().parent().parent().remove();
+                                    $(\'#oxi-addons-tabs-id-1\').sortable();
+                                    $(\'#oxi-addons-tabs-id-1\').on(\'sortupdate\', function () {
+                                        var list_sortable = $(this).sortable(\'toArray\').join(\'{|}\');
+                                        $("#oxi-addons-user-data").val(list_sortable);
+
+                                    });
+                                    $(\'#oxi-addons-tabs-id-1\').trigger(\'sortupdate\');
+                                    return false;
+                                }
+                            });';
+                ?>
+
                 <style>
                     .oxi-addons-content-div{
                         display: flex;
@@ -225,6 +219,7 @@ class User_control extends Elements_Frontend {
             </div>
         </form>
         <?php
+        wp_add_inline_script('shortcode-addons-vendor', 'jQuery.noConflict();(function ($) {setTimeout(function () {' . $jquery . '}, 1000);})(jQuery);');
     }
 
     public function CustomUpload() {
@@ -278,7 +273,7 @@ class User_control extends Elements_Frontend {
                                     </div>
                                     <div class="oxi-addons-import-requirement-text">
                                         <div class="oxi-addons-import-requirement-heading">
-                                           ' . oxi_addons_shortcode_name_converter($name[0]) . ' install successfully 😃 😃
+                                           ' . $this->admin_name_validation($name[0]) . ' install successfully 😃 😃
                                         </div>
                                     </div>
                                 </div>
@@ -430,8 +425,8 @@ class User_control extends Elements_Frontend {
         foreach ($historydata as $value) {
             echo '<tr>
                             <th scope="row">' . $i++ . '</th>
-                            <td>' . oxi_addons_shortcode_name_converter($value[0]) . '</td>
-                            <td>' . oxi_addons_shortcode_name_converter($value[1]) . '</td>
+                            <td>' . $this->admin_name_validation($value[0]) . '</td>
+                            <td>' . $this->admin_name_validation($value[1]) . '</td>
                             <td>' . $value[2] . '</td>
                           </tr>';
         }

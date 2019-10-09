@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_scroll;
+namespace SHORTCODE_ADDONS_UPLOAD\Image_scroll;
 
 if (!defined('ABSPATH')) {
     exit;

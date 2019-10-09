@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_comparison\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Image_comparison\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function public_css() {
-        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-1', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-1', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {
@@ -35,8 +35,8 @@ class Style_1 extends Templates {
     
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-twentytwenty';
-        wp_enqueue_script('jquery-event-move', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-event-move.js', true, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery-twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-twentytwenty.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-event-move', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/jquery-event-move.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-twentytwenty', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/jquery-twentytwenty.js', true, SA_ADDONS_PLUGIN_VERSION);
     }
     
     
@@ -83,9 +83,9 @@ class Style_1 extends Templates {
         $styledata = explode('|', $stylefiles[0]);
 
 
-        wp_enqueue_style('twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery-event-move', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-event-move.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery-twentytwenty', SA_ADDONS_UPLOAD_URL . '/Elements/Image_comparison/File/jquery-twentytwenty.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('twentytwenty', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/twentytwenty.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-event-move', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/jquery-event-move.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-twentytwenty', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/jquery-twentytwenty.js', false, SA_ADDONS_PLUGIN_VERSION);
 
         $css = $jquery = '';
         

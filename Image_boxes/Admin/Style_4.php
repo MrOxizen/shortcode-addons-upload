@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Image_boxes\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Image_boxes\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

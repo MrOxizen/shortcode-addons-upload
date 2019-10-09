@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Progress_bars;
+namespace SHORTCODE_ADDONS_UPLOAD\Progress_bars;
 
 if (!defined('ABSPATH')) {
     exit;

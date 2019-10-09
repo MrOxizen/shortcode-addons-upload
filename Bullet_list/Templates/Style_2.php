@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Bullet_list\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Bullet_list\Templates;
 
 if (!defined('ABSPATH')) {
     exit;

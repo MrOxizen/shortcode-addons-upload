@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Google_chart\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Google_chart\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -16,7 +16,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_1 extends Templates {
     public function public_css() {
-        wp_enqueue_style('jquery_google_css', SA_ADDONS_UPLOAD_URL . '/Elements/Google_chart/File/chart-min.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('jquery_google_css', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function default_render($style, $child, $admin) {
         $styledata = $this->style;
@@ -149,7 +149,7 @@ class Style_1 extends Templates {
     
     public function public_jquery() {
         $this->JSHANDLE = 'jquery_google__js';
-        wp_enqueue_script('jquery_google__js', SA_ADDONS_UPLOAD_URL . '/Elements/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery_google__js', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function old_render() {
@@ -160,8 +160,8 @@ class Style_1 extends Templates {
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
         echo wp_enqueue_media();
-        wp_enqueue_style('jquery_google_chart_css', SA_ADDONS_UPLOAD_URL . '/Elements/Google_chart/File/chart-min.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery_google_chart_js', SA_ADDONS_UPLOAD_URL . '/Elements/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('jquery_google_chart_css', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery_google_chart_js', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $css = '';
         $jquery = '';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Google_chart\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Google_chart\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
