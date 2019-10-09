@@ -1,0 +1,287 @@
+.oxi-addons-EV-style-4 {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-row {
+    width: 100%;
+    float: left;
+    background: rgba(245, 245, 245, 1.00);
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0px 10px 20px 0px rgba(196, 196, 196, 1)
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-head {
+    width: 100%;
+    float: left;
+    background: rgba(55, 0, 194, 0.17)
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-head.oxi-active {
+    width: 100%;
+    float: left;
+    background: transparent !important
+}
+
+.oxi-addons-EV-style-4.oxi-active .oxi-addons-EV-head {
+    background-color: #005177
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-image {
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 20px 20px 20px 20px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-image .oxiimage {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #6a00c7;
+    border-radius: 100px 100px 100px 100px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-title {
+    width: 80%;
+    float: left;
+    padding: 15px 15px 15px 15px;
+    cursor: pointer
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-head.oxi-active .oxi-addons-EV-title {
+    background: rgba(55, 0, 194, 0.17)
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-time {
+    width: 100%;
+    float: left;
+    text-align: left
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-time-body {
+    display: inline-block;
+    font-size: 14px;
+    color: #ffffff;
+    background: #bababa;
+    font-family: "ABeeZee";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    text-align: center;
+    border-radius: 25px 25px 25px 25px;
+    padding: 5px 15px 5px 15px;
+    margin: 3px 3px 3px 3px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-title-text {
+    width: 100%;
+    float: left;
+    font-size: 22px;
+    color: #525252;
+    font-family: "Aldrich";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 3px 3px 3px 3px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-title-author-info {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #424242;
+    font-family: "Adamina";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 3px 3px 3px 3px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-title-author-info span {
+    font-size: 16px;
+    color: #6a00c7;
+    font-family: "Adamina";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-info {
+    width: 100%;
+    float: left;
+    transition: none
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-info-body {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #4a4a4a;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 10px 10px 10px 220px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-info-body p {
+    font-size: 16px;
+    color: #4a4a4a;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-info-location {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #525252;
+    font-family: "ABeeZee";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 10px 10px 10px 199px
+}
+
+.oxi-addons-EV-style-4 .oxi-addons-EV-info-location span {
+    font-size: 14px;
+    color: #6a00c7;
+    font-family: "ABeeZee";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-EV-style-4 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-row {
+        padding: 5px 5px 5px 5px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-image {
+        float: none;
+        width: 100%;
+        padding: 20px 20px 20px 20px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-image .oxiimage {
+        width: 80px;
+        height: 80px;
+        border-width: solidpx
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title {
+        padding: 15px 15px 15px 15px;
+        width: 100%
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-time {
+        width: 100%;
+        float: none;
+        text-align: center
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-time-body {
+        font-size: 14px;
+        padding: 5px 5px 5px 5px;
+        margin: 3px 3px 3px 3px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title-text {
+        font-size: 22px;
+        padding: 3px 3px 3px 3px;
+        text-align: center
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title-author-info {
+        font-size: 16px;
+        padding: 3px 3px 3px 3px;
+        text-align: center
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title-author-info span {
+        font-size: 16px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-body {
+        font-size: 16px;
+        padding: 10px 10px 10px 220px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-body p {
+        font-size: 16px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-location {
+        font-size: 14px;
+        padding: 10px 10px 10px 199px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-location span {
+        font-size: 14px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-EV-style-4 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-row {
+        padding: 5px 5px 5px 5px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-image {
+        float: none;
+        width: 100%;
+        padding: 20px 20px 20px 20px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-image .oxiimage {
+        width: 80px;
+        height: 80px;
+        border-width: px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title {
+        padding: 15px 15px 15px 15px;
+        width: 100%
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-time {
+        width: 100%;
+        float: none;
+        text-align: center
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-time-body {
+        font-size: 14px;
+        padding: 5px 5px 5px 5px;
+        margin: 3px 3px 3px 3px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title-text {
+        font-size: 22px;
+        padding: 3px 3px 3px 3px;
+        text-align: center
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title-author-info {
+        font-size: 16px;
+        padding: 3px 3px 3px 3px;
+        text-align: center
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-title-author-info span {
+        font-size: 16px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-body {
+        font-size: 16px;
+        padding: 10px 10px 10px 220px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-body p {
+        font-size: 16px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-location {
+        font-size: 14px;
+        padding: 10px 10px 10px 199px
+    }
+    .oxi-addons-EV-style-4 .oxi-addons-EV-info-location span {
+        font-size: 14px
+    }
+}
