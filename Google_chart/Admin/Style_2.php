@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -45,7 +45,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_repeater_control(
-                'sa_google_chart_data_style_1', $this->style, [
+                'sa_google_chart_data_style_2', $this->style, [
             'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
             'type' => Controls::REPEATER,
             'button' => 'Add New Chart Bar',
@@ -61,7 +61,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::SLIDER,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 1,
+                        'size' => 10,
                     ],
                     'range' => [
                         'px' => [
@@ -120,7 +120,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-1' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-2' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -151,7 +151,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-1' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-2' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -417,12 +417,12 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 3,
+                'size' => 14,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 
@@ -454,12 +454,12 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 3,
+                'size' => 12,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 

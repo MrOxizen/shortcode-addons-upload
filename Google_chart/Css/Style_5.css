@@ -1,19 +1,15 @@
-.oxi-addons-chart-style-1{
+.oxi-addons-chart-style-5{
     width: 100%;
     margin: 0 auto;
     max-width:800px;
     padding: 10;           
 }
 
-.oxi-addons-chart-style-1 .oxi-addons-google-chart{
+.oxi-addons-chart-style-5 .oxi-addons-google-chart{
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     padding: 10px;
     background: #efefef;
     margin-bottom: 20px;
-}
-.oxi-addons-chart-style-1 ul li{
-    border-bottom: 0.8px solid #666;
-    padding: 7px;
 }

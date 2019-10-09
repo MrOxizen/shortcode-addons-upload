@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_5 extends AdminStyle {
 
     public function register_controls() {
 
@@ -43,56 +43,55 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-
+        
         $this->add_repeater_control(
-                'sa_google_chart_data_style_1', $this->style, [
-            'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
-            'type' => Controls::REPEATER,
-            'button' => 'Add New Chart Bar',
-            'fields' => [
-                'sa_google_chart_text_name' => [
-                    'label' => __('Text', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXT,
-                    'default' => 'John Mandis',
-                    'placeholder' => 'John Mandis',
-                ],
-                'sa_google_chart_value' => [
-                    'label' => __('Value', SHORTCODE_ADDOONS),
-                    'type' => Controls::SLIDER,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => 1,
-                    ],
-                    'range' => [
-                        'px' => [
-                            'min' => 1,
-                            'max' => 500,
-                            'step' => 1,
+                        'sa_google_chart_data_style_5', $this->style, [
+                    'label' => __('Google Chart Data', SHORTCODE_ADDOONS),
+                    'type' => Controls::REPEATER,
+                    'button' => 'Add New Chart Item',
+                    'fields' => [
+                        'sa_google_chart_text_name' => [
+                            'label' => __('Text', SHORTCODE_ADDOONS),
+                            'type' => Controls::TEXT,
+                            'default' => 'Blue',
+                            'placeholder' => 'Blue',
+                        ],
+                        'sa_google_chart_value' => [
+                            'label' => __('Value', SHORTCODE_ADDOONS),
+                            'type' => Controls::SLIDER,
+                            'default' => [
+                                'unit' => 'px',
+                                'size' => 1,
+                            ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 1,
+                                    'max' => 500,
+                                    'step' => 1,
+                                ],
+                            ],
+                        ],
+                        'sa-google_chart_background_color' => [
+                            'label' => __('Background', SHORTCODE_ADDOONS),
+                            'type' => Controls::COLOR,
+                            'oparetor' => 'RGB',
+                            'default' => '#787878',
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name' => 'color: {{VALUE}};',
+                            ]
+                        ],
+                        'sa-google_chart_color' => [
+                            'label' => __('Color', SHORTCODE_ADDOONS),
+                            'type' => Controls::COLOR,
+                            'default' => '#787878',
+                            'selector' => [
+                                '{{WRAPPER}} .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name' => 'color: {{VALUE}};',
+                            ]
                         ],
                     ],
-                ],
-                'sa-google_chart_background_color' => [
-                    'label' => __('Background', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'oparetor' => 'RGB',
-                    'default' => '#787878',
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name' => 'color: {{VALUE}};',
-                    ]
-                ],
-                'sa-google_chart_color' => [
-                    'label' => __('Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'default' => '#787878',
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name' => 'color: {{VALUE}};',
-                    ]
-                ],
-            ],
-            'title_field' => 'sa_google_chart_text_name',
-                ]
-        );
-
+                    'title_field' => 'sa_google_chart_text_name',
+                        ]
+                );
         $this->add_responsive_control(
                 'sa-google-chart-body-width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
@@ -100,7 +99,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 450,
+                'size' => 600,
             ],
             'range' => [
                 'px' => [
@@ -120,7 +119,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-1' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-3' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -151,7 +150,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-1' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-3' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -232,18 +231,13 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
+
+        $this->end_section_devider();
+        $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Top Text Settings', SHORTCODE_ADDOONS),
             'showing' => TRUE,
-                ]
-        );
-        $this->add_control(
-                'sa-google_chart_top_text', $this->style, [
-            'label' => __('Name', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'John Mandis',
-            'placeholder' => 'John Mandis',
                 ]
         );
         $this->add_control(
@@ -260,7 +254,6 @@ class Style_1 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
-                
             ],
                 ]
         );
@@ -276,89 +269,16 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
+
 
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Y Access Setting', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Chart Pointer Setting', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
         $this->add_control(
-                'sa-google_chart_y_access_font_size', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 14,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 100,
-                    'step' => 1,
-                ],
-                
-            ],
-                ]
-        );
-
-        $this->add_control(
-                'sa-google_chart_y_access_text_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('X Access Setting', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-        $this->add_control(
-                'sa-google_chart_x_access_font_size', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 14,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 100,
-                    'step' => 1,
-                ],
-                
-            ],
-                ]
-        );
-
-        $this->add_control(
-                'sa-google_chart_x_access_text_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Chart Bar Setting', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-        $this->add_control(
-                'sa-google_chart_border_width', $this->style, [
+                'sa-google_chart_pointer_border_width', $this->style, [
             'label' => __('Border Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
@@ -371,9 +291,7 @@ class Style_1 extends AdminStyle {
                     'max' => 10,
                     'step' => 1,
                 ],
-                
             ],
-            
                 ]
         );
         $this->end_controls_section();
@@ -395,43 +313,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-        $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('ToolTip Title', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-        $this->add_control(
-                'sa-google_chart_tooltip_title_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testi-padding .oxi-testimonials-style-testi-name' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa-google_chart_tooltip_title_font', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 3,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 10,
-                    'step' => 1,
-                ],
-                
-            ],
-            
-                ]
-        );
-        
-        $this->end_controls_section();
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('ToolTip body Text', SHORTCODE_ADDOONS),
@@ -454,22 +336,20 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 3,
+                'size' => 12,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 10,
+                    'max' => 50,
                     'step' => 1,
                 ],
-                
             ],
-            
                 ]
         );
-        
 
-        
+
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();

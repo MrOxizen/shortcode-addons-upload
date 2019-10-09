@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
 
@@ -45,7 +45,7 @@ class Style_1 extends AdminStyle {
         );
 
         $this->add_repeater_control(
-                'sa_google_chart_data_style_1', $this->style, [
+                'sa_google_chart_data_style_3', $this->style, [
             'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
             'type' => Controls::REPEATER,
             'button' => 'Add New Chart Bar',
@@ -53,15 +53,15 @@ class Style_1 extends AdminStyle {
                 'sa_google_chart_text_name' => [
                     'label' => __('Text', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => 'John Mandis',
-                    'placeholder' => 'John Mandis',
+                    'default' => 'Blue',
+                    'placeholder' => 'Blue',
                 ],
                 'sa_google_chart_value' => [
                     'label' => __('Value', SHORTCODE_ADDOONS),
                     'type' => Controls::SLIDER,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 1,
+                        'size' => 10,
                     ],
                     'range' => [
                         'px' => [
@@ -100,7 +100,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 450,
+                'size' => 600,
             ],
             'range' => [
                 'px' => [
@@ -120,11 +120,45 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-1' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-3' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
-
+        $this->add_control(
+                'sa-google_chart_inside_background_color', $this->style, [
+            'label' => __('Background', SHORTCODE_ADDOONS),
+            'oparetor' => 'RGB',
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+                ]
+        );
+        $this->add_control(
+                'sa-google-chart-border-width', $this->style, [
+            'label' => __('Border Width', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 3,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 20,
+                    'step' => 1,
+                ],
+                
+            ],
+            
+                ]
+        );
+        $this->add_control(
+                'sa-google_chart_inside_border_color', $this->style, [
+            'label' => __('Border Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            
+                ]
+        );
         $this->add_responsive_control(
                 'sa-google-chart-body-margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -151,7 +185,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-1' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-3' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -353,12 +387,12 @@ class Style_1 extends AdminStyle {
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Chart Bar Setting', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Chart Pointer Setting', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
         $this->add_control(
-                'sa-google_chart_border_width', $this->style, [
+                'sa-google_chart_pointer_border_width', $this->style, [
             'label' => __('Border Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
@@ -417,12 +451,12 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 3,
+                'size' => 14,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 10,
+                    'max' => 50,
                     'step' => 1,
                 ],
                 
@@ -454,12 +488,12 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 3,
+                'size' => 12,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 10,
+                    'max' => 50,
                     'step' => 1,
                 ],
                 
