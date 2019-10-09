@@ -48,7 +48,7 @@ class Style_1 extends AdminStyle {
                 'sa_google_chart_data_style_1', $this->style, [
             'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
             'type' => Controls::REPEATER,
-            'button' => 'Add New Testimonial',
+            'button' => 'Add New Chart Bar',
             'fields' => [
                 'sa_google_chart_text_name' => [
                     'label' => __('Text', SHORTCODE_ADDOONS),

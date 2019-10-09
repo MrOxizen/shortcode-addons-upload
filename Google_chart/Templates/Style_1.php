@@ -38,10 +38,6 @@ class Style_1 extends Templates {
         
         $oxi_addons_labels = '';
         
-        echo "<pre>";
-        print_r($listdata['sa_google_chart_data_style_1']);
-        echo "</pre>";
-        
         foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_labels .= "'" . $this->text_render($value['sa_google_chart_text_name']) . "',";
@@ -50,18 +46,18 @@ class Style_1 extends Templates {
         $oxi_addons_BG_C = '';
         foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
-                $oxi_addons_BG_C .= "'" . $value['sa-google_chart_color'] . "', ";
+                $oxi_addons_BG_C .= "'" . $value['sa-google_chart_background_color'] . "', ";
             }
         }
         $oxi_addons_B_C = '';
         foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
-                $oxi_addons_B_C .= "'" . $value['sa-google_chart_background_color'] . "', ";
+                $oxi_addons_B_C .= "'" . $value['sa-google_chart_color'] . "', ";
             }
         }
         $oxi_addons_data = '';
         foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
-            if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
+            if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_color'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_data .= "'" . $value['sa_google_chart_value-size'] . "', ";
             }
         }
@@ -91,8 +87,7 @@ class Style_1 extends Templates {
         data: {
             labels:[$oxi_addons_labels],
             datasets: [{
-                label: $oxi_addons_labels,
-                
+                label: '" . $this->text_render($listdata['sa-google_chart_top_text']) . "',
                 data: [
                     $oxi_addons_data
                 ],
