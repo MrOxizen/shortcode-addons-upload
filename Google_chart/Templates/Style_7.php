@@ -14,10 +14,10 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_3 extends Templates {
+class Style_7 extends Templates {
 
     public function public_css() {
-        wp_enqueue_style('jquery_google_style_3_css', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('jquery_google_style_7_css', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {
@@ -26,9 +26,9 @@ class Style_3 extends Templates {
 //        print_r($styledata);
 //        echo '</pre>';
         $oxiid = $styledata['shortcode-addons-elements-id'];
-        echo '<div class="oxi-addons-chart-style-3">
+        echo '<div class="oxi-addons-chart-style-7">
                     <div class="oxi-addons-chart-' . $oxiid . '" ' . $this->animation_render('sa-google-chart-body-animation', $styledata) . '>
-                         <canvas id="oxi_addons_bar_chart_' . $oxiid . '" width="' . $styledata['sa-google_chart_body_max_width-size'] . 'px" height="' . $styledata['sa-google_chart_body_max_height-size'] . 'px"></canvas>
+                         <canvas id="google_chart_radar_' . $oxiid . '" width="' . $styledata['sa-google_chart_body_max_width-size'] . 'px" height="' . $styledata['sa-google_chart_body_max_height-size'] . 'px"></canvas>
                    </div>
             </div>';
     }
@@ -40,34 +40,30 @@ class Style_3 extends Templates {
 
         $oxi_addons_labels = '';
 
-        foreach ($listdata['sa_google_chart_data_style_3'] as $key => $value) {
+        foreach ($listdata['sa_google_chart_data_style_7'] as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_labels .= "'" . $this->text_render($value['sa_google_chart_text_name']) . "',";
             }
         }
         $oxi_addons_BG_C = '';
-        foreach ($listdata['sa_google_chart_data_style_3'] as $key => $value) {
+        foreach ($listdata['sa_google_chart_data_style_7'] as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_BG_C .= "'" . $value['sa-google_chart_background_color'] . "', ";
             }
         }
         $oxi_addons_B_C = '';
-        foreach ($listdata['sa_google_chart_data_style_3'] as $key => $value) {
+        foreach ($listdata['sa_google_chart_data_style_7'] as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_B_C .= "'" . $value['sa-google_chart_color'] . "', ";
             }
         }
         $oxi_addons_data = '';
-        foreach ($listdata['sa_google_chart_data_style_3'] as $key => $value) {
+        foreach ($listdata['sa_google_chart_data_style_7'] as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_color'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_data .= "'" . $value['sa_google_chart_value-size'] . "', ";
             }
         }
         $oxi_border = $listdata['sa-google_chart_pointer_border_width-size'];
-        $oxi_y_fontColor = $listdata['sa-google_chart_y_access_text_color'];
-        $oxi_y_fontsize = $listdata['sa-google_chart_y_access_font_size-size'];
-        $oxi_x_fontColor = $listdata['sa-google_chart_x_access_text_color'];
-        $oxi_x_fontsize = $listdata['sa-google_chart_x_access_font_size-size'];
 
         $oxi_text_fontcolor = $listdata['sa-google_chart_top_text_color'];
         $oxi_text_fontsize = $listdata['sa-google_chart_top_text_font_size-size'];
@@ -87,11 +83,12 @@ class Style_3 extends Templates {
         $border_Width = $listdata['sa-google-chart-border-width-size'];
 
 
-        $jquery .= "var ctx = document.getElementById('oxi_addons_bar_chart_$oxiid');
-        var oxi_addons_bar_chart_$oxiid = new Chart(ctx, {
-        type: 'line',
+        $jquery .= "var ctx = document.getElementById('google_chart_radar_$oxiid');
+        var google_partam_radar_$oxiid = new Chart(ctx, {
+        type: 'radar',
         data: {
             labels:[$oxi_addons_labels],
+            
             datasets: [{
                 label: '" . $this->text_render($listdata['sa-google_chart_top_text']) . "',
                 data: [
@@ -103,35 +100,18 @@ class Style_3 extends Templates {
                 pointBorderColor: [
                     $oxi_addons_B_C
                 ],
-                pointBorderWidth: $oxi_border,
+                    pointBorderWidth: $oxi_border,
                 backgroundColor: '$background_color',
                 borderColor: '$borderColor_color',
                 borderWidth: $border_Width
-               
-            }],
+            }]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                        fontColor: '$oxi_y_fontColor',
-                        fontSize: $oxi_y_fontsize
-                    },
-                    
-                }],
-                xAxes: [{
-                    ticks: {
-                        fontColor: '$oxi_x_fontColor',
-                        fontSize: $oxi_x_fontsize
-                    },
-                    
-                }]
-            },
+            fontColor: 'red',
             legend: {
                 display: true,
                 labels: {
-                    fontColor: '$oxi_top_fontcolor',
+                   fontColor: '$oxi_top_fontcolor',
                     fontSize: $oxi_top_fontsize
                 }
             },
@@ -142,7 +122,6 @@ class Style_3 extends Templates {
                     bodyFontColor: '$oxi_tooltip_bodyFontColor',
                     bodyFontSize: $oxi_tooltip_bodyFontSize
                     },
-            
         }
     })";
 
@@ -151,8 +130,8 @@ class Style_3 extends Templates {
     }
 
     public function public_jquery() {
-        $this->JSHANDLE = 'jquery_google_style_3_js';
-        wp_enqueue_script('jquery_google_style_3_js', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        $this->JSHANDLE = 'jquery_google_style_7_js';
+        wp_enqueue_script('jquery_google_style_7_js', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function old_render() {
@@ -172,8 +151,9 @@ class Style_3 extends Templates {
         echo '
 <div class="oxi-addons-container">
     <div class="oxi-addons-row">';
+
         echo '<div class="oxi-addons-chart-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 59) . '>
-           <canvas id="google_partam_na_' . $oxiid . '" width="' . $styledata[23] . 'px" height="' . $styledata[27] . 'px"></canvas>
+           <canvas id="google_partam_radar_' . $oxiid . '" width="' . $styledata[23] . 'px" height="' . $styledata[27] . 'px"></canvas>
         </div>
       </div>
 </div>
@@ -234,11 +214,12 @@ class Style_3 extends Templates {
             }
         }
 
-        $jquery .= "var ctx = document.getElementById('google_partam_na_$oxiid');
-        var google_partam_na_$oxiid = new Chart(ctx, {
-        type: 'line',
+        $jquery .= "var ctx = document.getElementById('google_partam_radar_$oxiid');
+        var google_partam_radar_$oxiid = new Chart(ctx, {
+        type: 'radar',
         data: {
             labels:[$oxi_addons_G_labels],
+            
             datasets: [{
                 label: '" . OxiAddonsTextConvert($stylefiles[2]) . "',
                 data: [
@@ -257,23 +238,7 @@ class Style_3 extends Templates {
             }]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                        fontColor: '$styledata[68]',
-                        fontSize: $styledata[64]
-                    },
-                    
-                }],
-                xAxes: [{
-                    ticks: {
-                        fontColor: '$styledata[74]',
-                        fontSize: $styledata[70]
-                    },
-                    
-                }]
-            },
+            fontColor: 'red',
             legend: {
                 display: true,
                 labels: {
@@ -288,7 +253,6 @@ class Style_3 extends Templates {
                     bodyFontColor: '$styledata[84]',
                     bodyFontSize: $styledata[86]
                     },
-            backgroundColor: 'red'
         }
     });";
         wp_add_inline_style('jquery_google_chart_css', $css);

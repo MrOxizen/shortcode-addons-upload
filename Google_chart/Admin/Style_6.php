@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_4 extends AdminStyle {
+class Style_6 extends AdminStyle {
 
     public function register_controls() {
 
@@ -43,8 +43,9 @@ class Style_4 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+        
         $this->add_repeater_control(
-                        'sa_google_chart_data_style_4', $this->style, [
+                        'sa_google_chart_data_style_6', $this->style, [
                     'label' => __('Google Chart Data', SHORTCODE_ADDOONS),
                     'type' => Controls::REPEATER,
                     'button' => 'Add New Chart Item',
@@ -118,7 +119,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-4' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-6' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -149,7 +150,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-chart-style-4' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-chart-style-6' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );

@@ -114,8 +114,8 @@ class Style_5 extends Templates {
     }
 
     public function public_jquery() {
-        $this->JSHANDLE = 'jquery_google_style_2_js';
-        wp_enqueue_script('jquery_google_style_2_js', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        $this->JSHANDLE = 'jquery_google_style_5_js';
+        wp_enqueue_script('jquery_google_style_5_js', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function old_render() {
