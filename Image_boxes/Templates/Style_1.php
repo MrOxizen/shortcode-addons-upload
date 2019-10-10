@@ -17,8 +17,9 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-        $value = $this->Json_Decode($v['rawdata']);
+        
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_boxes_data_style_1'] as $key => $value) {
         $link = $endlink = $heading = $image = $imageposition = '';
         if (array_key_exists('sa_ib_url-url', $value) && $value['sa_ib_url-url'] != '') {
                 $link .= '<a class="oxi-addons-link" ' . $this->url_render('sa_ib_url', $value) . '>';
@@ -65,16 +66,6 @@ class Style_1 extends Templates {
                         '.$imageposition.'
                     ';
 
-        if ($admin == 'admin') :
-                    echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-                endif;
         echo '</div></div> ';
         }
     }
