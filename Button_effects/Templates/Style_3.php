@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Button_effect\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Button_effects\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_3 extends Templates {
 
     public function default_render($style, $child, $admin) {
 //        $class = '';
@@ -30,72 +30,76 @@ class Style_1 extends Templates {
         } else {
             $admin_class = '';
         }
-        
-        
-            $target_blank = '';
-        if($style['sa-be-link-opening'] == 'yes'){
+
+
+        $target_blank = '';
+        if ($style['sa-be-link-opening'] == 'yes') {
             $target_blank = 'target="_blank"';
         }
-        
-        
-        
-        
-        if($style['sa_alignments_select'] == 'tl'){
+
+
+
+//        $alignments = '';
+        if ($style['sa_alignments_select'] == 'tl') {
             $alignments = 'top-left';
-        }elseif ($style['sa_alignments_select'] == 'tm') {
+        } elseif ($style['sa_alignments_select'] == 'tm') {
             $alignments = 'top-middle';
-        }elseif ($style['sa_alignments_select'] == 'tr') {
+        } elseif ($style['sa_alignments_select'] == 'tr') {
             $alignments = 'top-right';
-        }elseif ($style['sa_alignments_select'] == 'ml') {
+        } elseif ($style['sa_alignments_select'] == 'ml') {
             $alignments = 'middle-left';
-        }elseif ($style['sa_alignments_select'] == 'mm') {
+        } elseif ($style['sa_alignments_select'] == 'mm') {
             $alignments = 'middle-middle';
-        }elseif ($style['sa_alignments_select'] == 'mr') {
+        } elseif ($style['sa_alignments_select'] == 'mr') {
             $alignments = 'middle-right';
-        }elseif ($style['sa_alignments_select'] == 'bl') {
+        } elseif ($style['sa_alignments_select'] == 'bl') {
             $alignments = 'bottom-left';
-        }elseif ($style['sa_alignments_select'] == 'bm') {
+        } elseif ($style['sa_alignments_select'] == 'bm') {
             $alignments = 'bottom-middle';
-        }elseif ($style['sa_alignments_select'] == 'br') {
+        } elseif ($style['sa_alignments_select'] == 'br') {
             $alignments = 'bottom-right';
         }
         
         
+        
+
+
 
 
 //            echo '<pre>';
 //            print_r($style);
 //            echo '</pre>';
-        
-        
+
+
 
 
 
         $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
         foreach ($all_data as $key => $data) {
-            
-            
-            
+
+
+
 //            echo '<pre>';
 //            print_r($data);
 //            echo '</pre>';
-            
-            
+
+
 
             $first_icon = $second_icon = $img = '';
-            
-            
-            
-                $img = '  <div class="oxi-button-img" style="background: url(' . $this->media_render('sa_el_button_effect_image', $data) . ');
+
+
+
+             $img = '  <div class="oxi-button-img" style="background: url(' . $this->media_render('sa_el_button_effect_image', $data) . ');
                             background-size: cover;">
                           </div>';
             if (array_key_exists('sa_el_be_first_icon', $data) && $data['sa_el_be_first_icon'] != '') {
-                $first_icon .= '<a '.$target_blank.' ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
+                $first_icon .= '<a ' . $target_blank . ' ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
             }
             if (array_key_exists('sa_el_be_second_icon', $data) && $data['sa_el_be_second_icon'] != '') {
-                $second_icon .= '<a '.$target_blank.' ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
+                $second_icon .= '<a ' . $target_blank . ' ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
             }
+            
 
 
 
@@ -103,12 +107,12 @@ class Style_1 extends Templates {
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
 
-            echo '<div class="sa_button_effect_temp_1   sa_o_f_m   sa_button_effect_temp_1_'.$key.'   "  ' . $this->animation_render('sa-be-main-box-animation', $style) . '>';
-            echo '  <div class="oxi-button-hover-map-139">
-                        <div class="oxi-button-hover-map-body">
+            echo '<div class="sa_button_effect_temp_3   sa_o_f_m   sa_button_effect_temp_3_' . $key . '   "  ' . $this->animation_render('sa-be-main-box-animation', $style) . '>';
+            echo '  <div class="oxi-button-hover-map">
+                        <div class="oxi-button-hover-map-body '.$style['sa_effects_select_icon'].'">
                             <div class="oxi-button-hover">
                                 ' . $img . '
-                                <div class=" '.$alignments.'    oxi-button-info">
+                                <div class=" ' . $alignments . '   oxi-button-info">
                                 ' . $first_icon . '
                                 ' . $second_icon . '
                                 </div>
@@ -134,9 +138,9 @@ class Style_1 extends Templates {
 
         foreach ($listdata as $value) {
             $valuefile = explode('||#||', $value['files']);
-            echo '<div class="oxi-button-hover-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . '  ' . OxiAddonsAdminDefine($user) . '"  ' . OxiAddonsAnimation($styledata, 45) . '>';
+            echo '<div class="oxi-button-hover-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . '  "  ' . OxiAddonsAnimation($styledata, 45) . '>';
             echo '  <div class="oxi-button-hover-map-' . $oxiid . '">
-                    <div class="oxi-button-hover-map-body">
+                    <div class="oxi-button-hover-map-body ' . $styledata[191] . '">
                         <div class="oxi-button-hover">
                             <div class="oxi-button-img">
                                  <img src="' . OxiAddonsUrlConvert($valuefile[9]) . '">
@@ -148,7 +152,7 @@ class Style_1 extends Templates {
             if ($valuefile[5] != '') {
                 echo '<a target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">' . oxi_addons_font_awesome($valuefile[5]) . '</a>';
             }
-            echo '              </div>
+            echo '           </div>
                         </div>
                     </div>
                 </div>';
@@ -222,9 +226,24 @@ class Style_1 extends Templates {
                 opacity:0;
                 ' . OxiAddonsBGImage($styledata, 67) . '
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 13) . ';
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 71) . ';
+            }
+            .oxi-button-hover-' . $oxiid . ' .oxi-button-left-to-right .oxi-button-hover .oxi-button-info{
+                transform: translateX(-100%);
+            }
+            .oxi-button-hover-' . $oxiid . ' .oxi-button-right-to-left .oxi-button-hover .oxi-button-info{
+                transform: translateX(100%);
+            }
+            .oxi-button-hover-' . $oxiid . ' .oxi-button-bottom-to-top .oxi-button-hover .oxi-button-info{
+                transform: translateY(100%);
+            }
+            .oxi-button-hover-' . $oxiid . ' .oxi-button-top-to-bottom .oxi-button-hover .oxi-button-info{
+                 transform: translateY(-100%);
             }
             .oxi-button-hover-' . $oxiid . ' .oxi-button-hover:hover .oxi-button-info{
                 opacity:1;
+                transform: translateY(0%) translateX(0%);
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 87) . ';
             }
             .oxi-button-hover-' . $oxiid . ' .oxi-button-hover a .oxi-icons{
                 background: ' . $styledata[113] . ';
@@ -270,10 +289,12 @@ class Style_1 extends Templates {
                 }
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-info{
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 14) . ';
+                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 72) . ';
                 }
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-hover:hover .oxi-button-info{
-                    opacity:1;
+                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 88) . ';
                 }
+                
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-hover a .oxi-icons{
                     font-size: ' . $styledata[104] . 'px;
                     width: ' . $styledata[108] . 'px;
@@ -306,9 +327,10 @@ class Style_1 extends Templates {
                 }
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-info{
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 15) . ';
+                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 73) . ';
                 }
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-hover:hover .oxi-button-info{
-                    opacity:1;
+                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 89) . ';
                 }
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-hover a .oxi-icons{
                     font-size: ' . $styledata[105] . 'px;

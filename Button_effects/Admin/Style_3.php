@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Button_effect\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Button_effects\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
 
@@ -62,7 +62,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::ICON,
                     'default' => 'fab fa-facebook',
                     'selector' => [
-                        '{{WRAPPER}} .sa_button_effect_temp_1_{{KEY}} .oxi-button-info' => '',
+                        '{{WRAPPER}} .sa_button_effect_temp_3_{{KEY}} .oxi-button-info' => '',
                     ],
                 ],
                 'sa_el_be_first_url' => [
@@ -76,7 +76,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::ICON,
                     'default' => 'fab fa-facebook',
                     'selector' => [
-                        '{{WRAPPER}} .sa_button_effect_temp_1_{{KEY}} .oxi-button-info' => '',
+                        '{{WRAPPER}} .sa_button_effect_temp_3_{{KEY}} .oxi-button-info' => '',
                     ],
                 ],
                 'sa_el_be_second_url' => [
@@ -113,7 +113,7 @@ class Style_1 extends AdminStyle {
                 'sa_alignments_select', $this->style, [
             'label' => __('Alignments', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'h3',
+            'default' => 'tl',
             'loader' => TRUE,
             'separator' => TRUE,
             'options' => [
@@ -126,6 +126,18 @@ class Style_1 extends AdminStyle {
                 'bl' => __('Bottom Left', SHORTCODE_ADDOONS),
                 'bm' => __('Bottom Middle', SHORTCODE_ADDOONS),
                 'br' => __('Bottom Right', SHORTCODE_ADDOONS),
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_effects_select_icon', $this->style, [
+            'label' => __('Effects', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'default' => 'O_B_Effect_1',
+            'loader' => TRUE,
+            'options' => [
+                'oxi-button-right-to-left' => __('Effect One', SHORTCODE_ADDOONS),
+                'oxi-button-left-to-right' => __('Effect Two', SHORTCODE_ADDOONS),
             ],
                 ]
         );
@@ -156,7 +168,7 @@ class Style_1 extends AdminStyle {
                 'sa-be-main-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -170,7 +182,7 @@ class Style_1 extends AdminStyle {
                 'sa-be-main-hover-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover:hover' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover:hover' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -210,7 +222,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -240,7 +252,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover-map-139' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover-map-139' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -290,7 +302,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1' => 'height:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -320,7 +332,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3' => 'width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -329,7 +341,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::BACKGROUND,
             'loader' => true,
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-info' => ''
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-info' => ''
             ],
                 ]
         );
@@ -369,7 +381,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -405,7 +417,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -447,7 +459,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover a .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -477,7 +489,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover a .oxi-icons' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -497,7 +509,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover a .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -508,7 +520,7 @@ class Style_1 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#fff',
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover a .oxi-icons' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -516,7 +528,7 @@ class Style_1 extends AdminStyle {
                 'sa-be-icon-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover a .oxi-icons' => ''
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons' => ''
             ],
                 ]
         );
@@ -546,7 +558,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover a .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -562,7 +574,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover:hover a .oxi-icons:hover' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover:hover a .oxi-icons:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -572,7 +584,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover:hover a .oxi-icons:hover' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover:hover a .oxi-icons:hover' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -582,7 +594,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover:hover a .oxi-icons:hover' => 'border-color:{{VALUE}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover:hover a .oxi-icons:hover' => 'border-color:{{VALUE}};'
             ],
                 ]
         );
@@ -612,7 +624,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover:hover a .oxi-icons:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover:hover a .oxi-icons:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -645,7 +657,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_1 .oxi-button-hover a .oxi-icons' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

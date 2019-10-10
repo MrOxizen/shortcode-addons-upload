@@ -1,0 +1,327 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplo
+*/
+
+
+
+
+.sa_button_effect_temp_3{
+    height: auto;
+    margin: auto;
+}
+.sa_button_effect_temp_3 .oxi-button-hover-map{
+    max-width: auto;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+.sa_button_effect_temp_3 .oxi-button-hover-map:after{
+    padding-bottom: 72%;
+    content: "";
+    display: block;
+}
+.sa_button_effect_temp_3 .oxi-button-img {
+    height: 100%;
+}
+.sa_button_effect_temp_3 .oxi-button-hover-map-body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.sa_button_effect_temp_3 .oxi-button-hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    overflow: hidden;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow:  0px 0px 3px 1px rgba(224, 224, 224, 0.74);
+}
+.sa_button_effect_temp_3 .oxi-button-hover:hover{
+    box-shadow:  0px 0px 3px 1px rgba(10, 235, 247, 0.49);
+    border-radius: 0px 0px 0px 0px;
+}
+.sa_button_effect_temp_3 .oxi-button-img img{
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0px 0px 0px 0px;
+}
+.sa_button_effect_temp_3 .oxi-button-img:hover,
+.sa_button_effect_temp_3 .oxi-button-img:hover img{
+    border-radius: 0px 0px 0px 0px;
+}
+/*.sa_button_effect_temp_3 .oxi-button-info{
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    background: rgba(10,235,247,0.49);
+    padding: 20px 20px 20px 20px;
+    border-radius: 0px 0px 0px 0px;
+}*/
+.sa_button_effect_temp_3 .oxi-button-hover:hover .oxi-button-info{
+    opacity:1;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.sa_button_effect_temp_3 .oxi-button-hover a .oxi-icons{
+    background: rgba(255, 255, 255, 1);
+    color: #0aebf7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-width: 0px 0px 0px 0px;
+    border-color:#ffffff;
+    border-style:solid;
+    border-radius: 50px 50px 50px 50px;
+    margin:3px 3px 3px 3px;
+}
+.sa_button_effect_temp_3 .oxi-button-hover:hover a .oxi-icons:hover{
+    background: rgba(10,231,247,1.00);
+    color: #ffffff;
+    border-color:#ffffff;
+    border-style:solid;
+    border-radius: 50px 50px 50px 50px;
+}
+.sa_button_effect_temp_3 .oxi-button-left-to-right .oxi-button-hover a:first-child{
+    transform: translateX(-100%);
+}
+.sa_button_effect_temp_3 .oxi-button-left-to-right .oxi-button-hover a:last-child{
+    transform: translateX(100%);
+}
+.sa_button_effect_temp_3 .oxi-button-right-to-left .oxi-button-hover a:first-child{
+    transform: translateX(100%);
+}
+.sa_button_effect_temp_3 .oxi-button-right-to-left .oxi-button-hover a:last-child{
+    transform: translateX(-100%);
+}
+.sa_button_effect_temp_3 .oxi-button-left-to-right .oxi-button-hover:hover a:first-child{
+    transform: translateX(0%);
+}
+.sa_button_effect_temp_3 .oxi-button-left-to-right .oxi-button-hover:hover a:last-child{
+    transform: translateX(0%);
+}
+.sa_button_effect_temp_3 .oxi-button-right-to-left .oxi-button-hover:hover a:first-child{
+    transform: translateX(0%);
+}
+.sa_button_effect_temp_3 .oxi-button-right-to-left .oxi-button-hover:hover a:last-child{
+    transform: translateX(0%);
+}
+
+
+
+
+
+
+
+
+
+
+.sa_button_effect_temp_3 .top-left {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+}
+.sa_button_effect_temp_3 .top-middle {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+    justify-content: center;
+}
+.sa_button_effect_temp_3 .top-right {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+    justify-content: end;
+}
+.sa_button_effect_temp_3 .middle-left {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+}
+.sa_button_effect_temp_3 .middle-middle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+    justify-content: center;
+}
+.sa_button_effect_temp_3 .middle-right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+    justify-content: end;
+}
+.sa_button_effect_temp_3 .bottom-left {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+}
+.sa_button_effect_temp_3 .bottom-middle {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+    justify-content: center;
+}
+.sa_button_effect_temp_3 .bottom-right {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(238, 30, 245, 0.49);
+    padding: 20px 20px 20px 20px;
+    justify-content: end;
+}
+
+
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .sa_button_effect_temp_3{
+        padding: 3px 3px 3px 3px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover:hover{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-img,
+    .sa_button_effect_temp_3 .oxi-button-img img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-img:hover,
+    .sa_button_effect_temp_3 .oxi-button-img:hover img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-info{
+        padding: 20px 20px 20px 20px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover:hover .oxi-button-info{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover:hover a .oxi-icons:hover{
+        border-radius: 50px 50px 50px 50px;
+    }
+}
+@media only screen and (max-width : 668px){
+    .sa_button_effect_temp_3{
+        padding: 3px 3px 3px 3px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover:hover{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-img,
+    .sa_button_effect_temp_3 .oxi-button-img img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-img:hover,
+    .sa_button_effect_temp_3 .oxi-button-img:hover img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-info{
+        padding: 20px 20px 20px 20px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover:hover .oxi-button-info{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_button_effect_temp_3 .oxi-button-hover:hover a .oxi-icons:hover{
+        border-radius: 50px 50px 50px 50px;
+    }}
+
+
+
+
+
+
+
+
+
