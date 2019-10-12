@@ -235,7 +235,7 @@ class Style_10 extends AdminStyle {
             'label' => __('Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
-            'default' => 'right',
+            'default' => 'left',
             'loader' => true,
             'options' => [
                 'left' => [

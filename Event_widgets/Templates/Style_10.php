@@ -21,7 +21,13 @@ class Style_10 extends Templates {
         $css = $media = '';
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
         $icon = $heading = $image = $content = $headersection = $bodysection = '';
-
+        if ($style['sa_event_widgets_overly_positon'] == 'left') {
+            $pos = ' 
+                         left: 0;';
+        } elseif ($style['sa_event_widgets_overly_positon'] == 'right') {
+            $pos = '
+                         right: 0;';
+        }
         foreach ($all_data as $key => $listitemdata) {
 
             if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
@@ -96,7 +102,7 @@ class Style_10 extends Templates {
                                             background-size: cover;
                                             position: relative;
                                             ">
-                                        <div class="oxi-addons-EW-10-IM-O">
+                                        <div class="oxi-addons-EW-10-IM-O" style="' . $pos . '">
                                           <div class="oxi-addons-EW-10-O-body">
                                                 <div class="oxi-addons-EW-10-O-body-position">
                                                       ' . $datemonthsection . '

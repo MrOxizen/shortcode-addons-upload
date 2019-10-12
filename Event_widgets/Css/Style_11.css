@@ -1,0 +1,294 @@
+.oxi-addons-EW-11-wrapper-style-11 {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-row {
+    border-radius: 5px 5px 5px 5px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-fullbody {
+    display: flex
+}
+
+.oxi-addons-EW-11-col-6 {
+    width: 100%;
+    float: left;
+}
+
+.oxi-addons-EW-11-bottom {}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-postiton {
+    order: 1
+}
+
+.oxi-addons-EW-11-image-position {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between
+}
+
+.oxi-addons-EW-11-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start
+}
+
+.oxi-addons-EW-11-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-DM-body {
+    display: table;
+    width: 70px;
+    height: 80px;
+    background: linear-gradient(45deg, rgba(11, 11, 161, 0.47) 0%, rgba(219, 66, 227, 0.50) 49%);
+    border: 0px dotted #f0ebeb;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 0px 0px 20px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-DM-cell {
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-D {
+    line-height: 1;
+    font-size: 35px;
+    color: #f2f2f2;
+    font-family: "Bree Serif";
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0px 0px 0px 0px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-M {
+    line-height: 1;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0px 0px 0px 0px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-timebody {
+    background: linear-gradient(rgba(55, 196, 182, 0.80), rgba(55, 196, 182, 0.80)), url("0") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 0px solid #f0ebeb;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 15px 10px 15px;
+    margin: 0px 0px 15px 25px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-time {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-contentbody {
+    width: 100%;
+    float: left;
+    background: #249169;
+    padding: 20px 20px 20px 20px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-heading {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    margin: 20px 0px 20px 0px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-address {
+    display: flex;
+    margin: 0px auto;
+    align-items: center
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-address-icon .oxi-icons {
+    background: #000000;
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px 100px 100px 100px;
+    margin-right: 10px;
+    justify-content: center;
+    font-size: 18px;
+    color: #ffffff
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-address-text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    margin: 10px 10px 10px 10px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-button {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 0px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-button-link {
+    font-size: 18px;
+    color: #ffffff;
+    border-bottom: 0px solid #2a4cbd;
+    padding: 0px 0px 3px 0px
+}
+
+.oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-button-link:hover {
+    color: #2a4cbd
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-EW-11-wrapper-style-11 {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-row {
+        border-radius: 5px 5px 5px 5px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-fullbody {
+        flex-direction: column
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-DM-body {
+        width: 70px;
+        height: 80px;
+        border-radius: 5px 5px 5px 5px;
+        margin: 25px 0px 0px 40px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-D {
+        font-size: 35px;
+        margin: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-M {
+        font-size: 20px;
+        margin: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-timebody {
+        border-radius: 5px 5px 5px 5px;
+        padding: 10px 10px 10px 10px;
+        margin: 235px 0px 30px 33px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-time {
+        font-size: 16px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-contentbody {
+        padding: 20px 20px 20px 20px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-heading {
+        font-size: 30px;
+        margin: 0px 0px 10px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-address-icon .oxi-icons {
+        width: 50px;
+        height: 50px;
+        padding: 10px 10px 10px 10px;
+        font-size: 18px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-address-text {
+        font-size: 16px;
+        margin: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-button {
+        padding: 10px 0px 0px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-button-link {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-EW-11-wrapper-style-11 {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-row {
+        border-radius: 5px 5px 5px 5px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-fullbody {
+        flex-direction: column
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-DM-body {
+        width: 70px;
+        height: 80px;
+        border-radius: 5px 5px 5px 5px;
+        margin: 10px 0px 0px 25px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-D {
+        font-size: 30px;
+        margin: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-M {
+        font-size: 18px;
+        margin: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-timebody {
+        border-radius: 5px 5px 5px 5px;
+        padding: 10px 10px 10px 10px;
+        margin: 130px 0px 15px 25px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-time {
+        font-size: 16px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-contentbody {
+        padding: 20px 20px 20px 20px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-heading {
+        font-size: 30px;
+        margin: 0px 0px 5px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-address-icon .oxi-icons {
+        width: 40px;
+        height: 40px;
+        padding: 10px 10px 10px 10px;
+        font-size: 18px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-address-text {
+        font-size: 16px;
+        margin: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-button {
+        padding: 10px 0px 0px 0px
+    }
+    .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-button-link {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+}
