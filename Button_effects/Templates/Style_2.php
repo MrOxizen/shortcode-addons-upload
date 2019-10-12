@@ -59,9 +59,9 @@ class Style_2 extends Templates {
         } elseif ($style['sa_alignments_select'] == 'br') {
             $alignments = 'bottom-right';
         }
-        
-        
-        
+
+
+
 
 
 
@@ -108,7 +108,7 @@ class Style_2 extends Templates {
 
             echo '<div class="sa_button_effect_temp_2   sa_o_f_m   sa_button_effect_temp_2_' . $key . '   "  ' . $this->animation_render('sa-be-main-box-animation', $style) . '>';
             echo '  <div class="oxi-button-hover-map-139">
-                        <div class="oxi-button-hover-map-body '.$style['sa_effects_select'].'">
+                        <div class="oxi-button-hover-map-body ' . $style['sa_effects_select'] . '">
                             <div class="oxi-button-hover">
                                 ' . $img . '
                                 <div class=" ' . $alignments . '   oxi-button-info">
@@ -132,45 +132,46 @@ class Style_2 extends Templates {
         $styledata = explode('|', $stylefiles[0]);
         echo oxi_addons_elements_stylejs('css/style', 'style', 'css', 'button-effects');
 
-        echo '  <div class="oxi-addons-container">
+    echo '  <div class="oxi-addons-container">
                 <div class="oxi-addons-row">';
 
-        foreach ($listdata as $value) {
-            $valuefile = explode('||#||', $value['files']);
-            echo '<div class="oxi-button-hover-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . '  ' . OxiAddonsAdminDefine($user) . '"  ' . OxiAddonsAnimation($styledata, 45) . '>';
-            echo '  <div class="oxi-button-hover-map-' . $oxiid . '">
-                    <div class="oxi-button-hover-map-body ' . $styledata[191] . '">
+    foreach ($listdata as $value) {
+        $valuefile = explode('||#||', $value['files']);
+        echo '<div class="oxi-button-hover-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . ' "  ' . OxiAddonsAnimation($styledata, 45) . '>';
+        echo '  <div class="oxi-button-hover-map-' . $oxiid . '">
+                    <div class="oxi-button-hover-map-body '.$styledata[191].'">
                         <div class="oxi-button-hover">
                             <div class="oxi-button-img">
                                  <img src="' . OxiAddonsUrlConvert($valuefile[9]) . '">
                             </div>
                             <div class="oxi-button-info">';
-            if ($valuefile[1] != '') {
-                echo '<a target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[3]) . '">' . oxi_addons_font_awesome($valuefile[1]) . '</a>';
-            }
-            if ($valuefile[5] != '') {
-                echo '<a target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">' . oxi_addons_font_awesome($valuefile[5]) . '</a>';
-            }
-            echo '              </div>
+        if ($valuefile[1] != '') {
+            echo '<a target="'.$styledata[11].'" href="' . OxiAddonsUrlConvert($valuefile[3]) . '">' . oxi_addons_font_awesome($valuefile[1]) . '</a>';
+        }
+        if ($valuefile[5] != '') {
+            echo '<a target="'.$styledata[11].'" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">' . oxi_addons_font_awesome($valuefile[5]) . '</a>';
+        }
+        echo '              </div>
                         </div>
                     </div>
                 </div>';
-            echo ' </div>';
-        }
+       
+        echo ' </div>';
+    }
 
-        echo '      </div>
+    echo '      </div>
             </div>';
-        $css = '.oxi-button-hover-' . $oxiid . '{
+    $css = '.oxi-button-hover-' . $oxiid . '{
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 29) . ';
             }
             .oxi-button-hover-' . $oxiid . ' .oxi-button-hover-map-' . $oxiid . '{
-                max-width: ' . $styledata[63] . 'px;
+                max-width: '.$styledata[63].'px;
                 width: 100%;
                 margin: 0 auto;
                 position: relative;
             }
             .oxi-button-hover-' . $oxiid . ' .oxi-button-hover-map-' . $oxiid . ':after{
-                padding-bottom: ' . ($styledata[65] / $styledata[63] * 100) . '%;
+                padding-bottom: '.($styledata[65] / $styledata[63] *100).'%;
                 content: "";
                 display: block;
             }
@@ -216,7 +217,7 @@ class Style_2 extends Templates {
             }
             .oxi-button-hover-' . $oxiid . ' .oxi-button-info{
                 display:flex;
-                ' . $styledata[5] . '
+                '.$styledata[5].'
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -245,27 +246,27 @@ class Style_2 extends Templates {
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 87) . ';
             }
             .oxi-button-hover-' . $oxiid . ' .oxi-button-hover a .oxi-icons{
-                background: ' . $styledata[113] . ';
-                color: ' . $styledata[111] . ';
+                background: '.$styledata[113].';
+                color: '.$styledata[111].';
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                font-size: ' . $styledata[103] . 'px;
+                font-size: '.$styledata[103].'px;
                 text-align: center;
                 text-decoration: none;
-                width: ' . $styledata[107] . 'px;
-                height: ' . $styledata[107] . 'px;
+                width: '.$styledata[107].'px;
+                height: '.$styledata[107].'px;
                 border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 115) . ';
-                border-color:' . $styledata[132] . ';
-                border-style:' . $styledata[131] . ';
+                border-color:'.$styledata[132].';
+                border-style:'.$styledata[131].';
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 135) . ';
                 margin:' . OxiAddonsPaddingMarginSanitize($styledata, 151) . ';
             }
             .oxi-button-hover-' . $oxiid . ' .oxi-button-hover:hover a .oxi-icons:hover{
-                background: ' . $styledata[169] . ';
-                color: ' . $styledata[167] . ';
-                border-color:' . $styledata[172] . ';
-                border-style:' . $styledata[171] . ';
+                background: '.$styledata[169].';
+                color: '.$styledata[167].';
+                border-color:'.$styledata[172].';
+                border-style:'.$styledata[171].';
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 175) . ';
             }
             @media only screen and (min-width : 669px) and (max-width : 993px){
@@ -295,9 +296,9 @@ class Style_2 extends Templates {
                 }
                 
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-hover a .oxi-icons{
-                    font-size: ' . $styledata[104] . 'px;
-                    width: ' . $styledata[108] . 'px;
-                    height: ' . $styledata[108] . 'px;
+                    font-size: '.$styledata[104].'px;
+                    width: '.$styledata[108].'px;
+                    height: '.$styledata[108].'px;
                     border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 116) . ';
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 136) . ';
                     margin:' . OxiAddonsPaddingMarginSanitize($styledata, 152) . ';
@@ -332,9 +333,9 @@ class Style_2 extends Templates {
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 89) . ';
                 }
                 .oxi-button-hover-' . $oxiid . ' .oxi-button-hover a .oxi-icons{
-                    font-size: ' . $styledata[105] . 'px;
-                    width: ' . $styledata[109] . 'px;
-                    height: ' . $styledata[109] . 'px;
+                    font-size: '.$styledata[105].'px;
+                    width: '.$styledata[109].'px;
+                    height: '.$styledata[109].'px;
                     border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 117) . ';
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 137) . ';
                     margin:' . OxiAddonsPaddingMarginSanitize($styledata, 153) . ';
@@ -343,7 +344,7 @@ class Style_2 extends Templates {
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 177) . ';
                 }
             }';
-        wp_add_inline_style('oxi-addons', $css);
+     wp_add_inline_style('shortcode-addons-style', $css);
     }
 
 }

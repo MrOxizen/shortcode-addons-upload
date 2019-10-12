@@ -417,7 +417,7 @@ class Style_11 extends Templates {
             }
 
 ';
-        wp_add_inline_style('oxi-addons', $css);
+ wp_add_inline_style('shortcode-addons-style', $css);
     }
 
 }

@@ -344,7 +344,7 @@ class Style_3 extends Templates {
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 177) . ';
                 }
             }';
-        wp_add_inline_style('oxi-addons', $css);
+ wp_add_inline_style('shortcode-addons-style', $css);
     }
 
 }
