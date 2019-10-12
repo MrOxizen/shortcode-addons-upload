@@ -1,0 +1,136 @@
+.oxi-hover-effects a,
+.oxi-hover-effects a:hover,
+.oxi-hover-effects a:focus, 
+.oxi-hover-effects a:active{
+    cursor: pointer;
+    box-shadow: none !important;
+}
+.oxi-hover-effects .oxi-ih-img:before{
+    z-index: +1;
+}
+.oxi-hover-effects .oxi-ih-img img{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    left: 0;   
+    top: 0;
+}
+.oxi-hover-effects .oxi-hover-img:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+    z-index: +1;
+}
+.oxi-hover-effects  img{
+    box-shadow: none !important;
+}
+.oxi-hover-effects:hover{
+    z-index: 5;
+}
+.oxi-hover-effects:hover .oxi-hover-info{
+    z-index: +1;
+}
+   
+
+.oxi-hover-effects .ihewc-fade-up {
+    -webkit-transform: translate(0, 25px);
+    -moz-transform: translate(0, 25px);
+    -ms-transform: translate(0, 25px);
+    -o-transform: translate(0, 25px);
+    transform: translate(0, 25px);
+}
+.oxi-hover-effects .ihewc-fade-down {
+    -webkit-transform: translate(0, -25px);
+    -moz-transform: translate(0, -25px);
+    -ms-transform: translate(0, -25px);
+    -o-transform: translate(0, -25px);
+    transform: translate(0, -25px);
+}
+.oxi-hover-effects .ihewc-fade-left {
+    -webkit-transform: translate(25px, 0);
+    -moz-transform: translate(25px, 0);
+    -ms-transform: translate(25px, 0);
+    -o-transform: translate(25px, 0);
+    transform: translate(25px, 0);
+}
+.oxi-hover-effects .ihewc-fade-right {
+    -webkit-transform: translate(-25px, 0);
+    -moz-transform: translate(-25px, 0);
+    -ms-transform: translate(-25px, 0);
+    -o-transform: translate(-25px, 0);
+    transform: translate(-25px, 0);
+}
+.oxi-hover-effects .ihewc-fade-up-big {
+    -webkit-transform: translate(0, 300%);
+    -moz-transform: translate(0, 300%);
+    -ms-transform: translate(0, 300%);
+    -o-transform: translate(0, 300%);
+    transform: translate(0, 300%);
+}
+.oxi-hover-effects .ihewc-fade-down-big {
+    -webkit-transform: translate(0, -300%);
+    -moz-transform: translate(0, -300%);
+    -ms-transform: translate(0, -300%);
+    -o-transform: translate(0, -300%);
+    transform: translate(0, -300%);
+}
+.oxi-hover-effects .ihewc-fade-left-big {
+    -webkit-transform: translate(150%, 0);
+    -moz-transform: translate(150%, 0);
+    -ms-transform: translate(150%, 0);
+    -o-transform: translate(150%, 0);
+    transform: translate(150%, 0);
+}
+.oxi-hover-effects .ihewc-fade-right-big{
+    -webkit-transform: translate(-150%, 0);
+    -moz-transform: translate(-150%, 0);
+    -ms-transform: translate(-150%, 0);
+    -o-transform: translate(-150%, 0);
+    transform: translate(-150%, 0);
+}
+.oxi-hover-effects .ihewc-zoom-in {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+}
+.oxi-hover-effects .ihewc-zoom-out {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.oxi-hover-effects .ihewc-flip-x{
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+.oxi-hover-effects .ihewc-flip-y {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+}
+.oxi-hover-effects:hover .ihewc-fade-up,
+.oxi-hover-effects:hover .ihewc-fade-down,
+.oxi-hover-effects:hover .ihewc-fade-left,
+.oxi-hover-effects:hover .ihewc-fade-right,
+.oxi-hover-effects:hover .ihewc-fade-up-big,
+.oxi-hover-effects:hover .ihewc-fade-down-big,
+.oxi-hover-effects:hover .ihewc-fade-left-big,
+.oxi-hover-effects:hover .ihewc-fade-right-big,
+.oxi-hover-effects:hover .ihewc-zoom-in,
+.oxi-hover-effects:hover .ihewc-zoom-out,
+.oxi-hover-effects:hover .ihewc-flip-x,
+.oxi-hover-effects:hover .ihewc-flip-y{
+    -webkit-transform: translate(0, 0) scale(1) rotate(0);
+    -moz-transform: translate(0, 0) scale(1) rotate(0);
+    -ms-transform: translate(0, 0) scale(1) rotate(0);
+    -o-transform: translate(0, 0) scale(1) rotate(0);
+    transform: translate(0, 0) scale(1) rotate(0);
+    opacity: 1;
+}
