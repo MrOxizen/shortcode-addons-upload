@@ -19,18 +19,10 @@ class Style_6 extends AdminStyle {
 
     public function register_controls() {
 
-        $this->start_section_header(
-                'shortcode-addons-start-tabs', [
-            'options' => [
-                'general-settings' => esc_html__('General', SHORTCODE_ADDOONS),
-            ]
-                ]
-        );
+        
         $this->start_section_tabs(
                 'shortcode-addons-start-tabs', [
-            'condition' => [
-                'shortcode-addons-start-tabs' => 'general-settings'
-            ]
+            
                 ]
         );
 
@@ -41,7 +33,7 @@ class Style_6 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Add New Content', SHORTCODE_ADDOONS),
-            'showing' => true,
+            'showing' => false,
                 ]
         );
         $this->add_repeater_control(
@@ -275,7 +267,7 @@ class Style_6 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Image Settings', SHORTCODE_ADDOONS),
-            'showing' => false,
+            'showing' => true,
                 ]
         );
         $this->add_responsive_control(
@@ -432,7 +424,7 @@ class Style_6 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
-            'showing' => true,
+            'showing' => false,
                 ]
         );
         $this->add_responsive_control(
