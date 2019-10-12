@@ -17,20 +17,5 @@ class Hover_effects extends Elements_Frontend {
         return array(
           );
     }
-     public function template_rendar($data = array()) {
-
-        return __('<div class="oxi-addons-col-6" id="' . $data['style']['style_name'] . '">
-                                <div class="oxi-addons-style-preview">
-                                    <div class="oxi-addons-style-preview-top oxi-addons-center oxiequalHeight">
-                                    ' . ($this->Shortcode($data)) . '
-                                    </div>
-                                    <div class="oxi-addons-style-preview-bottom">
-                                        <div class="oxi-addons-style-preview-bottom-left">
-                                        ' . $this->ShortcodeName($data['style']['style_name']) . '
-                                        </div>
-                                        ' . $this->ShortcodeControl($data) . '
-                                    </div>
-                                </div>
-                             </div>', SHORTCODE_ADDOONS);
-    }
+   
 }
