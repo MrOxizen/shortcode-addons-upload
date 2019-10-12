@@ -4,4 +4,4 @@
   Version: 1.5
  */
 
-return array('2.0.0', 'Dynamic Contents', true);
+return array('2.0.0', 'Image Effects', true);
