@@ -1,0 +1,206 @@
+/*.oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-190 .oxi-addons-EW-7-image {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/01/fireworks-846063_1920.jpg');
+    width: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}
+
+.oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-191 .oxi-addons-EW-7-image {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/01/pexels-photo-167589.jpeg');
+    width: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}
+
+.oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-192 .oxi-addons-EW-7-image {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/01/dinner-1284245_1920.jpg');
+    width: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}
+
+.oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-193 .oxi-addons-EW-7-image {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/01/audience-868074_1920.jpg');
+    width: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}*/
+
+.oxi-addons-EW-7-wrapper-style-7 {
+    width: 100%;
+    float: left;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-image {
+    border: 0px solid #e3d3d3;
+    border-radius: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(112, 93, 93, 0.91);
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-image::after {
+    display: inline-block;
+    content: "";
+    padding: 25%
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-body {
+    width: 100%;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    background: rgba(5, 5, 5, 0.76);
+    padding: 15px 10px 15px 15px
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-H {
+    width: 100%;
+    float: left;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 8px 0px
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-time {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #f0eded;
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 5px 0px
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-icon {
+    display: inline;
+    padding-right: 5px
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-time-text {
+    display: inline;
+    margin: 0
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-address {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #f0eded;
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-icon {
+    display: inline
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-text {
+    display: inline
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-link {
+    display: inline
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-icon {
+    display: inline
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-icon-text {
+    display: inline
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-link {
+    font-size: px;
+    padding: 0px 0px 0px 10px
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-icons {
+    transition: none
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-link-C {
+    color: #f0eded;
+    transition: none
+}
+
+.oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-link:hover .oxi-addons-EW-7-link-C {
+    color: #0d31a8
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-EW-7-wrapper-style-7 {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-image {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-body {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-H {
+        font-size: 24px;
+        padding: 0px 0px 8px 0px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-time {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-address {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-link {
+        font-size: px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-EW-7-wrapper-style-7 {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-image {
+        padding: OxiAddonsEW-7-G-M-bottom px OxiAddonsEW-7-B-Shadow px OxiAddonsEW-7-G-M-left px OxiAddonsEW-7-G-M-right px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-body {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-H {
+        font-size: 20px;
+        padding: 0px 0px 8px 0px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-time {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-address {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-7-wrapper-style-7 .oxi-addons-EW-7-link {
+        font-size: px;
+        padding: 0px 0px 0px 0px
+    }
+}

@@ -61,7 +61,7 @@ class Style_9 extends Templates {
         }
         if (!empty($style['sa_oh_button'])) {
             $button = '<div class="oxi-addonsOH-SX-button">
-                        <a  class="oxi-addonsOH-SX-button-link">' . $this->text_render($style['sa_oh_button']) . '</a>
+                        <a ' . $this->url_render('sa_oh_btn_link', $style) . ' class="oxi-addonsOH-SX-button-link">' . $this->text_render($style['sa_oh_button']) . '</a>
                     </div>';
         }
         echo '</div>

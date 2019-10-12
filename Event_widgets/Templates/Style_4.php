@@ -84,7 +84,7 @@ class Style_4 extends Templates {
                                     ' . $this->text_render($listitemdata['sa_event_t_location']) . '
                                  </div>';
             endif;
-            echo '<div class="oxi-addons-EV-style-4">
+            echo '<div class="oxi-addons-EV-style-4 .oxi-addons-EW-wrapper-style-4-'.$key.'">
                 <div class="oxi-addons-EV-row" ' . $this->animation_render('sa_event_widgets_animation', $style) . '>
                     <div class="oxi-addons-EV-head">
                         ' . $imagepositionleft . '

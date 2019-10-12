@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_3
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_3 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -99,7 +99,7 @@ class Style_1 extends Templates
                ' . $stop . '
                ' . $next . '  
             </div>
-           ' . $audio_progress . '
+           
         ';
         }
         //main
@@ -115,37 +115,31 @@ class Style_1 extends Templates
         if (array_key_exists('sa_ap_list_playlist_on_off', $style) && $style['sa_ap_list_playlist_on_off'] == '0') {
             $playlist .= 'sa_playlist_hide';
         }
-
-        if ($style['sa_ap_list_title_text'] != '') :
-            $title .= '<div class="sa_addons_ap_list_title">' . $this->text_render($style['sa_ap_list_title_text']) . '</div>';
-        endif;
-        echo '<div class="sa_addons_ap_list_container_style_1 ">
+        echo '<div class="sa_addons_ap_list_container_style_3 ">
                 <div class="sa_addons_ap_list_main " ' . $this->animation_render('sa_ap_list_animation', $style) . '>
                     <div id="jquery_jplayer_' . $oxiid . '" class="jp-jplayer"></div> 
                     <div id="jp_container_' . $oxiid . '" class="jp-audio" role="application" aria-label="media player">
                         <div class="sa_addons_ap_list_img"> 
-                            <div class="sa_addons_ap_list_main_title"> 
-                            ' . $title . '
-                                <div class="sa_addons_album_name"> </div>
+                            <div class="jp-type-playlist"> 
+                                <div class="jp-controls-holder">
+                                ' . $player_control . ' 
+                                </div>  
                             </div>
+                        ' . $time_control . ' 
+                        ' . $audio_progress . '  
                         </div>  
 
                         <div class="sa_addons_ap_list_main_content">
                             <div class="jp-type-playlist">
                                 <div class="jp-gui jp-interface">
-                                ' . $suffle_repeat . '
-                                ' . $volume_control . '
-                                
-                                    <div class="jp-controls-holder">
-                                        ' . $player_control . '
-                                        ' . $time_control . ' 
-                                    </div> 
-                                </div>
-                                <div class="jp-playlist ' . $playlist . '">
+                                    ' . $suffle_repeat . ' 
+                                    <div class="jp-playlist ' . $playlist . '">
                                         <ul>
                                             <li>&nbsp;</li>
                                         </ul>
                                     </div>
+                                    ' . $volume_control . '
+                                </div>
                                 <div class="jp-no-solution">
                                     <span>Update Required</span>
                                     To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
@@ -156,43 +150,43 @@ class Style_1 extends Templates
                 </div>
             </div>
             ';
-        $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-previous::before {
+        $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-type-playlist .jp-previous::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_pre_icon'] != '' ? $this->style['sa_ap_list_audio_pre_icon'] : '') . '" !important;
             ' . $previous_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-play::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-type-playlist .jp-play::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_play_icon'] != '' ? $this->style['sa_ap_list_audio_play_icon'] : '') . '" !important;
             ' . $play_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-state-playing div.jp-type-playlist .jp-play::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-state-playing div.jp-type-playlist .jp-play::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_paus_icon'] != '' ? $this->style['sa_ap_list_audio_paus_icon'] : '') . '" !important;
             ' . $pause_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-stop::before, .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-stop:focus::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-type-playlist .jp-stop::before, .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-type-playlist .jp-stop:focus::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_stop_icon'] != '' ? $this->style['sa_ap_list_audio_stop_icon'] : '') . '" !important;
             ' . $stop_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-next::before, .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-next:focus::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-type-playlist .jp-next::before, .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-type-playlist .jp-next:focus::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_next_icon'] != '' ? $this->style['sa_ap_list_audio_next_icon'] : '') . '" !important;
             ' . $next_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-audio .jp-volume-controls .jp-mute::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-audio .jp-volume-controls .jp-mute::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_min_icon'] != '' ? $this->style['sa_ap_list_audio_min_icon'] : '') . '" !important;
             ' . $min_volume_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-state-muted .jp-volume-controls .jp-mute::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-state-muted .jp-volume-controls .jp-mute::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_mut_icon'] != '' ? $this->style['sa_ap_list_audio_mut_icon'] : '') . '" !important;
             ' . $mute_volume_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-volume-controls .jp-volume-max::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-volume-controls .jp-volume-max::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_max_icon'] != '' ? $this->style['sa_ap_list_audio_max_icon'] : '') . '" !important;
             ' . $max_volume_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-repeat::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-repeat::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_rep_icon'] != '' ? $this->style['sa_ap_list_audio_rep_icon'] : '') . '" !important;
             ' . $repeat_type . ';
         }
-        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-shuffle::before {
+        .' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_3 .jp-shuffle::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_shuff_icon'] != '' ? $this->style['sa_ap_list_audio_shuff_icon'] : '') . '" !important;
             ' . $shuffle_type . ';
         }
@@ -211,36 +205,34 @@ class Style_1 extends Templates
         $styledata = $this->style;
         $oxiid = $this->oxiid;
         $all_data = (array_key_exists('sa_ap_list_data', $styledata) && is_array($styledata['sa_ap_list_data'])) ? $styledata['sa_ap_list_data'] : [];
-        $jquery .= '
-            var myPlaylist = new jPlayerPlaylist({
-                jPlayer: "#jquery_jplayer_' . $oxiid . '",
-                cssSelectorAncestor: "#jp_container_' . $oxiid . '", 
-            }, [';
-
+        $jquery .= 'var myPlaylist = new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_' . $oxiid . '",
+            cssSelectorAncestor: "#jp_container_' . $oxiid . '", 
+        }, [  
+            ';
         foreach ($all_data as $value) {
-            $jquery .= '{
+            $jquery .= '		{
                         title:"' . $this->text_render($value['sa_ap_list_album_text']) . '",
                         mp3:"' . $this->text_render($value['sa_addons_ap_list_mp3_url']) . '", 
-                    },
+                                },  
                     ';
         }
         $jquery .= '
-                ], {
-                    supplied: "mp3",
-                    wmode: "window",
-                    useStateClassSkin: true,
-                    autoBlur: false, 
-                    keyEnabled: true, 
-                    verticalVolume: true, 
-                    play: function(e) {
-                        jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(e.jPlayer.status.media.title);
-                    },
-                    ready: function(){
-                        var getCurrentSong = jQuery("#jp_container_' . $oxiid . '").find(".jp-playlist-item.jp-playlist-current").text();
-                        jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(getCurrentSong);
-                    },
-                    audioFullScreen: true
-                });
+            ], {
+                supplied: "mp3",
+                wmode: "window",
+                useStateClassSkin: true,
+                autoBlur: false, 
+                keyEnabled: true,  
+                play: function(e) {
+                    jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(e.jPlayer.status.media.title);
+                },
+                ready: function(){
+                    var getCurrentSong = jQuery("#jp_container_' . $oxiid . '").find(".jp-playlist-item.jp-playlist-current").text();
+             jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(getCurrentSong);
+                },
+                audioFullScreen: true
+            });    
         ';
         return $jquery;
     }
@@ -269,14 +261,14 @@ class Style_1 extends Templates
                     <ul class="oxi-ul">';
         foreach ($listdata as $value) {
             $data = explode('||#||', $value['files']);
-            echo '<li class=""> ' . $data[3] . '';
+            echo '<li class=" "> ' . $data[3] . '';
         }
         echo '</li>';
         echo ' </ul>
                 </div>
             </div>';
-
         $suffle_repeat = $volume_control = $player_control = $time_control = $progress = $playlist = $title = $repeat = $shuffle = '';
+
         $previous_type = $play_type = $pause_type = $stop_type = $next_type = $min_volume_type = $mute_volume_type = $max_volume_type = $repeat_type = $shuffle_type = '';
         if ($styledata[804] == 'regular') {
             $previous_type = 'font-weight: 500;';
@@ -328,11 +320,7 @@ class Style_1 extends Templates
         } else {
             $shuffle_type = 'font-weight: 900;';
         }
-        if ($stylefiles[2] != '') {
-            $title = '
-              <h1 class="oxi-title">  ' . OxiAddonsTextConvert($stylefiles[2]) . ' </h1> 
-        ';
-        }
+
         if ($styledata[794] == 'true') {
             $repeat = '
               <button class="jp-repeat" role="button" tabindex="0"></button>
@@ -406,8 +394,7 @@ class Style_1 extends Templates
                ' . $play . '
                ' . $stop . '
                ' . $next . '  
-            </div>
-           ' . $audio_progress . '
+            </div> 
         ';
         }
         if ($styledata[90] == 'true') {
@@ -423,44 +410,40 @@ class Style_1 extends Templates
         }
 
         echo '<div class="oxi-addons-wrapper-' . $oxiid . ' ' . OxiAddonsAnimation($styledata, 43) . '">
-                <div class="oxi-addons-audio-playlist">
-                    <div id="jquery_jplayer_' . $oxiid . '" class="jp-jplayer">
-                    </div> 
-                        <div id="jp_container_' . $oxiid . '" class="jp-audio" role="application" aria-label="media player">
-                            <div class="oxi-addons-audio-img"> 
-                                <div class="oxi-addons-main-title"> 
-                                ' . $title . '
-                                    <div class="oxi-album-name"> </div>
-                                </div>
-                            </div>  
-
-                            <div class="oxi-addons-audio-main">
-                                <div class="jp-type-playlist">
-                                    <div class="jp-gui jp-interface">
-                                    ' . $suffle_repeat . '
-                                    ' . $volume_control . '
-                                    
-                                        <div class="jp-controls-holder">
-                                            ' . $player_control . '
-                                            ' . $time_control . ' 
-                                        </div> 
-                                    </div>
-                                    <div class="jp-playlist ' . $playlist . '">
-                                            <ul>
-                                                <li>&nbsp;</li>
-                                            </ul>
-                                        </div>
-                                    <div class="jp-no-solution">
-                                        <span>Update Required</span>
-                                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-                                    </div>
-                                </div>
-                            </div> 
+           <div class="oxi-addons-audio-playlist">
+             <div id="jquery_jplayer_' . $oxiid . '" class="jp-jplayer"></div> 
+                <div id="jp_container_' . $oxiid . '" class="jp-audio" role="application" aria-label="media player"> 
+                 <div class="oxi-addons-audio-img">  
+                    <div class="jp-type-playlist"> 
+                                 <div class="jp-controls-holder">
+                                    ' . $player_control . ' 
+                                 </div>  
                         </div>
+                    ' . $time_control . ' 
+                    ' . $audio_progress . '
+                </div>   
+                <div class="oxi-addons-audio-main">
+                         <div class="jp-type-playlist">
+                            <div class="jp-gui jp-interface"> 
+                               ' . $suffle_repeat . ' 
+                                <div class="jp-playlist ' . $playlist . '">
+                                        <ul>
+                                            <li>&nbsp;</li>
+                                        </ul>
+                                </div>
+                               ' . $volume_control . ' 
+                            </div> 
+                            <div class="jp-no-solution">
+                                <span>Update Required</span>
+                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
-     </div>
- </div>
+         </div>
+    </div>
+</div>
         ';
 
         $jquery .= '
@@ -469,14 +452,12 @@ class Style_1 extends Templates
         cssSelectorAncestor: "#jp_container_' . $oxiid . '", 
 	}, [  
         ';
-
         foreach ($listdata as $value) {
             $data = explode('||#||', $value['files']);
             $jquery .= '		{
                             title:"' . OxiAddonsTextConvert($data[3]) . '",
                             mp3:"' . OxiAddonsUrlConvert($data[1]) . '", 
-                        },  
-                ';
+                        },';
         }
         $jquery .= '
         ], {
@@ -484,15 +465,14 @@ class Style_1 extends Templates
             wmode: "window",
             useStateClassSkin: true,
             autoBlur: false, 
-            keyEnabled: true, 
-            verticalVolume: true, 
+            keyEnabled: true,  
             play: function(e) {
                 jQuery("#jp_container_' . $oxiid . ' .oxi-album-name").html(e.jPlayer.status.media.title);
 			},
 			ready: function(){
                 var getCurrentSong = jQuery("#jp_container_' . $oxiid . '").find(".jp-playlist-item.jp-playlist-current").text();
-				jQuery("#jp_container_' . $oxiid . ' .oxi-album-name").html(getCurrentSong);
-			},
+		 jQuery("#jp_container_' . $oxiid . ' .oxi-album-name").html(getCurrentSong);
+            },
             audioFullScreen: true
         });    
     ';
@@ -531,13 +511,13 @@ class Style_1 extends Templates
                     width: 100%; 
                     float: left; 
                     margin: 0;
-                    padding: 0; 
+                    padding: 0;
             }
             .oxi-addons-show-playlist-' . $oxiid . '  .oxi-addons-playlist .oxi-ul li{
                  background: #f6f6f6;
                  padding: 5px 10px;
                  color: #333;
-            } 
+            }
             .oxi-addons-wrapper-' . $oxiid . '{ 
                 width: 100%;
                 float: left; 
@@ -561,15 +541,18 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-toggles button,
             .oxi-addons-wrapper-' . $oxiid . ' .jp-volume-controls button { 
                 text-indent: 0px !important; 
-            }   
+            }  
             .oxi-addons-wrapper-' . $oxiid . ' .jp-audio, .jp-audio-stream{ 
-                border-top: 1px solid #554461;
-                border-left: 1px solid #554461; 
-                border-right: 1px solid #180a1f;
-                border-bottom: 1px solid #180a1f; 
+                border-top: 0px solid #554461;
+                border-left: 0px solid #554461; 
+                border-right: 0px solid #180a1f;
+                border-bottom: 0px solid #180a1f; 
                 background-color: #a63eee;
                 padding: 0px;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
             }
             .oxi-addons-wrapper-' . $oxiid . ' .jp-interface {
                 position: static;
@@ -579,17 +562,17 @@ class Style_1 extends Templates
             }
             .oxi-addons-wrapper-' . $oxiid . ' .jp-controls {
                 background: none;
-                 padding: 0;
+                  padding: 0;
                 overflow: hidden;
                 width: 100%;
                 height: auto;
                 display: flex; 
                 justify-content: center;
-                 align-items: center;
+                align-items: center;
             }
             .oxi-addons-wrapper-' . $oxiid . ' .jp-volume-bar-value{
                 position: relative; 
-            }  
+            } 
             .oxi-addons-wrapper-' . $oxiid . ' .jp-audio .jp-volume-controls .jp-mute,
             .oxi-addons-wrapper-' . $oxiid . ' .jp-audio .jp-volume-controls .jp-mute:focus,
             .oxi-addons-wrapper-' . $oxiid . ' .jp-state-muted .jp-volume-controls .jp-mute,
@@ -626,7 +609,7 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-audio .jp-volume-controls .jp-mute::before{
                 content: "\\' . $stylefiles[14] . '";
                 font-family: "Font Awesome\ 5 Free";  
-              ' . $min_volume_type . '
+                ' . $min_volume_type . '
                 color: ' . $styledata[402] . ' !important; 
                 font-size: ' . $styledata[398] . 'px;
                 position: absolute;
@@ -636,7 +619,7 @@ class Style_1 extends Templates
             }
             .oxi-addons-wrapper-' . $oxiid . ' .jp-state-muted .jp-volume-controls .jp-mute::before{
                 content: "\\' . $stylefiles[16] . '";
-                  ' . $mute_volume_type . '
+                      ' . $mute_volume_type . '
                 color: ' . $styledata[420] . ' !important; 
             } 
             .oxi-addons-wrapper-' . $oxiid . ' .jp-audio .jp-volume-controls .jp-volume-max, .jp-audio-stream .jp-volume-controls .jp-volume-max{
@@ -650,7 +633,7 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-volume-controls .jp-volume-max::before{
                 content: "\\' . $stylefiles[22] . '";
                 font-family: "Font Awesome\ 5 Free";  
-                 ' . $max_volume_type . '
+                ' . $max_volume_type . '
                 color: ' . $styledata[452] . ' !important; 
                 font-size: ' . $styledata[448] . 'px;
                 position: absolute;
@@ -662,27 +645,17 @@ class Style_1 extends Templates
                 color: ' . $styledata[694] . ' !important; 
             }
             .oxi-addons-wrapper-' . $oxiid . ' .jp-audio .jp-volume-controls, .jp-audio-stream .jp-volume-controls {
-                height: auto;
+                height: auto; 
+                width: 100%; 
                 display: flex;
-                width: 100%;
-                justify-content: space-around;
-                justify-content: center; 
-                flex-direction: column-reverse; 
                 align-items: center;
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-jp-main {  
-                display: flex; 
-                flex-wrap: wrap; 
-                justify-content: center;
-                position: absolute;
-                right: 10px;
-                top: 20px;
-            }
+            } 
             .oxi-addons-wrapper-' . $oxiid . ' .jp-volume-bar {
                 background: ' . $styledata[504] . ';
                 position: static;
                 width: ' . $styledata[496] . 'px;
                 height: ' . $styledata[500] . 'px;
+                max-width: 100%;
                 padding: 0 !important;
                 overflow: hidden;
                 cursor: pointer;
@@ -699,6 +672,10 @@ class Style_1 extends Templates
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
             }
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-jp-time{
                 width: 100%;
@@ -733,7 +710,7 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-type-playlist .jp-previous::before{
                 content: "\\' . $stylefiles[4] . '";
                 font-family: "Font Awesome\ 5 Free";  
-                 ' . $previous_type . '
+                ' . $previous_type . '
                 color: ' . $styledata[98] . ' !important; 
                 font-size: ' . $styledata[94] . 'px;
                 position: absolute;
@@ -751,14 +728,13 @@ class Style_1 extends Templates
                 width: ' . $styledata[170] . 'px;
                 height: ' . $styledata[174] . 'px;
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 152) . ';
-                    ' . OxiAddonsBoxShadowSanitize($styledata, 764) . ';
-            } 
-
+                ' . OxiAddonsBoxShadowSanitize($styledata, 764) . ';
+            }  
             .oxi-addons-wrapper-' . $oxiid . ' .jp-type-playlist .jp-play::before,
             .oxi-addons-wrapper-' . $oxiid . ' .jp-state-playing div.jp-type-playlist .jp-play::before {
                 content: "\\' . $stylefiles[6] . '";
                 font-family: "Font Awesome\ 5 Free";  
-                 ' . $play_type . '
+                ' . $play_type . '
                 color: ' . $styledata[148] . ' !important; 
                 font-size: ' . $styledata[144] . 'px;
                 position: absolute;
@@ -768,7 +744,7 @@ class Style_1 extends Templates
             }  
             .oxi-addons-wrapper-' . $oxiid . ' .jp-state-playing div.jp-type-playlist .jp-play::before{
                 content: "\\' . $stylefiles[8] . '";
-                 ' . $pause_type . '
+                  ' . $pause_type . '
                 color: ' . $styledata[168] . ' !important; 
             }   
             .oxi-addons-wrapper-' . $oxiid . ' .jp-type-playlist .jp-stop,
@@ -778,7 +754,7 @@ class Style_1 extends Templates
                 width: ' . $styledata[220] . 'px;
                 height: ' . $styledata[224] . 'px;
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 204) . ';
-                    ' . OxiAddonsBoxShadowSanitize($styledata, 770) . ';
+                ' . OxiAddonsBoxShadowSanitize($styledata, 770) . ';
             }
             .oxi-addons-wrapper-' . $oxiid . ' .jp-type-playlist .jp-stop::before,
             .oxi-addons-wrapper-' . $oxiid . ' .jp-type-playlist .jp-stop:focus::before {
@@ -808,7 +784,7 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-type-playlist .jp-next:focus::before {
                 content: "\\' . $stylefiles[12] . '";
                 font-family: "Font Awesome\ 5 Free";  
-                 ' . $next_type . '
+                ' . $next_type . '
                 color: ' . $styledata[250] . ' !important; 
                 font-size: ' . $styledata[246] . 'px;
                 position: absolute;
@@ -818,7 +794,8 @@ class Style_1 extends Templates
             } 
             .oxi-addons-wrapper-' . $oxiid . ' .jp-type-playlist .jp-next:focus::before{ 
                 color: ' . $styledata[252] . ' !important; 
-            }  
+            } 
+
             .oxi-addons-wrapper-' . $oxiid . ' .jp-repeat{
                 background: ' . $styledata[572] . ' !important; 
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 574) . ';
@@ -830,7 +807,7 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-repeat::before{ 
                 content: "\\' . $stylefiles[18] . '";
                 font-family: "Font Awesome\ 5 Free";  
-             ' . $repeat_type . '
+                ' . $repeat_type . '
                 color: ' . $styledata[544] . ' !important; 
                 font-size: ' . $styledata[540] . 'px;
                 position: absolute;
@@ -840,7 +817,8 @@ class Style_1 extends Templates
             }
             .oxi-addons-wrapper-' . $oxiid . ' .jp-repeat:focus::before{  
                 color: ' . $styledata[546] . ' !important; 
-            } 
+            }
+
             .oxi-addons-wrapper-' . $oxiid . ' .jp-shuffle{
                 background: ' . $styledata[622] . ' !important; 
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 624) . ';
@@ -852,7 +830,7 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-shuffle::before{ 
                 content: "\\' . $stylefiles[20] . '";
                 font-family: "Font Awesome\ 5 Free";  
-                 ' . $shuffle_type . '
+                ' . $shuffle_type . '
                 color: ' . $styledata[594] . ' !important; 
                 font-size: ' . $styledata[590] . 'px;
                 position: absolute;
@@ -892,7 +870,7 @@ class Style_1 extends Templates
                 width: 0;
                 height: 100%;
                 overflow: hidden;
-            } 
+            }  
             .oxi-addons-wrapper-' . $oxiid . ' .jp-playlist{
                 background: ' . $styledata[640] . ' !important;  
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 642) . ';
@@ -910,8 +888,9 @@ class Style_1 extends Templates
             .oxi-addons-wrapper-' . $oxiid . ' .jp-playlist li .jp-playlist-item{  
                 font-size: ' . $styledata[724] . 'px;
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 668) . '!important;
-                  color: ' . $styledata[660] . ' !important;  
-            }   
+                color: ' . $styledata[660] . ' !important;  
+            }  
+
             .oxi-addons-wrapper-' . $oxiid . ' div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
                 background: ' . $styledata[686] . ' !important;   
                 margin: 0px; 
@@ -929,7 +908,7 @@ class Style_1 extends Templates
                 background: ' . $styledata[802] . '; 
             }
             .oxi-addons-wrapper-' . $oxiid . ' div.jp-type-playlist div.jp-playlist li.jp-playlist-current a.jp-playlist-current {
-                color: ' . $styledata[688] . '; 
+                color: ' . $styledata[688] . '!important;   
                 font-size: ' . $styledata[724] . 'px;
             }
             .oxi-addons-wrapper-' . $oxiid . ' div.jp-type-playlist div.jp-playlist .jp-playlist-item:hover {
@@ -940,32 +919,24 @@ class Style_1 extends Templates
                 float: left; 
                 position: relative;
                 ' . OxiAddonsBGImage($styledata, 3) . '; 
-                background-position: center center; 
-                display: flex; 
-                align-items: flex-end;
-                height: ' . $styledata[690] . 'px;
+                background-position: center center;  
                 max-height: 100%;
+                display: flex; 
+                align-items: center;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: ' . $styledata[690] . 'px;
+            }  
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-img .oxi-addons-img{
+                width: 100%;
+                height: 100%;
             }
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main-title{
                 width: 100%;
                 float: left;
             }
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-title{
-                width: 100%;
-                float: left;
-                font-size: ' . $styledata[54] . 'px;
-                ' . OxiAddonsFontSettings($styledata, 58) . ';
-                color: ' . $styledata[64] . ';
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 66) . ';
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-album-name{
-                width: 100%;
-                float: left;
-                font-size: ' . $styledata[728] . 'px;
-                ' . OxiAddonsFontSettings($styledata, 732) . ';
-                color: ' . $styledata[738] . ';
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 740) . ';
-            } 
+            
+
             @media only screen and (min-width : 669px) and (max-width : 993px){ 
                 .oxi-addons-wrapper-' . $oxiid . '{ 
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 12) . '; 
@@ -1076,6 +1047,7 @@ class Style_1 extends Templates
                 .oxi-addons-wrapper-' . $oxiid . ' .jp-progress { 
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 307) . ';
                     width: ' . $styledata[297] . 'px;
+                    max-width: 100%;
                     height: ' . $styledata[301] . 'px;
                     margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 323) . '; 
                 }   
@@ -1093,16 +1065,9 @@ class Style_1 extends Templates
                 }
                 
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-img{ 
-                      height: ' . $styledata[691] . 'px;
+                     height: ' . $styledata[691] . 'px;
                 }  
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-title{ 
-                    font-size: ' . $styledata[55] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 67) . ';
-                } 
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-album-name{ 
-                    font-size: ' . $styledata[729] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 741) . ';
-                }
+              
                 .oxi-addons-wrapper-' . $oxiid . ' div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before { 
                     width: ' . $styledata[799] . 'px; 
                 }
@@ -1233,19 +1198,13 @@ class Style_1 extends Templates
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 670) . '; 
                 } 
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-audio-img{ 
-                  height: ' . $styledata[692] . 'px;
+                    height: ' . $styledata[692] . 'px;
                 }  
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-title{ 
-                    font-size: ' . $styledata[56] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 68) . ';
-                } 
+            
                 .oxi-addons-wrapper-' . $oxiid . ' div.jp-type-playlist div.jp-playlist li.jp-playlist-current a.jp-playlist-current {
                     font-size: ' . $styledata[726] . 'px;
                 } 
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-album-name{ 
-                    font-size: ' . $styledata[730] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 742) . ';
-                }
+           
                  .oxi-addons-wrapper-' . $oxiid . ' div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before { 
                     width: ' . $styledata[800] . 'px; 
                 }

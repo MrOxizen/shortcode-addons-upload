@@ -1,0 +1,851 @@
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_inline {
+    display: flex;
+    float: left;
+    width: 100%
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_show_playlist {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_show_playlist>.oxi-icons {
+    color: #616161;
+    font-size: 18px;
+    cursor: pointer
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_time_progress {
+    width: 100%;
+    float: left
+}
+
+.sa_addons_ap_list_container_style_5 .sa_playlist_hide {
+    display: none
+}
+
+.sa_addons_ap_list_container_style_5 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px 5px 5px
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main {
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 6px 14px -4px rgba(120, 120, 120, 0.32);
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    position: relative
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main_content {
+    width: 100%;
+    float: left
+}
+
+.sa_addons_ap_list_container_style_5 .jp-controls button,
+.sa_addons_ap_list_container_style_5 .jp-toggles button,
+.sa_addons_ap_list_container_style_5 .jp-volume-controls button {
+    text-indent: 0px
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio,
+.jp-audio-stream {
+    border-top: 0px solid #554461;
+    border-left: 0px solid #554461;
+    border-right: 0px solid #180a1f;
+    border-bottom: 0px solid #180a1f;
+    background-color: #a63eee;
+    padding: 0px;
+    width: 100%
+}
+
+.sa_addons_ap_list_container_style_5 .jp-interface {
+    position: static;
+    width: 100%;
+    background: rgba(247, 247, 247, 1.00);
+    padding: 25px 15px 25px 15px;
+    overflow: hidden
+}
+
+.sa_addons_ap_list_container_style_5 .jp-controls {
+    background: none;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.sa_addons_ap_list_container_style_5 .jp-volume-bar-value {
+    position: relative
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute,
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute:focus,
+.sa_addons_ap_list_container_style_5 .jp-state-muted .jp-volume-controls .jp-mute,
+.sa_addons_ap_list_container_style_5 .jp-state-muted .jp-volume-controls .jp-mute:focus,
+.sa_addons_ap_list_container_style_5 .jp-repeat,
+.sa_addons_ap_list_container_style_5 .jp-repeat:focus,
+.sa_addons_ap_list_container_style_5 .jp-state-looped .jp-repeat:focus,
+.sa_addons_ap_list_container_style_5 .jp-shuffle,
+.sa_addons_ap_list_container_style_5 .jp-shuffle:focus,
+.sa_addons_ap_list_container_style_5 .jp-state-shuffled .jp-shuffle:focus,
+.sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max,
+.sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max:focus,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous:focus,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play,
+.sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play,
+.sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play:focus,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play:focus,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus {
+    background: none;
+    position: relative
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute {
+    background: rgba(255, 255, 255, 0.00);
+    top: 0;
+    border-radius: 0px 0px 0px 0px;
+    width: 25px;
+    height: 25px;
+    margin: 0px 0px 0px 0px
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute::before {
+    content: "\f026";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #4f4f4f;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls,
+.jp-audio-stream .jp-volume-controls {
+    height: auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_volume_query {
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_volume_query>.sa_addons_jp_main {
+    position: absolute;
+    bottom: 50px;
+    right: -2px;
+    display: none
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_volume::before {
+    content: "\f028";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #363636;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.sa_addons_ap_list_container_style_5 .jp-state-muted .jp-volume-controls .jp-mute::before {
+    content: "\f6a9";
+    font-weight: 900;
+    color: #696969
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-volume-max,
+.jp-audio-stream .jp-volume-controls .jp-volume-max {
+    background: rgba(219, 88, 79, 0.00);
+    top: 0;
+    border-radius: 0px 0px 0px 0px;
+    width: 25px;
+    height: 25px;
+    margin: 0px 0px 0px 0px
+}
+
+.sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max::before {
+    content: "\f028";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #363636;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max:focus::before {
+    color: #7a7a7a
+}
+
+.sa_addons_ap_list_container_style_5 .jp-volume-bar {
+    background: rgba(252, 252, 252, 1.00);
+    position: static;
+    width: 8px;
+    height: 80px;
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 100px 100px 100px 100px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: column-reverse
+}
+
+.sa_addons_ap_list_container_style_5 .jp-volume-bar-value {
+    background: rgba(143, 151, 252, 1.00);
+    height: 80px
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-controls-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    float: left
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_jp_time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.sa_addons_ap_list_container_style_5 .jp-current-time {
+    width: auto;
+    font-size: 14px;
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    color: #363636;
+    margin: 10px 10px 10px 10px
+}
+
+.sa_addons_ap_list_container_style_5 .jp-duration {
+    width: auto;
+    font-size: 14px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    color: #3b3b3b;
+    margin: 10px 10px 10px 10px
+}
+
+.sa_addons_ap_list_container_style_5 .jp-playlist-item {
+    display: block
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous {
+    background: rgba(255, 255, 255, 0.00);
+    border-radius: 0px 0px 0px 0px;
+    width: 25px;
+    height: 25px;
+    margin: 0px 10px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous::before {
+    content: "\f359";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 500;
+    color: #333333;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous:focus::before {
+    color: #2dbce0
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play,
+.sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play {
+    background: rgba(255, 255, 255, 0.00);
+    border-radius: 0px 0px 0px 0px;
+    width: 50px;
+    height: 50px;
+    margin: 15px 0px 15px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(54, 54, 54, 0.26);
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play::before,
+.sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play::before {
+    content: "\f144";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 500;
+    color: #545454;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play::before {
+    content: "\f28b";
+    font-weight: 500;
+    color: #545454
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus {
+    background: rgba(242, 115, 111, 0.00);
+    border-radius: 0px 0px 0px 0px;
+    width: 25px;
+    height: 25px;
+    margin: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop::before,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus::before {
+    content: "\f04d";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus::before {
+    color: #ff0303
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus {
+    background: rgba(255, 255, 255, 0.00);
+    border-radius: 0px 0px 0px 0px;
+    width: 25px;
+    height: 25px;
+    margin: 0px 0px 0px 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next::before,
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus::before {
+    content: "\f35a";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 500;
+    color: #171717;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus::before {
+    color: #858585
+}
+
+.sa_addons_ap_list_container_style_5 .jp-repeat {
+    background: rgba(204, 68, 219, 0.00);
+    border-radius: 0px 0px 0px 0px;
+    width: 20px;
+    height: 20px;
+    margin: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(222, 37, 37, 1);
+}
+
+.sa_addons_ap_list_container_style_5 .jp-repeat::before {
+    content: "\f2f9";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #404040;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-repeat:focus::before {
+    color: #858585
+}
+
+.sa_addons_ap_list_container_style_5 .jp-shuffle {
+    background: rgba(252, 67, 53, 0.00);
+    border-radius: 0px 0px 0px 0px;
+    width: 20px;
+    height: 20px;
+    margin: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(222, 37, 37, 1);
+}
+
+.sa_addons_ap_list_container_style_5 .jp-shuffle::before {
+    content: "\f074";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    color: #5e5e5e;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sa_addons_ap_list_container_style_5 .jp-shuffle:focus::before {
+    color: #828282
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-controls-holder {
+    height: auto
+}
+
+.sa_addons_ap_list_container_style_5 .jp-audio .jp-toggles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+.sa_addons_ap_list_container_style_5 .jp-progress {
+    background: rgba(209, 209, 209, 1.00);
+    border-radius: 0px 0px 0px 0px;
+    width: 250px;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+    padding: 0
+}
+
+.sa_addons_ap_list_container_style_5 .jp-seek-bar {
+    background: rgba(227, 227, 227, 1.00);
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.sa_addons_ap_list_container_style_5 .jp-play-bar {
+    background: #4f4f4f;
+    width: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+.sa_addons_ap_list_container_style_5 .jp-playlist {
+    background: rgba(255, 255, 255, 1.00);
+    padding: 0px 0px 0px 0px
+}
+
+.sa_addons_ap_list_container_style_5 .jp-playlist li {
+    position: relative;
+    background: rgba(255, 255, 255, 1.00);
+    font-family: "Raleway";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.sa_addons_ap_list_container_style_5 .jp-playlist li .jp-playlist-item {
+    padding: 5px 15px 5px 15px;
+    color: #333333
+}
+
+.sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+    background: rgba(240, 240, 240, 1.00);
+    margin: 0px;
+    border-top: none;
+    border-bottom: none;
+    position: relative
+}
+
+.sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: rgba(59, 59, 59, 1.00)
+}
+
+.sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current a.jp-playlist-current {
+    color: #616161;
+    font-size: 16px
+}
+
+.sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist .jp-playlist-item:hover {
+    color: #0d6973
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_img {
+    width: 100%;
+    float: left;
+    position: relative;
+    background: radial-gradient(ellipse farthest-side at 50% 100%, rgba(255, 135, 135, 1.00) 0%, rgba(207, 25, 92, 0.50) 100%), url("https://www.oxilab.org/wp-content/uploads/2019/02/8-1-1170x750.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 250px
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main_title {
+    width: 100%;
+    float: left
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title {
+    width: 100%;
+    float: left;
+    font-size: 24px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    color: #4a4a4a;
+    padding: 0px 0px 0px 0px
+}
+
+.sa_addons_ap_list_container_style_5 .sa_addons_album_name {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    font-family: "Nunito";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    color: #424242;
+    padding: 0px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_show_playlist>.oxi-icons {
+        font-size: 18px
+    }
+    .sa_addons_ap_list_container_style_5 {
+        padding: 5px 5px 5px 5px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main {
+        max-width: 500px;
+        border-radius: 5px 5px 5px 5px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-interface {
+        padding: 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute::before {
+        font-size: 16px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-volume-max,
+    .jp-audio-stream .jp-volume-controls .jp-volume-max {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max::before {
+        font-size: 16px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-volume-bar {
+        width: 8px;
+        height: 80px;
+        border-radius: 100px 100px 100px 100px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-volume-bar-value {
+        height: 80px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-current-time {
+        font-size: 14px;
+        margin: 10px 10px 10px 10px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-duration {
+        font-size: 14px;
+        margin: 10px 10px 10px 10px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 10px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous::before {
+        font-size: 22px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play,
+    .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play {
+        border-radius: 0px 0px 0px 0px;
+        width: 50px;
+        height: 50px;
+        margin: 15px 0px 15px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play::before,
+    .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play::before {
+        font-size: 22px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop::before,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus::before {
+        font-size: 18px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 10px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next::before,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus::before {
+        font-size: 22px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-repeat {
+        border-radius: 0px 0px 0px 0px;
+        width: 20px;
+        height: 20px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-repeat::before {
+        font-size: 14px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-shuffle {
+        border-radius: 0px 0px 0px 0px;
+        width: 20px;
+        height: 20px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-shuffle::before {
+        font-size: 18px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-progress {
+        border-radius: 0px 0px 0px 0px;
+        width: 250px;
+        height: 10px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-playlist {
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-playlist li {
+        padding: 5px 15px 5px 15px
+    }
+    .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+        padding: 5px 15px 5px 15px
+    }
+    .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current a.jp-playlist-current {
+        font-size: 16px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_img {
+        height: 250px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title {
+        font-size: 20px;
+        padding: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_album_name {
+        font-size: 20px;
+        padding: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before {
+        width: 6px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_show_playlist>.oxi-icons {
+        font-size: 18px
+    }
+    .sa_addons_ap_list_container_style_5 {
+        padding: 5px 5px 5px 5px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main {
+        max-width: 500px;
+        border-radius: 5px 5px 5px 5px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-interface {
+        padding: 22px 0px 22px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute::before {
+        font-size: 16px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-volume-max,
+    .jp-audio-stream .jp-volume-controls .jp-volume-max {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max::before {
+        font-size: 16px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-volume-bar {
+        width: 8px;
+        height: 80px;
+        border-radius: 100px 100px 100px 100px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-volume-bar-value {
+        height: 80px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-current-time {
+        font-size: 14px;
+        margin: 10px 10px 10px 10px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-duration {
+        font-size: 14px;
+        margin: 10px 10px 10px 10px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 10px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous::before {
+        font-size: 22px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play,
+    .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play {
+        border-radius: 0px 0px 0px 0px;
+        width: 50px;
+        height: 50px;
+        margin: 15px 0px 15px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play::before,
+    .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play::before {
+        font-size: 22px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop::before,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus::before {
+        font-size: 18px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus {
+        border-radius: 0px 0px 0px 0px;
+        width: 25px;
+        height: 25px;
+        margin: 0px 0px 0px 10px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next::before,
+    .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus::before {
+        font-size: 22px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-repeat {
+        border-radius: 0px 0px 0px 0px;
+        width: 20px;
+        height: 20px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-repeat::before {
+        font-size: 14px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-shuffle {
+        border-radius: 0px 0px 0px 0px;
+        width: 20px;
+        height: 20px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-shuffle::before {
+        font-size: 18px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-progress {
+        border-radius: 0px 0px 0px 0px;
+        width: 250px;
+        height: 10px;
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-playlist {
+        margin: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 .jp-playlist li {
+        padding: 5px 15px 5px 15px
+    }
+    .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+        padding: 5px 15px 5px 15px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_img {
+        height: 160px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current a.jp-playlist-current {
+        font-size: 16px
+    }
+    .sa_addons_ap_list_container_style_5 .sa_addons_album_name {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+    .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before {
+        width: 6px
+    }
+}
