@@ -38,10 +38,11 @@ and open the template in the editor.
     -webkit-transition: all .35s ease-in-out;
     -moz-transition: all .35s ease-in-out;
     border-radius: 0px 0px 0px 0px;
-    box-shadow:  1px 0px 3px 0px rgba(10, 194, 47, 0.56);
-    overflow: hidden;
+   
 }
-
+.oxi-hover-effects-styl1 .oxi-hover-effects:hover{
+    border-radius: 0px 0px 0px 0px;
+}
 
 .oxi-hover-effects-styl1 .oxi-hover-img,
 .oxi-hover-effects-styl1 .oxi-hover-img img{
@@ -55,7 +56,17 @@ and open the template in the editor.
     height: 100% !important;
     border-radius: 0px 0px 0px 0px;
 }
-
+.oxi-hover-effects-styl1 .oxi-hover-img:hover,
+.oxi-hover-effects-styl1 .oxi-hover-img:hover img{
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-styl1 .oxi-hover-img:before{
+    box-shadow:  0px 0px 3px 1px rgba(224, 224, 224, 0.74);
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-styl1:hover .oxi-hover-img:before{
+    border-radius: 0px 0px 0px 0px;
+}
 
 .oxi-hover-effects-styl1 .oxi-hover-info{
     display:flex;
