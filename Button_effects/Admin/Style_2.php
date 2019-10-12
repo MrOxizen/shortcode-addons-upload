@@ -113,7 +113,7 @@ class Style_2 extends AdminStyle {
                 'sa_alignments_select', $this->style, [
             'label' => __('Alignments', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'tl',
+            'default' => 'mm',
             'loader' => TRUE,
             'separator' => TRUE,
             'options' => [
@@ -441,7 +441,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 30,
             ],
             'range' => [
                 'px' => [
@@ -471,7 +471,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 300,
+                'size' => 50,
             ],
             'range' => [
                 'px' => [

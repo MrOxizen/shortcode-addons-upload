@@ -113,7 +113,7 @@ class Style_3 extends AdminStyle {
                 'sa_alignments_select', $this->style, [
             'label' => __('Alignments', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'tl',
+            'default' => 'mm',
             'loader' => TRUE,
             'separator' => TRUE,
             'options' => [
@@ -252,7 +252,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover-map-139' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_button_effect_temp_3 .oxi-button-hover-map' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -439,7 +439,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 30,
             ],
             'range' => [
                 'px' => [
@@ -469,7 +469,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 300,
+                'size' => 50,
             ],
             'range' => [
                 'px' => [
