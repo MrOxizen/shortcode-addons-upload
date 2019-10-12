@@ -253,7 +253,7 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::BOXSHADOW,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-styl2.oxi-hover-effects-styl2-{{KEY}} .oxi-hover-img:before' => ''
+                        '{{WRAPPER}} .oxi-hover-effects-styl2.oxi-hover-effects-styl2-{{KEY}} .oxi-hover-info' => ''
                     ],
                 ],
                 'sa_he_effect' => [
