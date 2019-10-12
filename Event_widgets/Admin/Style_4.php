@@ -55,35 +55,35 @@ class Style_4 extends AdminStyle {
                             'label' => __('Time', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-time' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4-{{$key}} .oxi-addons-EW-body-time' => '',
                             ],
                         ],
                         'sa_event_t_title' => [
                             'label' => __('Title', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-time' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4-{{$key}} .oxi-addons-EW-body-time' => '',
                             ],
                         ],
                         'sa_event_t_Author' => [
                             'label' => __('Author', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-heading' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4-{{$key}} .oxi-addons-EW-image-overlay-heading' => '',
                             ],
                         ],
                         'sa_event_t_location' => [
                             'label' => __('Location', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-price' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4-{{$key}} .oxi-addons-EW-image-overlay-price' => '',
                             ],
                         ],
                         'sa_event_t_info_text' => [
                             'label' => __('Info text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXTAREA,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-details' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4-{{$key}} .oxi-addons-EW-image-overlay-details' => '',
                             ],
                         ],
                     ],

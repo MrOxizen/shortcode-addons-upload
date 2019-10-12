@@ -1,0 +1,266 @@
+/*.oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-200 .oxi-addons-EW-10-BG {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/05/17190416_1863378247282839_3339747104170326197_n-e1556692031301.png');
+    width: 100%;
+    height: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}
+
+.oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-201 .oxi-addons-EW-10-BG {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/05/maxresdefault-e1556691995922.jpg');
+    width: 100%;
+    height: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}
+
+.oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-202 .oxi-addons-EW-10-BG {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/04/Amazing-HD-Black-Wallpapers.jpg');
+    width: 100%;
+    height: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}
+
+.oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-203 .oxi-addons-EW-10-BG {
+    background: url('https://www.oxilab.org/wp-content/uploads/2019/04/asg2-home-slider-bg.jpg');
+    width: 100%;
+    height: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative
+}*/
+
+.oxi-addons-EW-10-wrapper-style-10 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: auto
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-BG {
+    border-left: 12px solid #5cc6ff
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-imagebody {
+    background-color: #08c708;
+    height: 100%
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-BG::after {
+    content: "";
+    display: inline-block;
+    padding-bottom: 50%
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-IM-O {
+
+    min-width: 40%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    overflow: hidden
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-O-body-position {
+    position: relative;
+    display: inline-block
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-O-body {
+    position: absolute;
+    bottom: 5%;
+    left: 10%
+}
+
+.oxi-addons-EW-10-DM {
+    float: left
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-D {
+    display: inline;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-M {
+    display: inline;
+    font-size: 28px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-H {
+    width: 100%;
+    float: left;
+    font-size: 26px;
+    color: #ffffff;
+    font-family: "ABeeZee";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-H:hover {
+    color: #13d19e
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-link {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 10px 0px 0px 0px
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-link:hover {
+    color: #13d19e
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-TL {
+    width: 100%;
+    float: left;
+    display: flex;
+    background: #ff4271;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-T {
+    flex-grow: 1
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-location {
+    flex-grow: 1;
+    order: 1
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-T-I {
+    display: inline;
+    font-size: 16px;
+    color: #ffffff
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-T-T {
+    display: inline;
+    font-size: 16px;
+    color: #ebebeb;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-L-I {
+    display: inline;
+    font-size: 16px;
+    color: #ffffff
+}
+
+.oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-L-T {
+    display: inline;
+    font-size: 16px;
+    color: #ebebeb;
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 0px 0px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-D {
+        font-size: 50px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-M {
+        font-size: 28px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-H {
+        font-size: 26px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-link {
+        font-size: 20px;
+        padding: 10px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-TL {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-T-I {
+        font-size: 16px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-T-T {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-L-I {
+        font-size: 16px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-L-T {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-D {
+        font-size: 24px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-M {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-H {
+        font-size: 26px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-link {
+        font-size: 16px;
+        padding: 10px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-TL {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-T-I {
+        font-size: 16px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-T-T {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-L-I {
+        font-size: 16px
+    }
+    .oxi-addons-EW-10-wrapper-style-10 .oxi-addons-EW-10-F-L-T {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+}

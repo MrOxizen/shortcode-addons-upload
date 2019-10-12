@@ -1,0 +1,96 @@
+.oxi-addons-EW-5-wrapper-style-5 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 5px 10px 5px 10px;
+    overflow: auto
+}
+
+.oxi-addons-EW-5-wrapper-style-5 .oxi-addons-EW-5-row {
+    width: 100%;
+    float: left;
+    background: rgba(32, 121, 189, 1.00);
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 0px 0px rgba(209, 190, 190, 0.3)
+}
+
+.oxi-addons-EW-5-wrapper-style-5 .oxi-addons-EW-5-Heading {
+    width: 100%;
+    float: left;
+    font-size: 36px;
+    color: #ffffff;
+    font-family: "Bree Serif";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 20px 0px
+}
+
+.oxi-addons-EW-5-wrapper-style-5 .oxi-addons-EW-5-details {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 20px 0px 0px 0px
+}
+
+.oxi-addons-EW-5-H {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-EW-5-SH {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-EW-5-D {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-EW-5-SD {
+    width: 100%;
+    float: left
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-EW-5-wrapper-style-5 {
+        padding: 5px 10px 5px 10px
+    }
+    .oxi-addons-EW-5-row {
+        padding: 20px 20px 20px 20px
+    }
+    .oxi-addons-EW-5-wrapper-style-5 .oxi-addons-EW-5-Heading {
+        font-size: 36px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-5-wrapper-style-5 .oxi-addons-EW-5-details {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-EW-5-wrapper-style-5 {
+        padding: 5px 10px 5px 10px
+    }
+    .oxi-addons-EW-5-row {
+        padding: 0px 20px 0px 20px
+    }
+    .oxi-addons-EW-5-wrapper-style-5 .oxi-addons-EW-5-Heading {
+        font-size: 36px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-EW-5-wrapper-style-5 .oxi-addons-EW-5-details {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+}
