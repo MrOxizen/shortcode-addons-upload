@@ -49,7 +49,7 @@ class Style_1 extends Templates {
                 }
             }
             
-            echo ' <div class="oxi-testimonials-testi-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'" >
+            echo ' <div class="oxi-testimonials-testi-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' " >
                     <div class="oxi-testimonials-item-testi">
                         <div class="oxi-testimonials-style-testi" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
                             '.$image.'

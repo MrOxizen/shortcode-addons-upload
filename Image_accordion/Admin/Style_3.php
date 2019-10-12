@@ -78,7 +78,7 @@ class Style_3 extends AdminStyle{
                     'default' => 'Accordion Item Title',
                 ],
             ],
-            'title_field' => 'sa_icon_accordion_item_title',
+            'title_field' => 'sa_image_accordion_item_title',
                 ]
         );
         $this->add_responsive_control(

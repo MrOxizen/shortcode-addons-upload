@@ -1,0 +1,159 @@
+.oxi-addons-flip-boxes-body{
+    width: 100%;
+    position: relative;
+}
+
+.oxi-addons-flip-box-flip{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.oxi-addons-flip-boxes-body-data{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.oxi-addons-flip-box-flip .oxi-addons-flip-box-flip-data{
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.oxi-addons-flip-box-style{
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.oxi-addons-flip-box-style,
+.oxi-addons-flip-box-front,
+.oxi-addons-flip-box-back,
+.oxi-addons-flip-box-xflank,
+.oxi-addons-flip-box-yflank{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: inherit;
+    transition-duration: inherit;
+}
+.oxi-addons-container .easing_easeInOutExpo * {
+    -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+.oxi-addons-container .easing_easeInOutCirc * {
+    -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.oxi-addons-container .easing_easeOutBack * {
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.oxi-addons-flip-box-front {
+    position: relative;
+}
+.oxi-addons-flip-box-back,
+.oxi-addons-flip-box-xflank,
+.oxi-addons-flip-box-yflank {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.oxi-addons-flip-box-flip:hover .oxi-addons-flip-box-front,
+.oxi-addons-flip-box-flip.active .oxi-addons-flip-box-front{
+    z-index: -1;
+}
+.oxi-addons-flip-box-flip:hover .oxi-addons-flip-box-front,
+.oxi-addons-flip-box-flip.active .oxi-addons-flip-box-front{
+    z-index: 1;
+}
+.oxi-addons-flip-box-flip-bottom-to-top .oxi-addons-flip-box-front {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.oxi-addons-flip-box-flip-bottom-to-top .oxi-addons-flip-box-back {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.oxi-addons-flip-box-flip-bottom-to-top.active .oxi-addons-flip-box-front,
+.oxi-addons-flip-box-flip-bottom-to-top:hover .oxi-addons-flip-box-front{
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.oxi-addons-flip-box-flip-bottom-to-top.active .oxi-addons-flip-box-back,
+.oxi-addons-flip-box-flip-bottom-to-top:hover .oxi-addons-flip-box-back {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.oxi-addons-flip-box-flip-left-to-right .oxi-addons-flip-box-front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.oxi-addons-flip-box-flip-left-to-right .oxi-addons-flip-box-back {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.oxi-addons-flip-box-flip-left-to-right.active .oxi-addons-flip-box-front,
+.oxi-addons-flip-box-flip-left-to-right:hover .oxi-addons-flip-box-front{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.oxi-addons-flip-box-flip-left-to-right.active .oxi-addons-flip-box-back,
+.oxi-addons-flip-box-flip-left-to-right:hover .oxi-addons-flip-box-back{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.oxi-addons-flip-box-flip-right-to-left .oxi-addons-flip-box-front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.oxi-addons-flip-box-flip-right-to-left .oxi-addons-flip-box-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.oxi-addons-flip-box-flip-right-to-left.active .oxi-addons-flip-box-front,
+.oxi-addons-flip-box-flip-right-to-left:hover .oxi-addons-flip-box-front{
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.oxi-addons-flip-box-flip-right-to-left.active .oxi-addons-flip-box-back,
+.oxi-addons-flip-box-flip-right-to-left:hover .oxi-addons-flip-box-back{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.oxi-addons-flip-box-flip-top-to-bottom .oxi-addons-flip-box-front {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.oxi-addons-flip-box-flip-top-to-bottom .oxi-addons-flip-box-back {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.oxi-addons-flip-box-flip-top-to-bottom.active .oxi-addons-flip-box-front,
+.oxi-addons-flip-box-flip-top-to-bottom:hover .oxi-addons-flip-box-front{
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.oxi-addons-flip-box-flip-top-to-bottom.active .oxi-addons-flip-box-back,
+.oxi-addons-flip-box-flip-top-to-bottom:hover .oxi-addons-flip-box-back {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}

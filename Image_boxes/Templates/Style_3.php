@@ -17,8 +17,9 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_3 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+        
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_boxes_data_style_3'] as $key => $value) {
             $heading = $content = $links = '';
             if (array_key_exists('sa_image_boxes_heading', $value) && $value['sa_image_boxes_heading'] != '') {
                 $heading = '<div class="oxi-addons-image-content-heading">
@@ -60,16 +61,6 @@ class Style_3 extends Templates {
                                 </div>
                             </div>
                         </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
             echo '</div>
                </div>';
         }

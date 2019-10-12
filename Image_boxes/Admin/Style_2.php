@@ -52,6 +52,50 @@ class Style_2 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_repeater_control(
+                'sa_image_boxes_data_style_2', $this->style, [
+            'label' => __('Image Boxes Data', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'separator' => TRUE,
+            'button' => 'Add New Image Boxes',
+            'fields' => [
+                'sa_image_boxes_heading' => [
+                    'label' => __('Title', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Heading',
+                    'placeholder' => 'Heading',
+                ],
+                'sa_image_boxes_s_description' => [
+                    'label' => __('Short Description', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Lorem ipsum dolor sit amet',
+                    'placeholder' => 'Lorem ipsum dolor sit amet',
+                ],
+                'sa_image_boxes_media' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'type' => Controls::MEDIA,
+                    'controller' => 'add_group_control',
+                    'default' => [
+                        'type' => 'media-library',
+                        'link' => '#asdas',
+                    ]
+                ],
+                'sa_image_boxes_button' => [
+                    'label' => __('Button Text', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Learn More',
+                ],
+                'sa_image_boxes_button_url' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'type' => Controls::URL,
+                    'controller' => 'add_group_control',
+                    'default' => '',
+                    'placeholder' => 'https://www.yoururl.com',
+                ],
+            ],
+            'title_field' => 'sa_image_boxes_heading',
+                ]
+        );
         $this->add_responsive_control(
                 'sa-image-boxes-width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
@@ -398,7 +442,7 @@ class Style_2 extends AdminStyle {
             ]
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-image-box-button-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -456,7 +500,7 @@ class Style_2 extends AdminStyle {
             ]
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-image-box-button-hover-border-radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -488,34 +532,32 @@ class Style_2 extends AdminStyle {
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
-        
-         $this->add_control(
-            'sa-image-box-button_alignment',
-            $this->style,
-            [
-                'label' => __('Alignment', SHORTCODE_ADDOONS),
-                'separator' => TRUE,
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-right',
-                    ],
+
+        $this->add_control(
+                'sa-image-box-button_alignment', $this->style, [
+            'label' => __('Alignment', SHORTCODE_ADDOONS),
+            'separator' => TRUE,
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-button' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-button' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_group_control(
                 'sa-image-box-button-typho', $this->style, [
@@ -525,7 +567,7 @@ class Style_2 extends AdminStyle {
             ]
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa-image-box-button-border', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -534,8 +576,8 @@ class Style_2 extends AdminStyle {
             ]
                 ]
         );
-        
-       
+
+
         $this->add_responsive_control(
                 'sa-image-box-button-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -635,31 +677,29 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa-image-box-heading_alignment',
-            $this->style,
-            [
-                'label' => __('Alignment', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-right',
-                    ],
+                'sa-image-box-heading_alignment', $this->style, [
+            'label' => __('Alignment', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-heading' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-heading' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_responsive_control(
                 'sa-image-box-heading-padding', $this->style, [
@@ -727,31 +767,29 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa-image-box-short-description_alignment',
-            $this->style,
-            [
-                'label' => __('Alignment', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fas fa-align-right',
-                    ],
+                'sa-image-box-short-description_alignment', $this->style, [
+            'label' => __('Alignment', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-left',
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-body' => 'text-align: {{VALUE}};'
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-center',
                 ],
-            ]
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-body' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_responsive_control(
                 'sa-image-box-short-description-padding', $this->style, [
@@ -789,63 +827,62 @@ class Style_2 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Image Boxes Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-        $this->add_control(
-                'sa_image_boxes_heading', $this->style, [
-            'label' => __('Title', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Heading',
-            'placeholder' => 'Heading',
-                ]
-        );
-        $this->add_control(
-                'sa_image_boxes_s_description', $this->style, [
-            'label' => __('Short Description', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Lorem ipsum dolor sit amet',
-            'placeholder' => 'Lorem ipsum dolor sit amet',
-                ]
-        );
-        $this->add_group_control(
-                'sa_image_boxes_media', $this->style, [
-            'label' => __('URL', SHORTCODE_ADDOONS),
-            'type' => Controls::MEDIA,
-            'default' => [
-                'type' => 'media-library',
-                'link' => '#asdas',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_image_boxes_button', $this->style, [
-            'label' => __('Button Text', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Learn More',
-                ]
-        );
-        $this->add_group_control(
-                'sa_image_boxes_button_url', $this->style, [
-            'label' => __('URL', SHORTCODE_ADDOONS),
-            'type' => Controls::URL,
-            'default' => '',
-            'placeholder' => 'https://www.yoururl.com',
-                ]
-        );
-        echo '</div>';
-    }
-
+//    public function modal_opener() {
+//        $this->add_substitute_control('', [], [
+//            'type' => Controls::MODALOPENER,
+//            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
+//            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
+//            'showing' => TRUE,
+//        ]);
+//    }
+//
+//    public function modal_form_data() {
+//        echo '<div class="modal-header">                    
+//                    <h4 class="modal-title">Image Boxes Form</h4>
+//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+//                </div>
+//                <div class="modal-body">';
+//        $this->add_control(
+//                'sa_image_boxes_heading', $this->style, [
+//            'label' => __('Title', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXT,
+//            'default' => 'Heading',
+//            'placeholder' => 'Heading',
+//                ]
+//        );
+//        $this->add_control(
+//                'sa_image_boxes_s_description', $this->style, [
+//            'label' => __('Short Description', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXT,
+//            'default' => 'Lorem ipsum dolor sit amet',
+//            'placeholder' => 'Lorem ipsum dolor sit amet',
+//                ]
+//        );
+//        $this->add_group_control(
+//                'sa_image_boxes_media', $this->style, [
+//            'label' => __('URL', SHORTCODE_ADDOONS),
+//            'type' => Controls::MEDIA,
+//            'default' => [
+//                'type' => 'media-library',
+//                'link' => '#asdas',
+//            ]
+//                ]
+//        );
+//        $this->add_control(
+//                'sa_image_boxes_button', $this->style, [
+//            'label' => __('Button Text', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXT,
+//            'default' => 'Learn More',
+//                ]
+//        );
+//        $this->add_group_control(
+//                'sa_image_boxes_button_url', $this->style, [
+//            'label' => __('URL', SHORTCODE_ADDOONS),
+//            'type' => Controls::URL,
+//            'default' => '',
+//            'placeholder' => 'https://www.yoururl.com',
+//                ]
+//        );
+//        echo '</div>';
+//    }
 }

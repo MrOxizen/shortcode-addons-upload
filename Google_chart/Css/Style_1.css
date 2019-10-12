@@ -4,11 +4,8 @@
     max-width:800px;
     padding: 10;           
 }
-.oxi-addons-show-chartlist-{
-    width: 100%;
-    float: left;
-}
-.oxi-addons-show-chartlist- .oxi-addons-google-chart{
+
+.oxi-addons-chart-style-1 .oxi-addons-google-chart{
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
@@ -16,7 +13,7 @@
     background: #efefef;
     margin-bottom: 20px;
 }
-.oxi-addons-show-chartlist- ul li{
+.oxi-addons-chart-style-1 ul li{
     border-bottom: 0.8px solid #666;
     padding: 7px;
 }

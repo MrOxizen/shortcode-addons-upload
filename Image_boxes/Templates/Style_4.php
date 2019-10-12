@@ -17,25 +17,26 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_4 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        foreach ($child as $v) {
-            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_boxes_data_style_4'] as $key => $value) {
             $heading = $content = $icon = '';
-            if(array_key_exists('sa_image_boxes_icon', $value) && $value['sa_image_boxes_icon'] != ''){
+            if (array_key_exists('sa_image_boxes_icon', $value) && $value['sa_image_boxes_icon'] != '') {
                 $icon = '<div class="oxi-addons-content-boxes-four-area-icon">
                             ' . $this->font_awesome_render($value['sa_image_boxes_icon']) . '
                         </div>';
             }
-            if(array_key_exists('sa_image_boxes_heading', $value) && $value['sa_image_boxes_heading'] != ''){
+            if (array_key_exists('sa_image_boxes_heading', $value) && $value['sa_image_boxes_heading'] != '') {
                 $heading = '<div class="oxi-addons-content-boxes-heading">
                                 ' . $this->text_render($value['sa_image_boxes_heading']) . '
                             </div>';
             }
-            if(array_key_exists('sa_image_boxes_s_description', $value) && $value['sa_image_boxes_s_description'] != ''){
+            if (array_key_exists('sa_image_boxes_s_description', $value) && $value['sa_image_boxes_s_description'] != '') {
                 $content = '<div class="oxi-addons-content-boxes-content">
                                 ' . $this->text_render($value['sa_image_boxes_s_description']) . '
                             </div> ';
             }
-                 echo ' <div class="oxi-addons-content-boxes-four-colum ' . $this->column_render('sa-image-boxes-four-col', $style) . '   ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
+            echo ' <div class="oxi-addons-content-boxes-four-colum ' . $this->column_render('sa-image-boxes-four-col', $style) . '   ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
                                     <div class="oxi-addons-content-boxes-four-area">
 					<div class="oxi-addons-content-boxes-full " ' . $this->animation_render('sa-image-boxes-four-animation', $style) . '>
 						<div class="oxi-addons-content-boxes-four-area-image_content">
@@ -44,24 +45,15 @@ class Style_4 extends Templates {
                                                         </div> 
 						</div>  
 						<div class="oxi-addons-content-boxes-four-area-data"> 
-                                                    ' .$icon. '
+                                                    ' . $icon . '
                                                     <div class="oxi-addons-content-boxes-four-area-content">
-                                                    ' .$heading. '
-                                                    ' .$content. '
+                                                    ' . $heading . '
+                                                    ' . $content . '
                                                     </div>    
 						</div>
 					</div>
                                     </div>';
-            if ($admin == 'admin') :
-                echo'<div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                            </div>
-                        </div>';
-            endif;
+            
             echo '</div>';
         }
     }
