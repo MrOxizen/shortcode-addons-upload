@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Elements\Accordion\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Accordion\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
