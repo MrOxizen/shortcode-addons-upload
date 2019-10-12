@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_2
+ * Description of Style_5
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle
+class Style_5 extends AdminStyle
 {
 
     public function register_controls()
@@ -112,7 +112,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_main' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -122,7 +122,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_main' => ''
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main' => ''
                 ],
             ]
         );
@@ -154,7 +154,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -186,7 +186,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -197,7 +197,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_main' => ''
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_main' => ''
                 ],
             ]
         );
@@ -226,7 +226,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_img' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_img' => '',
                 ],
             ]
         );
@@ -258,7 +258,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_img' => 'height: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_img' => 'height: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -278,7 +278,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TEXT,
                 'default' => 'Miscellaneous Ringtones',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_title' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title' => '',
                 ],
             ]
         );
@@ -289,7 +289,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_title' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title' => '',
                 ],
             ]
         );
@@ -299,7 +299,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_title' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title' => '',
                 ],
             ]
         );
@@ -311,7 +311,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#f5f5f5',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -344,7 +344,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -364,7 +364,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_album_name' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_album_name' => '',
                 ],
             ]
         );
@@ -374,9 +374,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_album_name' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_album_name' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -409,7 +409,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .sa_addons_album_name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_album_name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -442,7 +442,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::BACKGROUND,
                 'loader' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-interface ' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-interface ' => '',
                 ],
             ]
         );
@@ -485,6 +485,38 @@ class Style_2 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
+        $this->add_responsive_control(
+            'sa_ap_list_audio_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -500,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => -50,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => -50,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-interface' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
         $this->end_controls_section();
 
 
@@ -514,7 +546,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-current-time' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-current-time' => '',
                 ],
             ]
         );
@@ -524,7 +556,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-current-time' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-current-time' => '',
                 ],
             ]
         );
@@ -534,9 +566,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-current-time' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-current-time' => '',
                 ],
             ]
         );
@@ -568,7 +600,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-current-time' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-current-time' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -581,7 +613,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-duration' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-duration' => '',
                 ],
             ]
         );
@@ -591,7 +623,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-duration' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-duration' => '',
                 ],
             ]
         );
@@ -601,9 +633,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#3b3b3b',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-duration' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-duration' => '',
                 ],
             ]
         );
@@ -635,7 +667,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-duration' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-duration' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -673,16 +705,11 @@ class Style_2 extends AdminStyle
                 'label' => __('Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
-                    'unit' => '%',
-                    'size' => '100',
+                    'unit' => 'px',
+                    'size' => '250',
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 0,
-                        'max' => 1000,
-                        'step' => 1,
-                    ],
-                    '%' => [
                         'min' => 0,
                         'max' => 1000,
                         'step' => 1,
@@ -694,7 +721,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-progress' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-progress' => 'width: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_aud_pro_on_off' => 'yes'
@@ -709,7 +736,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '8',
+                    'size' => '10',
                 ],
                 'range' => [
                     'px' => [
@@ -724,7 +751,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-progress' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-progress' => 'height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_aud_pro_on_off' => 'yes'
@@ -751,10 +778,10 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(217,217,217,1.00)',
+                'default' => 'rgba(209, 209, 209, 1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-progress' => 'background: {{VALUE}} !important;'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-progress' => 'background: {{VALUE}} !important;'
                 ],
                 'condition' => [
                     'sa_ap_list_aud_pro_on_off' => 'yes'
@@ -769,10 +796,10 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(255, 255, 255, 1.00)',
+                'default' => 'rgba(227, 227, 227, 1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-seek-bar' => 'background: {{VALUE}} !important;'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-seek-bar' => 'background: {{VALUE}} !important;'
                 ],
                 'condition' => [
                     'sa_ap_list_aud_pro_on_off' => 'yes'
@@ -787,10 +814,10 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#52d1ff',
+                'default' => '#4f4f4f',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-play-bar' => 'background: {{VALUE}} !important;'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-play-bar' => 'background: {{VALUE}} !important;'
                 ],
                 'condition' => [
                     'sa_ap_list_aud_pro_on_off' => 'yes'
@@ -829,7 +856,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-progress' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-progress' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_aud_pro_on_off' => 'yes'
@@ -864,7 +891,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-progress' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-progress' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_aud_pro_on_off' => 'yes'
@@ -906,7 +933,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '500',
+                    'size' => '8',
                 ],
                 'range' => [
                     'px' => [
@@ -921,7 +948,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-bar' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-bar' => 'width: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_vol_pro_on_off' => 'yes'
@@ -936,7 +963,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '5',
+                    'size' => '80',
                 ],
                 'range' => [
                     'px' => [
@@ -951,8 +978,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-bar' => 'height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-bar-value' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-bar' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-bar-value' => 'height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_vol_pro_on_off' => 'yes'
@@ -981,7 +1008,7 @@ class Style_2 extends AdminStyle
                 'default' => 'rgba(252, 252, 252, 1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-bar' => 'background: {{VALUE}}'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-bar' => 'background: {{VALUE}} !important;'
                 ],
                 'condition' => [
                     'sa_ap_list_vol_pro_on_off' => 'yes'
@@ -996,10 +1023,10 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(58,194,151,1.00)',
+                'default' => 'rgba(143, 151, 252, 1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-bar-value' => 'background: {{VALUE}}'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-bar-value' => 'background: {{VALUE}} !important;'
                 ],
                 'condition' => [
                     'sa_ap_list_vol_pro_on_off' => 'yes'
@@ -1038,7 +1065,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-bar' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-bar' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_vol_pro_on_off' => 'yes'
@@ -1073,7 +1100,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-bar' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-bar' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_vol_pro_on_off' => 'yes'
@@ -1139,7 +1166,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '16',
+                    'size' => '22',
                 ],
                 'range' => [
                     'px' => [
@@ -1159,7 +1186,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_pre_on_off' => 'yes'
@@ -1174,7 +1201,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '50',
+                    'size' => '25',
                 ],
                 'range' => [
                     'px' => [
@@ -1194,7 +1221,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_pre_on_off' => 'yes'
@@ -1220,9 +1247,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#212121',
+                'default' => '#333333',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_pre_on_off' => 'yes'
@@ -1240,7 +1267,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#2dbce0',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous:focus::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous:focus::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_pre_on_off' => 'yes'
@@ -1256,11 +1283,11 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(255,255,255,1.00)',
+                'default' => '',
                 'oparetor' => 'RGB',
                 'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous' => 'background: {{VALUE}} !important;',
                 ],
 
                 'condition' => [
@@ -1313,7 +1340,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_pre_on_off' => 'yes'
@@ -1348,7 +1375,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .mejs-pause button::after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .mejs-pause button::after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_pre_on_off' => 'yes'
@@ -1361,7 +1388,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-previous' => '',
                 ],
                 'condition' => [
                     'sa_ap_list_pre_on_off' => 'yes'
@@ -1405,7 +1432,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '16',
+                    'size' => '22',
                 ],
                 'range' => [
                     'px' => [
@@ -1425,7 +1452,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1440,7 +1467,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '80',
+                    'size' => '50',
                 ],
                 'range' => [
                     'px' => [
@@ -1460,24 +1487,23 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist div.jp-type-playlist .jp-play' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist div.jp-type-playlist .jp-play' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
                 ],
             ]
         );
-
         $this->add_control(
             'sa_ap_list_audio_play_icon_c',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#212121',
+                'default' => '#545454',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1490,11 +1516,11 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(255,255,255,1.00)',
+                'default' => '',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play' => 'background: {{VALUE}} !important;',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play' => 'background: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1546,8 +1572,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1582,8 +1608,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1596,8 +1622,8 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play' => '',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-play' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play' => '',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1628,7 +1654,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '16',
+                    'size' => '22',
                 ],
                 'range' => [
                     'px' => [
@@ -1648,7 +1674,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1661,9 +1687,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#52D1FF',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-state-playing div.jp-type-playlist .jp-play::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_play_on_off' => 'yes'
@@ -1696,7 +1722,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Stop Icon Enable', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
-                'default' => '',
+                'default' => 'yes',
                 'loader' => TRUE,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -1724,7 +1750,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '16',
+                    'size' => '18',
                 ],
                 'range' => [
                     'px' => [
@@ -1744,8 +1770,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop::before' => 'font-size: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1760,7 +1786,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '50',
+                    'size' => '25',
                 ],
                 'range' => [
                     'px' => [
@@ -1780,8 +1806,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1807,9 +1833,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#545454',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1825,9 +1851,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#2dbce0',
+                'default' => '#ff0303',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1847,8 +1873,8 @@ class Style_2 extends AdminStyle
                 'oparetor' => 'RGB',
                 'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop' => 'background: {{VALUE}} !important;',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus' => 'background: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1900,8 +1926,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1936,8 +1962,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1950,8 +1976,8 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop' => '',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-stop:focus' => '',
                 ],
                 'condition' => [
                     'sa_ap_list_stop_on_off' => 'yes'
@@ -1994,7 +2020,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '16',
+                    'size' => '22',
                 ],
                 'range' => [
                     'px' => [
@@ -2014,8 +2040,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next::before' => 'font-size: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_next_on_off' => 'yes'
@@ -2030,7 +2056,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '50',
+                    'size' => '25',
                 ],
                 'range' => [
                     'px' => [
@@ -2050,8 +2076,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_next_on_off' => 'yes'
@@ -2077,9 +2103,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#212121',
+                'default' => '#545454',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_next_on_off' => 'yes'
@@ -2095,9 +2121,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#2dbce0',
+                'default' => '#858585',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_next_on_off' => 'yes'
@@ -2113,12 +2139,12 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(255,255,255,1.00)',
+                'default' => '',
                 'oparetor' => 'RGB',
                 'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next' => 'background: {{VALUE}} !important;',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus' => 'background: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_next_on_off' => 'yes'
@@ -2170,8 +2196,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_next_on_off' => 'yes'
@@ -2184,8 +2210,8 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next' => '',
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-type-playlist .jp-next:focus' => '',
                 ],
                 'condition' => [
                     'sa_ap_list_next_on_off' => 'yes'
@@ -2257,7 +2283,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls .jp-mute::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -2289,7 +2315,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls .jp-mute' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -2299,9 +2325,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#4f4f4f',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls .jp-mute::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute::before' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -2314,7 +2340,7 @@ class Style_2 extends AdminStyle
                 'default' => '',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls .jp-mute' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute' => 'background: {{VALUE}} !important;',
                 ],
 
             ]
@@ -2361,7 +2387,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls .jp-mute' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-mute' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -2386,7 +2412,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ff1c1c',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-state-muted .jp-volume-controls .jp-mute::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-state-muted .jp-volume-controls .jp-mute::before' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -2445,7 +2471,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-controls .jp-volume-max::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_volume::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -2466,9 +2493,10 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} ..sa_addons_ap_list_container_style_2 .jp-volume-controls .jp-volume-max::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_volume::before ' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -2481,21 +2509,68 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#50fa7b',
+                'default' => '#7a7a7a',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-controls .jp-volume-max:focus::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-volume-controls .jp-volume-max:focus::before' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
+            'sa_ap_list_audio_max_icon_bg',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '',
+                'separator' => TRUE,
+                'oparator' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-volume-max' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .jp-audio-stream .jp-volume-controls .jp-volume-max' => 'background: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_ap_list_audio_max_icon_w_h',
+            $this->style,
+            [
+                'label' => __('Width & Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '25',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-audio .jp-volume-controls .jp-volume-max' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .jp-audio-stream .jp-volume-controls .jp-volume-max' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_control(
             'sa_ap_list_max_vol_type',
             $this->style,
             [
                 'label' => __('Icon Type', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
-                'separator' => TRUE,
                 'loader' => TRUE,
                 'default' => 'solid',
                 'options' => [
@@ -2572,7 +2647,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Repeat Icon Enable', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
-                'default' => 'yes',
+                'default' => '',
                 'loader' => TRUE,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -2600,7 +2675,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '16',
+                    'size' => '14',
                 ],
                 'range' => [
                     'px' => [
@@ -2620,7 +2695,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2655,7 +2730,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2681,9 +2756,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2699,9 +2774,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#52d1ff',
+                'default' => '#858585',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat:focus::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat:focus::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2721,7 +2796,7 @@ class Style_2 extends AdminStyle
                 'oparetor' => 'RGB',
                 'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat' => 'background: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2773,7 +2848,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2808,7 +2883,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2821,7 +2896,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-repeat' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-repeat' => '',
                 ],
                 'condition' => [
                     'sa_ap_list_rep_on_off' => 'yes'
@@ -2874,7 +2949,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '16',
+                    'size' => '14',
                 ],
                 'range' => [
                     'px' => [
@@ -2894,7 +2969,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle::before' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle::before' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -2929,7 +3004,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -2955,9 +3030,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -2975,7 +3050,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#52d1ff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle:focus::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle:focus::before' => 'color: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -2995,7 +3070,7 @@ class Style_2 extends AdminStyle
                 'oparetor' => 'RGB',
                 'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle' => 'background: {{VALUE}} !important;',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -3047,7 +3122,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -3082,7 +3157,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -3095,7 +3170,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-shuffle' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-shuffle' => '',
                 ],
                 'condition' => [
                     'sa_ap_list_shuff_on_off' => 'yes'
@@ -3112,18 +3187,18 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Playlist Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
-                'condition' => [
-                    'sa_ap_list_playlist_on_off' => 'yes'
-                ]
             ]
         );
-        $this->add_group_control(
+        $this->add_control(
             'sa_ap_list_playlist_bg',
             $this->style,
             [
-                'type' => Controls::BACKGROUND,
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '',
+                'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-playlist' => ''
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-playlist' => 'background: {{VALUE}} !important;'
                 ],
             ]
         );
@@ -3155,7 +3230,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-playlist' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-playlist' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -3166,9 +3241,6 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Playlist Item Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
-                'condition' => [
-                    'sa_ap_list_playlist_on_off' => 'yes'
-                ]
             ]
         );
         $this->add_group_control(
@@ -3177,7 +3249,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-playlist li' => ''
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-playlist li' => ''
                 ],
             ]
         );
@@ -3198,9 +3270,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-playlist li .jp-playlist-item' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-playlist li .jp-playlist-item' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -3210,10 +3282,10 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(44, 108, 133, 1)',
+                'default' => 'rgba(255, 255, 255, 1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-playlist li' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-playlist li' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -3228,7 +3300,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#f5f2f2',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist .jp-playlist-item:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist .jp-playlist-item:hover' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -3243,7 +3315,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#f8edff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist li.jp-playlist-current a.jp-playlist-current' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current a.jp-playlist-current' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -3253,10 +3325,42 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(32,70,176,1.00)',
+                'default' => 'rgba(240, 240, 240, 1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist li.jp-playlist-current' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current' => 'background: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_ap_list_playlist_item_padding_a',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -3292,7 +3396,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-playlist li .jp-playlist-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .jp-playlist li .jp-playlist-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -3302,9 +3406,6 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Playlist Item Line Settings', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
-                'condition' => [
-                    'sa_ap_list_playlist_on_off' => 'yes'
-                ]
             ]
         );
         $this->add_control(
@@ -3314,9 +3415,9 @@ class Style_2 extends AdminStyle
                 'label' => __('Line Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => 'rgba(82, 209, 255, 1)',
+                'default' => 'rgba(59, 59, 59, 1.00)',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -3348,7 +3449,69 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 div.jp-type-playlist div.jp-playlist li.jp-playlist-current::before' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Playlist Show Or Hide Icon', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_control(
+            'sa_ap_list_playlist_icon',
+            $this->style,
+            [
+                'label' => __('playlist Icon', SHORTCODE_ADDOONS),
+                'type' => Controls::ICON,
+                'default' => 'fas fa-list-ul',
+            ]
+        );
+        $this->add_control(
+            'sa_ap_list_playlist_icon_c',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => '#616161',
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_show_playlist>.oxi-icons' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_ap_list_playlist_icon_s',
+            $this->style,
+            [
+                'label' => __('Font Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '18',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_5 .sa_addons_ap_list_show_playlist>.oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );

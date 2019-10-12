@@ -21,7 +21,7 @@ class Style_2 extends Templates
     public function default_render($style, $child, $admin)
     {
         $title = '';
-        $oxiid = $this->WRAPPER;
+        $oxiid = $this->oxiid;
 
         $suffle_repeat = $volume_control = $player_control = $time_control = $progress = $playlist = $title = $repeat = $shuffle = '';
         $previous_type = $play_type = $pause_type = $stop_type = $next_type = $min_volume_type = $mute_volume_type = $max_volume_type = $repeat_type = $shuffle_type = '';
@@ -120,7 +120,7 @@ class Style_2 extends Templates
             $title .= '<div class="sa_addons_ap_list_title">' . $this->text_render($style['sa_ap_list_title_text']) . '</div>';
         endif;
         echo '<div class="sa_addons_ap_list_container_style_2 ">
-                <div class="sa_addons_ap_list_main">
+                <div class="sa_addons_ap_list_main " ' . $this->animation_render('sa_ap_list_animation', $style) . '>
                     <div id="jquery_jplayer_' . $oxiid . '" class="jp-jplayer"></div> 
                     <div id="jp_container_' . $oxiid . '" class="jp-audio" role="application" aria-label="media player">
                         <div class="sa_addons_ap_list_img"> 
@@ -209,39 +209,40 @@ class Style_2 extends Templates
     {
         $jquery = '';
         $styledata = $this->style;
-        $oxiid = $this->WRAPPER;
+        $oxiid = $this->oxiid;
         $all_data = (array_key_exists('sa_ap_list_data', $styledata) && is_array($styledata['sa_ap_list_data'])) ? $styledata['sa_ap_list_data'] : [];
-        $jquery .= '
-            var myPlaylist = new jPlayerPlaylist({
-                jPlayer: "#jquery_jplayer_' . $oxiid . '",
-                cssSelectorAncestor: "#jp_container_' . $oxiid . '", 
-            }, [';
+        $jquery .= 'var myPlaylist = new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_' . $oxiid . '",
+            cssSelectorAncestor: "#jp_container_' . $oxiid . '", 
+        }, [  
+            ';
 
         foreach ($all_data as $value) {
-            $jquery .= '{
-                        title:"' . $this->text_render($value['sa_ap_list_album_text']) . '",
-                        mp3:"' . $this->text_render($value['sa_addons_ap_list_mp3_url']) . '", 
-                    },
-                    ';
+            $jquery .= '		{
+                    title:"' . $this->text_render($value['sa_ap_list_album_text']) . '",
+                    mp3:"' . $this->text_render($value['sa_addons_ap_list_mp3_url']) . '", 
+                            },  
+                ';
         }
         $jquery .= '
-                ], {
-                    supplied: "mp3",
-                    wmode: "window",
-                    useStateClassSkin: true,
-                    autoBlur: false, 
-                    keyEnabled: true, 
-                    verticalVolume: true, 
-                    play: function(e) {
-                        jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(e.jPlayer.status.media.title);
-                    },
-                    ready: function(){
-                        var getCurrentSong = jQuery("#jp_container_' . $oxiid . '").find(".jp-playlist-item.jp-playlist-current").text();
-                        jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(getCurrentSong);
-                    },
-                    audioFullScreen: true
-                });
+            ], {
+                supplied: "mp3",
+                wmode: "window",
+                useStateClassSkin: true,
+                autoBlur: false, 
+                keyEnabled: true,  
+                play: function(e) {
+                    jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(e.jPlayer.status.media.title);
+                },
+                ready: function(){
+                    var getCurrentSong = jQuery("#jp_container_' . $oxiid . '").find(".jp-playlist-item.jp-playlist-current").text();
+                    jQuery("#jp_container_' . $oxiid . ' .sa_addons_album_name").html(getCurrentSong);
+                },
+                audioFullScreen: true
+            });    
         ';
+
+
         return $jquery;
     }
 
