@@ -23,8 +23,8 @@ class Style_6 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $styledata = $this->style;
-        foreach ($styledata['sa_flip_boxes_data_style_5'] as $key => $value) {
-            $back_hadding = $backinfo = $button = '';
+        foreach ($styledata['sa_flip_boxes_data_style_6'] as $key => $value) {
+            $back_hadding = $backinfo = $startlink = $endlink = '';
             
             if ($value['sa_flip_back_boxes_heading'] != '') {
                 $back_hadding .= '<div class="oxi-addons-flip-box-back-headding">
@@ -36,12 +36,12 @@ class Style_6 extends Templates {
                         ' . $this->text_render($value['sa_flip_boxes_back_description']) . '
                         </div>';
             }
-            if ($this->url_render('sa_flip_boxes_button_link-url', $value) != '') {
+            if ($this->url_render('sa_flip_boxes_button_link', $value) != '') {
                 $startlink .= '<a ' . $this->url_render('sa_flip_boxes_button_link', $value) . ' >';
                 $endlink .= '</a>';
             }
-            echo '  <div class="oxi-flip-box-col-style-5 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
-                        <div class="oxi-addons-flip-box-style-5">
+            echo ' '.$startlink.' <div class="oxi-flip-box-col-style-6 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
+                        <div class="oxi-addons-flip-box-style-6">
                             <div class="oxi-addons-flip-boxes-body"  ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">
                                     <div class="oxi-addons-flip-box-flip ' . $styledata['sa-ac-flip_boxes_flip_direction'] . '">
@@ -59,7 +59,6 @@ class Style_6 extends Templates {
                                                         <div class="oxi-addons-flip-box-back-section">
                                                             ' . $back_hadding . '
                                                             ' . $backinfo . '
-                                                            ' . $button . '
                                                         </div>
                                                     </div>
                                                 </div>
@@ -68,9 +67,9 @@ class Style_6 extends Templates {
                                     </div>
                                 </div>
                             </div>
-                        </div>';
+                        </div>
+                    </div>'.$endlink.' ';
 
-            echo '</div>';
         }
     }
 
