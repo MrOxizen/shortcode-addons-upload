@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_3 extends Templates {
+class Style_4 extends Templates {
 
     public function public_css() {
         wp_enqueue_style('jquery_flip_boxes_default_css', SA_ADDONS_UPLOAD_URL . '/Flip_boxes/File/flip-boxes.css', false, SA_ADDONS_PLUGIN_VERSION);
@@ -23,8 +23,8 @@ class Style_3 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $styledata = $this->style;
-        foreach ($styledata['sa_flip_boxes_data_style_3'] as $key => $value) {
-            $icon = $front_hadding = $front_info = $starturl = $backinfo = $endurl  = '';
+        foreach ($styledata['sa_flip_boxes_data_style_2'] as $key => $value) {
+            $icon = $front_hadding = $front_info = $back_hadding = $backinfo = $button = '';
             if ($value['sa_flip_boxes_icon'] != '') {
                 $icon .= '<div class="oxi-addons-flip-box-front-icon">
                     ' . $this->font_awesome_render($value['sa_flip_boxes_icon']) . '
@@ -40,18 +40,23 @@ class Style_3 extends Templates {
                             ' . $this->text_render($value['sa_flip_boxes_font_description']) . '
                             </div> ';
             }
-            
+            if ($value['sa_flip_back_boxes_heading'] != '') {
+                $back_hadding .= '<div class="oxi-addons-flip-box-back-headding">
+                            ' . $this->text_render($value['sa_flip_back_boxes_heading']) . '
+                            </div>';
+            }
             if ($value['sa_flip_boxes_back_description'] != '') {
                 $backinfo .= '<div class="oxi-addons-flip-box-back-info">
                         ' . $this->text_render($value['sa_flip_boxes_back_description']) . '
                         </div>';
             }
-            if ($this->url_render('sa_flip_boxes_button_link', $value) != '') {
-                $starturl .= '<a '.$this->url_render('sa_flip_boxes_button_link', $value).'>';
-                $endurl .= '</a>';
+            if ($value['sa_flip_boxes_button_text'] != '') {
+                $button .= '<div class="oxi-addons-flip-box-back-button">
+                            <a '.$this->url_render('sa_flip_boxes_button_link', $value).' class="oxi-addons-flip-box-back-button-data" >' . $this->text_render($value['sa_flip_boxes_button_text']) . ' </a>
+                        </div>';
             }
-            echo ' '.$starturl.' <div class="oxi-flip-box-col-style-3 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
-                        <div class="oxi-addons-flip-box-style-3">
+            echo '  <div class="oxi-flip-box-col-style-4 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
+                        <div class="oxi-addons-flip-box-style-4">
                             <div class="oxi-addons-flip-boxes-body"  ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">
                                     <div class="oxi-addons-flip-box-flip ' . $styledata['sa-ac-flip_boxes_flip_direction'] . '">
@@ -69,7 +74,9 @@ class Style_3 extends Templates {
                                                 <div class="oxi-addons-flip-box-back">
                                                     <div class="oxi-addons-flip-box-back-section-box">
                                                         <div class="oxi-addons-flip-box-back-section">
+                                                            ' . $back_hadding . '
                                                             ' . $backinfo . '
+                                                            ' . $button . '
                                                         </div>
                                                     </div>
                                                 </div>
@@ -78,8 +85,9 @@ class Style_3 extends Templates {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> '.$endurl.'';
+                        </div>';
+
+            echo '</div>';
         }
     }
 
@@ -98,7 +106,7 @@ class Style_3 extends Templates {
             <div class="oxi-addons-row">';
     foreach ($listdata as $value) {
         $data = explode('||#||', $value['files']);
-        $icon = $front_hadding =  $front_info = $backinfo = $fileslinkend ='';
+        $icon = $front_hadding =  $front_info = $back_hadding = $backinfo = $button = '';
         if ($data[1] != '') {
             $icon .= '<div class="oxi-addons-flip-box-front-icon">
                     ' . oxi_addons_font_awesome($data[1]) . '
@@ -115,16 +123,22 @@ class Style_3 extends Templates {
                             </div> ';
         }
         if ($data[7] != '') {
+            $back_hadding .= '<div class="oxi-addons-flip-box-back-headding">
+                            ' . OxiAddonsTextConvert($data[7]) . '
+                            </div>';
+        }
+        if ($data[9] != '') {
             $backinfo .= '<div class="oxi-addons-flip-box-back-info">
-                        ' . OxiAddonsTextConvert($data[7]) . '
+                        ' . OxiAddonsTextConvert($data[9]) . '
                         </div>';
         }
-        echo '       <div class="' . OxiAddonsItemRows($styledata, 3) . '"    ' . OxiAddonsAnimation($styledata, 53) . '>';
-                    if ($data[9] != '') {
-                        echo '<a href="' . OxiAddonsUrlConvert($data[9]) . '">';
-                        $fileslinkend = '</a>';
-                    }
-                    echo'<div class="oxi-addons-flip-box-' . $oxiid . '">
+        if ($data[11] != '') {
+            $button .= '<div class="oxi-addons-flip-box-back-button">
+                            <a href="' . OxiAddonsUrlConvert($data[13]) . '" class="oxi-addons-flip-box-back-link" >' . OxiAddonsTextConvert($data[11]) . '</a>
+                        </div>';
+        }
+        echo '       <div class="' . OxiAddonsItemRows($styledata, 3) . '"    ' . OxiAddonsAnimation($styledata, 53) . '>
+                        <div class="oxi-addons-flip-box-' . $oxiid . '">
                             <div class="oxi-addons-flip-boxes-body">
                                 <div class="oxi-addons-flip-boxes-body-data">
                                     <div class="oxi-addons-flip-box-flip ' . $styledata[7] . '">
@@ -142,7 +156,9 @@ class Style_3 extends Templates {
                                                 <div class="oxi-addons-flip-box-back">
                                                     <div class="oxi-addons-flip-box-back-section-box">
                                                         <div class="oxi-addons-flip-box-back-section">
+                                                            '.$back_hadding.'
                                                             '.$backinfo.'
+                                                            '.$button.'
                                                         </div>
                                                     </div>
                                                 </div>
@@ -152,8 +168,7 @@ class Style_3 extends Templates {
                                 </div>
                             </div>
                         </div>';
-        
-        echo $fileslinkend;
+       
         echo '</div>';
     }
     echo '</div>
@@ -172,8 +187,8 @@ class Style_3 extends Templates {
             margin: 0 auto;
             position: relative;
             padding :  ' . OxiAddonsPaddingMarginSanitize($styledata, 37) . ';
+            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 21) . '; 
             overflow: hidden;
-            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 21) . ';
         }
         .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-boxes-body:after {    
             padding-bottom: ' . ($styledata[17] / $styledata[13] * 100) . '%;
@@ -202,9 +217,9 @@ class Style_3 extends Templates {
             ' . OxiAddonsBoxShadowSanitize($styledata, 57) . ';
         }
         .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-icon {
-            width: 100%;
+            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 447) . ';
             text-align: center;
-            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 313) . ';
+            width: 100%;
         }
         .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-icon .oxi-icons {
             font-size:  ' . $styledata[129] . 'px;
@@ -253,19 +268,50 @@ class Style_3 extends Templates {
             ' . OxiAddonsBGImage($styledata, 229) . ';
             ' . OxiAddonsBoxShadowSanitize($styledata, 63) . ';
         }
-        .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-info {
+        .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-headding {
             width: 100%;
             font-size:  ' . $styledata[285] . 'px;
             color:  ' . $styledata[289] . ';
             ' . OxiAddonsFontSettings($styledata, 291) . ';
             padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 297) . '; 
         }
+        .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-info {
+            width: 100%;
+            font-size:  ' . $styledata[313] . 'px;
+            color:  ' . $styledata[317] . ';
+            ' . OxiAddonsFontSettings($styledata, 319) . ';
+            padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 325) . '; 
+        }
+        .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-button {
+            width: 100%;
+            float: left;
+            text-align: center;
+            padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 407) . '; 
+        }
+        .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-link {
+            display: inline-block;
+            font-size:  ' . $styledata[341] . 'px;
+            color:  ' . $styledata[345] . ';
+            background: ' . $styledata[347] . ';
+            ' . OxiAddonsFontSettings($styledata, 369) . ';
+            border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 349) . '; 
+            border-style: ' . $styledata[365] . ';
+            border-color: ' . $styledata[366] . ';
+            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 375) . '; 
+            padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 391) . '; 
+        }
+        .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-link:hover {
+            color: ' . $styledata[423] . ';
+            background: ' . $styledata[425] . ';
+            border-style: ' . $styledata[427] . ';
+            border-color: ' . $styledata[428] . ';
+            border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 431) . '; 
+        }
         @media only screen and (min-width : 669px) and (max-width : 993px){
             .oxi-addons-flip-box-' . $oxiid . '{
                 max-width: ' . $styledata[14] . 'px;
                 height: ' . $styledata[18] . 'px;
                 padding :  ' . OxiAddonsPaddingMarginSanitize($styledata, 38) . ';
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 22) . ';
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-boxes-body:after {    
                 padding-bottom: ' . ($styledata[18] / $styledata[14] * 100) . '%;
@@ -274,13 +320,12 @@ class Style_3 extends Templates {
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 110) . ';
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-section {
-
                 border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 74) . '; 
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 22) . '; 
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 94) . '; 
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-icon {
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 314) . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 448) . ';
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-icon .oxi-icons {
                 font-size:  ' . $styledata[130] . 'px;
@@ -306,17 +351,32 @@ class Style_3 extends Templates {
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 22) . '; 
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 254) . '; 
             }
-            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-info {
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-headding {
                 font-size:  ' . $styledata[286] . 'px;
                 padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 298) . '; 
             }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-info {
+                font-size:  ' . $styledata[314] . 'px;
+                padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 326) . '; 
+            }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-button {
+                padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 408) . '; 
+            }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-link {
+                font-size:  ' . $styledata[342] . 'px;
+                border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 350) . '; 
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 376) . '; 
+                padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 392) . '; 
+            }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-link:hover {
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 432) . '; 
+            } 
         }
         @media only screen and (max-width : 668px){
             .oxi-addons-flip-box-' . $oxiid . '{
                 max-width: ' . $styledata[15] . 'px;
                 height: ' . $styledata[19] . 'px;
                 padding :  ' . OxiAddonsPaddingMarginSanitize($styledata, 39) . ';
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 23) . ';
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-boxes-body:after {    
                 padding-bottom: ' . ($styledata[19] / $styledata[15] * 100) . '%;
@@ -325,18 +385,17 @@ class Style_3 extends Templates {
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 111) . ';
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-section {
-
                 border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 75) . '; 
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 23) . '; 
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 95) . '; 
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-icon {
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 315) . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 449) . ';
             }
             .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-front-icon .oxi-icons {
                 font-size:  ' . $styledata[131] . 'px;
                 width: ' . $styledata[127] . 'px;
-                height: ' . $styledata[122] . 'px;
+                height: ' . $styledata[127] . 'px;
                 line-height: ' . $styledata[127] . 'px;
                 border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 139) . '; 
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 159) . '; 
@@ -357,10 +416,26 @@ class Style_3 extends Templates {
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 23) . '; 
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 255) . '; 
             }
-            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-info {
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-headding {
                 font-size:  ' . $styledata[287] . 'px;
                 padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 299) . '; 
             }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-info {
+                font-size:  ' . $styledata[315] . 'px;
+                padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 327) . '; 
+            }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-button {
+                padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 409) . '; 
+            }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-link {
+                font-size:  ' . $styledata[343] . 'px;
+                border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 351) . '; 
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 377) . '; 
+                padding:  ' . OxiAddonsPaddingMarginSanitize($styledata, 393) . '; 
+            }
+            .oxi-addons-flip-box-' . $oxiid . ' .oxi-addons-flip-box-back-link:hover {
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 433) . '; 
+            } 
         }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }

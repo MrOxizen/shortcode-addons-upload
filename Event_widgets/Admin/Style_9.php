@@ -64,7 +64,7 @@ class Style_9 extends AdminStyle {
                             'label' => __('Heading', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-9-wrapper-style-9-{{$key}} .oxi-addons-EW-9-H-text' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-9-wrapper-style-9.oxi-addons-EW-9-wrapper-style-9-{{KEY}} .oxi-addons-EW-9-H-text' => '',
                             ],
                         ],
                         'sa_event_t_heading_icon' => [
@@ -76,7 +76,7 @@ class Style_9 extends AdminStyle {
                             'label' => __('Description', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXTAREA,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-9-wrapper-style-9-{{$key}} .oxi-addons-EW-9-content-text' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-9-wrapper-style-9.oxi-addons-EW-9-wrapper-style-9-{{KEY}} .oxi-addons-EW-9-content-text' => '',
                             ],
                         ],
                     ],

@@ -56,14 +56,14 @@ class Style_2 extends AdminStyle {
                             'label' => __('Date', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-D-date' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2.oxi-addons-EW-wrapper-style-2-{{KEY}} .oxi-addons-EW-D-date' => '',
                             ],
                         ],
                         'sa_event_t_month' => [
                             'label' => __('Month', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-2-month' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2.oxi-addons-EW-wrapper-style-2-{{KEY}} .oxi-addons-EW-2-month' => '',
                             ],
                         ],
                         'sa_event_t_media' => [
@@ -78,14 +78,14 @@ class Style_2 extends AdminStyle {
                             'label' => __('Heading Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-2-H' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2.oxi-addons-EW-wrapper-style-2-{{KEY}} .oxi-addons-EW-2-H' => '',
                             ],
                         ],
                         'sa_event_t_info_text' => [
                             'label' => __('Info text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXTAREA,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addon-EW-2-Adress' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2.oxi-addons-EW-wrapper-style-2-{{KEY}} .oxi-addon-EW-2-Adress' => '',
                             ],
                         ],
                         'sa_event_t_location_icon' => [
@@ -97,14 +97,14 @@ class Style_2 extends AdminStyle {
                             'label' => __('Location text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-2-C-LO' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2.oxi-addons-EW-wrapper-style-2-{{KEY}} .oxi-addons-EW-2-C-LO' => '',
                             ],
                         ],
                         'sa_event_t_button' => [
                             'label' => __('Button Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2-{{$key}} .oxi-addons-EW-2-button-link' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-2.oxi-addons-EW-wrapper-style-2-{{KEY}} .oxi-addons-EW-2-button-link' => '',
                             ],
                         ],
                         'sa_event_t_button_link' => [

@@ -1,0 +1,301 @@
+.oxi-addons-wrapper-style-13 {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-parent-wrapper {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 10px 0px;
+    border-top-style: solid;
+    border-top-color: #f0f0f0;
+    border-top-width: 1px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-parent-wrapper:first-child {
+    border-top: 0px solid
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-event-main {
+    width: 100%;
+    float: left;
+    padding: 10px 10px 10px 10px;
+    background: #ffffff
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-events {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-day-month {
+    width: 100%;
+    float: left;
+    flex: 2;
+    position: relative
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-day-month::after {
+    content: "";
+    position: absolute;
+    top: 51px;
+    right: 0;
+    background: #f5f5f5;
+    width: 3px;
+    height: 70px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-main-day-month {
+    width: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-day {
+    color: #4a4a4a;
+    font-size: 60px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    ;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-month {
+    color: #b5b5b5;
+    font-size: 18px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    ;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-content-main {
+    width: 100%;
+    float: left;
+    flex: 8;
+    padding-left: 10px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-time-location {
+    width: 100%;
+    display: flex
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #919191;
+    font-size: 16px;
+    padding: 5px 0px 0px 50px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-time-text {
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding-left: 5px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #919191;
+    font-size: 16px;
+    padding: 5px 0px 0px 10px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-location-text {
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding-left: 5px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-title {
+    width: 100%;
+    float: left;
+    padding: 0px 20px 0px 50px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-title .oxi-link {
+    width: 100%;
+    float: left;
+    color: #4a4a4a;
+    font-size: 28px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-title .oxi-link:hover {
+    color: #0c7f99;
+    text-decoration: none
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-details {
+    width: 100%;
+    float: left;
+    color: #919191;
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 10px 80px 0px 50px
+}
+
+.oxi-addons-wrapper-style-13 .oxi-addons-image {
+    width: 100%;
+    float: left;
+    flex: 2
+}
+
+.oxi-addons-wrapper-style-13 .oxi-image {
+    width: 250px;
+    height: 150px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-wrapper-style-13 .oxi-addons-event-main {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-parent-wrapper {
+        padding: 10px 0px 10px 0px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-day-month::after {
+        width: 3px;
+        height: 70px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-day {
+        font-size: 60px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-month {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-time {
+        font-size: 16px;
+        padding: 5px 0px 0px 10px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-time-location {
+        width: 100%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-location {
+        font-size: 16px;
+        padding: 5px 0px 0px 10px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-title {
+        padding: 0px 20px 0px 5px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-title .oxi-link {
+        font-size: 22px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-details {
+        font-size: 16px;
+        padding: 10px 10px 0px 10px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-image {
+        width: 250px;
+        height: 150px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-wrapper-style-13 .oxi-addons-events {
+        display: block
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-main-day-month {
+        width: 100%
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-content-main {
+        padding-left: 0
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-event-main {
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-parent-wrapper {
+        padding: 10px 0px 10px 0px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-day-month::after {
+        width: 3px;
+        height: 70px;
+        display: none
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-day {
+        font-size: 60px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-month {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-time {
+        font-size: 14px;
+        padding: 5px 0px 0px 5px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-location {
+        font-size: 14px;
+        padding: 5px 0px 0px 10px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-title {
+        text-align: center;
+        padding: 0px 5px 0px 5px
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-time-location {
+        justify-content: center
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-title .oxi-link {
+        font-size: 18px;
+        text-align: center
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-details {
+        font-size: 16px;
+        padding: 10px 5px 10px 5px;
+        text-align: center
+    }
+    .oxi-addons-wrapper-style-13 .oxi-addons-image {
+        width: 100%;
+        float: left;
+        display: flex;
+        justify-content: center
+    }
+    .oxi-addons-wrapper-style-13 .oxi-image {
+        max-width: 100%;
+        width: 250px;
+        height: 150px
+    }
+}
+
+@media only screen and (max-width:390px) {
+    .oxi-addons-wrapper-style-13 .oxi-addons-time-location {
+        width: 100%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+}
