@@ -64,14 +64,14 @@ class Style_7 extends AdminStyle {
                             'label' => __('Heading', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7-{{$key}} .oxi-addons-EW-7-H' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-{{KEY}} .oxi-addons-EW-7-H' => '',
                             ],
                         ],
                         'sa_event_t_info_time' => [
                             'label' => __('Time', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7-{{$key}} .oxi-addons-EW-7-time-text' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-{{KEY}} .oxi-addons-EW-7-time-text' => '',
                             ],
                         ],
                         'sa_event_t_info_time_icon' => [
@@ -83,7 +83,7 @@ class Style_7 extends AdminStyle {
                             'label' => __('Address', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7-{{$key}} .oxi-addons-EW-7-text' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-{{KEY}} .oxi-addons-EW-7-text' => '',
                             ],
                         ],
                         'sa_event_t_address_icon' => [
@@ -95,7 +95,7 @@ class Style_7 extends AdminStyle {
                             'label' => __('Line Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7-{{$key}} .oxi-addons-EW-7-icon-text' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-7-wrapper-style-7.oxi-addons-EW-7-wrapper-style-7-{{KEY}} .oxi-addons-EW-7-icon-text' => '',
                             ],
                         ],
                         'sa_event_t_btn_icon' => [

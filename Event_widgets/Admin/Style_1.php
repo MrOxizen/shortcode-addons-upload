@@ -56,14 +56,14 @@ class Style_1 extends AdminStyle {
                             'label' => __('Date', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-D-date' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-D-date' => '',
                             ],
                         ],
                         'sa_event_t_month' => [
                             'label' => __('Month', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-D-month' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-D-month' => '',
                             ],
                         ],
                         'sa_event_t_media' => [
@@ -78,27 +78,26 @@ class Style_1 extends AdminStyle {
                             'label' => __('Heading Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-C-heading' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-C-heading' => '',
                             ],
                         ],
                         'sa_event_t_info_text' => [
                             'label' => __('Info text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXTAREA,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-C-text' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-C-text' => '',
                             ],
                         ],
                         'sa_event_t_button' => [
                             'label' => __('Button Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1-{{$key}} .oxi-addons-EW-C-button-link' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-C-button-link' => '',
                             ],
                         ],
                         'sa_event_t_button_link' => [
                             'label' => __('Button Url', SHORTCODE_ADDOONS),
                             'type' => Controls::URL,
-                           
                             'controller' => 'add_group_control',
                         ],
                     ],
