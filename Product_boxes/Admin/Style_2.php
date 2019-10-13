@@ -142,15 +142,14 @@ class Style_2 extends AdminStyle
             ]
         );
 
-        $this->add_control(
+        $this->add_group_control(
             'sa_product_boxes_bg_color',
             $this->style,
-            [ 
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'oparetor' => 'RGB',
+            [
+                'type' => Controls::BACKGROUND,
+                'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-image-overlay::after' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-image-overlay::after' => 'background: {{VALUE}};'
                 ],
             ]
         );

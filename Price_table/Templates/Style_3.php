@@ -22,9 +22,15 @@ class Style_3 extends Templates
     {
         $datas = (array_key_exists('sa_price_table_repeater', $style) && is_array($style['sa_price_table_repeater']) ? $style['sa_price_table_repeater'] : []);
         foreach ($datas as $key => $value) {
-            $title   = $price    = $button = $ribbon = '';
+            $title = $subtitle =  $details  = $price    = $button = $ribbon = '';
             if (array_key_exists('sa_price_table_title', $value) && $value['sa_price_table_title'] != '') {
                 $title = '<' . $style['sa_price_table_title_tag'] . ' class="oxi-addons-price-title">' . $this->text_render($value['sa_price_table_title']) . '</' . $style['sa_price_table_title_tag'] . '>';
+            }
+            if (array_key_exists('sa_price_table_sub_title', $value) && $value['sa_price_table_sub_title'] != '') {
+                $subtitle = '<' . $style['sa_price_table_sub_title_tag'] . ' class="oxi-addons-price-subtitle">' . $this->text_render($value['sa_price_table_sub_title']) . '</' . $style['sa_price_table_sub_title_tag'] . '>';
+            }
+            if (array_key_exists('sa_price_table_details', $value) && $value['sa_price_table_details'] != '') {
+                $details = '<p class="oxi-addons-price-short-details">' . $this->text_render($value['sa_price_table_details']) . '</p>';
             }
 
             if (array_key_exists('sa_price_table_price', $value) && $value['sa_price_table_price'] != '') {
@@ -56,12 +62,14 @@ class Style_3 extends Templates
                 }
             }
 
-            echo '<div class="oxi-addons-parent-wrapper-style-1 oxi-addons-parent-wrapper-style-1-' . $key . '  ' . $this->column_render('sa_price_table_column', $style) . '">
-                   <div class="oxi-addons-wrapper-style-1" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
+            echo '<div class="oxi-addons-parent-wrapper-style-3 oxi-addons-parent-wrapper-style-3-' . $key . '  ' . $this->column_render('sa_price_table_column', $style) . '">
+                   <div class="oxi-addons-wrapper-style-3" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
                     ' . $ribbon . '
+                    ' . $title . '
+                    ' . $subtitle . '
                     <div class="oxi-addons-main">
                         ' . $price . '
-                        ' . $title . '
+                        ' . $details . '
                     </div>
                     ' . $button . '
                 </div>
@@ -71,7 +79,7 @@ class Style_3 extends Templates
     public function inline_public_jquery()
     {
         return 'setTimeout(function () {
-            oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-wrapper-style-1"));
+            oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-wrapper-style-3"));
         }, 500)';
     }
 

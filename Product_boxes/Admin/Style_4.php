@@ -137,14 +137,13 @@ class Style_4 extends AdminStyle
                 ],
             ]
         );
-
-        $this->add_control(
+ 
+        $this->add_group_control(
             'sa_product_boxes_bg_color',
             $this->style,
-            [ 
-                'label' => __('Overlay Background', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'oparetor' => 'RGB',
+            [
+                'type' => Controls::BACKGROUND,
+                'separator' => TRUE,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4:hover .oxi-addons-product-body' => 'background: {{VALUE}};'
                 ],

@@ -27,7 +27,7 @@ class Style_1 extends AdminStyle
             [
                 'options' => [
                     'general-settings' => esc_html__('General Settings', SHORTCODE_ADDOONS),
-                    'button' => esc_html__('Button', SHORTCODE_ADDOONS), 
+                    'button' => esc_html__('Button', SHORTCODE_ADDOONS),
                 ]
             ]
         );
@@ -52,21 +52,21 @@ class Style_1 extends AdminStyle
             'sa_product_boxes_repeater',
             $this->style,
             [
-                'label' => __('', SHORTCODE_ADDOONS), 
+                'label' => __('', SHORTCODE_ADDOONS),
                 'title_field' => 'sa_product_boxes_heading_one',
-                'fields' => [ 
+                'fields' => [
                     'sa_product_boxes_image' => [
                         'type' => Controls::MEDIA,
                         'default' => [
                             'type' => 'media-library',
                             'link' => 'https://www.oxilab.org/wp-content/uploads/2019/02/Printed-color-block-T-shirt2-571x714.jpg',
                         ],
-                        'loader' =>TRUE,
+                        'loader' => TRUE,
                         'controller' => 'add_group_control',
                     ],
                     'sa_product_boxes_heading_one' => [
                         'label' => esc_html__('Heading One', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT, 
+                        'type' => Controls::TEXT,
                         'default' => esc_html__('Quality Products from Stall to Your Door ', SHORTCODE_ADDOONS),
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-heading-one' => '',
@@ -74,7 +74,7 @@ class Style_1 extends AdminStyle
                     ],
                     'sa_product_boxes_heading_two' => [
                         'label' => esc_html__('Heading Two', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT, 
+                        'type' => Controls::TEXT,
                         'default' => esc_html__('Seasonal Picked ', SHORTCODE_ADDOONS),
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-heading-two' => '',
@@ -87,10 +87,10 @@ class Style_1 extends AdminStyle
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-details' => '',
                         ],
-                    ],   
+                    ],
                     'sa_product_boxes_button_text' => [
                         'label' => esc_html__('Button Text  ', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT, 
+                        'type' => Controls::TEXT,
                         'default' => esc_html__('Get Started', SHORTCODE_ADDOONS),
                         'selector' => [
                             '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-button-link' => '',
@@ -104,7 +104,7 @@ class Style_1 extends AdminStyle
                             '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-button-link' => '',
                         ],
                     ],
-                ],  
+                ],
             ]
         );
 
@@ -128,15 +128,14 @@ class Style_1 extends AdminStyle
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => '',
                 ],
             ]
-        );
-
-        $this->add_control(
+        ); 
+ 
+        $this->add_group_control(
             'sa_product_boxes_bg_color',
             $this->style,
-            [ 
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'oparetor' => 'RGB',
+            [
+                'type' => Controls::BACKGROUND,
+                'separator' => TRUE,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-image-overlay::after' => 'background: {{VALUE}};'
                 ],
@@ -147,11 +146,11 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Max  Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => 400,
-                ], 
+                ],
                 'range' => [
                     '%' => [
                         'min' => 10,
@@ -162,8 +161,8 @@ class Style_1 extends AdminStyle
                         'min' => 50,
                         'max' => 1200,
                         'step' =>  1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-image-overlay' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
@@ -189,7 +188,7 @@ class Style_1 extends AdminStyle
                 'default' => [
                     'unit' => 'px',
                     'size' => 10,
-                ],  
+                ],
                 'range' => [
                     '%' => [
                         'min' => 0,
@@ -252,9 +251,9 @@ class Style_1 extends AdminStyle
                 'type' => Controls::ANIMATION,
             ]
         );
-        $this->end_controls_section();  
-        $this->end_section_devider(); 
-        $this->start_section_devider(); 
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -262,7 +261,7 @@ class Style_1 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        
+
         $this->add_control(
             'sa_product_boxes_heading_one_tag',
             $this->style,
@@ -306,7 +305,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-      
+
 
         $this->add_responsive_control(
             'sa_product_boxes_heading_one_padding',
@@ -317,7 +316,7 @@ class Style_1 extends AdminStyle
                 'default' => [
                     'unit' => 'px',
                     'size' => 5,
-                ], 
+                ],
                 'range' => [
                     '%' => [
                         'min' => 0,
@@ -348,7 +347,7 @@ class Style_1 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        
+
         $this->add_control(
             'sa_product_boxes_heading_two_tag',
             $this->style,
@@ -392,7 +391,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-      
+
 
         $this->add_responsive_control(
             'sa_product_boxes_heading_two_padding',
@@ -403,7 +402,7 @@ class Style_1 extends AdminStyle
                 'default' => [
                     'unit' => 'px',
                     'size' => 5,
-                ], 
+                ],
                 'range' => [
                     '%' => [
                         'min' => 0,
@@ -458,7 +457,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-   
+
 
         $this->add_responsive_control(
             'sa_product_boxes_details_padding',
@@ -496,13 +495,13 @@ class Style_1 extends AdminStyle
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
-        
+
         $this->start_section_tabs(
             'shortcode-addons-start-tabs',
             [
                 'condition' => [
                     'shortcode-addons-start-tabs' => 'button',
-                ], 
+                ],
             ]
         );
 
@@ -556,7 +555,7 @@ class Style_1 extends AdminStyle
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-button' => 'justify-content: {{VALUE}};'
                 ],
             ]
-        ); 
+        );
         $this->add_responsive_control(
             'sa_product_boxes_button_padding',
             $this->style,
@@ -631,7 +630,7 @@ class Style_1 extends AdminStyle
             'sa_product_boxes_button_animation',
             $this->style,
             [
-                
+
                 'type' => Controls::ANIMATION,
                 'condition' => [
                     'sa_product_boxes_button_switter' => 'yes'
@@ -682,7 +681,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-button-link' => 'color:{{VALUE}};', 
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-button-link' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -762,7 +761,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ff950a',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-button-link:hover' => 'color:{{VALUE}};', 
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-button-link:hover' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -838,7 +837,6 @@ class Style_1 extends AdminStyle
 
         $this->end_controls_section();
         $this->end_section_devider();
-        $this->end_section_tabs(); 
+        $this->end_section_tabs();
     }
- 
 }
