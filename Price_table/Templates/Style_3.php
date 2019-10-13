@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_3 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -29,7 +29,8 @@ class Style_1 extends Templates
 
             if (array_key_exists('sa_price_table_price', $value) && $value['sa_price_table_price'] != '') {
                 $price = '<div class="oxi-addons-price">' . $this->text_render($value['sa_price_table_price']) . '</div>';
-            }
+            } 
+            
             if (array_key_exists('sa_price_table_ribbon_switter', $style) && $style['sa_price_table_ribbon_switter'] == 'yes') {
 
                 if (array_key_exists('sa_price_table_ribbon_text', $value) && $value['sa_price_table_ribbon_text'] != '') {
@@ -46,7 +47,7 @@ class Style_1 extends Templates
                                             </a>
                                         </div>';
                     } else {
-                        $button = '<div class="oxi-addons-main-button" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
+                        $button = '<div class="oxi-addons-button" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
                                             <button class="oxi-addons-link">
                                                 ' . $this->text_render($value['sa_price_table_button_text']) . ' 
                                             </button>
@@ -65,9 +66,6 @@ class Style_1 extends Templates
                     ' . $button . '
                 </div>
             </div>';
-            $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1:hover{
-                transform: scale(' . $style['sa_price_table_hover_scale-size'] . ') translateY(' . $style['sa_price_table_hover_position-size'] . 'px);
-            }';
         }
     }
     public function inline_public_jquery()
@@ -76,7 +74,8 @@ class Style_1 extends Templates
             oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-wrapper-style-1"));
         }, 500)';
     }
-  
+
+
     public function old_render()
     {
         $styledata = $this->dbdata;
@@ -84,8 +83,9 @@ class Style_1 extends Templates
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
+        $price = $button = $title = $ribon = $subtitle = $details = '';
         $css = '';
-
+    
         if ($stylefiles[10] != '') {
             $price = '  
                 <div class="oxi-addons-price">
@@ -100,6 +100,20 @@ class Style_1 extends Templates
                 </div>
                 ';
         }
+        if ($stylefiles[18] != '') {
+            $subtitle = '
+                <div class="oxi-addons-price-subtitle">
+                    ' . OxiAddonsTextConvert($stylefiles[18]) . '
+                </div>
+                ';
+        }
+        if ($stylefiles[20] != '') {
+            $details = '
+                <div class="oxi-addons-price-short-details">
+                    ' . OxiAddonsTextConvert($stylefiles[20]) . '
+                </div>
+                ';
+        }
         if ($styledata[84] === 'true') {
             $ribon = '
                 <div class="oxi-addons-ribon">
@@ -107,101 +121,104 @@ class Style_1 extends Templates
                 </div>
                 ';
         }
-
-        if ($styledata[216] === 'right') {
+    
+        if ($styledata[124] === 'right') {
             $ribon_position = '
-                    right: ' . $styledata[218] . 'px; 
-                    top: ' . $styledata[222] . 'px;
+                    right: ' . $styledata[126] . 'px; 
+                    top: ' . $styledata[130] . 'px;
             ';
             $css .= '
             @media only screen and (min-width : 669px) and (max-width : 993px){
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-ribon{
-                    right: ' . $styledata[219] . 'px !important; 
-                    top: ' . $styledata[223] . 'px !important;
+                    right: ' . $styledata[127] . 'px !important; 
+                    top: ' . $styledata[131] . 'px !important;
                 }
             }
             @media only screen and (max-width : 668px){
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-ribon{
-                    right: ' . $styledata[220] . 'px !important; 
-                    top: ' . $styledata[224] . 'px !important;
+                    right: ' . $styledata[128] . 'px !important; 
+                    top: ' . $styledata[131] . 'px !important;
                 }
             }
             ';
         } else {
             $ribon_position = '
-                    left: ' . $styledata[218] . 'px ; 
-                    top: ' . $styledata[222] . 'px;
+                    left: ' . $styledata[126] . 'px ; 
+                    top: ' . $styledata[130] . 'px;
             ';
             $css .= '
             @media only screen and (min-width : 669px) and (max-width : 993px){
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-ribon{
-                    right: ' . $styledata[219] . 'px !important; 
-                    top: ' . $styledata[223] . 'px !important;
+                    right: ' . $styledata[127] . 'px !important; 
+                    top: ' . $styledata[131] . 'px !important;
                 }
             }
             @media only screen and (max-width : 668px){
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-ribon{
-                    right: ' . $styledata[220] . 'px !important; 
-                    top: ' . $styledata[224] . 'px !important;
+                    right: ' . $styledata[128] . 'px !important; 
+                    top: ' . $styledata[132] . 'px !important;
                 }
             }
             ';
         }
-
-
+    
+    
         if ($stylefiles[14] != '' && $stylefiles[16] != '') {
             $button = '
-                <div class="oxi-addons-main-button">
-                    <a href="' . OxiAddonsUrlConvert($stylefiles[16]) . '" class="oxi-addons-link"  target="' . $styledata[178] . '">
+                <div class="oxi-addons-button" ' . OxiAddonsAnimation($styledata, 334) . '>
+                    <a href="' . OxiAddonsUrlConvert($stylefiles[16]) . '" class="oxi-addons-link"  target="' . $styledata[256] . '">
                         ' . OxiAddonsTextConvert($stylefiles[14]) . '
                     </a>
                 </div>
             ';
         } elseif ($stylefiles[14] != '' && $stylefiles[16] == '') {
             $button = '
-            <div class="oxi-addons-main-button">
+            <div class="oxi-addons-button" ' . OxiAddonsAnimation($styledata, 334) . '>
                 <div class="oxi-addons-link">
                     ' . OxiAddonsTextConvert($stylefiles[14]) . '
                 </div>
             </div>
         ';
         }
-        echo '<div class="oxi-addons-container"><div class="oxi-addons-row">
-                <div class="oxi-addons-main-wrapper-' . $oxiid . '">
+        echo '<div class="oxi-addons-container"> <div class="oxi-addons-row">
+                 <div class="oxi-addons-main-wrapper-' . $oxiid . '">
                     <div class="oxi-addons-wrapper-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 73) . ' >
                         ' . $ribon . '
+                        ' . $title . '
+                        ' . $subtitle . '
                         <div class="oxi-addons-main">
                             ' . $price . '
-                            ' . $title . '
+                            ' . $details . '
                         </div>
                         ' . $button . '
                     </div>
-                 </div>
+                </div>
             </div>
             </div>
+           
             ';
         $css .= '
-        .oxi-addons-main-wrapper-' . $oxiid . '{
-            width: 100%;
-            float: left;
-            display: flex;
-            justify-content: center; 
-            padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 57) . '; 
-        }
+            .oxi-addons-main-wrapper-' . $oxiid . '{
+                width: 100%;
+                float: left;
+                display: flex;
+                justify-content: center;
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 57) . '; 
+            }
             .oxi-addons-wrapper-' . $oxiid . '{
                 position: relative;
                 width: 100%;
                 float: left; 
                 overflow: hidden; 
-                background: ' . $styledata[3] . '; 
+                background: ' . $styledata[3] . ';
                 border: ' . $styledata[5] . ' ' . $styledata[6] . ';
                 border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 9) . '; 
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 25) . ';  
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 25) . ';   
                 ' . OxiAddonsBoxShadowSanitize($styledata, 78) . ';
                 transform: scale(' . $stylefiles[2] . ');
                 transition: all .5s !important;
                 cursor: pointer;
-                max-width: ' . $styledata[230] . 'px;
+                max-width: ' . $styledata[351] . 'px;
             }
             .oxi-addons-wrapper-' . $oxiid . ':hover{ 
                 transform: scale(' . $stylefiles[4] . ') translateY(' . $stylefiles[6] . 'px);
@@ -219,7 +236,7 @@ class Style_1 extends Templates
                  font-size: ' . $styledata[94] . 'px;
                  ' . OxiAddonsFontSettings($styledata, 98) . ';
                  color: ' . $styledata[104] . ';
-                 background: ' . $styledata[214] . ';
+                 background: ' . $styledata[122] . ';
                  padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 106) . '; 
                  width: ' . $styledata[86] . 'px; 
                  max-width: 100%;
@@ -227,103 +244,154 @@ class Style_1 extends Templates
                  max-height: 100%;
                  line-height: 1.5; 
                  ' . $ribon_position . ' 
-                 transform: rotate(' . $styledata[226] . 'deg);  
+                 transform: rotate(' . $styledata[134] . 'deg);  
                  transform-origin: 50% 50%;
             } 
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price{
-                font-size: ' . $styledata[122] . 'px;
-                ' . OxiAddonsFontSettings($styledata, 126) . ';
-                color: ' . $styledata[132] . ';
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 134) . '; 
+                font-size: ' . $styledata[138] . 'px;
+                ' . OxiAddonsFontSettings($styledata, 142) . ';
+                color: ' . $styledata[148] . ';
+                Background: ' . $styledata[150] . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 152) . '; 
                 width: 100%;
                 float: left;
              } 
             .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-title{
-                font-size: ' . $styledata[150] . 'px;
-                ' . OxiAddonsFontSettings($styledata, 154) . ';
-                color: ' . $styledata[160] . ';
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 162) . ';
+                font-size: ' . $styledata[168] . 'px;
+                ' . OxiAddonsFontSettings($styledata, 172) . ';
+                color: ' . $styledata[178] . ';
+                background: ' . $styledata[180] . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 182) . ';
                 width: 100%;
                 float: left;
              } 
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main-button{
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-subtitle{
+                font-size: ' . $styledata[198] . 'px;
+                ' . OxiAddonsFontSettings($styledata, 202) . ';
+                color: ' . $styledata[208] . ';
+                background: ' . $styledata[210] . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 212) . ';
                 width: 100%;
-                float: left; 
-            }
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main-button .oxi-addons-link{
-                background: ' . $styledata[202] . ';
-                color: ' . $styledata[200] . ';
-                display:  block;
-                ' . OxiAddonsFontSettings($styledata, 204) . ';
-                font-size: ' . $styledata[196] . 'px; 
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 180) . '; 
+                float: left;
+             } 
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-short-details{
+                font-size: ' . $styledata[228] . 'px;
+                ' . OxiAddonsFontSettings($styledata, 232) . ';
+                color: ' . $styledata[238] . '; 
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 240) . ';
                 width: 100%;
+                float: left;
+             } 
+             .oxi-addons-wrapper-' . $oxiid . '  .oxi-addons-button{  
+                width: 100%;
+                float: left;
+                z-index: 999;
+                text-align: ' . $styledata[290] . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 274) . ';
             }
-            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main-button .oxi-addons-link:hover{
-                background: ' . $styledata[212] . ';
-                color: ' . $styledata[210] . '; 
+            .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-button .oxi-addons-link{  
+                font-size: ' . $styledata[292] . 'px;
+                color: ' . $styledata[296] . ';
+                background: ' . $styledata[298] . ';
+                border:  ' . $styledata[300] . 'px ' . $styledata[301] . ';
+                border-color: ' . $styledata[304] . ';
+                display: inline-block;
+                ' . OxiAddonsFontSettings($styledata, 306) . ';
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 312) . ';
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 258) . '; 
+                ' . OxiAddonsBoxShadowSanitize($styledata, 328) . ';
+            }
+            .oxi-addons-wrapper-' . $oxiid . '  .oxi-addons-button .oxi-addons-link:hover{  
+                color: ' . $styledata[339] . ';
+                background: ' . $styledata[341] . ';
+                border-color: ' . $styledata[343] . ';
+                ' . OxiAddonsBoxShadowSanitize($styledata, 345) . ';
             }
      
             @media only screen and (min-width : 669px) and (max-width : 993px){
                 .oxi-addons-wrapper-' . $oxiid . '{ 
                     border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 10) . '; 
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 26) . ';  
-                    margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 58) . ';  
-                    max-width: ' . $styledata[231] . 'px; 
+                    margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 58) . ';   
+                    max-width: ' . $styledata[352] . 'px;
                 } 
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main{  
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 42) . '; 
                 } 
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-ribon{ 
-                     font-size: ' . $styledata[95] . 'px; 
+                     font-size: ' . $styledata[95] . 'px;  
                      padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 107) . '; 
                      width: ' . $styledata[87] . 'px;  
                      height: ' . $styledata[91] . 'px; 
-                     transform: rotate(' . $styledata[227] . 'deg);   
+                     transform: rotate(' . $styledata[135] . 'deg);   
                 } 
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price{
-                    font-size: ' . $styledata[123] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 135) . ';  
-                 }
-            
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-title{
-                    font-size: ' . $styledata[151] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 163) . '; 
+                    font-size: ' . $styledata[139] . 'px; 
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 153) . ';  
                  } 
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main-button .oxi-addons-link{ 
-                    font-size: ' . $styledata[197] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 181) . ';  
+                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-title{
+                    font-size: ' . $styledata[169] . 'px; 
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 183) . '; 
+                 } 
+                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-subtitle{
+                    font-size: ' . $styledata[198] . 'px; 
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 212) . '; 
+                 } 
+                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-short-details{
+                    font-size: ' . $styledata[229] . 'px; 
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 241) . '; 
+                 } 
+                 .oxi-addons-wrapper-' . $oxiid . '  .oxi-addons-button{   
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 275) . ';
                 }
+                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-button .oxi-addons-link{  
+                    font-size: ' . $styledata[295] . 'px; 
+                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 313) . ';
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 259) . ';  
+                }
+              
             }
             @media only screen and (max-width : 668px){
                 .oxi-addons-wrapper-' . $oxiid . '{ 
                     border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 11) . '; 
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 27) . ';  
-                    margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 59) . ';   
-                    max-width: ' . $styledata[232] . 'px;
+                    margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 59) . ';  
+                    max-width: ' . $styledata[353] . 'px; 
                 } 
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main{  
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 43) . '; 
                 } 
                 .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-ribon{ 
-                     font-size: ' . $styledata[96] . 'px; 
-                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 108) . '; 
-                     width: ' . $styledata[88] . 'px;  
-                     height: ' . $styledata[92] . 'px; 
-                     transform: rotate(' . $styledata[228] . 'deg);   
+                    font-size: ' . $styledata[96] . 'px;  
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 108) . '; 
+                    width: ' . $styledata[88] . 'px;  
+                    height: ' . $styledata[92] . 'px; 
+                    transform: rotate(' . $styledata[136] . 'deg);   
+               } 
+               .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price{
+                   font-size: ' . $styledata[140] . 'px; 
+                   padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 154) . ';  
                 } 
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price{
-                    font-size: ' . $styledata[124] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 136) . ';  
-                 } 
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-title{
-                    font-size: ' . $styledata[152] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 164) . '; 
-                 } 
-                .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-main-button .oxi-addons-link{ 
-                    font-size: ' . $styledata[198] . 'px; 
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 182) . ';  
-                }
+               .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-title{
+                   font-size: ' . $styledata[170] . 'px; 
+                   padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 184) . '; 
+                } 
+               .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-subtitle{
+                   font-size: ' . $styledata[199] . 'px; 
+                   padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 212) . '; 
+                } 
+               .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-price-short-details{
+                   font-size: ' . $styledata[230] . 'px; 
+                   padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 242) . '; 
+                } 
+                .oxi-addons-wrapper-' . $oxiid . '  .oxi-addons-button{   
+                   padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 276) . ';
+               }
+               .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-button .oxi-addons-link{  
+                   font-size: ' . $styledata[296] . 'px; 
+                   border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 314) . ';
+                   padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 260) . ';  
+               }
             }
         ';
         wp_add_inline_style('shortcode-addons-style', $css);

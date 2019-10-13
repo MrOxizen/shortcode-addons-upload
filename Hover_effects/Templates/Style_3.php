@@ -21,10 +21,10 @@ class Style_3 extends Templates {
         $repeater = (array_key_exists('sa_he_repeater', $style) && is_array($style['sa_he_repeater'])) ? $style['sa_he_repeater'] : [];
         foreach ($repeater as $key => $value) {
             $link = $linkcls = '';
-            if ($value['sa_he_btn_text'] == '') {
-                $link = '<a ' . $this->url_render('sa_he_link_url', $value) . '">';
+             if ($value['sa_he_btn_text'] == '' && $value['sa_he_link_url-url'] != '') {
+                $link = '<a ' . $this->url_render('sa_he_link_url', $value) . '>';
             }
-            if ($value['sa_he_btn_text'] == '') {
+            if ($value['sa_he_btn_text'] == '' && $value['sa_he_link_url-url'] != '') {
                 $linkcls = '</a>';
             }
 
