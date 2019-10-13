@@ -309,7 +309,7 @@ class Style_1 extends AdminStyle {
         );
         $this->add_responsive_control(
                 'sa_he_height', $this->style, [
-            'label' => __('Height Retio', SHORTCODE_ADDOONS),
+            'label' => __('Height Ratio', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => '%',

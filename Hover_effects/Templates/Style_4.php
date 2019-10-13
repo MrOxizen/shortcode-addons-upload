@@ -21,10 +21,10 @@ class Style_4 extends Templates {
         $repeater = (array_key_exists('sa_he_repeater', $style) && is_array($style['sa_he_repeater'])) ? $style['sa_he_repeater'] : [];
         foreach ($repeater as $key => $value) {
             $link = $linkcls = '';
-            if ($value['sa_he_btn_text'] == '') {
+            if ($value['sa_he_btn_text'] == '' && $value['sa_he_link_url-url'] != '') {
                 $link = '<a ' . $this->url_render('sa_he_link_url', $value) . '>';
             }
-            if ($value['sa_he_btn_text'] == '') {
+            if ($value['sa_he_btn_text'] == '' && $value['sa_he_link_url-url'] != '') {
                 $linkcls = '</a>';
             }
 
@@ -73,43 +73,43 @@ class Style_4 extends Templates {
         echo '  <div class="oxi-addons-container">
                 <div class="oxi-addons-row">';
 
-    foreach ($listdata as $value) {
-        $valuefile = explode('||#||', $value['files']);
-        echo '<div class="oxi-hover-effects-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . '  "  ' . OxiAddonsAnimation($styledata, 45) . '>';
-        if ($valuefile[5] == '' && $valuefile[7] != '') {
-            echo '<a target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">';
-        }
-        echo '  <div class="oxi-hover-effects-map-' . $oxiid . '">
+        foreach ($listdata as $value) {
+            $valuefile = explode('||#||', $value['files']);
+            echo '<div class="oxi-hover-effects-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . '  "  ' . OxiAddonsAnimation($styledata, 45) . '>';
+            if ($valuefile[5] == '' && $valuefile[7] != '') {
+                echo '<a target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">';
+            }
+            echo '  <div class="oxi-hover-effects-map-' . $oxiid . '">
                     <div class="oxi-hover-effects-map-body">
-                        <div class="oxi-hover-effects '.$styledata[303].'">
+                        <div class="oxi-hover-effects ' . $styledata[303] . '">
                             <div class="oxi-hover-img">
                                  <img src="' . OxiAddonsUrlConvert($valuefile[9]) . '">
                             </div>
                             <div class="oxi-hover-info">';
-        if ($valuefile[1] != '') {
-            echo ' <h3 class="oxi-button-heading ' . $styledata[215] . '">' . oxi_addons_html_decode($valuefile[1]) . '</h3>';
-            echo ' <div class="headingunderline-body ' . $styledata[215] . '"><div class="headingunderline"></div></div>';
-        }
-        if ($valuefile[3] != '') {
-            echo ' <div class="oxi-button-content ' . $styledata[245] . '">' . oxi_addons_html_decode($valuefile[3]) . '</div>';
-        }
-        if ($valuefile[5] != '' && $valuefile[7] != '') {
-            echo ' <div class="oxi-hover-info-button"><a class=" ' . $styledata[213] . '" target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">' . oxi_addons_html_decode($valuefile[5]) . '</a></div>';
-        }
-        echo '              </div>
+            if ($valuefile[1] != '') {
+                echo ' <h3 class="oxi-button-heading ' . $styledata[215] . '">' . oxi_addons_html_decode($valuefile[1]) . '</h3>';
+                echo ' <div class="headingunderline-body ' . $styledata[215] . '"><div class="headingunderline"></div></div>';
+            }
+            if ($valuefile[3] != '') {
+                echo ' <div class="oxi-button-content ' . $styledata[245] . '">' . oxi_addons_html_decode($valuefile[3]) . '</div>';
+            }
+            if ($valuefile[5] != '' && $valuefile[7] != '') {
+                echo ' <div class="oxi-hover-info-button"><a class=" ' . $styledata[213] . '" target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">' . oxi_addons_html_decode($valuefile[5]) . '</a></div>';
+            }
+            echo '              </div>
                         </div>
                     </div>
                 </div>';
-        if ($valuefile[5] == '' && $valuefile[7] != '') {
-            echo '</a>';
-        }
-        
-        echo ' </div>';
-    }
+            if ($valuefile[5] == '' && $valuefile[7] != '') {
+                echo '</a>';
+            }
 
-    echo '      </div>
+            echo ' </div>';
+        }
+
+        echo '      </div>
             </div>';
-    $css = '.oxi-hover-effects-' . $oxiid . '{
+        $css = '.oxi-hover-effects-' . $oxiid . '{
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 29) . ';
             }
             .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects-map-' . $oxiid . '{

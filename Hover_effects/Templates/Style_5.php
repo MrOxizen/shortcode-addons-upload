@@ -21,10 +21,10 @@ class Style_5 extends Templates {
         $repeater = (array_key_exists('sa_he_repeater', $style) && is_array($style['sa_he_repeater'])) ? $style['sa_he_repeater'] : [];
         foreach ($repeater as $key => $value) {
             $link = $linkcls = '';
-            if ($value['sa_he_btn_text'] == '') {
+            if ($value['sa_he_btn_text'] == '' && $value['sa_he_link_url-url'] != '') {
                 $link = '<a ' . $this->url_render('sa_he_link_url', $value) . '>';
             }
-            if ($value['sa_he_btn_text'] == '') {
+            if ($value['sa_he_btn_text'] == '' && $value['sa_he_link_url-url'] != '') {
                 $linkcls = '</a>';
             }
 
@@ -59,7 +59,7 @@ class Style_5 extends Templates {
             echo ' </div>';
             echo ' </div>';
         }
-        
+
         wp_enqueue_style('style', SA_ADDONS_UPLOAD_URL . '/Hover_effects/file/css/style.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
@@ -107,7 +107,7 @@ class Style_5 extends Templates {
             if ($valuefile[5] == '' && $valuefile[7] != '') {
                 echo '</a>';
             }
-           
+
             echo ' </div>';
         }
 
