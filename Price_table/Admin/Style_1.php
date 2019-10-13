@@ -110,90 +110,7 @@ class Style_1 extends AdminStyle
                 'showing' =>   TRUE,
             ]
         );
-        $this->start_controls_tabs(
-            'shortcode-addons-start-tabs',
-            [
-                'options' => [
-                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-                ]
-            ]
-        );
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_price_table_scale',
-            $this->style,
-            [
-                'label' => __('Scale', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 1,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 2,
-                        'step' => 0.01,
-                    ], 
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1' => 'transform: scale({{SIZE}});'
-                ],
-            ]
-        );
-        $this->end_controls_tab();
-        
-        $this->start_controls_tab();
-        $this->add_control(
-            'sa_price_table_hover_scale',
-            $this->style,
-            [
-                'label' => __('Scale ', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,  
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 1,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 2,
-                        'step' => 0.01,
-                    ], 
-                ], 
-            ]
-        );
-        $this->add_control(
-            'sa_price_table_hover_position',
-            $this->style,
-            [
-                'label' => __('Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 10,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 20,
-                        'max' => 30,
-                        'step' => 0.01,
-                    ], 
-                ], 
-            ]
-        );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-        $this->add_control(
-            'sa_price_table_separator',
-            $this->style,
-            [
-                'label' => __('', SHORTCODE_ADDOONS),
-                'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE,  
-            ]
-        ); 
+      
         $this->add_group_control(
             'sa_price_table_column',
             $this->style,
@@ -253,6 +170,38 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_price_table_scale',
+            $this->style,
+            [
+                'label' => __('Transform Scale', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER, 
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 1,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 2,
+                        'step' => 0.01,
+                    ], 
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1' => 'transform: scale({{SIZE}});'
+                ],
+            ]
+        );
         $this->add_group_control(
             'sa_price_table_shadow',
             $this->style,
@@ -296,6 +245,109 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+        $this->end_controls_tab();
+        
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_price_table_hover_scale',
+            $this->style,
+            [
+                'label' => __('Transform Scale', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,  
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 1,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 2,
+                        'step' => 0.01,
+                    ], 
+                ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1:hover' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_price_table_hover_position',
+            $this->style,
+            [
+                'label' => __('Position', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER, 
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 10,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -60,
+                        'max' => 60,
+                        'step' => 0.01,
+                    ], 
+                ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1:hover' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_price_table_hover_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1:hover' => ''
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_price_table_banner_hover_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -100,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->add_control(
+            'sa_price_table_separator',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => TRUE,  
+            ]
+        ); 
+      
+       
         $this->add_responsive_control(
             'sa_price_table_padding',
             $this->style,

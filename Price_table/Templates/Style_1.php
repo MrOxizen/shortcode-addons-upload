@@ -64,10 +64,7 @@ class Style_1 extends Templates
                     </div>
                     ' . $button . '
                 </div>
-            </div>';
-            $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-1 .oxi-addons-wrapper-style-1:hover{
-                transform: scale(' . $style['sa_price_table_hover_scale-size'] . ') translateY(' . $style['sa_price_table_hover_position-size'] . 'px);
-            }';
+            </div>'; 
         }
     }
     public function inline_public_jquery()
