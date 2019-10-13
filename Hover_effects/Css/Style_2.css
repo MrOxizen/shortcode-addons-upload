@@ -276,6 +276,7 @@ and open the template in the editor.
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    opacity: 0;
 }
 .oxi-hover-effects-styl2 .oxi-hover-effects.oxi-hover-left-to-right:hover .oxi-hover-info{
     opacity: 1;
@@ -300,6 +301,7 @@ and open the template in the editor.
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
+    opacity: 0;
 }
 .oxi-hover-effects-styl2 .oxi-hover-effects.oxi-hover-right-to-left:hover .oxi-hover-info{
     opacity: 1;
@@ -324,6 +326,7 @@ and open the template in the editor.
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    opacity: 0;
 }
 .oxi-hover-effects-styl2 .oxi-hover-effects.oxi-hover-top-to-bottom:hover .oxi-hover-info{
     opacity: 1;
@@ -348,6 +351,7 @@ and open the template in the editor.
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
+    opacity: 0;
 }
 .oxi-hover-effects-styl2 .oxi-hover-effects.oxi-hover-bottom-to-top:hover .oxi-hover-info{
     opacity: 1;
