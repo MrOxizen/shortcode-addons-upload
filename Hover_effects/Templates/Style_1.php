@@ -22,7 +22,7 @@ class Style_1 extends Templates {
         foreach ($repeater as $key => $value) {
             $link = $linkcls = '';
             if ($value['sa_he_btn_text'] == '') {
-                $link = '<a ' . $this->url_render('sa_he_link_url', $value) . '">';
+                $link = '<a ' . $this->url_render('sa_he_link_url', $value) . '>';
             }
             if ($value['sa_he_btn_text'] == '') {
                 $linkcls = '</a>';

@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates {
+class Style_5 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
@@ -29,14 +29,15 @@ class Style_2 extends Templates {
             }
 
             echo '<div class="' . $this->column_render('sa_he_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
-            echo '<div class="oxi-hover-effects-styl2 oxi-hover-effects-styl2-' . $key . '"  ' . $this->animation_render('sa_he_animation', $value) . '>';
+            echo '<div class="oxi-hover-effects-styl5 oxi-hover-effects-styl5-' . $key . '"  ' . $this->animation_render('sa_he_animation', $value) . '>';
             echo $link;
-            echo '  <div class="oxi-hover-effects-map-styl2">
+            echo '  <div class="oxi-hover-effects-map-styl5">
                     <div class="oxi-hover-effects-map-body">
                         <div class="oxi-hover-effects ' . $value['sa_he_effect'] . '">
                             <div class="oxi-hover-img">
                                  <img src="' . $this->media_render('sa_he_image', $value) . '">
                             </div>
+                             <div class="oxi-hover-info-2">
                             <div class="oxi-hover-info">';
             if (!empty($value['sa_he_title_text'])) {
                 echo ' <h3 class="oxi-button-heading ' . $value['sa_he_title_animation'] . '">' . $this->text_render($value['sa_he_title_text']) . '</h3>';
@@ -49,7 +50,7 @@ class Style_2 extends Templates {
                 echo ' <div class="oxi-hover-info-button">'
                 . '<a ' . $this->url_render('sa_he_link_url', $value) . ' class="oxi-he-button ' . $value['sa_he_btn_animation'] . '">' . $this->text_render($value['sa_he_btn_text']) . '</a></div>';
             }
-            echo '              </div>
+            echo '              </div></div>
                         </div>
                     </div>
                 </div>';
@@ -58,6 +59,7 @@ class Style_2 extends Templates {
             echo ' </div>';
             echo ' </div>';
         }
+        
         wp_enqueue_style('style', SA_ADDONS_UPLOAD_URL . '/Hover_effects/file/css/style.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
@@ -75,7 +77,7 @@ class Style_2 extends Templates {
 
         foreach ($listdata as $value) {
             $valuefile = explode('||#||', $value['files']);
-            echo '<div class="oxi-hover-effects-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . '"  ' . OxiAddonsAnimation($styledata, 45) . '>';
+            echo '<div class="oxi-hover-effects-' . $oxiid . ' ' . OxiAddonsItemRows($styledata, 7) . ' "  ' . OxiAddonsAnimation($styledata, 45) . '>';
             if ($valuefile[5] == '' && $valuefile[7] != '') {
                 echo '<a target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">';
             }
@@ -85,6 +87,8 @@ class Style_2 extends Templates {
                             <div class="oxi-hover-img">
                                  <img src="' . OxiAddonsUrlConvert($valuefile[9]) . '">
                             </div>
+                           
+                            <div class="oxi-hover-info-2">
                             <div class="oxi-hover-info">';
             if ($valuefile[1] != '') {
                 echo ' <h3 class="oxi-button-heading ' . $styledata[215] . '">' . oxi_addons_html_decode($valuefile[1]) . '</h3>';
@@ -96,14 +100,14 @@ class Style_2 extends Templates {
             if ($valuefile[5] != '' && $valuefile[7] != '') {
                 echo ' <div class="oxi-hover-info-button"><a class=" ' . $styledata[213] . '" target="' . $styledata[11] . '" href="' . OxiAddonsUrlConvert($valuefile[7]) . '">' . oxi_addons_html_decode($valuefile[5]) . '</a></div>';
             }
-            echo '              </div>
+            echo '              </div></div>
                         </div>
                     </div>
                 </div>';
             if ($valuefile[5] == '' && $valuefile[7] != '') {
                 echo '</a>';
             }
-
+           
             echo ' </div>';
         }
 
@@ -132,6 +136,9 @@ class Style_2 extends Templates {
                 display: block;
             }
             .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects{
+                -webkit-perspective: 900px;
+                -moz-perspective: 900px;
+                perspective: 900px;
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -144,6 +151,14 @@ class Style_2 extends Templates {
             .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects:hover{
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 87) . ';
             }
+            .oxi-hover-effects-' . $oxiid . ' .oxi-hover-img:before{
+                ' . OxiAddonsBoxShadowSanitize($styledata, 49) . '
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 71) . ';
+            }
+            .oxi-hover-effects-' . $oxiid . ':hover .oxi-hover-img:before{
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 87) . ';
+            }
+             
            .oxi-hover-effects-' . $oxiid . ' .oxi-hover-img,
            .oxi-hover-effects-' . $oxiid . ' .oxi-hover-img img{
                 position: absolute;
@@ -158,13 +173,6 @@ class Style_2 extends Templates {
             }
             .oxi-hover-effects-' . $oxiid . ' .oxi-hover-img:hover,
             .oxi-hover-effects-' . $oxiid . ' .oxi-hover-img:hover img{
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 87) . ';
-            }
-            .oxi-hover-effects-' . $oxiid . ' .oxi-hover-img:before{
-                ' . OxiAddonsBoxShadowSanitize($styledata, 49) . '
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 71) . ';
-            }
-            .oxi-hover-effects-' . $oxiid . ':hover .oxi-hover-img:before{
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 87) . ';
             }
             .oxi-hover-effects-' . $oxiid . ' .oxi-hover-info{
@@ -298,8 +306,7 @@ class Style_2 extends Templates {
                 }
                 .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects a:hover{
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 176) . ';
-                }
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-img:before{
+                }.oxi-hover-effects-' . $oxiid . ' .oxi-hover-img:before{
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 72) . ';
                 }
                 .oxi-hover-effects-' . $oxiid . ':hover .oxi-hover-img:before{
@@ -312,7 +319,7 @@ class Style_2 extends Templates {
                 }
                 .oxi-hover-effects-' . $oxiid . ':hover .oxi-hover-img:before{
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 89) . ';
-                }.oxi-hover-effects-' . $oxiid . '{
+                } .oxi-hover-effects-' . $oxiid . '{
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 31) . ';
                 }
                 .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects{
@@ -365,104 +372,95 @@ class Style_2 extends Templates {
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 177) . ';
                 }
             }
-            .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-left-to-right .oxi-hover-info {
-                    -webkit-transform: translateX(-100%);
-                    -moz-transform: translateX(-100%);
-                    -ms-transform: translateX(-100%);
-                    -o-transform: translateX(-100%);
-                    transform: translateX(-100%);
+            .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects .oxi-hover-info-2{
+                    -webkit-transition: all 0.35s ease-in-out;
+                    -moz-transition: all 0.35s ease-in-out;
+                    transition: all 0.35s ease-in-out;
+                    -webkit-transform-style: preserve-3d;
+                    -moz-transform-style: preserve-3d;
+                    -ms-transform-style: preserve-3d;
+                    -o-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+                    position: absolute;
+                    width:100%;
+                    height:100%;
+                    top: 0;
+                    left: 0;                    
+                    z-index:1;
                 }
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-left-to-right:hover .oxi-hover-img{
-                    -webkit-transform: rotate(-90deg);
-                    -moz-transform: rotate(-90deg);
-                    -ms-transform: rotate(-90deg);
-                    -o-transform: rotate(-90deg);
-                    transform: rotate(-90deg);
-                }
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-left-to-right:hover .oxi-hover-info{
-                    opacity: 1;
-                    -webkit-transform: translateX(0);
-                    -moz-transform: translateX(0);
-                    -ms-transform: translateX(0);
-                    -o-transform: translateX(0);
-                    transform: translateX(0);
-                    pointer-events: auto;
-                }
-
                 .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-right-to-left .oxi-hover-info {
-                    -webkit-transform: translateX(100%);
-                    -moz-transform: translateX(100%);
-                    -ms-transform: translateX(100%);
-                    -o-transform: translateX(100%);
-                    transform: translateX(100%);
+                    visibility: hidden;
+                    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+                    -moz-transform: rotate3d(0, 1, 0, 180deg);
+                    -ms-transform: rotate3d(0, 1, 0, 180deg);
+                    -o-transform: rotate3d(0, 1, 0, 180deg);
+                    transform: rotate3d(0, 1, 0, 180deg);
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
                 }
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-right-to-left:hover .oxi-hover-img{
-                    -webkit-transform: rotate(90deg);
-                    -moz-transform: rotate(90deg);
-                    -ms-transform: rotate(90deg);
-                    -o-transform: rotate(90deg);
-                    transform: rotate(90deg);
+                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-left-to-right .oxi-hover-info {
+                    visibility: hidden;
+                    -webkit-transform: rotate3d(0, 1, 0, -180deg);
+                    -moz-transform: rotate3d(0, 1, 0, -180deg);
+                    -ms-transform: rotate3d(0, 1, 0, -180deg);
+                    -o-transform: rotate3d(0, 1, 0, -180deg);
+                    transform: rotate3d(0, 1, 0, -180deg);
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
                 }
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-right-to-left:hover .oxi-hover-info{
-                    opacity: 1;
-                    -webkit-transform: translateX(0);
-                    -moz-transform: translateX(0);
-                    -ms-transform: translateX(0);
-                    -o-transform: translateX(0);
-                    transform: translateX(0);
-                    pointer-events: auto;
-                }
-
                 .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-top-to-bottom .oxi-hover-info {
-                    -webkit-transform: translateY(-100%);
-                    -moz-transform: translateY(-100%);
-                    -ms-transform: translateY(-100%);
-                    -o-transform: translateY(-100%);
-                    transform: translateY(-100%);
+                    visibility: hidden;
+                    -webkit-transform: rotateX(-180deg);
+                    -moz-transform: rotateX(-180deg);
+                    -ms-transform:  rotateX(-180deg);
+                    -o-transform:  rotateX(-180deg);
+                    transform:  rotateX(-180deg);
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
                 }
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-top-to-bottom:hover .oxi-hover-img{
-                    -webkit-transform: rotate(-90deg);
-                    -moz-transform: rotate(-90deg);
-                    -ms-transform: rotate(-90deg);
-                    -o-transform: rotate(-90deg);
-                    transform: rotate(-90deg);
+                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-bottom-to-top .oxi-hover-info {
+                   
+                    visibility: hidden;
+                    -webkit-transform: rotateX(180deg);
+                    -moz-transform: rotateX(180deg);
+                    -ms-transform:  rotateX(180deg);
+                    -o-transform:  rotateX(180deg);
+                    transform:  rotateX(180deg);
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                }
+                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-left-to-right:hover .oxi-hover-info-2{
+                    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+                    -moz-transform: rotate3d(0, 1, 0, 180deg);
+                    -ms-transform: rotate3d(0, 1, 0, 180deg);
+                    -o-transform: rotate3d(0, 1, 0, 180deg);
+                    transform: rotate3d(0, 1, 0, 180deg);
+                }
+                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-right-to-left:hover .oxi-hover-info-2{
+                    -webkit-transform: rotate3d(0, 1, 0, -180deg);
+                    -moz-transform: rotate3d(0, 1, 0, -180deg);
+                    -ms-transform: rotate3d(0, 1, 0, -180deg);
+                    -o-transform: rotate3d(0, 1, 0, -180deg);
+                    transform: rotate3d(0, 1, 0, -180deg);
                 }
                 .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-top-to-bottom:hover .oxi-hover-info{
-                    opacity: 1;
-                    -webkit-transform: translateY(0);
-                    -moz-transform: translateY(0);
-                    -ms-transform: translateY(0);
-                    -o-transform: translateY(0);
-                    transform: translateY(0);
-                    pointer-events: auto;
-                }
-
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-bottom-to-top .oxi-hover-info {
-                    -webkit-transform: translateY(100%);
-                    -moz-transform: translateY(100%);
-                    -ms-transform: translateY(100%);
-                    -o-transform: translateY(100%);
-                    transform: translateY(100%);
-                }
-                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-bottom-to-top:hover .oxi-hover-img{
-                    -webkit-transform: rotate(90deg);
-                    -moz-transform: rotate(90deg);
-                    -ms-transform: rotate(90deg);
-                    -o-transform: rotate(90deg);
-                    transform: rotate(90deg);
+                    -webkit-transform: rotateX(0deg);
+                    -moz-transform: rotateX(0deg);
+                    -ms-transform: rotateX(0deg);
+                    -o-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
                 }
                 .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects.oxi-hover-bottom-to-top:hover .oxi-hover-info{
-                    opacity: 1;
-                    -webkit-transform: translateY(0);
-                    -moz-transform: translateY(0);
-                    -ms-transform: translateY(0);
-                    -o-transform: translateY(0);
-                    transform: translateY(0);
-                    pointer-events: auto;
+                    -webkit-transform: rotateX(0deg);
+                    -moz-transform: rotateX(0deg);
+                    -ms-transform: rotateX(0deg);
+                    -o-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
                 }
-
-
-';
+                .oxi-hover-effects-' . $oxiid . ' .oxi-hover-effects:hover .oxi-hover-info {
+                    visibility: visible;
+                }
+            ';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
 
