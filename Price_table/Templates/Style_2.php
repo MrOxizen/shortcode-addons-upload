@@ -56,23 +56,23 @@ class Style_2 extends Templates
                 }
             }
 
-            echo '<div class="oxi-addons-parent-wrapper-style-2 '.($admin == "admin" ? 'oxi-addons-admin-edit-list' : '').' ' . $this->column_render('sa_price_table_column', $style) . '">
+            echo '<div class="oxi-addons-parent-wrapper-style-2 ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_price_table_column', $style) . '">
                    <div class="oxi-addons-wrapper-style-2" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
                     ' . $ribbon . '
                     ' . $title . '
                     <div class="oxi-addons-main">
                         ' . $price . '';
-                        $datas = (array_key_exists('sa_price_table_repeater', $value) && is_array($value['sa_price_table_repeater']) ? $value['sa_price_table_repeater'] : []);
-                       
-                        foreach ($datas as $data) { 
-                            echo '<div class="oxi-addons-main-feature"  > 
+            $datas = (array_key_exists('sa_price_table_repeater', $value) && is_array($value['sa_price_table_repeater']) ? $value['sa_price_table_repeater'] : []);
+
+            foreach ($datas as $data) {
+                echo '<div class="oxi-addons-main-feature"  > 
                                                 <div class="oxi-addons-feature">
                                                 ' . $this->text_render($data['sa_price_table_feature']) . '
                                                 </div>';
-                
-                            echo '</div>';
-                        }
-                   echo  '</div>
+
+                echo '</div>';
+            }
+            echo  '</div>
                     ' . $button . '
                  </div>';
             if ($admin == 'admin') :
