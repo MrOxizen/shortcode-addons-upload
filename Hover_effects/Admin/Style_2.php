@@ -269,7 +269,7 @@ class Style_2 extends AdminStyle {
                     ],
                 ],
             ],
-            'title_field' => 'sa_he_btn_text',
+            'title_field' => 'sa_he_title_text',
                 ]
         );
         $this->end_controls_section();
@@ -287,26 +287,7 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-        $this->add_responsive_control(
-                'sa_he_height', $this->style, [
-            'label' => __('Height Retio', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => '%',
-                'size' => 100,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-styl2 .oxi-hover-effects-map-styl2:after' => 'padding-bottom:{{SIZE}}%;'
-            ],
-                ]
-        );
+       
         $this->add_responsive_control(
                 'sa_he_width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
@@ -334,6 +315,26 @@ class Style_2 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-hover-effects-styl2 .oxi-hover-effects-map-styl2' => 'max-width:{{SIZE}}{{UNIT}};'
+            ],
+                ]
+        );
+         $this->add_responsive_control(
+                'sa_he_height', $this->style, [
+            'label' => __('Height Retio', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => '%',
+                'size' => 100,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-hover-effects-styl2 .oxi-hover-effects-map-styl2:after' => 'padding-bottom:{{SIZE}}%;'
             ],
                 ]
         );
@@ -612,16 +613,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_he_description_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#000000',
-            'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-styl2 .oxi-hover-info .oxi-button-content' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
+      
         $this->add_group_control(
                 'sa_he_description_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -663,28 +655,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_he_description_animation', $this->style, [
-            'label' => __('Animaton', SHORTCODE_ADDOONS),
-            'type' => Controls::SELECT,
-            'default' => 'ihewc-fade-up',
-            'loader' => TRUE,
-            'options' => [
-                'ihewc-fade-up' => __('Fade Up', SHORTCODE_ADDOONS),
-                'ihewc-fade-down' => __('Fade Down', SHORTCODE_ADDOONS),
-                'ihewc-fade-left' => __('Fade Left', SHORTCODE_ADDOONS),
-                'ihewc-fade-right' => __('Fade Right', SHORTCODE_ADDOONS),
-                'ihewc-fade-up-big' => __('Fade Up Big', SHORTCODE_ADDOONS),
-                'ihewc-fade-down-big' => __('Fade Down Big', SHORTCODE_ADDOONS),
-                'ihewc-fade-left-big' => __('Fade Left Big', SHORTCODE_ADDOONS),
-                'ihewc-fade-right-big' => __('Fade Right Big', SHORTCODE_ADDOONS),
-                'ihewc-zoom-in' => __('Zoom In', SHORTCODE_ADDOONS),
-                'ihewc-zoom-out' => __('Zoom Out', SHORTCODE_ADDOONS),
-                'ihewc-flip-x' => __('Flip X', SHORTCODE_ADDOONS),
-                'ihewc-flip-y' => __('Flip Y', SHORTCODE_ADDOONS),
-            ],
-                ]
-        );
+        
 
         $this->end_controls_tab();
         $this->end_controls_tabs();
