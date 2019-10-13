@@ -56,28 +56,28 @@ class Style_5 extends AdminStyle {
                             'label' => __('Date', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} oxi-addons-EW-5-wrapper-style-5-{{$key}} .oxi-addons-EW-5-H' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-5-wrapper-style-5.oxi-addons-EW-5-wrapper-style-5-{{KEY}} .oxi-addons-EW-5-H' => '',
                             ],
                         ],
                         'sa_event_t_time' => [
                             'label' => __('Time', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} oxi-addons-EW-5-wrapper-style-5-{{$key}} .oxi-addons-EW-5-SH' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-5-wrapper-style-5.oxi-addons-EW-5-wrapper-style-5-{{KEY}} .oxi-addons-EW-5-SH' => '',
                             ],
                         ],
                         'sa_event_t_name' => [
                             'label' => __('Name', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} oxi-addons-EW-5-wrapper-style-5-{{$key}} .oxi-addons-EW-5-D' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-5-wrapper-style-5.oxi-addons-EW-5-wrapper-style-5-{{KEY}} .oxi-addons-EW-5-D' => '',
                             ],
                         ],
                         'sa_event_t_address' => [
                             'label' => __('Address', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXTAREA,
                             'selector' => [
-                                '{{WRAPPER}} oxi-addons-EW-5-wrapper-style-5-{{$key}} .oxi-addons-EW-5-SD' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-5-wrapper-style-5.oxi-addons-EW-5-wrapper-style-5-{{KEY}} .oxi-addons-EW-5-SD' => '',
                             ],
                         ],
                     ],

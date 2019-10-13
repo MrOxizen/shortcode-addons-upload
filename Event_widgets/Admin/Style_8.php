@@ -64,35 +64,35 @@ class Style_8 extends AdminStyle {
                             'label' => __('Heading', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8-{{$key}} .oxi-addons-EW-8-H' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8.oxi-addons-EW-8-wrapper-style-8-{{KEY}} .oxi-addons-EW-8-H' => '',
                             ],
                         ],
                         'sa_event_t_sub_heading' => [
                             'label' => __('Sub Heading', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8-{{$key}} .oxi-addons-EW-8-SH' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8.oxi-addons-EW-8-wrapper-style-8-{{KEY}} .oxi-addons-EW-8-SH' => '',
                             ],
                         ],
                         'sa_event_t_date' => [
                             'label' => __('Date', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8-{{$key}} .oxi-addons-EW-8-footer-D' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8.oxi-addons-EW-8-wrapper-style-8-{{KEY}} .oxi-addons-EW-8-footer-D' => '',
                             ],
                         ],
                         'sa_event_t_month' => [
                             'label' => __('Month', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8-{{$key}} .oxi-addons-EW-8-footer-M' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8.oxi-addons-EW-8-wrapper-style-8-{{KEY}} .oxi-addons-EW-8-footer-M' => '',
                             ],
                         ],
                         'sa_event_t_time_text' => [
                             'label' => __('Time', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8-{{$key}} .oxi-addons-EW-8-footer-T' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-8-wrapper-style-8.oxi-addons-EW-8-wrapper-style-8-{{KEY}} .oxi-addons-EW-8-footer-T' => '',
                             ],
                         ],
                         'sa_event_t_event_link' => [

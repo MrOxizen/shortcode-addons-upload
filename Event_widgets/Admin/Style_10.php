@@ -64,7 +64,7 @@ class Style_10 extends AdminStyle {
                             'label' => __('Heading', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10-{{$key}} .oxi-addons-EW-10-H' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-10-H' => '',
                             ],
                         ],
                         'sa_event_t_heading_link' => [
@@ -75,7 +75,7 @@ class Style_10 extends AdminStyle {
                             'label' => __('Time', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10-{{$key}} .oxi-addons-EW-10-F-T-T' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-10-F-T-T' => '',
                             ],
                         ],
                         'sa_event_t_info_time_icon' => [
@@ -87,7 +87,7 @@ class Style_10 extends AdminStyle {
                             'label' => __('Address', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10-{{$key}} .oxi-addons-EW-10-F-L-T' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-10-F-L-T' => '',
                             ],
                         ],
                         'sa_event_t_address_icon' => [
@@ -96,24 +96,24 @@ class Style_10 extends AdminStyle {
                             'default' => 'fas fa-map-marker-alt',
                         ],
                         'sa_event_t_day' => [
-                            'label' => __('Day', SHORTCODE_ADDOONS),
+                            'label' => __('Date', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10-{{$key}} .oxi-addons-EW-7-text' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-7-text' => '',
                             ],
                         ],
                         'sa_event_t_month' => [
                             'label' => __('Month', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10-{{$key}} .oxi-addons-EW-10-D' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-10-D' => '',
                             ],
                         ],
                         'sa_event_t_link_text' => [
                             'label' => __('Link Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10-{{$key}} .oxi-addons-EW-10-M' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-10-M' => '',
                             ],
                         ],
                         'sa_event_t_btn_link_url' => [

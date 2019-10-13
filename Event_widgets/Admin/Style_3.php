@@ -64,42 +64,42 @@ class Style_3 extends AdminStyle {
                             'label' => __('Price', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-price' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3.oxi-addons-EW-wrapper-style-3-{{KEY}} .oxi-addons-EW-image-overlay-price' => '',
                             ],
                         ],
                         'sa_event_t_image_heading' => [
                             'label' => __('Image Heading', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-heading' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3.oxi-addons-EW-wrapper-style-3-{{KEY}} .oxi-addons-EW-image-overlay-heading' => '',
                             ],
                         ],
                         'sa_event_t_info_text' => [
                             'label' => __('Info text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXTAREA,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-image-overlay-details' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3.oxi-addons-EW-wrapper-style-3-{{KEY}} .oxi-addons-EW-image-overlay-details' => '',
                             ],
                         ],
                         'sa_event_t_location_address' => [
                             'label' => __('Address', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-title' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3.oxi-addons-EW-wrapper-style-3-{{KEY}} .oxi-addons-EW-body-title' => '',
                             ],
                         ],
                         'sa_event_t_location_time' => [
                             'label' => __('Time', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-time' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3.oxi-addons-EW-wrapper-style-3-{{KEY}} .oxi-addons-EW-body-time' => '',
                             ],
                         ],
                         'sa_event_t_button' => [
                             'label' => __('Button Text', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3-{{$key}} .oxi-addons-EW-body-button-link' => '',
+                                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3.oxi-addons-EW-wrapper-style-3-{{KEY}} .oxi-addons-EW-body-button-link' => '',
                             ],
                         ],
                         'sa_event_t_button_link' => [
