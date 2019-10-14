@@ -253,11 +253,20 @@ class Style_13 extends AdminStyle {
                     'type' => Controls::BOXSHADOW,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-style13.oxi-hover-effects-style13-{{KEY}} .oxi-hover-info' => ''
+                        '{{WRAPPER}} .oxi-hover-effects-style13.oxi-hover-effects-style13-{{KEY}} .oxi-hover-info' => '',
+                        '{{WRAPPER}} .oxi-hover-effects-style13.oxi-hover-effects-style13-{{KEY}} .oxi-hover-img:before' => ''
+                    ],
+                ],
+                'sa_he_ul_color' => [
+                    'label' => __('Underline Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => 'red',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style15.oxi-hover-effects-style15-{{KEY}} .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
                     ],
                 ],
                 'sa_he_effect' => [
-                    'label' => __('Animaton', SHORTCODE_ADDOONS),
+                    'label' => __('Effects', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
                     'default' => 'oxi-hover-left-to-right',
                     'loader' => TRUE,
@@ -715,17 +724,7 @@ class Style_13 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_he_ul_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => 'red',
-            'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-style13 .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
-            ],
-                ]
-        );
-
+       
 
 
         $this->add_responsive_control(

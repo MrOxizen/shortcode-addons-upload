@@ -246,7 +246,8 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::BACKGROUND,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-info' => ''
+                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-info' => '',
+                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-img:before' => ''
                     ],
                 ],
                 'sa_he_boxshadow' => [
@@ -256,8 +257,16 @@ class Style_12 extends AdminStyle {
                         '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-info' => ''
                     ],
                 ],
+                'sa_he_ul_color' => [
+                    'label' => __('Underline Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => 'red',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
+                    ],
+                ],
                 'sa_he_effect' => [
-                    'label' => __('Animaton', SHORTCODE_ADDOONS),
+                    'label' => __('Effects', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
                     'default' => 'oxi-hover-left-to-right',
                     'loader' => TRUE,
@@ -715,16 +724,7 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_he_ul_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => 'red',
-            'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-style12 .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
-            ],
-                ]
-        );
+       
 
 
 

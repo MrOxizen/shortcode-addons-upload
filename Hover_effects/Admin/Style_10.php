@@ -253,14 +253,23 @@ class Style_10 extends AdminStyle {
                     'type' => Controls::BOXSHADOW,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-style10.oxi-hover-effects-style10-{{KEY}} .oxi-hover-info' => ''
+                        '{{WRAPPER}} .oxi-hover-effects-style10.oxi-hover-effects-style10-{{KEY}} .oxi-hover-info' => '',
+                        '{{WRAPPER}} .oxi-hover-effects-style10.oxi-hover-effects-style10-{{KEY}} .oxi-hover-img:before' => ''
+                    ],
+                ],
+                'sa_he_ul_color' => [
+                    'label' => __('Underline Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => 'red',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style10.oxi-hover-effects-style10-{{KEY}} .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
                     ],
                 ],
                 'sa_he_content_aling' => [
                     'label' => __('Alignments', SHORTCODE_ADDOONS),
                     'type' => Controls::CHOOSE,
                     'toggle' => TRUE,
-                    'loader'=> TRUE,
+                    'loader' => TRUE,
                     'default' => 'center',
                     'options' => [
                         'flex-start' => [
@@ -278,14 +287,14 @@ class Style_10 extends AdminStyle {
                     ],
                 ],
                 'sa_he_effect' => [
-                    'label' => __('Animaton', SHORTCODE_ADDOONS),
+                    'label' => __('Effects', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
                     'default' => 'oxi-hover-left-to-right',
                     'loader' => TRUE,
                     'options' => [
                         'oxi-hover-left-to-right' => __('Scale Out Top', SHORTCODE_ADDOONS),
                         'oxi-hover-right-to-left' => __('Scale Out Bottom', SHORTCODE_ADDOONS),
-                     ],
+                    ],
                 ],
             ],
             'title_field' => 'sa_he_title_text',
@@ -494,10 +503,10 @@ class Style_10 extends AdminStyle {
                 ]
         );
         $this->start_section_devider();
-        
 
 
-        
+
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Content Setting', SHORTCODE_ADDOONS),
@@ -625,7 +634,7 @@ class Style_10 extends AdminStyle {
                 'sa_he_content_padding', $this->style, [
             'label' => __('Content Body Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-                    'separator'=>TRUE,
+            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => 20,
@@ -709,16 +718,7 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_he_ul_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => 'red',
-            'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-style10 .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
-            ],
-                ]
-        );
+        
 
 
 
