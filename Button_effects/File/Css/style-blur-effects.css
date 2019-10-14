@@ -1,0 +1,26 @@
+.ihewc-blur{
+    overflow: hidden;
+}
+
+.ihewc-blur .ihewc-hover-figure-caption {
+    opacity: 0;
+}
+.ihewc-blur:hover  .ihewc-hover-image,
+.ihewc-blur.oxi-touch  .ihewc-hover-image{
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0;
+}
+.ihewc-blur:hover .ihewc-hover-figure-caption,
+.ihewc-blur.oxi-touch .ihewc-hover-figure-caption{
+    opacity: 1;
+    -webkit-transition-delay: 0.21s;
+    -moz-transition-delay: 0.21s;
+    -o-transition-delay: 0.21s;
+    transition-delay: 0.21s;
+}

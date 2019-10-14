@@ -1,0 +1,94 @@
+
+[class^='ihewc-dive'] .ihewc-hover-figure-caption, [class*=' ihewc-dive'] .ihewc-hover-figure-caption {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+[class^='ihewc-dive']:hover  .ihewc-hover-image,
+[class*=' ihewc-dive']:hover  .ihewc-hover-image,
+[class^='ihewc-dive'].oxi-touch  .ihewc-hover-image,
+[class*=' ihewc-dive'].oxi-touch  .ihewc-hover-image {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+[class^='ihewc-dive']:hover .ihewc-hover-figure-caption,
+[class*=' ihewc-dive']:hover .ihewc-hover-figure-caption,
+[class^='ihewc-dive'].oxi-touch .ihewc-hover-figure-caption,
+[class*=' ihewc-dive'].oxi-touch .ihewc-hover-figure-caption{
+    opacity: 1;
+    -webkit-transition-delay: 0.175s;
+    -moz-transition-delay: 0.175s;
+    -o-transition-delay: 0.175s;
+    transition-delay: 0.175s;
+} .ihewc-dive .ihewc-hover-figure-caption {
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -o-transform: scale(5);
+    transform: scale(5);
+}
+.ihewc-dive:hover  .ihewc-hover-image,
+.ihewc-dive.oxi-touch  .ihewc-hover-image{
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -o-transform: scale(5);
+    transform: scale(5);
+}
+.ihewc-dive:hover .ihewc-hover-figure-caption,
+.ihewc-dive.oxi-touch .ihewc-hover-figure-caption{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+} .ihewc-dive-cc .ihewc-hover-figure-caption {
+    -webkit-transform: rotate(-45deg) scale(5);
+    -moz-transform: rotate(-45deg) scale(5);
+    -ms-transform: rotate(-45deg) scale(5);
+    -o-transform: rotate(-45deg) scale(5);
+    transform: rotate(-45deg) scale(5);
+}
+.ihewc-dive-cc:hover  .ihewc-hover-image,
+.ihewc-dive-cc.oxi-touch  .ihewc-hover-image{
+    -webkit-transform: rotate(45deg) scale(5);
+    -moz-transform: rotate(45deg) scale(5);
+    -ms-transform: rotate(45deg) scale(5);
+    -o-transform: rotate(45deg) scale(5);
+    transform: rotate(45deg) scale(5);
+}
+.ihewc-dive-cc:hover .ihewc-hover-figure-caption,
+.ihewc-dive-cc.oxi-touch .ihewc-hover-figure-caption{
+    -webkit-transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    -o-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+} .ihewc-dive-ccc .ihewc-hover-figure-caption {
+    -webkit-transform: rotate(45deg) scale(5);
+    -moz-transform: rotate(45deg) scale(5);
+    -ms-transform: rotate(45deg) scale(5);
+    -o-transform: rotate(45deg) scale(5);
+    transform: rotate(45deg) scale(5);
+}
+.ihewc-dive-ccc:hover  .ihewc-hover-image,
+.ihewc-dive-ccc.oxi-touch  .ihewc-hover-image{
+    -webkit-transform: rotate(-45deg) scale(5);
+    -moz-transform: rotate(-45deg) scale(5);
+    -ms-transform: rotate(-45deg) scale(5);
+    -o-transform: rotate(-45deg) scale(5);
+    transform: rotate(-45deg) scale(5);
+}
+.ihewc-dive-ccc:hover .ihewc-hover-figure-caption,
+.ihewc-dive-ccc.oxi-touch .ihewc-hover-figure-caption{
+    -webkit-transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    -o-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+}

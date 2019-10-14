@@ -1,0 +1,64 @@
+
+*[class^='ihewc-fall-away-'], *[class*=' ihewc-fall-away-'] {
+    -webkit-perspective: 50em;
+    -moz-perspective: 50em;
+    perspective: 50em;
+}
+*[class^='ihewc-fall-away-'] .ihewc-hover-image, *[class*=' ihewc-fall-away-'] .ihewc-hover-image {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.455s ease-in;
+    -o-transition: all 0.455s ease-in;
+    -moz-transition: all 0.455s ease-in;
+    transition: all 0.455s ease-in;
+}
+*[class^='ihewc-fall-away-'] .ihewc-hover-figure-caption, *[class*=' ihewc-fall-away-'] .ihewc-hover-figure-caption {
+    opacity: 0;
+}
+*[class^='ihewc-fall-away-']:hover .ihewc-hover-image,
+*[class*=' ihewc-fall-away-']:hover .ihewc-hover-image,
+*[class^='ihewc-fall-away-'].oxi-touch .ihewc-hover-image,
+*[class*=' ihewc-fall-away-'].oxi-touch .ihewc-hover-image{
+    opacity: 0;
+}
+*[class^='ihewc-fall-away-']:hover .ihewc-hover-figure-caption, 
+*[class*=' ihewc-fall-away-']:hover .ihewc-hover-figure-caption,
+*[class^='ihewc-fall-away-'].oxi-touch .ihewc-hover-figure-caption, 
+*[class*=' ihewc-fall-away-'].oxi-touch .ihewc-hover-figure-caption{
+    opacity: 1;
+    -webkit-transition-delay: 0.455s;
+    -moz-transition-delay: 0.455s;
+    -o-transition-delay: 0.455s;
+    transition-delay: 0.455s;
+} 
+.ihewc-fall-away-horizontal:hover .ihewc-hover-image,
+.ihewc-fall-away-horizontal.oxi-touch .ihewc-hover-image{
+    -webkit-transform: rotateX(-360deg) scale(0.2);
+    -moz-transform: rotateX(-360deg) scale(0.2);
+    transform: rotateX(-360deg) scale(0.2);
+}
+.ihewc-fall-away-vertical:hover .ihewc-hover-image,
+.ihewc-fall-away-vertical.oxi-touch .ihewc-hover-image{
+    -webkit-transform: rotateY(-360deg) scale(0.2);
+    -moz-transform: rotateY(-360deg) scale(0.2);
+    transform: rotateY(-360deg) scale(0.2);
+} 
+.ihewc-fall-away-cc:hover .ihewc-hover-image,
+.ihewc-fall-away-cc.oxi-touch .ihewc-hover-image{
+    -webkit-transform: rotate(360deg) scale(0.2);
+    -moz-transform: rotate(360deg) scale(0.2);
+    -ms-transform: rotate(360deg) scale(0.2);
+    -o-transform: rotate(360deg) scale(0.2);
+    transform: rotate(360deg) scale(0.2);
+} 
+.ihewc-fall-away-ccc:hover .ihewc-hover-image,
+.ihewc-fall-away-ccc.oxi-touch .ihewc-hover-image{
+    -webkit-transform: rotate(-360deg) scale(0.2);
+    -moz-transform: rotate(-360deg) scale(0.2);
+    -ms-transform: rotate(-360deg) scale(0.2);
+    -o-transform: rotate(-360deg) scale(0.2);
+    transform: rotate(-360deg) scale(0.2);
+}
