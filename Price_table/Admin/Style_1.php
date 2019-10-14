@@ -278,7 +278,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER, 
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => -10,
                 ],
                 'range' => [
                     'px' => [

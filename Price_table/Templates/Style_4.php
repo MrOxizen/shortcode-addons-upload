@@ -23,15 +23,29 @@ class Style_4 extends Templates
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
 
-            $title   = $price    = $button = $ribbon = '';
+            $heading = $price_title   = $price    = $button = $ribbon = '';
             if (array_key_exists('sa_price_table_title', $value) && $value['sa_price_table_title'] != '') {
-                $title = '<' . $style['sa_price_table_title_tag'] . ' class="oxi-addons-price-title">' . $this->text_render($value['sa_price_table_title']) . '</' . $style['sa_price_table_title_tag'] . '>';
+                $heading = '<' . $style['sa_price_table_title_tag'] . ' class="oxi-addons-heading-title">' . $this->text_render($value['sa_price_table_title']) . '</' . $style['sa_price_table_title_tag'] . '>';
             }
-            
+            if (array_key_exists('sa_price_table_price_subtitle', $value) && $value['sa_price_table_price_subtitle'] != '') {
+                $price_title = '<div class="oxi-addons-price-title">' . $this->text_render($value['sa_price_table_price_subtitle']) . '</div>';
+            }
+
 
             if (array_key_exists('sa_price_table_price', $value) && $value['sa_price_table_price'] != '') {
-                $price = '<div class="oxi-addons-price">' . $this->text_render($value['sa_price_table_price']) . '</div>';
+                $price = ' 
+                <div class="oxi-addons-price-position">
+                <div class="oxi-addons-price-box">
+                    <div style="width: 100%; float: left;">
+                        <div class="oxi-addons-price">
+                        ' . $this->text_render($value['sa_price_table_price']) . '
+                        </div> 
+                        ' . $price_title . '
+                    </div>
+                </div>
+            </div> ';
             }
+
             if (array_key_exists('sa_price_table_ribbon_switter', $style) && $style['sa_price_table_ribbon_switter'] == 'yes') {
 
                 if (array_key_exists('sa_price_table_ribbon_text', $value) && $value['sa_price_table_ribbon_text'] != '') {
@@ -60,21 +74,23 @@ class Style_4 extends Templates
             echo '<div class="oxi-addons-parent-wrapper-style-4 ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_price_table_column', $style) . '">
                    <div class="oxi-addons-wrapper-style-4" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
                     ' . $ribbon . '
-                    ' . $title . '
-                    <div class="oxi-addons-main">
-                        ' . $price . '';
-            $datas = (array_key_exists('sa_price_table_repeater', $value) && is_array($value['sa_price_table_repeater']) ? $value['sa_price_table_repeater'] : []);
-
-            foreach ($datas as $data) {
-                echo '<div class="oxi-addons-main-feature"  > 
-                                                <div class="oxi-addons-feature">
-                                                ' . $this->text_render($data['sa_price_table_feature']) . '
-                                                </div>';
-
-                echo '</div>';
-            }
-            echo  '</div>
-                    ' . $button . '
+                    <div class="oxi-addons-main-heading"> 
+                        ' . $heading . '  
+                        ' . $price . '  
+                    </div> 
+                    <div class="oxi-addons-feature-btn">
+                        <div class="oxi-addons-main">';
+                            $datas = (array_key_exists('sa_price_table_repeater', $value) && is_array($value['sa_price_table_repeater']) ? $value['sa_price_table_repeater'] : []);
+                                foreach ($datas as $data) {
+                                    echo '<div class="oxi-addons-main-feature"  > 
+                                            <div class="oxi-addons-feature">
+                                            ' . $this->text_render($data['sa_price_table_feature']) . '
+                                            </div>'; 
+                                    echo '</div>';
+                                }
+                    echo  '</div>
+                        ' . $button . '
+                    </div>
                  </div>';
             if ($admin == 'admin') :
                 echo '  <div class="oxi-addons-admin-absulote">

@@ -1,0 +1,332 @@
+ 
+ .oxi-addons-parent-wrapper-style-6 {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-button-wrapper-style-6 {
+    position: relative;
+    background: rgba(255, 255, 255, 1.00);
+    border: none #db2121;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 7px 15px -6px rgba(18, 18, 18, 0.49); 
+    transform: scale(1);
+    transition: all .5s !important;
+    cursor: pointer;
+    max-width: 250px
+}
+ 
+
+.oxi-addons-wrapper-style-6 {
+    position: relative;
+    width: 100%;
+    float: left;
+    overflow: hidden
+}
+
+.oxi-addons-button-wrapper-style-6:hover {
+    transform: scale(1) translateY(-10px);
+    -webkit-transform: scale(1) translateY(-10px);
+    -moz-transform: scale(1) translateY(-10px);
+    -ms-transform: scale(1) translateY(-10px);
+    -o-transform: scale(1) translateY(-10px);
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-main {
+    width: 100%;
+    float: left;
+    padding: 22px 0px 35px 0px
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-ribon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 14px;
+    font-family: "Lato";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #ffffff;
+    background: rgba(14, 158, 139, 1.00);
+    padding: 10px 10px 10px 10px;
+    width: 200px;
+    max-width: 100%;
+    height: 40px;
+    max-height: 100%;
+    line-height: 1.5;
+    left: -66px;
+    top: 15px;
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+    z-index: 999
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-main-feature {
+    width: 100%;
+    float: left;
+    border: solid #f2f2f2;
+    border-width: 1px 0px 0px 0px
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-main-feature:first-child {
+    border-top: 0px
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-main-feature:last-child {
+    border-bottom: 0px
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-feature {
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #5e5c5c;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-feature span {
+    color: #bfbfbf;
+    font-weight: normal
+}
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-price-title {
+    font-size: 14px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #edeaea;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-main-heading {
+    width: 100%;
+    float: left;
+    position: relative
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-heading-title {
+    font-size: 30px;
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #707070;
+    background: rgba(40, 158, 158, 0.01);
+    padding: 30px 0px 20px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(82, 82, 82, 1); 
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-price-position {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-price-box {
+    width: 100%;
+    float: left;
+    max-width: 120px;
+    height: 120px;
+    background: rgba(14, 158, 139, 1.00);
+    border: 0px none;
+    border-color: #ffffff;
+    border-radius: 60px 60px 60px 60px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0px 5px 20px -5px rgba(77, 77, 77, 0.92); 
+    display: flex;
+    align-items: center
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-price {
+    font-size: 26px;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #ffffff;
+    padding: 2px 2px 2px 2px;
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-price span {
+    font-size: 18px;
+    color: #f0eded;
+    font-weight: normal
+}
+
+.oxi-addons-button-wrapper-style-6 .oxi-addons-button-over {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    float: left;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+}
+
+.oxi-addons-button-wrapper-style-6 .oxi-addons-button {
+    width: 100%;
+    float: left;
+    z-index: 999;
+    text-align: center;
+    padding: 5px 5px 15px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-button .oxi-addons-link {
+    font-size: px;
+    color: #ffffff;
+    background: rgba(14, 158, 139, 1.00);
+    border: 0px none;
+    border-color: #ffffff;
+    display: inline-block;
+    font-family: "Nunito";
+    font-weight: 100;
+    font-style: normal;
+    ;
+    border-radius: 50px 50px 50px 50px;
+    padding: 10px 30px 10px 30px;
+    box-shadow: 0px 6px 14px -4px rgba(61, 61, 61, 1);
+}
+
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-button .oxi-addons-link:hover {
+    color: #ffffff;
+    background: rgba(25, 117, 106, 1.00);
+    border-color: #ffffff;
+    box-shadow: 0px 8px 11px 0px rgba(128, 104, 104, 0.15);
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-parent-wrapper-style-6 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-button-wrapper-style-6 {
+        border-width: 0px 0px 0px 0px;
+        border-radius: 10px 10px 10px 10px;
+        max-width: 250px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-main {
+        padding: 22px 0px 35px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-ribon {
+        font-size: 14px;
+        padding: 10px 10px 10px 10px;
+        width: 200px;
+        height: 40px;
+        transform: rotate(-45deg)
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-feature {
+        border-width: 1px 0px 0px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-feature {
+        font-size: 18px;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-heading-title {
+        font-size: 30px;
+        padding: 30px 0px 20px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price-position {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price-box {
+        max-width: 120px;
+        height: 120px;
+        border-radius: 60px 60px 60px 60px;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price {
+        font-size: 26px;
+        padding: 2px 2px 2px 2px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price span {
+        font-size: 18px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-button {
+        padding: 5px 5px 15px 5px
+    }
+    .oxi-addons-parent-wrapper-style-6  .oxi-addons-link {
+        font-size: px;
+        border-radius: 50px 50px 50px 50px;
+        padding: 10px 30px 10px 30px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-parent-wrapper-style-6 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-button-wrapper-style-6 {
+        border-width: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+        max-width: 250px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-main {
+        padding: 22px 0px 35px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-ribon {
+        font-size: 14px;
+        padding: 10px 10px 10px 10px;
+        width: 200px;
+        height: 40px;
+        transform: rotate(-45deg)
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-feature {
+        border-width: 1px 0px 0px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-feature {
+        font-size: 18px;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-heading-title {
+        font-size: 30px;
+        padding: 30px 0px 20px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price-position {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price-box {
+        max-width: 120px;
+        height: 120px;
+        border-radius: 60px 60px 60px 60px;
+        padding: 10px 10px 10px 10px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price {
+        font-size: 26px;
+        padding: 2px 2px 2px 2px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-price span {
+        font-size: 18px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-button {
+        padding: 5px 5px 15px 5px
+    }
+    .oxi-addons-parent-wrapper-style-6 .oxi-addons-button .oxi-addons-link {
+        font-size: px;
+        border-radius: 50px 50px 50px 50px;
+        padding: 10px 30px 10px 30px
+    }
+}
