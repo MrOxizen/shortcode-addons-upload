@@ -198,7 +198,6 @@ class Style_14 extends AdminStyle {
                         '{{WRAPPER}} .oxi-hover-effects-style14.oxi-hover-effects-style14-{{KEY}} .oxi-hover-effects .oxi-he-button:hover' => 'color:{{VALUE}};'
                     ],
                 ],
-                
                 'sa_he_btn_h_bg' => [
                     'type' => Controls::BACKGROUND,
                     'controller' => 'add_group_control',
@@ -206,7 +205,7 @@ class Style_14 extends AdminStyle {
                         '{{WRAPPER}} .oxi-hover-effects-style14.oxi-hover-effects-style14-{{KEY}} .oxi-hover-effects .oxi-he-button:hover' => ''
                     ],
                 ],
-                 'sa_oh_end_tab_2-2' => [
+                'sa_oh_end_tab_2-2' => [
                     'controller' => 'end_controls_tab',
                 ],
                 'sa_oh_end_tabs2' => [
@@ -254,7 +253,16 @@ class Style_14 extends AdminStyle {
                     'type' => Controls::BOXSHADOW,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-style14.oxi-hover-effects-style14-{{KEY}} .oxi-hover-info' => ''
+                        '{{WRAPPER}} .oxi-hover-effects-style14.oxi-hover-effects-style14-{{KEY}} .oxi-hover-info' => '',
+                        '{{WRAPPER}} .oxi-hover-effects-style14.oxi-hover-effects-style14-{{KEY}} .oxi-hover-img:before' => ''
+                    ],
+                ],
+                'sa_he_ul_color' => [
+                    'label' => __('Underline Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => 'red',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style15.oxi-hover-effects-style15-{{KEY}} .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
                     ],
                 ],
             ],
@@ -276,7 +284,7 @@ class Style_14 extends AdminStyle {
                 ]
         );
 
-        
+
         $this->add_responsive_control(
                 'sa_he_width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
@@ -327,7 +335,7 @@ class Style_14 extends AdminStyle {
             ],
                 ]
         );
-         $this->start_controls_tabs(
+        $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
                 'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
@@ -600,7 +608,7 @@ class Style_14 extends AdminStyle {
             ],
                 ]
         );
-       
+
         $this->add_group_control(
                 'sa_he_description_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -642,7 +650,7 @@ class Style_14 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->end_controls_section();
@@ -702,16 +710,7 @@ class Style_14 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_he_ul_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => 'red',
-            'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-style14 .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
-            ],
-                ]
-        );
+       
 
 
 
@@ -795,8 +794,8 @@ class Style_14 extends AdminStyle {
                 ]
         );
         $this->start_controls_tab();
-      
-        
+
+
 
         $this->add_group_control(
                 'sa_he_btn_br', $this->style, [
@@ -858,8 +857,8 @@ class Style_14 extends AdminStyle {
         $this->end_controls_tab();
 
         $this->start_controls_tab();
-        
-       
+
+
         $this->add_group_control(
                 'sa_he_btn_h-br', $this->style, [
             'type' => Controls::BORDER,
@@ -980,7 +979,7 @@ class Style_14 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->end_controls_section();
 
 

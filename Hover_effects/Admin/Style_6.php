@@ -253,11 +253,20 @@ class Style_6 extends AdminStyle {
                     'type' => Controls::BOXSHADOW,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-styl6.oxi-hover-effects-styl6-{{KEY}} .oxi-hover-info' => ''
+                        '{{WRAPPER}} .oxi-hover-effects-styl6.oxi-hover-effects-styl6-{{KEY}} .oxi-hover-info' => '',
+                        '{{WRAPPER}} .oxi-hover-effects-styl6.oxi-hover-effects-styl6-{{KEY}} .oxi-hover-img:before' => ''
+                    ],
+                ],
+                'sa_he_ul_color' => [
+                    'label' => __('Underline Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => 'red',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-styl6.oxi-hover-effects-styl6-{{KEY}} .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
                     ],
                 ],
                 'sa_he_effect' => [
-                    'label' => __('Animaton', SHORTCODE_ADDOONS),
+                    'label' => __('Effects', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
                     'default' => 'oxi-hover-left-to-right',
                     'loader' => TRUE,
@@ -265,7 +274,7 @@ class Style_6 extends AdminStyle {
                         'oxi-hover-left-to-right' => __('Scale Up', SHORTCODE_ADDOONS),
                         'oxi-hover-right-to-left' => __('Scale Down', SHORTCODE_ADDOONS),
                         'oxi-hover-bottom-to-top' => __('Scale Up Down', SHORTCODE_ADDOONS),
-                     ],
+                    ],
                 ],
             ],
             'title_field' => 'sa_he_title_text',
@@ -286,7 +295,7 @@ class Style_6 extends AdminStyle {
                 ]
         );
 
-       
+
         $this->add_responsive_control(
                 'sa_he_width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
@@ -317,7 +326,7 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_he_height', $this->style, [
             'label' => __('Height Ratio', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -714,17 +723,7 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_he_ul_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => 'red',
-            'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-styl6 .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
-            ],
-                ]
-        );
-
+       
 
 
         $this->add_responsive_control(

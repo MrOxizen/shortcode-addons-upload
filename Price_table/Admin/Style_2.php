@@ -216,7 +216,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER, 
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => -10,
                 ],
                 'range' => [
                     'px' => [
@@ -400,7 +400,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#747474',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-feature span' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -685,7 +685,7 @@ class Style_2 extends AdminStyle
                 'separator' => TRUE,
                 'type' => Controls::CHOOSE,
 
-                'default' => 'ribon_right',
+                'default' => 'ribon_left',
                 'loader' => TRUE,
                 'options' => [
                     'ribon_left' => [
@@ -1026,7 +1026,7 @@ class Style_2 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_price_table_button_alignment',
             $this->style,
             [
@@ -1375,8 +1375,8 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Button Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Business',
-                'placeholder' => 'Business',
+                'default' => 'click me',
+                'placeholder' => 'click me',
             ]
         );
         $this->add_group_control(
@@ -1384,9 +1384,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Link', SHORTCODE_ADDOONS),
-                'type' => Controls::URL,
-                'default' => 'Business',
-                'placeholder' => 'Business',
+                'type' => Controls::URL, 
             ]
         );
         $this->start_controls_section(

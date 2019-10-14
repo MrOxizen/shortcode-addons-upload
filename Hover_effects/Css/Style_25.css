@@ -1,0 +1,274 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+.oxi-hover-effects-style25{
+    padding: 3px 3px 3px 3px;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects-map-style25{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects-map-style25:after{
+    padding-bottom: 100%;
+    content: "";
+    display: block;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects-map-body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects:hover{
+    border-radius: 0px 0px 0px 0px;
+}
+
+.oxi-hover-effects-style25 .oxi-hover-img,
+.oxi-hover-effects-style25 .oxi-hover-img img{
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.oxi-hover-effects-style25 .oxi-hover-img:hover,
+.oxi-hover-effects-style25 .oxi-hover-img:hover img{
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-style25 .oxi-hover-img:before{
+    box-shadow:  1px 0px 3px 0px rgba(10, 194, 47, 0.56);
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-style25:hover .oxi-hover-img:before{
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-style25 .oxi-hover-info{
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    background: rgba(8,194,48,1.00);
+    box-shadow: Inset 1px 0px 3px 0px rgba(10, 194, 47, 0.10);
+    padding: 20px 20px 20px 20px;
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects:hover .oxi-hover-info{
+    opacity:1;
+    border-radius: 0px 0px 0px 0px;
+}
+.oxi-hover-effects-style25 .oxi-hover-info h3.oxi-button-heading{
+    width: 100%;
+    font-size: 22px;
+    color: #ffffff;
+    font-family:"Roboto Slab"; font-weight:500; font-style:normal; line-height:1.3; text-align:center;
+    margin: 0 !important;
+    padding: 2px 2px 7px 2px;
+    flex-direction: column;
+}
+.oxi-hover-effects-style25 .oxi-hover-info .headingunderline-body{
+    width: 100%; 
+    display:inline-block;
+    text-align:center;
+    line-height: 0;
+    font-size: 0px;
+    padding: 0px 0px 3px 0px;
+}
+.oxi-hover-effects-style25 .oxi-hover-info .headingunderline{
+    display:inline-block;
+    width: 120px;
+    border-bottom: 0px solid #e300a3;
+}
+.oxi-hover-effects-style25 .oxi-hover-info .oxi-button-content{
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    font-family:"Lato"; font-weight:normal; font-style:normal; line-height:1.3; text-align:center;
+    margin: 0 !important;
+    padding: 3px 3px 10px 3px;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects  .oxi-hover-info-button{
+    width: 100%;
+    text-align:center
+}
+.oxi-hover-effects-style25 .oxi-hover-effects a{
+    background: rgba(255, 255, 255, 1);
+    color: #0ac22f;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    border-width: 0px 0px 0px 0px;
+    border-color:#ffffff;
+    border-style:solid;
+    border-radius: 50px 50px 50px 50px;
+    padding:8px 15px 8px 15px;
+    margin:3px 3px 3px 3px;
+    font-family:"Lato"; font-weight:600; font-style:normal; line-height:1.3; text-align:center;letter-spacing:1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects a:hover{
+    background: rgba(7,92,26,0.81);
+    color: #ffffff;
+    border-color:#ffffff;
+    border-style:solid;
+    border-radius: 50px 50px 50px 50px;
+}
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-hover-effects-style25{
+        padding: 3px 3px 3px 3px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects:hover{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-img,
+    .oxi-hover-effects-style25 .oxi-hover-img img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-img:hover,
+    .oxi-hover-effects-style25 .oxi-hover-img:hover img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info{
+        padding: 20px 20px 20px 20px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info h3.oxi-button-heading{
+        font-size: 22px;
+        padding: 2px 2px 7px 2px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info .headingunderline-body{
+        padding: 0px 0px 3px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info .headingunderline{
+        width: 120px;
+        border-bottom: 0px solid #e300a3;
+
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info .oxi-button-content{
+        font-size: 16px;
+        padding: 3px 3px 10px 3px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects a{
+        font-size: 14px;
+        border-width: 0px 0px 0px 0px;
+        border-radius: 50px 50px 50px 50px;
+        margin:3px 3px 3px 3px;
+        padding:8px 15px 8px 15px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects a:hover{
+        border-radius: 50px 50px 50px 50px;
+    }.oxi-hover-effects-style25 .oxi-hover-img:before{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25:hover .oxi-hover-img:before{
+        border-radius: 0px 0px 0px 0px;
+    }
+}
+@media only screen and (max-width : 668px){
+    .oxi-hover-effects-style25 .oxi-hover-img:before{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25:hover .oxi-hover-img:before{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25{
+        padding: 3px 3px 3px 3px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects:hover{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-img,
+    .oxi-hover-effects-style25 .oxi-hover-img img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-img:hover,
+    .oxi-hover-effects-style25 .oxi-hover-img:hover img{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info{
+        padding: 20px 20px 20px 20px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info h3.oxi-button-heading{
+        font-size: 22px;
+        padding: 2px 2px 7px 2px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info .headingunderline-body{
+        padding: 0px 0px 3px 0px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info  .headingunderline{
+        width: 120px;
+        border-bottom: 0px solid #e300a3;
+
+    }
+    .oxi-hover-effects-style25 .oxi-hover-info .oxi-button-content{
+        font-size: 16px;
+        padding: 3px 3px 10px 3px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects a{
+        font-size: 14px;
+        width: px;
+        height: px;
+        border-width: 0px 0px 0px 0px;
+        border-radius: 50px 50px 50px 50px;
+        margin:3px 3px 3px 3px;
+        padding:8px 15px 8px 15px;
+    }
+    .oxi-hover-effects-style25 .oxi-hover-effects a:hover{
+        border-radius: 50px 50px 50px 50px;
+    }
+}
+.oxi-hover-effects-style25 .oxi-hover-effects .oxi-hover-img {
+    backface-visibility: hidden;
+    transform: scale(1);
+    z-index: 0;
+    transition: all 0.5s ease-out 0s;
+}
+.oxi-hover-effects-style25 .oxi-hover-effects:hover .oxi-hover-img{
+    opacity: 0;
+    transform: scale(0);
+}
+.oxi-hover-effects-style25 .oxi-hover-effects .oxi-hover-info {
+    transition: all 0.5s ease-out 0s;
+    opacity: 0;
+    transform: scale(0) rotateZ(-720deg);
+}
+.oxi-hover-effects-style25 .oxi-hover-effects:hover .oxi-hover-info{
+    opacity: 1;
+    transform: scale(1) rotateZ(0deg);
+}

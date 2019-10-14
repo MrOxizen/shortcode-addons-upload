@@ -294,7 +294,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::SLIDER, 
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => -10,
                 ],
                 'range' => [
                     'px' => [
@@ -788,7 +788,7 @@ class Style_3 extends AdminStyle
                 'separator' => TRUE,
                 'type' => Controls::CHOOSE,
 
-                'default' => 'ribon_right',
+                'default' => 'ribon_left',
                 'loader' => TRUE,
                 'options' => [
                     'ribon_left' => [
@@ -1128,7 +1128,7 @@ class Style_3 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_price_table_button_alignment',
             $this->style,
             [
