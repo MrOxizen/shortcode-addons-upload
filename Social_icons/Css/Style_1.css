@@ -7,7 +7,7 @@
     display: inline-block
 }
 
-.oxi-addons-social-style-1 .oxi-icon-style-1 {
+.oxi-addons-social-style-1 a.oxi-icon-style-1 {
     width: 60px;
     height: 60px;
     display: flex;
@@ -15,12 +15,12 @@
     align-items: center
 }
 
-.oxi-addons-social-style-1 .oxi-icon-style-1 .oxi-icons {
+.oxi-addons-social-style-1 a.oxi-icon-style-1 .oxi-icons {
     font-size: 35px;
     color: #390075
 }
 
-.oxi-addons-social-style-1 .oxi-icon-style-1:hover .oxi-icons {
+.oxi-addons-social-style-1 a.oxi-icon-style-1:hover .oxi-icons {
     color: #007fc9
 }
 
@@ -28,11 +28,11 @@
     .oxi-addons-social-style-1 {
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-social-style-1 .oxi-icon-style-1 {
+    .oxi-addons-social-style-1 a.oxi-icon-style-1 {
         width: 60px;
         height: 60px
     }
-    .oxi-addons-social-style-1 .oxi-icon-style-1 .oxi-icons {
+    .oxi-addons-social-style-1 a.oxi-icon-style-1 .oxi-icons {
         font-size: 35px
     }
 }
@@ -41,11 +41,11 @@
     .oxi-addons-social-style-1 {
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-social-style-1 .oxi-icon-style-1 {
+    .oxi-addons-social-style-1 a.oxi-icon-style-1 {
         width: 60px;
         height: 60px
     }
-    .oxi-addons-social-style-1 .oxi-icon-style-1 .oxi-icons {
+    .oxi-addons-social-style-1 a.oxi-icon-style-1 .oxi-icons {
         font-size: 35px
     }
 }
