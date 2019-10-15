@@ -1,0 +1,94 @@
+
+
+.oxi-addons-container *{
+    transition: none !important; 
+}
+.oxi-addons-wrapper-ss1{
+    width: 100%;
+    display: flex;   
+    padding: 0px 0px 0px 0px; 
+    justify-content: center;
+    overflow: hidden;
+}
+.oxi-addons-wrapper-ss1 .oxi-addons-wrapper-main-social{
+    display: flex;
+}
+.oxi-addons-wrapper-ss1 .oxi-addons-main-social { 
+    display: flex;     
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+} 
+.oxi-addons-wrapper-ss1 .oxi-addons-soical {
+    display: flex;
+    align-items: center;
+
+} 
+.oxi-addons-wrapper-ss1 .oxi-addons-text {
+    margin-left: 5px;
+}  
+.oxi-addons-wrapper-ss1 .oxi-addons-main-share-circle {
+    position: relative;
+    display: inline-block; 
+    max-width: 100%; 
+    line-height: 0;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out !important;
+}
+.oxi-addons-wrapper-ss1 .oxi-addons-main-share-circle .oxi-addons-circle { 
+    stroke-width:  2px;
+    stroke-dasharray: 60;
+    transition: all 0.2s ease-in-out; 
+    width: 80px;
+    height: 80px; 
+}
+.oxi-addons-wrapper-ss1 .oxi-addons-main-share-circle .oxi-addons-social-icon {  
+    font-size:26px; 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%; 
+}
+.oxi-addons-wrapper-ss1  .oxi-addons-main-share-circle .oxi-addons-social-icon .oxi-icons{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+}
+.oxi-addons-wrapper-ss1 .oxi-addons-main-share-circle:hover {
+    cursor: pointer;
+} 
+
+
+
+
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-addons-wrapper-ss1{ 
+        padding: 0px 0px 0px 0px; 
+    } 
+    .oxi-addons-main-share-circle .oxi-addons-circle-ss1 { 
+        stroke-width:  2px !important; 
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .oxi-addons-main-share-circle .oxi-addons-social-icon {  
+        font-size:26px !important;  
+    }  
+   
+}
+@media only screen and (max-width : 668px){
+    .oxi-addons-wrapper-ss1{ 
+        padding: 0px 0px 0px 0px; 
+    }  
+    .oxi-addons-main-share-circle .oxi-addons-circle-ss1 { 
+        stroke-width:  2px !important; 
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .oxi-addons-main-share-circle .oxi-addons-social-icon {  
+        font-size:26px !important;  
+    }  
+    
+}
