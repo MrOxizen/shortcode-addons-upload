@@ -17,8 +17,9 @@ use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
 class Style_1 extends AdminStyle {
 
-    public function register_controls() {
+    use \SHORTCODE_ADDONS_UPLOAD\Display_post\Files\Post_Query;
 
+    public function register_controls() {
         $this->start_section_header(
                 'shortcode-addons-start-tabs', [
             'options' => [
@@ -42,17 +43,15 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+        $this->post_type();
         $this->add_control(
-                'sa_display_post_post_type', $this->style, [
-            'label' => __('Post Type', SHORTCODE_ADDOONS),
-            'loader' => TRUE,
-            'type' => Controls::SELECT,
-            'default' => 'post',
-            'options' => [
-                'post' => __('Post', SHORTCODE_ADDOONS),
-                'page' => __('Page', SHORTCODE_ADDOONS),
-            ],
-           
+                'sa_display_post_post_type', $this->style,
+                [
+                    'label' => __('Post Type', SHORTCODE_ADDOONS),
+                    'loader' => TRUE,
+                    'type' => Controls::SELECT,
+                    'default' => 'post',
+                    'options' => $this->post_type(),
                 ]
         );
         $this->add_control(
@@ -60,14 +59,65 @@ class Style_1 extends AdminStyle {
             'label' => __('Author', SHORTCODE_ADDOONS),
             'loader' => TRUE,
             'type' => Controls::SELECT,
-            'default' => 'post',
-            'options' => [
-                'post' => __('Post', SHORTCODE_ADDOONS),
-                'page' => __('Page', SHORTCODE_ADDOONS),
-            ],
-           
+            'multiple' => true,
+            'options' => $this->post_author(),
                 ]
         );
+        foreach ($this->post_type() as $key => $value) {
+            if ($key != 'page'):
+                $this->add_control(
+                        'sa_display_post_post_type-cat' . $key, $this->style,
+                        [
+                            'label' => __(' Category', SHORTCODE_ADDOONS),
+                            'type' => Controls::SELECT,
+                            'multiple' => true,
+                            'options' => $this->post_category($key),
+                            'condition' => [
+                                'sa_display_post_post_type' => $key
+                            ]
+                        ]
+                );
+                $this->add_control(
+                        'sa_display_post_post_type-tag' . $key, $this->style,
+                        [
+                            'label' => __(' Tags', SHORTCODE_ADDOONS),
+                            'type' => Controls::SELECT,
+                            'multiple' => true,
+                            'options' => $this->post_tags($key),
+                            'condition' => [
+                                'sa_display_post_post_type' => $key
+                            ]
+                        ]
+                );
+            endif;
+
+            $this->add_control(
+                    'sa_display_post_post_type-include' . $key, $this->style,
+                    [
+                        'label' => __(' Include Post', SHORTCODE_ADDOONS),
+                        'type' => Controls::SELECT,
+                        'multiple' => true,
+                        'options' => $this->post_include($key),
+                        'condition' => [
+                            'sa_display_post_post_type' => $key
+                        ]
+                    ]
+            );
+            $this->add_control(
+                    'sa_display_post_post_type-exclude' . $key, $this->style,
+                    [
+                        'label' => __(' Exclude Post', SHORTCODE_ADDOONS),
+                        'type' => Controls::SELECT,
+                        'multiple' => true,
+                        'options' => $this->post_exclude($key),
+                        'condition' => [
+                            'sa_display_post_post_type' => $key
+                        ]
+                    ]
+            );
+        }
+
+
         $this->add_group_control(
                 'sa_s_image_img', $this->style, [
             'type' => Controls::MEDIA,

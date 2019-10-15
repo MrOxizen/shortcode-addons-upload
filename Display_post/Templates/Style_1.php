@@ -227,7 +227,7 @@ class Style_1 extends Templates {
     </div>';
         if ($stylefiles[23] == '') {
             $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-' . $oxiid . '"));}, 500);';
-            echo OxiAddonsInlineCSSData($js, 'js', 'oxi-addons-animation');
+          //  echo OxiAddonsInlineCSSData($js, 'js', 'oxi-addons-animation');
         } else {
             echo 'pore dimo pari na';
         }
