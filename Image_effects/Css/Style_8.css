@@ -17,6 +17,7 @@
 }
 .sa_ie_temp_8{
     box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1) ;
+    overflow: hidden;
 }
 .sa_ie_temp_8:hover, 
 .sa_ie_temp_8.oxi-touch{
