@@ -381,7 +381,7 @@ class Style_6 extends AdminStyle
                 'default' => 'rgba(255,255,255,0.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-feature' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature' => 'background: {{VALUE}};'
                 ],
             ]
         );
@@ -392,7 +392,7 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-feature' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature' => ''
                 ],
             ]
         );
@@ -457,7 +457,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6  .oxi-addons-feature-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1521,7 +1521,7 @@ class Style_6 extends AdminStyle
     public function modal_form_data()
     {
         echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Accordions Form</h4>
+                    <h4 class="modal-title">Price Table Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">';

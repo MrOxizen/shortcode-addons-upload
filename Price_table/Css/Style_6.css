@@ -19,13 +19,7 @@
     cursor: pointer;
     max-width: 250px
 }
-.oxi-addons-parent-wrapper-style-6  .oxi-addons-feature-btn{
-    width: 100%; 
-    float: left; 
-    display: flex; 
-    flex-direction: column;
-    padding: 70px 0px 15px 0px;
-}
+ 
 
 .oxi-addons-wrapper-style-6 {
     position: relative;

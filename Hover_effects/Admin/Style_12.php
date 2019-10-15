@@ -247,14 +247,14 @@ class Style_12 extends AdminStyle {
                     'controller' => 'add_group_control',
                     'selector' => [
                         '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-info' => '',
-                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-img:before' => ''
                     ],
                 ],
                 'sa_he_boxshadow' => [
                     'type' => Controls::BOXSHADOW,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-info' => ''
+                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-info' => '',
+                        '{{WRAPPER}} .oxi-hover-effects-style12.oxi-hover-effects-style12-{{KEY}} .oxi-hover-img:before' => ''
                     ],
                 ],
                 'sa_he_ul_color' => [
@@ -296,7 +296,7 @@ class Style_12 extends AdminStyle {
                 ]
         );
 
-       
+
         $this->add_responsive_control(
                 'sa_he_width', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
@@ -327,7 +327,7 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_he_height', $this->style, [
             'label' => __('Height Ratio', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -724,7 +724,7 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
-       
+
 
 
 

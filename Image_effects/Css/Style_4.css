@@ -109,7 +109,7 @@
     box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1);
 }
 @media only screen and (min-width:669px) and (max-width:993px){
-    .ihewc-hover-padding-176{
+    .ihewc-hover-padding{
         padding:0px 0px 0px 0px ;
     }
     .sa_ie_temp_4 .ihewc-hover-figure .ihewc-hover-figure-caption-content{
@@ -153,7 +153,7 @@
     }
 }
 @media only screen and (max-width:668px){
-    .ihewc-hover-padding-176{
+    .ihewc-hover-padding{
         padding:10px 0px 10px 10px ;
     }
     .sa_ie_temp_4 .ihewc-hover-figure .ihewc-hover-figure-caption-content{
