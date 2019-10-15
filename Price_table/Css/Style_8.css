@@ -1,4 +1,4 @@
-.oxi-addons-parent-wrapper-style-7 {
+.oxi-addons-parent-wrapper-style-8 {
     width: 100%;
     float: left;
     display: flex;
@@ -6,203 +6,123 @@
     padding: 10px;
 }
 
-.oxi-addons-wrapper-style-7 {
+.oxi-addons-wrapper-style-8 {
     position: relative;
     width: 100%;
     float: left;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(48, 179, 0, 1.00) 0%, rgba(4, 170, 212, 1.00) 100%);
-    border: none #db2121;
+    background: white;
     border-width: 0px 0px 0px 0px;
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 7px 15px -4px rgba(38, 38, 38, 0.6); 
+    box-shadow: 0px 7px 15px -4px rgba(198, 198, 198, 0.6);
     transform: scale(1);
     transition: all .5s !important;
     cursor: pointer;
-    max-width: 300px
+    max-width: 300px;
+    -webkit-transition: all .5s !important;
+    -moz-transition: all .5s !important;
+    -ms-transition: all .5s !important;
+    -o-transition: all .5s !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.oxi-addons-wrapper-style-7:hover {
-    transform: scale(1) translateY(-10px)
+.oxi-addons-wrapper-style-8:hover {
+    transform: scale(1) translateY(-10px);
+    -webkit-transform: scale(1) translateY(-10px);
+    -moz-transform: scale(1) translateY(-10px);
+    -ms-transform: scale(1) translateY(-10px);
+    -o-transform: scale(1) translateY(-10px);
 }
 
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-main {
+.oxi-addons-parent-wrapper-style-8 .oxi_addons__main {
     width: 100%;
     float: left;
-    padding: 10px 0px 10px 0px
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-main-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    float: left;
-    z-index: 11
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    line-height: 1;
-    color: #ffffff;  
-    padding: 5px 5px 5px 5px; 
-    z-index: 3;
-    overflow: hidden
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-ribon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    font-size: 14px;
-    font-family: "Open Sans";
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.3;
-    text-align: center; 
-    color: #ffffff;
-    background: rgba(237, 76, 87, 1.00);
-    padding: 10px 10px 10px 10px;
-    width: 200px;
-    max-width: 100%;
-    height: 40px;
-    max-height: 100%;
-    line-height: 1.5;
-    left: -66px;
-    top: 15px;
-    transform: rotate(-45deg);
-    transform-origin: 50% 50%;
-    z-index: 999
-}
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-price-feature{
-    width: 100%;
+    padding: 10px 0px 10px 0px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
+ 
 
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature {
+.oxi-addons-parent-wrapper-style-8 .oxi-icons { 
+    padding-right: 5px;  
+}
+ 
+ 
+
+.oxi-addons-parent-wrapper-style-8 .oxi-addons-main-feature { 
+    display: flex; 
+    padding: 8px 0px 8px 0px
+}
+  
+.oxi-addons-parent-wrapper-style-8 .oxi-addons-feature {
     width: 100%;
     float: left;
-    border: solid #ffffff;
-    border-width: 1px 0px 0px 0px
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature:first-child {
-    border-top: 0px
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature:last-child {
-    border-bottom: 0px
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-feature {
     font-size: 18px;
     font-family: "Montserrat";
     font-weight: 500;
     font-style: normal;
     line-height: 1.3;
-    text-align: center; 
+    text-align: left; 
     color: #ffffff;
-    padding: 10px 10px 10px 10px
 }
 
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-feature span {
+.oxi-addons-parent-wrapper-style-8 .oxi-addons-feature span {
     color: #bfbfbf;
     font-weight: normal
 }
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-main-heading {
-    width: 100%;
-    float: left;
-    position: relative;
-    padding: 10px 0px 10px 0px
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-heading-title {
+ 
+.oxi-addons-parent-wrapper-style-8 .oxi_addons__title { 
+    margin: 0;
     font-size: 32px;
     font-family: "Nunito";
     font-weight: 100;
     font-style: normal;
     line-height: 1.3;
-    text-align: center; 
-    color: #ffffff;
-    background: rgba(69, 11, 11, 0.00);
-    box-shadow: 0px 0px 0px 0px rgba(82, 82, 82, 1); 
-    width: 100%;
-    float: left
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-price-position {
+    text-align: left; 
+    color: rgb(10, 10, 10); 
     width: 100%;
     float: left;
-    display: flex;
-    justify-content: center;
+    padding: 5px 0px 10px 0px;
 }
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-price-box {
-    width: 100%;
-    float: left;
-    max-width: 100px;
-    height: 100px;
-    background: rgba(10, 120, 163, 0.00);
-    border: 1px none;
-    border-color: #ffffff;
-    border-radius: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1); 
-    display: flex;
-    align-items: center
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-price {
-    font-size: 40px;
-    font-family: "Roboto Slab";
-    font-weight: bold;
-    font-style: normal;
-    line-height: 1;
-    text-align: center; 
-    color: #ffffff;
-    padding: 0px 0px 0px 0px;
-    width: 100%;
-    float: left
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-price-title {
-    font-size: 16px;
-    font-family: "Raleway";
+.oxi-addons-parent-wrapper-style-8 .oxi_addons__subtitle {
+    margin: 0;
+    font-size: 22px;
+    font-family: "Nunito";
     font-weight: 100;
     font-style: normal;
-    line-height: 1;
-    text-align: center; 
-    color: #ffffff;
-    padding: 0px 0px 0px 0px;
+    line-height: 1.3;
+    text-align: left; 
+    color: #212aaa; 
     width: 100%;
-    float: left
+    float: left;
+    padding: 5px 0px 10px 0px;
+}
+    
+
+.oxi-addons-parent-wrapper-style-8 .oxi_addons__image_main {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.oxi-addons-parent-wrapper-style-8 .oxi_addons__image {
+    width: 100%;
+    height: 100%;
 }
 
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-price span {
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: normal
-}
-
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-button {
+.oxi-addons-parent-wrapper-style-8 .oxi-addons-button {
     width: 100%;
     float: left;
     z-index: 999;
     text-align: center;
-    padding: 5px 5px 15px 5px;
+    padding: 20px 0px 15px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.oxi-addons-parent-wrapper-style-7  .oxi-addons-link {
+.oxi-addons-parent-wrapper-style-8  .oxi-addons-link {
     font-size: px;
     color: #ffffff;
     background: rgba(237, 76, 87, 1.00);
@@ -213,12 +133,12 @@
     font-weight: 100;
     font-style: normal; 
     border-radius: 50px 50px 50px 50px;
-    padding: 10px 35px 10px 35px;
-    box-shadow: 0px 5px 12px -4px rgba(36, 36, 36, 1);
+    padding: 10px 25px 10px 25px;
+    box-shadow: 0px 7px 15px -4px rgba(157, 157, 157, 0.6);
     cursor: pointer;
 }
 
-.oxi-addons-parent-wrapper-style-7 .oxi-addons-button .oxi-addons-link:hover {
+.oxi-addons-parent-wrapper-style-8 .oxi-addons-link:hover {
     color: #ffffff;
     background: rgba(237, 76, 87, 1.00);
     border-color: #ffffff;
@@ -226,117 +146,76 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-wrapper-style-7 {
+    .oxi-addons-parent-wrapper-style-8 .oxi_addons__image {
+        width: 80%; 
+    }
+    .oxi-addons-wrapper-style-8 {
         border-width: 0px 0px 0px 0px;
         border-radius: 10px 10px 10px 10px;
         margin: 0px 0px 0px 0px;
-        max-width: 300px
+        max-width: 600px;
+        display: block;
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-main {
+    .oxi-addons-parent-wrapper-style-8 .oxi-addons-main {
         padding: 10px 0px 10px 0px
+    } 
+    .oxi-addons-parent-wrapper-style-8 .oxi_addons__title {
+        font-size: 26px; 
+        padding: 2px 2px 2px 2px;
+        text-align: center; 
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-ribon {
-        font-size: 14px;
-        padding: 10px 10px 10px 10px;
-        width: 200px;
-        height: 40px;
-        transform: rotate(-45deg)
+    .oxi-addons-parent-wrapper-style-8 .oxi_addons__subtitle {
+        font-size: 20px; 
+        padding: 2px 2px 2px 2px;
+        text-align: center; 
     }
- 
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-feature {
-        font-size: 18px;
-        padding: 10px 10px 10px 10px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price-box {
-        width: 100%;
-        max-width: 100px;
-        border-radius: 0px 0px 0px 0px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price {
-        font-size: 40px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price-title {
-        font-size: 16px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price span {
-        font-size: 16px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-heading-title {
+    .oxi-addons-parent-wrapper-style-8 .oxi-addons-feature {
+        font-size: 18px; 
+    } 
+    .oxi-addons-parent-wrapper-style-8 .oxi-addons-heading-title {
         font-size: 32px;
      }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-button {
+    .oxi-addons-parent-wrapper-style-8 .oxi-addons-button {
         padding: 5px 5px 15px 5px
     }
-    .oxi-addons-parent-wrapper-style-7  .oxi-addons-link {
+    .oxi-addons-parent-wrapper-style-8  .oxi-addons-link {
            border-radius: 50px 50px 50px 50px;
         padding: 10px 35px 10px 35px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-icons {
-        font-size: 50px;
-        border-radius: 50px 50px 50px 50px;
-        padding: 5px 5px 5px 5px;
-        width: 100px;
-        height: 60px
-    }
+    } 
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-wrapper-style-7 {
+    .oxi-addons-wrapper-style-8 {
         border-width: 0px 0px 0px 0px;
         border-radius: 0px 0px 0px 0px;
         margin: 0px 0px 0px 0px;
-        max-width: 300px
+        max-width: 600px;
+        display: block;
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-main {
+    .oxi-addons-parent-wrapper-style-8 .oxi-addons-main {
         padding: 10px 0px 10px 0px
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-ribon {
-        font-size: 14px;
-        padding: 10px 10px 10px 10px;
-        width: 200px;
-        height: 40px;
-        transform: rotate(-45deg)
+ 
+    .oxi-addons-parent-wrapper-style-8 .oxi-addons-feature {
+        font-size: 18px; 
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-feature {
-        font-size: 18px;
-        padding: 10px 10px 10px 10px
+    .oxi-addons-parent-wrapper-style-8 .oxi_addons__title {
+        font-size: 24px; 
+        padding: 2px 2px 2px 2px;
+        text-align: center; 
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price-box {
-        width: 100%;
-        max-width: 100px;
-        border-radius: 0px 0px 0px 0px;
-        padding: 0px 0px 0px 0px
+    .oxi-addons-parent-wrapper-style-8 .oxi_addons__subtitle {
+        font-size: 18px; 
+        padding: 2px 2px 2px 2px;
+        text-align: center; 
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price {
-        font-size: 40px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price-title {
-        font-size: 16px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-price span {
-        font-size: 16px
-    }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-heading-title {
-        font-size: 32px;
-     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-addons-button {
+    
+    .oxi-addons-parent-wrapper-style-8 .oxi-addons-button {
         padding: 5px 5px 15px 5px
     }
-    .oxi-addons-parent-wrapper-style-7  .oxi-addons-link {
-        font-size: px;
+    .oxi-addons-parent-wrapper-style-8  .oxi-addons-link { 
         border-radius: 50px 50px 50px 50px;
         padding: 10px 35px 10px 35px
     }
-    .oxi-addons-parent-wrapper-style-7 .oxi-icons {
-        font-size: 50px;
-        border-radius: 50px 50px 50px 50px;
-        padding: 5px 5px 5px 5px;
-        width: 100px;
-        height: 60px
-    }
+  
 }
