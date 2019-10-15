@@ -1,0 +1,128 @@
+
+.oxi-addons-social-style-14 {
+    position: relative;
+    margin: 0 auto;
+    padding: 8px 8px 8px 8px;
+    display: inline-block
+}
+
+.oxi-addons-social-style-14 a.oxi-icon-style-14 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px
+}
+
+.oxi-addons-social-style-14 a.oxi-icon-style-14:hover {
+    border-radius: 80px
+}
+
+.oxi-addons-social-style-14 a.oxi-icon-style-14 .oxi-icons {
+    font-size: 25px;
+    color: #ffffff
+}
+
+.oxi-addons-social-style-14 a.oxi-icon-style-14:hover .oxi-icons {
+    color: #5c5c5c
+}
+
+.oxi-addons-social-style-14 a.oxi-icon-style-14 {
+    box-shadow: 0 0 0 3px #5c5c5c
+}
+
+.oxi-addons-container a.oxi-icon-style-14:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    content: "";
+    z-index: 1;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    top: -3px;
+    left: -3px;
+    padding: 3px;
+    background: rgba(101, 0, 189, 1);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s
+}
+
+.oxi-addons-container a.oxi-icon-style-14:hover:after {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0
+}
+
+.oxi-addons-social-style-14 a.oxi-icon-style-14 .oxi-icons {
+    z-index: 2
+}
+
+.oxi-addons-social-style-14 a.oxi-icon-style-14:hover {
+    box-shadow: 0 0 0 3px #5c5c5c
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-social-style-14 {
+        padding: 8px 8px 8px 8px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14 {
+        width: 50px;
+        height: 50px;
+        border-radius: 80px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14:hover {
+        border-radius: 80px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14 .oxi-icons {
+        font-size: 25px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14 {
+        box-shadow: 0 0 0 3px #5c5c5c
+    }
+    .oxi-addons-container a.oxi-icon-style-14:after {
+        border-radius: 80px;
+        top: -3px;
+        left: -3px;
+        padding: 3px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14:hover {
+        box-shadow: 0 0 0 3px #5c5c5c
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-social-style-14 {
+        padding: 8px 8px 8px 8px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14 {
+        width: 50px;
+        height: 50px;
+        border-radius: 80px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14:hover {
+        border-radius: 80px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14 .oxi-icons {
+        font-size: 25px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14 {
+        box-shadow: 0 0 0 3px #5c5c5c
+    }
+    .oxi-addons-container a.oxi-icon-style-14:after {
+        border-radius: 80px;
+        top: -3px;
+        left: -3px;
+        padding: 3px
+    }
+    .oxi-addons-social-style-14 a.oxi-icon-style-14:hover {
+        box-shadow: 0 0 0 3px #5c5c5c
+    }
+}

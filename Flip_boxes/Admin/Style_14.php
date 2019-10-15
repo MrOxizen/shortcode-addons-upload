@@ -527,7 +527,7 @@ class Style_14 extends AdminStyle {
         );
         $this->add_control(
                 'sa-flip-boxex-front-icon-size', $this->style, [
-            'label' => __('Icon Size', SHORTCODE_ADDOONS),
+            'label' => __('Font Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',

@@ -52,7 +52,7 @@ class Style_1 extends AdminStyle {
                             'type' => Controls::COLOR,
                             'default' => '#0075a3',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-1-{{KEY}} .oxi-icon-style-1 .oxi-icons' => 'color:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-1-{{KEY}} a.oxi-icon-style-1 .oxi-icons' => 'color:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -64,7 +64,7 @@ class Style_1 extends AdminStyle {
                             'type' => Controls::COLOR,
                             'default' => '#7e00c2',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-1-{{KEY}} .oxi-icon-style-1:hover .oxi-icons' => 'color:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-1-{{KEY}} a.oxi-icon-style-1:hover .oxi-icons' => 'color:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -95,7 +95,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::SLIDER,
                     'default' => [
                         'unit' => 'px',
-                        'size' => '100',
+                        'size' => '60',
                     ],
                     'range' => [
                         'px' => [
@@ -115,7 +115,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-social-style-1 .oxi-icon-style-1' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi-addons-social-style-1 a.oxi-icon-style-1' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                         
                     ],
                 ]
@@ -201,7 +201,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-social-style-1  .oxi-icon-style-1 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                        '{{WRAPPER}} .oxi-addons-social-style-1  a.oxi-icon-style-1 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
                     ],
                 ]
         );
@@ -237,7 +237,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#4a4a4a',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-social-style-1  .oxi-icon-style-1 .oxi-icons' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-social-style-1  a.oxi-icon-style-1 .oxi-icons' => 'color : {{VALUE}}; '
             ],
             'condition' => [
                 'sa_social_icons_position' => 'common'
@@ -269,7 +269,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#007fc9',
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-social-style-1  .oxi-icon-style-1:hover .oxi-icons' => 'color : {{VALUE}}; '
+                '{{WRAPPER}}  .oxi-addons-social-style-1  a.oxi-icon-style-1:hover .oxi-icons' => 'color : {{VALUE}}; '
             ],
             'condition' => [
                 'sa_social_icons_h_position' => 'common'

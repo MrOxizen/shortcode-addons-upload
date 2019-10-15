@@ -61,7 +61,7 @@ and open the template in the editor.
     border-radius: 0px 0px 0px 0px;
 }
 .oxi-hover-effects-styl1 .oxi-hover-img:before{
-    box-shadow:  0px 0px 3px 1px rgba(224, 224, 224, 0.74);
+    box-shadow:  0px 0px 3px 1px rgba(224, 224, 224, 0.10);
     border-radius: 0px 0px 0px 0px;
 }
 .oxi-hover-effects-styl1:hover .oxi-hover-img:before{
