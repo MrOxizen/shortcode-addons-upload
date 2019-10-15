@@ -38,7 +38,7 @@ class Style_1 extends AdminStyle {
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
+            'label' => esc_html__('General Setings', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
