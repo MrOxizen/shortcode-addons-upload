@@ -133,7 +133,7 @@ class Style_1 extends AdminStyle {
                     'label' => __('Hover Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
                     'oparetor' => 'RGB',
-                     'default' => 'rgb(0, 0, 0)',
+                    'default' => 'rgb(0, 0, 0)',
                     'loader' => TRUE,
                 ],
                 'shortcode-addons-start-tab2-end' => [
@@ -341,7 +341,11 @@ class Style_1 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-wrapper-ss1 .oxi-addons-soical' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
-          
+                ]
+        );
+        $this->add_group_control(
+                'sa_ss_animation', $this->style, [
+            'type' => Controls::ANIMATION,
                 ]
         );
         $this->end_controls_section();

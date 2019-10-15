@@ -84,8 +84,8 @@ class Style_1 extends Templates {
         $all_data = (array_key_exists('sa_ss_repeater', $style) && is_array($style['sa_ss_repeater'])) ? $style['sa_ss_repeater'] : [];
         foreach ($all_data as $key => $value) {
             $icons .= '
-                <div class="oxi-soical-share-' . $key . '" >
-                    <div class="oxi-addons-soical" >
+                <div class="oxi-soical-share-' . $key . '" ' . $this->animation_render('sa_ss_animation', $style) . '>
+                    <div class="oxi-addons-soical"  >
                         <div class="oxi-addons-main-share-circle oxi-addons-' . $value['sa_ss_social_media'] . '-ss1" data-easyshare-button="' . $value['sa_ss_social_media'] . '">
                             <svg  preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200" class="oxi-addons-circle oxi-circle-' . $value['sa_ss_social_media'] . '-ss1">  
                                 <circle cx="100" cy="100" r="80"/>
