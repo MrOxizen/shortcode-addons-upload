@@ -63,7 +63,7 @@ class Style_3 extends Templates
             }
 
             echo '<div class="oxi-addons-parent-wrapper-style-3 oxi-addons-parent-wrapper-style-3-' . $key . '  ' . $this->column_render('sa_price_table_column', $style) . '">
-                   <div class="oxi-addons-wrapper-style-3" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
+                   <div class="oxi-addons-wrapper-style-3" ' . $this->animation_render('sa_price_table_animation', $style) . ' >
                     ' . $ribbon . '
                     ' . $title . '
                     ' . $subtitle . '

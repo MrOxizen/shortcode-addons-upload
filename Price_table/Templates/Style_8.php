@@ -23,39 +23,24 @@ class Style_8 extends Templates
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
 
-            $icon = $heading = $price_title   = $price    = $button = $ribbon = '';
+             $image =   $title = $subtitle    = $button = '';
             if (array_key_exists('sa_price_table_title', $value) && $value['sa_price_table_title'] != '') {
-                $heading = '<' . $style['sa_price_table_title_tag'] . ' class="oxi-addons-heading-title">' . $this->text_render($value['sa_price_table_title']) . '</' . $style['sa_price_table_title_tag'] . '>';
+                $title = '<' . $style['sa_price_table_title_tag'] . ' class="oxi_addons__title">' . $this->text_render($value['sa_price_table_title']) . '</' . $style['sa_price_table_title_tag'] . '>';
             }
-            if (array_key_exists('sa_price_table_price_subtitle', $value) && $value['sa_price_table_price_subtitle'] != '') {
-                $price_title = '<div class="oxi-addons-price-title">' . $this->text_render($value['sa_price_table_price_subtitle']) . '</div>';
+            if (array_key_exists('sa_price_table_subtitle', $value) && $value['sa_price_table_subtitle'] != '') {
+                $subtitle = '<p class="oxi_addons__subtitle">' . $this->text_render($value['sa_price_table_subtitle']) . '</p>';
             }
-            if (array_key_exists('sa_price_table_icon', $value) && $value['sa_price_table_icon'] != '') {
-                $icon = '<div class="oxi-addons-main-icon">
-                ' . $this->font_awesome_render($value['sa_price_table_icon']) . '
-            </div>';
-            }
+         
 
-
-            if (array_key_exists('sa_price_table_price', $value) && $value['sa_price_table_price'] != '') {
-                $price = ' 
-                <div class="oxi-addons-price-position">
-                <div class="oxi-addons-price-box">
-                    <div style="width: 100%; float: left;">
-                        <div class="oxi-addons-price">
-                        ' . $this->text_render($value['sa_price_table_price']) . '
-                        </div> 
-                        ' . $price_title . '
-                    </div>
+            if ($this->media_render('sa_price_table_front_image', $value) != '') {
+                $image = '
+                <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
+                    <div class="oxi_addons__image_main"  >
+                        <img ' . (array_key_exists('sa_price_table_image_switcher', $style) && $style['sa_price_table_image_switcher'] != 'yes' ? 'style="width: 100%; height: auto"' : '') . ' src="' . $this->media_render('sa_price_table_front_image', $value) . '" class="oxi_addons__image" alt="front image"/>
+                    </div> 
                 </div>
-            </div> ';
-            }
-
-            if (array_key_exists('sa_price_table_ribbon_switter', $style) && $style['sa_price_table_ribbon_switter'] == 'yes') {
-               if (array_key_exists('sa_price_table_ribbon_text', $value) && $value['sa_price_table_ribbon_text'] != '') {
-                    $ribbon = '<div class="oxi-addons-ribon ' . $style['sa_price_table_ribbon_position_left_right'] . '">' . $this->text_render($value['sa_price_table_ribbon_text']) . '</div>';
-                }
-            }
+                ';
+            }  
 
             if (array_key_exists('sa_price_table_button_switter', $style) && $style['sa_price_table_button_switter'] == 'yes') {
                 if (array_key_exists('sa_price_table_button_text', $value) && $value['sa_price_table_button_text'] != '') {
@@ -73,30 +58,51 @@ class Style_8 extends Templates
                                         </div>';
                     }
                 }
-            }
+            } 
 
-            echo '<div class="oxi-addons-parent-wrapper-style-7 ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_price_table_column', $style) . '">
-                     <div class="oxi-addons-wrapper-style-7" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
-                    ' . $ribbon . '
-                    <div class="oxi-addons-main-heading"> 
-                        ' . $icon . '
-                        ' . $heading . '  
-                    </div>  
-                     <div class="oxi-addons-price-feature">
-                     <div class="oxi-addons-main">';
+         
+
+            echo '<div class="oxi-addons-parent-wrapper-style-8 ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_price_table_column', $style) . '">
+                     <div class="oxi-addons-wrapper-style-8" ' . $this->animation_render('sa_price_table_animation', $style) . ' >';
+                     if (array_key_exists('sa_price_table_image_position', $style) && $style['sa_price_table_image_position'] == 'left') {
+                         echo ' ' . $image . '  
+                         <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
+                        '.$title.'   
+                        '.$subtitle.'   
+                        <div class="oxi_addons__main">';
                             $datas = (array_key_exists('sa_price_table_repeater', $value) && is_array($value['sa_price_table_repeater']) ? $value['sa_price_table_repeater'] : []);
-                                foreach ($datas as $data) {
-                                    echo '<div class="oxi-addons-main-feature"  > 
-                                            <div class="oxi-addons-feature">
-                                            ' . $this->text_render($data['sa_price_table_feature']) . '
-                                            </div>'; 
-                                    echo '</div>';
-                                }
-                    echo  '</div> 
-                            ' . $price . ' 
-                            </div>  
-                        ' . $button . ' 
-                 </div>';
+                            foreach ($datas as $data) {
+                                echo '<div class="oxi-addons-main-feature"  > 
+                                     ' . $this->font_awesome_render($data['sa_price_table_icon']) . '
+                                        <div class="oxi-addons-feature"> 
+                                        ' . $this->text_render($data['sa_price_table_feature']) . '
+                                        </div>'; 
+                                echo '</div>';
+                            }
+                        echo '</div>
+                                '.$button.'            
+                        </div>';
+                    } else {
+                        echo ' 
+                        <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
+                       '.$title.'   
+                       '.$subtitle.'   
+                       <div class="oxi_addons__main">';
+                           $datas = (array_key_exists('sa_price_table_repeater', $value) && is_array($value['sa_price_table_repeater']) ? $value['sa_price_table_repeater'] : []);
+                           foreach ($datas as $data) {
+                               echo '<div class="oxi-addons-main-feature"  > 
+                                    ' . $this->font_awesome_render($data['sa_price_table_icon']) . '
+                                       <div class="oxi-addons-feature"> 
+                                       ' . $this->text_render($data['sa_price_table_feature']) . '
+                                       </div>'; 
+                               echo '</div>';
+                           }
+                       echo '</div>
+                               '.$button.'            
+                       </div> ' . $image . ' ';
+                    }
+                    
+                 echo '</div>';
             if ($admin == 'admin') :
                 echo '  <div class="oxi-addons-admin-absulote">
                                 <div class="oxi-addons-admin-absulate-edit">
@@ -113,7 +119,7 @@ class Style_8 extends Templates
     public function inline_public_jquery()
     {
         return 'setTimeout(function () {
-            oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-wrapper-style-7"));
+            oxiequalHeight($("' . $this->WRAPPER . ' .oxi-addons-wrapper-style-8"));
         }, 500)';
     }
 
@@ -125,7 +131,7 @@ class Style_8 extends Templates
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
-        $headingsection = $icon = $addresstext = $addresssection = $button = '';
+        $date = $month = $datemonthsection = $bottomsection = $headingsection = $icon = $addresstext = $addresssection = $button = '';
         $css = '';
     
         if ($stylefiles[2] != '') {
@@ -176,8 +182,9 @@ class Style_8 extends Templates
                                                               ' . $addresstext . '
                                                           </div>';
                                     }
-                                    echo ' <div class="">
-                                        ' . $addresssection . ' ';
+                                    echo ' <div>
+                                                                        ' . $addresssection . ' ';
+                                   
                                     echo '</div>';
                                 }
                                 echo '</div>

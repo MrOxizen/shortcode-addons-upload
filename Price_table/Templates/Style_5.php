@@ -60,7 +60,7 @@ class Style_5 extends Templates
             }
 
             echo '<div class="oxi-addons-parent-wrapper-style-5 ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_price_table_column', $style) . '">
-                   <div class="oxi-addons-wrapper-style-5" ' . $this->animation_render('sa_product_boxes_animation', $style) . ' >
+                   <div class="oxi-addons-wrapper-style-5" ' . $this->animation_render('sa_price_table_animation', $style) . ' >
                     ' . $ribbon . '
                     <div class="oxi-addons-price-title">
                         ' . $heading . '  
