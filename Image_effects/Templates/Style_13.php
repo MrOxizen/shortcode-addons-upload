@@ -18,8 +18,8 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_13 extends Templates {
 
     public function public_css() {
-        wp_enqueue_style('css_handaller_file_temp_13_blinds', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style-flip-effects.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_style('css_handaller_file_temp_13_global', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('Image_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('css_handaller_file_flip-effects_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style-flip-effects.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {

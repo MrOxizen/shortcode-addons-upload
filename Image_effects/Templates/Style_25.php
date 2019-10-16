@@ -15,11 +15,11 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_7 extends Templates {
+class Style_25 extends Templates {
 
     public function public_css() {
         wp_enqueue_style('Image_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_style('css_handaller_file_circle-effects_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style-circle-effects.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('css_handaller_file_shutter-effects_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style-shutter-effects.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {
@@ -74,10 +74,10 @@ class Style_7 extends Templates {
 
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' " >';
-            echo '<div class="sa_ie_temp_7 ihewc-hover-padding-7 oxi-m-width" ' . $this->animation_render('sa-ie-main-box-animation', $style) . '>
+            echo '<div class="sa_ie_temp_25 ihewc-hover-padding-25 oxi-m-width" ' . $this->animation_render('sa-ie-main-box-animation', $style) . '>
                 <div class="sa_for_margin">
                 ' . $valueurl1st . '
-                    <div class="ihewc-hover sa_image_effect_temp_7 sa_image_effect_temp_7_' . $key . '  ' . $style['sa_effects_select_icon'] . '">
+                    <div class="ihewc-hover sa_image_effect_temp_25 sa_image_effect_temp_25_' . $key . '  ' . $style['sa_effects_select_icon'] . '">
                         <div class="ihewc-hover-figure">
                             <div class="ihewc-hover-image">
                                 <img class="oxi-img-w-h" src="' . $this->media_render('sa_el_ie_box_image', $data) . '">
