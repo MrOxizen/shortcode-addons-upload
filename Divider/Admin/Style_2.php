@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -38,7 +38,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
             'toggle' => TRUE,
-                    'loader'=>TRUE,
+            'loader' => TRUE,
             'default' => 'center',
             'options' => [
                 'sa_divider_left' => [
@@ -82,7 +82,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-divider-style1' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-divider-style2' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -114,7 +114,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-divider-style1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-divider-style2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -152,8 +152,8 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-divider-style1 .oxi-divider-left .oxi-divider' => 'border-top-width:{{SIZE}}px;',
-                '{{WRAPPER}} .oxi-divider-style1 .oxi-divider-right .oxi-divider' => 'border-top-width:{{SIZE}}px;',
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-left .oxi-divider' => 'border-top-width:{{SIZE}}px;',
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-right .oxi-divider' => 'border-top-width:{{SIZE}}px;',
             ],
                 ]
         );
@@ -178,8 +178,8 @@ class Style_1 extends AdminStyle {
                 'hidden' => __('Hidden', SHORTCODE_ADDOONS),
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-divider-style1 .oxi-divider-left .oxi-divider' => 'border-top-style:{{VALUE}};',
-                '{{WRAPPER}} .oxi-divider-style1 .oxi-divider-right .oxi-divider' => 'border-top-style:{{VALUE}};',
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-left .oxi-divider' => 'border-top-style:{{VALUE}};',
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-right .oxi-divider' => 'border-top-style:{{VALUE}};',
             ],
                 ]
         );
@@ -188,9 +188,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#000000',
-             'selector' => [
-                '{{WRAPPER}} .oxi-divider-style1 .oxi-divider-left .oxi-divider' => 'border-top-color:{{VALUE}};',
-                '{{WRAPPER}} .oxi-divider-style1 .oxi-divider-right .oxi-divider' => 'border-top-color:{{VALUE}};',
+            'selector' => [
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-left .oxi-divider' => 'border-top-color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-right .oxi-divider' => 'border-top-color:{{VALUE}};',
             ],
                 ]
         );
@@ -199,6 +199,119 @@ class Style_1 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Divider ID', SHORTCODE_ADDOONS),
             'loader' => TRUE,
+                ]
+        );
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Icon Setting', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+                ]
+        );
+
+        $this->add_control(
+                'sa_divider_icon', $this->style, [
+            'type' => Controls::ICON,
+            'label' => __('Icon Class', SHORTCODE_ADDOONS),
+            'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
+            'default' => 'fas fa-star',
+            'loader' => TRUE,
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_divider_icon_size', $this->style, [
+            'label' => __('Icon Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 20,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
+                'rem' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+            ],
+                ]
+        );
+
+
+        $this->add_control(
+                'sa_divider_icon_color', $this->style, [
+            'label' => __('Icon Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ffffff',
+            'selector' => [
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-icons' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_divider_icon_position', $this->style, [
+            'label' => __('Icon Position', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'description'=>'Set you Divider Icon Position where 0 is left and 100 is right',
+                    'loader' => TRUE,
+            'default' => [
+                'unit' => 'px',
+                'size' => 20,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-left' => 'width:{{SIZE}}%;',
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-divider-right' => 'width:calc(100% - {{SIZE}}%);'
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_divider_icon_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-divider-style2 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
                 ]
         );
 
