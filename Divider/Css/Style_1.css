@@ -1,0 +1,55 @@
+
+
+.oxi-divider-style1 {
+    position: relative;
+    display: table;
+    width: 100%;
+    max-width: 220px;
+    padding: 2px 2px 2px 2px;
+    margin: 0 auto !important
+}
+.oxi-divider-style1.sa_divider_left {
+   margin: 0 auto 0 0 !important;
+}
+.oxi-divider-style1.sa_divider_center {
+    margin: 0 auto !important;
+}
+.oxi-divider-style1.sa_divider_right {
+    margin: 0 0 0 auto !important;
+}
+
+.oxi-divider-style1 .oxi-divider-left,
+.oxi-divider-style1 .oxi-divider-right {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle
+}
+
+.oxi-divider-style1 .oxi-divider-left .oxi-divider {
+    border-top-style: double;
+    border-top-color: #0f9999;
+    border-top-width: 3px;
+    margin-top: 1px
+}
+
+.oxi-divider-style1 .oxi-divider-right .oxi-divider {
+    border-top-style: double;
+    border-top-color: #0f9999;
+    border-top-width: 3px;
+    margin-top: 1px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-divider-style1 {
+        max-width: 220px;
+        padding: 1px 1px 1px 1px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-divider-style1 {
+        max-width: 220px;
+        padding: 1px 1px 1px 1px;
+        margin: 0 auto !important
+    }
+}

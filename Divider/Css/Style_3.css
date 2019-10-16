@@ -1,0 +1,98 @@
+
+
+
+.oxi-divider-style3 {
+    position: relative;
+    display: table;
+    width: 100%;
+    max-width: 250px;
+    padding: 2px 2px 2px 2px;
+ 
+}
+.oxi-divider-style3.sa_divider_left {
+   margin: 0 auto 0 0 !important;
+}
+.oxi-divider-style3.sa_divider_center {
+    margin: 0 auto !important;
+}
+.oxi-divider-style3.sa_divider_right {
+    margin: 0 0 0 auto !important;
+}
+.oxi-divider-style3 .oxi-divider-left,
+.oxi-divider-style3 .oxi-divider-right {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle
+}
+
+.oxi-divider-style3 .oxi-divider-left {
+    width: 50%
+}
+
+.oxi-divider-style3 .oxi-divider-right {
+    width: 50%
+}
+
+.oxi-divider-style3 .oxi-divider-content {
+    display: table-cell
+}
+
+.oxi-divider-style3 .oxi-icons {
+    font-size: 20px;
+    color: #830c9e;
+    display: block;
+    padding: 5px 5px 5px 5px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oxi-divider-style3 .oxi-divider-left .oxi-divider {
+    border-top-style: solid;
+    border-top-color: #a508cc;
+    border-top-width: 2px;
+    margin-top: 1px
+}
+
+.oxi-divider-style3 .oxi-divider-right .oxi-divider {
+    border-top-style: solid;
+    border-top-color: #a508cc;
+    border-top-width: 2px;
+    margin-top: 1px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-divider-style3 {
+        max-width: 220px;
+        padding: 2px 2px 2px 2px
+    }
+    .oxi-divider-style3 .oxi-divider-left {
+        width: 50%
+    }
+    .oxi-divider-style3 .oxi-divider-right {
+        width: 50%
+    }
+    .oxi-divider-style3 .oxi-icons {
+        font-size: 20px;
+        padding: 5px 5px 5px 5px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-divider-style3 {
+        max-width: 220px;
+        padding: 2px 2px 2px 2px;
+        margin: 0 auto !important
+    }
+    .oxi-divider-style3 .oxi-divider-left {
+        width: 50%
+    }
+    .oxi-divider-style3 .oxi-divider-right {
+        width: 50%
+    }
+    .oxi-divider-style3 .oxi-icons {
+        font-size: 20px;
+        padding: 5px 5px 5px 5px
+    }
+}
