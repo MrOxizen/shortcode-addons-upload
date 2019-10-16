@@ -95,9 +95,7 @@ trait Post_Query {
         $thumbnail_sizes = array();
         foreach ($default_image_sizes as $size) {
             $image_sizes[$size] = $size . ' - ' . intval(get_option("{$size}_size_w")) . ' x ' . intval(get_option("{$size}_size_h"));
-        
-           $thumbnail_sizes[$size] =  $image_sizes[$size];
-            
+           $thumbnail_sizes[$size] =  str_replace('_',' ', ucfirst($image_sizes[$size]));
         }
         return $thumbnail_sizes;
     }
