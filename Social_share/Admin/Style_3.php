@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
 
@@ -54,7 +54,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2' => 'justify-content: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3' => 'justify-content: {{VALUE}};',
             ],
                 ]
         );
@@ -77,14 +77,10 @@ class Style_2 extends AdminStyle {
                         'pinterest' => __('Pinterest', SHORTCODE_ADDOONS),
                     ],
                 ],
-                'sa_ss_text' => [
-                    'type' => Controls::TEXT,
-                    'label' => __('Name', SHORTCODE_ADDOONS),
-                    'loader' => TRUE,
-                ],
-                'sa_ss_icon_icon' => [
+               'sa_ss_icon_icon' => [
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
+                    'default' => 'fab fa-facebook-f',
                     'loader' => TRUE,
                 ],
                 'shortcode-addons-start-tabs' => [
@@ -102,22 +98,22 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'loader' => TRUE,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => 'color: {{VALUE}};',
                     ],
                 ],
                 'sa_ss_repeater_bg' => [
                     'type' => Controls::BACKGROUND,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => '',
                     ],
                     'loader' => TRUE,
                 ],
@@ -126,24 +122,24 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'loader' => TRUE,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => 'border-color: {{VALUE}};',
                     ],
                 ],
                 'sa_ss_repeater_box' => [
                     'type' => Controls::BOXSHADOW,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => '',
                     ],
-                  ],
+                ],
                 'shortcode-addons-start-tab1-end' => [
                     'controller' => 'end_controls_tab',
                 ],
@@ -155,22 +151,22 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'loader' => TRUE,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => 'color: {{VALUE}};',
                     ],
                 ],
                 'sa_ss_repeater_bg_hover' => [
                     'type' => Controls::BACKGROUND,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => '',
                     ],
                 ],
                 'sa_ss_br_color_hover' => [
@@ -178,11 +174,11 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'loader' => TRUE,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => 'border-color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => 'border-color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => 'border-color: {{VALUE}};',
                     ],
                 ],
                 'sa_ss_repeater_box_hover' => [
@@ -190,13 +186,13 @@ class Style_2 extends AdminStyle {
                     'loader' => TRUE,
                     'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => '',
-                        '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google:hover' => '',
+                        '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest:hover' => '',
                     ],
-                  ],
+                ],
                 'shortcode-addons-start-tab2-end' => [
                     'controller' => 'end_controls_tab',
                 ],
@@ -204,7 +200,7 @@ class Style_2 extends AdminStyle {
                     'controller' => 'end_controls_tabs',
                 ],
             ],
-            'title_field' => 'sa_ss_text',
+            'title_field' => 'sa_ss_social_media',
                 ]
         );
 
@@ -236,7 +232,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -252,8 +248,8 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_ss_width', $this->style, [
-            'label' => __('Width', SHORTCODE_ADDOONS),
+                'sa_ss_width_height', $this->style, [
+            'label' => __('Height & Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
@@ -277,12 +273,12 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-addons-main-share-circle' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-addons-main-share-circle' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
-        
-        
+
+
         $this->add_responsive_control(
                 'sa_ss_icon_size', $this->style, [
             'label' => __('Icon Size', SHORTCODE_ADDOONS),
@@ -309,28 +305,12 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2  .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
-        
-        $this->add_group_control(
-                'sa_ss_text_typho', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2  .oxi-addons-text' => ''
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3  .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
 
-        $this->add_group_control(
-                'sa_ss_text_txtshadow', $this->style, [
-            'type' => Controls::TEXTSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2  .oxi-addons-text' => ''
-            ],
-                ]
-        );
+        
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
@@ -342,11 +322,11 @@ class Style_2 extends AdminStyle {
         $this->start_controls_tab();
 
 
-       $this->add_group_control(
+        $this->add_group_control(
                 'sa_ss_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-addons-main-share-circle' => ''
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-addons-main-share-circle' => ''
             ],
                 ]
         );
@@ -378,11 +358,11 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-addons-main-share-circle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-addons-main-share-circle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
-        
+
         $this->end_controls_tab();
 
         $this->start_controls_tab();
@@ -392,7 +372,7 @@ class Style_2 extends AdminStyle {
                 'sa_ss_h_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-addons-main-share-circle:hover' => ''
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-addons-main-share-circle:hover' => ''
             ],
                 ]
         );
@@ -424,16 +404,17 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-addons-main-share-circle:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-addons-main-share-circle:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
 
         $this->end_controls_tab();
         $this->end_controls_tabs();
+
         $this->add_responsive_control(
-                'sa_ss_icon_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
+                'sa_ss_icon_box_padding', $this->style, [
+            'label' => __('Icon Box Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'separator' => TRUE,
             'default' => [
@@ -458,37 +439,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-addons-main-share-circle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_ss_icon_box_padding', $this->style, [
-            'label' => __('Icon Box Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-           'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-ss2 .oxi-addons-social' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-addons-social' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
