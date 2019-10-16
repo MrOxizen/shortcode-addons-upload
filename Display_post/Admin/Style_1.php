@@ -45,7 +45,8 @@ class Style_1 extends AdminStyle {
         );
         $this->post_type();
         $this->add_control(
-                'sa_display_post_post_type', $this->style,
+                'sa_display_post_post_type',
+                $this->style,
                 [
                     'label' => __('Post Type', SHORTCODE_ADDOONS),
                     'loader' => TRUE,
@@ -55,7 +56,8 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_display_post_author', $this->style, [
+                'sa_display_post_author',
+                $this->style, [
             'label' => __('Author', SHORTCODE_ADDOONS),
             'loader' => TRUE,
             'type' => Controls::SELECT,
@@ -66,7 +68,8 @@ class Style_1 extends AdminStyle {
         foreach ($this->post_type() as $key => $value) {
             if ($key != 'page'):
                 $this->add_control(
-                        'sa_display_post_post_type-cat' . $key, $this->style,
+                        'sa_display_post_post_type-cat' . $key,
+                        $this->style,
                         [
                             'label' => __(' Category', SHORTCODE_ADDOONS),
                             'type' => Controls::SELECT,
@@ -78,7 +81,8 @@ class Style_1 extends AdminStyle {
                         ]
                 );
                 $this->add_control(
-                        'sa_display_post_post_type-tag' . $key, $this->style,
+                        'sa_display_post_post_type-tag' . $key,
+                        $this->style,
                         [
                             'label' => __(' Tags', SHORTCODE_ADDOONS),
                             'type' => Controls::SELECT,
@@ -92,7 +96,8 @@ class Style_1 extends AdminStyle {
             endif;
 
             $this->add_control(
-                    'sa_display_post_post_type-include' . $key, $this->style,
+                    'sa_display_post_post_type-include' . $key,
+                    $this->style,
                     [
                         'label' => __(' Include Post', SHORTCODE_ADDOONS),
                         'type' => Controls::SELECT,
@@ -104,7 +109,8 @@ class Style_1 extends AdminStyle {
                     ]
             );
             $this->add_control(
-                    'sa_display_post_post_type-exclude' . $key, $this->style,
+                    'sa_display_post_post_type-exclude' . $key,
+                    $this->style,
                     [
                         'label' => __(' Exclude Post', SHORTCODE_ADDOONS),
                         'type' => Controls::SELECT,
@@ -116,473 +122,276 @@ class Style_1 extends AdminStyle {
                     ]
             );
         }
-
-
-        $this->add_group_control(
-                'sa_s_image_img', $this->style, [
-            'type' => Controls::MEDIA,
-            'default' => [
-                'type' => 'media-library',
-                'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/fireworks-846063_1920.jpg',
-            ],
-                ]
-        );
-
         $this->add_control(
-                'sa_s_image_ribbon', $this->style, [
-            'label' => __('Ribbon', SHORTCODE_ADDOONS),
-            'description' => __('Are you want ribbon?', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
-            'type' => Controls::SWITCHER,
-            'default' => '',
-            'loader' => TRUE,
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'ribbon_on',
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ID',
-                $this->style,
-                [
-                    'label' => __('ID', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXT,
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_s_image_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-row  ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-
-        $this->add_responsive_control(
-                'sa_s_image_margin', $this->style, [
-            'label' => __('Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-        $this->add_group_control(
-                'sa_s_image_animation', $this->style, [
-            'type' => Controls::ANIMATION,
-                ]
-        );
-
-        $this->end_controls_section();
-
-        $this->end_section_devider();
-        $this->start_section_devider();
-        $this->start_controls_section(
-                'shortcode-addons-image', [
-            'label' => esc_html__('Image', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-                ]
-        );
-
-        $this->start_controls_tabs(
-                'shortcode-addons-start-tabs', [
-            'options' => [
-                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-            ]
-                ]
-        );
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa_s_image_gray', $this->style, [
-            'label' => __('Grayscale', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => '%',
-                'size' => 100,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 1,
-                ]
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image img' => '-webkit-filter : grayscale( {{SIZE}}% ); filter : grayscale( {{SIZE}}% ); '
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_bg_color', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(255, 255, 255, 0)',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image::before' => 'background : {{VALUE}}; '
-            ],
-                ]
-        );
-
-        $this->add_group_control(
-                'sa_s_image_border', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image ' => ''
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_s_image_border_radius', $this->style, [
-            'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-        $this->add_group_control(
-                'sa_s_image_boxshadow',
-                $this->style,
-                [
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-single-image-container-style-1  .oxi-addons-single-image::before' => ''
-                    ],
-                ]
-        );
-        $this->end_controls_tab();
-
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa_s_image_h_gray', $this->style, [
-            'label' => __('Grayscale', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => '%',
-                'size' => 0,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 1,
-                ]
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image:hover img ' => '-webkit-filter : grayscale( {{SIZE}}% ); filter : grayscale( {{SIZE}}% );'
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_h_bg_color', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(255, 255, 255, 0)',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image:hover::before' => 'background : {{VALUE}}; '
-            ],
-                ]
-        );
-
-        $this->add_group_control(
-                'sa_s_image_h_border', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image:hover  ' => ''
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_s_image_h_border_radius', $this->style, [
-            'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image:hover ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
-                ]
-        );
-        $this->add_group_control(
-                'sa_s_image_h_boxshadow',
-                $this->style,
-                [
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-single-image-container-style-1  .oxi-addons-single-image:hover::before' => ''
-                    ],
-                ]
-        );
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
-        $this->end_controls_section();
-
-
-        $this->start_controls_section(
-                'shortcode-addons-si-ribbon', [
-            'label' => esc_html__('Ribbon ', SHORTCODE_ADDOONS),
-            'condition' => [
-                'sa_s_image_ribbon' => 'ribbon_on'
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ribbon_text', $this->style, [
-            'label' => __('Text', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Ribbon text',
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon-content' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ribbon_pos', $this->style, [
-            'label' => __('Ribbon Position', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'loader' => TRUE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'sa_info_image_img_alignment_left',
-            'options' => [
-                'sa_info_image_img_alignment_left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-long-arrow-alt-left',
-                ],
-                'sa_info_image_img_alignment_right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-long-arrow-alt-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-image-main ' => '',
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ribbon_width', $this->style, [
-            'label' => __('Width', SHORTCODE_ADDOONS),
-            'separator' => TRUE,
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 205,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 600,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 250,
-                    'step' => 1,
-                ]
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon ' => '-webkit-filter : {{SIZE}}{{UNIT}}; filter : {{SIZE}}{{UNIT}}; '
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ribbon_top', $this->style, [
-            'label' => __('Top', SHORTCODE_ADDOONS),
+                'sa_display_post_offset',
+                $this->style, [
+            'label' => __('Offset', SHORTCODE_ADDOONS),
             'type' => Controls::NUMBER,
-            'default' => 37,
+            'max' => 18,
+            'min' => 1,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon' => 'top: {{VALUE}}px;',
             ]
                 ]
         );
         $this->add_control(
-                'sa_s_image_ribbon_left', $this->style, [
-            'label' => __('Left', SHORTCODE_ADDOONS),
-            'type' => Controls::NUMBER,
-            'default' => -43,
-            'loader' => TRUE,
-//            'selector' => [
-//                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon' => 'left: {{VALUE}}px;',
-//            ],
-            'condition' => [
-                'sa_s_image_ribbon_pos' => 'sa_info_image_img_alignment_left'
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ribbon_right', $this->style, [
-            'label' => __('Right', SHORTCODE_ADDOONS),
-            'type' => Controls::NUMBER,
-            'default' => -43,
-            'loader' => TRUE,
-//            'selector' => [
-//                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon' => 'right: {{VALUE}}px;',
-//            ],
-            'condition' => [
-                'sa_s_image_ribbon_pos' => 'sa_info_image_img_alignment_right'
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ribbon_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'separator' => TRUE,
-            'default' => '#ffffff',
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon-content' => 'color:{{VALUE}};'
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_s_image_ribbo_bg_color', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(68, 161, 86,1.00)',
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon-content' => 'background:{{VALUE}};',
-                '{{WRAPPER}}  .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon:after' => 'border-color:{{VALUE}};',
-                '{{WRAPPER}}  .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon:before' => 'border-color:{{VALUE}};'
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa_s_image_ribbon_typo', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon-content' => '',
-            ],
+                'sa_display_post_orderby' . $key,
+                $this->style,
+                [
+                    'label' => __(' Order By', SHORTCODE_ADDOONS),
+                    'type' => Controls::SELECT,
+                    'options' => [
+                        'ID' => 'Post ID',
+                        'author' => 'Post Author',
+                        'title' => 'Title',
+                        'date' => 'Date',
+                        'modified' => 'Last Modified Date',
+                        'parent' => 'Parent Id',
+                        'rand' => 'Random',
+                        'comment_count' => 'Comment Count',
+                        'menu_order' => 'Menu Order',
+                    ],
                 ]
         );
 
-        $this->add_responsive_control(
-                'sa_s_image_ribbon_padding', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ]
+        $this->add_control(
+                'sa_display_post_ordertype' . $key,
+                $this->style,
+                [
+                    'label' => __(' Order Type', SHORTCODE_ADDOONS),
+                    'type' => Controls::SELECT,
+                    'options' => [
+                        'asc' => 'Ascending',
+                        'desc' => 'Descending',
+                    ],
                 ]
         );
+
 
 
 
         $this->end_controls_section();
 
+        $this->end_section_devider();
+        $this->start_section_devider();
+        $this->start_controls_section(
+                'shortcode-addons-layout', [
+            'label' => esc_html__('layout Settings', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
 
+        $this->add_control(
+                'sa_s_image_layout_type',
+                $this->style,
+                [
+                    'label' => __('Layout Type', SHORTCODE_ADDOONS),
+                    'type' => Controls::CHOOSE,
+                    'loader' => TRUE,
+                    'operator' => Controls::OPERATOR_TEXT,
+                    'default' => '',
+                    'options' => [
+                        '' => [
+                            'title' => __('Normal', SHORTCODE_ADDOONS),
+                        ],
+                        'Masonry' => [
+                            'title' => __('Masonry', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                    ],
+                ]
+        );
+        $this->add_control(
+                'sa_s_image_layout_linke_open',
+                $this->style,
+                [
+                    'label' => __('Link Style', SHORTCODE_ADDOONS),
+                    'type' => Controls::CHOOSE,
+                    'loader' => TRUE,
+                    'operator' => Controls::OPERATOR_TEXT,
+                    'default' => '_blank',
+                    'options' => [
+                        '' => [
+                            'title' => __('Current Tab', SHORTCODE_ADDOONS),
+                        ],
+                        '_blank' => [
+                            'title' => __('New Tab', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                    ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_s_image_layout_col',
+                $this->style,
+                [
+                    'type' => Controls::COLUMN,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-EW-col' => ''
+                    ],
+                ]
+        );
+
+        $this->add_control(
+                'sa_s_image_layout_linke_open',
+                $this->style,
+                [
+                    'label' => __('Show Image', SHORTCODE_ADDOONS),
+                    'type' => Controls::CHOOSE,
+                    'loader' => TRUE,
+                    'operator' => Controls::OPERATOR_TEXT,
+                    'default' => 'show',
+                    'options' => [
+                        'show' => [
+                            'title' => __('True', SHORTCODE_ADDOONS),
+                        ],
+                        'hide' => [
+                            'title' => __('False', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                    ],
+                ]
+        );
+        $this->add_control(
+                'sa_display_post_thumb_sizes',
+                $this->style,
+                [
+                    'label' => __('Image Size', SHORTCODE_ADDOONS),
+                    'type' => Controls::SELECT,
+                    'loader' => TRUE,
+                    'options' => $this->thumbnail_sizes(),
+                    'condition' => [
+                        'sa_s_image_layout_linke_open' => 'show'
+                    ]
+                ]
+        );
+
+        $this->add_control(
+                'sa_s_image_layout_show_title',
+                $this->style,
+                [
+                    'label' => __('Show Title', SHORTCODE_ADDOONS),
+                    'type' => Controls::CHOOSE,
+                    'loader' => TRUE,
+                    'operator' => Controls::OPERATOR_TEXT,
+                    'default' => 'show',
+                    'options' => [
+                        'show' => [
+                            'title' => __('True', SHORTCODE_ADDOONS),
+                        ],
+                        'hide' => [
+                            'title' => __('False', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                    ],
+                ]
+        );
+        $this->add_control(
+                'sa_s_image_layout_show_excerpt',
+                $this->style,
+                [
+                    'label' => __('Show Excerpt', SHORTCODE_ADDOONS),
+                    'type' => Controls::CHOOSE,
+                    'loader' => TRUE,
+                    'operator' => Controls::OPERATOR_TEXT,
+                    'default' => 'show',
+                    'options' => [
+                        'show' => [
+                            'title' => __('True', SHORTCODE_ADDOONS),
+                        ],
+                        'hide' => [
+                            'title' => __('False', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                    ],
+                ]
+        );
+        $this->add_control(
+                'sa_s_image_excerpt_word', $this->style, [
+            'label' => __('Excerpt Word', SHORTCODE_ADDOONS),
+            'type' => Controls::NUMBER,
+            'default' => 20,
+            'min' => 0,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon' => 'top: {{VALUE}}px;',
+            ],
+            'condition' => [
+                'sa_s_image_layout_show_excerpt' => 'show'
+            ]
+                ]
+        );
+        $this->add_control(
+                'sa_s_image_layout_show_meta',
+                $this->style,
+                [
+                    'label' => __('Show Meta', SHORTCODE_ADDOONS),
+                    'type' => Controls::CHOOSE,
+                    'loader' => TRUE,
+                    'operator' => Controls::OPERATOR_TEXT,
+                    'default' => 'show',
+                    'options' => [
+                        'show' => [
+                            'title' => __('True', SHORTCODE_ADDOONS),
+                        ],
+                        'hide' => [
+                            'title' => __('False', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                    ],
+                ]
+        );
+        $this->add_control(
+                'sa_display_post_meta_position',
+                $this->style,
+                [
+                    'label' => __('Meta Position', SHORTCODE_ADDOONS),
+                    'type' => Controls::SELECT,
+                    'default' => 'footer',
+                    'loader' => TRUE,
+                    'options' => [
+                        'header' => 'Entry Header',
+                        'footer' => 'Entry Footer',
+                    ],
+                    'condition' => [
+                        'sa_s_image_layout_show_meta' => 'show'
+                    ]
+                ]
+        );
+        $this->end_controls_section();
+
+
+        $this->end_section_devider();
+        $this->end_section_tabs();
+
+        $this->start_section_tabs(
+                'shortcode-addons-start-tabs', [
+            'condition' => [
+                'shortcode-addons-start-tabs' => 'style-settings'
+            ]
+                ]
+        );
+        $this->start_section_devider();
+        $this->start_controls_section(
+                'shortcode-addons-layout', [
+            'label' => esc_html__('layout Settings', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
+
+       
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }

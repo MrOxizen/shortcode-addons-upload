@@ -90,4 +90,16 @@ trait Post_Query {
         return $posts;
     }
 
+    public function thumbnail_sizes() {
+        $default_image_sizes = get_intermediate_image_sizes();
+        $thumbnail_sizes = array();
+        foreach ($default_image_sizes as $size) {
+            $image_sizes[$size] = $size . ' - ' . intval(get_option("{$size}_size_w")) . ' x ' . intval(get_option("{$size}_size_h"));
+        
+           $thumbnail_sizes[$size] =  $image_sizes[$size];
+            
+        }
+        return $thumbnail_sizes;
+    }
+
 }
