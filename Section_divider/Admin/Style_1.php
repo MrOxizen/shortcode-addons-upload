@@ -49,14 +49,17 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa_sd_Z-index', $this->style, [
             'type' => Controls::NUMBER,
             'label' => __('Z-Index', SHORTCODE_ADDOONS),
             'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'z-index:{{VALUE}};',
+            ],
                 ]
         );
-           $this->add_control(
+        $this->add_control(
                 'sa_sd_scroll', $this->style, [
             'label' => __('Scrolling', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
@@ -67,11 +70,11 @@ class Style_1 extends AdminStyle {
             'return_value' => 'sa_sd_scrolling',
                 ]
         );
-        
 
 
-       
-     
+
+
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
@@ -98,9 +101,19 @@ class Style_1 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 1500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => .1,
+                ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'width:{{SIZE}}%;',
+                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -109,6 +122,7 @@ class Style_1 extends AdminStyle {
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
+            'loader'=> TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => 120,
@@ -119,29 +133,35 @@ class Style_1 extends AdminStyle {
                     'max' => 1000,
                     'step' => 1,
                 ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 0.1,
+                ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'height:{{SIZE}}px;',
+                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
-  
+
         $this->add_control(
                 'sa_sd_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#000000',
-          
+            'loader' => TRUE,
                 ]
         );
-        
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
-   
-   $css = '.oxi-addons-preview-data{
-                    min-height: 500px;
-            }';
-   wp_add_inline_style('shortcode-addons-admin-css', $css);
-       }
+    }
+
 }

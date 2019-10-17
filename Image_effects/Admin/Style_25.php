@@ -210,7 +210,15 @@ class Style_25 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                '{{WRAPPER}}   .sa_ie_temp_25:hover, .sa_ie_temp_25:hover::before, .sa_ie_temp_25:hover::after, .sa_ie_temp_25:hover .ihewc-hover-figure, .sa_ie_temp_25:hover .ihewc-hover-figure::before, .sa_ie_temp_25:hover .ihewc-hover-figure::after, .sa_ie_temp_25:hover .ihewc-hover-figure-caption, .sa_ie_temp_25:hover .ihewc-hover-figure-caption::before, .sa_ie_temp_25:hover .ihewc-hover-figure-caption::after' => 'background:{{VALUE}};'
+                '{{WRAPPER}}   .ihewc-hover:hover,'
+                . ' .ihewc-hover:hover::before,'
+                . ' .ihewc-hover:hover::after,'
+                . ' .ihewc-hover:hover .ihewc-hover-figure,'
+                . ' .ihewc-hover:hover .ihewc-hover-figure::before,'
+                . ' .ihewc-hover:hover .ihewc-hover-figure::after, '
+                . '.ihewc-hover:hover .ihewc-hover-figure-caption, '
+                . '.ihewc-hover:hover .ihewc-hover-figure-caption::before,'
+                . ' .ihewc-hover:hover .ihewc-hover-figure-caption::after' => 'background:{{VALUE}};'
             ],
                 ]
         );

@@ -56,6 +56,7 @@ class Style_2 extends Templates {
             </div>
             
         ';
+        $this->try();
     }
 
     public function old_render() {
@@ -259,5 +260,6 @@ class Style_2 extends Templates {
 	}';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
+    
 }
+
