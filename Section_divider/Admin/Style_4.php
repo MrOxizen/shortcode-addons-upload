@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_4 extends AdminStyle {
 
     public function register_controls() {
 
@@ -38,7 +38,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::CHOOSE,
             'toggle' => TRUE,
             'loader' => TRUE,
-            'default' => 'center',
+            'default' => 'sa_sd_bottom',
             'options' => [
                 'sa_sd_top' => [
                     'title' => __('Top', SHORTCODE_ADDOONS),
@@ -55,7 +55,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Z-Index', SHORTCODE_ADDOONS),
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'z-index:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd4' => 'z-index:{{VALUE}};',
             ],
                 ]
         );
@@ -113,7 +113,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd4' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -144,7 +144,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd4' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );

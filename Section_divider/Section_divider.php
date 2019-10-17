@@ -22,7 +22,7 @@ class Section_divider extends Elements_Frontend {
 
     public function templates() {
         return array(
-            );
+           );
     }
 
 }
