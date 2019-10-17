@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Display_post\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Post_timeline\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -19,42 +19,103 @@ class Style_1 extends Templates {
     public function inline_public_jquery() {
         $style = $this->style;
         $js = '';
-            $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-style-1"));}, 500);';
-       
+        $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-post-style-1 .oxi-addons__post-inner"));}, 500);';
+
         return $js;
     }
- function inline_public_css() {
+
+    function inline_public_css() {
         $style = $this->style;
-        $hoverData = $css_inline = $final = '';
-        if ($style['sa_display_post_meta_position_effect'] == 'left') {
-            $css_inline = 'transform: translateX(-100%)';
-            $hoverData = 'transform: translateX(0)';
-        } elseif ($style['sa_display_post_meta_position_effect'] == 'top') {
-            $css_inline = 'transform: translateY(-100%)';
-            $hoverData = 'transform: translateY(0)';
-        } elseif ($style['sa_display_post_meta_position_effect'] == 'right') {
-            $css_inline = 'transform: translateX(100%)';
-            $hoverData = 'transform: translateX(0)';
-        } elseif ($style['sa_display_post_meta_position_effect'] == 'bottom') {
-            $css_inline = 'transform: translateY(100%)';
-            $hoverData = 'transform: translateY(0)';
-        }
-        $final = ' .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-style-1 .oxi-addons__overlay{
-                        ' . $css_inline . '
-                    }
-                    .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-style-1 .oxi-addons__main-img:hover .oxi-addons__overlay{
-                        ' . $hoverData . '
-                    }';
-        return $final;
+       $hoverData = $css_inline = $final = '';
+       $poss = 0;
+       $div_wid = 0;
+       $arr_size = 0;
+       $bullet_wid = 0;
+       if ($style['sa_display_post_meta_position_effect'] == 'left') {
+           $css_inline = 'transform: translateX(-100%)';
+           $hoverData = 'transform: translateX(0)';
+       } elseif ($style['sa_display_post_meta_position_effect'] == 'top') {
+           $css_inline = 'transform: translateY(-100%)';
+           $hoverData = 'transform: translateY(0)';
+       } elseif ($style['sa_display_post_meta_position_effect'] == 'right') {
+           $css_inline = 'transform: translateX(100%)';
+           $hoverData = 'transform: translateX(0)';
+       } elseif ($style['sa_display_post_meta_position_effect'] == 'bottom') {
+           $css_inline = 'transform: translateY(100%)';
+           $hoverData = 'transform: translateY(0)';
+       }
+       $final .= ' .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__overlay{
+                       ' . $css_inline . '
+                   }
+                   .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__main-img:hover .oxi-addons__overlay{
+                       ' . $hoverData . '
+                   }';
+
+        $poss = $style['sa_display_post_bullet_pos'];
+        $div_wid = $style['sa_display_post_divider_width_height'];
+        $arr_size = $style['sa_display_post_arrow_size'];
+        $br_clr = $style['sa_display_post_post_border-color'];
+        $bullet_wid = $style['sa_display_post_bullet_width_height'];
+   
+       
+//        $final .= '
+//              .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:after{
+//                  width: ' . $div_wid . 'px;
+//                    height: ' .((( $poss * 4) / 2) + ( $poss * 2)). 'px;
+//                    top: ' .  $poss . 'px;
+//                }  
+//           
+//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:nth-last-child(2)::after{
+//                height: ' . (((( $poss * 4) / 2) + ( $poss * 2)) -  $poss) . 'px;
+//            }   
+//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:last-child::after{
+//                height: ' . ((( $poss * 4) / 2) + ( $poss * 2)) . 'px;
+//            }   
+//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__post-body::after{
+//                border-color: transparent transparent transparent ' . $br_clr . ';
+//            
+//                border-width: ' . $arr_size  . 'px;
+//                right: ' . (15 - ($arr_size  * 2) + 1) . 'px;
+//                top: ' . ( $poss + ($bullet_wid / 2) - $arr_size ) . 'px;
+//          
+//            }  
+//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:nth-child(2n) .oxi-addons__post-body::after{
+//                border-color: transparent ' . $br_clr . ' transparent transparent;
+//            
+//                border-width: ' . $arr_size  . 'px;
+//            
+//                left: ' . (15 - ($arr_size  * 2) + 1) . 'px;
+//               
+//                top: ' . (((( $poss * 4) / 2) + ( $poss * 2)) + ($bullet_wid / 2) - $arr_size ) . 'px;
+//         
+//            } 
+//         
+//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__timeline-bullet{   
+//                
+//               
+//                right: -' . (($bullet_wid - $div_wid) / 2) . 'px;
+//                top: ' .  $poss . 'px;
+//                width: ' . $bullet_wid . 'px;
+//                height: ' . $bullet_wid . 'px;
+//            
+//            }
+//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:nth-child(2n) .oxi-addons__timeline-bullet{ 
+//                left: -' . ((($bullet_wid - $div_wid) / 2) + 2) . 'px;  
+//               
+//               
+//                top: ' . ((( $poss * 4) / 2) + ( $poss * 2)) . 'px;
+//                width: ' . $bullet_wid . 'px;
+//                height: ' . $bullet_wid . 'px;
+//             
+//            }
+//            ';
+      return $final;
     }
+
     public function default_render($style, $child, $admin) {
-//        echo '<pre>';
-//        print_r($style);
-//        echo '</pre>';
-        $cssdef = $jquery = '';
         $button = $leftbutton = $rightbutton = '';
         $ssstyle = '';
-    
+
         $post_args = [
             'post_type' => $style['sa_display_post_post_type'],
             'posts_per_page' => $style['sa_display_post_per_page'],
@@ -92,7 +153,8 @@ class Style_1 extends Templates {
             $post_args['post__not_in'] = $style['sa_display_post_post_type-exclude' . $key];
         endif;
 
-        echo '<div class="oxi-addons-container"><div class="oxi-addons-row">';
+        echo '<div class="oxi-addons-container"><div class="oxi-addons-parent-post-style-1">';
+
         $query = new \WP_Query($post_args);
         if ($query->have_posts()) {
             while ($query->have_posts()) {
@@ -115,7 +177,7 @@ class Style_1 extends Templates {
                         if ($style['sa_display_post_img_eq_height'] != 'true') {
                             $img .= '<img class="oxi-image" src="' . $image_url[0] . '">';
                         }
-                        $img .= ' <div class="oxi-addons__overlay">
+                        $img .= ' <div class="oxi-addons__overlay" >
                                         ' . $this->font_awesome_render($style['sa_display_post_icon']) . '
                                     </div>
                                 </div>
@@ -158,7 +220,7 @@ class Style_1 extends Templates {
                 if ($style['sa_display_post_button_show'] == 'show') {
                     $button = '<div class="oxi-addons__button-main">
                                 <a href="' . get_permalink($query->post->ID) . '" class="oxi-addons__btn-link"  target="' . $style['sa_display_post_button_url'] . '">
-                                    ' . $this->text_render($style['sa_display_post_button_text']) . '
+                                    ' . OxiAddonsTextConvert($style['sa_display_post_button_text']) . '
                                 </a>
                             </div>';
                 }
@@ -172,46 +234,63 @@ class Style_1 extends Templates {
                         $avater = '<img alt="" src="' . $this->media_render('sa_display_post_meta_avater_img', $style) . '" class="avatar">';
                     }
                     $meta = '<div class="oxi-addons__meta-button">
-                                ' . $leftbutton . '
-                                <div class="oxi-addons__meta-info">
-                                    <div class="oxi-addons__meta-left"> 
-                                            ' . $avater . '
-                                    </div>
-                                    <div class="oxi-addons__meta-right">
-                                        <div class="oxi-addons__meta-name">
-                                            <a class="oxi-name" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" title="Post By ' . get_the_author_meta('display_name') . '" rel="' . get_the_author_meta('display_name') . '">' . get_the_author_meta('display_name') . '</a>
+                               ' . $leftbutton . '
+                                    <div class="oxi-addons__meta-info">
+                                        <div class="oxi-addons__meta-left"> 
+                                                ' . $avater . '
                                         </div>
-                                        <div class="oxi-addons__meta-date" >
-                                            <time class="oxi-time" datetime="' . get_the_date('M d, Y') . '" >' . get_the_date('M d, Y') . '</time>
+                                        <div class="oxi-addons__meta-right">
+                                            <div class="oxi-addons__meta-name">
+                                                <a class="oxi-name" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" title="Post By ' . get_the_author_meta('display_name') . '" rel="' . get_the_author_meta('display_name') . '">' . get_the_author_meta('display_name') . '</a>
+                                            </div>
+                                            <div class="oxi-addons__meta-date" >
+                                                <time class="oxi-time" datetime="' . get_the_date('M d, Y') . '" >' . get_the_date('M d, Y') . '</time>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                ' . $rightbutton . '
-                            </div>';
+                            ' . $rightbutton . '
+                        </div>';
                 } else {
                     $meta = ' ' . $button . '';
                 }
 
                 if ($style['sa_display_post_meta_position'] == 'footer') {
                     $header_footer = '' . $title . '
-                                 ' . $this->text_render($content_excerpt) . '
+                                 ' . OxiAddonsTextConvert($content_excerpt) . '
                                  ' . $meta . '';
                 } else {
                     $header_footer = '' . $meta . '
                                  ' . $title . '
-                                 ' . $this->text_render($content_excerpt) . ' ';
+                                 ' . OxiAddonsTextConvert($content_excerpt) . ' ';
                 }
 
-                echo '<div class="oxi-addons-parent ' . $this->column_render('sa_s_image_layout_col', $style) . ' ">
-                    <div class="oxi-addons__main-wrapper-style-1">
-                        <div class="oxi-addons__wrapper" ' . $this->animation_render('sa_display_post_animation', $style) . '> 
-                        ' . $img . '
-                            <div class="oxi-addons__article">
-                                ' . $header_footer . '
-                            </div>
+                echo '<div class="oxi-addons__main-wrapper-post-style-1">
+                    <div class="oxi-addons__timeline-bullet"></div> 
+                      <div class="oxi-addons__post-body"  ' . $this->animation_render('sa_display_post_animation', $style) . '>
+                        <div class="oxi-addons__post-inner">  
+                           <div class="oxi-addons__post-main">
+                                 ' . $img . '
+                                <div class="oxi-addons__article">
+                                    ' . $header_footer . '
+                                </div> 
+                           </div> 
+                        </div>
                     </div>
-                </div>
-            </div>';
+                </div>';
+//                $hoverData = $style = '';
+//                if ($style[29] == 'left') {
+//                    $style = 'transform: translateX(-100%)';
+//                    $hoverData = 'transform: translateX(0)';
+//                } elseif ($style[29] == 'top') {
+//                    $style = 'transform: translateY(-100%)';
+//                    $hoverData = 'transform: translateY(0)';
+//                } elseif ($style[29] == 'right') {
+//                    $style = 'transform: translateX(100%)';
+//                    $hoverData = 'transform: translateX(0)';
+//                } elseif ($style[29] == 'bottom') {
+//                    $style = 'transform: translateY(100%)';
+//                    $hoverData = 'transform: translateY(0)';
+//                }
             }
             wp_reset_postdata();
         }
@@ -224,10 +303,9 @@ class Style_1 extends Templates {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
-        $css = $jquery = '';
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
-
+        $css = '';
         $post_args = [
             'post_type' => $stylefiles[1],
             'posts_per_page' => $stylefiles[11],
@@ -261,7 +339,7 @@ class Style_1 extends Templates {
         if ($stylefiles[19] != '') {
             $post_args['post__in'] = explode('{|}{|}', $stylefiles[19]);
         }
-        echo '<div class="oxi-addons-container"><div class="oxi-addons-row">';
+        echo '<div class="oxi-addons-container"><div class="oxi-addons-parent-' . $oxiid . '">';
 
         $query = new \WP_Query($post_args);
         if ($query->have_posts()) {
@@ -365,16 +443,33 @@ class Style_1 extends Templates {
                                  ' . OxiAddonsTextConvert($content_excerpt) . ' ';
                 }
 
-                echo '<div class="oxi-addons-parent ' . OxiAddonsItemRows($styledata, 3) . ' ">
-                    <div class="oxi-addons__main-wrapper-' . $oxiid . '">
-                        <div class="oxi-addons__wrapper" ' . OxiAddonsAnimation($styledata, 81) . '> 
-                        ' . $img . '
-                            <div class="oxi-addons__article">
-                                ' . $header_footer . '
-                            </div>
+                echo '<div class="oxi-addons__main-wrapper-' . $oxiid . '">
+                    <div class="oxi-addons__timeline-bullet"></div> 
+                      <div class="oxi-addons__post-body"  ' . OxiAddonsAnimation($styledata, 81) . '>
+                        <div class="oxi-addons__post-inner">  
+                           <div class="oxi-addons__post-main">
+                                 ' . $img . '
+                                <div class="oxi-addons__article">
+                                    ' . $header_footer . '
+                                </div> 
+                           </div> 
+                        </div>
                     </div>
-                </div>
-            </div>';
+                </div>';
+                $hoverData = $style = '';
+                if ($stylefiles[29] == 'left') {
+                    $style = 'transform: translateX(-100%)';
+                    $hoverData = 'transform: translateX(0)';
+                } elseif ($stylefiles[29] == 'top') {
+                    $style = 'transform: translateY(-100%)';
+                    $hoverData = 'transform: translateY(0)';
+                } elseif ($stylefiles[29] == 'right') {
+                    $style = 'transform: translateX(100%)';
+                    $hoverData = 'transform: translateX(0)';
+                } elseif ($stylefiles[29] == 'bottom') {
+                    $style = 'transform: translateY(100%)';
+                    $hoverData = 'transform: translateY(0)';
+                }
             }
             wp_reset_postdata();
         }
@@ -382,8 +477,8 @@ class Style_1 extends Templates {
         echo '</div>
     </div>';
         if ($stylefiles[23] == '') {
-            $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-' . $oxiid . '"));}, 500);';
-            wp_add_inline_script('shortcode-addons-jquery', $js);
+            $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-inner"));}, 500);';
+            echo OxiAddonsInlineCSSData($js, 'js', 'oxi-addons-animation');
         } else {
             echo 'pore dimo pari na';
         }
@@ -392,11 +487,23 @@ class Style_1 extends Templates {
             .oxi-addons-container *{
                 transition: none;
             }
-            .oxi-addons__main-wrapper-' . $oxiid . '{
+            .oxi-addons-parent-' . $oxiid . '{
                 display: flex;
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 59) . ';  
-            }
-            .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__wrapper{
+                flex-wrap: wrap;
+                position: relative;
+                overflow: hidden;
+            } 
+            .oxi-addons__main-wrapper-' . $oxiid . '{
+                width: 50%;
+                display: flex;  
+                position: relative;
+            }  
+            .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-body{
+                width: 100%;
+                 position: relative;
+                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 59) . ';  
+            }  
+            .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-inner{
                 width: 100%; 
                 display: flex;
                 flex-direction: column;
@@ -405,10 +512,79 @@ class Style_1 extends Templates {
                 border-color: ' . $styledata[25] . '; 
                 border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 27) . ';
                 ' . OxiAddonsBoxShadowSanitize($styledata, 75) . ';
-                 overflow: hidden;
+                overflow: hidden; 
+            }   
+            .oxi-addons__main-wrapper-' . $oxiid . ':after{
+                background-color: ' . $styledata[375] . ';
+                content: "";
+                width: ' . $styledata[377] . 'px;
+                height: ' . ((($styledata[347] * 4) / 2) + ($styledata[347] * 2)) . 'px;
+                position: absolute;
+                right: 0;
+                top: ' . $styledata[347] . 'px;
+            }  
+             .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(even)::after{
+               display: none;
+            } 
+            .oxi-addons__main-wrapper-' . $oxiid . ':after{
+                height: 100%;
+            }  
+            .oxi-addons__main-wrapper-' . $oxiid . ':nth-last-child(2)::after{
+                height: ' . (((($styledata[347] * 4) / 2) + ($styledata[347] * 2)) - $styledata[347]) . 'px;
+            }   
+            .oxi-addons__main-wrapper-' . $oxiid . ':last-child::after{
+                height: ' . ((($styledata[347] * 4) / 2) + ($styledata[347] * 2)) . 'px;
+            }   
+            .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-body::after{
+                border-color: transparent transparent transparent ' . $styledata[25] . ';
+                border-style: solid;
+                border-width: ' . $styledata[345] . 'px;
+                content: "";
+                height: 0;
+                position: absolute;
+                right: ' . ($styledata[67] - ($styledata[345] * 2) + 1) . 'px;
+                top: ' . ($styledata[347] + ($styledata[351] / 2) - $styledata[345]) . 'px;
+                width: 0;
+            }  
+            .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__post-body::after{
+                border-color: transparent ' . $styledata[25] . ' transparent transparent;
+                border-style: solid;
+                border-width: ' . $styledata[345] . 'px;
+                content: "";
+                height: 0;
+                left: ' . ($styledata[67] - ($styledata[345] * 2) + 1) . 'px;
+                position: absolute;
+                top: ' . (((($styledata[347] * 4) / 2) + ($styledata[347] * 2)) + ($styledata[351] / 2) - $styledata[345]) . 'px;
+                width: 0;
             } 
             .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-link:hover{
                cursor: pointer;
+            }
+            .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__timeline-bullet{   
+                content: ""; 
+                position: absolute;
+                right: -' . (($styledata[351] - $styledata[377]) / 2) . 'px;
+                top: ' . $styledata[347] . 'px;
+                width: ' . $styledata[351] . 'px;
+                height: ' . $styledata[351] . 'px;
+                z-index: 3;
+                cursor: pointer; 
+                background: ' . $styledata[349] . ';
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 353) . ';
+                ' . OxiAddonsBoxShadowSanitize($styledata, 369) . '; 
+            }
+            .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__timeline-bullet{ 
+                left: -' . ((($styledata[351] - $styledata[377]) / 2) + 2) . 'px;  
+                content: ""; 
+                position: absolute; 
+                top: ' . ((($styledata[347] * 4) / 2) + ($styledata[347] * 2)) . 'px;
+                width: ' . $styledata[351] . 'px;
+                height: ' . $styledata[351] . 'px;
+                z-index: 3;
+                cursor: pointer; 
+                background: ' . $styledata[349] . ';
+                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 353) . ';
+                ' . OxiAddonsBoxShadowSanitize($styledata, 369) . '; 
             }
             .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__main-img{
                 position: relative;
@@ -489,7 +665,7 @@ class Style_1 extends Templates {
             } 
              .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-name{  
                  padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 209) . '; 
-                 line-height: 1;
+                  line-height: 1;
             }
              .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-name > .oxi-name{  
                 font-size: ' . $styledata[165] . 'px;
@@ -501,8 +677,8 @@ class Style_1 extends Templates {
                 color: ' . $styledata[171] . '; 
             }
              .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-date{  
-                 line-height: 1;
                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 225) . '; 
+                   line-height: 1;
             }
             
              .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-date > .oxi-time{  
@@ -545,14 +721,16 @@ class Style_1 extends Templates {
                 border-color: ' . $styledata[337] . ';
             } 
             
-            @media only screen and (min-width : 669px) and (max-width : 993px){ 
-                .oxi-addons__main-wrapper-' . $oxiid . '{ 
+            @media only screen and (min-width : 669px) and (max-width : 993px){  
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-body{ 
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 60) . ';  
-                }
-                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__wrapper{ 
+                }  
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-inner{ ; 
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 28) . '; 
                 }   
-               
+                .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__timeline-bullet{  
+                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 354) . '; 
+                }  
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__overlay .oxi-icons{ 
                     font-size: ' . $styledata[246] . 'px; 
                 }  
@@ -560,7 +738,7 @@ class Style_1 extends Templates {
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 44) . '; 
                 } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-link{  
-                    font-size: ' . $styledata[86] . 'px; 
+                    font-size: ' . $styledata[85] . 'px; 
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 98) . '; 
                 } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__details{  
@@ -569,7 +747,7 @@ class Style_1 extends Templates {
                 }
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-info{   
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 150) . '; 
-                }  
+                } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-left > img,
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-left > .oxi-addons__avater{  
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 188) . ';
@@ -586,25 +764,48 @@ class Style_1 extends Templates {
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 226) . '; 
                 } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-date > .oxi-time{  
-                    font-size: ' . $styledata[174] . 'px;  
-                }   
+                    font-size: ' . $styledata[174] . 'px; 
+                }  
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__button-main{   
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 270) . ';
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 270) . '; 
                 }
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__btn-link{   
                     font-size: ' . $styledata[286] . 'px; 
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 306) . ';
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 254) . ';  
                 } 
+                .oxi-addons__main-wrapper-' . $oxiid . ':after{
+                    display: none;
+                }    
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-body::after{
+                    display: none;
+                }  
+                .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__post-body::after{
+                    display: none;
+                }  
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__timeline-bullet{   
+                    display: none;
+                }
+                .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__timeline-bullet{ 
+                    display: none;
+                }
             }
             @media only screen and (max-width : 668px){
-                 .oxi-addons__main-wrapper-' . $oxiid . '{ 
+                .oxi-addons-parent-' . $oxiid . '{
+                   flex-direction: column;
+                } 
+                .oxi-addons__main-wrapper-' . $oxiid . '{
+                    width: 100%; 
+                }  
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-body{ 
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 61) . ';  
-                }
-                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__wrapper{ 
+                }  
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-inner{ ; 
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 29) . '; 
                 }   
-               
+                .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__timeline-bullet{  
+                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 355) . '; 
+                }  
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__overlay .oxi-icons{ 
                     font-size: ' . $styledata[247] . 'px; 
                 }  
@@ -612,7 +813,7 @@ class Style_1 extends Templates {
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 45) . '; 
                 } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-link{  
-                    font-size: ' . $styledata[87] . 'px; 
+                    font-size: ' . $styledata[86] . 'px; 
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 99) . '; 
                 } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__details{  
@@ -621,7 +822,7 @@ class Style_1 extends Templates {
                 }
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-info{   
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 151) . '; 
-                }  
+                } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-left > img,
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-left > .oxi-addons__avater{  
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 189) . ';
@@ -638,22 +839,33 @@ class Style_1 extends Templates {
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 227) . '; 
                 } 
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-date > .oxi-time{  
-                    font-size: ' . $styledata[175] . 'px;  
-                }   
+                    font-size: ' . $styledata[175] . 'px; 
+                }  
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__button-main{   
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 271) . ';
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 271) . '; 
                 }
                 .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__btn-link{   
                     font-size: ' . $styledata[287] . 'px; 
                     border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 307) . ';
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 256) . ';  
-                } 
-            }
-            @media only screen and (max-width : 400px){
-                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__meta-button{  
-                    flex-direction: column;
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 255) . ';  
+                }   
+                .oxi-addons__main-wrapper-' . $oxiid . ':after{
+                    display: none;
+                }    
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-body::after{
+                    display: none;
+                }  
+                .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__post-body::after{
+                    display: none;
+                }  
+                .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__timeline-bullet{   
+                    display: none;
                 }
-            }
+                .oxi-addons__main-wrapper-' . $oxiid . ':nth-child(2n) .oxi-addons__timeline-bullet{ 
+                    display: none;
+                }
+
+            } 
         ';
         wp_add_inline_style('shortcode-addons-style', $css);
         $jquery = "

@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Display_post;
+namespace SHORTCODE_ADDONS_UPLOAD\Post_timeline;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Elements_Frontend;
 
-class Display_post extends Elements_Frontend {
+class Post_timeline extends Elements_Frontend {
 
     public function pre_active() {
         return array('Style_1','Style_2');

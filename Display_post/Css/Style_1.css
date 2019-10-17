@@ -1,22 +1,4 @@
-.oxi-addons__main-wrapper-style-1 .oxi-addons__main-img_1{
-    background-image: url(http://localhost/wordpress/wp-content/uploads/2019/09/vineyards-on-italian-coast-free-photo-DSC04256-1080x720-300x200.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom:60%;
-} .oxi-addons__main-wrapper-style-1 .oxi-addons__main-img_38{
-    background-image: url(http://localhost/wordpress/wp-content/uploads/2019/08/Image-hotspots-01-300x215.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom:60%;
-} .oxi-addons__main-wrapper-style-1 .oxi-addons__main-img_40{
-    background-image: url(http://localhost/wordpress/wp-content/uploads/2019/09/maxresdefault-300x169.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom:60%;
-}
+
 .oxi-addons-container *{
     transition: none;
 }
@@ -60,7 +42,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all .5s ease; 
-    Array
+
 }
 .oxi-addons__main-wrapper-style-1 .oxi-addons__overlay .oxi-icons{ 
     font-size: 22px;
