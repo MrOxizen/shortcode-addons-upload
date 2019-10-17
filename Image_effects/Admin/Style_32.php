@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_25 extends AdminStyle {
+class Style_32 extends AdminStyle {
 
     public function register_controls() {
 
@@ -54,7 +54,7 @@ class Style_25 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Fully Customizable',
                     'selector' => [
-                        '{{WRAPPER}} .sa_image_effect_temp_25_{{KEY}} .ihewc-heading ihewc-delay-sm' => '',
+                        '{{WRAPPER}} .sa_image_effect_temp_32_{{KEY}} .ihewc-heading ihewc-delay-sm' => '',
                     ],
                 ],
                 'sa_el_image_effect_descriptions' => [
@@ -62,7 +62,7 @@ class Style_25 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Customize With Image Hover Awesome Tools',
                     'selector' => [
-                        '{{WRAPPER}} .sa_image_effect_temp_25_{{KEY}} .ihewc-content.ihewc-delay-sm' => '',
+                        '{{WRAPPER}} .sa_image_effect_temp_32_{{KEY}} .ihewc-content.ihewc-delay-sm' => '',
                     ],
                 ],
                 'sa_el_image_effect_btn_text' => [
@@ -70,7 +70,7 @@ class Style_25 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Buy Now',
                     'selector' => [
-                        '{{WRAPPER}} .sa_image_effect_temp_25_{{KEY}} .oxi-addons-image-effects-button' => '',
+                        '{{WRAPPER}} .sa_image_effect_temp_32_{{KEY}} .oxi-addons-image-effects-button' => '',
                     ],
                 ],
                 'sa_el_image_effect_url' => [
@@ -121,19 +121,17 @@ class Style_25 extends AdminStyle {
                 'sa_effects_select_icon', $this->style, [
             'label' => __('Effects', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'ihewc-shutter-out-horizontal',
+            'default' => 'ihewc-zoom-in',
             'loader' => TRUE,
             'options' => [
-                'ihewc-shutter-out-horizontal' => __('Shutter Out Horizontal', SHORTCODE_ADDOONS),
-                'ihewc-shutter-out-vertical' => __('Shutter Out Vertical', SHORTCODE_ADDOONS),
-                'ihewc-shutter-out-diagonal-1' => __('Shutter Out Diagonal One', SHORTCODE_ADDOONS),
-                'ihewc-shutter-out-diagonal-2' => __('Shutter Out Diagonal Two', SHORTCODE_ADDOONS),
-                'ihewc-shutter-in-horizontal' => __('Shutter In Horizontal', SHORTCODE_ADDOONS),
-                'ihewc-shutter-in-vertical' => __('Shutter In Vertical', SHORTCODE_ADDOONS),
-                'ihewc-shutter-in-out-horizontal' => __('Shutter In Out Horizontal', SHORTCODE_ADDOONS),
-                'ihewc-shutter-in-out-vertical' => __('Shutter In Out Vertical', SHORTCODE_ADDOONS),                
-                'ihewc-shutter-in-out-diagonal-1' => __('Shutter In Out Diagonal One', SHORTCODE_ADDOONS),
-                'ihewc-shutter-in-out-diagonal-2' => __('Shutter In Out Diagonal Two', SHORTCODE_ADDOONS),
+                'ihewc-zoom-in' => __('Zoom In', SHORTCODE_ADDOONS),
+                'ihewc-zoom-out' => __('Zoom Out', SHORTCODE_ADDOONS),
+                'ihewc-zoom-out-up' => __('Zoom Out Up', SHORTCODE_ADDOONS),
+                'ihewc-zoom-out-down' => __('Zoom Out Down', SHORTCODE_ADDOONS),
+                'ihewc-zoom-out-left' => __('Zoom Out Left', SHORTCODE_ADDOONS),
+                'ihewc-zoom-out-right' => __('Zoom Out Right', SHORTCODE_ADDOONS),
+                'ihewc-zoom-out-flip-horizontal' => __('Zoom Out Flip Horizontal', SHORTCODE_ADDOONS),
+                'ihewc-zoom-out-flip-vertical' => __('Zoom Out Flip Vertical', SHORTCODE_ADDOONS),
             ],
                 ]
         );
@@ -163,7 +161,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25  .ihewc-hover-image' => 'height:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32  .ihewc-hover-image' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -193,7 +191,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .ihewc-hover-padding-25' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .ihewc-hover-padding-32' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -210,15 +208,7 @@ class Style_25 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                '{{WRAPPER}}   .ihewc-hover:hover,'
-                . ' .ihewc-hover:hover::before,'
-                . ' .ihewc-hover:hover::after,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure::before,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure::after, '
-                . '.ihewc-hover:hover .ihewc-hover-figure-caption, '
-                . '.ihewc-hover:hover .ihewc-hover-figure-caption::before,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure-caption::after' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .ihewc-hover:hover .ihewc-hover-figure-caption' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -249,7 +239,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-main-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -279,7 +269,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -293,7 +283,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-main-hover-box-shadow-hover', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25:hover' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32:hover' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -323,7 +313,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -363,7 +353,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .sa_for_margin' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .sa_for_margin' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -393,7 +383,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .sa_for_margin ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .sa_for_margin ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -445,7 +435,7 @@ class Style_25 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#fff',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 h3.ihewc-heading' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 h3.ihewc-heading' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -453,7 +443,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-title-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 h3.ihewc-heading' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 h3.ihewc-heading' => ''
             ],
                 ]
         );
@@ -461,7 +451,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-heading-texts-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 h3.ihewc-heading' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 h3.ihewc-heading' => ''
             ],
                 ]
         );
@@ -487,7 +477,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 h3.ihewc-heading' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 h3.ihewc-heading' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -517,7 +507,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 h3.ihewc-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 h3.ihewc-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -559,7 +549,7 @@ class Style_25 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#fff',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-content' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-content' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -567,7 +557,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-desc-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-content' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-content' => ''
             ],
                 ]
         );
@@ -575,7 +565,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-desc-tx-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-content' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-content' => ''
             ],
                 ]
         );
@@ -601,7 +591,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-content' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-content' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -631,7 +621,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -647,7 +637,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-button-side-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => ''
             ],
                 ]
         );
@@ -667,7 +657,7 @@ class Style_25 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -678,7 +668,7 @@ class Style_25 extends AdminStyle {
             'default' => '#fff',
             'oparetor' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -686,7 +676,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-button-side-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -694,7 +684,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-button-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => ''
             ],
                 ]
         );
@@ -724,7 +714,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -738,7 +728,7 @@ class Style_25 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#222',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-button.img-btn:hover' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-button.img-btn:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -749,7 +739,7 @@ class Style_25 extends AdminStyle {
             'default' => '#fff',
             'oparetor' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-button.img-btn:hover' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-button.img-btn:hover' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -757,7 +747,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-button-hover-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-button.img-btn:hover' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-button.img-btn:hover' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -765,7 +755,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-button-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-button.img-btn:hover' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-button.img-btn:hover' => ''
             ],
                 ]
         );
@@ -795,7 +785,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-button.img-btn:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .ihewc-button.img-btn:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -806,7 +796,7 @@ class Style_25 extends AdminStyle {
             'type' => Controls::TEXTSHADOW,
             'separator' => true,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => ''
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => ''
             ],
                 ]
         );
@@ -832,7 +822,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .oxi-addons-image-effects-button' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .oxi-addons-image-effects-button' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -867,7 +857,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -897,7 +887,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .img-btn.ihewc-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_32 .img-btn.ihewc-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
