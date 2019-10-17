@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_4 extends AdminStyle {
+class Style_13 extends AdminStyle {
 
     public function register_controls() {
 
@@ -55,7 +55,7 @@ class Style_4 extends AdminStyle {
             'label' => __('Z-Index', SHORTCODE_ADDOONS),
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd4' => 'z-index:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd13' => 'z-index:{{VALUE}};',
             ],
                 ]
         );
@@ -113,7 +113,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd4' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd13' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -121,8 +121,8 @@ class Style_4 extends AdminStyle {
         $this->add_responsive_control(
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
             'loader'=> TRUE,
+            'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
                 'size' => 120,
@@ -145,7 +145,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd4' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd13' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );

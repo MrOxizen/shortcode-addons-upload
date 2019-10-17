@@ -55,7 +55,7 @@ class Style_2 extends AdminStyle {
             'label' => __('Z-Index', SHORTCODE_ADDOONS),
             'loader' => TRUE,
                      'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd1' => 'z-index:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd2' => 'z-index:{{VALUE}};',
             ],
                 ]
         );
@@ -113,7 +113,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd3' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd2' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -121,6 +121,7 @@ class Style_2 extends AdminStyle {
         $this->add_responsive_control(
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
+            'loader'=> TRUE,
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
@@ -144,7 +145,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-divider-sd3' => 'height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-divider-sd2' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );

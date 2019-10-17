@@ -24,15 +24,19 @@ class Style_4 extends Templates {
                 background-repeat:  repeat-x;
             } ';
 
-        if (is_admin()):
+       if (is_admin()):
             if ($this->style['sa_sd_align'] == 'sa_sd_top'):
                 $css .= '.oxi-addons-preview-data#oxi-addons-preview-data {
-                            padding-bottom: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px;
-                        }';
+                            padding-bottom: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px !important;
+                                    background-color: rgb(156, 63, 112);
+                                    padding: 0;
+                         }';
             else:
                 $css .= '.oxi-addons-preview-data#oxi-addons-preview-data {
-                            padding-top: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px;
-                        }';
+                            padding-top: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px !important;
+                                    background-color: rgb(156, 63, 112);
+                                    padding: 0;
+                         }';
             endif;
         endif;
         return $css;
@@ -63,7 +67,22 @@ class Style_4 extends Templates {
             .oxi-addons-divider-<?php echo $oxiid; ?> .oxi-addons-divider{
                 background-image: url("data:image/svg+xml,%3Csvg class='rocket-separator tilt_right_svg_separator' xmlns='http://www.w3.org/2000/svg' version='1.0' width='100%25' fill='%23<?php echo $style[11]; ?>' height='100%25' viewBox='0 0 1920 90' preserveAspectRatio='none'%3E%3Cpath d='M0,0H1920L0,90V0Z'%3E%3C/path%3E%3C/svg%3E");
                 background-repeat:  repeat-x;
-            } 
+            }
+            <?php
+            echo '.oxi-addons-divider-' . $oxiid . ' .oxi-addons-divider{';
+            if ($style[3] == 'bottom') {
+                echo '-webkit-transform: translate(0%, 0) scaleX(-1) scaleY(1) !important;;
+                            -ms-transform: translate(0%, 0) scaleX(-1) scaleY(1) !important;;
+                            -o-transform: translate(0%, 0) scaleX(-1) scaleY(1) !important;;
+                            transform: translate(0%, 0) scaleX(-1) scaleY(1) !important;;';
+            } else {
+                echo '-webkit-transform: translate(0%, 0) scaleX(-1) !important;;
+                        -ms-transform: translate(0%, 0) scaleX(-1) !important;;
+                        -o-transform: translate(0%, 0) scaleX(-1) !important;;
+                        transform: translate(0%, 0) scaleX(-1) !important;;';
+            }
+            echo '}';
+            ?>
         </style>
         <?php
         echo '</div>';

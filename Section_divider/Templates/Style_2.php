@@ -27,12 +27,16 @@ class Style_2 extends Templates {
         if (is_admin()):
             if ($this->style['sa_sd_align'] == 'sa_sd_top'):
                 $css .= '.oxi-addons-preview-data#oxi-addons-preview-data {
-                            padding-bottom: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px;
-                        }';
+                            padding-bottom: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px !important;
+                                    background-color: rgb(156, 63, 112);
+                                    padding: 0;
+                         }';
             else:
                 $css .= '.oxi-addons-preview-data#oxi-addons-preview-data {
-                            padding-top: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px;
-                        }';
+                            padding-top: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px !important;
+                                    background-color: rgb(156, 63, 112);
+                                    padding: 0;
+                         }';
             endif;
         endif;
         return $css;

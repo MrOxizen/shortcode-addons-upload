@@ -14,17 +14,17 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_5 extends Templates {
 
     public function inline_public_css() {
         $style = $this->style;
         $color = str_replace('#', '', $style['sa_sd_color']);
-        $css = '.' . $this->WRAPPER . ' .oxi-addons-divider-sd1 .oxi-addons-divider{
-                background-image: url("data:image/svg+xml,%3Csvg width=\'100%25\' height=\'100%25\' viewBox=\'0 0 1280 140\' preserveAspectRatio=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23' . $color . '\'%3E%3Cpath d=\'M0 51.76c36.21-2.25 77.57-3.58 126.42-3.58 320 0 320 57 640 57 271.15 0 312.58-40.91 513.58-53.4V0H0z\' fill-opacity=\'.3\'/%3E%3Cpath d=\'M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V0H0z\' fill-opacity=\'.5\'/%3E%3Cpath d=\'M0 0v3.4C28.2 1.6 59.4.59 94.42.59c320 0 320 84.3 640 84.3 285 0 316.17-66.85 545.58-81.49V0z\'/%3E%3C/g%3E%3C/svg%3E");
+        $css = '.' . $this->WRAPPER . ' .oxi-addons-divider-sd5 .oxi-addons-divider{
+                background-image: url("data:image/svg+xml,%3Csvg class=\'rocket-separator curve_left_svg_separator\' xmlns=\'http://www.w3.org/2000/svg\' version=\'1.0\' width=\'100%25\' fill=\'%23' . $color. '\' height=\'100%25\' viewBox=\'0 0 1920 120\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M0-17H1920V120.367C1460.94-138.181,0,105,0,105V-17Z\'%3E%3C/path%3E%3C/svg%3E");
                 background-repeat:  repeat-x;
             } ';
-
-        if (is_admin()):
+        
+         if (is_admin()):
             if ($this->style['sa_sd_align'] == 'sa_sd_top'):
                 $css .= '.oxi-addons-preview-data#oxi-addons-preview-data {
                             padding-bottom: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px !important;
@@ -39,14 +39,14 @@ class Style_1 extends Templates {
                          }';
             endif;
         endif;
-
-
-        return $css;
+        
+        
+         return $css;
     }
 
     public function default_render($style, $child, $admin) {
 
-        echo '  <div class="oxi-addons-divider-sd1 ' . $style['sa_sd_align'] . '">
+        echo '  <div class="oxi-addons-divider-sd5 ' . $style['sa_sd_align'] . '">
                      <div class="oxi-addons-divider ' . (array_key_exists('sa_sd_scroll', $style) && $style['sa_sd_scroll'] != '0' ? $style['sa_sd_scroll'] : '') . '">
                 </div>
              
@@ -67,7 +67,7 @@ class Style_1 extends Templates {
         ?>
         <style>
             .oxi-addons-divider-<?php echo $oxiid; ?> .oxi-addons-divider{
-                background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 1280 140' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23<?php echo $style[11]; ?>'%3E%3Cpath d='M0 51.76c36.21-2.25 77.57-3.58 126.42-3.58 320 0 320 57 640 57 271.15 0 312.58-40.91 513.58-53.4V0H0z' fill-opacity='.3'/%3E%3Cpath d='M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V0H0z' fill-opacity='.5'/%3E%3Cpath d='M0 0v3.4C28.2 1.6 59.4.59 94.42.59c320 0 320 84.3 640 84.3 285 0 316.17-66.85 545.58-81.49V0z'/%3E%3C/g%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg class='rocket-separator curve_left_svg_separator' xmlns='http://www.w3.org/2000/svg' version='1.0' width='100%25' fill='%23<?php echo $style[11]; ?>' height='100%25' viewBox='0 0 1920 120' preserveAspectRatio='none'%3E%3Cpath d='M0-17H1920V120.367C1460.94-138.181,0,105,0,105V-17Z'%3E%3C/path%3E%3C/svg%3E");
                 background-repeat:  repeat-x;
             } 
         </style>

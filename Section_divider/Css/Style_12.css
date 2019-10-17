@@ -1,0 +1,73 @@
+
+
+
+.oxi-addons-divider-sd12 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 121px;
+    pointer-events: none;
+    margin-top: -1px;
+    top: auto;
+    bottom: auto;
+    z-index: 1;
+}
+.oxi-addons-divider-sd12.sa_sd_bottom {
+    bottom: 0;
+    -webkit-transform: translate(0%, 0) scaleX(-1);
+    -ms-transform: translate(0%, 0) scaleX(-1);
+    -o-transform: translate(0%, 0) scaleX(-1);
+    transform: translate(0%, 0) scale(-1);
+}
+.oxi-addons-divider-sd12.sa_sd_top {
+    top: 0;
+    -webkit-transform: translate(0%, 0) scaleX(1);
+    -ms-transform: translate(0%, 0) scaleX(1);
+    -o-transform: translate(0%, 0) scaleX(1);
+    transform: translate(0%, 0) scale(1);
+}
+
+.oxi-addons-divider-sd12 .oxi-addons-divider {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-size: 100% 100%;
+    top: 0;
+    bottom: 0;
+
+}
+.oxi-addons-divider-sd12 .oxi-addons-divider.sa_sd_scrolling {
+    -webkit-animation: scroll 150s linear infinite;
+    -moz-animation: scroll 150s linear infinite;
+    -ms-animation: scroll 150s linear infinite;
+    -o-animation: scroll 150s linear infinite;
+    animation: scroll 150s linear infinite;
+}
+
+
+
+@-webkit-keyframes scroll {
+    100% {
+        background-position: 10000px center
+    }
+}
+
+@-moz-keyframes scroll {
+    100% {
+        background-position: 10000px center
+    }
+}
+
+@-o-keyframes scroll {
+    100% {
+        background-position: 10000px center
+    }
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 10000px center
+    }
+}

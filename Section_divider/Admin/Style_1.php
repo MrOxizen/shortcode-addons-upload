@@ -122,6 +122,7 @@ class Style_1 extends AdminStyle {
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
+            'loader'=> TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => 120,

@@ -121,6 +121,7 @@ class Style_3 extends AdminStyle {
         $this->add_responsive_control(
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
+            'loader'=> TRUE,
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
