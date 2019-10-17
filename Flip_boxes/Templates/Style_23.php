@@ -59,7 +59,7 @@ class Style_23 extends Templates {
                     $startlink .= '<a ' . $this->url_render('sa_flip_boxes_button_link', $value) . '>';
                     $endlink .= '</a>';
                 }
-                echo '  <div class="sa_flip_boxes_data_style_23 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
+                echo '  <div class="oxi-flip-box-col-style-23 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
                         <div class="oxi-addons-flip-box-style-23">
                             <div class="oxi-addons-flip-boxes-body"  ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">
