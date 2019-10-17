@@ -1,0 +1,23 @@
+.oxi-image-hover a,
+.oxi-image-hover a:hover,
+.oxi-image-hover a:focus, 
+.oxi-image-hover a:active{
+    cursor: pointer;
+    box-shadow: none !important;
+}
+.oxi-image-hover .oxi-ih-img:before{
+    z-index: +1;
+}
+.oxi-image-hover .oxi-ih-img img{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    left: 0;   
+    top: 0;
+}
+.oxi-image-hover  img{
+    box-shadow: none !important;
+}
+.oxi-image-hover:hover{
+    z-index: 5;
+}
