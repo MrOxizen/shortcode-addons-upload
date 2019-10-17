@@ -47,7 +47,7 @@ class Style_3 extends Templates
             if (array_key_exists('sa_price_table_button_switter', $style) && $style['sa_price_table_button_switter'] == 'yes') {
                 if (array_key_exists('sa_price_table_button_text', $value) && $value['sa_price_table_button_text'] != '') {
                     if (array_key_exists('sa_price_table_button_link-url', $value) && $value['sa_price_table_button_link-url'] != '') {
-                        $button = '<div class="oxi-addons-main-button">
+                        $button = '<div class="oxi-addons-button">
                                             <a ' . $this->url_render('sa_price_table_button_link', $value) . ' class="oxi-addons-link">
                                             ' . $this->text_render($value['sa_price_table_button_text']) . ' 
                                             </a>
