@@ -201,9 +201,9 @@ class Style_2 extends Templates
     public function public_jquery()
     {
         $this->JSHANDLE = 'jplayer-playlist-min';
-        wp_enqueue_style('jplayer-pink-flag-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/file/skin/pink-flag/css/jplayer-pink-flag-min.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery-jplayer-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/file/jquery-jplayer-min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jplayer-playlist-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/file/jplayer-playlist-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('jplayer-pink-flag-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/skin/pink-flag/css/jplayer-pink-flag-min.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-jplayer-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jquery-jplayer-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jplayer-playlist-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jplayer-playlist-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function inline_public_jquery()
     {
@@ -256,9 +256,9 @@ class Style_2 extends Templates
         $styledata = explode('|', $stylefiles[0]);
 
         echo wp_enqueue_media();
-        wp_enqueue_style('jplayer-pink-flag-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/file/skin/pink-flag/css/jplayer-pink-flag-min.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jplayer-playlist-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/file/jplayer-playlist-min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery-jplayer-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/file/jquery-jplayer-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('jplayer-pink-flag-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/skin/pink-flag/css/jplayer-pink-flag-min.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jplayer-playlist-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jplayer-playlist-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-jplayer-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jquery-jplayer-min.js', false, SA_ADDONS_PLUGIN_VERSION);
 
         $css = '';
         $jquery = '';
