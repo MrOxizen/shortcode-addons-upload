@@ -18,6 +18,97 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         
+        $successfuldata = '';
+        if ($style['sa_cf_form_style'] == 'sa_style1') {
+            $coldata = 'oxi-addons-lg-col-1 oxi-addons-md-col-1 oxi-addons-xs-col-1';
+        } else {
+            $coldata = 'oxi-addons-lg-col-2 oxi-addons-md-col-2 oxi-addons-xs-col-1';
+        }
+        if (!empty($_REQUEST['_wpnonce'])) {
+            $nonce = $_REQUEST['_wpnonce'];
+
+            if (wp_verify_nonce($nonce, 'OxiAddons-Form-Submit')) {
+                $name = $this->text_render($_POST['oxi-addons-form-input-data-name']);
+                $email = $this->text_render($_POST['oxi-addons-form-input-data-email']);
+                $massage = $this->text_render($_POST['oxi-addons-form-input-data-massage']);
+                $fromemail = get_option('admin_email');
+                if (!empty($style['sa_cf_admin_email'])) {
+                    $receive = $style['sa_cf_admin_email'];
+                } else {
+                    $receive = get_option('admin_email');
+                }
+                $msg = "<table width=100% border=1 cellspacing=0 cellpadding=5><tr><td>&nbsp;"
+                        . esc_html__('Name', 'OxiAddons') . "</td><td>&nbsp;$name</td></tr><tr><td>&nbsp;"
+                        . esc_html__('Email', 'OxiAddons') . "</td><td>&nbsp;$email</td></tr><tr><td>&nbsp;"
+                        . esc_html__('Message', 'OxiAddons') . "</td><td>&nbsp;$massage</td></tr></table>";
+
+
+                if (!empty($name) && !empty($email) && !empty($massage)) {
+                    $subject = $name . ' Sent You a Contact Massage';
+                    $headers = "From: $name <$fromemail>" . "\r\n" .
+                            "Content-type: text/html; charset=iso-8859-1\r\n" .
+                            "Reply-To: $email" . "\r\n" .
+                            "X-Mailer: PHP/" . phpversion();
+
+                    if (wp_mail($receive, $subject, $msg, $headers)) {
+                        $successfuldata = '<div class="oxi-addons-form-success">
+                                        <div class="oxi-addons-form-success-data">
+                                            ' . $this->text_render($style['sa_cf_success_msg']) . '
+                                        </div> 
+                                    </div>';
+                    } else {
+                        $successfuldata = '';
+                    }
+                } else {
+                    $successfuldata = '';
+                }
+            }
+        }
+        if (!empty($style['sa_cf_title_text'])) {
+            $contacttitle = '<div class="oxi-addons-form-title">
+                                    ' . $this->text_render($style['sa_cf_title_text']) . '
+                            </div>';
+        } else {
+            $contacttitle = '';
+        }
+        if (!empty($style['sa_cf_subtitle'])) {
+            $contactinfo = '<div class="oxi-addons-form-content">
+                                     ' . $this->text_render($style['sa_cf_subtitle']) . '
+                            </div>';
+        } else {
+            $contactinfo = '';
+        }
+        
+        echo '<div class="oxi-addons-container">
+                <div class="oxi-addons-row">
+                    <div class="oxi-addons-form-warp-style1" ' . $this->animation_render('sa_cf_animation', $style) . '>
+                        <form  method="post" class="oxi-addons-form"> 
+                                ' . $contacttitle . ' ' . $contactinfo . '' . $successfuldata . '
+                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate ' . $coldata . '" oxi-validate=" ' . $stylefiles[5] . '">
+                                        <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-name" type="text" name="oxi-addons-form-input-data-name">
+                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $stylefiles[3] . '"></span>
+                                </div>
+                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate  ' . $coldata . '" oxi-validate = " ' . $stylefiles[9] . '">
+                                        <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-email" type="text" name="oxi-addons-form-input-data-email">
+                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $stylefiles[7] . '"></span>
+                                </div>
+                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate oxi-addons-lg-col-1" oxi-validate = " ' . $stylefiles[13] . '">
+                                        <textarea class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-massage" name="oxi-addons-form-input-data-massage"></textarea>
+                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $stylefiles[11] . '"></span>
+                                </div>
+                                <div class="oxi-addons-form-btn oxi-addons-lg-col-1">
+                                        <div class="oxi-addons-form-btn-warp">
+                                                <button class="oxi-addons-btn">
+                                                         ' . $this->text_render($style['sa_cf_button']) . '
+                                                </button>
+                                        </div>
+                                </div>
+                               ' . wp_nonce_field("OxiAddons-Form-Submit") . '
+                        </form>
+                    </div>
+                </div>
+            </div>
+            ';
     }
 
     public function old_render() {
@@ -25,7 +116,6 @@ class Style_1 extends Templates {
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
-
         $jquery = '';
         $css = '';
         $successfuldata = '';
