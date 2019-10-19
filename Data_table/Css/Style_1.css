@@ -1,0 +1,544 @@
+.oxi-addons-wrapper-datatable-style-1 .datatable_btn {
+    padding: 2px 10px !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .datatable_btn .oxi-icon {
+    font-size: 12px
+}
+
+.oxi-addons-wrapper-datatable-style-1 .datatable_edit_delete {
+    display: flex;
+    justify-content: center
+}
+
+.oxi-addons-wrapper-datatable-style-1 .datatable_edit_delete .datatable_btn:first-child {
+    margin-right: 5px
+}
+
+.oxi-addons-wrapper-datatable-style-1 {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    border-radius: 0px 0px 0px 0px;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 0px 0px rgba(94, 94, 94, 1);
+}
+
+.oxi-addons-datatable-style-1 {
+    border-radius: 50px
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper {
+    width: 1100px !important;
+    max-width: 100%
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_show_entries_label {
+    position: relative;
+    font-size: 16px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    color: #737373;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length {
+    position: relative;
+    margin: 0px 15px 0px 15px
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box {
+    width: 80px !important;
+    height: 30px !important;
+    font-size: 16px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    color: #949494;
+    background: rgba(255, 255, 255, 1.00);
+    border: 1px solid;
+    border-color: #f2f2f2;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    padding: 0px 5px !important;
+    box-shadow: none;
+    background-image: none !important;
+    margin: 0 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_show_entries_label::before {
+    content: "\f0dd";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 10px;
+    right: 69px;
+    font-size: 18px;
+    z-index: 999;
+    line-height: 1
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_datatable_select_box:focus {
+    outline: none
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_export_button {
+    background: rgba(252, 252, 252, 1.00);
+    color: #4a4a4a;
+    display: inline-block;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    font-size: 16px;
+    border: 1px solid;
+    vertical-align: middle;
+    border-color: #d9d9d9;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 15px 5px 15px;
+    margin: 0px 0px 5px 0px
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_export_button:hover {
+    background: rgba(90, 186, 189, 1.00) !important;
+    color: #f7f7f7 !important;
+    border-color: #76b4bf !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_filter>.oxi_filter_label {
+    font-size: 16px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    color: #6e6e6e;
+    padding: 0px 0px 20px 0px;
+    margin: 0;
+    margin-top: 5px
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_filter .oxi_filter_input {
+    width: 150px !important;
+    height: 30px !important;
+    font-size: 16px;
+    color: #9e9e9e;
+    background: rgba(252, 252, 252, 1.00);
+    border: 1px solid;
+    border-color: #e3e3e3;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    padding: 0px 5px !important;
+    box-shadow: 0px 0px 0px 0px rgba(115, 115, 115, 1); 
+    background-image: none;
+    -webkit-appearance: none;
+    line-height: 0 !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
+    font-size: 16px;
+    color: #6ea7f5 !important;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+    font-size: 16px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    padding: 0px 10px 0px 10px;
+    border: none
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    color: #828282 !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #828282 !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover,
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover {
+    background: rgba(72, 149, 166, 1.00) !important;
+    color: #ffffff !important;
+    border: none
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+    background: none !important;
+    color: #828282 !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button {
+    background: rgba(245, 245, 245, 1.00) !important;
+    color: #969696 !important;
+    display: inline-block;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    font-size: 16px !important;
+    border: 0px solid !important;
+    border-color: #8a8a8a;
+    border-radius: 5px 5px 5px 5px !important;
+    padding: 8px 20px 8px 20px !important;
+    margin: 15px 2px 0px 2px !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate span .paginate_button:hover {
+    background: rgba(70, 149, 227, 1.00) !important;
+    color: #ffffff !important;
+    border-color: #ffffff
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current {
+    background: rgba(79, 173, 255, 1) !important;
+    color: #ffffff !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current:hover {
+    background: rgba(79, 173, 255, 1) !important;
+    color: #ffffff !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
+    background: rgba(79, 173, 255, 1) !important;
+    color: #ffffff !important;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    font-size: 16px !important;
+    padding: 12px 5px 12px 5px !important;
+    text-transform: capitalize;
+    position: relative;
+    min-width: 35px !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:after {
+    opacity: 0.3
+}
+
+.oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_thead .sorting:after,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:after,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:after,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after {
+    content: "\f30c";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 700;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    margin: 0px 0px 0px 0px !important;
+    position: absolute;
+    display: block;
+    right: 15px;
+    top: 10px
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before {
+    opacity: 0.3
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:before,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:before,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before {
+    content: "\f309";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 700;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    margin: 0px 0px 0px 0px !important;
+    position: absolute;
+    display: block;
+    right: 7px;
+    top: 10px
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .sorting_asc,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .sorting,
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .sorting_desc {
+    border: none #cfcfcf !important;
+    border-left-width: 0px !important;
+    border-right-width: 1px !important;
+    border-top-width: 1px !important;
+    border-bottom-width: 0px !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
+    border-left-width: 1px !important;
+    width: 70px !important
+} 
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_tr:last-child .oxi_datatable_th {
+    border-bottom-width: 1px !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .table.dataTable.no-footer {
+    border: none
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body>tr>td {
+    font-family: "Ubuntu";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+    font-size: 16px !important;
+    padding: 12px 8px 10px 8px !important;
+    border: solid #60a6a8 !important;
+    border-left-width: 0px !important;
+    border-right-width: 1px !important;
+    border-top-width: 1px !important;
+    border-bottom-width: 0px !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body td:first-child {
+    border-left-width: 1px !important
+}
+
+ 
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body tr:last-child td {
+    border-bottom-width: 1px !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .even td {
+    color: #ffffff !important;
+    background: rgba(75, 166, 164, 1) !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable .odd td {
+    color: #ffffff !important;
+    background: rgba(83, 181, 184, 1.00) !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 table.dataTable {
+    width: 99.5% !important
+}
+
+.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper {
+    width: 100%
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-wrapper-datatable-style-1 {
+        width: 1100px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 5px 5px 5px 5px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_show_entries_label {
+        font-size: 16px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length {
+        margin: 0px 15px 0px 15px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box {
+        width: 80px !important;
+        height: 30px !important;
+        font-size: 16px;
+        border-radius: 5px 5px 5px 5px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_export_button {
+        font-size: 16px;
+        border-radius: 5px 5px 5px 5px;
+        padding: 5px 15px 5px 15px;
+        margin: 0px 0px 5px 0px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter>.oxi_filter_label {
+        font-size: 16px;
+        padding: 0px 0px 20px 0px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter .oxi_filter_input {
+        width: 150px !important;
+        height: 30px !important;
+        font-size: 16px;
+        border-radius: 5px 5px 5px 5px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+        font-size: 16px;
+        padding: 0px 10px 0px 10px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button {
+        font-size: 16px !important;
+        border-radius: 5px 5px 5px 5px !important;
+        padding: 8px 20px 8px 20px !important;
+        margin: 15px 2px 0px 2px !important
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
+        font-size: 16px !important;
+        padding: 12px 5px 12px 5px !important
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body tr td:nth-child(1) {
+        border-left-width: 1px !important
+    }
+ 
+
+    .oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_thead .sorting:after,
+    table.dataTable .oxi_datatable_thead .sorting_asc:after,
+    table.dataTable .oxi_datatable_thead .sorting_desc:after,
+    table.dataTable .oxi_datatable_thead .sorting_asc_disabled:after,
+    table.dataTable .oxi_datatable_thead .sorting_desc_disabled:after {
+        margin: 0px 0px 0px 0px !important;
+        top: 10px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
+    table.dataTable .oxi_datatable_thead .sorting_asc:before,
+    table.dataTable .oxi_datatable_thead .sorting_desc:before,
+    table.dataTable .oxi_datatable_thead .sorting_asc_disabled:before,
+    table.dataTable .oxi_datatable_thead .sorting_desc_disabled:before {
+        margin: 0px 0px 0px 0px !important;
+        top: 10px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body>tr>td {
+        font-size: 16px !important;
+        padding: 12px 8px 10px 8px !important
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
+        border-left-width: 1px !important;
+        width: 120px !important
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body tr td:nth-child(1) {
+        border-left-width: 1px !important
+    } 
+
+    .oxi-addons-wrapper-datatable-style-1 {
+        width: 1100px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 5px 5px 5px 5px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_show_entries_label {
+        font-size: 16px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length {
+        margin: 0px 15px 0px 15px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box {
+        width: 100% !important;
+        height: 30px !important;
+        font-size: 16px;
+        border-radius: 5px 5px 5px 5px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_export_button {
+        font-size: 16px;
+        border-radius: 5px 5px 5px 5px;
+        padding: 5px 15px 5px 15px;
+        margin: 0px 0px 5px 0px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter>.oxi_filter_label {
+        font-size: 16px;
+        padding: 0px 0px 20px 0px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter .oxi_filter_input {
+        width: 150px !important;
+        height: 30px !important;
+        font-size: 16px;
+        border-radius: 5px 5px 5px 5px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+        font-size: 16px;
+        padding: 0px 10px 0px 10px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button {
+        font-size: 16px !important;
+        border-radius: 5px 5px 5px 5px !important;
+        padding: 8px 20px 8px 20px !important;
+        margin: 15px 2px 0px 2px !important
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
+        font-size: 16px !important;
+        padding: 12px 5px 12px 5px !important
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_thead .sorting:after,
+    table.dataTable .oxi_datatable_thead .sorting_asc:after,
+    table.dataTable .oxi_datatable_thead .sorting_desc:after,
+    table.dataTable .oxi_datatable_thead .sorting_asc_disabled:after,
+    table.dataTable .oxi_datatable_thead .sorting_desc_disabled:after {
+        margin: 0px 0px 0px 0px !important;
+        top: 10px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
+    table.dataTable .oxi_datatable_thead .sorting_asc:before,
+    table.dataTable .oxi_datatable_thead .sorting_desc:before,
+    table.dataTable .oxi_datatable_thead .sorting_asc_disabled:before,
+    table.dataTable .oxi_datatable_thead .sorting_desc_disabled:before {
+        margin: 0px 0px 0px 0px !important;
+        top: 10px
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body>tr>td {
+        font-size: 16px !important;
+        padding: 12px 8px 10px 8px !important
+    }
+
+    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
+        border-left-width: 1px !important;
+        width: 180px !important
+    }
+}
