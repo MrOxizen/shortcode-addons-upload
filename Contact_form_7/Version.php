@@ -4,4 +4,4 @@
   Version: 1.5
  */
 
-return array('2.0.0', 'Creative Elements', true);
+return array('2.0.0', '3rd Party Widgets', true);
