@@ -1,0 +1,332 @@
+
+
+
+.oxi-addons-form-warp-style1 input[type="text"]:focus::-webkit-input-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1 input[type="text"]:focus:-moz-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1 input[type="text"]:focus::-moz-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1 input[type="text"]:focus:-ms-input-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1 textarea:focus::-webkit-input-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1  textarea:focus:-moz-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1 textarea:focus::-moz-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1 textarea:focus:-ms-input-placeholder { color:transparent; }
+.oxi-addons-form-warp-style1 input[type="text"]::-webkit-input-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 input[type="text"]:-moz-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 input[type="text"]::-moz-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 input[type="text"]:-ms-input-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 textarea::-webkit-input-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 textarea:-moz-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 textarea::-moz-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 textarea:-ms-input-placeholder { color: #999999; }
+.oxi-addons-form-warp-style1 textarea,
+.oxi-addons-form-warp-style1 textarea:focus,
+.oxi-addons-form-warp-style1 textarea:hover{
+    min-height: 250px;
+}
+.oxi-addons-form-warp-style1{
+    width:100%;
+    position: relative;
+    float:left;
+    padding: 10px 10px 10px 10px;  
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-title{
+    display: block;
+    Width:100%;
+    max-width: 2000px;   
+    margin:0 auto;                        
+    font-size: 35px;  
+    color:  #595959;
+    padding: 15px 15px 15px 15px;  
+    font-family:"Open Sans"; font-weight:600; font-style:normal; line-height:1.3; text-align:left;                           
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-title{
+    margin: 0 auto;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-content{
+    display: block;
+    Width:100%;
+    max-width: 2000px;   
+    margin:0 auto;
+    font-size: 14px;  
+    color:  #949494;
+    padding: 10px 10px 10px 10px;  
+    font-family:"Open Sans"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-content{
+    margin: 0 auto;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-input-style1{
+    margin:0 0 0 0;
+    position: relative;
+    padding: 26px 26px 26px 26px;
+}
+.oxi-addons-form-warp-style1 input[type="text"],
+.oxi-addons-form-warp-style1 input[type="text"]:focus,
+.oxi-addons-form-warp-style1 input[type="text"]:hover,
+.oxi-addons-form-warp-style1 textarea,
+.oxi-addons-form-warp-style1 textarea:focus,
+.oxi-addons-form-warp-style1 textarea:hover{
+    outline: none;
+    border: none;
+    box-shadow:none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    position: relative;
+    display: block;
+    width: 100%;
+    height:auto;
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.2;
+    font-family:"Roboto"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;
+    padding: 20px 20px 20px 0px;
+    border-bottom: 2px dashed;
+    border-color:#a6a6a6;
+}
+.oxi-addons-form-warp-style1 .oxi-focus-input-style1{
+    position: absolute;
+    display: block;
+    width: calc(100% - 52px);   
+    height: calc(100% - 52px);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    margin: 26px 26px 26px 26px;
+}
+.oxi-addons-form-warp-style1 .oxi-focus-input-style1::after {
+    content: attr(oxi-data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 0;
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    color: #9e9e9e;
+    line-height: 1.4;
+    font-family:"Roboto"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;
+    padding: 20px 20px 20px 0px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.oxi-addons-form-input-data-style1:focus +  .oxi-focus-input-style1::after,
+.oxi-is-val.oxi-addons-form-input-data-style1 + .oxi-focus-input-style1::after {
+    top: 0%;
+    transform:translateY(-70%);
+}
+.oxi-addons-form-warp-style1 .oxi-focus-input-style1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    background: #a000d1;
+
+}
+.oxi-addons-form-input-data-style1:focus + .oxi-focus-input-style1::before,
+.oxi-is-val.oxi-addons-form-input-data-style1 + .oxi-focus-input-style1::before{
+    width: 100%;
+}
+.oxi-alert-validate{
+    position: relative;
+}
+.oxi-addons-form-warp-style1 .oxi-alert-validate::before {
+    content: attr(oxi-validate);
+    position: absolute;
+    max-width: 70%;
+    background-color: white;
+    border: 1px solid #f70042;
+    border-radius: 2px;
+    padding: 4px 25px 4px 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    pointer-events: none;
+    font-family:"Roboto"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;
+    color: #f70042;
+    font-size: 13px;
+    line-height: 1.4;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+.oxi-addons-form-warp-style1 .oxi-alert-validate::after {
+    content: "\f12a";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #f70042;
+    font-size: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 8px;
+}
+.oxi-addons-form-warp-style1 .oxi-alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-btn, .oxi-addons-form-warp-style1 .oxi-addons-form-btn-warp{
+    width:100%;
+    float: left;
+    text-align:left;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-btn{
+    display: inline-block;
+    font-size:16px;
+    font-family:"Open Sans"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;    
+    padding:10px 20px 10px 20px;
+    margin:30px 20px 20px 20px;
+    color:#ffffff;
+    background:rgba(147, 0, 184, 1);
+    border-radius: 50px;
+    border-width: 0px;
+    border-style:dotted; 
+    border-color:#ffffff;
+    text-align:center;
+    cursor:pointer;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-btn:hover,
+.oxi-addons-form-warp-style1 .oxi-addons-btn:focus{
+    color:#ffffff;
+    background:rgba(0, 109, 163, 1);
+    border-color:#ffffff;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-success{
+    width:100%;
+    float: left;
+    padding:15px 15px 15px 15px;
+}
+.oxi-addons-form-warp-style1 .oxi-addons-form-success-data{
+    width:100%;
+    float: left;
+    font-size:16px;
+    font-family:"Open Sans"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;    
+    color:#ffffff;
+    background:rgba(60, 0, 179, 1);
+    border-radius: 15px;
+    border-width: 0;
+    border-style:dotted; 
+    border-color:#ffffff;
+    padding:15px 15px 15px 15px;
+}
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-addons-form-warp-style1{
+        padding: 10px 10px 10px 10px;  
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-title{
+        max-width: 2000px;   
+        font-size: 35px;  
+        padding: 15px 15px 15px 15px;  
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-content{
+        max-width: 2000px;   
+        font-size: 14px;  
+        padding: 10px 10px 10px 10px; 
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-input-style1{
+        padding: 26px 26px 26px 26px;
+    }
+    .oxi-addons-form-warp-style1 input[type="text"],
+    .oxi-addons-form-warp-style1 input[type="text"]:focus,
+    .oxi-addons-form-warp-style1 input[type="text"]:hover,
+    .oxi-addons-form-warp-style1 textarea,
+    .oxi-addons-form-warp-style1 textarea:focus,
+    .oxi-addons-form-warp-style1 textarea:hover{
+        font-size: 14px;
+        padding: 20px 20px 20px 0px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-focus-input-style1{
+        width: calc(100% - 52px);
+        height: calc(100% - 52px);
+        margin: 26px 26px 26px 26px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-focus-input-style1::after {
+        font-size: 14px;
+        padding: 20px 20px 20px 0px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-btn{
+        font-size:16px;
+        padding:10px 20px 10px 20px;
+        margin:30px 20px 20px 20px;
+        border-radius: 50px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-success{
+        padding:15px 15px 15px 15px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-success-data{
+        font-size:16px;
+        border-radius: 15px;
+        padding:15px 15px 15px 15px;
+    }
+}
+@media only screen and (max-width : 668px){
+    .oxi-addons-form-warp-style1{
+        padding: 10px 10px 10px 10px;  
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-title{
+        max-width: 2000px;   
+        font-size: 35px;  
+        padding: 15px 15px 15px 15px;  
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-content{
+        max-width: 2000px;   
+        font-size: 14px;  
+        padding: 10px 10px 10px 10px; 
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-input-style1{
+        padding: 26px 26px 26px 26px;
+    }
+    .oxi-addons-form-warp-style1 input[type="text"],
+    .oxi-addons-form-warp-style1 input[type="text"]:focus,
+    .oxi-addons-form-warp-style1 input[type="text"]:hover,
+    .oxi-addons-form-warp-style1 textarea,
+    .oxi-addons-form-warp-style1 textarea:focus,
+    .oxi-addons-form-warp-style1 textarea:hover{
+        font-size: 14px;
+        padding: 20px 20px 20px 0px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-focus-input-style1{
+        width: calc(100% - 52px);
+        height: calc(100% - 52px);
+        margin: 26px 26px 26px 26px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-focus-input-style1::after {
+        font-size: 14px;
+        padding: 20px 20px 20px 0px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-btn{
+        font-size:16px;
+        padding:10px 20px 10px 20px;
+        margin:30px 20px 20px 20px;
+        border-radius: 50px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-success{
+        padding:15px 15px 15px 15px;
+    }
+    .oxi-addons-form-warp-style1 .oxi-addons-form-success-data{
+        font-size:16px;
+        border-radius: 15px;
+        padding:15px 15px 15px 15px;
+    }
+}

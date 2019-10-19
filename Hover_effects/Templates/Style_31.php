@@ -403,7 +403,7 @@ class Style_31 extends Templates {
                }
             effects31height' . $oxiid . '();';
         wp_add_inline_style('shortcode-addons-style', $css);
-        wp_add_inline_script('jquery.countdown.min', $jquery);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }
