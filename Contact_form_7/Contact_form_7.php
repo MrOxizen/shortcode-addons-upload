@@ -24,7 +24,7 @@ class Contact_form_7 extends Elements_Frontend {
         return array(
             'Style_1' => [
                 'url' => '',
-                'image' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/10/Screenshot_2-e1571550991971.png'
+                'image' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/10/Screenshot_2.png'
             ],
             'Style_2' => [
                 'url' => '',
