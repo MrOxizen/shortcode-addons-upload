@@ -12,14 +12,11 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates
-{
+class Style_2 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
         $styledata = $this->style;
         $oxiid = $this->oxiid;
         $all_cat_data = (array_key_exists('sa_category_add_data', $styledata) && is_array($styledata['sa_category_add_data'])) ? $styledata['sa_category_add_data'] : [];
@@ -67,7 +64,7 @@ class Style_2 extends Templates
             foreach ($select_cat_data as $item) :
                 $item_cat_list .= $this->CatStringToClassReplacce($item, $oxiid) . ' ';
             endforeach;
-            echo '<div class="sa_addons_category_item_show ' . $item_cat_list . ' ' . $value['sa_category_item_width'] . '">
+            echo '<div class="sa_addons_category_item_show ' . $item_cat_list . ' ' . $value['sa_category_item_width-lap'] . '-lap' . ' ' . $value['sa_category_item_width-tab'] . '-tab' . ' ' . $value['sa_category_item_width-mob'] . '-mob' . '">
                         <div class="sa_addons_category_files">
                             ' . $shortcode . '
                             ' . $image . '
@@ -80,20 +77,20 @@ class Style_2 extends Templates
             </div>
         </div>';
     }
-    public function inline_public_css()
-    {
+
+    public function inline_public_css() {
         $styledata = $this->style;
         $item_width = '';
         $item_width .= '.' . $this->WRAPPER . ' .sa_addons_category_item_show {
                     width: ' . (100 / explode('-', $styledata['sa_category_col-lap'])[4]) . '%;
                 }
-                .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_2 {
+                .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_2-lap {
                     width: ' . ((100 / explode('-', $styledata['sa_category_col-lap'])[4]) * 2) . '%;
                 }
-                .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_3 {
+                .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_3-lap {
                     width: ' . ((100 / explode('-', $styledata['sa_category_col-lap'])[4]) * 3) . '%;
                 }
-                .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_4 {
+                .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_4-lap {
                     width: ' . ((100 / explode('-', $styledata['sa_category_col-lap'])[4]) * 4) . '%;
                 }
                 .' . $this->WRAPPER . ' .sa_addons_category_item_show {
@@ -103,13 +100,13 @@ class Style_2 extends Templates
                     .' . $this->WRAPPER . ' .sa_addons_category_item_show {
                         width: ' . (100 / explode('-', $styledata['sa_category_col-tab'])[4]) . '%;
                     }
-                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_2 {
+                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_2-tab {
                         width: ' . ((100 / explode('-', $styledata['sa_category_col-tab'])[4]) * 2) . '%;
                     }
-                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_3 {
+                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_3-tab {
                         width: ' . ((100 / explode('-', $styledata['sa_category_col-tab'])[4]) * 3) . '%;
                     }
-                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_4 {
+                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_4-tab {
                         width: ' . ((100 / explode('-', $styledata['sa_category_col-tab'])[4]) * 4) . '%;
                     }
                 }
@@ -117,28 +114,27 @@ class Style_2 extends Templates
                     .' . $this->WRAPPER . ' .sa_addons_category_item_show {
                         width: ' . (100 / explode('-', $styledata['sa_category_col-mob'])[4]) . '%;
                     }
-                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_2 {
+                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_2-mob {
                         width: ' . ((100 / explode('-', $styledata['sa_category_col-mob'])[4]) * 2) . '%;
                     }
-                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_3 {
+                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_3-mob {
                         width: ' . ((100 / explode('-', $styledata['sa_category_col-mob'])[4]) * 3) . '%;
                     }
-                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_4 {
+                    .' . $this->WRAPPER . ' .sa_addons_category_item_show.grid_item_width_4-mob {
                         width: ' . ((100 / explode('-', $styledata['sa_category_col-mob'])[4]) * 4) . '%;
                     }
                 }
                 ';
         return $item_width;
     }
-    public function public_jquery()
-    {
+
+    public function public_jquery() {
         $this->JSHANDLE = 'jquery.isotope.v3.0.2';
-        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/file/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/file/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/File/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/File/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
-    public function inline_public_jquery()
-    {
+    public function inline_public_jquery() {
         $jquery = '';
         $oxiid = $this->oxiid;
         $jquery = ' jQuery(".sa_addons_category_data_' . $oxiid . '").imagesLoaded(function(){
@@ -172,10 +168,9 @@ class Style_2 extends Templates
         return $jquery;
     }
 
-    public function old_render()
-    {
-        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/file/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/file/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+    public function old_render() {
+        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/File/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/File/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $styledata['id'];
@@ -360,4 +355,5 @@ class Style_2 extends Templates
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('jquery.isotope.v3.0.2', $jquery);
     }
+
 }
