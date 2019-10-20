@@ -23,8 +23,15 @@ class Style_1 extends Templates {
         
         
 //        echo '<pre>';
-//        print_r($style);
+//        print_r($styledata);
 //        echo '</pre>';
+        
+        $width = '';
+        if ($styledata['sa_wp_forms_form_BUTTON_width'] == 'full_width') {
+            $width = '';
+        }else{
+            $width = 'width';
+        }
         
         
         
@@ -40,8 +47,8 @@ class Style_1 extends Templates {
 
         echo '<div class="oxi-addons-container">
             <div class="oxi-addons-row">
-            <div>
-                <div class="oxi-addons-contact-wp-form-outer">
+            <div class="sa-contact-wp-form">
+                <div class="oxi-addons-contact-wp-form-outer '.$width.'">
                     <div class="oxi-addons-contact-wp-form-inner" >' . $shortcode . '</div>
                 </div>
                 </div>
