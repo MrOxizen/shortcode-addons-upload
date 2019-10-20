@@ -41,7 +41,7 @@ class Style_5 extends Templates
                     </audio>';
         endif;
         echo '<div class="sa_addons_ap_container_style_5 ' . $show_progress_handle . '">
-                <div class="sa_addons_ap_container_main>
+                <div class="sa_addons_ap_container_main">
                     ' . $image . '
                     <div class="sa_addons_ap_main">
                         <div class="sa_addons_ap_main_content">
