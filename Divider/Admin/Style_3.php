@@ -308,8 +308,8 @@ class Style_3 extends AdminStyle {
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+                    'max' =>100,
+                    'step' => 1,
                 ],
                 'px' => [
                     'min' => 0,
