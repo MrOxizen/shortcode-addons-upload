@@ -1,0 +1,438 @@
+
+
+
+
+.oxi-addons-contact-wp-form-outer{
+        max-width: auto;
+        margin: 0 auto;
+    }
+    .oxi-addons-contact-wp-form-outer .oxi-addons-contact-wp-form-inner {
+        background: rgba(255, 255, 255, 1);
+        border-width:0px 0px 0px 0px; 
+        border-style: solid; 
+        border-color: #bababa; 
+    }
+    
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field-label {
+        display: block;
+        font-size: 13px;
+        color: #343061; 
+        text-transform: uppercase;
+        font-family:"Poppins"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field-label span.wpforms-required-label{
+        font-size: 36px;
+        color: #ff0000; 
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name) .wpforms-field-label {
+        position: absolute;
+        top: 35%;
+        top: -25px;
+        left: 0;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name) .wpforms-field-label.oxi_focus {
+        top: -10px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field {
+        padding: 0;
+        margin: 30px 0px 0px 0px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name) {
+        position: relative;
+        margin: 0 auto;
+        border-bottom: 3px solid;
+        border-color:rgba(85, 85, 85, 1);
+        padding: 0;
+        margin: 30px 0px 0px 0px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name).oxi_focus::after {
+        width: 100%; 
+        transition: all .3s linear;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: #ffff00;
+        transition: all .3s linear;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-has-error:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name)::after {
+        width: 100%;
+        background: #003cff;
+    }
+    div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error,
+    div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error,
+    div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error {
+        border: none;
+        outline: none;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input,
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea {
+        border: none;
+        outline: none;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=date],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=datetime],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=datetime-local],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=email],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=month],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=number],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=password],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=range],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=search],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=tel],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=text],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=time],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=url],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=week],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea {
+        font-size: 16px;
+        background: rgba(210, 173, 227, 1);
+        font-family:"Poppins"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;;
+        padding: 5px 5px 5px 5px;
+    }
+    
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=checkbox],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=radio] {
+        display: none;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio li {
+        padding: 0px 0px 10px 0px !important;
+        margin: 0 !important;
+        text-align: left;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline {
+        font-size: 16px;
+        color: #555555;
+        font-family:"Poppins"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline:before {
+        content: "\00a0";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #d40c66;
+        border-radius: 50%; 
+        margin: 0px 10px 0px 0px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio input[type=radio]:checked + .wpforms-field-label-inline:before {
+        box-shadow: inset 0px 0px 0px 4px #d40c66;
+        background: rgba(255, 255, 255, 1);
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline {
+        font-size: 18px;
+        color: #4a4a4a;
+        font-family:"Poppins"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox li {
+        padding: 0px 0px 10px 0px !important;
+        margin: 0 !important;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline:before {
+        content: "\00a0";
+        display: inline-block;
+        font: 16px/1em sans-serif;
+        width: 16px;
+        height: 16px;
+        background: rgba(212, 12, 102, 1);
+        border: 1px solid;
+        border-color: #ad4f4f; 
+        border-radius: 0px; 
+        margin: 0px 10px 0px 0px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox input[type=checkbox]:checked + .wpforms-field-label-inline:before {
+        color: #ffffff;
+        content: "\2713";
+        text-align: center;
+    } 
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select {
+        font-size: 16px;
+        color: #424242;
+        background: rgba(235, 235, 235, 1);
+        border: 2px solid;
+        border-color: #d6d6d6;
+        height: auto;
+        font-family:"Poppins"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;;
+        padding: 5px 5px 5px 5px;
+        margin: 10px 10px 10px 10px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select option {
+        color: #424242;
+        background: rgba(235, 235, 235, 1);
+        padding: 5px 5px 5px 5px;
+    }
+    
+    .oxi-addons-contact-wp-form-outer .wpforms-title {
+        font-size: 30px !important;
+        color: #ffffff; 
+        background: rgba(255, 255, 255, 1) !important; 
+        font-family:"Poppins"; font-weight:600; font-style:normal; line-height:1.3; text-align:center;;
+        padding: 0px 20px 20px 20px !important; 
+        margin: 0 !important;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form label.wpforms-error {
+        position: absolute;
+        top: 105%;
+        font-size: 16px;
+        color: #000000; 
+        font-family:"Poppins"; font-weight:100; font-style:normal; line-height:1.3; text-align:left;;
+        padding: 0px 0px 0px 0px; 
+    }
+    .oxi-addons-contact-wp-form-outer .wpforms-submit-container {
+        text-align: center;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=submit],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type=submit],
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-page-button {
+        font-size: 18px;
+        color: #ffffff;
+        background: rgba(212, 12, 102, 1);
+        width: 100%;
+        max-width: 100%;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #ffffff;
+        border-radius:  5px;
+        font-family:"Poppins"; font-weight:500; font-style:normal; line-height:1.3; text-align:center;;
+        padding: 8px 40px 8px 40px;
+        margin: 0px 0px 10px 0px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
+        color: #d40c66;
+        background: rgba(255, 255, 255, 1);
+        border-color: #d40c66;
+    }
+    .wpforms-confirmation-container-full {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .wpforms-confirmation-container-full p {
+        font-size: 16px;
+        color: #ffffff;
+        background: rgba(60, 214, 13, 0.68);
+        border: 0px none;
+        border-color: #a8a1a1;
+        border-radius:  15px;
+        font-family:"Poppins"; font-weight:100; font-style:normal; line-height:1.3; text-align:center;;
+        padding: 15px 15px 15px 15px;
+        margin: 20px 0px 20px 0px;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field-description {
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+    .oxi-addons-contact-wp-form-outer div.wpforms-container-full {
+        margin-bottom: 0;
+    }
+    @media only screen and (min-width : 669px) and (max-width : 993px){
+        .oxi-addons-contact-wp-form-outer{
+            max-width: 500px;
+            padding: 0px 0px 0px 0px; 
+        }
+        .oxi-addons-contact-wp-form-outer .oxi-addons-contact-wp-form-inner {
+            border-width:0px 0px 0px 0px; 
+            border-radius: 10px 10px 10px 10px; 
+            padding: 20px 20px 20px 20px; 
+        }
+        
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field-label {
+            font-size: 13px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field-label span.wpforms-required-label{
+            font-size: 36px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field {
+            margin: 30px 0px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name) {
+            margin: 30px 0px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=date],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=datetime],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=datetime-local],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=email],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=month],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=number],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=password],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=range],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=search],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=tel],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=text],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=time],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=url],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=week],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea {
+            font-size: 16px;
+            padding: 5px 5px 5px 5px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio li {
+            padding: 0px 0px 10px 0px !important;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline {
+            font-size: 16px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline:before {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%; 
+            margin: 0px 10px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio input[type=radio]:checked + .wpforms-field-label-inline:before {
+            box-shadow: inset 0px 0px 0px 4px #d40c66;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline {
+            font-size: 18px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox li {
+            padding: 0px 0px 10px 0px !important;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline:before {
+            font: 16px/1em sans-serif;
+            font-width: 700;
+            width: 16px;
+            height: 16px;
+            border-radius: 0px; 
+            margin: 0px 10px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select {
+            font-size: 16px;
+            padding: 5px 5px 5px 5px;
+            margin: 10px 10px 10px 10px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select option {
+            padding: 5px 5px 5px 5px;
+        }
+        
+        .oxi-addons-contact-wp-form-outer .wpforms-title {
+            font-size: 30px !important;
+            padding: 0px 20px 20px 20px !important; 
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form label.wpforms-error {
+            font-size: 16px;
+            padding: 0px 0px 0px 0px; 
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=submit],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type=submit],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-page-button {
+            font-size: 18px;
+            border-width: 1px 1px 1px 1px;
+            border-radius:  5px;
+            padding: 8px 40px 8px 40px;
+            margin: 0px 0px 10px 0px;
+        }
+        .wpforms-confirmation-container-full {
+            font-size: 16px;
+            border-radius:  15px;
+            padding: 15px 15px 15px 15px;
+            margin: 20px 0px 20px 0px;
+        }
+    }
+    @media only screen and (max-width : 668px){
+        .oxi-addons-contact-wp-form-outer{
+            max-width: 500px;
+            padding: 0px 0px 0px 0px; 
+        }
+        .oxi-addons-contact-wp-form-outer .oxi-addons-contact-wp-form-inner {
+            border-width:0px 0px 0px 0px; 
+            border-radius: 10px 10px 10px 10px; 
+            padding: 20px 20px 20px 20px; 
+        }
+        
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field-label {
+            font-size: 13px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field-label span.wpforms-required-label{
+            font-size: 36px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field {
+            margin: 30px 0px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field:not(.wpforms-field-checkbox):not(.wpforms-field-select):not(.wpforms-field-radio):not(.wpforms-field-name) {
+            margin: 30px 0px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=date],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=datetime],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=datetime-local],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=email],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=month],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=number],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=password],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=range],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=search],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=tel],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=text],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=time],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=url],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=week],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea {
+            font-size: 16px;
+            padding: 5px 5px 5px 5px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio li {
+            padding: 25px 16px 10px 0px !important;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline {
+            font-size: 16px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline:before {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%; 
+            margin: 0px 10px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio input[type=radio]:checked + .wpforms-field-label-inline:before {
+            box-shadow: inset 0px 0px 0px 4px #d40c66;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline {
+            font-size: 18px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox li {
+            padding: 25px 16px 10px 0px !important;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline:before {
+            font: 16px/1em sans-serif;
+            width: 16px;
+            height: 16px;
+            border-radius: 0px; 
+            margin: 0px 10px 0px 0px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select {
+            font-size: 16px;
+            padding: 5px 5px 5px 5px;
+            margin: 10px 10px 10px 10px;
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select option {
+            padding: 5px 5px 5px 5px;
+        }
+        
+        .oxi-addons-contact-wp-form-outer .wpforms-title {
+            font-size: 30px !important;
+            padding: 0px 20px 20px 20px !important; 
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form label.wpforms-error {
+            font-size: 16px;
+            padding: 0px 0px 0px 0px; 
+        }
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=submit],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type=submit],
+        .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-page-button {
+            font-size: 18px;
+            border-width: 1px 1px 1px 1px;
+            border-radius:  5px;
+            padding: 8px 40px 8px 40px;
+            margin: 0px 0px 10px 0px;
+        }
+        .wpforms-confirmation-container-full {
+            font-size: 16px;
+            border-radius:  15px;
+            padding: 15px 15px 15px 15px;
+            margin: 20px 0px 20px 0px;
+        }
+    }
+    
