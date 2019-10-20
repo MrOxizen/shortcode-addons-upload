@@ -13,6 +13,8 @@ and open the template in the editor.
     position:relative;
     max-width:auto;
     margin:0 auto;
+    display: flex;
+    justify-content: center;
 }
 .sa-conten-box-style-2-data{
     width:100%;

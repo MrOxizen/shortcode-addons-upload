@@ -13,6 +13,8 @@ and open the template in the editor.
     position:relative;
     max-width:auto;
     margin:0 auto ;
+    display: flex;
+    justify-content: center;
 }
 .sa-cb-tem-5-data{
     width:100%;
@@ -85,53 +87,4 @@ and open the template in the editor.
     line-height:1.3;
     text-align:left;
     padding:10px 10px 15px 10px ;
-}
-
-@media only screen and (min-width:669px) and (max-width:993px){
-    .sa-cb-tem-5{
-        max-width:300px ;
-    }
-    .sa-cb-tem-5-data{
-        margin:10px 10px 10px 10px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-icon{
-        height:163px ;
-    }
-    .sa-cb-tem-5 .oxi-icons{
-        font-size:55px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-content{
-        padding:10px 10px 10px 10px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-heading{
-        font-size:22px;padding:6px 10px 6px 10px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-content{
-        font-size:16px;padding:10px 10px 15px 10px ;
-    }
-}
-@media only screen and (max-width:668px){
-    .sa-cb-tem-5{
-        max-width:300px ;
-    }
-    .sa-cb-tem-5-data{
-        margin:10px 10px 10px 10px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-icon{
-        height:163px ;
-    }
-    .sa-cb-tem-5 .oxi-icons{
-        font-size:55px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-content{
-        padding:10px 10px 10px 10px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-heading{
-        font-size:22px;
-        padding:300px 10px px rgba(12, 151, 166, 1)px ;
-    }
-    .sa-cb-tem-5 .sa-cb-tem-5-content{
-        font-size:16px;
-        padding:10px 10px 15px 10px ;
-    }
 }

@@ -158,12 +158,12 @@ class Style_12 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 500,
+                    'max' => 800,
                     'step' => 1,
                 ],
                 'em' => [
@@ -192,7 +192,7 @@ class Style_12 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 120,
             ],
             'range' => [
                 'px' => [
@@ -352,12 +352,12 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 30,
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 80,
+                    'max' => 120,
                     'step' => 1,
                 ],
                 'em' => [
@@ -473,6 +473,7 @@ class Style_12 extends AdminStyle {
         $this->add_group_control(
                 'sa-ac-title-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-name' => ''
             ],
@@ -486,32 +487,7 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_icon_box_heading_align', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-name' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa-ac-heading-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -565,6 +541,7 @@ class Style_12 extends AdminStyle {
         $this->add_group_control(
                 'sa-ac-content-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-desc' => ''
             ],
@@ -578,32 +555,7 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_icon_box_content_align', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-desc' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+       
         $this->add_responsive_control(
                 'sa-ac-content-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -649,12 +601,12 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 25,
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 500,
+                    'max' => 120,
                     'step' => 1,
                 ],
                 'em' => [
@@ -747,16 +699,8 @@ class Style_12 extends AdminStyle {
             ],
                 ]
         );
-        $this->end_controls_section();
-
-
-
-
-
-
-
-        $this->end_section_devider();
-
+        $this->end_controls_section(); 
+        $this->end_section_devider(); 
         $this->end_section_tabs();
     }
 

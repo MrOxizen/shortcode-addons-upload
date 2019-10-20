@@ -8,124 +8,149 @@ and open the template in the editor.
     Author     : biplo
 */
 
-.sa-cb-tem-4 .sa-cb-tem-4-images{
+.sa-cb-tem-4 .sa-cb-tem-4-images {
     /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/10/Untitled-1-1.png");*/
-    -moz-background-size:100% 100%;
-    -o-background-size:100% 100%;
-    background-size:100% 100% ;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
-.sa-cb-tem-4 .sa-cb-tem-4-images{
+
+.sa-cb-tem-4 .sa-cb-tem-4-images {
     /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/10/content2.png");*/
-    -moz-background-size:100% 100%;
-    -o-background-size:100% 100%;
-    background-size:100% 100% ;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
-.sa-cb-tem-4 .sa-cb-tem-4-images{
+
+.sa-cb-tem-4 .sa-cb-tem-4-images {
     /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/10/nature-animal-quotes.jpg");*/
-    -moz-background-size:100% 100%;
-    -o-background-size:100% 100%;
-    background-size:100% 100% ;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
-.oxi-addons-img{
+
+.oxi-addons-img {
     position: relative;
 }
-.sa-cb-tem-4-data{
+
+.sa-cb-tem-4-data {
     height: 100%;
     float: left;
     width: 100%;
+
 }
 
-.sa-cb-tem-4{
-    width:auto;
-    position:relative;
-    max-width:auto;
-    margin:0 auto ;
-}
-.sa-cb-image-body{
-    position:relative;
-    width:100%;
-    float:left;
-}
-.sa-cb-image-body:after{
-    display:block;
-    content:"";
-    padding-bottom:60% ;
-}
-.oxi-addons-img{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-size:cover ;
+.sa-cb-tem-4 {
+    width: auto;
+    position: relative;
+    max-width: auto;
+    margin: 0 auto;
 }
 
-.sa-cb-tem-4 .sa-cb-tem-4-content-inside{
-    width:100%;
-    padding:10px 10px 10px 10px;
-    float:left ;
-}
-.sa-cb-tem-4 .sa-cb-tem-4-heading{
-    width:100%;
-    float:left;
-    color:#ffffff;
-    font-size:22px;
-    font-family:"Open Sans";
-    font-weight:800;
-    font-style:normal;
-    line-height:1.5;
-    text-align:left;
-    padding:6px 10px 6px 10px ;
-}
-.sa-cb-tem-4 .sa-cb-tem-4-content{
-    width:100%;
-    float:left;
-    color:#ffffff;
-    font-size:16px;
-    font-family:"Open Sans";
-    font-weight:400;
-    font-style:normal;
-    line-height:1.5;
-    text-align:left;
-    padding:10px 10px 20px 10px ;
+.sa-cb-image-body {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
 }
 
-@media only screen and (min-width:669px) and (max-width:993px){
-    .sa-cb-tem-4{
-        max-width:300px ;
+.sa-cb-tem-innar {
+    display: flex;
+    justify-content: center;
+}
+
+.sa-cb-image-body:after {
+    display: block;
+    content: "";
+    padding-bottom: 60%;
+}
+
+.oxi-addons-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.sa-cb-tem-4 .sa-cb-tem-4-content-inside {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    float: left;
+}
+
+.sa-cb-tem-4 .sa-cb-tem-4-heading {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "Open Sans";
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    padding: 6px 10px 6px 10px;
+}
+
+.sa-cb-tem-4 .sa-cb-tem-4-content {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    padding: 10px 10px 20px 10px;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa-cb-tem-4 {
+        max-width: 300px;
     }
 
-    .sa-cb-tem-4 .sa-cb-tem-4-images{
-        height:160px ;
+    .sa-cb-tem-4 .sa-cb-tem-4-images {
+        height: 160px;
     }
-    .sa-cb-tem-4 .sa-cb-tem-4-content{
-        padding:10px 10px 10px 10px ;
+
+    .sa-cb-tem-4 .sa-cb-tem-4-content {
+        padding: 10px 10px 10px 10px;
     }
-    .sa-cb-tem-4 .sa-cb-tem-4-heading{
-        font-size:22px;
-        padding:6px 10px 6px 10px ;
+
+    .sa-cb-tem-4 .sa-cb-tem-4-heading {
+        font-size: 22px;
+        padding: 6px 10px 6px 10px;
     }
-    .sa-cb-tem-4 .sa-cb-tem-4-content{
-        font-size:16px;
-        padding:10px 0px 20px 0px ;
+
+    .sa-cb-tem-4 .sa-cb-tem-4-content {
+        font-size: 16px;
+        padding: 10px 0px 20px 0px;
     }
 }
-@media only screen and (max-width:668px){
-    .sa-cb-tem-4{
-        max-width:300px;
+
+@media only screen and (max-width:668px) {
+    .sa-cb-tem-4 {
+        max-width: 300px;
     }
-    .sa-cb-tem-4-data{
-        margin:10px 10px 10px 10px ;
+
+    .sa-cb-tem-4-data {
+        margin: 10px 10px 10px 10px;
     }
-    .sa-cb-tem-4 .sa-cb-tem-4-images{
-        height:160px ;
+
+    .sa-cb-tem-4 .sa-cb-tem-4-images {
+        height: 160px;
     }
-    .sa-cb-tem-4 .sa-cb-tem-4-content{
-        padding:10px 10px 10px 10px ;
+
+    .sa-cb-tem-4 .sa-cb-tem-4-content {
+        padding: 10px 10px 10px 10px;
     }
-    .sa-cb-tem-4 .sa-cb-tem-4-heading{
-        font-size:22px;
-        padding:325px 10px px px;
+
+    .sa-cb-tem-4 .sa-cb-tem-4-heading {
+        font-size: 22px;
     }
-    .sa-cb-tem-4 .sa-cb-tem-4-content{
-        font-size:16px;padding:10px 0px 20px 0px ;
+
+    .sa-cb-tem-4 .sa-cb-tem-4-content {
+        font-size: 16px;
+        padding: 10px 0px 20px 0px;
     }
 }

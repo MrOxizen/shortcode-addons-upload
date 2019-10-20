@@ -9,28 +9,23 @@ and open the template in the editor.
 */
 
 .sa-cb-temp-6 .sa-cb-temp-6-images{
-    /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/10/content1.png");*/
     -moz-background-size:100% 100%;
     -o-background-size:100% 100%;
     background-size:100% 100% ;
 }
 .sa-cb-temp-6 .sa-cb-temp-6-images{
-    /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/12/2.jpg");*/
-    -moz-background-size:100% 100%;
+     -moz-background-size:100% 100%;
     -o-background-size:100% 100%;
     background-size:100% 100% ;
 }
-.sa-cb-temp-6 .sa-cb-temp-6-images{
-    /*background:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2018/12/Girl-with-guitar-nature.jpg")*/
-        ;-moz-background-size:100% 100%;
-    -o-background-size:100% 100%;
-    background-size:100% 100% ;
-}
+ 
 .sa-cb-temp-6{
     width:100%;
     position:relative;
     max-width:auto;
     margin:0 auto ;
+    display: flex;
+    justify-content: center;
 }
 .sa-cb-temp-6-data{
     width:100%;
