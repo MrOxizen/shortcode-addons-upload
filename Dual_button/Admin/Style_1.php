@@ -314,11 +314,9 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_dual_btn_left_link',
-                $this->style,
-                [
-                    'type' => Controls::URL,
-                    'loader' => TRUE,
+                'sa_dual_btn_left_link', $this->style, [
+            'type' => Controls::URL,
+            'loader' => TRUE,
                 ]
         );
 
@@ -357,11 +355,9 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_dual_btn_right_link',
-                $this->style,
-                [
-                    'type' => Controls::URL,
-                    'loader' => TRUE,
+                'sa_dual_btn_right_link', $this->style, [
+            'type' => Controls::URL,
+            'loader' => TRUE,
                 ]
         );
 
@@ -408,7 +404,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa_dual_btn_left_sep', $this->style, [
             'label' => __('', SHORTCODE_ADDOONS),
             'type' => Controls::SEPARATOR,
@@ -424,8 +420,8 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->start_controls_tab();
-        
-       
+
+
         $this->add_control(
                 'sa_dual_btn_left_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -649,7 +645,6 @@ class Style_1 extends AdminStyle {
                     'icon' => 'fa fa-align-right',
                 ],
             ],
-           
                 ]
         );
         $this->add_responsive_control(
@@ -749,7 +744,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_dual_btn_right_padding', $this->style, [
+                'sa_dual_btn_right_border_redius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -942,7 +937,6 @@ class Style_1 extends AdminStyle {
                     'icon' => 'fa fa-align-right',
                 ],
             ],
-           
                 ]
         );
         $this->add_responsive_control(
