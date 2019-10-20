@@ -236,7 +236,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn6 .oxi-button-btn6' => 'color:{{VALUE}}; '
             ],
                 ]
         );

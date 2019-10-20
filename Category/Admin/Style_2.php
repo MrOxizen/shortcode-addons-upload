@@ -149,6 +149,7 @@ class Style_2 extends AdminStyle
                     'sa_category_item_width' => [
                         'label' => __('Item Width', SHORTCODE_ADDOONS),
                         'type' => Controls::SELECT,
+                        'controller' => 'add_responsive_control',
                         'loader' => TRUE,
                         'default' => '',
                         'options' => [

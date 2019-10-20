@@ -84,8 +84,8 @@ class Style_1 extends Templates
     public function public_jquery()
     {
         $this->JSHANDLE = 'jquery.isotope.v3.0.2';
-        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/file/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/file/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/File/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/File/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery()
@@ -125,8 +125,8 @@ class Style_1 extends Templates
 
     public function old_render()
     {
-        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/file/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/file/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery.isotope.v3.0.2', SA_ADDONS_UPLOAD_URL . '/Category/File/jquery.isotope.v3.0.2.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('imagesloaded.pkgd.min', SA_ADDONS_UPLOAD_URL . '/Category/File/imagesloaded.pkgd.min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $styledata['id'];

@@ -213,7 +213,7 @@ p{
 .oxi-addons-form-warp-contact-form-7 input[type="radio"]:checked:before {
     background:rgba(9,230,27,1.00);
     color: #ffffff;
-    content: "\54546";
+    content: "—";
     font-size: 50px;
     display: flex;
     margin: 0 !important;

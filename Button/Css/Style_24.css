@@ -54,7 +54,7 @@ and open the template in the editor.
     border-color: #9e9e9e;
     border-radius: 50px 50px 50px 50px;
     color: #d1d1d1;
-    transition: .3s
+     transition: none;
 }
 
 .oxi-addons-align-btn24 .oxi-button-btn24 .sa-button-icon {
@@ -71,11 +71,11 @@ and open the template in the editor.
     padding: 20px;
     position: absolute;
 
+    transition: none;
    
 }
 .oxi-addons-align-btn24 .oxi-button-btn24:hover .sa-button-icon{
     color: #ffffff;
-
     
 
 }
