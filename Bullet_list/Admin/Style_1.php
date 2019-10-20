@@ -41,12 +41,38 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+        $this->add_repeater_control(
+                'sa_image_accordion_data_style_1', $this->style, [
+            'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'separator' => TRUE,
+            'button' => 'Add New Testimonial',
+            'fields' => [
+                'sa_bl_text' => [
+                    'label' => __('Title', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Lorem Ipsum is simply dummy text',
+                    'placeholder' => 'Lorem Ipsum is simply dummy text',
+                ],
+                
+                'sa_bl_url' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'controller' => 'add_group_control',
+                    'type' => Controls::URL,
+                    'default' => '',
+                    'placeholder' => 'https://www.yoururl.com',
+                ],
+            ],
+            'title_field' => 'sa_bl_text',
+                ]
+        );
         $this->add_control(
                 'sa-bl-g-max-width-control', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
             'loader' => TRUE,
+            'separator' => TRUE,
             'default' => '',
             'options' => [
                 'auto' => [
@@ -405,45 +431,44 @@ class Style_1 extends AdminStyle {
 
         $this->end_controls_tab();
         $this->end_controls_tabs();
-        
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }
 
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Bullet List', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Bullet List Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Bullet List Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div cecholass="modal-body">';
-        $this->add_control(
-                'sa_bl_text', $this->style, [
-            'label' => __('Title', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Lorem Ipsum is simply dummy text',
-            'placeholder' => 'Lorem Ipsum is simply dummy text',
-                ]
-        );
-
-        $this->add_group_control(
-                'sa_bl_url', $this->style, [
-            'label' => __('URL', SHORTCODE_ADDOONS),
-            'type' => Controls::URL,
-            'default' => '',
-            'placeholder' => 'https://www.yoururl.com',
-                ]
-        );
-        echo '</div>';
-    }
-
+//    public function modal_opener() {
+//        $this->add_substitute_control('', [], [
+//            'type' => Controls::MODALOPENER,
+//            'title' => __('Add New Bullet List', SHORTCODE_ADDOONS),
+//            'sub-title' => __('Open Bullet List Form', SHORTCODE_ADDOONS),
+//            'showing' => TRUE,
+//        ]);
+//    }
+//
+//    public function modal_form_data() {
+//        echo '<div class="modal-header">                    
+//                    <h4 class="modal-title">Bullet List Form</h4>
+//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+//                </div>
+//                <div cecholass="modal-body">';
+//        $this->add_control(
+//                'sa_bl_text', $this->style, [
+//            'label' => __('Title', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXT,
+//            'default' => 'Lorem Ipsum is simply dummy text',
+//            'placeholder' => 'Lorem Ipsum is simply dummy text',
+//                ]
+//        );
+//
+//        $this->add_group_control(
+//                'sa_bl_url', $this->style, [
+//            'label' => __('URL', SHORTCODE_ADDOONS),
+//            'type' => Controls::URL,
+//            'default' => '',
+//            'placeholder' => 'https://www.yoururl.com',
+//                ]
+//        );
+//        echo '</div>';
+//    }
 }

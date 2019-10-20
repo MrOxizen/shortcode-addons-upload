@@ -23,45 +23,35 @@ class Style_4 extends Templates {
 
         echo ' <div class="oxi-addons-main-wrapper-full-area ">
                         <div class="oxi-icon-last ' . $class . '">';
-                            foreach ($child as $v) {
-                                $value = $this->Json_Decode($v['rawdata']);
-                                $icon = $heading = $textarea = '';
-                                if (array_key_exists('sa_bl_four_icon', $value) && $value['sa_bl_four_icon'] != '') {
-                                    $icon = '<div class="oxi-addons-content-boxes-icon">
+        $styledata = $this->style;
+        foreach ($styledata['sa_bullet_list_data_style_4'] as $key => $value) {
+            $icon = $heading = $textarea = '';
+            if (array_key_exists('sa_bl_four_icon', $value) && $value['sa_bl_four_icon'] != '') {
+                $icon = '<div class="oxi-addons-content-boxes-icon">
                                                     ' . $this->font_awesome_render($value['sa_bl_four_icon']) . '
                                                 </div>';
-                                }
-                                if (array_key_exists('sa_bl_four_text', $value) && $value['sa_bl_four_text'] != '') {
-                                     $heading .= '<div class="oxi-addons-content-boxes-heading">
+            }
+            if (array_key_exists('sa_bl_four_text', $value) && $value['sa_bl_four_text'] != '') {
+                $heading .= '<div class="oxi-addons-content-boxes-heading">
                                                             ' . $this->text_render($value['sa_bl_four_text']) . '
                                                     </div>';
-                                }
-                                if (array_key_exists('sa_bl_four_textarea', $value) && $value['sa_bl_four_textarea'] != '') {
-                                     $textarea .= '<div class="oxi-addons-content-boxes-content">
+            }
+            if (array_key_exists('sa_bl_four_textarea', $value) && $value['sa_bl_four_textarea'] != '') {
+                $textarea .= '<div class="oxi-addons-content-boxes-content">
                                                         ' . $this->text_render($value['sa_bl_four_textarea']) . '
                                                     </div>';
-                                }
-                                
-                                echo '<div class=" oxi-info-banner-style-4-static ">
-                                        <div class="oxi-addons-content-boxes-list ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
+            }
+
+            echo '<div class=" oxi-info-banner-style-4-static ">
+                                        <div class="oxi-addons-content-boxes-list">
                                             <div class="oxi-addons-box">
-                                                ' .$icon. '
+                                                ' . $icon . '
                                                 <div class="oxi-addons-header-content">  
-                                                    ' .$heading. '
-                                                    ' .$textarea. '   
+                                                    ' . $heading . '
+                                                    ' . $textarea . '   
                                                 </div>
                                             </div>';
-                                        if ($admin == 'admin'):
-                                            echo '  <div class="oxi-addons-admin-absulote">
-                                                        <div class="oxi-addons-admin-absulate-edit">
-                                                            <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                                                        </div>
-                                                        <div class="oxi-addons-admin-absulate-delete">
-                                                           <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                                                         </div>
-                                                    </div>';
-                                             endif;
-                                 echo '</div>
+            echo '</div>
                                     </div>';
         }
 

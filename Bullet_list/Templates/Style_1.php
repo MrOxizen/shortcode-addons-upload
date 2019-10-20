@@ -24,8 +24,8 @@ class Style_1 extends Templates {
                     <div class="oxi-addons-bullet-list-full-content"> 
 			<div class="oxi-addons-list-type-1 '.$class.'">
                             <ol class="oxi-addons-list-ol ">';
-        foreach ($child as $v) {
-            $value = $this->Json_Decode($v['rawdata']);
+        $styledata = $this->style;
+        foreach ($styledata['sa_image_accordion_data_style_1'] as $key => $value) {
             $textheading = '';
             
             if (array_key_exists('sa_bl_text', $value) && $value['sa_bl_text'] != '') {
@@ -36,19 +36,8 @@ class Style_1 extends Templates {
                 }
                 
             }
-                echo '<li class="oxi-addons-list-li '.($admin == 'admin'? 'oxi-addons-admin-edit-list' : '').'">
+                echo '<li class="oxi-addons-list-li ">
                     '.$textheading.'';
-
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
-                        </div>';
-            endif;
             echo '</li>';
         }
         echo '          </ol>

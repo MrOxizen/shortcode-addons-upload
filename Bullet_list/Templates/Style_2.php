@@ -24,8 +24,8 @@ class Style_2 extends Templates {
                     <div class="oxi-addons-bullet-list-full-content"> 
 			<div class="oxi-addons-list-type-1 ' . $class . '">
                             <ol class="oxi-addons-list-ol ">';
-        foreach ($child as $v) {
-            $value = $this->Json_Decode($v['rawdata']);
+        $styledata = $this->style;
+        foreach ($styledata['sa_bullet_list_data_style_2'] as $key => $value) {
             $textheading = '';
 
             if (array_key_exists('sa_bl_text', $value) && $value['sa_bl_text'] != '') {
@@ -35,19 +35,9 @@ class Style_2 extends Templates {
                     $textheading .= '<div class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</div>';
                 }
             }
-            echo '<li class="oxi-addons-list-li ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
+            echo '<li class="oxi-addons-list-li">
                     ' . $textheading . '';
 
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
-                        </div>';
-            endif;
             echo '</li>';
         }
         echo '          </ol>
@@ -56,7 +46,6 @@ class Style_2 extends Templates {
             </div>
             
         ';
-        $this->try();
     }
 
     public function old_render() {
@@ -71,10 +60,10 @@ class Style_2 extends Templates {
 	
 		<div class="oxi-addons-container">
 		<div class="oxi-addons-row">
-			<div class="oxi-addons-bullet-list-' . $oxiid . '">
-				<div class="oxi-addons-bullet-list-full-content"> 
-						<div class="oxi-addons-list-type-1">
-								<ol class="oxi-addons-list-ol ">';
+                    <div class="oxi-addons-bullet-list-' . $oxiid . '">
+			<div class="oxi-addons-bullet-list-full-content"> 
+                            <div class="oxi-addons-list-type-1">
+				<ol class="oxi-addons-list-ol ">';
 ?><?php
 
         foreach ($listdata as $one_item) {
@@ -84,9 +73,7 @@ class Style_2 extends Templates {
             if (!empty($listfiles[1])) {
                 $a_tag = '<a href="' . OxiAddonsUrlConvert($listfiles[3]) . '" class="oxi-BL-link">' . OxiAddonsTextConvert($listfiles[1]) . '</a>';
             }
-            echo'
-									<li class="oxi-addons-list-li ' . OxiAddonsAdminDefine($user) . ' ">' . $a_tag . '
-									';
+            echo'<li class="oxi-addons-list-li ' . OxiAddonsAdminDefine($user) . ' ">' . $a_tag . '';
 
             echo '</li>';
         }
@@ -260,6 +247,5 @@ class Style_2 extends Templates {
 	}';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-    
-}
 
+}

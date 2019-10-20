@@ -41,10 +41,39 @@ class Style_4 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
+        $this->add_repeater_control(
+                'sa_bullet_list_data_style_4', $this->style, [
+            'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'button' => 'Add New Testimonial',
+            'fields' => [
+                'sa_bl_four_icon' => [
+                    'label' => __('Icon', SHORTCODE_ADDOONS),
+                    'type' => Controls::ICON,
+                    'default' => 'fas fa-brain',
+                    'placeholder' => '',
+                ],
+                'sa_bl_four_text' => [
+                    'label' => __('Title', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'default' => 'Lorem Ipsum is simply dummy text',
+                    'placeholder' => 'Lorem Ipsum is simply dummy text',
+                ],
+                'sa_bl_four_textarea' => [
+                    'label' => __('Short Details', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXTAREA,
+                    'default' => 'When you visit our site, pre-selected companies may access',
+                    'placeholder' => '',
+                ]
+            ],
+            'title_field' => 'sa_bl_text',
+                ]
+        );
         $this->add_control(
                 'sa-bl-g-arrow-position', $this->style, [
             'label' => __('Arrow Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
+            'separator' => TRUE,
             'operator' => Controls::OPERATOR_TEXT,
             //   'loader' => TRUE,
             'default' => '0',
@@ -62,6 +91,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
+
         $this->add_control(
                 'sa-bl-g-max-width-control', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
@@ -324,7 +354,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_responsive_control(
                 'sa-bl-arrow-width', $this->style, [
             'label' => __('Arrow Width', SHORTCODE_ADDOONS),
@@ -642,47 +672,47 @@ class Style_4 extends AdminStyle {
 //        echo '</pre>';
     }
 
-    public function modal_opener() {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Bullet List', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Bullet List Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data() {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Bullet List Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div cecholass="modal-body">';
-        $this->add_control(
-                'sa_bl_four_icon', $this->style, [
-            'label' => __('Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::ICON,
-            'default' => 'fas fa-brain',
-            'placeholder' => '',
-                ]
-        );
-        $this->add_control(
-                'sa_bl_four_text', $this->style, [
-            'label' => __('Title', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXT,
-            'default' => 'Heading Text',
-            'placeholder' => 'Heading Text',
-                ]
-        );
-
-        $this->add_control(
-                'sa_bl_four_textarea', $this->style, [
-            'label' => __('Short Details', SHORTCODE_ADDOONS),
-            'type' => Controls::TEXTAREA,
-            'default' => 'When you visit our site, pre-selected companies may access',
-            'placeholder' => '',
-                ]
-        );
-        echo '</div>';
-    }
-
+//
+//    public function modal_opener() {
+//        $this->add_substitute_control('', [], [
+//            'type' => Controls::MODALOPENER,
+//            'title' => __('Add New Bullet List', SHORTCODE_ADDOONS),
+//            'sub-title' => __('Open Bullet List Form', SHORTCODE_ADDOONS),
+//            'showing' => TRUE,
+//        ]);
+//    }
+//
+//    public function modal_form_data() {
+//        echo '<div class="modal-header">                    
+//                    <h4 class="modal-title">Bullet List Form</h4>
+//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+//                </div>
+//                <div cecholass="modal-body">';
+//        $this->add_control(
+//                'sa_bl_four_icon', $this->style, [
+//            'label' => __('Icon', SHORTCODE_ADDOONS),
+//            'type' => Controls::ICON,
+//            'default' => 'fas fa-brain',
+//            'placeholder' => '',
+//                ]
+//        );
+//        $this->add_control(
+//                'sa_bl_four_text', $this->style, [
+//            'label' => __('Title', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXT,
+//            'default' => 'Heading Text',
+//            'placeholder' => 'Heading Text',
+//                ]
+//        );
+//
+//        $this->add_control(
+//                'sa_bl_four_textarea', $this->style, [
+//            'label' => __('Short Details', SHORTCODE_ADDOONS),
+//            'type' => Controls::TEXTAREA,
+//            'default' => 'When you visit our site, pre-selected companies may access',
+//            'placeholder' => '',
+//                ]
+//        );
+//        echo '</div>';
+//    }
 }
