@@ -445,11 +445,12 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_carousel_text_c',
+            'sa_carousel_text_color',
+            $this->style,
             [
-                'label' => esc_html__('Color', SHORTCODE_ADDOONS),
+                'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#000000',
+                'default' => '#ffffff',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_carousel_style_1 .sa_addons_carousel_item_text' => 'color: {{VALUE}}',
                 ],

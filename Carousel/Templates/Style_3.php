@@ -63,12 +63,12 @@ class Style_3 extends Templates
     }
     public function public_css()
     {
-        wp_enqueue_style('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/file/owl.carousel.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/File/owl.carousel.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function public_jquery()
     {
         $this->JSHANDLE = 'owl.carousel';
-        wp_enqueue_script('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/file/owl.carousel.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/File/owl.carousel.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery()
@@ -146,8 +146,8 @@ class Style_3 extends Templates
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
         $css = $navleft = $navright = $eualdata = $navright = $navlefttab = $navrighttab = $navleftmobile = $navrightmobile = '';
-        wp_enqueue_style('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/file/owl.carousel.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/file/owl.carousel.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/File/owl.carousel.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Carousel/File/owl.carousel.js', false, SA_ADDONS_PLUGIN_VERSION);
         echo '<div class="oxi-addons-container">
              <div class="oxi-addons-row">
                 <div class="oxi-addons-carousel-' . $oxiid . '">';
