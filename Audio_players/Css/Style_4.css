@@ -20,6 +20,9 @@
     float: left;
     text-align: center
 }
+.sa_addons_ap_container_style_4 .mejs-time-handle-content {
+    display: none;
+}
 
 .sa_addons_ap_container_style_4 .sa_addons_ap_title {
     width: 100%;

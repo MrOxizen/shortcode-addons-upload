@@ -19,7 +19,7 @@ class Style_3 extends Templates {
     public function default_render($style, $child, $admin) {
         $html = '';
         $text = '<div class="sa-button-text oxi-text">' . $this->text_render($style['sa_btn_text']) . '</div>';
-        $icon = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? $this->font_awesome_render($style['sa_btn_icon_class']) : '<div class="oxi-icons">' . $this->text_render($style['sa_btn_text']) . '</div>');
+        $icon = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? $this->font_awesome_render($style['sa_btn_icon_class']) : '<div class="oxi-text2">' . $this->text_render($style['sa_btn_text']) . '</div>');
         $html = $icon . $text;
 
 

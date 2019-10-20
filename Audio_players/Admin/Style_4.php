@@ -1406,9 +1406,8 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-pause button::after' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-pause button::after' => 'font-size: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
                     '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-playpause-button > button' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
-                    '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-pause button::after' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
 
                 ],
             ]
@@ -1544,6 +1543,7 @@ class Style_4 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-replay button::after' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-play button::after' => 'font-size: {{SIZE}}{{UNIT}};',
 
                 ],
             ]
@@ -1693,7 +1693,7 @@ class Style_4 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => -200,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -1709,7 +1709,8 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-unmute button::after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-mute button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_4 .mejs-unmute button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

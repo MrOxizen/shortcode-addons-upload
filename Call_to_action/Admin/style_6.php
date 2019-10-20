@@ -519,7 +519,7 @@ class Style_6 extends AdminStyle
                 ],
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_cta_icon_align',
             $this->style,
             [
@@ -645,7 +645,7 @@ class Style_6 extends AdminStyle
                 ],
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_cta_btn_align',
             $this->style,
             [

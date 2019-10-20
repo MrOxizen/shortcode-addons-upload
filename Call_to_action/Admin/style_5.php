@@ -668,7 +668,7 @@ class Style_5 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_cta_btn_align',
             $this->style,
             [

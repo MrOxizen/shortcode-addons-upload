@@ -70,57 +70,77 @@ and open the template in the editor.
 .oxi-addons-align-btn3 .oxi-button-btn3 .oxi-text {
     display: inline-block
 }
+.oxi-addons-align-btn3 .oxi-button-btn3 .oxi-text2 {
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    height: 100%;
+}
 
 
 
 
-.sa-icon-left-to-right .oxi-icons{
+.oxi-addons-align-btn3 .sa-icon-left-to-right .oxi-icons,
+.oxi-addons-align-btn3 .sa-icon-left-to-right .oxi-text2{
     opacity: 0;
     transform: translateX(-300%);
 }
-.oxi-addons-align-btn3 .sa-icon-left-to-right:hover  .oxi-icons, 
-.sa-icon-left-to-right .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-left-to-right:hover .oxi-icons,
+.oxi-addons-align-btn3 .sa-icon-left-to-right:hover .oxi-text2,
+.oxi-addons-align-btn3 .sa-icon-left-to-right .oxi-text{
     opacity: 1;
     transform: translateX(0);
 }
-.oxi-addons-align-btn3 .sa-icon-left-to-right:hover  .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-left-to-right:hover .oxi-text{
     transform: translateX(300%);
 }
-.sa-icon-right-to-left .oxi-icons{
+.oxi-addons-align-btn3 .sa-icon-right-to-left .oxi-icons,
+.oxi-addons-align-btn3 .sa-icon-right-to-left .oxi-text2{
     opacity: 0;
     transform: translateX(300%);
 }
-.oxi-addons-align-btn3 .sa-icon-right-to-left:hover  .oxi-icons, 
-.sa-icon-right-to-left .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-right-to-left:hover .oxi-icons, 
+.oxi-addons-align-btn3 .sa-icon-right-to-left:hover .oxi-text2, 
+.oxi-addons-align-btn3 .sa-icon-right-to-left .oxi-text{
     opacity: 1;
     transform: translateX(0);
 }
-.oxi-addons-align-btn3 .sa-icon-right-to-left:hover  .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-right-to-left:hover .oxi-text{
     transform: translateX(-300%);
 }
-.sa-icon-top-to-bottom .oxi-icons{
+.oxi-addons-align-btn3 .sa-icon-top-to-bottom .oxi-icons,
+.oxi-addons-align-btn3 .sa-icon-top-to-bottom .oxi-text2{
     opacity: 0;
     transform: translateY(-300%);
 }
-.oxi-addons-align-btn3 .sa-icon-top-to-bottom:hover  .oxi-icons, 
-.sa-icon-top-to-bottom .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-top-to-bottom:hover .oxi-icons, 
+.oxi-addons-align-btn3 .sa-icon-top-to-bottom:hover .oxi-text2, 
+.oxi-addons-align-btn3 .sa-icon-top-to-bottom .oxi-text{
     opacity: 1;
     transform: translateY(0);
 }
-.oxi-addons-align-btn3 .sa-icon-top-to-bottom:hover  .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-top-to-bottom:hover .oxi-text{
     transform: translateY(300%);
 }
-.sa-icon-bottom-to-top .oxi-icons{
+.oxi-addons-align-btn3 .sa-icon-bottom-to-top .oxi-icons,
+.oxi-addons-align-btn3 .sa-icon-bottom-to-top .oxi-text2{
     opacity: 0;
     transform: translateY(300%);
 }
 
-.oxi-addons-align-btn3 .sa-icon-bottom-to-top:hover  .oxi-icons, 
-.sa-icon-bottom-to-top .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-bottom-to-top:hover .oxi-icons, 
+.oxi-addons-align-btn3 .sa-icon-bottom-to-top:hover .oxi-text2, 
+.oxi-addons-align-btn3 .sa-icon-bottom-to-top .oxi-text{
     opacity: 1;
     transform: translateY(0);
 }
-.oxi-addons-align-btn3 .sa-icon-bottom-to-top:hover  .oxi-text{
+.oxi-addons-align-btn3 .sa-icon-bottom-to-top:hover .oxi-text{
     transform: translateY(-300%);
 }
 

@@ -1348,7 +1348,9 @@ class Style_5 extends AdminStyle
                 'default' => '#ffffff',
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-pause button::after' => 'color: {{VALUE}} !important;',
-                ],
+                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-play button::after' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-replay button::after' => 'color: {{VALUE}} !important;',
+                ], 
             ]
         );
         $this->add_control(
