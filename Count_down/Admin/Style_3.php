@@ -253,6 +253,7 @@ class Style_3 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-count-down-content-style-3 .sa-addons-countdown-amount' => ''
                 ],
@@ -315,6 +316,7 @@ class Style_3 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-count-down-content-style-3 .sa-addons-countdown-period' => ''
                 ],

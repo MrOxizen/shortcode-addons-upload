@@ -37,7 +37,7 @@ class Style_3 extends Templates
 	public function default_render($style, $child, $admin)
 	{
 		echo ' <div class="sa-addons-count-down-container">
-                  <div class="sa-addons-count-down-content-style-3">
+                  <div class="sa-addons-count-down-content-style-3" '.$this->animation_render('sa_cd_animation', $style).'>
                                       
                   </div>      
                 </div>';
