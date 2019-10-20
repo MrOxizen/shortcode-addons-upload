@@ -254,6 +254,7 @@ class Style_4 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-main-counter .sa-addons-number' => ''
                 ],
@@ -321,6 +322,7 @@ class Style_4 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-count-down-content-style-4 .sa-addons-counter-block .sa-addons-counter-caption' => ''
                 ],
