@@ -202,7 +202,8 @@ class Style_3 extends AdminStyle {
                 's_btn_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3' => '',
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3 .oxi-text2' => ''
             ],
                 ]
         );
@@ -299,7 +300,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3:hover' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3 .oxi-text2' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -354,7 +355,7 @@ class Style_3 extends AdminStyle {
                 'sa_btn_h_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3:hover' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3 .oxi-text2' => ''
             ],
                 ]
         );
