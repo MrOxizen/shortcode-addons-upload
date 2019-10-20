@@ -61,14 +61,14 @@ class Style_3 extends Templates
             }
         }
 
-        if (array_key_exists('sa_banner_icon_link-url', $style) && $style['sa_banner_icon_link-url'] != '') {
+        if (array_key_exists('sa_banner_icon', $style) && $style['sa_banner_icon'] != '') {
             $icon = '
                 <div class="oxi_addons__icon">
                     ' . $this->font_awesome_render($style['sa_banner_icon']) . '
                 </div>
             ';
         }
-        if (array_key_exists('sa_banner_icon_link-url', $style) && $style['sa_banner_icon_link-url'] != '') {
+        if (array_key_exists('sa_banner_icon_text', $style) && $style['sa_banner_icon_text'] != '') {
             $text = '
                 <div class="oxi_addons__text">
                     ' . $this->text_render($style['sa_banner_icon_text']) . ' 

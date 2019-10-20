@@ -1,0 +1,623 @@
+
+
+.oxi-addons-gr-form-sagf{
+    width: 100%;
+    float: left;
+    padding: 4px 5px 4px 5px;
+}
+.oxi-addons-gr-form-sagf .oxi-addons-gravity-form{
+    width: 100%;
+    margin : 0 auto;
+    max-width : 680px;
+    background : rgba(237, 237, 237, 1);
+    border-radius : 3px 3px 3px 3px;
+    padding: 40px 65px 40px 65px;
+}
+.oxi-addons-gr-form-sagf input[type=checkbox], 
+.oxi-addons-gr-form-sagf  input[type=color],
+.oxi-addons-gr-form-sagf  input[type=date], 
+.oxi-addons-gr-form-sagf  input[type=datetime-local],
+.oxi-addons-gr-form-sagf  input[type=datetime], 
+.oxi-addons-gr-form-sagf  input[type=email], 
+.oxi-addons-gr-form-sagf  input[type=month], 
+.oxi-addons-gr-form-sagf  input[type=number], 
+.oxi-addons-gr-form-sagf  input[type=password],
+.oxi-addons-gr-form-sagf  input[type=radio],
+.oxi-addons-gr-form-sagf  input[type=search],
+.oxi-addons-gr-form-sagf  input[type=tel],
+.oxi-addons-gr-form-sagf   input[type=text],
+.oxi-addons-gr-form-sagf   input[type=time], input[type=url], input[type=week],
+.oxi-addons-gr-form-sagf   select,
+.oxi-addons-gr-form-sagf   textarea{
+    border : 0;
+    box-shadow : none;
+}
+.oxi-addons-gr-form-sagf .oxi-addons-gravity-form .gform_wrapper .top_label div.ginput_container{
+    margin : 0;
+}
+.oxi-addons-gr-form-sagf .oxi-addons-gravity-form * label{
+    margin : 0;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+    font-size : 15px;
+    color : #292929;
+    font-family:"Open Sans"; font-weight:600; font-style:normal; line-height:1.3; text-align:left;;	
+    padding: 10px 5px 10px 5px;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
+.oxi-addons-gr-form-sagf .gform_wrapper .field_description_below .gfield_description{
+    font-size : 13px;
+    color : #2b2b2b;
+    font-family:"Poppins"; font-weight:500; font-style:normal; line-height:1.3; text-align:left;;	
+    padding: 7px 5px 7px 5px;
+}
+.oxi-addons-gr-form-sagf .oxi-addons-gravity-form .gform_title{
+    width : 100%;
+    color : #333333;
+    font-size : 32px;
+    font-family:"Poppins"; font-weight:700; font-style:normal; line-height:1.3; text-align:center;;	
+
+    padding: 3px 3px 3px 3px;
+    margin : 0;
+}
+.oxi-addons-gr-form-sagf .oxi-addons-gravity-form .gform_wrapper span.gform_description{
+    color : #707070;
+    font-size : 14px;
+    font-family:"Roboto"; font-weight:500; font-style:normal; line-height:1.3; text-align:center;;	
+    padding: 20px 25px 20px 25px;
+    margin : 0;
+    width : 100%;
+}
+.oxi-addons-gr-form-sagf .oxi-addons-gravity-form * select{
+    height : auto;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container input[type=text],
+.oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select{
+    margin : 0;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea{
+    border-color : #ff0000;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper textarea.medium{
+    height : 80px;
+    resize : auto;
+}
+.oxi-addons-gr-form-sagf  .gform_wrapper textarea{
+
+
+    color : #4a4a4a;
+    background : rgba(255, 255, 255, 1);
+
+    border-width : 1px 1px 1px 1px;;
+    border-style: solid;
+    border-color: #cccccc;
+    font-family:"Poppins"; font-weight:400; font-style:normal; line-height:1.3; text-align:left;;	
+    border-radius : 0px 0px 0px 0px;
+    padding: 17px 17px 17px 17px;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper ul.gform_fields li.gfield{
+    padding : 0;
+}
+
+
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_required{
+    color : #fa0000;
+}
+
+.oxi-addons-gr-form-sagf .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
+
+    font-size : 16px;
+    color : #4a4a4a;
+    background : rgba(255, 255, 255, 1);
+    font-family:"Poppins"; font-weight:400; font-style:normal; line-height:1.3; text-align:left;;	
+    border-width : 1px 1px 1px 1px;;
+    border-style: solid;
+    border-color: #cccccc;
+    border-radius : 0px 0px 0px 0px;
+    padding: 17px 17px 17px 17px;
+    width: 100%;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus , 
+.oxi-addons-gr-form-sagf  .gform_wrapper textarea:focus{
+    border-color : #828282;  
+    box-shadow:  0px 0px 13px 0px rgba(232, 232, 232, 1);;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file])::placeholder,
+.oxi-addons-gr-form-sagf  .gform_wrapper textarea:placeholder{
+    color : #c4c4c4;
+    font-weight : 300;
+}
+
+
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li, .oxi-addons-gr-form-sagf  .gform_wrapper .gfield_radio li{
+    margin : 0;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label,
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_radio li label{
+    color :  #686868;
+    font-size : 16px;
+}
+.oxi-addons-gr-form-sagf .gform_body .ginput_container_checkbox .gfield_checkbox input[type=checkbox], 
+.oxi-addons-gr-form-sagf .gform_body .ginput_container_radio .gfield_radio input[type=radio]{
+    display: none;
+}   
+.oxi-addons-gr-form-sagf .ginput_container_radio .gfield_radio input[type=radio]:checked + label:before{
+    background: #b7b7b7;
+    box-shadow: inset 0px 0px 0px 4px rgba(255, 255, 255, 1);
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_radio li label:before{
+    content: "";
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #cccccc;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    font-family:"Poppins"; font-weight:500; font-style:normal; line-height:1.3; text-align:left;
+    border-radius : 50px;
+    text-align: center;
+    margin : 0px 12px 0px 0px;
+
+}
+
+.oxi-addons-gr-form-sagf .gform_wrapper ul.gfield_radio{
+    padding: 0px 0px 0px 0px;
+}
+
+.oxi-addons-gr-form-sagf .ginput_container_consent input[type=checkbox]{
+    display : none;
+}
+
+.oxi-addons-gr-form-sagf input[type=checkbox]:checked:before{
+    margin: 0;
+}
+.oxi-addons-gr-form-sagf input[type="checkbox"]  {
+    width : 0px !important;
+    height: 0px !important;
+    margin-bottom : 10px ;
+    min-width: 16px;    
+    -webkit-appearance: checkbox;
+    vertical-align : unset;
+
+
+}
+.oxi-addons-gr-form-sagf .ginput_container_consent {
+    padding: 17px 17px 17px 17px;
+}
+.oxi-addons-gr-form-sagf .ginput_container_checkbox input[type=checkbox]:checked + label:before,
+.oxi-addons-gr-form-sagf .ginput_container_consent input[type=checkbox]:checked + label:before{
+    font-size : 20px;
+    color: #b7b7b7;
+    content: "\2714";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label,
+.oxi-addons-gr-form-sagf .ginput_container_consent .gfield_consent_label{
+
+    font-size : 16px;
+    color : #686868;
+    font-family:"Poppins"; font-weight:500; font-style:normal; line-height:1.3; text-align:left;;	
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label:before,
+.oxi-addons-gr-form-sagf .ginput_container_consent .gfield_consent_label:before{
+    content: "\00a0";
+    display: inline-block;
+    border: 1px solid #cccccc;
+    height: 20px;
+    width: 20px;
+    background: rgba(255, 255, 255, 1);
+    vertical-align: unset;
+    border-radius: 2px;
+    margin :  0px 12px 0px 0px;
+}
+
+
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_footer{
+    margin : 0;
+    padding : 0;
+    text-align : center;
+    padding :  10px 0px 10px 0px;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input.button,
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input[type=submit], 
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input.button, 
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input[type=submit]{
+
+    color : #ffffff;
+    background : rgba(46, 48, 46, 1);
+    font-family:"Poppins"; font-weight:400; font-style:normal; line-height:1.3; text-align:center;;	
+    padding: 10px 40px 10px 40px;
+    border : 0px solid #fafafa;
+    margin : 0;
+    font-size : 16px;
+    border-radius : 0px;
+    width : 100%;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input.button:hover,
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input[type=submit]:hover, 
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input.button:hover, 
+.oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input[type=submit]:hover{
+    border-color : #ffffff;
+    color : #ffffff;
+    background : rgba(15, 15, 15, 1);
+}
+.oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select, 
+.oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select, 
+.oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio], 
+.oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select{
+
+    margin : 0;
+    width: 100%;
+    border: 1px solid #999999;
+    box-shadow: none;
+    font-size : 15px;
+    color : #5c5c5c;
+    background : rgba(255, 255, 255, 1);
+    font-family:"Open Sans"; font-weight:600; font-style:normal; line-height:1.3; text-align:left;;	
+    padding: 12px 12px 12px 12px;
+
+}
+.oxi-addons-gr-form-sagf .button, .oxi-addons-gr-form-sagf .button-primary,   .oxi-addons-gr-form-sagf .button-secondary{
+    height : auto;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper select option{
+    padding: 12px 12px 12px 12px;
+    display: block;
+    color: #808080;
+    background: rgba(245, 245, 245, 1);
+}
+
+.oxi-addons-gr-form-sagf .gform_wrapper li.gfield.gfield_error, 
+.oxi-addons-gr-form-sagf  .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+
+    margin: 0;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper li.gfield.gfield_error, 
+.oxi-addons-gr-form-sagf .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+
+
+}
+.oxi-addons-gr-form-sagf .gform_wrapper div.validation_error{
+    margin : 0;
+    font-size : 15px;
+    color : #c20404;
+    background : #ffffff;
+    font-family:"Poppins"; font-weight:700; font-style:normal; line-height:1.3; text-align:center;;	
+    border-width : 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #850505;
+    border-radius : 0px 0px 0px 0px;
+    padding : 18px 18px 18px 18px;
+    margin : 0px 0px 0px 0px;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper .validation_message{
+    margin : 0;
+    font-size : 13px;
+    color : #c20404;
+    font-family:"Poppins"; font-weight:700; font-style:normal; line-height:1.3; text-align:left;;	
+    padding : 10px 0;
+
+}
+.oxi-addons-gr-form-sagf .gform_confirmation_wrapper{
+    font-size : 15px;
+    color : #00bd55;  
+    background : rgba(255, 255, 255, 1);
+    border : 2px solid #00bd55;
+    font-family:"Poppins"; font-weight:600; font-style:normal; line-height:1.3; text-align:center;;	
+    border-radius : 0px 0px 0px 0px;
+    padding : 18px 18px 18px 18px;
+}
+
+.oxi-addons-gr-form-sagf .gform_wrapper .gfield_error .gfield_label{
+    color : #c20404;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.oxi-addons-gr-form-sagf .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label{
+    margin : 0;
+}
+.oxi-addons-gr-form-sagf .gform_wrapper ul.gfield_checkbox{
+    padding :  17px 17px 17px 17px;
+}
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-addons-gr-form-sagf{
+        padding: 4px 5px 4px 5px;
+    }
+    .oxi-addons-gr-form-sagf .oxi-addons-gravity-form{
+
+        max-width : 680px;
+        border-radius : 3px 3px 3px 3px;
+        padding: 40px 65px 40px 65px;
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+        font-size : 15px;
+        padding: 10px 5px 10px 5px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+    .oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
+    .oxi-addons-gr-form-sagf .gform_wrapper .field_description_below .gfield_description{   
+        font-size : 13px;
+        padding: 7px 5px 7px 5px;
+    }
+
+    .oxi-addons-gr-form-sagf .oxi-addons-gravity-form .gform_title{
+        font-size : 32px;
+        padding: 3px 3px 3px 3px;
+
+    }
+    .oxi-addons-gr-form-sagf .oxi-addons-gravity-form .gform_wrapper span.gform_description{
+
+        font-size : 14px;
+
+        padding: 20px 25px 20px 25px;
+
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper textarea.medium{
+        height : 80px;
+
+    }
+    .oxi-addons-gr-form-sagf  .gform_wrapper textarea{
+        border-width : 1px 1px 1px 1px;;
+        border-radius : 0px 0px 0px 0px;
+        padding: 17px 17px 17px 17px;
+
+    }
+
+
+    .oxi-addons-gr-form-sagf .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
+
+        font-size : 16px;
+
+        border-width : 1px 1px 1px 1px;;
+        border-radius : 0px 0px 0px 0px;
+        padding: 17px 17px 17px 17px;
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_radio li label{
+
+
+        font-size : 16px;
+    }
+
+
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_radio li label:before{
+
+        width: 20px;
+        height: 20px;
+        border-radius : 50px;
+
+        margin : 0px 12px 0px 0px;
+
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper ul.gfield_radio{
+        padding: 0px 0px 0px 0px;
+    }
+
+    .oxi-addons-gr-form-sagf .ginput_container_consent {
+        padding: 17px 17px 17px 17px;
+    }
+
+    .oxi-addons-gr-form-sagf .ginput_container_checkbox input[type=checkbox]:checked + label:before,
+    .oxi-addons-gr-form-sagf .ginput_container_consent input[type=checkbox]:checked + label:before{
+        font-size : 20px;
+
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label,
+    .oxi-addons-gr-form-sagf .ginput_container_consent .gfield_consent_label{
+
+        font-size : 16px;
+
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label:before,
+    .oxi-addons-gr-form-sagf .ginput_container_consent .gfield_consent_label:before{
+
+        height: 20px;
+        width: 20px;
+
+        border-radius: 2px;
+        margin :  0px 12px 0px 0px;
+    }
+
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer{
+
+        padding :  10px 0px 10px 0px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input.button,
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input[type=submit], 
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input.button, 
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input[type=submit]{
+        padding: 10px 40px 10px 40px;
+        font-size : 16px;
+        border-radius : 0px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select, 
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select, 
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio], 
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select{
+        font-size : 15px;
+        padding: 12px 12px 12px 12px;
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper select option{
+        padding: 12px 12px 12px 12px;
+        font-size : 15px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper div.validation_error{
+        font-size : 15px;
+        border-width : 1px 1px 1px 1px;
+        border-radius : 0px 0px 0px 0px;
+        padding : 18px 18px 18px 18px;
+        margin : 0px 0px 0px 0px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .validation_message{
+        font-size : 13px;
+        padding : px px px px;
+    }
+    .oxi-addons-gr-form-sagf .gform_confirmation_wrapper{
+        font-size : 15px;
+        border-radius : 0px 0px 0px 0px;
+        padding : 18px 18px 18px 18px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper ul.gfield_checkbox{
+
+        padding :  17px 17px 17px 17px;
+    }
+}
+@media only screen and (max-width : 668px){
+    .oxi-addons-gr-form-sagf{
+        padding: 4px 5px 4px 5px;
+    }
+    .oxi-addons-gr-form-sagf .oxi-addons-gravity-form{
+        max-width : 680px;
+        border-radius : 3px 3px 3px 3px;
+        padding: 40px 65px 40px 65px;
+    }
+
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+        font-size : 15px;
+        padding: 10px 5px 10px 5px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+    .oxi-addons-gr-form-sagf .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label,
+    .oxi-addons-gr-form-sagf .gform_wrapper .field_description_below .gfield_description{ 
+        font-size : 13px;
+        padding: 7px 5px 7px 5px;
+    }
+    .oxi-addons-gr-form-sagf .oxi-addons-gravity-form .gform_title{
+
+        font-size : 32px;
+
+        padding: 3px 3px 3px 3px;
+
+    }
+    .oxi-addons-gr-form-sagf .oxi-addons-gravity-form .gform_wrapper span.gform_description{
+
+        font-size : 14px;
+
+        padding: 20px 25px 20px 25px;
+
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper textarea.medium{
+        height : 80px;
+
+    }
+    .oxi-addons-gr-form-sagf  .gform_wrapper textarea{
+        border-width : 1px 1px 1px 1px;;
+        border-radius : 0px 0px 0px 0px;
+        padding: 17px 17px 17px 17px;
+    }
+
+
+    .oxi-addons-gr-form-sagf .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
+
+        font-size : 16px;
+
+        border-width : 1px 1px 1px 1px;;
+        border-radius : 0px 0px 0px 0px;
+        padding: 17px 17px 17px 17px;
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label,
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_radio li label{
+
+
+        font-size : 16px;
+    }
+
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_radio li label:before{
+
+        width: 20px;
+        height: 20px;
+        border-radius : 50px;
+
+        margin : 0px 12px 0px 0px;
+
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper ul.gfield_radio{
+        padding: 0px 0px 0px 0px;
+    }
+    .oxi-addons-gr-form-sagf .ginput_container_consent {
+        padding: 17px 17px 17px 17px;
+    }
+    .oxi-addons-gr-form-sagf .ginput_container_checkbox input[type=checkbox]:checked + label:before,
+    .oxi-addons-gr-form-sagf .ginput_container_consent input[type=checkbox]:checked + label:before{
+        font-size : 20px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label,
+    .oxi-addons-gr-form-sagf .ginput_container_consent .gfield_consent_label{
+
+        font-size : 16px;
+
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .gfield_checkbox li label:before,
+    .oxi-addons-gr-form-sagf .ginput_container_consent .gfield_consent_label:before{
+
+        height: 20px;
+        width: 20px;
+
+        border-radius: 2px;
+        margin :  0px 12px 0px 0px;
+    }
+
+
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer{
+
+        padding :  10px 0px 10px 0px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input.button,
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input[type=submit], 
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input.button, 
+    .oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input[type=submit]{
+        padding: 10px 40px 10px 40px;
+        font-size : 16px;
+        border-radius : 0px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select, 
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select, 
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio], 
+    .oxi-addons-gr-form-sagf .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select{
+        font-size : 15px;
+        padding: 12px 12px 12px 12px;
+    }
+
+    .oxi-addons-gr-form-sagf .gform_wrapper select option{
+        padding: 12px 12px 12px 12px;
+        font-size : 15px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper div.validation_error{
+        font-size : 15px;
+        border-width : 1px 1px 1px 1px;
+        border-radius : 0px 0px 0px 0px;
+        padding : 18px 18px 18px 18px;
+        margin : 0px 0px 0px 0px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper .validation_message{
+        font-size : 13px;
+        padding : px px px px;
+    }
+    .oxi-addons-gr-form-sagf .gform_confirmation_wrapper{
+        font-size : 15px;
+         text-align:0;
+        border-radius : 0px 0px 0px 0px;
+        padding : 18px 18px 18px 18px;
+    }
+    .oxi-addons-gr-form-sagf .gform_wrapper ul.gfield_checkbox{
+
+        padding :  17px 17px 17px 17px;
+    }
+}

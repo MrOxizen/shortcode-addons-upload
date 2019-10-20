@@ -27,21 +27,24 @@ class Style_2 extends Templates
         if (array_key_exists('sa_banner_details_text', $style) && $style['sa_banner_details_text'] != '') {
             $details = '<div class="oxi_addons__details" ' . $this->animation_render('sa_banner_details_animation', $style) . '> ' . $this->text_render($style['sa_banner_details_text']) . ' </div>';
         }
-
+        $iii = '';
+        if ($style['sa_banner_button_left_icon']) {
+           $iii = $this->font_awesome_render($style['sa_banner_button_left_icon']);
+        }
         if (array_key_exists('sa_banner_button_left_switcher', $style) && $style['sa_banner_button_left_switcher'] == 'yes') {
             if (array_key_exists('sa_banner_button_left_text', $style) && $style['sa_banner_button_left_text'] != '') {
                 if (array_key_exists('sa_banner_button_left_link-url', $style) && $style['sa_banner_button_left_link-url'] != '') {
                     $left_button = '<div class="oxi_addons__button_left_main" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
                                     <a ' . $this->url_render('sa_banner_button_left_link', $style) . ' class="oxi_addons__button_left">
                                         ' . $this->text_render($style['sa_banner_button_left_text']) . '
-                                        ' . $this->font_awesome_render($style['sa_banner_button_left_icon']) . '
+                                        ' . $iii . '
                                     </a>
                                 </div>';
                 } else {
                     $left_button = '<div class="oxi_addons__button_left_main" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
                                     <button class="oxi_addons__button_left">
                                     ' . $this->text_render($style['sa_banner_button_left_text']) . '
-                                    ' . $this->font_awesome_render($style['sa_banner_button_left_icon']) . '
+                                    ' . $iii . '
                                     </button>
                                 </div>';
                 }

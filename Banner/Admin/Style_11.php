@@ -745,7 +745,7 @@ class Style_11 extends AdminStyle
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'center',
                 'options' => [
-                    'flex-start' => [
+                    'left' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-left',
                     ],
@@ -753,13 +753,13 @@ class Style_11 extends AdminStyle
                         'title' => __('Center', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-center',
                     ],
-                    'flex-end' => [
+                    'right' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-right',
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_11 .oxi_addons__button_main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_11 .oxi_addons__button_main' => 'text-align: {{VALUE}};'
                 ],
             ]
         );

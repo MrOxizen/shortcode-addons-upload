@@ -37,14 +37,12 @@ class Style_4 extends Templates
                     $button = '<div class="oxi_addons__button_main" ' . $this->animation_render('sa_banner_button_animation', $style) . '>
                                         <a ' . $this->url_render('sa_banner_button_link', $style) . ' class="oxi_addons__button">
                                             ' . $this->text_render($style['sa_banner_button_text']) . '
-                                            ' . $this->font_awesome_render($style['sa_banner_button_icon']) . '
-                                        </a>
+                                          </a>
                                     </div>';
                 } else {
                     $button = '<div class="oxi_addons__button_main" ' . $this->animation_render('sa_banner_button_animation', $style) . '>
                                         <button class="oxi_addons__button">
                                             ' . $this->text_render($style['sa_banner_button_text']) . '
-                                            ' . $this->font_awesome_render($style['sa_banner_button_icon']) . '
                                         </button>
                                     </div>';
                 }

@@ -27,21 +27,29 @@ class Style_1 extends Templates
         if (array_key_exists('sa_banner_details_text', $style) && $style['sa_banner_details_text'] != '') {
             $details = '<div class="oxi_addons__details" ' . $this->animation_render('sa_banner_details_animation', $style) . '> ' . $this->text_render($style['sa_banner_details_text']) . ' </div>';
         }
-
+        
+        $ileft = $iright = '';
+        if ($style['sa_banner_button_left_icon']) {
+           $ileft = $this->font_awesome_render($style['sa_banner_button_left_icon']);
+        }
+        if ($style['sa_banner_button_left_icon']) {
+           $iright = $this->font_awesome_render($style['sa_banner_button_right_icon']);
+        }
+        
         if (array_key_exists('sa_banner_button_left_switcher', $style) && $style['sa_banner_button_left_switcher'] == 'yes') {
             if (array_key_exists('sa_banner_button_left_text', $style) && $style['sa_banner_button_left_text'] != '') {
                 if (array_key_exists('sa_banner_button_left_link-url', $style) && $style['sa_banner_button_left_link-url'] != '') {
                     $left_button = '<div class="oxi_addons__button_left_main" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
                                         <a ' . $this->url_render('sa_banner_button_left_link', $style) . ' class="oxi_addons__button_left">
                                         ' . $this->text_render($style['sa_banner_button_left_text']) . '
-                                        ' . $this->font_awesome_render($style['sa_banner_button_left_icon']) . '
+                                        ' . $ileft . '
                                         </a>
                                     </div>';
                 } else {
                     $left_button = '<div class="oxi_addons__button_left_main" ' . $this->animation_render('sa_banner_button_left_animation', $style) . '>
                                         <button class="oxi_addons__button_left">
                                             ' . $this->text_render($style['sa_banner_button_left_text']) . '
-                                            ' . $this->font_awesome_render($style['sa_banner_button_left_icon']) . '
+                                            ' . $ileft . '
                                         </button>
                                     </div>';
                 }
@@ -51,9 +59,9 @@ class Style_1 extends Templates
             if (array_key_exists('sa_banner_button_right_text', $style) && $style['sa_banner_button_right_text'] != '') {
                 $icon_right = '';
                 if (array_key_exists('sa_banner_button_right_icon_postion', $style) && $style['sa_banner_button_right_icon_postion'] == 'left') {
-                    $icon_right = '' . $this->font_awesome_render($style['sa_banner_button_right_icon']) . ' ' . $this->text_render($style['sa_banner_button_right_text']) . '';
+                    $icon_right = '' . $iright . ' ' . $this->text_render($style['sa_banner_button_right_text']) . '';
                 } else {
-                    $icon_right = '' . $this->text_render($style['sa_banner_button_right_text']) . ' ' . $this->font_awesome_render($style['sa_banner_button_right_icon']) . '';
+                    $icon_right = '' . $this->text_render($style['sa_banner_button_right_text']) . ' ' . $iright . '';
                 }
                 if (array_key_exists('sa_banner_button_right_link-url', $style) && $style['sa_banner_button_right_link-url'] != '') {
                     $right_button = '<div class="oxi_addons__button_right_main" ' . $this->animation_render('oxi_addons__button_right_main', $style) . '>

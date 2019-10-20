@@ -477,6 +477,7 @@ class Style_3 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__banner_style_3 .oxi_addons__text' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
