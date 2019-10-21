@@ -98,7 +98,7 @@ class Style_10 extends AdminStyle {
                 'sa-ac-column', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => '',
+                '{{WRAPPER}} .sa_ie_temp_style_10' => '',
             ],
                 ]
         );
@@ -204,15 +204,15 @@ class Style_10 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_10:hover,'
-                . ' {{WRAPPER}} .sa_ie_temp_10:hover:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_10 .ihewc-hover:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_10:hover .ihewc-hover-figure,'
-                . ' {{WRAPPER}} .sa_ie_temp_10:hover .ihewc-hover-figure:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_10:hover .ihewc-hover-figure:after,'
-                . ' {{WRAPPER}} .sa_ie_temp_10:hover .ihewc-hover-figure-caption,'
-                . ' {{WRAPPER}} .sa_ie_temp_10:hover .ihewc-hover-figure-caption:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_10:hover .ihewc-hover-figure-caption:after' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_for_margin:hover,'
+                . ' {{WRAPPER}} .sa_for_margin:hover:before,'
+                . ' {{WRAPPER}} .sa_for_margin .ihewc-hover:before,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure:before,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure:after,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption:before,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption:after' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -357,7 +357,7 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_10 .sa_for_margin' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_10 .ihewc-hover-figure .ihewc-hover-figure-caption-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -387,7 +387,7 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_10 .sa_for_margin ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_10 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -446,6 +446,7 @@ class Style_10 extends AdminStyle {
         $this->add_group_control(
                 'sa-ie-title-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .sa_ie_temp_10 h3.ihewc-heading' => ''
             ],
@@ -459,32 +460,7 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_ie_heading_text_align', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_10 h3.ihewc-heading' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa-ie-heading-side-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -560,6 +536,7 @@ class Style_10 extends AdminStyle {
         $this->add_group_control(
                 'sa-ie-desc-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .sa_ie_temp_10 .ihewc-content' => ''
             ],
@@ -573,32 +550,7 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_ie_desc_text_align', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_10 .ihewc-content' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa-ie-desc-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -640,6 +592,7 @@ class Style_10 extends AdminStyle {
         $this->add_group_control(
                 'sa-ie-button-side-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .sa_ie_temp_10 .img-btn.ihewc-button' => ''
             ],
