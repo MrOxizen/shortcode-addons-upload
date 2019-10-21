@@ -368,7 +368,7 @@ class Style_9 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'oa_fm-9_heading_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -466,7 +466,7 @@ class Style_9 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'oa_sa_fm-9_price_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,

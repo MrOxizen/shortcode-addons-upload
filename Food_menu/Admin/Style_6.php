@@ -133,7 +133,7 @@ class Style_6 extends AdminStyle {
                 'sa-max-w-condition', $this->style, [
             'label' => __('Width', SHORTCODE_ADDOONS),
             'separator' => true,
-            'loader' => true,
+             
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
             'default' => 'dynamic',
@@ -308,7 +308,7 @@ class Style_6 extends AdminStyle {
         $this->add_group_control(
                 'sa-fm-box-inside-bg-color-or-img', $this->style, [
             'type' => Controls::BACKGROUND,
-            'loader' => true,
+             
             'selector' => [
                 '{{WRAPPER}} .oxi_foodMenu_temp_6 .oxi-addonsFM-SI-content-body' => ''
             ],
@@ -363,11 +363,10 @@ class Style_6 extends AdminStyle {
         $this->add_responsive_control(
                 'sa-fm-image-height', $this->style, [
             'label' => __('Image Height', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'loader' => true,
+            'type' => Controls::SLIDER, 
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 120,
             ],
             'range' => [
                 'px' => [
@@ -394,11 +393,10 @@ class Style_6 extends AdminStyle {
         $this->add_responsive_control(
                 'sa-fm-image-width', $this->style, [
             'label' => __('Image Width', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'loader' => true,
+            'type' => Controls::SLIDER, 
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 120,
             ],
             'range' => [
                 'px' => [
@@ -419,6 +417,26 @@ class Style_6 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi_foodMenu_temp_6 .oxi-addonsFM-SI-image img' => 'width:{{SIZE}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa-fm-image-position', $this->style, [
+            'label' => __('Image Position Y Axis', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER, 
+            'default' => [
+                'unit' => 'px',
+                'size' => -100,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ], 
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_foodMenu_temp_6 .oxi-addonsFM-SI-image' => 'top:{{SIZE}}px;'
             ],
                 ]
         );
@@ -534,7 +552,7 @@ class Style_6 extends AdminStyle {
         $this->add_control(
                 'oa-sa-fm-6-heading-color', $this->style, [
             'label' => __('Font Color', SHORTCODE_ADDOONS),
-            'loader' => true,
+             
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
@@ -716,8 +734,8 @@ class Style_6 extends AdminStyle {
                 'oa-sa-fm-6-rating-font-sizes', $this->style, [
             'label' => __('Font Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
-            'loader' => true,
-            'loader' => true,
+             
+             
             'default' => [
                 'unit' => 'px',
                 'size' => 50,

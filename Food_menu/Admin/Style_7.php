@@ -155,7 +155,7 @@ class Style_7 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [

@@ -10,11 +10,11 @@ and open the template in the editor.
 
 .oa-fm-content-4{
     width:100%;
-    float:left;
-    padding:5px 10px 5px 10px ;
+    float:left; 
 }
 .oa-fm-inner-side-div {
-	margin: 0 auto;
+    margin: 0 auto;
+    display: flex;
 }
 .oa-fm-content-4 .oxi-addonsFM-FO-row{
     width:100%;
@@ -29,6 +29,7 @@ and open the template in the editor.
     float:left;
     display:flex ;
 }
+
 .oxi-addonsFM-FO-text-body{
     flex-grow:10;
 }
@@ -42,6 +43,12 @@ and open the template in the editor.
     border-radius:5px 5px 5px 5px;
     margin:10px 10px 10px 10px ;
 }
+.oa-fm-content-4 .oxi-addonsFM-FO-heading-body{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    float:left; 
+}
 .oa-fm-content-4 .oxi-addonsFM-FO-price{
     flex-grow:60;
     font-size:20px;
@@ -52,6 +59,8 @@ and open the template in the editor.
     line-height:1.3;
     text-align:right;
     margin:0px 0px 0px 0px ;
+    float: left;
+    width: 100%;
 }
 .oa-fm-content-4 .oxi-addonsFM-FO-heading{
     flex-grow:1;
@@ -63,7 +72,7 @@ and open the template in the editor.
     line-height:1.3;
     text-align:left ;
     float: left;
-    width: 50%;
+    width: 100%;
 }
 .oa-fm-content-4 .oxi-addonsFM-FO-rating{
     width:100%;
@@ -86,13 +95,7 @@ and open the template in the editor.
     padding:0px 0px 0px 0px ;
 }
 @media only screen and (min-width:669px) and (max-width:993px){
-    .oa-fm-content-4{
-        padding:5px 10px 5px 10px ;
-    }
-    .oa-fm-content-4 .oxi-addonsFM-FO-row{
-        border-radius:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px ;
-    }
+    
     .oa-fm-content-4 .oxi-addonsFM-FO-content-body{
         flex-direction:column;
         width:100% ;
@@ -141,13 +144,7 @@ and open the template in the editor.
     }
 }
 @media only screen and (max-width:668px){
-    .oa-fm-content-4{
-        padding:5px 10px 5px 10px;
-    }
-    .oa-fm-content-4 .oxi-addonsFM-FO-row{
-        border-radius:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px ;
-    }
+     
     .oa-fm-content-4 .oxi-addonsFM-FO-content-body{
         flex-direction:column;
         width:100% ;

@@ -132,9 +132,8 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-headers-wrapper-style-3  .oxi-addons-headers-wrapper {
-        padding: 0px 0px 0px 0px;
-        display: block
+    .oxi-addons-headers-wrapper-style-3   {
+        flex-direction: column;
     }
     .oxi-addons-headers-wrapper-style-3 .oxi-addons-wrapper-left-side {
         width: 100%;
@@ -174,9 +173,8 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-headers-wrapper-style-3 .oxi-addons-headers-wrapper {
-        padding: 0px 0px 0px 0px;
-        display: block
+    .oxi-addons-headers-wrapper-style-3 {
+        flex-direction: column;
     }
     .oxi-addons-headers-wrapper-style-3 .oxi-addons-wrapper-left-side {
         width: 100%;

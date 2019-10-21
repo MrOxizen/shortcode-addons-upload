@@ -99,7 +99,9 @@
 
 .oxi-addons-headers-wrapper-style-1 .oxi-addons-line {
     width: 100%;
-    float: left
+    float: left;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .oxi-addons-headers-wrapper-style-1 .oxi-addons-line::after {
@@ -108,8 +110,7 @@
     bottom: 0;
     width: 20%;
     height: 2px;
-    background: #404040;
-    left: 0
+    background: #404040; 
 }
 
 .oxi-addons-headers-wrapper-style-1 .oxi-addons-short-detail {
@@ -160,9 +161,9 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-headers-wrapper-style-1 .oxi-addons-headers-wrapper {
-        padding: 0px 0px 0px 0px;
-        display: block
+
+    .oxi-addons-headers-wrapper-style-1 { 
+        flex-direction: column;
     }
     .oxi-addons-headers-wrapper-style-1 .oxi-addons-wrapper-left-side {
         width: 100%;
@@ -206,9 +207,8 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-headers-wrapper-style-1 .oxi-addons-headers-wrapper {
-        padding: 0px 0px 0px 0px;
-        display: block
+    .oxi-addons-headers-wrapper-style-1 { 
+        flex-direction: column;
     }
     .oxi-addons-headers-wrapper-style-1 .oxi-addons-wrapper-left-side {
         width: 100%;

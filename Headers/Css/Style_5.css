@@ -8,21 +8,15 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
-    position: relative
+    display: flex;
+    align-items: center;
 }
 
 .oxi-addons-headers-wrapper-style-5 .oxi-addons-wrapper-left-side {
     display: flex;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    max-width: 60%;
-    float: left;
-    padding: 50px 50px 50px 50px;
-
-    top: 50%;
-    transform: translateY(-50%)
+    align-items: center; 
+    width: 100%; 
+    max-width: 600px;
 }
 
 .oxi-addons-headers-wrapper-style-5 .oxi-addons-main {
@@ -146,12 +140,7 @@
     .oxi-addons-headers-wrapper-style-5 .oxi-addons-headers-wrapper-style-5::before {
         padding-bottom: 50%
     }
-    .oxi-addons-headers-wrapper-style-5 .oxi-addons-wrapper-left-side {
-        max-width: 50%;
-        width: 100%;
-        float: left;
-        padding: 30px 30px 30px 30px
-    }
+ 
     .oxi-addons-headers-wrapper-style-5 .oxi-addons-main {
         padding: 30px 40px 30px 40px
     }
@@ -183,18 +172,12 @@
 
 @media only screen and (max-width:668px) {
     .oxi-addons-headers-wrapper-style-5 {
-        padding: 50px 50px 50px 50px;
-        display: block
+        padding: 50px 50px 50px 50px; 
     }
     .oxi-addons-headers-wrapper-style-5::before {
         padding-bottom: 120%
     }
-    .oxi-addons-headers-wrapper-style-5 .oxi-addons-wrapper-left-side {
-        max-width: 120%;
-        width: 100%;
-        float: left;
-        padding: 20px 20px 20px 20px
-    }
+ 
     .oxi-addons-headers-wrapper-style-5 .oxi-addons-main {
         padding: 20px 20px 20px 20px
     }

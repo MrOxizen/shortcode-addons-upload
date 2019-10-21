@@ -129,7 +129,7 @@ class Style_11 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
@@ -354,7 +354,7 @@ class Style_11 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'oa_fm_box_heading_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -445,7 +445,7 @@ class Style_11 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'oa_sa_fm_descriptions_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -546,7 +546,7 @@ class Style_11 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 80,
             ],
             'range' => [
                 'px' => [

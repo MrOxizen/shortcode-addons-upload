@@ -41,7 +41,7 @@ class Style_4 extends AdminStyle {
                 ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa_headers_position_rev', $this->style, [
             'label' => __('Position Reverse', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -416,7 +416,7 @@ class Style_4 extends AdminStyle {
                     'loader' => TRUE,
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa_headers_button_left_pos_1', $this->style, [
             'label' => __('Position ', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,

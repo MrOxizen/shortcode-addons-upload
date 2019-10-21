@@ -146,12 +146,12 @@ class Style_1 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 500,
+                    'max' => 800,
                     'step' => 1,
                 ],
                 'em' => [
