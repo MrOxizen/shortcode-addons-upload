@@ -99,7 +99,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-contact-wp-form' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa-max-w-condition' => 'dynamic'
@@ -322,7 +322,8 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="text"],'
                     . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea,'
-                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="number"]' => 'color: {{VALUE}};',
+                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="number"],'
+                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="email"]' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -337,7 +338,8 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="text"],'
                     . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="number"],'
-                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea' => 'background: {{VALUE}};',
+                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea,'
+                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="email"]' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -452,7 +454,8 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="text"],'
                     . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea,'
-                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="number"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="number"],'
+                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type=email]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -486,7 +489,8 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="text"],'
                     . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form textarea,'
-                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="number"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    . '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="number"],'
+                    . '{{WRWPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form input[type="email"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -662,7 +666,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio li' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -732,7 +736,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -764,7 +768,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-radio .wpforms-field-label-inline::before' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} div.wpforms-container-full .wpforms-form ul' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -861,7 +865,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#5c5c5c',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_author' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox input[type="checkbox"]:checked + .wpforms-field-label-inline::before' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -907,7 +911,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline::before' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} div.wpforms-container-full .wpforms-form ul' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -955,7 +959,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline::before' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline::before' => 'border-radius:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -987,7 +991,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline::before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -1019,7 +1023,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-field-checkbox .wpforms-field-label-inline::before' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} div.wpforms-container-full .wpforms-form ul' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -1032,36 +1036,6 @@ class Style_1 extends AdminStyle
                 'showing' => true,
             ]
         );
-        $this->add_responsive_control(
-                'sa_wp_forms_dropdown_dopamargin', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 50,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
         
         $this->add_control(
             'sa_wp_forms_dropdown_color',
@@ -1071,7 +1045,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#5c5c5c',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_author' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1084,32 +1058,7 @@ class Style_1 extends AdminStyle
                 'default' => '#5c5c5c',
             'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_author' => 'background: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_wp_forms_dropdown_options_color',
-            $this->style,
-            [
-                'label' => __('Option Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#5c5c5c',
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_author' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_wp_forms_dropdown_options_background',
-            $this->style,
-            [
-                'label' => __('Option Background', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-                'default' => '#5c5c5c',
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_author' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1117,7 +1066,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_dropdown_typography', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select' => ''
             ],
                 ]
         );
@@ -1143,7 +1092,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .sa-cb-tem-3-icon' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -1151,7 +1100,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_dropdown_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select' => ''
             ],
                 ]
         );
@@ -1161,7 +1110,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time-handle' => ''
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select' => ''
                 ],
             ]
         );
@@ -1192,39 +1141,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_author' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_wp_forms_dropdown_text_l_margin',
-            $this->style,
-            [
-                'label' => __('Option Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_author' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form select' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1253,36 +1170,6 @@ class Style_1 extends AdminStyle
                 'showing' => true,
             ]
         );
-        $this->add_responsive_control(
-                'sa_wp_forms_form_title_font_size', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 50,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
         $this->add_control(
             'sa_wp_forms_form_title_color',
             $this->style,
@@ -1291,7 +1178,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#333333',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time-float' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-contact-wp-form .wpforms-title' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -1304,7 +1191,7 @@ class Style_1 extends AdminStyle
                 'default' => '#333333',
             'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time-float' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .sa-contact-wp-form .wpforms-title' => 'background: {{VALUE}};'
                 ],
             ]
         );
@@ -1312,7 +1199,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_form_title_b_typography_d', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .sa-contact-wp-form .wpforms-title' => ''
             ],
                 ]
         );$this->add_control(
@@ -1337,7 +1224,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .sa-cb-tem-3-icon' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa-contact-wp-form .wpforms-title' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -1345,7 +1232,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_form_title_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .sa-contact-wp-form .wpforms-title' => ''
             ],
                 ]
         );
@@ -1376,7 +1263,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-contact-wp-form .wpforms-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1390,36 +1277,7 @@ class Style_1 extends AdminStyle
                 'showing' => false,
             ]
         );
-        $this->add_responsive_control(
-                'sa_wp_forms_form_Alert_fontl_size', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 50,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
+        
         $this->add_control(
             'sa_wp_forms_form_Alerte_colour',
             $this->style,
@@ -1428,7 +1286,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#333333',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time-float' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-contact-wp-form div.wpforms-container-full .wpforms-form label.wpforms-error' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -1436,7 +1294,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_form_tAlerte_cotypho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .sa-contact-wp-form div.wpforms-container-full .wpforms-form label.wpforms-error' => ''
             ],
                 ]
         );$this->add_control(
@@ -1461,7 +1319,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .sa-cb-tem-3-icon' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .sa-contact-wp-form div.wpforms-container-full .wpforms-form label.wpforms-error' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -1469,7 +1327,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_form_Alert_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .sa-contact-wp-form div.wpforms-container-full .wpforms-form label.wpforms-error' => ''
             ],
                 ]
         );
@@ -1500,7 +1358,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-contact-wp-form div.wpforms-container-full .wpforms-form label.wpforms-error' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1518,36 +1376,6 @@ class Style_1 extends AdminStyle
                 'showing' => true,
             ]
         );
-        $this->add_responsive_control(
-                'sa_wp_forms_form_SUCCESS_font_size', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 50,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
         $this->add_control(
             'sa_wp_forms_form_SUCCESS_font_color',
             $this->style,[
@@ -1555,7 +1383,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#333333',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time-float' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .wpforms-confirmation-container-full p' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -1567,7 +1395,7 @@ class Style_1 extends AdminStyle
                 'default' => '#333333',
             'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time-float' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .wpforms-confirmation-container-full p' => 'background: {{VALUE}};'
                 ],
             ]
         );
@@ -1575,7 +1403,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_form_SUCCESS_font_typhography', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .wpforms-confirmation-container-full p' => ''
             ],
                 ]
         );$this->add_control(
@@ -1600,7 +1428,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .sa-cb-tem-3-icon' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .wpforms-confirmation-container-full p' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -1608,7 +1436,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_form_SUCCESS_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .wpforms-confirmation-container-full p' => ''
             ],
                 ]
         );
@@ -1639,7 +1467,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .wpforms-confirmation-container-full p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1670,7 +1498,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .wpforms-confirmation-container-full p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1700,41 +1528,12 @@ class Style_1 extends AdminStyle
             ],
                 ]
         );
-        $this->add_responsive_control(
-                'sa_wp_forms_form_BUTTON_font_size', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 50,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
+        
         $this->add_group_control(
                 'sa_wp_forms_form_BUTTON_font_typography', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => ''
             ],
                 ]
         );
@@ -1753,7 +1552,7 @@ class Style_1 extends AdminStyle
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa-cb-temp-1-button .oxi-button' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -1764,7 +1563,7 @@ class Style_1 extends AdminStyle
             'oparetor' => 'RGB',
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa-cb-temp-1-button .oxi-button' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -1774,7 +1573,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_main' => ''
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => ''
                 ],
             ]
         );
@@ -1786,7 +1585,7 @@ class Style_1 extends AdminStyle
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa-cb-temp-1-button .oxi-button' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]:hover' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -1797,7 +1596,7 @@ class Style_1 extends AdminStyle
             'oparetor' => 'RGB',
             'default' => 'green',
             'selector' => [
-                '{{WRAPPER}} .sa-cb-temp-1-button .oxi-button' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]:hover' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -1807,7 +1606,7 @@ class Style_1 extends AdminStyle
             'type' => Controls::COLOR,
             'default' => 'red',
             'selector' => [
-                '{{WRAPPER}} .sa-cb-temp-1-button .oxi-button' => 'border-color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]:hover' => 'border-color:{{VALUE}};'
             ],
                 ]
         );
@@ -1828,6 +1627,11 @@ class Style_1 extends AdminStyle
                     'max' => 500,
                     'step' => 1,
                 ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
                 'em' => [
                     'min' => 0,
                     'max' => 100,
@@ -1840,7 +1644,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => 'border-radius:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -1866,7 +1670,7 @@ class Style_1 extends AdminStyle
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-3 .sa-cb-tem-3-icon' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} div.wpforms-container-full .wpforms-form .wpforms-submit-container' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -1874,7 +1678,7 @@ class Style_1 extends AdminStyle
                 'sa_wp_forms_form_BUTTON_HOVER_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => ''
+                '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => ''
             ],
                 ]
         );
@@ -1905,7 +1709,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1936,7 +1740,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .mejs-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-contact-wp-form-outer div.wpforms-container-full .wpforms-form button[type="submit"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
