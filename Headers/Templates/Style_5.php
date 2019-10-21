@@ -12,16 +12,16 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_5 extends Templates {
+class Style_5 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-//        echo '<pre>';
-//        print_r($style['sa_s_image_ribbon_pos']);
-//        echo '</pre>';
-//        echo $this->url_render('sa_dual_btn_left_link', $style);
-        $sub_heading = $heading = $button_left = $detail = $button_right = '';
+    public function default_render($style, $child, $admin)
+    {
+      
+        $sub_heading = $heading = $button_left = $detail = $button_right = $position = '';
 
         if ($style['sa_headers_h_1'] != '') {
             $heading = '
@@ -76,28 +76,10 @@ class Style_5 extends Templates {
                 ' . $this->text_render($style['sa_headers_button_right_text']) . '
             </div> 
     ';
-        }
-        if ($style['sa_headers_position_rev'] == 'left') {
-            $position = '
-            left: 0; 
-            top: 50%;
-            transform: translateY(-50%);
-        ';
-        } elseif ($style['sa_headers_position_rev'] == 'center') {
-            $position = ' 
-             left: 50%;
-             top: 50%;
-             transform: translate(-50%,-50%); 
-         ';
-        }elseif ($style['sa_headers_position_rev'] == 'right') {
-            $position = ' 
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);';
-        }
+        } 
 
         echo   '<div class="oxi-addons-headers-wrapper-style-5">
-                    <div class="oxi-addons-wrapper-left-side" style="'.$position.'"> 
+                    <div class="oxi-addons-wrapper-left-side" style="' . $position . '"> 
                         <div class="oxi-addons-main"> 
                         ' . $sub_heading . '
                         ' . $heading . '
@@ -111,7 +93,8 @@ class Style_5 extends Templates {
                 </div>';
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
@@ -407,5 +390,4 @@ class Style_5 extends Templates {
     ';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

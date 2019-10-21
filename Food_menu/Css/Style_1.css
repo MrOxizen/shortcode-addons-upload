@@ -16,6 +16,7 @@ and open the template in the editor.
 .oxi-addons-fm-box-outer{
     max-width: auto;
     margin: 0 auto;
+    display: flex;
 }
 .oxi-addonsFM-row{
     width:100%;
@@ -93,54 +94,4 @@ and open the template in the editor.
 }
 .oxi-addonsFM-image-price.sa-fm-temp-1-left {
     left: 0;
-}
-@media only screen and (min-width:669px) and (max-width:993px){
-    .sa-fm-temp-1{
-        padding:5px 5px 5px 5px;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-row{
-        border-radius:0px 0px 0px 0px;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-image-price{
-        width:80px;
-        height:40px;
-        border-radius:25px 0px 0px 25px;
-        margin:0px 0px 50px 0px;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-date{
-        font-size:20px;
-        margin:0px 0px 0px 0px;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-content{
-        padding:10px 10px 10px 10px;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-heading{
-        font-size:27px;
-        padding:14px 14px 14px 14px;
-    }
-}
-@media only screen and (max-width:668px){
-    .sa-fm-temp-1{
-        padding:5px 5px 5px 5px ;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-row{
-        border-radius:0px 0px 0px 0px;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-image-price{
-        width:80px;
-        height:40px;
-        border-radius:25px 0px 0px 25px;
-        margin:0px 0px 50px 0px ;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-date{
-        font-size:20px;
-        margin:0px 0px 0px 0px ;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-content{
-        padding:10px 10px 10px 10px ;
-    }
-    .sa-fm-temp-1 .oxi-addonsFM-heading{
-        font-size:27px;
-        padding:14px 14px 14px 14px;
-    }
-}
+} 

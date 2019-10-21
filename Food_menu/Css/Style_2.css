@@ -11,10 +11,11 @@ and open the template in the editor.
 .oa_el_fm_template_2{
     width:100%;
     float:left;
-    padding:5px 5px 5px 5px ;
+    padding:5px 5px 5px 5px;
 }
 .oa_el_fm_tem_2_inner {
     margin: auto;
+    display: flex;
 }
 .oa_el_fm_template_2 .oxi-addonsFM-ON-row{
     max-width: auto;

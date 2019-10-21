@@ -157,12 +157,12 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 500,
+                    'max' => 800,
                     'step' => 1,
                 ],
                 'em' => [
@@ -481,7 +481,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa_icon_box_inner_side_image_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -610,7 +610,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa_icon_box_heading_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -700,7 +700,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa_fm_price_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -775,7 +775,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa_fm_rating_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -867,7 +867,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa_fm_info_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,

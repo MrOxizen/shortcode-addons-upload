@@ -10,9 +10,8 @@ and open the template in the editor.
 
 .oxi_foodMenu_temp_6{
     max-width: auto;
-    margin:0 auto;
-    /*overflow:auto;*/
-    padding:55px 10px 5px 10px;
+    margin:0 auto;  
+    display: flex;
 }
 .oxi_foodMenu_temp_6 .oxi-addonsFM-SI-row{
     width:100%;

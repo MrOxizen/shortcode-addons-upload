@@ -130,12 +130,12 @@ class Style_8 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 350,
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 1000,
+                    'max' => 800,
                     'step' => 1,
                 ],
                 'em' => [
@@ -241,7 +241,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxiAddonsFoodMenuTemplate8' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxiAddonsFoodMenuTemplate8 .oxi-addonsFM-SI-row' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
             ],
                 ]
         );
@@ -271,7 +271,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxiAddonsFoodMenuTemplate8 .oxi-addonsFM-SI-row' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxiAddonsFoodMenuTemplate8 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -294,8 +294,7 @@ class Style_8 extends AdminStyle {
         );
         $this->add_group_control(
                 'sa-fm-box-inside-bg-color-or-img', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'loader' => true,
+            'type' => Controls::BACKGROUND, 
             'selector' => [
                 '{{WRAPPER}} .oxiAddonsFoodMenuTemplate8 .oxi-addonsFM-SI-content-body' => ''
             ],
@@ -351,8 +350,7 @@ class Style_8 extends AdminStyle {
         );
         $this->add_control(
                 'oa-sa-fm-6-heading-color', $this->style, [
-            'label' => __('Font Color', SHORTCODE_ADDOONS),
-            'loader' => true,
+            'label' => __('Font Color', SHORTCODE_ADDOONS), 
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
@@ -376,7 +374,7 @@ class Style_8 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'oa_fm-6_heading_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -468,7 +466,7 @@ class Style_8 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'oa_sa_fm-6_info_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
@@ -562,7 +560,7 @@ class Style_8 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'oa_sa_fm-6_price_text_align', $this->style, [
             'label' => __('Text Align', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,

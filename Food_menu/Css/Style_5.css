@@ -11,36 +11,21 @@ and open the template in the editor.
 .oa-fm-style-5.oxi-addonsFM-FV-wrapper .oxi-addonsFM-FV-image{
     top:0;
     left:0;
-    width:100%;
-    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-8.jpeg');*/
+    width:100%; 
     -moz-background-size:100% 100%;
     -o-background-size:100% 100%;
     background-size:100% 100% ;
 }
-.oa-fm-style-5.oxi-addonsFM-FV-wrapper .oxi-addonsFM-FV-image{
-    top:0;
-    left:0;
-    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-7.jpeg');*/
-    -moz-background-size:100% 100%;
-    -o-background-size:100% 100%;
-    background-size:100% 100% ;
-}
-.oa-fm-style-5.oxi-addonsFM-FV-wrapper .oxi-addonsFM-FV-image{
-    top:0;
-    left:0;
-    width:100%;
-    /*background:url('https://www.oxilab.org/wp-content/uploads/2019/02/oxi-food-6.jpeg');*/
-    -moz-background-size:100% 100%;
-    -o-background-size:100% 100%;
-    background-size:100% 100% ;
+.oa_s_inr_side{
+    display:flex;
 }
 .oa-fm-style-5{
     width:100%;
-    float:left;
-    padding:5px 10px 5px 10px;
+    float:left; 
 }
 .oa_shortcode_inner_div {
     margin: auto;
+  
 }
 .oa-fm-style-5 .oxi-addonsFM-FV-row{
     width:100%;
@@ -107,10 +92,7 @@ and open the template in the editor.
     text-align:center;
     padding:0px 0px 0px 0px ;
 }
-@media only screen and (min-width:669px) and (max-width:993px){
-    .oa-fm-style-5{
-        padding:5px 10px 5px 10px ;
-    }
+@media only screen and (min-width:669px) and (max-width:993px){ 
     .oa-fm-style-5 .oxi-addonsFM-FV-row{
         border-radius:0px 0px 0px 0px;
         padding:10px 10px 10px 10px;
@@ -135,10 +117,7 @@ and open the template in the editor.
         padding:0px 0px 0px 0px ;
     }
 }
-@media only screen and (max-width:668px){
-    .oa-fm-style-5{
-        padding:5px 10px 5px 10px ;
-    }
+@media only screen and (max-width:668px){ 
     .oa-fm-style-5 .oxi-addonsFM-FV-row{
         border-radius:0px 0px 0px 0px;
         padding:10px 10px 10px 10px ;

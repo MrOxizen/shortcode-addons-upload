@@ -55,7 +55,10 @@ and open the template in the editor.
 .oxi-addons-box-temp-10 .oxi-addons-content{
     height:100%;
     width:100%;
-    display:inline-block ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .oxi-addons-box-temp-10 .oxi-addons-grid-item{
     width:auto;
