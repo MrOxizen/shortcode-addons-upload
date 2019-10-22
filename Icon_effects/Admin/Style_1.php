@@ -73,7 +73,7 @@ class Style_1 extends AdminStyle
                     'shortcode-addons-start-tabs' => [
                         'controller' => 'start_controls_tabs',
                         'options' => [
-                            'normal' => esc_html__('Normal ssssssssssss', SHORTCODE_ADDOONS),
+                            'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
                             'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
                         ]
                     ],
@@ -253,6 +253,9 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_icon_effects_style_1' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .sa_addons_icon_effects_style_1 .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_1:hover' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_1:focus' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_icon_effects_style_1:active' => 'max-width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );

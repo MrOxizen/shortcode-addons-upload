@@ -8,7 +8,8 @@
     width: 100%;
     position: relative;
     max-width: 350px;
-    margin: 0 auto
+    margin: 0 auto;
+    display: flex;
 }
 
 .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-full {

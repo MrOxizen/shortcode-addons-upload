@@ -60,13 +60,7 @@ and open the template in the editor.
     width: 100%;
     height: 2px;
     background: #d90082;
-    content: "";
-    webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
-    -webkit-transform: scale(0.85);
-    -moz-transform: scale(0.85);
-    transform: scale(0.85)
+    content: "";  
 }
 
 .link-effect-main-style7 .oxi-links-effects-style7:hover::before,
@@ -93,13 +87,7 @@ and open the template in the editor.
         padding: 10px 10px;
         margin: 0px 0px
     }
-    .link-effect-main-style7 .oxi-links-effects-style7::before {
-        height: 2px
-    }
-    .link-effect-main-style7 .oxi-links-effects-style7::after {
-        width: 2px;
-        height: 2px
-    }
+  
 }
 
 @media only screen and (max-width:668px) {
@@ -108,10 +96,5 @@ and open the template in the editor.
         padding: 10px 10px;
         margin: 0px 0px
     }
-    .link-effect-main-style7 .oxi-links-effects-style7::before {
-        height: 2px
-    }
-    .link-effect-main-style7 .oxi-links-effects-style7::after {
-        height: 2px
-    }
+    
 }

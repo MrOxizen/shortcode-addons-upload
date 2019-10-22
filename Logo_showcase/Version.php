@@ -5,4 +5,4 @@
  * Checked By - Al-amin
  */
 
-return array('2.0.0', 'Creative Elements', true, 'fas fa-paperclip');
+return array('2.0.0', 'Content Elements', true,'fas fa-igloo'); 

@@ -106,7 +106,7 @@ class Style_2 extends Templates {
             </div>
             ';
             }
-            echo '<div class="' . OxiAddonsItemRows($styledata, 1) . ' ' . OxiAddonsAdminDefine($user) . ' ">
+            echo '<div class="' . OxiAddonsItemRows($styledata, 1) . '">
             <div class="oxi-addons-image-box-' . $oxiid . ' oxi-addons-image-box-' . $oxiid . '-' . $value['id'] . '" ' . OxiAddonsAnimation($styledata, 37) . '>
                 <div class="oxi-addons-image-image">
                     <div class="oxi-addons-image-content">

@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Elements_Frontend;
 class Info_image_boxes extends Elements_Frontend {
 
     public function pre_active() {
-        return array('style-1');
+        return array('Style_1','Style_2');
     }
 
     public function templates() {
