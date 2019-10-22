@@ -73,7 +73,7 @@ class Style_12 extends Templates {
 
 
 
-            echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' " >';
+            echo '<div class="  sa_ie_temp_style_12  ' . $this->column_render('sa-ac-column', $style) . ' " >';
             echo '<div class="sa_ie_temp_12 ihewc-hover-padding-12 oxi-m-width" ' . $this->animation_render('sa-ie-main-box-animation', $style) . '>
                 <div class="sa_for_margin">
                 ' . $valueurl1st . '

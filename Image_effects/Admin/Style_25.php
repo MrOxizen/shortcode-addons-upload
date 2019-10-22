@@ -99,7 +99,7 @@ class Style_25 extends AdminStyle {
                 'sa-ac-column', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => '',
+                '{{WRAPPER}} .sa_ie_temp_style_25' => '',
             ],
                 ]
         );
@@ -210,15 +210,15 @@ class Style_25 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                '{{WRAPPER}}   .ihewc-hover:hover,'
-                . ' .ihewc-hover:hover::before,'
-                . ' .ihewc-hover:hover::after,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure::before,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure::after, '
-                . '.ihewc-hover:hover .ihewc-hover-figure-caption, '
-                . '.ihewc-hover:hover .ihewc-hover-figure-caption::before,'
-                . ' .ihewc-hover:hover .ihewc-hover-figure-caption::after' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_25  .ihewc-hover:hover,'
+                . ' {{WRAPPER}} .ihewc-hover:hover::before,'
+                . ' {{WRAPPER}} .ihewc-hover:hover::after,'
+                . ' {{WRAPPER}} .ihewc-hover:hover .ihewc-hover-figure,'
+                . ' {{WRAPPER}} .ihewc-hover:hover .ihewc-hover-figure::before,'
+                . ' {{WRAPPER}} .ihewc-hover:hover .ihewc-hover-figure::after, '
+                . ' {{WRAPPER}} .ihewc-hover:hover .ihewc-hover-figure-caption, '
+                . ' {{WRAPPER}} .ihewc-hover:hover .ihewc-hover-figure-caption::before,'
+                . ' {{WRAPPER}} .ihewc-hover:hover .ihewc-hover-figure-caption::after' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -363,7 +363,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .sa_for_margin' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_25 .ihewc-hover-figure .ihewc-hover-figure-caption-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -393,7 +393,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 .sa_for_margin ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_25 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
