@@ -17,31 +17,32 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_6 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        $heading = $subheading = $details = $subdetails = $headersection = $footersection = '';
+        $name = $time = $address = $details = $subdetails = $headersection = $footersection = '';
         $css = '';
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
 
         foreach ($all_data as $key => $listitemdata) {
-//            echo '<pre>';
-//            print_r($this->url_render('sa_event_t_button_link',$listitemdata));
-//            echo '</pre>';
 
             if ($listitemdata['sa_event_t_name'] != '') {
-                $heading = '<div class="oxi-addons-EW-6-H">' . OxiAddonsTextConvert($listitemdata['sa_event_t_name']) . '</div>';
+                $name = '<div class="oxi-addons-EW-6-H">' . $this->text_render($listitemdata['sa_event_t_name']) . '</div>';
             }
             if ($listitemdata['sa_event_t_info_time'] != '') {
-                $subheading = '<div class="oxi-addons-EW-6-SH">' . OxiAddonsTextConvert($listitemdata['sa_event_t_info_time']) . '</div>';
+                $time = '<div class="oxi-addons-EW-6-T">' . $this->text_render($listitemdata['sa_event_t_info_time']) . '</div>';
+            }
+            if ($listitemdata['sa_event_t_info_address'] != '') {
+                $address = '<div class="oxi-addons-EW-6-AD">' . $this->text_render($listitemdata['sa_event_t_info_address']) . '</div>';
             }
             if ($listitemdata['sa_event_t_date'] != '') {
-                $details = '<div class="oxi-addons-EW-6-D">' . OxiAddonsTextConvert($listitemdata['sa_event_t_date']) . '</div>';
+                $details = '<div class="oxi-addons-EW-6-D">' . $this->text_render($listitemdata['sa_event_t_date']) . '</div>';
             }
             if ($listitemdata['sa_event_t_month'] != '') {
-                $subdetails = '  <div class="oxi-addons-EW-6-M">' . OxiAddonsTextConvert($listitemdata['sa_event_t_month']) . '</div>';
+                $subdetails = '  <div class="oxi-addons-EW-6-M">' . $this->text_render($listitemdata['sa_event_t_month']) . '</div>';
             }
-            if ($heading != '' || $subheading != '') {
-                $headersection = '<div class="oxi-addons-EW-6-content-box">
-                                          ' . $heading . '
-                                          ' . $subheading . '
+            if ($name != '' || $time != '' || $address != '') {
+                $headersection = '<div class="oxi-addons-EW-6-content-box"> 
+                                          ' . $name . '
+                                          ' . $time . '
+                                          ' . $address . '
                                         </div>';
             }
             if ($details != '' || $subdetails != '') {

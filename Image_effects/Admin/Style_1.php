@@ -19,10 +19,10 @@ class Style_1 extends AdminStyle {
 
     public function register_controls() {
 
-        
+
         $this->start_section_tabs(
                 'shortcode-addons-start-tabs', [
-             ]
+                ]
         );
 
         $this->start_section_devider();
@@ -207,7 +207,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
 
-         $this->add_control(
+        $this->add_control(
                 'sa-ie-link-opening', $this->style, [
             'label' => __('Link Opening', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
@@ -436,6 +436,7 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa-ie-title-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .sa_ie_temp_1 h3.ihewc-heading' => ''
             ],
@@ -449,32 +450,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_ie_heading_text_align', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_1 h3.ihewc-heading' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+
         $this->add_responsive_control(
                 'sa-ie-heading-side-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -506,8 +482,8 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-        
-        
+
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Descriptions Settings', SHORTCODE_ADDOONS),
@@ -550,6 +526,7 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa-ie-desc-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .sa_ie_temp_1 .ihewc-content' => ''
             ],
@@ -560,32 +537,6 @@ class Style_1 extends AdminStyle {
             'type' => Controls::TEXTSHADOW,
             'selector' => [
                 '{{WRAPPER}} .sa_ie_temp_1 .ihewc-content' => ''
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_ie_desc_text_align', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_1 .ihewc-content' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -620,7 +571,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->end_controls_section();
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Button Settings', SHORTCODE_ADDOONS),
@@ -630,6 +581,7 @@ class Style_1 extends AdminStyle {
         $this->add_group_control(
                 'sa-ie-button-side-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .sa_ie_temp_1 .img-btn.ihewc-button' => ''
             ],
@@ -903,7 +855,7 @@ class Style_1 extends AdminStyle {
 
 
 
-       
+
         $this->end_controls_section();
 
         $this->end_section_devider();

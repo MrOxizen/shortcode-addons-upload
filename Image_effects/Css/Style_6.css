@@ -31,7 +31,7 @@
 .sa_ie_temp_6:hover .ihewc-hover-figure-caption, 
 .sa_ie_temp_6:hover .ihewc-hover-figure-caption:before,
 .sa_ie_temp_6:hover .ihewc-hover-figure-caption:after{
-    background:rgba(0, 128, 255, 1);
+    /*background:rgba(0, 128, 255, 1);*/
 }
 .sa_ie_temp_6 .ihewc-hover-image:after{
     padding-bottom:74.857142857143%;
@@ -157,7 +157,7 @@
 }
 @media only screen and (max-width:668px){
     .ihewc-hover-padding{
-        padding:10px 0px 10px 10px ;
+        /*padding:10px 0px 10px 10px ;*/
     }
     .sa_ie_temp_6 .ihewc-hover-figure .ihewc-hover-figure-caption-content{
         padding:20px 20px 20px 20px ;

@@ -125,7 +125,7 @@ class Style_4 extends AdminStyle
                     ],
                 ], 
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__icon_main_style_4 .oxi_addons__icon_main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__icon_main_style_4' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );

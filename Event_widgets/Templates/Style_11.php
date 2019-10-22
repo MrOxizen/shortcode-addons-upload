@@ -20,7 +20,7 @@ class Style_11 extends Templates {
         $css = $media = '';
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
         $icon = $heading = $image = $content = $headersection = $bodysection = '';
-
+        $date = $month = $datemonthsection = $bottomsection = $addresstext = $button = $headingsection = '';
         foreach ($all_data as $key => $listitemdata) {
 
             if ($this->media_render('sa_event_t_media', $listitemdata) != '') {

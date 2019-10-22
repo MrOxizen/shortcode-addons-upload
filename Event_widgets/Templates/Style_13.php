@@ -22,76 +22,77 @@ class Style_13 extends Templates {
         $image = $details = $css = $title = $time = $location = $month = $day = $timeicon = $locicon = '';
         foreach ($all_data as $key => $listitemdata) {
 //       
-            if ($this->media_render('sa_event_t_media', $style) != '') {
-                $image = ' <div class="oxi-addons-image">
-                                <img class="oxi-image" src="' . $this->media_render('sa_event_t_media', $style) . '">
+            if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
+                $image = '  <div class="oxi-addons-image">
+                                <img class="oxi-image" src="' . $this->media_render('sa_event_t_media', $listitemdata) . '">
                             </div>';
             }
             if ($listitemdata['sa_event_t_title_link-url'] != '' && $listitemdata['sa_event_t_title'] != '') {
-                $title = '<div class="oxi-addons-title">
+                $title = '  <div class="oxi-addons-title">
                                 <a class="oxi-link" ' . $this->url_render('sa_event_t_title_link', $listitemdata) . '  > ' . $this->text_render($listitemdata['sa_event_t_title']) . '</a>
                             </div>';
             }if ($listitemdata['sa_event_t_title_link-url'] == '' && $listitemdata['sa_event_t_title'] != '') {
-                $title = '<div class="oxi-addons-title">
+                $title = '  <div class="oxi-addons-title ">
                                 ' . $this->text_render($listitemdata['sa_event_t_title']) . '
-                           </div>';
+                            </div>';
             }
             if ($listitemdata['sa_event_t_sd'] != '') {
                 $details = '<div class="oxi-addons-details">
                                 ' . $this->text_render($listitemdata['sa_event_t_sd']) . '
-                          </div>';
+                            </div>';
             }
             if ($listitemdata['sa_event_t_info_time_icon'] != '') {
                 $timeicon = $this->font_awesome_render($listitemdata['sa_event_t_info_time_icon']);
             }
 
             if ($listitemdata['sa_event_t_info_time'] != '') {
-                $time = '<div class="oxi-addons-time">
+                $time = '   <div class="oxi-addons-time">
                                 ' . $timeicon . '
-                            <span class="oxi-time-text"> ' . $this->text_render($listitemdata['sa_event_t_info_time']) . '</span>
-                        </div>';
+                                <span class="oxi-time-text"> ' . $this->text_render($listitemdata['sa_event_t_info_time']) . '</span>
+                            </div>';
             }
             if ($listitemdata['sa_event_t_address_icon'] != '') {
                 $locicon = $this->font_awesome_render($listitemdata['sa_event_t_address_icon']);
             }
             if ($listitemdata['sa_event_t_address'] != '') {
-                $location = ' <div class="oxi-addons-location"> 
-                                        ' . $locicon . '
-                                        <span class="oxi-location-text">  ' . $this->text_render($listitemdata['sa_event_t_address']) . '</span>
-                                     </div>';
+                $location = '   <div class="oxi-addons-location"> 
+                                    ' . $locicon . '
+                                    <span class="oxi-location-text">  ' . $this->text_render($listitemdata['sa_event_t_address']) . '</span>
+                                </div>';
             }
             if ($listitemdata['sa_event_t_month'] != '') {
-                $month = '<span class="oxi-addons-month"> 
-                                          ' . $this->text_render($listitemdata['sa_event_t_month']) . '
-                                    </span>';
+                $month = '  <span class="oxi-addons-month"> 
+                                ' . $this->text_render($listitemdata['sa_event_t_month']) . '
+                            </span>';
             }
             if ($listitemdata['sa_event_t_day'] != '') {
-                $day = '  <span class="oxi-addons-day">
-                            ' . $this->text_render($listitemdata['sa_event_t_day']) . '
-                          </span> ';
+                $day = '    <span class="oxi-addons-day">
+                                ' . $this->text_render($listitemdata['sa_event_t_day']) . '
+                            </span> ';
             }
             echo '      <div class="oxi-addons-wrapper-style-13 oxi-addons-wrapper-style-13-' . $key . '" >
-                          <div class="oxi-addons-parent-wrapper" ' . $this->animation_render('sa_event_widgets_animation', $style) . ' >
-                            <div class="oxi-addons-event-main  oxi-events-' . $key . '">
-                             <div class="oxi-addons-events" >
-                                <div class="oxi-addons-day-month">
-                                  <div class="oxi-addons-main-day-month">
-                                    ' . $day . '
-                                    ' . $month . '
-                                  </div>
+                            <div class="oxi-addons-parent-wrapper" ' . $this->animation_render('sa_event_widgets_animation', $style) . ' >
+                                <div class="oxi-addons-event-main  oxi-events-' . $key . '">
+                                    <div class="oxi-addons-events" >
+                                       <div class="oxi-addons-day-month">
+                                            <div class="oxi-addons-main-day-month">
+                                              ' . $day . '
+                                              ' . $month . '
+                                            </div>
+                                        </div>
+                                        <div class="oxi-addons-content-main">
+                                           ' . $title . '
+                                            <div class="oxi-addons-time-location">
+                                                ' . $time . '
+                                                ' . $location . '
+                                            </div>
+                                            ' . $details . '
+                                        </div>
+                                        ' . $image . '
+                                   </div>
                                 </div>
-                                <div class="oxi-addons-content-main">
-                                    ' . $title . '
-                                    <div class="oxi-addons-time-location">
-                                        ' . $time . '
-                                        ' . $location . '
-                                    </div>
-                                   ' . $details . '
-                                </div>
-                               ' . $image . '
                             </div>
-                        
-                    </div>';
+                        </div>';
         }
     }
 

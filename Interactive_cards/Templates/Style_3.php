@@ -159,6 +159,7 @@ class Style_3 extends Templates {
     public function inline_public_css() {
         $style = $this->style;
         $css = '';
+        
         if ($style['sa_interactive_cards_loader_style'] == 'style-1') {
 
             $css .= '       .oxi-addons-container .oxi-addons-Interactive-card-style-3 .oxi-addons-loading {

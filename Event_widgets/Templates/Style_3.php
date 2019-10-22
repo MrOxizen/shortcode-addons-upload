@@ -21,17 +21,9 @@ class Style_3 extends Templates {
         $css = '';
         
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
-        if ($style['sa_event-sa_event_widgets_tp_rib_pos'] == 'left') {
-            $pos = '   left : 0;';
-        } elseif ($style['sa_event-sa_event_widgets_tp_rib_pos'] == 'right') {
-            $pos = 'right: 0;';
-        } else {
-
-            $pos = '  right: 50%; transform: translateX(50%);';
-        }
         foreach ($all_data as $key => $listitemdata) {
             if ($listitemdata['sa_event_t_price'] != '') {
-                $price = '<div class="oxi-addons-EW-image-overlay-price-main">
+                $price = '<div class="oxi-addons-EW-image-overlay-price-main '.$style['sa_event_widgets_tp_rib_pos'].'">
                                 <div class="oxi-addons-EW-image-overlay-price">' . $this->text_render($listitemdata['sa_event_t_price']) . '</div>
                             </div>';
             }
@@ -64,8 +56,8 @@ class Style_3 extends Templates {
                                         ' . $details . '
                                     </div>';
             }
-            if($this->media_render('sa_event_t_media', $style) != ''){
-                $media = $this->media_render('sa_event_t_media', $style) ;
+            if($this->media_render('sa_event_t_media', $listitemdata) != ''){
+                $media = $this->media_render('sa_event_t_media', $listitemdata) ;
             } else {
                 $media = 'https://www.oxilab.org/wp-content/uploads/2018/12/violinist-in-the-autumn-forest.png';
                 

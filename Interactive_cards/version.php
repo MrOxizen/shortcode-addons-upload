@@ -1,8 +1,9 @@
 <?php
 /*
   Plugin Name: Shortcode Addons
-  Version: 1.5
+  Version: 2.0.0
+  Checked By Sabibur Rahman
  */
 
 
-return array(1.6, 'Creative Elements', true);
+return array('2.0.0', 'Creative Elements', true, 'far fa-credit-card');

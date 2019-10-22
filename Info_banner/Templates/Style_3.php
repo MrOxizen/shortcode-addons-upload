@@ -12,16 +12,30 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_3 extends Templates
-{
+class Style_3 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function inline_public_css() {
+        $style = $this->style;
+        if (array_key_exists('sa_info_banner_image_position', $style) && $style['sa_info_banner_image_position'] == 'left') {
+            $css = '.' . $this->WRAPPER . ' .oxi_addons__info_banner_style_3 .oxi_addons__image:hover {
+                        cursor: pointer;
+                        -o-transform: translate(-5%) !important;
+                        -moz-transform: translate(-5%) !important;
+                        -webkit-transform: translate(-5%) !important;
+                        transform: translate(-5%) !important;
+                        -ms-transform: translate(-5%) !important;
+                    }
+                ';
+            
+        }
+        return $css;
+    }
 
-        $heading = $sub_heading = $details =  $button  = $image_and_content = $line = $image = '';
+    public function default_render($style, $child, $admin) {
+
+        $heading = $sub_heading = $details = $button = $image_and_content = $line = $image = '';
 
         if (array_key_exists('sa_info_banner_heading_text', $style) && $style['sa_info_banner_heading_text'] != '') {
             $heading = '<' . $style['sa_info_banner_title_tag'] . ' class="oxi_addons__heading" ' . $this->animation_render('sa_info_banner_heading_animation', $style) . '>' . $this->text_render($style['sa_info_banner_heading_text']) . '</' . $style['sa_info_banner_title_tag'] . '>';
@@ -77,16 +91,7 @@ class Style_3 extends Templates
                             </div> 
                 </div> 
             ';
-            $this->CSSDATA .= '
-            .oxi_addons__info_banner_style_3 .oxi_addons__image:hover {
-                cursor: pointer;
-                -o-transform: translate(-5%) !important;
-                -moz-transform: translate(-5%) !important;
-                -webkit-transform: translate(-5%) !important;
-                transform: translate(-5%) !important;
-                -ms-transform: translate(-5%) !important;
-            }
-        ';  
+           
         } else {
             $image_and_content = '<div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12"> 
                                         <div class="oxi_addons__heading_line">
@@ -100,7 +105,6 @@ class Style_3 extends Templates
                                         </div> 
                             </div> 
             ' . $image . ' ';
-      
         }
         echo '<div class="oxi_addons__banner_wrapper"> 
                     <div class="oxi_addons__info_banner_style_3">  
@@ -109,15 +113,13 @@ class Style_3 extends Templates
         echo ' </div>';
     }
 
-
-    public function old_render()
-    {
+    public function old_render() {
         $styledata = $this->dbdata;
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
         $css = '';
-        $images = $column_1 = $heading_one = $heading_two = $detail = $button_left  = $main_button = $main_column = $transform = $hover_image = $line_position = '';
+        $images = $column_1 = $heading_one = $heading_two = $detail = $button_left = $main_button = $main_column = $transform = $hover_image = $line_position = '';
         if ($stylefiles[8] != '') {
             $images = '
                 <div class="oxi-addons-lg-col-2 oxi-addons-md-col-1 oxi-addons-xs-col-1 oxi-addons-hide-sm">
@@ -245,7 +247,7 @@ class Style_3 extends Templates
                     -webkit-transform: translate(-0%);
                     transform: translate(-0%);
                 ';
-        } elseif ($line[0]  == 'right') {
+        } elseif ($line[0] == 'right') {
             $line_position = '
                 right: 0%;
                 -o-transform: translate(-0%);
@@ -499,4 +501,5 @@ class Style_3 extends Templates
         }
         wp_add_inline_style('shortcode-addons-style', $css);
     }
+
 }
