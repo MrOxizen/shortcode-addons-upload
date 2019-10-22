@@ -28,6 +28,7 @@ class Style_10 extends Templates {
             $pos = '
                          right: 0;';
         }
+        $date = $month = $headinglink = $link = $timeicon = $timetext = $addresstext = $addressicon = $datemonthsection = '';
         foreach ($all_data as $key => $listitemdata) {
 
             if ($this->media_render('sa_event_t_media', $listitemdata) != '') {

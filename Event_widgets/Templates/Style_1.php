@@ -29,9 +29,6 @@ class Style_1 extends Templates {
             $pos = '  right: 50%; transform: translateX(50%);';
         }
         foreach ($all_data as $key => $listitemdata) {
-//            echo '<pre>';
-//            print_r($this->url_render('sa_event_t_button_link',$listitemdata));
-//            echo '</pre>';
             if ($listitemdata['sa_event_t_date'] != '') {
                 $date = '<div class="oxi-addons-EW-D-date">' . $this->text_render($listitemdata['sa_event_t_date']) . '</div>';
             }
@@ -77,7 +74,7 @@ class Style_1 extends Templates {
                                     -o-background-size: cover;
                                     background-size: cover;                            
                             ">
-                                <div class="oxi-addons-EW-image-date" style="'.$pos.'">
+                                <div class="oxi-addons-EW-image-date" style="' . $pos . '">
                                     <div class="oxi-addons-EW-image-date-table-cell">
                                         ' . $date . '
                                         ' . $month . '

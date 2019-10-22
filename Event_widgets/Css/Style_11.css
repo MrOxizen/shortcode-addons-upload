@@ -6,7 +6,8 @@
 }
 
 .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-row {
-    border-radius: 5px 5px 5px 5px
+    border-radius: 5px 5px 5px 5px;
+        overflow: hidden;
 }
 
 .oxi-addons-EW-11-wrapper-style-11 .oxi-addons-EW-11-fullbody {

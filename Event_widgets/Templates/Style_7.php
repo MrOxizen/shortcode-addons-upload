@@ -73,8 +73,8 @@ class Style_7 extends Templates {
                                               ' . $link . '
                                         </div>';
             }
-              if($this->media_render('sa_event_t_media', $style) != ''){
-                    $media = $this->media_render('sa_event_t_media', $style);
+              if($this->media_render('sa_event_t_media', $listitemdata) != ''){
+                    $media = $this->media_render('sa_event_t_media', $listitemdata);
             }else{
                     $media = 'https://www.oxilab.org/wp-content/uploads/2019/01/fireworks-846063_1920.jpg';
                 

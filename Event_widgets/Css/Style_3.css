@@ -27,16 +27,22 @@
 
 .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-price-main {
     position: absolute;
-    right: -60px;
     top: -60px;
     background-color: #ff5c5c;
     width: 120px;
     height: 120px;
     display: flex;
     justify-content: center;
-    transform: rotate(45deg)
 }
-
+.oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-price-main.sa_ribon_right {
+    right: -60px;
+    transform: rotate(45deg)
+    
+}
+.oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-price-main.sa_ribon_left {
+    left: -60px;
+    transform: rotate(-45deg)
+}
 .oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-image-overlay-price {
     color: #fff;
     display: flex;
@@ -146,11 +152,9 @@
     margin: 0px 0px 0px 0px
 }
 
-.oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:hover,
-.oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:focus,
-.oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:active {
-    background-color: #ffffff !important;
-    color: #000000 !important
+.oxi-addons-EW-wrapper-style-3 .oxi-addons-EW-body-button-link:hover{
+    background-color: #ffffff;
+    color: #000000;
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
