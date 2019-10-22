@@ -230,12 +230,12 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 10,
+                'size' => 0,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 150,
                     'step' => 1,
                 ],
                 '%' => [
@@ -260,12 +260,12 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 12,
+                'size' => 50,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 150,
                     'step' => 1,
                 ],
                 '%' => [

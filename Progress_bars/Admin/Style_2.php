@@ -231,7 +231,7 @@ class Style_2 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 '%' => [
@@ -261,7 +261,7 @@ class Style_2 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 '%' => [

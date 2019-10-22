@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Elements_Frontend;
 class Price_Table extends Elements_Frontend {
 
     public function pre_active() {
-        return array('Style_1','Style_2','Style_3');
+        return array('Style_1','Style_2','Style_3','Style_4');
     }
 
     public function templates() {
