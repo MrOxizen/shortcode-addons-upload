@@ -98,7 +98,7 @@ class Style_17 extends AdminStyle {
                 'sa-ac-column', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => '',
+                '{{WRAPPER}} .sa_ie_temp_style_17' => '',
             ],
                 ]
         );
@@ -208,15 +208,15 @@ class Style_17 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_17:hover,'
-                . ' {{WRAPPER}} .sa_ie_temp_17:hover:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_17 .ihewc-hover:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_17:hover .ihewc-hover-figure,'
-                . ' {{WRAPPER}} .sa_ie_temp_17:hover .ihewc-hover-figure:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_17:hover .ihewc-hover-figure:after,'
-                . ' {{WRAPPER}} .sa_ie_temp_17:hover .ihewc-hover-figure-caption,'
-                . ' {{WRAPPER}} .sa_ie_temp_17:hover .ihewc-hover-figure-caption:before,'
-                . ' {{WRAPPER}} .sa_ie_temp_17:hover .ihewc-hover-figure-caption:after' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_for_margin:hover,'
+                . ' {{WRAPPER}} .sa_for_margin:hover:before,'
+                . ' {{WRAPPER}} .sa_for_margin .ihewc-hover:before,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure:before,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure:after,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption:before,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption:after' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -361,7 +361,7 @@ class Style_17 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_17 .sa_for_margin' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_17 .ihewc-hover-figure .ihewc-hover-figure-caption-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -391,7 +391,7 @@ class Style_17 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_17 .sa_for_margin ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_17 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );

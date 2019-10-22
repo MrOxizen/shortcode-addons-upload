@@ -99,7 +99,7 @@ class Style_20 extends AdminStyle {
                 'sa-ac-column', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => '',
+                '{{WRAPPER}} .sa_ie_temp_style_20' => '',
             ],
                 ]
         );
@@ -204,11 +204,11 @@ class Style_20 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_20:hover,'
-                . ' {{WRAPPER}} .sa_ie_temp_20 .ihewc-hover::before,'
-                . ' {{WRAPPER}} .sa_ie_temp_20 .ihewc-hover::after,'
-                . ' {{WRAPPER}} .sa_ie_temp_20:hover .ihewc-hover-figure-caption::before,'
-                . ' {{WRAPPER}} .sa_ie_temp_20:hover .ihewc-hover-figure-caption::after' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_for_margin:hover,'
+                . ' {{WRAPPER}} .sa_for_margin .ihewc-hover::before,'
+                . ' {{WRAPPER}} .sa_for_margin .ihewc-hover::after,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption::before,'
+                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption::after' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -353,7 +353,7 @@ class Style_20 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_20 .sa_for_margin' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_20 .ihewc-hover-figure .ihewc-hover-figure-caption-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -383,7 +383,7 @@ class Style_20 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_20 .sa_for_margin ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_20 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
