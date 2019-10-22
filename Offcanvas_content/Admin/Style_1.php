@@ -57,6 +57,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Button Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
                 'default' => 'Click Me',
+                'loader'=>TRUE,
             ]
         );
 
