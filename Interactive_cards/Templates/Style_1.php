@@ -133,10 +133,11 @@ class Style_1 extends Templates {
         }
         return $jquery;
     }
-   
+
     public function inline_public_css() {
         $style = $this->style;
-        $css  = '';
+        $css = '';
+       
         if ($style['sa_interactive_cards_loader_style'] == 'style-1') {
 
             $css .= '       .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-loading {
@@ -147,7 +148,7 @@ class Style_1 extends Templates {
                                 width: 1rem;
                                 height: 1rem;
                                 margin: 2rem 0.3rem;
-                                background: ' . $style['sa_interactive_cards_loader_color'] . ';
+                                background: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
                                 border-radius: 50%;
                                 -webkit-animation: 0.9s oxi_bounce infinite alternate;
                                         animation: 0.9s oxi_bounce infinite alternate;
@@ -199,19 +200,19 @@ class Style_1 extends Templates {
                                         animation: 2s oxi_fancy infinite alternate;
                                     }
                                     .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(1) {
-                                        border-left-color: ' . $style['sa_interactive_cards_loader_color'] . ';
-                                        border-right-color: ' . $style['sa_interactive_cards_loader_color'] . ';
+                                        border-left-color: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
+                                        border-right-color: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
                                     }
                                     .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(2) {
-                                        border-top-color: ' . $style['sa_interactive_cards_loader_color'] . ';
-                                        border-bottom-color: ' . $style['sa_interactive_cards_loader_color'] . ';
+                                        border-top-color: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
+                                        border-bottom-color: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
                                         -webkit-animation-delay: 1s;
                                         animation-delay: 1s;
                                     }
                                     .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-fancy-spinner div.oxi-addons-dot {
                                         width: 1rem;
                                         height: 1rem;
-                                        background: ' . $style['sa_interactive_cards_loader_color'] . ';
+                                        background: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
                                     }
 
                                     @-webkit-keyframes oxi_fancy {
@@ -241,7 +242,7 @@ class Style_1 extends Templates {
                                          width: 5rem;
                                          height: 5rem;
                                          border-radius: 50%;
-                                         border: 0.3rem solid ' . $style['sa_interactive_cards_loader_color'] . ';
+                                         border: 0.3rem solid ' . $style['sa_interactive_cards_loader_color'] . ' !important;
                                          -webkit-animation: 1.5s oxi_ripple infinite;
                                                  animation: 1.5s oxi_ripple infinite;
                                        }
@@ -283,12 +284,12 @@ class Style_1 extends Templates {
                                      margin: 5rem;
                                      border-radius: 50%;
                                      border: 0.3rem solid rgba(151, 159, 208, 0.3);
-                                     border-top-color: ' . $style['sa_interactive_cards_loader_color'] . ';
+                                     border-top-color: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
                                      -webkit-animation: 1.5s oxi_spin infinite linear;
                                              animation: 1.5s oxi_spin infinite linear;
                                    }
                                     .oxi-addons-container .oxi-addons-Interactive-card-style-1 .oxi-addons-donut.oxi-addons-multi {
-                                     border-bottom-color: ' . $style['sa_interactive_cards_loader_color'] . ';
+                                     border-bottom-color: ' . $style['sa_interactive_cards_loader_color'] . ' !important;
                                    }
 
                                    @-webkit-keyframes oxi_spin {
