@@ -395,7 +395,7 @@ class Style_2 extends AdminStyle {
                 ]
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon ' => '-webkit-filter : {{SIZE}}{{UNIT}}; filter : {{SIZE}}{{UNIT}}; '
+                '{{WRAPPER}} .oxi-addons-single-image-container-style-2 .oxi-addons-single-image-ribbon ' => 'width : {{SIZE}}{{UNIT}}; '
             ],
                 ]
         );

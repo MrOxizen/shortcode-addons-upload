@@ -395,7 +395,7 @@ class Style_3 extends AdminStyle {
                 ]
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-3 .oxi-addons-single-image-ribbon ' => '-webkit-filter : {{SIZE}}{{UNIT}}; filter : {{SIZE}}{{UNIT}}; '
+                '{{WRAPPER}} .oxi-addons-single-image-container-style-3 .oxi-addons-single-image-ribbon ' => 'width : {{SIZE}}{{UNIT}}; '
             ],
                 ]
         );
@@ -535,6 +535,7 @@ class Style_3 extends AdminStyle {
             'label' => __('Button text', SHORTCODE_ADDOONS),
             'type' => Controls::TEXT,
             'default' => 'Button text',
+                    'loader'=>TRUE,
             'placeholder' => 'Button text',
                 ]
         );

@@ -338,7 +338,7 @@ class Style_4 extends AdminStyle {
             'min' => 0,
             'step' => '0.1',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-single-image-container-style-4 .oxi-addons-single-image-ribbon' => 'transition: transform {{VALUE}}s;',
+                '{{WRAPPER}} .oxi-addons-single-image-container-style-4 .oxi-addons-single-image img' => 'transition: transform {{VALUE}}s;',
             ]
                 ]
         );
