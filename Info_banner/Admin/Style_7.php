@@ -140,17 +140,7 @@ class Style_7 extends AdminStyle
             ]
         );
 
-        $this->add_group_control(
-            'sa_addons_info_banner_column',
-            $this->style,
-            [
-                'type' => Controls::COLUMN,
-                'default' => 'oxi-bt-col-lg-4',
-                'selector' => [
-                    '{{WRAPPER}} .oxi-info-banner-style-7-static' => '',
-                ],
-            ]
-        );
+        
         $this->add_control(
             'sa_addons_info_banner_bg',
             $this->style,

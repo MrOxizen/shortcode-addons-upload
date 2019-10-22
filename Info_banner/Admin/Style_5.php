@@ -108,7 +108,7 @@ class Style_5 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#2652e3', 
                         'selector' => [
-                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .icon-{{KEY}}' => 'color:{{VALUE}};'
+                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .oxi_addons__icon.icon-{{KEY}} .oxi-icons' => 'color:{{VALUE}};'
                         ],
                     ],
                     'sa_info_banner_icon_bg_color' => [
@@ -117,14 +117,14 @@ class Style_5 extends AdminStyle
                         'oparetor' => 'RGB',
                         'default' => '#fff', 
                         'selector' => [
-                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .icon-{{KEY}}' => 'color:{{VALUE}};'
+                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .oxi_addons__icon.icon-{{KEY}}' => 'background:{{VALUE}};'
                         ],
                     ],
                     'sa_info_banner_icon_border' => [ 
                         'type' => Controls::BORDER,  
                         'controller' => 'add_group_control',
                         'selector' => [
-                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .icon-{{KEY}}' => ''
+                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .oxi_addons__icon.icon-{{KEY}}' => ''
                         ],
                     ],
 
@@ -132,9 +132,7 @@ class Style_5 extends AdminStyle
                         'label' => esc_html__('Title', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT, 
                         'default' => esc_html__('What is Lorem Ipsum? ', SHORTCODE_ADDOONS),
-                        'selector' => [
-                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .title-{{KEY}}' => '',
-                        ],
+                       
                         'separator' => TRUE,
                     ],
                     'sa_info_banner_title_color' => [
@@ -142,7 +140,7 @@ class Style_5 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#fff', 
                         'selector' => [
-                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .title-{{KEY}}' => 'color:{{VALUE}};',
+                            '{{WRAPPER}} .oxi_addons__info_banner_content_style_5 .oxi_addons__title.title-{{KEY}}' => 'color:{{VALUE}};',
                         ],
                     ],
                      
