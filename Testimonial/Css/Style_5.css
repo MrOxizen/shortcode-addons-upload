@@ -170,9 +170,6 @@
         padding: 15px 10px 20px 10px;
         border-radius: 5px 5px 5px 5px
     }
-    .oxi-testimonials-five-padding .oxi-testimonials-style-five-info:after {
-        left: 10px
-    }
     .oxi-testimonials-five-padding .oxi-addonsdata-right .oxi-testimonials-style-five-info:after {
         right: 10px
     }
@@ -205,9 +202,6 @@
         margin: 10px 0px 10px 0px;
         padding: 15px 10px 20px 10px;
         border-radius: 5px 5px 5px 5px
-    }
-    .oxi-testimonials-five-padding .oxi-testimonials-style-five-info:after {
-        left: 10px
     }
     .oxi-testimonials-five-padding .oxi-addonsdata-right .oxi-testimonials-style-five-info:after {
         right: 10px
