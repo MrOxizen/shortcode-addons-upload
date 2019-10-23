@@ -77,7 +77,7 @@ class Style_20 extends AdminStyle {
                             'oparetor' => 'RGB',
                             'default' => 'rgba(59,89,153,0.00)',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20' => 'background:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-20.oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20' => 'background:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -90,7 +90,7 @@ class Style_20 extends AdminStyle {
                             'oparetor' => 'RGB',
                             'default' => 'rgba(92, 92, 92, 1)',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20:hover ' => 'background:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-20.oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20:hover ' => 'background:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -101,7 +101,7 @@ class Style_20 extends AdminStyle {
                             'type' => Controls::BOXSHADOW,
                             'controller' => 'add_group_control',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20' => ''
+                                '{{WRAPPER}} .oxi-addons-social-style-20.oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20' => ''
                             ], 'condition' => [
                                 'sa_social_icons_box_shadow_view' => 'separately'
                             ]
@@ -110,7 +110,7 @@ class Style_20 extends AdminStyle {
                             'type' => Controls::BOXSHADOW,
                             'controller' => 'add_group_control',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20:hover' => ''
+                                '{{WRAPPER}} .oxi-addons-social-style-20.oxi-addons-social-style-20-{{KEY}} a.oxi-icon-style-20:hover' => ''
                             ], 'condition' => [
                                 'sa_social_icons_h_box_shadow_view' => 'separately'
                             ]

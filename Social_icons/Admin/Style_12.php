@@ -77,7 +77,7 @@ class Style_12 extends AdminStyle {
                             'oparetor' => 'RGB',
                             'default' => 'rgba(59,89,153,1.00)',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-12-{{KEY}} a.oxi-icon-style-12' => 'background:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-12-{{KEY}} a.oxi-icon-style-12::after' => 'background:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -90,7 +90,7 @@ class Style_12 extends AdminStyle {
                             'oparetor' => 'RGB',
                             'default' => 'rgba(92, 92, 92, 1)',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-12-{{KEY}} a.oxi-icon-style-12:hover ' => 'background:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-12-{{KEY}}  a.oxi-icon-style-12:hover::after ' => 'background:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [

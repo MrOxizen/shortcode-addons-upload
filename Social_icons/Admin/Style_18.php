@@ -52,7 +52,7 @@ class Style_18 extends AdminStyle {
                             'type' => Controls::COLOR,
                             'default' => '#8500c2',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18 .oxi-icons' => 'color:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-18.oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18 .oxi-icons' => 'color:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -64,7 +64,7 @@ class Style_18 extends AdminStyle {
                             'type' => Controls::COLOR,
                             'default' => '#fff',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18:hover .oxi-icons' => 'color:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-18.oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18:hover .oxi-icons' => 'color:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -77,7 +77,7 @@ class Style_18 extends AdminStyle {
                             'oparetor' => 'RGB',
                             'default' => 'rgba(59,89,153,0.00)',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18' => 'background:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-18.oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18' => 'background:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -90,7 +90,7 @@ class Style_18 extends AdminStyle {
                             'oparetor' => 'RGB',
                             'default' => 'rgba(92, 92, 92, 1)',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18:hover ' => 'background:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-18.oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18:hover ' => 'background:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -101,7 +101,7 @@ class Style_18 extends AdminStyle {
                             'type' => Controls::BOXSHADOW,
                             'controller' => 'add_group_control',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18' => ''
+                                '{{WRAPPER}} .oxi-addons-social-style-18.oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18' => ''
                             ], 'condition' => [
                                 'sa_social_icons_box_shadow_view' => 'separately'
                             ]
@@ -110,7 +110,7 @@ class Style_18 extends AdminStyle {
                             'type' => Controls::BOXSHADOW,
                             'controller' => 'add_group_control',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18:hover' => ''
+                                '{{WRAPPER}} .oxi-addons-social-style-18.oxi-addons-social-style-18-{{KEY}} a.oxi-icon-style-18:hover' => ''
                             ], 'condition' => [
                                 'sa_social_icons_h_box_shadow_view' => 'separately'
                             ]

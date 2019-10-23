@@ -26,10 +26,7 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        $icon_weight = $visibility_icon = '';
-        $icon_weight .= ($style['sa_datatable_select_icon_type'] == 'regular') ? 'font-weight: 500;' : 'font-weight: 900;';
-        $visibility_icon .= ($style['sa_datatable_table_head_asc_desc'] == 'yes') ? 'display: block;' : 'display: none;';
-       
+     
         echo ' <div class="oxi-addons-wrapper-datatable-style-1">
                 <table class="table oxi-addons-datatable-style-1" id="datatables">
                     <thead>
@@ -72,24 +69,7 @@ class Style_1 extends Templates
 
             echo '</tr>';
         }
-        $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 .oxi_show_entries_label::before {
-            content: "\\' . $this->text_render($this->style['sa_datatable_select_icon'] != '' ? $this->style['sa_datatable_select_icon'] : '') . '" !important;
-            ' . $icon_weight . ';
-            bottom: ' . (($style['sa_datatable_select_icon_height-size'] / 2) - 5) . 'px !important;
-        }.' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:after,
-        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:after,
-        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:after,
-        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after{
-            content: "\\' . $this->text_render($this->style['sa_datatable_ascending_icon'] != '' ? $this->style['sa_datatable_ascending_icon'] : '') . '" !important;
-          '.$visibility_icon.'
-        }.' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
-        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:before,
-        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:before,
-        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before{
-        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before{
-            content: "\\' . $this->text_render($this->style['sa_datatable_desc_icon'] != '' ? $this->style['sa_datatable_desc_icon'] : '') . '" !important;
-          '.$visibility_icon.'
-        }';
+
         echo '      </tbody>
                  </table>
                  
@@ -104,71 +84,95 @@ class Style_1 extends Templates
 
     public function inline_public_css()
     {
+
         $style = $this->style;
+        $icon_weight = $visibility_icon = '';
+        $icon_weight .= ($style['sa_datatable_select_icon_type'] == 'regular') ? 'font-weight: 500;' : 'font-weight: 900;';
+        $visibility_icon .= ($style['sa_datatable_table_head_asc_desc'] == 'yes') ? 'display: block;' : 'display: none;';
+        
+
+        $this->CSSDATA .= '.' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 .oxi_show_entries_label::before {
+            content: "\\' . $this->text_render($this->style['sa_datatable_select_icon'] != '' ? $this->style['sa_datatable_select_icon'] : '') . '" !important;
+            ' . $icon_weight . ';
+            bottom: ' . (($style['sa_datatable_select_icon_height-size'] / 2) - 5) . 'px !important;
+        }.' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:after,
+        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:after,
+        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:after,
+        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after{
+            content: "\\' . $this->text_render($this->style['sa_datatable_ascending_icon'] != '' ? $this->style['sa_datatable_ascending_icon'] : '') . '" !important;
+          ' . $visibility_icon . '
+        }.' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
+        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:before,
+        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:before,
+        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before{
+        .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before{
+            content: "\\' . $this->text_render($this->style['sa_datatable_desc_icon'] != '' ? $this->style['sa_datatable_desc_icon'] : '') . '" !important;
+          ' . $visibility_icon . '
+        }';
     }
 
     public function inline_public_jquery()
-    { 
+    {
         $style = $this->style;
         $jquery = '';
         $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-datatable-style-1").DataTable({
             responsive: true, 
             dom: "lBfrtip", 
-            buttons: ['; 
-            if ($style['sa_datatable_export_pdf'] == 'yes') {
-                $jquery .= '"pdf",';
-            }
-            if ($style['sa_datatable_export_excel'] == 'yes') {
-                $jquery .= '"excel",';
-            }
-            if ($style['sa_datatable_export_copy'] == 'yes') {
-                $jquery .= '"copy",';
-            }
-            if ($style['sa_datatable_export_print'] == 'yes') {
-                $jquery .= '"print",';
-            }
-            if ($style['sa_datatable_export_csv'] == 'yes') {
-                $jquery .= '"csv",';
-            } 
-            $jquery .= ' ],  ';
-            if ($style['sa_datatable_show_entries_item'] == '5') {
-                $jquery .= 'pageLength : 5,';
-            } elseif ($style['sa_datatable_show_entries_item'] == '10') {
-                $jquery .= 'pageLength : 10,';
-            } elseif ($style['sa_datatable_show_entries_item'] == '20') {
-                $jquery .= 'pageLength : 20,';
-            } elseif ($style['sa_datatable_show_entries_item'] == '30') {
-                $jquery .= 'pageLength : 30,';
-            } elseif ($style['sa_datatable_show_entries_item'] == '50') {
-                $jquery .= 'pageLength : 50,';
-            } elseif ($style['sa_datatable_show_entries_item'] == '80') {
-                $jquery .= 'pageLength : 80,';
-            } elseif ($style['sa_datatable_show_entries_item'] == '100') {
-                $jquery .= 'pageLength : 100,';
-            }
-            $jquery .= '  
+            buttons: [';
+        if ($style['sa_datatable_export_pdf'] == 'yes') {
+            $jquery .= '"pdf",';
+        }
+        if ($style['sa_datatable_export_excel'] == 'yes') {
+            $jquery .= '"excel",';
+        }
+        if ($style['sa_datatable_export_copy'] == 'yes') {
+            $jquery .= '"copy",';
+        }
+        if ($style['sa_datatable_export_print'] == 'yes') {
+            $jquery .= '"print",';
+        }
+        if ($style['sa_datatable_export_csv'] == 'yes') {
+            $jquery .= '"csv",';
+        }
+        $jquery .= ' ],  ';
+        if ($style['sa_datatable_show_entries_item'] == '5') {
+            $jquery .= 'pageLength : 5,';
+        } elseif ($style['sa_datatable_show_entries_item'] == '10') {
+            $jquery .= 'pageLength : 10,';
+        } elseif ($style['sa_datatable_show_entries_item'] == '20') {
+            $jquery .= 'pageLength : 20,';
+        } elseif ($style['sa_datatable_show_entries_item'] == '30') {
+            $jquery .= 'pageLength : 30,';
+        } elseif ($style['sa_datatable_show_entries_item'] == '50') {
+            $jquery .= 'pageLength : 50,';
+        } elseif ($style['sa_datatable_show_entries_item'] == '80') {
+            $jquery .= 'pageLength : 80,';
+        } elseif ($style['sa_datatable_show_entries_item'] == '100') {
+            $jquery .= 'pageLength : 100,';
+        }
+        $jquery .= '  
                 lengthMenu: [5, 10, 20, 30, 50, 80, 100], ';
-            if ($style['sa_datatable_show_entries_switter'] == 'yes') {
-                $jquery .= '"lengthChange": true,';
-            } else {
-                $jquery .= '"lengthChange": false,';
-            }
-            if ($style['sa_datatable_search_box_switter'] == 'yes') {
-                $jquery .= '"bFilter": true,';
-            } else {
-                $jquery .= '"bFilter": false,';
-            }
-            if ($style['sa_datatable_info_show_entries_switter'] == 'yes') {
-                $jquery .= '"bInfo": true,';
-            } else {
-                $jquery .= '"bInfo": false,';
-            }
-            if ($style['sa_datatable_previous_next_switter'] == 'yes') {
-                $jquery .= '"bPaginate": true, ';
-            } else {
-                $jquery .= '"bPaginate": false, ';
-            }
-            $jquery .= '});'; 
+        if ($style['sa_datatable_show_entries_switter'] == 'yes') {
+            $jquery .= '"lengthChange": true,';
+        } else {
+            $jquery .= '"lengthChange": false,';
+        }
+        if ($style['sa_datatable_search_box_switter'] == 'yes') {
+            $jquery .= '"bFilter": true,';
+        } else {
+            $jquery .= '"bFilter": false,';
+        }
+        if ($style['sa_datatable_info_show_entries_switter'] == 'yes') {
+            $jquery .= '"bInfo": true,';
+        } else {
+            $jquery .= '"bInfo": false,';
+        }
+        if ($style['sa_datatable_previous_next_switter'] == 'yes') {
+            $jquery .= '"bPaginate": true, ';
+        } else {
+            $jquery .= '"bPaginate": false, ';
+        }
+        $jquery .= '});';
 
         $jquery .= 'jQuery(".oxi-addons-wrapper-datatable-style-1 .dataTables_length").addClass("oxi_datatable_length");
         jQuery(".oxi-addons-wrapper-datatable-style-1 .dataTables_length > label").addClass("oxi_show_entries_label");
@@ -181,7 +185,7 @@ class Style_1 extends Templates
         jQuery(".oxi-addons-datatable-style-1 > thead > tr").addClass("oxi_datatable_tr");
         jQuery(".oxi-addons-datatable-style-1 > thead > tr > th").addClass("oxi_datatable_th");
         jQuery(".oxi-addons-datatable-style-1 > tbody").addClass("oxi_datatable_body");';
-            
+
         return $jquery;
     }
 

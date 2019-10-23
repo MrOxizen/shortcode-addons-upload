@@ -5,4 +5,4 @@
  * checked by - Al-amin
  */
 
-return array('2.0.0', 'Content Elements', true, 'fas fa-hamburger');
+return array('2.0.0', 'Marketing Elements', true, 'fas fa-hamburger');

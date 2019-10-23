@@ -90,7 +90,7 @@ class Style_15 extends AdminStyle {
                             'oparetor' => 'RGB',
                             'default' => 'rgba(92, 92, 92, 1)',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-15-{{KEY}} a.oxi-icon-style-15:hover ' => 'background:{{VALUE}};',
+                                '{{WRAPPER}} .oxi-addons-social-style-15-{{KEY}} a.oxi-icon-style-15:hover::after ' => 'background:{{VALUE}};',
                             ],
                             'conditional' => Controls::OUTSIDE,
                             'condition' => [
@@ -101,7 +101,7 @@ class Style_15 extends AdminStyle {
                             'type' => Controls::BOXSHADOW,
                             'controller' => 'add_group_control',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-15-{{KEY}} a.oxi-icon-style-15' => ''
+                                '{{WRAPPER}} .oxi-addons-social-style-15.oxi-addons-social-style-15-{{KEY}} a.oxi-icon-style-15' => ''
                             ], 'condition' => [
                                 'sa_social_icons_box_shadow_view' => 'separately'
                             ]
@@ -110,7 +110,7 @@ class Style_15 extends AdminStyle {
                             'type' => Controls::BOXSHADOW,
                             'controller' => 'add_group_control',
                             'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-15-{{KEY}} a.oxi-icon-style-15:hover' => ''
+                                '{{WRAPPER}} .oxi-addons-social-style-15.oxi-addons-social-style-15-{{KEY}}  a.oxi-icon-style-15:hover' => ''
                             ], 'condition' => [
                                 'sa_social_icons_h_box_shadow_view' => 'separately'
                             ]
