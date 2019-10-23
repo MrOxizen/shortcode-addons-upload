@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle
+class Style_2 extends AdminStyle
 {
 
     public function register_controls()
@@ -84,7 +84,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::BACKGROUND,
                 'loader' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1' => '',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2' => '',
                 ],
             ]
         );
@@ -116,7 +116,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper ' => 'width: {{SIZE}}{{UNIT}} !imaportant;'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper ' => 'width: {{SIZE}}{{UNIT}} !imaportant;'
                 ],
             ]
         );
@@ -149,7 +149,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -181,7 +181,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -192,7 +192,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2' => ''
                 ],
             ]
         );
@@ -238,7 +238,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY, 
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => ''
                 ],
             ]
         );
@@ -250,7 +250,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -263,7 +263,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(79, 173, 255, 1)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -274,7 +274,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => ''
                 ],
             ]
         );
@@ -306,7 +306,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -369,10 +369,10 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:after,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:after,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:after,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after' => 'font-size: {{SIZE}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:after,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:after,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:after,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after' => 'font-size: {{SIZE}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -384,10 +384,10 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:after' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:after' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:after' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:after' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:after' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:after' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after' => 'color: {{VALUE}} !important;',
 
                 ],
             ]
@@ -420,10 +420,10 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -467,11 +467,11 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before' => 'font-size: {{SIZE}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before' => 'font-size: {{SIZE}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -483,11 +483,11 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before,
-                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before,
+                {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -519,11 +519,11 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
-                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:before,
-                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:before,
-                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before,
-                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:before,
+                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:before,
+                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:before,
+                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before,
+                    {{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -547,7 +547,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY, 
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_body > tr > td' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .table.dataTable .oxi_datatable_body > tr > td' => ''
                 ],
             ]
         );
@@ -557,7 +557,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_body > tr > td' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .table.dataTable .oxi_datatable_body > tr > td' => ''
                 ],
             ]
         );
@@ -589,7 +589,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_body > tr > td' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .table.dataTable .oxi_datatable_body > tr > td' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -620,7 +620,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .even td' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .even td' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -633,7 +633,7 @@ class Style_1 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(83,181,184,1.00)',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .even td' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .even td' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -648,7 +648,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .odd td' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .odd td' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -661,7 +661,7 @@ class Style_1 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(83,181,184,1.00)',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 table.dataTable .odd td' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .odd td' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -734,8 +734,8 @@ class Style_1 extends AdminStyle
                     'sa_datatable_show_entries_switter' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length > .oxi_show_entries_label' => '',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length > .oxi_show_entries_label' => '',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => ''
                 ],
             ]
         );
@@ -750,7 +750,7 @@ class Style_1 extends AdminStyle
                     'sa_datatable_show_entries_switter' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length > .oxi_show_entries_label' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length > .oxi_show_entries_label' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -785,7 +785,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -853,7 +853,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [ 
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -885,7 +885,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -917,7 +917,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -930,7 +930,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#949494',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -943,7 +943,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(255,255,255,1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -953,7 +953,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => ''
                 ],
             ]
         );
@@ -985,7 +985,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1079,7 +1079,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY, 
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => ''
                 ],
             ]
         );
@@ -1101,7 +1101,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#4a4a4a',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1114,7 +1114,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(255,255,255,1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1124,7 +1124,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => ''
                 ],
             ]
         );
@@ -1138,7 +1138,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#f7f7f7',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button:hover' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1151,7 +1151,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(90,186,189,1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button:hover' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button:hover' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1161,7 +1161,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button:hover' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button:hover' => ''
                 ],
             ]
         );
@@ -1196,7 +1196,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1228,7 +1228,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1260,7 +1260,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1296,7 +1296,7 @@ class Style_1 extends AdminStyle
                     'sa_datatable_info_show_entries_switter' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_info' => ''
                 ],
             ]
         );
@@ -1312,7 +1312,7 @@ class Style_1 extends AdminStyle
                     'sa_datatable_info_show_entries_switter' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_info' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1349,7 +1349,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1386,7 +1386,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY, 
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter > .oxi_filter_label' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter > .oxi_filter_label' => ''
                 ],
             ]
         );
@@ -1399,7 +1399,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#4a4a4a',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter > .oxi_filter_label' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter > .oxi_filter_label' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1433,7 +1433,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter > .oxi_filter_label' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter > .oxi_filter_label' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1474,7 +1474,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => 'font-size: {{SIZE}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => 'font-size: {{SIZE}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -1506,7 +1506,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => 'width: {{SIZE}}{{UNIT}} !important',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => 'width: {{SIZE}}{{UNIT}} !important',
                 ],
             ]
         );
@@ -1538,7 +1538,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => 'height: {{SIZE}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => 'height: {{SIZE}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -1550,7 +1550,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#9e9e9e',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1563,7 +1563,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(255,255,255,1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1573,7 +1573,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => ''
                 ],
             ]
         );
@@ -1606,7 +1606,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1616,7 +1616,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter  .oxi_filter_input' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter  .oxi_filter_input' => ''
                 ],
             ]
         );
@@ -1649,8 +1649,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY, 
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next' => '',
-                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next' => '',
+                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous' => ''
                 ],
             ]
         );
@@ -1672,10 +1672,10 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#4a4a4a',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1689,8 +1689,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#4a4a4a',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1703,8 +1703,8 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(255,255,255,1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'background-color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1738,8 +1738,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1761,7 +1761,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY, 
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => ''
                 ],
             ]
         );
@@ -1784,7 +1784,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#969696',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1797,7 +1797,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(235,235,235,1.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1807,7 +1807,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => ''
                 ],
             ]
         );
@@ -1821,7 +1821,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button:hover' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1834,7 +1834,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(79, 173, 255, 1)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button:hover' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button:hover' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -1844,7 +1844,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button:hover' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button:hover' => ''
                 ],
             ]
         );
@@ -1858,8 +1858,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current' => 'color: {{VALUE}} !important',
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current:hover' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button.current' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button.current:hover' => 'color: {{VALUE}} !important',
                 ],
             ]
         );
@@ -1872,8 +1872,8 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(79, 173, 255, 1)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current' => 'background-color: {{VALUE}} !important',
-                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current:hover' => 'background-color: {{VALUE}} !important',
+                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button.current' => 'background-color: {{VALUE}} !important',
+                    '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button.current:hover' => 'background-color: {{VALUE}} !important',
                 ],
             ]
         );
@@ -1920,7 +1920,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -1952,7 +1952,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -1984,7 +1984,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -2007,26 +2007,72 @@ class Style_1 extends AdminStyle
     public function modal_form_data()
     {
         echo '<div class="modal-header">                    
-                    <h4 class="modal-title">DataTable Table Form</h4>
+                    <h4 class="modal-title">DataTable Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">';
         if (array_key_exists('sa_datatable_column_repeater', $this->style)) :
             foreach ($this->style['sa_datatable_column_repeater'] as $key => $value) {
                 foreach ($value as $keys => $values) {
-                    $this->add_control(
-                        'sa_datatable_modal_' . $key,
-                        [],
-                        [
-                            'label' => __($values, SHORTCODE_ADDOONS),
-                            'type' => Controls::TEXT,
-                            'default' => '',
-                        ]
-                    );
-                }
+                    ?>
+                    <div class="main_table_inline">
+                        <?php
+                         $this->add_control(
+                            'sa_datatable_modal_' . $key,
+                            [],
+                            [
+                                'label' => __('', SHORTCODE_ADDOONS),
+                                'type' => Controls::TEXT,
+                                'default' => '',
+                            ]
+                        );
+                        $this->add_control(
+                            'sa_banner_tag',
+                            $this->style,
+                            [
+                                'label' => __('Tag', SHORTCODE_ADDOONS),
+                                'type' => Controls::SELECT,
+                                'default' => 'h3',
+                                'loader' => TRUE,
+                                'options' => [
+                                    'h1' => __('H1', SHORTCODE_ADDOONS),
+                                    'h2' => __('H2', SHORTCODE_ADDOONS),
+                                    'h3' => __('H3', SHORTCODE_ADDOONS),
+                                    'h4' => __('H4', SHORTCODE_ADDOONS),
+                                    'h5' => __('H5', SHORTCODE_ADDOONS),
+                                    'h6' => __('H6', SHORTCODE_ADDOONS),
+                                    'div' => __('DIV', SHORTCODE_ADDOONS),
+                                ],
+                            ]
+                        );
+                        ?>
+                    </div>
+                   
+                <?php }
             }
         endif;
 
         echo '</div>';
+    }
+    public function inline_public_css()
+    {
+
+        $style = $this->style; 
+
+        $css = '.main_table_inline {  
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse; 
+            } ';
+        return $css;
+    }
+
+    public function inline_public_jquery()
+    {
+        $style = $this->style;
+        $jquery = ''; 
+        $jquery .= 'jQuery(".main_table_inline").addClass("oxi_datatable_length"); ';
+
+        return $jquery;
     }
 }

@@ -1,21 +1,21 @@
-.oxi-addons-wrapper-datatable-style-1 .datatable_btn {
+.oxi-addons-wrapper-datatable-style-2 .datatable_btn {
     padding: 2px 10px !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .datatable_btn .oxi-icon {
+.oxi-addons-wrapper-datatable-style-2 .datatable_btn .oxi-icon {
     font-size: 12px
 }
 
-.oxi-addons-wrapper-datatable-style-1 .datatable_edit_delete {
+.oxi-addons-wrapper-datatable-style-2 .datatable_edit_delete {
     display: flex;
     justify-content: center
 }
 
-.oxi-addons-wrapper-datatable-style-1 .datatable_edit_delete .datatable_btn:first-child {
+.oxi-addons-wrapper-datatable-style-2 .datatable_edit_delete .datatable_btn:first-child {
     margin-right: 5px
 }
 
-.oxi-addons-wrapper-datatable-style-1 {
+.oxi-addons-wrapper-datatable-style-2 {
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -26,16 +26,16 @@
     box-shadow: 0px 0px 0px 0px rgba(94, 94, 94, 1);
 }
 
-.oxi-addons-datatable-style-1 {
+.oxi-addons-datatable-style-2 {
     border-radius: 50px
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper {
     width: 1100px;
     max-width: 100%
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_show_entries_label {
+.oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length>.oxi_show_entries_label {
     position: relative;
     font-size: 16px;
     font-family: "Bree Serif";
@@ -49,12 +49,12 @@
     margin-bottom: 5px
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length {
+.oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length {
     position: relative;
     margin: 0px 15px 0px 15px
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box {
+.oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box {
     width: 80px !important;
     height: 30px !important;
     font-size: 16px;
@@ -78,7 +78,7 @@
     appearance: none
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_show_entries_label::before {
+.oxi-addons-wrapper-datatable-style-2 .oxi_show_entries_label::before {
     content: "\f0dd";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
@@ -90,11 +90,11 @@
     line-height: 1
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_datatable_select_box:focus {
+.oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length>.oxi_datatable_select_box:focus {
     outline: none
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_export_button {
+.oxi-addons-wrapper-datatable-style-2 .oxi_export_button {
     background: rgba(252, 252, 252, 1.00);
     color: #4a4a4a;
     display: inline-block;
@@ -112,13 +112,13 @@
     margin: 0px 0px 5px 0px
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_export_button:hover {
+.oxi-addons-wrapper-datatable-style-2 .oxi_export_button:hover {
     background: rgba(90, 186, 189, 1.00) !important;
     color: #f7f7f7 !important;
     border-color: #76b4bf !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_filter>.oxi_filter_label {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_filter>.oxi_filter_label {
     font-size: 16px;
     font-family: "Bree Serif";
     font-weight: 100;
@@ -133,7 +133,7 @@
     align-items: center;
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_filter .oxi_filter_input {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_filter .oxi_filter_input {
     width: 150px !important;
     height: 30px !important;
     font-size: 16px;
@@ -150,7 +150,7 @@
     line-height: 0 !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
+.oxi-addons-wrapper-datatable-style-2 .oxi_datatable_info {
     font-size: 16px;
     color: #6ea7f5 !important;
     font-family: "Bree Serif";
@@ -161,8 +161,8 @@
     padding: 0px 0px 0px 0px
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
     font-size: 16px;
     font-family: "Bree Serif";
     font-weight: 100;
@@ -173,29 +173,29 @@
     border: none
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
     color: #828282 !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button {
     color: #828282 !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover,
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover,
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover {
     background: rgba(72, 149, 166, 1.00) !important;
     color: #ffffff !important;
     border: none
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
     background: none !important;
     color: #828282 !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button {
     background: rgba(245, 245, 245, 1.00);
     color: #969696;
     display: inline-block;
@@ -212,23 +212,23 @@
     margin: 15px 2px 0px 2px;
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate span .paginate_button:hover {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate span .paginate_button:hover {
     background: rgba(70, 149, 227, 1.00) ;
     color: #ffffff ;
     border-color: #ffffff
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button.current {
     background: rgba(79, 173, 255, 1) ;
     color: #ffffff 
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button.current:hover {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button.current:hover {
     background: rgba(79, 173, 255, 1);
     color: #ffffff
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
     background: rgba(79, 173, 255, 1);
     color: #ffffff;
     font-family: "Bree Serif";
@@ -243,14 +243,14 @@
     min-width: 35px !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:after {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:after {
     opacity: 0.3
 }
 
-.oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_thead .sorting:after,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:after,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:after,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after {
+.oxi-addons-wrapper-datatable-style-2 .table.dataTable .oxi_datatable_thead .sorting:after,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:after,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:after,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after {
     content: "\f30c";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 700;
@@ -262,15 +262,15 @@
     top: 10px
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:before {
     opacity: 0.3
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc:before,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc:before,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:before,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:before,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:before,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc disabled:before,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:before {
     content: "\f309";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 700;
@@ -282,9 +282,9 @@
     top: 10px
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .sorting_asc,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .sorting,
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .sorting_desc {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .sorting_asc,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .sorting,
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .sorting_desc {
     border: none #cfcfcf;
     border-left-width: 0px;
     border-right-width: 1px;
@@ -292,20 +292,20 @@
     border-bottom-width: 0px
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
     border-left-width: 1px !important;
     width: 70px !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_tr:last-child .oxi_datatable_th {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_tr:last-child .oxi_datatable_th {
     border-bottom-width: 1px !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .table.dataTable.no-footer {
+.oxi-addons-wrapper-datatable-style-2 .table.dataTable.no-footer {
     border: none
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body>tr>td {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body>tr>td {
     font-family: "Ubuntu";
     font-weight: 100;
     font-style: normal;
@@ -320,104 +320,104 @@
     border-bottom-width: 0px
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body td:first-child {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body td:first-child {
     border-left-width: 1px !important
 }
 
 
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body tr:last-child td {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body tr:last-child td {
     border-bottom-width: 1px !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .even td {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .even td {
     color: #ffffff !important;
     background: rgba(75, 166, 164, 1) !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable .odd td {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable .odd td {
     color: #ffffff !important;
     background: rgba(83, 181, 184, 1.00) !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 table.dataTable {
+.oxi-addons-wrapper-datatable-style-2 table.dataTable {
     width: 99.5% !important
 }
 
-.oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper {
+.oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper {
     width: 100%
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-wrapper-datatable-style-1 {
+    .oxi-addons-wrapper-datatable-style-2 {
         width: 1100px;
         border-radius: 0px 0px 0px 0px;
         padding: 5px 5px 5px 5px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_show_entries_label {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length>.oxi_show_entries_label {
         font-size: 16px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length {
         margin: 0px 15px 0px 15px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box {
         width: 80px;
         height: 30px;
         font-size: 16px;
         border-radius: 5px 5px 5px 5px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_export_button {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_export_button {
         font-size: 16px;
         border-radius: 5px 5px 5px 5px;
         padding: 5px 15px 5px 15px;
         margin: 0px 0px 5px 0px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter>.oxi_filter_label {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_filter>.oxi_filter_label {
         font-size: 16px;
         padding: 0px 0px 20px 0px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter .oxi_filter_input {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_filter .oxi_filter_input {
         width: 150px !important;
         height: 30px !important;
         font-size: 16px;
         border-radius: 5px 5px 5px 5px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_info {
         font-size: 16px;
         padding: 0px 0px 0px 0px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
         font-size: 16px;
         padding: 0px 10px 0px 10px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button {
         font-size: 16px !important;
         border-radius: 5px 5px 5px 5px !important;
         padding: 8px 20px 8px 20px !important;
         margin: 15px 2px 0px 2px !important
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
         font-size: 16px !important;
         padding: 12px 5px 12px 5px !important
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body tr td:nth-child(1) {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body tr td:nth-child(1) {
         border-left-width: 1px !important
     }
 
 
-    .oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_thead .sorting:after,
+    .oxi-addons-wrapper-datatable-style-2 .table.dataTable .oxi_datatable_thead .sorting:after,
     table.dataTable .oxi_datatable_thead .sorting_asc:after,
     table.dataTable .oxi_datatable_thead .sorting_desc:after,
     table.dataTable .oxi_datatable_thead .sorting_asc_disabled:after,
@@ -426,7 +426,7 @@
         top: 10px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:before,
     table.dataTable .oxi_datatable_thead .sorting_asc:before,
     table.dataTable .oxi_datatable_thead .sorting_desc:before,
     table.dataTable .oxi_datatable_thead .sorting_asc_disabled:before,
@@ -435,86 +435,86 @@
         top: 10px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body>tr>td {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body>tr>td {
         font-size: 16px !important;
         padding: 12px 8px 10px 8px !important
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
         border-left-width: 1px !important;
         width: 120px !important
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body tr td:nth-child(1) {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body tr td:nth-child(1) {
         border-left-width: 1px !important
     }
 
-    .oxi-addons-wrapper-datatable-style-1 {
+    .oxi-addons-wrapper-datatable-style-2 {
         width: 1100px;
         border-radius: 0px 0px 0px 0px;
         padding: 5px 5px 5px 5px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length>.oxi_show_entries_label {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length>.oxi_show_entries_label {
         font-size: 16px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length {
         margin: 0px 15px 0px 15px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box {
         width: 100% !important;
         height: 30px !important;
         font-size: 16px;
         border-radius: 5px 5px 5px 5px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_export_button {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_export_button {
         font-size: 16px;
         border-radius: 5px 5px 5px 5px;
         padding: 5px 15px 5px 15px;
         margin: 0px 0px 5px 0px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter>.oxi_filter_label {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_filter>.oxi_filter_label {
         font-size: 16px;
         padding: 0px 0px 20px 0px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_filter .oxi_filter_input {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_filter .oxi_filter_input {
         width: 150px !important;
         height: 30px !important;
         font-size: 16px;
         border-radius: 5px 5px 5px 5px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
+    .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_info {
         font-size: 16px;
         padding: 0px 0px 0px 0px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
         font-size: 16px;
         padding: 0px 10px 0px 10px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .dataTables_paginate span .paginate_button {
+    .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button {
         font-size: 16px !important;
         border-radius: 5px 5px 5px 5px !important;
         padding: 8px 20px 8px 20px !important;
         margin: 15px 2px 0px 2px !important
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th {
         font-size: 16px !important;
         padding: 12px 5px 12px 5px !important
     }
 
-    .oxi-addons-wrapper-datatable-style-1 .table.dataTable .oxi_datatable_thead .sorting:after,
+    .oxi-addons-wrapper-datatable-style-2 .table.dataTable .oxi_datatable_thead .sorting:after,
     table.dataTable .oxi_datatable_thead .sorting_asc:after,
     table.dataTable .oxi_datatable_thead .sorting_desc:after,
     table.dataTable .oxi_datatable_thead .sorting_asc_disabled:after,
@@ -523,7 +523,7 @@
         top: 10px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .sorting:before,
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:before,
     table.dataTable .oxi_datatable_thead .sorting_asc:before,
     table.dataTable .oxi_datatable_thead .sorting_desc:before,
     table.dataTable .oxi_datatable_thead .sorting_asc_disabled:before,
@@ -532,12 +532,12 @@
         top: 10px
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_body>tr>td {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body>tr>td {
         font-size: 16px !important;
         padding: 12px 8px 10px 8px !important
     }
 
-    .oxi-addons-wrapper-datatable-style-1 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
+    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
         border-left-width: 1px !important;
         width: 180px !important
     }
