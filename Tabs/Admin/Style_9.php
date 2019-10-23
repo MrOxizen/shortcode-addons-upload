@@ -84,7 +84,7 @@ class Style_9 extends AdminStyle
                     ],
                     'sa_tabs_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
-                        'type' => Controls::WYSIWYG,
+                        'type' => Controls::TEXTAREA,
                         'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                         'selector' => [
                             '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-9 .sa-addons-body-{{KEY}}' => '',
@@ -154,6 +154,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Fixed Header', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
+                'description' => __('Options of mobile device', SHORTCODE_ADDOONS),
                 'loader' => TRUE,
                 'default' => 'fix_header',
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
@@ -232,7 +233,7 @@ class Style_9 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 200,
+                        'min' => -200,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -1013,93 +1014,5 @@ class Style_9 extends AdminStyle
         $this->end_section_tabs();
     }
 
-    public function modal_opener()
-    {
-        $this->add_substitute_control('', [], [
-            'type' => Controls::MODALOPENER,
-            'title' => __('Add New Tabs', SHORTCODE_ADDOONS),
-            'sub-title' => __('Open Tabs Form', SHORTCODE_ADDOONS),
-            'showing' => TRUE,
-        ]);
-    }
-
-    public function modal_form_data()
-    {
-        echo '<div class="modal-header">                    
-                    <h4 class="modal-title">Tabs Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">';
-
-        $this->add_control(
-            'sa_tabs_tab_icon_on_off',
-            $this->style,
-            [
-                'label' => __('Icon Show', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'loader' => TRUE,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'icon_yes',
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_tab_icon',
-            $this->style,
-            [
-                'label' => __('Icon', SHORTCODE_ADDOONS),
-                'type' => Controls::ICON,
-                'default' => 'fas fa-apple-alt',
-                'condition' => [
-                    'sa_tabs_tab_icon_on_off' => 'icon_yes',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_h_text',
-            $this->style,
-            [
-                'label' => __('Heading', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Default Title',
-                'placeholder' => 'Your Heading Here',
-            ]
-        );
-
-        $this->add_control(
-            'sa_tabs_content',
-            $this->style,
-            [
-                'label' => __('Content', SHORTCODE_ADDOONS),
-                'type' => Controls::WYSIWYG,
-                'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-                'placeholder' => 'Your Content Here',
-            ]
-        );
-        $this->add_control(
-            'sa_tabs_url_open',
-            $this->style,
-            [
-                'label' => __('Link Active', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => '',
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'link_show',
-            ]
-        );
-        $this->add_group_control(
-            'sa_tabs_url',
-            $this->style,
-            [
-                'type' => Controls::URL,
-                'loader' => TRUE,
-                'condition' => [
-                    'sa_tabs_url_open' => 'link_show',
-                ],
-            ]
-        );
-        echo '</div>';
-    }
+   
 }
