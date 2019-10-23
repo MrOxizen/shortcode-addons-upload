@@ -51,14 +51,23 @@ and open the template in the editor.
     float: left;
     display: flex;
     padding: 6px 0px 6px 3px;
-    justify-content: flex-start
+    /*justify-content: flex-start*/
+}
+.oxi-addons-text-blocks-style-2 .border_align_right  {
+    justify-content: flex-end;
+}
+.oxi-addons-text-blocks-style-2 .border_align_left  {
+    justify-content: flex-start;
+}
+.oxi-addons-text-blocks-style-2 .border_align_center {
+    justify-content: center;
 }
 
 .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border .oxi-addons-text-block-border {
-    width: 50px;
+    /*width: 50px;*/
     max-width: 100%;
     display: inline-block;
-    border-top: 2px solid #ed7e4e
+    /*border-top: 2px solid #ed7e4e*/
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {

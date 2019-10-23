@@ -8,8 +8,8 @@ if (!defined('ABSPATH')) {
 
 /**
  * Description of Style_1
- * Content of Shortcode Addons Plugins
- *
+ * Content of Shortcode Addons Plugins 
+*
  * @author $biplob018
  */
 use SHORTCODE_ADDONS\Core\Templates;
