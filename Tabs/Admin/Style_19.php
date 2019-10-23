@@ -95,7 +95,7 @@ class Style_19 extends AdminStyle
                     ],
                     'sa_tabs_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
-                        'type' => Controls::WYSIWYG,
+                        'type' => Controls::TEXTAREA,
                         'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                         'selector' => [
                             '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-19 .sa-addons-body-{{KEY}}' => '',
@@ -168,6 +168,7 @@ class Style_19 extends AdminStyle
             [
                 'label' => __('Fixed Header', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
+                'description' => __('Options of mobile device', SHORTCODE_ADDOONS),
                 'loader' => TRUE,
                 'default' => 'fix_header',
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
@@ -256,11 +257,14 @@ class Style_19 extends AdminStyle
         );
 
         $this->end_controls_section();
-        $this->start_controls_section(
+       
+        $this->end_section_devider();
+        $this->start_section_devider();
+         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Heading Body Setting', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => TRUE,
             ]
         );
         $this->add_control(
@@ -326,8 +330,6 @@ class Style_19 extends AdminStyle
         );
 
         $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [

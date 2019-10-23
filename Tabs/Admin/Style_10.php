@@ -66,7 +66,7 @@ class Style_10 extends AdminStyle
                     ],
                     'sa_tabs_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
-                        'type' => Controls::WYSIWYG,
+                        'type' => Controls::TEXTAREA,
                         'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                         'selector' => [
                             '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-body-{{KEY}}' => '',
@@ -136,7 +136,8 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Fixed Header', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
-                'loader' => TRUE,
+                 'description' => __('Options of mobile device', SHORTCODE_ADDOONS),
+               'loader' => TRUE,
                 'default' => 'fix_header',
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -201,7 +202,7 @@ class Style_10 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 200,
+                        'min' => -200,
                         'max' => 200,
                         'step' => 1,
                     ],
