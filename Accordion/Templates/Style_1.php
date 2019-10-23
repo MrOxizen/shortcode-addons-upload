@@ -16,82 +16,50 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_1 extends Templates {
 
-    public function inline_public_jquery() {
-        $opening = json_decode($this->dbdata['rawdata'], true)['sa-ac-opening'];
-        $jquery = '';
-        if ($opening == 'one-by-one'):
-            $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-ac-template-1-heading").on("click", function () {
-                            if(jQuery(this).hasClass("active")){
-                                return false;
-                            }else{
-                                jQuery(".oxi-addons-ac-template-1-content").slideUp();
-                                var activeTab = jQuery(this).attr("ref");
-                                jQuery(activeTab).slideDown();
-                                jQuery(".' . $this->WRAPPER . ' .oxi-addons-ac-template-1-heading").removeClass("active");
-                                jQuery(this).addClass("active");
-
-                            }
-                        });';
-        else:
-            $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-ac-template-1-heading").on("click",function () {
-                            if(jQuery(this).hasClass("active")){
-                                var activeTab = jQuery(this).attr("ref");
-                                jQuery(activeTab).slideUp();
-                                jQuery(this).removeClass("active");
-                            }else{
-                                var activeTab = jQuery(this).attr("ref");
-                                jQuery(activeTab).slideDown();
-                                jQuery(this).addClass("active");
-                            }
-                        });';
-        endif;
-        $jquery .= '';
-        return $jquery;
-    }
-
     public function default_render($style, $child, $admin) {
-        echo '<pre>';
-        print_r($style);
-        echo '</pre>';
-        foreach ($child as $v) {
-            $value = json_decode(stripcslashes($v['rawdata']), true);
-
-            $active = $display = '';
-
-            if (array_key_exists('sa_el_initial_open', $value) && $value['sa_el_initial_open'] == 'yes'):
-                $active = 'active';
-                $display = 'display:block';
-            endif;
-            echo '  <div class="oxi-addons-ac-template-1 oxi-addons-admin-edit-list">
-                        <div class="oxi-addons-ac-template-1-heading ' . $active . '" ref="#oxi-addons-ac-template-1-id-' . $v['id'] . '">
-                            ' . ($style['sa-ac-icon-position'] != 'left' ? '<div class="heading-data flex block">' . $value['sa_el_text'] . '</div>' : '') . '
-                            <div class="span-active"><i class="fas fa-arrow-down oxi-icons"></i></div>
-                            <div class="span-deactive"><i class="fas fa-arrow-right oxi-icons"></i></div>
-                            ' . ($style['sa-ac-icon-position'] == 'left' ? '<div class="heading-data flex block">' . $value['sa_el_text'] . '</div>' : '') . '
-                        </div>
-                        <div class="oxi-addons-ac-template-1-content" id="oxi-addons-ac-template-1-id-' . $v['id'] . '" style="' . $display . '">
-                            <div class="oxi-addons-ac-template-1-content-b">
-                               ' . $value['sa_el_content'] . '
+        
+        
+        $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
+        
+       foreach ($all_data as $key => $data) {
+            
+            $sactive = $sdactive = $heading = $details = '';
+            
+            
+             if (array_key_exists('sa_el_ac_opening_icon_adding', $data) && $data['sa_el_ac_opening_icon_adding'] != '') {
+                $sactive = '<div class="span-active">' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
+            }
+            if (array_key_exists('sa_el_ac_closing_icon_adding', $data) && $data['sa_el_ac_closing_icon_adding'] != '') {
+                $sdactive = '<div class="span-deactive">' . $this->font_awesome_render($data['sa_el_ac_closing_icon_adding']) . '</div>';
+            }
+            if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
+                $heading = '<div class="heading-data">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
+            }
+            if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
+                $details = '<div class="oxi-addons-ac-C" id="oxi-addons-ac-H-id">
+                            <div class="oxi-addons-ac-C-b">
+                                ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                             </div>
-                        </div> ';
-            if ($admin == 'admin'):
-                echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                               <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
-                             </div>
                         </div>';
-            endif;
-            echo ' </div>';
+            }
+            echo '<div class="oxi-addons-AC " >
+                        <div class="oxi-addons-ac-H" ref="#oxi-addons-ac-H-id">
+                            ' . $sactive . '
+                            ' . $sdactive . '
+                            ' . $heading . '
+                        </div>
+                        ' . $details . '';
+            echo '</div>';
         }
+        
+        
+        
     }
 
     public function old_render() {
         $styledata = $this->dbdata;
-        $listdata = $this->child;
-        $oxiid = $styledata['id'];
+        $child = $this->child;
+        $oxiid = $style['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
 
@@ -116,7 +84,7 @@ class Style_1 extends Templates {
                             </div>
                         </div>';
             }
-            echo '<div class="oxi-addons-AC-' . $oxiid . ' " ' . OxiAddonsAnimation($styledata, 69) . '>
+            echo '<div class="oxi-addons-AC-' . $oxiid . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 69) . '>
                         <div class="oxi-addons-ac-H-' . $oxiid . '" ref="#oxi-addons-ac-H-' . $oxiid . '-id-' . $value['id'] . '">
                             ' . $sactive . '
                             ' . $sdactive . '
@@ -338,8 +306,9 @@ class Style_1 extends Templates {
         }
 
         $jquery .= '});';
+
+
         wp_add_inline_style('shortcode-addons-style', $css);
-        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }
