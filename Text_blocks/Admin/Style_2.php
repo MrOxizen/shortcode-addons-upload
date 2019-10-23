@@ -107,7 +107,7 @@ class Style_2 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 1000,
+                    'max' => 1500,
                     'step' => 1,
                 ],
                 'em' => [
@@ -122,7 +122,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-body' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}}  .oxi-addons-text-blocks-body  ' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -161,7 +161,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-text-blocks-body .oxi-addons-text-blocks-style-2  ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -310,10 +310,21 @@ class Style_2 extends AdminStyle {
             'label' => esc_html__('Border', SHORTCODE_ADDOONS),
                 ]
         );
+        $this->add_control(
+                'sa_t_border_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#949494',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-text-blocks-style-2 .oxi-addons-text-block-border' => 'border-top: 2px solid {{VALUE}};'
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_t_b_br_width', $this->style, [
             'label' => __('Max-Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
+            'loader' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 50,
@@ -336,7 +347,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-text-blocks-style-2 .oxi-addons-text-block-border' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-text-blocks-style-2 .oxi-addons-text-blocks-border .oxi-addons-text-block-border' => 'width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -345,6 +356,29 @@ class Style_2 extends AdminStyle {
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-text-blocks-style-2 .oxi-addons-text-block-border' => ''
+            ],
+                ]
+        );
+         $this->add_control(
+                'sa_t_bdr_alignment', $this->style, [
+            'label' => __('Border Align', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center_side',
+            'loader' => true,
+            'options' => [
+                'left_side' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-left',
+                ],
+                'center_side' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-center',
+                ],
+                'right_side' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fa fa-align-right',
+                ],
             ],
                 ]
         );

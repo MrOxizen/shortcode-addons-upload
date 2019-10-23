@@ -86,7 +86,9 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}  .oxi-addons-text-blocks-style-1 .oxi-addons-heading-container ' => 'text-align:{{VALUE}};',
+                '{{WRAPPER}}  .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-1st-body,'
+                . '{{WRAPPER}} .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-2nd-body, '
+                . '{{WRAPPER}} .oxi-addons-text-blocks-style-1 .oxi-addons-text-blocks-3rd-body ' => 'text-align:{{VALUE}};',
             ],
                 ]
         );
@@ -126,7 +128,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-text-blocks-style-1 .oxi-addons-heading-container ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-text-blocks-style-1 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
