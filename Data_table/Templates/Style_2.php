@@ -31,45 +31,75 @@ class Style_2 extends Templates
                 <table class="table oxi-addons-datatable-style-2" id="datatables">
                     <thead>
                         <tr>';
-        $repeater = [];
-        if (array_key_exists('sa_datatable_column_repeater', $style)) :
-            foreach ($style['sa_datatable_column_repeater'] as $key => $value) {
-                $repeater[$key] = $key;
-                foreach ($value as $values) {
-                    echo ' <th>' . $this->text_render($values) . '</th>';
-                }
-            }
-        endif;
-        if ($admin == 'admin') :
-            echo '<th>Manage</th>';
-        endif;
-        echo '          </tr> 
-                    </thead>
+                            $repeater = [];
+                            if (array_key_exists('sa_datatable_column_repeater', $style)) :
+                                foreach ($style['sa_datatable_column_repeater'] as $key => $value) {
+                                    $repeater[$key] = $key;
+                                    foreach ($value as $values) {
+                                        echo ' <th>' . $this->text_render($values) . '</th>';
+                                    }
+                                }
+                            endif;
+                            if ($admin == 'admin') :
+                                echo '<th>Manage</th>';
+                            endif;
+            echo '          </tr> 
+                     </thead>
                     <tbody>';
         foreach ($child as $v) {
             $val = json_decode(stripcslashes($v['rawdata']), true);
             $val = is_array($val) ? $val : [];
             echo '<tr>';
             foreach ($repeater as $key => $values) {
-                $id = 'sa_datatable_modal_' . $key;
-                if (array_key_exists($id, $val)) :
-                    echo '<td>' . $this->text_render($val[$id]) . '</td>';
-                else :
-                    echo '<td></td>';
+                $type = 'sa_type' . $key;
+                $text = 'sa_datatable_modal_text' . $key;
+                $photo = 'sa_datatable_modal_photo' . $key;
+                $icon = 'sa_datatable_modal_icon' . $key;
+                if (array_key_exists($type, $val)) :
+                    if ($val[$type]  == 'text') {
+                        if (array_key_exists($text, $val)) :
+                            echo '<td>' . $this->text_render($val[$text]) . '</td>';
+                        else :
+                            echo '<td></td>';
+                        endif;
+                    }
+                endif;
+                if (array_key_exists($type, $val)) :
+                    if ($val[$type]  == 'photo') {
+                        if ($this->media_render($photo, $val) != '') :
+                            echo '<td>
+                            <div  class="oxi_addons_image_main">
+                                <img  src="' . $this->media_render($photo, $val) . '" class="oxi_addons__image" alt="front image"/>
+                            </div> 
+                            </td>';
+                        else :
+                            echo '<td></td>';
+                        endif;
+                    }
+                endif;
+                if (array_key_exists($type, $val)) :
+                    if ($val[$type]  == 'icon') {
+                        if (array_key_exists($icon, $val)) :
+                            echo '<td>
+                            ' . $this->font_awesome_render($val[$icon]) . '
+                        </td>';
+                        else :
+                            echo '<td></td>';
+                        endif;
+                    }
                 endif;
             }
-            if ($admin == 'admin') :
-                echo '  <td>
-                                <div class="oxi-addons-admin-absulate-edit datatable_edit_delete">
-                                    <button class="btn btn-primary shortcode-addons-template-item-edit datatable_btn " type="button" value="' . $v['id'] . '"><i class="fas fa-edit oxi-icon"></i></button>
-                                    <button class="btn btn-danger shortcode-addons-template-item-delete datatable_btn " type="submit" value="' . $v['id'] . '"><i class="fas fa-trash oxi-icon"></i></button>
-                                </div>
-                            </td>';
-            endif;
+                    if ($admin == 'admin') :
+                        echo '  <td>
+                                    <div class="oxi-addons-admin-absulate-edit datatable_edit_delete">
+                                        <button class="btn btn-primary shortcode-addons-template-item-edit datatable_btn " type="button" value="' . $v['id'] . '"><i class="fas fa-edit oxi-icon"></i></button>
+                                        <button class="btn btn-danger shortcode-addons-template-item-delete datatable_btn " type="submit" value="' . $v['id'] . '"><i class="fas fa-trash oxi-icon"></i></button>
+                                        </div>
+                                    </td>';
+                    endif;
 
-            echo '</tr>';
-        }
-
+                    echo '</tr>';
+        } 
         echo '      </tbody>
                  </table>
                  
@@ -94,7 +124,7 @@ class Style_2 extends Templates
         $css = '.' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-2 .oxi_show_entries_label::before {
             content: "\\' . $this->text_render($this->style['sa_datatable_select_icon'] != '' ? $this->style['sa_datatable_select_icon'] : '') . '" !important;
             ' . $icon_weight . ';
-            bottom: ' . (($style['sa_datatable_select_icon_height-size'] / 2) /4) . 'px !important;
+            bottom: ' . (($style['sa_datatable_select_icon_height-size'] / 2) / 4) . 'px !important;
             } 
         .' . $this->WRAPPER . ' .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting:after,
         .' . $this->WRAPPER . '   .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:after,

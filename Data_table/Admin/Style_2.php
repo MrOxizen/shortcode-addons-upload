@@ -235,7 +235,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th' => ''
@@ -388,7 +388,6 @@ class Style_2 extends AdminStyle
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_asc:after' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc:after' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .sorting_desc disabled:after' => 'color: {{VALUE}} !important;',
-
                 ],
             ]
         );
@@ -544,7 +543,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .table.dataTable .oxi_datatable_body > tr > td' => ''
@@ -639,7 +638,7 @@ class Style_2 extends AdminStyle
         );
 
         $this->end_controls_tab();
-        $this->start_controls_tab(); 
+        $this->start_controls_tab();
         $this->add_control(
             'sa_datatable_odd_icon_color',
             $this->style,
@@ -667,6 +666,130 @@ class Style_2 extends AdminStyle
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Body Icon Setting', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_datatable_body_icon',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '16',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_datatable_body_icon_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#ffffff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-icons' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Image Setting', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_datatable_image_widths',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 100,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 250,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 10,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_datatable_image_heights',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 100,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 250,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 10,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
         $this->end_controls_section();
         $this->end_section_devider();
 
@@ -728,7 +851,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'condition' => [
                     'sa_datatable_show_entries_switter' => 'yes'
@@ -852,7 +975,7 @@ class Style_2 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
-                'selector' => [ 
+                'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_datatable_length .oxi_datatable_select_box' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
@@ -1076,7 +1199,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi_export_button' => ''
@@ -1290,7 +1413,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'condition' => [
                     'sa_datatable_info_show_entries_switter' => 'yes'
@@ -1383,7 +1506,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter > .oxi_filter_label' => ''
@@ -1646,7 +1769,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next' => '',
@@ -1758,7 +1881,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
-                'type' => Controls::TYPOGRAPHY, 
+                'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_paginate span .paginate_button' => ''
@@ -2004,6 +2127,30 @@ class Style_2 extends AdminStyle
         ]);
     }
 
+    /**
+     * Template Parent Modal Form
+     *
+     * @since 2.0.0
+     */
+    public function modal_form()
+    {
+
+        echo '<div class="modal fade" id="oxi-addons-list-data-modal" >
+                <div class="modal-dialog">
+                    <form method="post" id="shortcode-addons-template-modal-form">
+                         <div class="modal-content">';
+        $this->modal_form_data();
+        echo '          <div class="modal-footer">
+                                <input type="hidden" id="shortcodeitemid" name="shortcodeitemid" value="">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success" id="shortcode-template-modal-submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+              </div>';
+    }
+
     public function modal_form_data()
     {
         echo '<div class="modal-header">                    
@@ -2015,64 +2162,79 @@ class Style_2 extends AdminStyle
             foreach ($this->style['sa_datatable_column_repeater'] as $key => $value) {
                 foreach ($value as $keys => $values) {
                     ?>
-                    <div class="main_table_inline">
+                    <div class="oxi-addons-content-div">
+                        <div class="oxi-head">
+                            <?php echo $key; ?> Setting
+                            <div class="oxi-head-toggle"></div>
+                        </div>
+                        <div class="oxi-addons-content-div-body">
                         <?php
-                         $this->add_control(
-                            'sa_datatable_modal_' . $key,
-                            [],
-                            [
-                                'label' => __('', SHORTCODE_ADDOONS),
-                                'type' => Controls::TEXT,
-                                'default' => '',
-                            ]
-                        );
-                        $this->add_control(
-                            'sa_banner_tag',
-                            $this->style,
-                            [
-                                'label' => __('Tag', SHORTCODE_ADDOONS),
-                                'type' => Controls::SELECT,
-                                'default' => 'h3',
-                                'loader' => TRUE,
-                                'options' => [
-                                    'h1' => __('H1', SHORTCODE_ADDOONS),
-                                    'h2' => __('H2', SHORTCODE_ADDOONS),
-                                    'h3' => __('H3', SHORTCODE_ADDOONS),
-                                    'h4' => __('H4', SHORTCODE_ADDOONS),
-                                    'h5' => __('H5', SHORTCODE_ADDOONS),
-                                    'h6' => __('H6', SHORTCODE_ADDOONS),
-                                    'div' => __('DIV', SHORTCODE_ADDOONS),
-                                ],
-                            ]
-                        );
-                        ?>
-                    </div>
-                   
-                <?php }
+                                            $this->add_control(
+                                                'sa_type' . $key,
+                                                $this->style,
+                                                [
+                                                    'label' => __('Type', SHORTCODE_ADDOONS),
+                                                    'type' => Controls::SELECT,
+                                                    'default' => 'text',
+                                                    'loader' => FALSE,
+                                                    'options' => [
+                                                        'text' => __('Text', SHORTCODE_ADDOONS),
+                                                        'photo' => __('Upload Image', SHORTCODE_ADDOONS),
+                                                        'icon' => __('Icon', SHORTCODE_ADDOONS),
+                                                    ],
+                                                ]
+                                            );
+                                            $this->add_control(
+                                                'sa_datatable_modal_text' . $key,
+                                                [],
+                                                [
+                                                    'label' => __('Text', SHORTCODE_ADDOONS),
+                                                    'type' => Controls::TEXT,
+                                                    'loader' => FALSE,
+                                                    'default' => '',
+                                                    'condition' => [
+                                                        'sa_type' . $key => 'text'
+                                                    ],
+                                                ]
+                                            );
+                                            $this->add_group_control(
+                                                'sa_datatable_modal_photo' . $key,
+                                                [],
+                                                [
+                                                    'type' => Controls::MEDIA,
+                                                    'loader' => FALSE,
+                                                    'default' => [
+                                                        'type' => 'media-library',
+                                                        'link' => 'https://www.oxilab.org/wp-content/uploads/2019/04/rog_zephyrus_2.png',
+                                                    ],
+                                                    'condition' => [
+                                                        'sa_type' . $key => 'photo'
+                                                    ],
+                                                ]
+                                            );
+
+                                            $this->add_control(
+                                                'sa_datatable_modal_icon' . $key,
+                                                [],
+                                                [
+                                                    'label' => __('Icon', SHORTCODE_ADDOONS),
+                                                    'type' => Controls::ICON,
+                                                    'loader' => FALSE,
+                                                    'default' => 'fas fa-angle-right',
+                                                    'placeholder' => 'example:- fas fa-angle-right',
+                                                    'condition' => [
+                                                        'sa_type' . $key => 'icon'
+                                                    ],
+                                                ]
+                                            );
+                                            ?>
+                        </div>
+                    </div> 
+<?php
+                }
             }
         endif;
 
-        echo '</div>';
-    }
-    public function inline_public_css()
-    {
-
-        $style = $this->style; 
-
-        $css = '.main_table_inline {  
-                width: 100%;
-                display: flex;
-                flex-direction: row-reverse; 
-            } ';
-        return $css;
-    }
-
-    public function inline_public_jquery()
-    {
-        $style = $this->style;
-        $jquery = ''; 
-        $jquery .= 'jQuery(".main_table_inline").addClass("oxi_datatable_length"); ';
-
-        return $jquery;
+        echo '</div>'; 
     }
 }
