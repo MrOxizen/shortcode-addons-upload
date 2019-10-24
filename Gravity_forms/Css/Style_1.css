@@ -238,8 +238,15 @@
     margin : 0;
     font-size : 16px;
     border-radius : 0px;
+}
+.oxi-addons-gr-form-sagf.sa_full_width .gform_wrapper .gform_footer input.button,
+.oxi-addons-gr-form-sagf.sa_full_width .gform_wrapper .gform_footer input[type=submit], 
+.oxi-addons-gr-form-sagf.sa_full_width .gform_wrapper .gform_page_footer input.button, 
+.oxi-addons-gr-form-sagf.sa_full_width .gform_wrapper .gform_page_footer input[type=submit]{
+ 
     width : 100%;
 }
+
 .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input.button:hover,
 .oxi-addons-gr-form-sagf .gform_wrapper .gform_footer input[type=submit]:hover, 
 .oxi-addons-gr-form-sagf .gform_wrapper .gform_page_footer input.button:hover, 

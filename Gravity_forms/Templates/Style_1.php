@@ -18,23 +18,52 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-       $gfShortcode = '';
-        if (!empty($style['sa_gf_id'])) {
-            $gfShortcode .= '[gravityform id=' . $this->text_render($style['sa_gf_id']) . ' title=' . $style['sa_gf_title'] . ' description=' . $style['sa_gf_description'] . ' ajax=' . $style['sa_gf_ajax'] . ']';
-        } else {
-            $gfShortcode .= '<div style="color : red;    font-size: 20px;
-        text-align: center;
-        font-weight: 700;">Please Set your Gravity ID Key.</div>';
+
+        if (!is_plugin_active('gravityforms/gravityforms.php')) {
+            echo "<div class='oxi-gf-active'>
+                Please Install and Active Gravity Forms Plugin to Use Gravity Forms Element...!
+                 </div>
+                 <style>
+                 .oxi-gf-active{
+                        font-size: 20px;
+                        color: red;
+                        margin: 30px 10px 30px 10px;
+                        padding: 20px;
+                        background: #ffe9e9;
+                        font-weight: 700;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid red;
+                     }    
+                 </style>";
+            echo '<div class="sa_gf_image" style="display: flex; justify-content: center;"><img style="width: 60%;" src="https://www.shortcode-addons.com/wp-content/uploads/2019/06/ss.png"></div>';
         }
-        echo '
-        <div class="oxi-addons-container">
-            <div class="oxi-addons-row">
-                <div class="oxi-addons-gr-form-sagf">
-                    <div class="oxi-addons-gravity-form" >' . $gfShortcode . '</div>
+
+        else {
+           
+            $title = (array_key_exists('sa_gf_title', $style) && $style['sa_gf_title'] != '0' ? $style['sa_gf_title'] : 'false');
+            $description = (array_key_exists('sa_gf_description', $style) && $style['sa_gf_description'] != '0' ? $style['sa_gf_description'] : 'false');
+            $ajax = (array_key_exists('sa_gf_ajax', $style) && $style['sa_gf_ajax'] != '0' ? $style['sa_gf_ajax'] : 'false');
+            $gfShortcode = '';
+            if (!empty($style['sa_gf_id'])) {
+                $gfShortcode .= $this->text_render('[gravityform id=' . $style['sa_gf_id'] . ' title=' . $title . ' description=' . $description . ' ajax=' . $ajax . ']');
+            } else {
+                $gfShortcode .= '<div style="color : red;    font-size: 20px;
+                text-align: center;
+                font-weight: 700;">Please Set your Gravity ID Key.</div>';
+                    }
+                    echo '
+                <div class="oxi-addons-container">
+                    <div class="oxi-addons-row">
+                        <div class="oxi-addons-gr-form-sagf ' . ($style['sa_gf_btn_fullwidth'] == 'full' ? 'sa_full_width' : '') . '">
+                            <div class="oxi-addons-gravity-form" >' . $gfShortcode . '</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    ';
+
+            ';
+        }
     }
 
     public function old_render() {
@@ -46,7 +75,7 @@ class Style_1 extends Templates {
         $css = '';
         $align_btn = explode(':', $styledata[595]);
         $btn_width = '';
-       if ($styledata[661] == 'full') {
+        if ($styledata[661] == 'full') {
             $btn_width = 'width : 100%;';
         }
         $gfShortcode = '';
