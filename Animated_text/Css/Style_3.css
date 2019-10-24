@@ -1,0 +1,93 @@
+.oxi-addons-animet-text-style-3{
+    width: 100%;
+    height:auto;
+    float: left;
+}
+.oxi-addons-animet-text-style-3 .oxi-addons-text{
+    position: relative;
+}
+.oxi-addons-animet-text-style-3 .oxi-addons-text-body{
+    text-align: center;
+    width: 100%;
+}
+.oxi-addons-animet-text-style-3  .oxi-addons-text-body span{
+    text-transform: uppercase;
+    display: block;
+}
+.oxi-addons-animet-text-style-3 .oxi-addons-text1{
+    color: #575757;
+    font-size:  70px;
+    font-family:"Initial"; font-weight:700; font-style:normal; line-height:1.3; text-align:center;;
+    letter-spacing: 8px;
+    position: relative;
+    animation: text 3s 1;
+}
+.oxi-addons-animet-text-style-3 .oxi-addons-text2{
+    color: #14d1d1;
+    font-size:  30px;
+    animation: text2 3s 1;
+    font-family:"Initial"; font-weight:100; font-style:normal; line-height:1.3; text-align:center;;
+}
+
+@keyframes text2 {
+    0%{        
+
+        color: rgba(255,89,89,0.00);
+        opacity: 0;
+    }
+    30%{
+
+        color: #fff;
+        opacity: 0;
+
+    }
+    86%{
+        color: #fff;
+        opacity: 0;
+    }
+}
+@keyframes text {
+
+    0%{
+
+        margin-bottom: -40px;
+
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-addons-animet-text-style-3{
+        width: 100%;
+        height:auto;
+    }
+    .oxi-addons-animet-text-style-3 .oxi-addons-text1{
+        font-size:  0px;
+        text-align: center;
+    }
+    .oxi-addons-animet-text-style-3 .oxi-addons-text2{
+        font-size:  0px;
+        text-align: center;
+    }
+
+}
+@media only screen and (max-width : 668px){
+    .oxi-addons-animet-text-style-3{
+        width: 100%;
+        height:auto;
+    }
+    .oxi-addons-animet-text-style-3 .oxi-addons-text1{
+        font-size:  30px;
+        text-align: center;
+    }
+    .oxi-addons-animet-text-style-3 .oxi-addons-text2{
+        font-size:  20px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,54 @@
+.oxi-addons-animet-text-style-4{
+    width: 100%;
+    height:auto;
+    float: left;
+}
+.oxi-animet-text-body{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.oxi-text-middle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+}
+.oxi-text-text {
+    color: #f52020;
+    font-size: 50px;
+    font-family:"Inherit"; font-weight:600; font-style:normal; line-height:1.3; text-align:left;; 
+    cursor: pointer;
+}
+.oxi-text-hidden{
+    max-width: 0;
+    opacity: 0;
+    transition: .5s ease-in;
+}
+.oxi-text-text:hover .oxi-text-hidden{
+    opacity: 1;
+    max-width: 1em;
+}
+@media only screen and (min-width : 669px) and (max-width : 993px){
+
+    .oxi-text-middle{
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 0px 0px;
+    }
+    .oxi-text-text {
+        font-size: 50px;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width : 668px){
+    .oxi-text-middle{
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 0px 0px;
+    }
+    .oxi-text-text {
+        font-size: 50px;
+        cursor: pointer;
+    }
+}
