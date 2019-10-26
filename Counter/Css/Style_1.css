@@ -8,7 +8,7 @@
 .oxi-addons-counter-style1 .oxi-addons-counter-body-data{
     width:100%;
     float:left;
-    text-align: center !important;
+    text-align: center;
 }
 .oxi-addons-counter-style1 .oxi-addons-counter-title{
     float:left;
@@ -58,6 +58,12 @@
     max-width:100px;
     padding:5px 5px 5px 5px;
     margin: 0 auto
+}
+.oxi-addons-counter-style1.left .oxi-addons-counter-divider{
+    margin: 0 auto 0 0 !important;
+}
+.oxi-addons-counter-style1.right .oxi-addons-counter-divider{
+    margin: 0 0 0 auto !important;
 }
 .oxi-addons-counter-style1 .oxi-divider-left{
     display: table-cell;

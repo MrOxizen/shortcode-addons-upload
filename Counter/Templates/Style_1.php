@@ -35,9 +35,7 @@ class Style_1 extends Templates {
 
         $repeater = (array_key_exists('sa_counter_repeater', $style) && is_array($style['sa_counter_repeater'])) ? $style['sa_counter_repeater'] : [];
         foreach ($repeater as $key => $value) {
-            echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
-                    <div class="oxi-addons-counter-style1"> ';
-            if (array_key_exists('sa_counter_text_on', $style) && $style['sa_counter_text_on'] != '0') {
+             if (array_key_exists('sa_counter_text_on', $style) && $style['sa_counter_text_on'] != '0') {
                 $title = '<div class="oxi-addons-counter-body-data">
                                 <div class="oxi-addons-counter-title">
                                     ' . $this->text_render($value['sa_counter_title_text']) . '
@@ -67,6 +65,10 @@ class Style_1 extends Templates {
                                 </div>
                             </div>';
             }
+
+            echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
+                    <div class="oxi-addons-counter-style1 ' . $style['sa_counter_align'] . '"> ';
+
             $rearrange = explode(',', 'title,icon,divider,number');
             foreach ($rearrange as $arrange) {
                 if (isset($$arrange)) {
