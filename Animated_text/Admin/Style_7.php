@@ -124,7 +124,12 @@ class Style_7 extends AdminStyle
                 'default' => 'h3',
                 'loader' => TRUE,
                 'options' => [
+                    'flash' => __('Flash', SHORTCODE_ADDOONS),
                     'bounce' => __('Bounce', SHORTCODE_ADDOONS),
+                    'shake' => __('Shake', SHORTCODE_ADDOONS),
+                    'tada' => __('Tada', SHORTCODE_ADDOONS),
+                    'swing' => __('Swing', SHORTCODE_ADDOONS),
+                    'wobble' => __('Wobble', SHORTCODE_ADDOONS),
 
                 ],
             ]

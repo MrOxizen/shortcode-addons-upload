@@ -49,56 +49,57 @@ class Style_7 extends Templates {
         $id = $this->WRAPPER;
         $id = str_replace('-', "_", $id);
         $jquery .= '
-            jQuery(function (){    
-                var animateClasses = "flash bounce shake tada swing wobble pulse flip flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut";
-                var $form = jQuery("#oxi-addons-form-submit");
-                var  $viewport = jQuery(".oxi-addons-wrapper-' . $id . '"); 
-                var getFormData = function () {
-                  var data = {
-                    loop: true,
-                    in: { },
-                    out: { }
-                  }; 
-                $("#oxi-addons-select-in-animation").prop("data-key","effect")
-                
-                  $form.find("[data-key=\'effect\']").each(function () {
-                    var $this = jQuery(this);
-                    var key = $this.data("key");
-                    var type = $this.data("type"); 
-                    data[type][key] = $this.val(); 
-                  });
-
-                  $form.find("[data-key=\'type\']").each(function () {
-                    var $this = jQuery(this);
-                    var key = $this.data("key");
-                    var type = $this.data("type");
-                    var val = $this.val(); 
-                      data[type].shuffle = (val === "shuffle");
-                      data[type].reverse = (val === "reverse");
-                      data[type].sync = (val === "sync");
-                  });
-
-                  return data;
-                };
-
-                jQuery.each(animateClasses.split(" "), function (i, value) {
-                  var type = "[data-type]";
-                  var option = "<option value=\'"+value+"\'>"+value+"</option>"; 
-                    console.log(option);
-                    $("#oxi-addons-select-in-animation").append(option); 
-                }); 
-                
-                $form.find("[data-key=\'effect\'][data-type=\'in\']").val("' . $styledata[35] . '");
-                $form.find("[data-key=\'effect\'][data-type=\'out\']").val("' . $styledata[39] . '"); 
-                
-                var $tlt = $viewport.find(".oxi-addons-tlt"); 
-                $form.on( "change", function () {
+            jQuery(function (){   
+                $("#oxi-addons-select-in-animation").attr("data-key","effect");
+                $("#oxi-addons-select-in-animation").attr("data-type","in");
+                  var $form = jQuery("#oxi-addons-form-submit");
+                  var  $viewport = jQuery(".oxi-addons-wrapper-' . $id . '"); 
+                  var getFormData = function () {
+                    var data = {
+                      loop: true,
+                      in: { },
+                      out: { }
+                    }; 
+                    $form.find("[data-key=\'effect\']").each(function () {
+                      var $this = jQuery(this);
+                      var key = $this.data("key");
+                      var type = $this.data("type"); 
+                      data[type][key] = $this.val(); 
+                    });
+  
+                    $form.find("[data-key=\'type\']").each(function () {
+                      var $this = jQuery(this);
+                      var key = $this.data("key");
+                      var type = $this.data("type");
+                      var val = $this.val(); 
+                        data[type].shuffle = (val === "shuffle");
+                        data[type].reverse = (val === "reverse");
+                        data[type].sync = (val === "sync");
+                    });
+  
+                    return data;
+                  };
+  
+                  jQuery.each(animateClasses.split(" "), function (i, value) {
+                    var type = "[data-type]"; 
+                    if (/Out/.test(value) || value === "hinge") {
+                      type = "[data-type=\'out\']";
+                    } else if (/In/.test(value)) {
+                      type = "[data-type=\'in\']";
+                    } 
+                     
+                  }); 
+                  $form.find("[data-key=\'effect\'][data-type=\'in\']").val("");
+                  $form.find("[data-key=\'effect\'][data-type=\'out\']").val(""); 
+                  
+                  var $tlt = $viewport.find(".oxi-addons-tlt"); 
+                  $form.on( "change", function () {
+                    var obj = getFormData();
+                    $tlt.textillate(obj);
+                  }).trigger("change"); 
+                  
                   var obj = getFormData();
-                  $tlt.textillate(obj);
-                }).trigger("change"); 
-                
-                var obj = getFormData();
-                  $tlt.textillate(obj);
+                    $tlt.textillate(obj); 
               });';
         return $jquery;
     }
