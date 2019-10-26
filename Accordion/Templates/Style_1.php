@@ -17,43 +17,95 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        
-        
+
+        $order = '';
+        if ($style['sa_el_ac_icon_position'] == 'right') {
+            $order = 'order';
+        }
         $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
-        
-       foreach ($all_data as $key => $data) {
-            
+
+        foreach ($all_data as $key => $data) {
+
             $sactive = $sdactive = $heading = $details = '';
+
             
             
-             if (array_key_exists('sa_el_ac_opening_icon_adding', $data) && $data['sa_el_ac_opening_icon_adding'] != '') {
-                $sactive = '<div class="span-active">' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
+            
+            
+            
+
+            if ($style['sa_el_ac_arrow_icon'] == 'yes') {
+                $sactive = '<div class="span-active"><i class="fas fa-arrow-down oxi-icons"></i></div>';
+                $sdactive = '<div class="span-deactive"><i class="fas fa-arrow-right oxi-icons"></i></div>';
             }
-            if (array_key_exists('sa_el_ac_closing_icon_adding', $data) && $data['sa_el_ac_closing_icon_adding'] != '') {
-                $sdactive = '<div class="span-deactive">' . $this->font_awesome_render($data['sa_el_ac_closing_icon_adding']) . '</div>';
-            }
+            
+            
+            
+            
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
-                $heading = '<div class="heading-data">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
+                $heading = '<div class="heading-data  ' . $order . '">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-ac-C" id="oxi-addons-ac-H-id">
-                            <div class="oxi-addons-ac-C-b">
-                                ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
-                            </div>
-                        </div>';
+                $details = '<div class="oxi-addons-ac-C">
+                                <div class="oxi-addons-ac-C-b">
+                                    ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
+                                </div>
+                            </div>';
             }
-            echo '<div class="oxi-addons-AC " >
-                        <div class="oxi-addons-ac-H" ref="#oxi-addons-ac-H-id">
-                            ' . $sactive . '
-                            ' . $sdactive . '
-                            ' . $heading . '
-                        </div>
+            
+            echo '<div class="oa_ac_style_1 oa_ac_style_1_' . $key . '"   ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                        <div class="oxi-addons-ac-H">';
+                        echo $heading;
+                        echo $sactive;
+                        echo $sdactive;
+            echo '      </div>
                         ' . $details . '';
             echo '</div>';
         }
-        
-        
-        
+    }
+
+    public function inline_public_jquery() {
+        $arraykey = $this->style;
+        $jquery = '';
+
+
+        if (array_key_exists('sa_accordion_data', $this->style)):
+            foreach ($this->style['sa_accordion_data'] as $key => $value) {
+                if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
+                    $jquery .= 'jQuery(".oa_ac_style_1_' . $key . ' .oxi-addons-ac-H").addClass("active");
+                                jQuery(".oa_ac_style_1_' . $key . ' .oxi-addons-ac-H").next().slideDown();';
+                endif;
+            }
+            if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] == 'onebyone'):
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-ac-H").on("click", function () {
+                                $This = jQuery(this);
+                                if($This.hasClass("active")){
+                                    return false;
+                                }else{
+                                    jQuery(".' . $this->WRAPPER . ' .oxi-addons-ac-C").slideUp();
+                                    $This.next().slideDown();
+                                    jQuery(".' . $this->WRAPPER . ' .oxi-addons-ac-H").removeClass("active");
+                                    $This.addClass("active");
+                                }
+                            });';
+            else:
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-ac-H").on("click",function () {
+                                $This = jQuery(this);
+                                if($This.hasClass("active")){
+                                    $This.removeClass("active").next().slideUp();
+                                }else{
+                                   $This.addClass("active").next().slideDown();
+                                }
+                            });';
+            endif;
+
+        endif;
+//        $opening = '';
+//        foreach ($opening as $key => $value) {
+//            echo $key;
+//        }
+
+        return $jquery;
     }
 
     public function old_render() {

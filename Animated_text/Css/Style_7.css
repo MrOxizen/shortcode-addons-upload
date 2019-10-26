@@ -1,0 +1,31 @@
+.oxi-addons-AT-P-style-1 {
+    width: 100%;
+    float: left;
+    font-family: "Sarabun";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.oxi-animated-style-1{
+    display: inline-block;
+    vertical-align: text-top;
+    color: #2d509b
+}
+
+.oxi-animated-style-1 {
+    font-size: 36px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-animated-style-1 {
+        font-size: 36px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-animated-style-1 {
+        font-size: 36px
+    }
+}

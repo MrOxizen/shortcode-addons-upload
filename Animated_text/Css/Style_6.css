@@ -1,0 +1,70 @@
+.oxi-addons-animet-text-style-6{
+    width: 100%;
+    height:auto;
+    font-size:16px;
+    display:block;
+}
+.oxi-addons-animet-text-style-6 *{
+    overflow: visible;
+    transition: none;
+}
+.oxi-animet-text-body{
+    height: 100%;
+    font: 16em/1 Arial;
+    display:flex;
+}
+.oxi-add-text--line {
+    font-size: .5em;
+}
+.oxi-add-text--line2 {
+    font-size: .9em;
+}
+.oxi-addons-animet-text-style-6 svg {
+    width: 100%;
+    height: 100%;
+    margin-top: -5.5%;
+    margin-bottom: -15.5%;
+}
+
+.oxi-addons-animet-text-style-6 .oxi-add-text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: 6px;
+    -webkit-animation: dure giya mor 10s infinite linear;
+    animation: dure giya mor 10s infinite linear;
+}
+.oxi-addons-animet-text-style-6 .oxi-add-text-copy:nth-child(1) {
+    stroke: #eb7f7f;
+    stroke-dashoffset: 7%;
+}
+.oxi-addons-animet-text-style-6 .oxi-add-text-copy:nth-child(2) {
+    stroke: #6edae0;
+    stroke-dashoffset: 14%;
+}
+.oxi-addons-animet-text-style-6 .oxi-add-text-copy:nth-child(3) {
+    stroke: #5ce091;
+    stroke-dashoffset: 21%;
+}
+.oxi-addons-animet-text-style-6 .oxi-add-text-copy:nth-child(4) {
+    stroke: #be70db;
+    stroke-dashoffset: 28%;
+}
+.oxi-addons-animet-text-style-6 .oxi-add-text-copy:nth-child(5) {
+    stroke: #d9e04c;
+    stroke-dashoffset: 35%;
+}
+
+@-webkit-keyframes stroke-offset {
+    50% {
+        stroke-dashoffset: 35%;
+        stroke-dasharray: 0 87.5%;
+    }
+}
+
+@keyframes stroke-offset {
+    50% {
+        stroke-dashoffset: 35%;
+        stroke-dasharray: 0 87.5%;
+    }
+}
