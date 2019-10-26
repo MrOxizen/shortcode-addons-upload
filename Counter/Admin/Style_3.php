@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_3
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
 
@@ -74,7 +74,7 @@ class Style_1 extends AdminStyle {
             'title_field' => 'sa_counter_title_text',
                 ]
         );
-
+       
         $this->add_control(
                 'sa_counter_align', $this->style, [
             'label' => __('Align', SHORTCODE_ADDOONS),
@@ -82,7 +82,6 @@ class Style_1 extends AdminStyle {
             'operator' => Controls::OPERATOR_ICON,
             'toggle' => TRUE,
             'loader' => TRUE,
-            'separator' => TRUE,
             'default' => 'center',
             'options' => [
                 'left' => [
@@ -99,9 +98,9 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-body-data' => 'text-align: {{VALUE}} !important;',
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-title' => 'text-align: {{VALUE}} !important;',
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-number' => 'text-align: {{VALUE}} !important;',
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-body-data' => 'text-align: {{VALUE}} !important;',
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-title' => 'text-align: {{VALUE}} !important;',
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-number' => 'text-align: {{VALUE}} !important;',
             ],
                 ]
         );
@@ -140,6 +139,69 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
+          $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('General Style', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+                ]
+        );
+        $this->add_group_control(
+                'sa_counter_bg', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-row' => ''
+            ],]
+        );
+
+        $this->add_group_control(
+                'sa_counter_br', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-row' => ''
+            ],
+                ]
+        );
+
+        $this->add_responsive_control(
+                'sa_counter_br_radius', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
+            'separator' => FALSE,
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 50,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_counter_box_shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-row' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_counter_Padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -166,7 +228,37 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-row' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_counter_margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-counter-style3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -229,7 +321,7 @@ class Style_1 extends AdminStyle {
                 'sa_counter_title_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-title' => ''
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-title' => ''
             ],
             'condition' => [
                 'sa_counter_text_on' => 'yes',
@@ -240,9 +332,8 @@ class Style_1 extends AdminStyle {
                 'sa_counter_title_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-title' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-title' => 'color:{{VALUE}};'
             ],
             'condition' => [
                 'sa_counter_text_on' => 'yes',
@@ -253,7 +344,7 @@ class Style_1 extends AdminStyle {
                 'sa_counter_title_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-title' => ''
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-title' => ''
             ],
             'condition' => [
                 'sa_counter_text_on' => 'yes',
@@ -286,7 +377,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
             'condition' => [
                 'sa_counter_text_on' => 'yes',
@@ -310,7 +401,7 @@ class Style_1 extends AdminStyle {
                 'sa_counter_number_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-number' => ''
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-number' => ''
             ],
             'condition' => [
                 'sa_counter_number_on' => 'yes',
@@ -323,7 +414,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#000000',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-number' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-number' => 'color:{{VALUE}};'
             ],
             'condition' => [
                 'sa_counter_number_on' => 'yes',
@@ -334,7 +425,7 @@ class Style_1 extends AdminStyle {
                 'sa_counter_number_tx_shadow2', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-number' => ''
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-number' => ''
             ],
             'condition' => [
                 'sa_counter_number_on' => 'yes',
@@ -367,7 +458,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-number' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-number' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
             'condition' => [
                 'sa_counter_number_on' => 'yes',
@@ -422,7 +513,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_counter_icon' => 'yes',
@@ -455,7 +546,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-icon' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-icon' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
             ],
             'condition' => [
                 'sa_counter_icon' => 'yes',
@@ -466,9 +557,8 @@ class Style_1 extends AdminStyle {
                 'sa_counter_icon_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-icons' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-icons' => 'color:{{VALUE}};'
             ],
             'condition' => [
                 'sa_counter_icon' => 'yes',
@@ -479,7 +569,7 @@ class Style_1 extends AdminStyle {
                 'sa_counter_icon_bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-icon' => ''
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-icon' => ''
             ],
             'condition' => [
                 'sa_counter_icon' => 'yes',
@@ -490,7 +580,7 @@ class Style_1 extends AdminStyle {
                 'sa_counter_icon_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-icon' => ''
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-icon' => ''
             ],
             'condition' => [
                 'sa_counter_icon' => 'yes',
@@ -525,7 +615,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_counter_icon' => 'yes',
@@ -558,7 +648,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_counter_icon' => 'yes',
@@ -612,7 +702,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-divider' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-divider' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
             'condition' => [
                 'sa_counter_divider_on' => 'yes',
@@ -623,7 +713,7 @@ class Style_1 extends AdminStyle {
                 'sa_counter_divider_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-divider-left .oxi-divider' => ''
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-divider-left .oxi-divider' => ''
             ],
             'condition' => [
                 'sa_counter_divider_on' => 'yes',
@@ -656,7 +746,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style1 .oxi-addons-counter-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-counter-style3 .oxi-addons-counter-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'condition' => [
                 'sa_counter_divider_on' => 'yes',

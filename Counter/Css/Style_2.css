@@ -1,0 +1,154 @@
+.oxi-addons-counter-style2{
+    width:100%;
+    float:left;
+    padding: 10px 10px 10px 10px;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-body{
+    width:50%;
+    float:left;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-body-data{
+    width:100%;
+    float:left;
+    text-align: left;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-body-data.oxi-addons-counter-icons{
+    width:100%;
+    float:left;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+.oxi-addons-counter-style2.right .oxi-addons-counter-body-data.oxi-addons-counter-icons{
+      justify-content: flex-start;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-title{
+    float:left;
+    width:100%;
+    font-size: 18px;
+    color:#171717;
+    font-family:"Open Sans"; 
+    font-weight:100; 
+    font-style:normal; 
+    line-height:1.3; 
+    text-align:center;
+    padding:  5px 5px 0px 10px;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-number{
+    float:left;
+    width:100%;
+    font-size: 26px;
+    color:#545454;
+    font-family:"Open Sans"; 
+    font-weight:800; 
+    font-style:normal; 
+    line-height:1.3; 
+    text-align:left;
+    padding:  5px 5px 1px 10px;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-icon{
+    width: 75px;
+    height:75px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(35,91,194,1.00);
+    border-width: 3px 3px 3px 3px;
+    border-color:#808080;
+    border-style: solid;
+    border-radius: 50px 50px 50px 50px;
+    margin: 5px 5px 5px 5px;
+}
+.oxi-addons-counter-style2 .oxi-icons{
+    font-size: 35px;
+    color:#ffffff;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-body-data-divider{
+    padding:0px 0px 0px 10px;
+}
+.oxi-addons-counter-style2 .oxi-addons-counter-divider{
+    position: relative;
+    display: table;
+    width: 100%;
+    max-width:60px;
+}
+.oxi-addons-counter-style2.left .oxi-addons-counter-divider{
+       margin-right:auto;
+}
+.oxi-addons-counter-style2.right .oxi-addons-counter-divider{
+      margin-left:auto;
+}
+.oxi-addons-counter-style2 .oxi-divider-left{
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+.oxi-addons-counter-style2 .oxi-divider-left .oxi-divider {
+    border-top-style: solid;
+    border-top-color: #1c1c1c;
+    border-top-width: 5px;
+    margin-top: 1px;
+}
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-addons-counter-style2{
+        padding: 10px 10px 10px 10px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-title{
+        font-size: 18px;
+        padding:  5px 5px 0px 10px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-number{
+        font-size: 26px;
+        padding:  5px 5px 1px 10px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-icon{
+        width: 75px;
+        height:75px;
+        border-width: 3px 3px 3px 3px;
+        border-radius: 50px 50px 50px 50px;
+        margin: 5px 5px 5px 5px;
+    }
+    .oxi-addons-counter-style2 .oxi-icons{
+        font-size: 35px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-body-data-divider{
+        padding:px OxiADDC-padding-bottom px OxiADDC-Item px OxiADDC-padding-top px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-divider{
+        max-width:60px;
+    }
+    .oxi-addons-counter-style2 .oxi-divider-left .oxi-divider {
+        border-top-width: 5px;
+    }
+}
+@media only screen and (max-width : 668px){
+    .oxi-addons-counter-style2{
+        padding: 10px 10px 10px 10px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-title{
+        font-size: 18px;
+        padding:  5px 5px 0px 10px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-number{
+        font-size: 26px;
+        padding:  5px 5px 1px 10px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-icon{
+        width: 75px;
+        height:75px;
+        border-width: 3px 3px 3px 3px;
+        border-radius: 50px 50px 50px 50px;
+        margin: 5px 5px 5px 5px;
+    }
+    .oxi-addons-counter-style2 .oxi-icons{
+        font-size: 35px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-body-data-divider{
+        padding:0px 0px 0px 10px;
+    }
+    .oxi-addons-counter-style2 .oxi-addons-counter-divider{
+        max-width:60px;
+    }
+    .oxi-addons-counter-style2 .oxi-divider-left .oxi-divider {
+        border-top-width: 5px;
+    }
+}
