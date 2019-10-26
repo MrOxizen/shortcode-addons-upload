@@ -19,9 +19,15 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $order = '';
+        $icon_order = 'icon_order';
         if ($style['sa_el_ac_icon_position'] == 'right') {
             $order = 'order';
+            $icon_order = '';
+        }elseif($style['sa_el_ac_icon_position'] == 'left'){
+            $order = '';
+            $icon_order = 'icon_order';
         }
+        
         $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
 
         foreach ($all_data as $key => $data) {
@@ -29,21 +35,22 @@ class Style_1 extends Templates {
             $sactive = $sdactive = $heading = $details = '';
 
             
-            
-            
+//            print_r('<pre>');
+//            print_r($style);
+//            print_r('</pre>');
             
             
 
             if ($style['sa_el_ac_arrow_icon'] == 'yes') {
-                $sactive = '<div class="span-active"><i class="fas fa-arrow-down oxi-icons"></i></div>';
-                $sdactive = '<div class="span-deactive"><i class="fas fa-arrow-right oxi-icons"></i></div>';
+                 $sactive = '<div class="span-active ' . $order . '"><i class="fas fa-arrow-down oxi-icons"></i></div>';
+                 $sdactive = '<div class="span-deactive ' . $order . '"><i class="fas fa-arrow-right oxi-icons"></i></div>';
             }
-            
-            
-            
-            
+            $icon = '';
+            if ($data['sa_icon_yes_no'] == 'yes') {
+                 $icon = '<div class="icon_setting '.$icon_order.'">' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';                 
+            }
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
-                $heading = '<div class="heading-data  ' . $order . '">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
+                $heading = '<div class="heading-data  ">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
                 $details = '<div class="oxi-addons-ac-C">
@@ -55,9 +62,10 @@ class Style_1 extends Templates {
             
             echo '<div class="oa_ac_style_1 oa_ac_style_1_' . $key . '"   ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                         <div class="oxi-addons-ac-H">';
-                        echo $heading;
-                        echo $sactive;
-                        echo $sdactive;
+                            echo $heading;
+                            echo $icon;
+                            echo $sactive;
+                            echo $sdactive;
             echo '      </div>
                         ' . $details . '';
             echo '</div>';
