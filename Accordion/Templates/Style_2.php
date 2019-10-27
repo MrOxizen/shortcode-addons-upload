@@ -31,12 +31,9 @@ class Style_2 extends Templates {
         foreach ($all_data as $key => $data) {
 
             
-
-
 //            print_r('<pre>');
 //            print_r($style);
 //            print_r('</pre>');
-
 
             
             $icon = $heading = $details = '';
