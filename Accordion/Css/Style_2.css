@@ -10,6 +10,9 @@ df*/
 
 
 
+
+
+
 .sa_ac_style_2{
     width:100%;
     float:left;
@@ -25,7 +28,7 @@ df*/
     border-radius:5px 0px 5px 0px;
     padding:0px 0px 0px 0px;
     box-shadow:1px 1px 15px 2px rgba(209, 209, 209, 1);
-    transition:none ;
+    transition:none;
 }
 .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-icon{
     display:flex;
@@ -36,20 +39,23 @@ df*/
     font-size:20px;
     color:#ffffff;
     padding:10px 10px 10px 10px;
-    transition:none ;
+    transition:none;
 }
 .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-icon{
     background:#045c15;
     font-size:60px;
     color:#ffffff;
     padding:10px 15px 10px 15px;
-    transition:none ;
+    transition:none;
 }
+/*.sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-icon.order{
+    order: 1;
+}*/
 .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-content{
     width:100%;
     float:left;
     background:rgba(17,171,109,1.00);
-    transition:none ;
+    transition:none;
 }
 .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-heading-data{
     font-size:20px;
@@ -60,7 +66,7 @@ df*/
     line-height:1.3;
     text-align:left;
     padding:10px 10px 10px 10px;
-    transition:none ;
+    transition:none;
 }
 .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details,
 .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details p{
@@ -77,15 +83,15 @@ df*/
     display:none;
     background:#11ab6d;
     padding:11px 11px 11px 11px;
-    transition:none ;
+    transition:none;
 }
 .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-details{
     display:block;
-    transition:none ;
+    transition:none;
 }
 @media only screen and (min-width:669px) and (max-width:993px){
     .sa_ac_style_2{
-        padding:8px 8px 8px 8px ;
+        padding:8px 8px 8px 8px;
     }
     .sa_ac_style_2 .oxi-addonsAC{
         border-radius:0px 0px 0px 0px;
@@ -93,25 +99,25 @@ df*/
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-icon{
         font-size:18px;
-        padding:8px 8px 8px 8px ;
+        padding:8px 8px 8px 8px;
     }
     .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-icon{
         font-size:45px;
-        padding:8px 8px 8px 8px ;
+        padding:8px 8px 8px 8px;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-content{
         /*background: ;*/
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-heading-data{
         font-size:18px;
-        padding:8px 8px 8px 8px ;
+        padding:8px 8px 8px 8px;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details,
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details p{
         font-size:15px;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details{
-        padding:8px 8px 8px 8px ;
+        padding:8px 8px 8px 8px;
     }
 }
 @media only screen and (max-width:668px){
@@ -120,7 +126,7 @@ df*/
     }
     .sa_ac_style_2 .oxi-addonsAC{
         border-radius:3px 3px 3px 3px;
-        padding:0px 0px 0px 0px 
+        padding:0px 0px 0px 0px;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-icon{
         font-size:15px;
@@ -128,22 +134,22 @@ df*/
     }
     .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-icon{
         font-size:35px;
-        padding:5px 5px 5px 5px ;
+        padding:5px 5px 5px 5px;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-content{
         /*background:linear-gradient(, ), url("OxiAddonsAC-2-G-B ") no-repeat center center;*/
         -webkit-background-size:cover;
         -moz-background-size:cover;
         -o-background-size:cover;
-        background-size:cover ;
+        background-size:cover;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-heading-data{
         font-size:16px;
-        padding:5px 5px 5px 5px ;
+        padding:5px 5px 5px 5px;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details, 
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details p{
-        font-size:14px ;
+        font-size:14px;
     }
     .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details{
         padding:5px 5px 5px 5px;
