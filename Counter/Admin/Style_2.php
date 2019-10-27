@@ -67,9 +67,7 @@ class Style_2 extends AdminStyle {
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
                     'loader' => TRUE,
-                    'condition' => [
-                        'sa_counter_icon' => 'yes',
-                    ],
+                  
                 ],
             ],
             'title_field' => 'sa_counter_title_text',

@@ -66,7 +66,7 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-info' => ''
                 ],
-            ] 
+            ]
         );
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
@@ -109,7 +109,7 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => -10,
@@ -119,10 +119,10 @@ class Style_1 extends AdminStyle
                         'min' => -60,
                         'max' => 60,
                         'step' => 0.01,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-team-show-body-style-4:hover' => 'transform: translateY({{sa_team_hover_position.SIZE}}px);'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-team-show-body-style-1:hover' => 'transform: translateY({{sa_team_hover_position.SIZE}}px);'
                 ],
             ]
         );
@@ -133,10 +133,10 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE 
-            ] 
+                Controls::SEPARATOR => TRUE
+            ]
         );
-    
+
         $this->add_responsive_control(
             'sa_team_padding',
             $this->style,
@@ -146,7 +146,7 @@ class Style_1 extends AdminStyle
                 'default' => [
                     'unit' => 'px',
                     'size' => 10,
-                ],  
+                ],
                 'range' => [
                     '%' => [
                         'min' => 0,
@@ -198,7 +198,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1   .oxi-team-show-body-style-4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1   .oxi-team-show-body-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -223,11 +223,11 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => 250,
-                ], 
+                ],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -243,10 +243,10 @@ class Style_1 extends AdminStyle
                         'min' => 10,
                         'max' => 50,
                         'step' => 0.1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size img.oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-team-show-body-style-1' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -255,11 +255,11 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => 250,
-                ], 
+                ],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -275,10 +275,10 @@ class Style_1 extends AdminStyle
                         'min' => 10,
                         'max' => 50,
                         'step' => 0.1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
-                    '{{WRAPPER}}.oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size img.oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size:after' => 'padding-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -293,7 +293,7 @@ class Style_1 extends AdminStyle
                 'showing' => FALSE,
             ]
         );
-       
+
         $this->add_control(
             'sa_team_name_tag',
             $this->style,
@@ -336,7 +336,7 @@ class Style_1 extends AdminStyle
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-name' => 'color:{{VALUE}};'
                 ],
             ]
-        );  
+        );
         $this->add_responsive_control(
             'sa_team_name_padding',
             $this->style,
@@ -345,7 +345,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' =>'',
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -376,7 +376,7 @@ class Style_1 extends AdminStyle
                 'label' => esc_html__('Divider Settings', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
             ]
-        ); 
+        );
         $this->add_responsive_control(
             'sa_divider_alignment',
             $this->style,
@@ -385,7 +385,7 @@ class Style_1 extends AdminStyle
                 'separator' => TRUE,
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center', 
+                'default' => 'center',
                 'options' => [
                     'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
@@ -410,11 +410,11 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => 250,
-                ], 
+                ],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -430,10 +430,10 @@ class Style_1 extends AdminStyle
                         'min' => 10,
                         'max' => 50,
                         'step' => 0.1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -445,7 +445,7 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => ''
                 ],
-            ] 
+            ]
         );
         $this->add_responsive_control(
             'sa_team_divider_padding',
@@ -455,7 +455,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' =>'',
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -487,7 +487,7 @@ class Style_1 extends AdminStyle
                 'showing' => FALSE,
             ]
         );
-        
+
         $this->add_group_control(
             'sa_team_designation_typo',
             $this->style,
@@ -511,7 +511,7 @@ class Style_1 extends AdminStyle
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-role' => 'color:{{VALUE}};'
                 ],
             ]
-        );  
+        );
         $this->add_responsive_control(
             'sa_team_designation_padding',
             $this->style,
@@ -520,7 +520,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' =>'',
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -557,35 +557,35 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 250,
-                ], 
+                    'size' => 40,
+                ],
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 800,
+                        'max' => 150,
                         'step' => 1,
                     ],
                     '%' => [
                         'min' => 0,
-                        'max' => 250,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     'em' => [
                         'min' => 10,
                         'max' => 50,
                         'step' => 0.1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
-      
-        
+
+
         $this->add_control(
             'sa_team_social_box_bg_color',
             $this->style,
@@ -595,17 +595,18 @@ class Style_1 extends AdminStyle
                 'default' => '#2196f3',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'background-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons:before' => 'border-right-color:{{VALUE}};'
                 ],
             ]
-        );  
+        );
         $this->add_control(
             'sa_banner_icon_position',
             $this->style,
             [
                 'label' => __('Icon Postion', SHORTCODE_ADDOONS),
                 'separator' => TRUE,
-                'type' => Controls::CHOOSE, 
+                'type' => Controls::CHOOSE,
                 'default' => 'left',
                 'loader' => TRUE,
                 'options' => [
@@ -616,6 +617,9 @@ class Style_1 extends AdminStyle
                         'title' => __('Right', SHORTCODE_ADDOONS),
                     ],
                 ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1' => ''
+                ],
             ]
         );
         $this->add_control(
@@ -623,21 +627,21 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Position Left', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
-                'condition'=> [
+                'type' => Controls::SLIDER,
+                'condition' => [
                     'sa_banner_icon_position' => 'left'
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => -15,
                 ],
                 'range' => [
                     'px' => [
                         'min' => -200,
                         'max' => 200,
                         'step' => 1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'left: {{SIZE}}px;'
                 ],
@@ -648,21 +652,21 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Position Right', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
-                'condition'=> [
+                'type' => Controls::SLIDER,
+                'condition' => [
                     'sa_banner_icon_position' => 'oxi-team-right'
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => -15,
                 ],
                 'range' => [
                     'px' => [
                         'min' => -200,
                         'max' => 200,
                         'step' => 1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1.oxi-team-right .member-icons' =>  'right: {{SIZE}}px; left: auto'
                 ],
@@ -677,7 +681,7 @@ class Style_1 extends AdminStyle
                 'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
-                    'size' =>'',
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -719,12 +723,12 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 25,
+                    'size' => 18,
                 ],
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 200,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     '%' => [
@@ -821,8 +825,8 @@ class Style_1 extends AdminStyle
                     'sa_social_icons_bg_color_view' => 'common'
                 ]
             ]
-        ); 
- 
+        );
+
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
@@ -907,7 +911,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_social_icons_h_border_radius',
+            'sa_social_icons_h_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -934,10 +938,42 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icon .oxi-icons' => 'Padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
-    );
+        );
+        $this->add_responsive_control(
+            'sa_social_icons_h_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
