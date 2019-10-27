@@ -72,12 +72,15 @@ class Style_3 extends Templates {
                     <div class="oxi-addons-counter-style3 ' . $style['sa_counter_align'] . '"> 
                        <div class="oxi-addons-counter-row">';
 
-            $rearrange = explode(',', 'icon,title,divider,number');
-            foreach ($rearrange as $arrange) {
-                if (isset($$arrange)) {
-                    echo $$arrange;
+            $rearrange = explode(',', $style['sa_counter_rearrange']);
+               foreach ($rearrange as $arrange) {
+                    if ($arrange != ''):
+                        if (isset($$arrange)) {
+                            echo $$arrange;
+                        }
+                    endif;
                 }
-            }
+          
             echo '      </div>
                     </div>
                 </div>';

@@ -268,20 +268,22 @@ class Style_4 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_rearrange_control(
-                'sa_counter_tests', $this->style, [
+         $this->add_rearrange_control(
+                'sa_counter_rearrange', $this->style, [
             'type' => Controls::REARRANGE,
             'label' => __(' ', SHORTCODE_ADDOONS),
+            'default' => 'title,number,icon,divider,',
+                    'loader'=>TRUE,
             'fields' => [
-                'sa_counter_title_rarng' => [
+                'title' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),
-                    ],
-                'sa_counter_number_rarng' => [
+                ],
+                'number' => [
                     'label' => __('Number', SHORTCODE_ADDOONS),
-                  ],
-                
+                ],
+               
             ],
-                 ]
+                ]
         );
 
 

@@ -280,10 +280,11 @@ class Style_5 extends AdminStyle {
                 ]
         );
         $this->add_rearrange_control(
-                'sa_counter_tests', $this->style, [
+                'sa_counter_rearrange', $this->style, [
             'type' => Controls::REARRANGE,
             'label' => __(' ', SHORTCODE_ADDOONS),
             'default' => 'title,number,icon,divider,',
+                    'loader'=>TRUE,
             'fields' => [
                 'title' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),

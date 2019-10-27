@@ -78,10 +78,16 @@ class Style_2 extends Templates {
             }
             
             echo '<div class="oxi-addons-counter-body">';
-            $rearrange = explode(',', 'title,divider,number');
-            foreach ($rearrange as $arrange) {
-                echo $$arrange;
-            }
+            
+             $rearrange = explode(',', $style['sa_counter_rearrange']);
+               foreach ($rearrange as $arrange) {
+                    if ($arrange != ''):
+                        if (isset($$arrange)) {
+                            echo $$arrange;
+                        }
+                    endif;
+                }
+          
             echo '</div>';
             if ($style['sa_counter_align'] == 'right') {
                 echo $icon;

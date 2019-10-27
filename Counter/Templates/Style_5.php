@@ -32,7 +32,6 @@ class Style_5 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-         echo $style['sa_counter_tests'];
         $repeater = (array_key_exists('sa_counter_repeater', $style) && is_array($style['sa_counter_repeater'])) ? $style['sa_counter_repeater'] : [];
         foreach ($repeater as $key => $value) {
 
@@ -62,8 +61,8 @@ class Style_5 extends Templates {
             if (array_key_exists('sa_counter_number_on', $style) && $style['sa_counter_number_on'] != '0') {
                 $number = '<div class="oxi-addons-counter-body-data">
                                 <div class="oxi-addons-counter-number">
-                                    <span class="oxi-number-style5">' 
-                                        . $this->text_render($value['sa_counter_number']) . '
+                                    <span class="oxi-number-style5">'
+                        . $this->text_render($value['sa_counter_number']) . '
                                      </span> 
                                      ' . $value['sa_counter_number_sign'] . '
                                 </div>
@@ -74,19 +73,22 @@ class Style_5 extends Templates {
             echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
                     <div class="oxi-addons-counter-style5 style5-' . $key . ' ' . $style['sa_counter_align'] . '"> 
                        <div class="oxi-addons-counter-row">';
+
             
-           
-            $rearrange = explode(',', $style['sa_counter_tests']);
-            foreach ($rearrange as $arrange) {
-                if (isset($$arrange)) {
-                    echo $$arrange;
+            $rearrange = explode(',', $style['sa_counter_rearrange']);
+               foreach ($rearrange as $arrange) {
+                    if ($arrange != ''):
+                        if (isset($$arrange)) {
+                            echo $$arrange;
+                        }
+                    endif;
                 }
-            }
-            
+          
             echo '      </div>
                     </div>
                 </div>';
         }
+          
     }
 
     public function old_render() {

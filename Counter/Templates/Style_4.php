@@ -50,12 +50,14 @@ class Style_4 extends Templates {
                             <div class="oxi-addons-counter-style4">
                                 <div class="oxi-addons-counter ">';
 
-            $rearrange = explode(',', 'number,title');
-            foreach ($rearrange as $arrange) {
-                if (isset($$arrange)) {
-                    echo $$arrange;
+            $rearrange = explode(',', $style['sa_counter_rearrange']);
+               foreach ($rearrange as $arrange) {
+                    if ($arrange != ''):
+                        if (isset($$arrange)) {
+                            echo $$arrange;
+                        }
+                    endif;
                 }
-            }
             echo '</div> ';
             echo '</div></div>';
         }
