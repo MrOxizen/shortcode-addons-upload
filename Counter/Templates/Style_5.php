@@ -32,7 +32,7 @@ class Style_5 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-
+         echo $style['sa_counter_tests'];
         $repeater = (array_key_exists('sa_counter_repeater', $style) && is_array($style['sa_counter_repeater'])) ? $style['sa_counter_repeater'] : [];
         foreach ($repeater as $key => $value) {
 
@@ -74,13 +74,15 @@ class Style_5 extends Templates {
             echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
                     <div class="oxi-addons-counter-style5 style5-' . $key . ' ' . $style['sa_counter_align'] . '"> 
                        <div class="oxi-addons-counter-row">';
-
-            $rearrange = explode(',', 'icon,number,divider,title');
+            
+           
+            $rearrange = explode(',', $style['sa_counter_tests']);
             foreach ($rearrange as $arrange) {
                 if (isset($$arrange)) {
                     echo $$arrange;
                 }
             }
+            
             echo '      </div>
                     </div>
                 </div>';

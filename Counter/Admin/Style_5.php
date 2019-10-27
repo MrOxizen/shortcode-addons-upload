@@ -64,7 +64,7 @@ class Style_5 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Number Sing', SHORTCODE_ADDOONS),
                     'placeholder' => __('Sign', SHORTCODE_ADDOONS),
-                     'loader' => TRUE,
+                    'loader' => TRUE,
                 ],
                 'sa_counter_icon_class' => [
                     'type' => Controls::ICON,
@@ -91,7 +91,7 @@ class Style_5 extends AdminStyle {
             'title_field' => 'sa_counter_title_text',
                 ]
         );
-        
+
         $this->add_control(
                 'sa_counter_align', $this->style, [
             'label' => __('Align', SHORTCODE_ADDOONS),
@@ -279,13 +279,28 @@ class Style_5 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_control(
-                'sa_counter_test', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('', SHORTCODE_ADDOONS),
-            'placeholder' => __('', SHORTCODE_ADDOONS),
-            'default' => '',
-            'loader' => TRUE,
+        $this->add_rearrange_control(
+                'sa_counter_tests', $this->style, [
+            'type' => Controls::REARRANGE,
+            'label' => __(' ', SHORTCODE_ADDOONS),
+            'fields' => [
+                'sa_counter_title_rarng' => [
+                    'label' => __('Title', SHORTCODE_ADDOONS),
+                    'default' => 'title',
+                ],
+                'sa_counter_number_rarng' => [
+                    'label' => __('Number', SHORTCODE_ADDOONS),
+                    'default' => 'number',
+                ],
+                'sa_counter_icon_rarng' => [
+                    'label' => __('Icon', SHORTCODE_ADDOONS),
+                    'default' => 'icon',
+                ],
+                'sa_counter_Divider_rarng' => [
+                    'label' => __('Divider', SHORTCODE_ADDOONS),
+                    'default' => 'divider',
+                ],
+            ],
                 ]
         );
 
