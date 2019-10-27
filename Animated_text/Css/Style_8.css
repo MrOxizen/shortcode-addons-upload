@@ -1,0 +1,209 @@
+.oxi-addons-wrapper-style-8 {
+    width: 100%;
+    display: flex;
+    padding: 0px 0px 0px 0px;
+    justify-content: center;
+    overflow: hidden
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 {
+    position: relative;
+    color: transparent;
+    white-space: nowrap;
+    transform: skew(-10deg);
+    display: inline-block;
+    font-size: 100px;
+    font-family: "Bree Serif";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch1,
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch2 {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1::before,
+.oxi-addons-wrapper-style-8 .oxi-addons-h1::after,
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch2::before,
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch2::after,
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch1::before,
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: yellow;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: multiply
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch2::before {
+    color: #279616;
+    animation: trans4 3.2s infinite;
+    z-index: -1;
+    clip-path: inset(62% 0 0 0)
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch2::after {
+    color: #17a5b5;
+    animation: trans5 3.2s infinite;
+    z-index: -1;
+    clip-path: inset(62% 0 0 0)
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1::before {
+    clip-path: inset(0 0 43% 0);
+    animation: trans6 3.2s infinite;
+    color: #ff3030
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1::after {
+    clip-path: inset(62% 0 0 0)
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch1::before {
+    clip-path: inset(57% 0 42% 0);
+    animation: trans2 .8s steps(1, start) infinite;
+    animation-fill-mode: both;
+    animation-delay: 0.2s;
+    color: #9825db
+}
+
+.oxi-addons-wrapper-style-8 .oxi-addons-h1 .oxi-addons-glitch1::after {
+    clip-path: inset(58% 0 38% 0);
+    animation: trans1 .8s steps(1, start) infinite;
+    animation-fill-mode: both;
+    color: #00f084
+}
+
+@keyframes trans1 {
+    0% {
+        transform: translateX(-1%)
+    }
+    20% {
+        transform: translateX(0.5%)
+    }
+    40% {
+        transform: translateX(-0.2%)
+    }
+    60% {
+        transform: translateX(0.6%)
+    }
+    90% {
+        transform: translateX(0.8%)
+    }
+    100% {
+        transform: translateX(-1%)
+    }
+}
+
+@keyframes trans2 {
+    0% {
+        transform: translateX(5%)
+    }
+    20% {
+        transform: translateX(2.5%)
+    }
+    55% {
+        transform: translateX(1.8%)
+    }
+    60% {
+        transform: translateX(2.6%)
+    }
+    80% {
+        transform: translateX(2.8%)
+    }
+    100% {
+        transform: translateX(3%)
+    }
+}
+
+@keyframes trans3 {
+    0% {
+        transform: translateX(1%)
+    }
+    20% {
+        transform: translateX(1.1%)
+    }
+    45% {
+        transform: translateX(1.2%)
+    }
+    70% {
+        transform: translateX(1.4%)
+    }
+    90% {
+        transform: translateX(0.6%)
+    }
+    100% {
+        transform: translateX(1.2%)
+    }
+}
+
+@keyframes trans4 {
+    0% {
+        transform: translateX(0%)
+    }
+    60% {
+        transform: translateX(0.5%)
+    }
+    60.001% {
+        transform: translateX(0.3%)
+    }
+    100% {
+        transform: translateX(0.2%)
+    }
+}
+
+@keyframes trans5 {
+    0% {
+        transform: translateX(0%)
+    }
+    60% {
+        transform: translateX(-0.5%)
+    }
+    60.001% {
+        transform: translateX(-0.3%)
+    }
+    100% {
+        transform: translateX(-0.2%)
+    }
+}
+
+@keyframes trans6 {
+    0% {
+        transform: translateX(0.6%)
+    }
+    60% {
+        transform: translateX(1.1%)
+    }
+    60.001% {
+        transform: translateX(0.9%)
+    }
+    100% {
+        transform: translateX(1.2%)
+    }
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-wrapper-style-8 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-style-8 .oxi-addons-h1 {
+        font-size: 100px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-wrapper-style-8 {
+        padding: 0px 0px 0px 0px
+    }
+    .oxi-addons-wrapper-style-8 .oxi-addons-h1 {
+        font-size: 30px
+    }
+}
