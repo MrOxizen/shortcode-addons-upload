@@ -283,22 +283,19 @@ class Style_5 extends AdminStyle {
                 'sa_counter_tests', $this->style, [
             'type' => Controls::REARRANGE,
             'label' => __(' ', SHORTCODE_ADDOONS),
+            'default' => 'title,number,icon,divider,',
             'fields' => [
-                'sa_counter_title_rarng' => [
+                'title' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),
-                    'default' => 'title',
                 ],
-                'sa_counter_number_rarng' => [
+                'number' => [
                     'label' => __('Number', SHORTCODE_ADDOONS),
-                    'default' => 'number',
                 ],
-                'sa_counter_icon_rarng' => [
+                'icon' => [
                     'label' => __('Icon', SHORTCODE_ADDOONS),
-                    'default' => 'icon',
                 ],
-                'sa_counter_Divider_rarng' => [
+                'divider' => [
                     'label' => __('Divider', SHORTCODE_ADDOONS),
-                    'default' => 'divider',
                 ],
             ],
                 ]
