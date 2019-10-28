@@ -25,10 +25,10 @@ class Style_16 extends Templates
 
             $name = $desgnation = $image = $link = $divider = '';
             if (array_key_exists('sa_price_table_name', $value) && $value['sa_price_table_name'] != '') {
-                $name = '<' . $style['sa_team_name_tag'] . ' class="member-name">' . $this->text_render($value['sa_price_table_name']) . '</' . $style['sa_team_name_tag'] . '>';
+                $name = '<span><' . $style['sa_team_name_tag'] . ' class="member-name">' . $this->text_render($value['sa_price_table_name']) . '</' . $style['sa_team_name_tag'] . '></span>';
             }
             if (array_key_exists('sa_price_table_desgnation', $value) && $value['sa_price_table_desgnation'] != '') {
-                $desgnation = '<p class="member-role">' . $this->text_render($value['sa_price_table_desgnation']) . '</p>';
+                $desgnation = '<span><p class="member-role">' . $this->text_render($value['sa_price_table_desgnation']) . '</p></span>';
             }
 
             if ($this->media_render('sa_team_front_image', $value) != '') {
@@ -50,14 +50,15 @@ class Style_16 extends Templates
                         <div class="member-photo">
                                 <div class="oxi-team-pic-size">
                                     ' . $image . '
-                                </div> 
-                        </div>
-                        <div class="member-content-absolute">
-                            <div class="member-info">
-                                ' . $name . '
-                                ' . $divider . '
-                                ' . $desgnation . '
-                            </div>
+                                    <div class="member-info">
+                                    ' . $name . '
+                                    ' . $divider . '
+                                    ' . $desgnation . '
+                                     </div>
+                                </div>  
+                        </div> 
+                            
+                            <div class="member-content-absolute">
                             <div class="member-icons">';
                                 $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
                                 foreach ($datas as $key => $data) {
