@@ -62,76 +62,83 @@ class Style_4 extends Templates {
     public function old_render() {
         $styledata = $this->dbdata;
         $listdata = $this->child;
+        $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
-        $styledata = explode('|', $stylefiles[0]);
-        $css = '';
+    $styledata = explode('|', $stylefiles[0]);
+    $css = '';
+//echo "<pre>";
+//print_r($styledata);
+//echo "</pre>";
 
-        $iconboxfirst = $iconboxlast = '';
-        $datacount = count($listdata);
-        echo '<div class="oxi-addons-container">
-                <div class="oxi-addons-row">
-                    <div class="oxi-addons-main-wrapper-' . $oxiid . ' ">
-                        <div class="oxi-icon-last">';
+    $iconboxfirst = $iconboxlast = '';
+    $datacount = count($listdata);
 
-        foreach ($listdata as $one_item) {
-            $listfiles = explode('||#||', $one_item['files']);
 
-            $icon = $heading = $content = '';
-            if ($listfiles[5] != '') {
-                $icon = '
+    echo '<div class="oxi-addons-container">
+            <div class="oxi-addons-row">
+            <div class="oxi-addons-main-wrapper-' . $oxiid . ' ">';
+    echo '<div class="oxi-icon-last"> ';
+    foreach ($listdata as $one_item) {
+        $listfiles = explode('||#||', $one_item['files']);
+
+        $icon = $heading = $content = '';
+        if ($listfiles[5] != '') {
+            $icon = '
                 <div class=" oxi-addons-content-boxes-icon">
                 ' . oxi_addons_font_awesome($listfiles[5]) . '
                 </div>  
             ';
-            }
-            if ($listfiles[1] != '') {
-                $heading = '
+        }
+        if ($listfiles[1] != '') {
+            $heading = '
                     <div class="oxi-addons-content-boxes-heading">
                         ' . OxiAddonsTextConvert($listfiles[1]) . '
                     </div>
                 ';
-            }
-            if ($listfiles[3] != '') {
-                $content = '
+        }
+        if ($listfiles[3] != '') {
+            $content = '
                     <div class="oxi-addons-content-boxes-content">
                     ' . OxiAddonsTextConvert($listfiles[3]) . '
                     </div>  
                 ';
-            }
-
-            echo '<div class=" oxi-info-banner-style-4-static ">'
-            . '<div class="oxi-addons-content-boxes-' . $oxiid . '  ' . OxiAddonsAdminDefine($user) . ' " ' . OxiAddonsAnimation($styledata, 115) . '>
-                    <div class="oxi-addons-content-boxes-main">                        
-			<div class="oxi-addons-box">';
-
-            if ($styledata[3] == 'left') {
-                echo ' ' . $icon .
-                '<div class="oxi-addons-header-content">
-					' . $heading . '
-					' . $content . '     
-                                    </div> 
-										   ';
-            } else {
-                echo ' <div class="oxi-addons-header-content">
-                                                ' . $heading . '
-                                                ' . $content . '     
-                                            </div> 
-                                            ' . $icon . '
-                                            ';
-            }
-
-            echo '</div>
-		</div>';
-            echo '</div></div>';
         }
-        echo '          </div>
-                     </div>
-                </div>
-            </div>';
+
+        echo '<div class=" oxi-info-banner-style-4-static ">'
+        . '<div class="oxi-addons-content-boxes-' . $oxiid . '  " ' . OxiAddonsAnimation($styledata, 115) . '>
+							 <div class="oxi-addons-content-boxes-main">                        
+							    <div class="oxi-addons-box">';
 
 
+        if ($styledata[3] == 'left') {
+            echo ' ' . $icon .
+            '<div class="oxi-addons-header-content">
+												' . $heading . '
+												' . $content . '     
+											</div> 
+										   ';
+        } else {
+            echo ' <div class="oxi-addons-header-content">
+												' . $heading . '
+												' . $content . '     
+											</div> 
+											' . $icon . '
+										   ';
+        }
 
-        $css .= ' 
+        echo '</div>
+					</div>';
+
+
+        echo '</div></div>';
+    }
+    echo ' </div>';
+    echo ' </div>';
+    echo '</div>'
+    . '</div>';
+
+
+    $css .= ' 
         .oxi-info-banner-style-7-static{
             overflow:hidden;
         }
@@ -357,6 +364,7 @@ class Style_4 extends Templates {
             }   
         }
         ';
+
         wp_add_inline_style('shortcode-addons-style', $css);
     }
 

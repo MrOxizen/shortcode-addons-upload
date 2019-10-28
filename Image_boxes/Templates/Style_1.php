@@ -102,7 +102,7 @@ class Style_1 extends Templates {
         foreach ($rearrange as $arrange) {
             $loopdata .= $$arrange;
         }
-        echo '<div class="' . OxiAddonsItemRows($styledata, 3) . '  ' . OxiAddonsAdminDefine($user) . '">
+        echo '<div class="' . OxiAddonsItemRows($styledata, 3) . ' ">
                     ' . $firstlink . '
                         <div class="oxi-addons-icon-boxes-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 95) . '>
                             <div class="oxi-addons-icon-box">

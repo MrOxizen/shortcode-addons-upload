@@ -137,7 +137,7 @@ class Style_5 extends Templates {
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
-        echo oxi_addons_elements_stylejs('css/style', 'style', 'css', 'button-effects');
+        wp_enqueue_style('Button_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Button_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);        
 
         echo '  <div class="oxi-addons-container">
                 <div class="oxi-addons-row">';

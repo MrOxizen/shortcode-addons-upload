@@ -45,7 +45,7 @@ class Style_2 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-asProgressdfs-style-2-js';
-        echo oxi_addons_public_waypoints();
+        wp_enqueue_style('Image_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('jquery-asProgressdfs-style-2-js', SA_ADDONS_UPLOAD_URL . '/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
     }
 
@@ -71,7 +71,7 @@ class Style_2 extends Templates {
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
-        echo oxi_addons_public_waypoints();
+        wp_enqueue_style('Image_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('jquery-asProgressdfs-js-style-2', SA_ADDONS_UPLOAD_URL . '/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
         $css = '';
         $jquery = '';
@@ -80,7 +80,7 @@ class Style_2 extends Templates {
         <div class="oxi-addons-row">';
         foreach ($listdata as $value) {
             $data = explode('||#||', $value['files']);
-            echo '<div class="oxi-addons-parent-wrapper-' . $oxiid . ' oxi-addons-parent-wrapper-' . $oxiid . '-' . $value['id'] . ' ' . OxiAddonsItemRows($styledata, 3) . '  ' . OxiAddonsAdminDefine($user) . '">';
+            echo '<div class="oxi-addons-parent-wrapper-' . $oxiid . ' oxi-addons-parent-wrapper-' . $oxiid . '-' . $value['id'] . ' ' . OxiAddonsItemRows($styledata, 3) . '">';
             echo '<div class="oxi-addons-main-wrapper-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 39) . '>
                         <div class="oxi-addons-progress-bar-main"  role="oxi-progress" data-goal="' . $data[1] . '" data-speed="' . $data[9] . '"> 
                             <div class="oxi-addons-heading">
@@ -98,22 +98,7 @@ class Style_2 extends Templates {
                 }, {
                     offset: "80%"
                 });';
-            if ($user == 'admin') {
-                echo '  <div class="oxi-addons-admin-absulote">
-                                <div class="oxi-addons-admin-absulate-edit">
-                                    <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditprogress_barsdata") . '
-                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                        <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                    </form>
-                                </div>
-                                <div class="oxi-addons-admin-absulate-delete">
-                                    <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeleteprogress_barsdata") . '
-                                        <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                        <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                    </form>
-                                </div>
-                            </div>';
-            }
+            
             echo '</div>';
         }
         echo '</div>

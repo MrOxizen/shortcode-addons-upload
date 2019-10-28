@@ -75,7 +75,7 @@ class Style_3 extends Templates {
 
 
 
-            echo '<div class="oxi-addons-main-wrapper-' . $oxiid . '  ' . OxiAddonsItemRows($styledata, 66) . '  ">
+            echo '<div class="oxi-addons-main-wrapper-' . $oxiid . '">
                     <div class="oxi-addons-wrapper-' . $oxiid . '">  
                         ' . $img . ' 
                     </div>';

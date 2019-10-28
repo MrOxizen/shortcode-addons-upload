@@ -42,7 +42,28 @@ class Contact_form_7 extends Elements_Frontend {
 
     public function template_rendar($data = array()) {
         $image = $this->pre_image();
-
+        if (!function_exists('is_plugin_active')) {
+            include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        }
+        if (!is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
+            echo "<div class='oxi-gf-active'>
+                Please Install and Active Contact Forms 7 Plugin to Use Contact Forms 7 Element...!
+                 </div>
+                 <style>
+                 .oxi-gf-active{
+                        font-size: 27px;
+                        color: red;
+                        margin: 50px 20px 50px 18px;
+                        padding: 20px;
+                        background: #ffe9e9;
+                        font-weight: 700;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid red;
+                     }    
+                 </style>";
+        }
         return __('<div class="oxi-addons-col-1" id="' . $data['style']['style_name'] . '">
                                 <div class="oxi-addons-style-preview">
                                     <div class="oxi-addons-style-preview-top oxi-addons-center">

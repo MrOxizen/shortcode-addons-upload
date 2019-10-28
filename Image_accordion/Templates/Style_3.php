@@ -18,7 +18,7 @@ class Style_3 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'jquery_image_accordion_style3';
-        wp_enqueue_script('jquery_image_accordion_style3', SA_ADDONS_UPLOAD_URL . '/Image_accordion/file/jquery_image_accordion.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery_image_accordion_style3', SA_ADDONS_UPLOAD_URL . '/Image_accordion/File/jquery_image_accordion.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function default_render($style, $child, $admin) {
@@ -32,12 +32,12 @@ class Style_3 extends Templates {
                             <div class="oxi-addons-slider-content">';
         foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
             echo '<div class="oxi-addons-image oxi-addons-image-first">
-                        <div class="oxi-addons-slider-item">
-                            <div class="oxi-addons-item-img-1" data-src="' . $this->media_render('sa_image_accordion_image_1', $value) . '"></div>
-                            <div class="oxi-addons-item-img-2" data-src="' . $this->media_render('sa_image_accordion_image_2', $value) . '"></div>
-                        </div>
-                        <span class="oxi-addons-image-text oxi-addons-heading"> ' . $this->text_render($value['sa_image_accordion_item_title']) . '</span>
-                   </div>';
+                                            <div class="oxi-addons-slider-item">
+                                                <div class="oxi-addons-item-img-1" data-src="' . $this->media_render('sa_image_accordion_image_1', $value) . '"></div>
+                                                <div class="oxi-addons-item-img-2" data-src="' . $this->media_render('sa_image_accordion_image_2', $value) . '"></div>
+                                            </div>
+                                            <span class="oxi-addons-image-text oxi-addons-heading"> ' . $this->text_render($value['sa_image_accordion_item_title']) . '</span>
+                              </div>';
         }
         echo '      </div>
                 </section>
@@ -57,8 +57,8 @@ class Style_3 extends Templates {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $styledata['id'];
-        echo oxi_addons_elements_stylejs('style', 'image_accordion', 'css');
-        echo oxi_addons_elements_stylejs('main', 'image_accordion', 'js');
+        wp_enqueue_style('jquery_image_old_accordion_style3', SA_ADDONS_UPLOAD_URL . '/Image_accordion/File/style.css', True, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery_image_old_accordion_js3', SA_ADDONS_UPLOAD_URL . '/Image_accordion/File/jquery_image_accordion.js', false, SA_ADDONS_PLUGIN_VERSION);
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
         $css = '';
@@ -66,18 +66,18 @@ class Style_3 extends Templates {
 
         echo '<div class="oxi-addons-container">
 		<div class="oxi-addons-row">
-            <div class="oxi-addons-wrapper-image-accordion-three">
+            <div class="oxi-addons-wrapper-' . $oxiid . '">
                 <div class="oxi-addons-accordion">
                     <section id="oxi-addons-slider">
                             <div class="oxi-addons-slider-content">';
         foreach ($listdata as $key => $value) {
             $data = explode('||#||', $value['files']);
-            echo ' <div class="oxi-addons-image oxi-addons-image-first ' . OxiAddonsAdminDefine($user) . '">
-                                    <div class="oxi-addons-slider-item">
-                                        <div class="oxi-addons-item-img-1" data-src="' . OxiAddonsUrlConvert($data[1]) . '"></div>
-                                        <div class="oxi-addons-item-img-2" data-src="' . OxiAddonsUrlConvert($data[3]) . '"></div>
-                                    </div>
-                                    	<span class="oxi-addons-image-text oxi-addons-heading">   ' . OxiAddonsTextConvert($data[5]) . '</span>';
+            echo ' <div class="oxi-addons-image oxi-addons-image-first">
+                                                            <div class="oxi-addons-slider-item">
+                                                                <div class="oxi-addons-item-img-1" data-src="' . OxiAddonsUrlConvert($data[1]) . '"></div>
+                                                                <div class="oxi-addons-item-img-2" data-src="' . OxiAddonsUrlConvert($data[3]) . '"></div>
+                                                            </div>
+                                                                <span class="oxi-addons-image-text oxi-addons-heading">   ' . OxiAddonsTextConvert($data[5]) . '</span>';
 
             echo '</div>';
         }
@@ -172,10 +172,12 @@ class Style_3 extends Templates {
     .oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-accordion  .oxi-addons-heading {
         font-size: ' . $styledata[29] . 'px; 
         padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 41) . ';  
-    }     
+    }
+    
+
 }';
         wp_add_inline_style('shortcode-addons-style', $css);
-        wp_add_inline_script('shortcode-addons-jquery', $jquery);
+        wp_add_inline_script('jquery_image_old_accordion_js3', $jquery);
     }
 
 }

@@ -60,7 +60,7 @@ class Style_14 extends Templates {
                 </div>
             </div>
           </div>';
-        echo oxi_addons_elements_stylejs('button14', 'button', 'js');
+        wp_enqueue_script('button14', SA_ADDONS_UPLOAD_URL . '/Button/File/button14.js', false, SA_ADDONS_PLUGIN_VERSION);
 
 
         $textalign = explode(':', $styledata[59]);

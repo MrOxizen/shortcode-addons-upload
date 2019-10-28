@@ -105,7 +105,7 @@ class Style_2 extends Templates {
             } else {
                 $linkend = '</div>';
             }
-            echo '<li class=" ' . OxiAddonsAdminDefine($user) . ' oxi-li-' . $key . '" style="background-image: url(' . OxiAddonsUrlConvert($data[1]) . ')">';
+            echo '<li class="oxi-li-' . $key . '" style="background-image: url(' . OxiAddonsUrlConvert($data[1]) . ')">';
             echo '  
          <div class="oxi-addons-overlay oxi-over-' . $key . '">';
             echo $linkstart;

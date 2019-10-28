@@ -653,7 +653,6 @@ class Style_1 extends Templates {
                     .oxi-addons-container .oxi-addons-Interactive-card-' . $oxiid . ' .oxi-close-icon:hover{
                             cursor : pointer;
                     }';
-        echo OxiAddonsInlineCSSData($css);
         if ($styledata[109] == 'on') {
 
             $jquery .= "jQuery(function () {
