@@ -73,7 +73,7 @@ class Style_2 extends Templates {
             if (!empty($listfiles[1])) {
                 $a_tag = '<a href="' . OxiAddonsUrlConvert($listfiles[3]) . '" class="oxi-BL-link">' . OxiAddonsTextConvert($listfiles[1]) . '</a>';
             }
-            echo'<li class="oxi-addons-list-li ' . OxiAddonsAdminDefine($user) . ' ">' . $a_tag . '';
+            echo'<li class="oxi-addons-list-li ">' . $a_tag . '';
 
             echo '</li>';
         }

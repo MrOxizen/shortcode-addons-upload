@@ -86,6 +86,7 @@ class Style_1 extends Templates {
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
         $jquery = '';
+       
         echo '<div class="oxi-addons-container">'
         . '<div class="oxi-addons-row">';
         foreach ($listdata as $value) {
@@ -107,8 +108,8 @@ class Style_1 extends Templates {
            ' . $lastlink . '
         ';
             }
-
-            echo ' <div class="oxi-addons-main-wrapper-' . $oxiid . '  ' . OxiAddonsItemRows($styledata, 66) . '  ">
+            
+            echo ' <div class="oxi-addons-main-wrapper-' . $oxiid . ' ">
                         <div class="oxi-addons-wrapper-' . $oxiid . '" >  
                             ' . $img . '
                         </div>';

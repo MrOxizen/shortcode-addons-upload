@@ -49,7 +49,7 @@ class Style_1 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-asProgressdfs-js';
-        echo oxi_addons_public_waypoints();
+        wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('jquery-asProgressdfs-js', SA_ADDONS_UPLOAD_URL . '/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
     }
     
@@ -79,8 +79,8 @@ class Style_1 extends Templates {
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
-        echo oxi_addons_public_waypoints();
-         wp_enqueue_script('jquery-asProgress', SA_ADDONS_UPLOAD_URL . '/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('waypoints_style.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-asProgress', SA_ADDONS_UPLOAD_URL . '/Progress_bars/File/jquery-asProgress.min.js', true, SA_ADDONS_PLUGIN_VERSION);
         $css = '';
         $jquery = '';
 

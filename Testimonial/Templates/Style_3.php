@@ -145,22 +145,6 @@ class Style_3 extends Templates {
                                 ' . $company . '  
                         </div>
                     </div>';
-        if ($user == 'admin') {
-            echo '  <div class="oxi-addons-admin-absulote">
-                            <div class="oxi-addons-admin-absulate-edit">
-                                <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEdittestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                                </form>
-                            </div>
-                            <div class="oxi-addons-admin-absulate-delete">
-                                <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeletetestimonialdata") . '
-                                    <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                    <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                                </form>
-                            </div>
-                        </div>';
-        }
         echo '</div>';
     }
     echo '</div></div>';

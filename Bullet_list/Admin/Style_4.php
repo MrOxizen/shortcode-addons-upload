@@ -66,7 +66,7 @@ class Style_4 extends AdminStyle {
                     'placeholder' => '',
                 ]
             ],
-            'title_field' => 'sa_bl_text',
+            'title_field' => 'sa_bl_four_text',
                 ]
         );
         $this->add_control(
