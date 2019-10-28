@@ -99,7 +99,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-style-7' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -121,7 +121,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('Animation In Type', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
-                'default' => 'h3',
+                'default' => 'bounce',
                 'loader' => TRUE,
                 'options' => [
                     'flash' => __('Flash', SHORTCODE_ADDOONS),
@@ -135,7 +135,7 @@ class Style_7 extends AdminStyle
             ]
         );
         $this->add_control(
-            'oxi-addons-select-in-animation',
+            'oxi-addons-select-out-animation',
             $this->style,
             [
                 'label' => __('In Position', SHORTCODE_ADDOONS),
@@ -161,15 +161,20 @@ class Style_7 extends AdminStyle
             ]
         );
         $this->add_control(
-            'oxi-addons-select-in-animation',
+            'oxi-addons-select-out-animation',
             $this->style,
             [
                 'label' => __('Animation Out Type', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
-                'default' => 'h3',
+                'default' => 'flash',
                 'loader' => TRUE,
                 'options' => [
+                    'flash' => __('Flash', SHORTCODE_ADDOONS),
                     'bounce' => __('Bounce', SHORTCODE_ADDOONS),
+                    'shake' => __('Shake', SHORTCODE_ADDOONS),
+                    'tada' => __('Tada', SHORTCODE_ADDOONS),
+                    'swing' => __('Swing', SHORTCODE_ADDOONS),
+                    'wobble' => __('Wobble', SHORTCODE_ADDOONS),
 
                 ],
             ]
@@ -208,7 +213,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-AT-P-style-1 .oxi-animated-style-1' => ''
+                    '{{WRAPPER}} .oxi-addons-wrapper-style-7 .oxi-addons-tlt *' => ''
                 ],
             ]
         );
@@ -220,7 +225,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-AT-P-style-1 .oxi-animated-style-1' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-wrapper-style-7 .oxi-addons-tlt *' => 'color: {{VALUE}};',
                 ]
             ]
         );
@@ -230,7 +235,7 @@ class Style_7 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-AT-P-style-1 .oxi-animated-style-1' => '',
+                    '{{WRAPPER}} .oxi-addons-wrapper-style-7 .oxi-addons-tlt *' => '',
                 ]
             ]
         );

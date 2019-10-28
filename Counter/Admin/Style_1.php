@@ -66,9 +66,6 @@ class Style_1 extends AdminStyle {
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
                     'loader' => TRUE,
-                    'condition' => [
-                        'sa_counter_icon' => 'yes',
-                    ],
                 ],
             ],
             'title_field' => 'sa_counter_title_text',
@@ -186,13 +183,26 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_control(
-                'sa_counter_test', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('', SHORTCODE_ADDOONS),
-            'placeholder' => __('', SHORTCODE_ADDOONS),
-            'default' => '',
+        $this->add_rearrange_control(
+                'sa_counter_rearrange', $this->style, [
+            'type' => Controls::REARRANGE,
+            'label' => __(' ', SHORTCODE_ADDOONS),
+            'default' => 'title,number,icon,divider,',
             'loader' => TRUE,
+            'fields' => [
+                'title' => [
+                    'label' => __('Title', SHORTCODE_ADDOONS),
+                ],
+                'number' => [
+                    'label' => __('Number', SHORTCODE_ADDOONS),
+                ],
+                'icon' => [
+                    'label' => __('Icon', SHORTCODE_ADDOONS),
+                ],
+                'divider' => [
+                    'label' => __('Divider', SHORTCODE_ADDOONS),
+                ],
+            ],
                 ]
         );
 

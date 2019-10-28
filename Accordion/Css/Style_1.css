@@ -48,7 +48,17 @@
     padding:10px 10px 10px 10px ;
 }
 .oa_ac_style_1 .oxi-addons-ac-H .order{
-    order: -1;
+    order: 1;
+}
+.oa_ac_style_1 .oxi-addons-ac-H .icon_order{
+    order: 1;
+}
+.oa_ac_style_1 .oxi-addons-ac-H .icon_setting {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 .oa_ac_style_1 .oxi-addons-ac-H.active .heading-data,
 .oxi-addons-ac-H:hover .heading-data{
@@ -123,7 +133,7 @@
     background:#ffffff;
     box-shadow:1px 1px 15px 1px rgba(207, 207, 207, 1);
     border-radius:0px 0px 0px 0px;
-    padding:15px 15px 15px 15px ;
+    padding:15px 15px 15px 15px;
 }
 
 

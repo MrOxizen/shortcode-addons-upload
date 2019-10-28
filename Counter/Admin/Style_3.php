@@ -66,15 +66,13 @@ class Style_3 extends AdminStyle {
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
                     'loader' => TRUE,
-                    'condition' => [
-                        'sa_counter_icon' => 'yes',
-                    ],
+                   
                 ],
             ],
             'title_field' => 'sa_counter_title_text',
                 ]
         );
-       
+
         $this->add_control(
                 'sa_counter_align', $this->style, [
             'label' => __('Align', SHORTCODE_ADDOONS),
@@ -139,7 +137,7 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-          $this->end_controls_section();
+        $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('General Style', SHORTCODE_ADDOONS),
@@ -278,13 +276,26 @@ class Style_3 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_control(
-                'sa_counter_test', $this->style, [
-            'type' => Controls::TEXT,
-            'label' => __('', SHORTCODE_ADDOONS),
-            'placeholder' => __('', SHORTCODE_ADDOONS),
-            'default' => '',
-            'loader' => TRUE,
+         $this->add_rearrange_control(
+                'sa_counter_rearrange', $this->style, [
+            'type' => Controls::REARRANGE,
+            'label' => __(' ', SHORTCODE_ADDOONS),
+            'default' => 'title,number,icon,divider,',
+                    'loader'=>TRUE,
+            'fields' => [
+                'title' => [
+                    'label' => __('Title', SHORTCODE_ADDOONS),
+                ],
+                'number' => [
+                    'label' => __('Number', SHORTCODE_ADDOONS),
+                ],
+                'icon' => [
+                    'label' => __('Icon', SHORTCODE_ADDOONS),
+                ],
+                'divider' => [
+                    'label' => __('Divider', SHORTCODE_ADDOONS),
+                ],
+            ],
                 ]
         );
 

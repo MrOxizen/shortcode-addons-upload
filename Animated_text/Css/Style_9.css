@@ -1,0 +1,81 @@
+.oxi-addons-wrapper-style-9{
+    width: 100%;
+    display: flex;  
+    background: #fff;
+    padding: 0px 0px 0px 0px; 
+    justify-content: center;
+    overflow: hidden;
+}   
+.oxi-addons-wrapper-style-9 .oxi-addons-para {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: left;
+    font-size: 100px;
+    font-family:"Bree Serif"; font-weight:100; font-style:normal; line-height:1.3; text-align:center;letter-spacing:1px;;
+    color: #ffffff;
+}
+
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span {
+    display: inline-block;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 500;
+    perspective: 500;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px 10px 0px 10px; 
+}
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span::before,
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span::after {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    transition: all ease-out 0.3s;
+    content: attr(data-text);
+}
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span::before {
+    content: attr(data-text);
+    z-index: 1;
+    color: rgba(0,0,0,0.2);
+    -webkit-transform: scale(1.1, 1) skew(0deg, 20deg);
+    transform: scale(1.1, 1) skew(0deg, 20deg);
+}
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span::after {
+    z-index: 2;
+    color: #4897f7;
+    text-shadow: -1px 0 1px #4897f7, 1px 0 1px #4897f7;
+    -webkit-transform: rotateY(-40deg);
+    transform: rotateY(-40deg);
+}
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span:hover::before {
+    -webkit-transform: scale(1.1, 1) skew(0deg, 5deg);
+    transform: scale(1.1, 1) skew(0deg, 5deg);
+}
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span:hover::after {
+    -webkit-transform: rotateY(-10deg);
+    transform: rotateY(-10deg);
+} 
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span::before,
+.oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span::after {
+    display: block;
+} 
+@media only screen and (min-width : 669px) and (max-width : 993px){
+    .oxi-addons-wrapper-style-9{ 
+        padding: 0px 0px 0px 0px; 
+    } 
+    .oxi-addons-wrapper-style-9 .oxi-addons-para{ 
+        font-size: 100px; 
+    }
+}
+@media only screen and (max-width : 668px){
+    .oxi-addons-wrapper-style-9{ 
+        padding: 0px 0px 0px 0px; 
+    }  
+    .oxi-addons-wrapper-style-9 .oxi-addons-para{ 
+        font-size: 60px; 
+    }
+}
