@@ -115,7 +115,7 @@ class Style_1 extends Templates {
         $styledata = explode('|', $stylefiles[0]);
         $css = $jquery = $facebook = $twitter = $pinterest = $linkedin = $google = '';
 
-        echo oxi_addons_elements_stylejs('jquery-kyco-easyshare-min', 'social_share', 'js');
+        wp_enqueue_script('jquery-kyco-easyshare-min', SA_ADDONS_UPLOAD_URL . '/Social_share/file/jquery-kyco-easyshare-min.js', true, SA_ADDONS_PLUGIN_VERSION);
         if ($styledata[41] == 'true') {
             $facebook = '
             <div class="oxi-addons-soical" >
