@@ -157,7 +157,7 @@ class Style_10 extends Templates {
                      ';
             }
 
-            echo '  <div class="oxi-box-wrap-' . $oxiid . '   oxi-addons-bg-img-' . $value['styleid'] . '-' . $value['id'] . '       ' . OxiAddonsItemRows($styledata, 337) . '      ' . OxiAddonsAdminDefine($user) . '">
+            echo '  <div class="oxi-box-wrap-' . $oxiid . '   oxi-addons-bg-img-' . $value['styleid'] . '-' . $value['id'] . '       ' . OxiAddonsItemRows($styledata, 337) . '  ">
                         <div class="oxi-addons-box "  ' . OxiAddonsAnimation($styledata, 329) . '>
                           <div class="oxi-addons-box-outer">
                             <div class="oxi-addons-box-sample">
@@ -175,22 +175,7 @@ class Style_10 extends Templates {
                           </div>
                         </div> ';
 
-            if ($user == 'admin') {
-                echo '  <div class="oxi-addons-admin-absulote">
-                        <div class="oxi-addons-admin-absulate-edit">
-                            <form method="post"> ' . wp_nonce_field("OxiAddonsListFileEditfood_menudata") . '
-                                <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                <button class="btn btn-primary" type="submit" value="edit" name="OxiAddonsListFileEdit">Edit</button>
-                            </form>
-                        </div>
-                        <div class="oxi-addons-admin-absulate-delete">
-                            <form method="post">  ' . wp_nonce_field("OxiAddonsListFileDeletefood_menudata") . '
-                                <input type="hidden" name="oxi-item-id" value="' . $value['id'] . '">
-                                <button class="btn btn-danger " type="submit" value="delete" name="OxiAddonsListFileDelete">Delete</button>
-                            </form>
-                        </div>
-                    </div>';
-            }
+            
             echo '</div>';
 
             $css .= ' .oxi-addons-bg-img-' . $value['styleid'] . '-' . $value['id'] . '   .oxi-addons-box-outer{
