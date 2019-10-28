@@ -1,0 +1,327 @@
+.oxi-addons-parent-wrapper-style-11 {
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11 {
+    display: flex;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px) translateX(0px);
+    -moz-transform: translateY(0px) translateX(0px);
+    -o-transform: translateY(0px) translateX(0px);
+    transform: translateY(0px) translateX(0px)
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11:hover {
+    -webkit-transform: translateY(-10px) translateX(0px);
+    -ms-transform: translateY(-10px) translateX(0px);
+    -moz-transform: translateY(-10px) translateX(0px);
+    -o-transform: translateY(-10px) translateX(0px);
+    transform: translateY(-10px) translateX(0px)
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show {
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 0px 15px 15px;
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    -ms-transform: translateY(0) translateX(0);
+    -o-transform: translateY(0) translateX(0);
+    -moz-transform: translateY(0) translateX(0)
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-divider-main {
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    justify-content: center;
+    display: flex
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-divider {
+    width: 100%;
+    max-width: 60px;
+    border-top: 2px dashed #ffffff
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show::before {
+    content: "";
+    background: #7a4040;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    transition: all 0.5s ease 0.2s;
+    bottom: 0;
+    left: 0
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11:hover .oxi-team-show::before {
+    height: 45%;
+    width: 20%
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show:after {
+    content: "";
+    background: #7a4040;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    transition: all 0.5s ease 0.2s;
+    bottom: 0;
+    right: 0
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11:hover .oxi-team-show::after {
+    height: 45%;
+    width: 20%
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11 {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-photo {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: flex-end;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #7a4040
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-pic-size {
+    width: 100%;
+    float: left;
+    position: relative
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11:hover .member-photo {
+    border-color: rgba(83, 83, 92, 0.68)
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-pic-size:after {
+    padding-bottom: 125%;
+    content: "";
+    display: block
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-pic-size img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-content-absolute {
+    position: absolute; 
+    float: left;
+    opacity: 0;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;  
+}
+
+.oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11:hover .member-content-absolute {
+    background: rgba(83, 83, 92, 0.68);
+    opacity: 1
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-icons {
+    float: left;
+    z-index: +1;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-icon {
+    line-height: 30px;
+    border: 2px solid #fff;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    Border-radius: 10px 0px 0px 0px;
+    margin: 5px 2px 0px 2px
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-icon .oxi-icons {
+    font-size: 18px
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-info {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-name {
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px 0px 0px 0px
+}
+
+.oxi-addons-parent-wrapper-style-11 .member-role {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #ffffff;
+    font-family: "Crete Round";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0px 5px 5px 5px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-parent-wrapper-style-11 {
+        padding: 10px 0px 10px 0px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show {
+        padding: 0px 15px 15px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show::before {
+        width: 40%;
+        height: 40%
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show:after {
+        width: 40%;
+        height: 40%
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11 {
+        max-width: 320px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-photo {
+        border-width: 3px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-pic-size:after {
+        padding-bottom: 125%
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-content-absolute {
+        padding: 15px 15px 15px 15px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-icons {
+        padding: 10px 10px 10px 10px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-icon {
+        line-height: 30px;
+        border: 2px solid;
+        height: 30px;
+        width: 30px;
+        Border-radius: 10px 0px 0px 0px;
+        margin: 5px 2px 0px 2px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-icon .oxi-icons {
+        font-size: 18px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-name {
+        font-size: 22px;
+        padding: 10px 0px 0px 0px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 span.member-role {
+        font-size: 14px;
+        padding: 0px 5px 5px 5px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-parent-wrapper-style-11 {
+        padding: 10px 0px 10px 0px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show {
+        padding: 0px 15px 15px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show::before {
+        width: 40%;
+        height: 40%
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show:after {
+        width: 40%;
+        height: 40%
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-show-body-style-11 {
+        max-width: 320px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-photo {
+        border-width: 3px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .oxi-team-pic-size:after {
+        padding-bottom: 125%
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-content-absolute {
+        padding: 15px 15px 15px 15px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-icons {
+        padding: 10px 10px 10px 10px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-icon {
+        line-height: 30px;
+        border: 2px solid;
+        height: 30px;
+        width: 30px;
+        Border-radius: 10px 0px 0px 0px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-icon .oxi-icons {
+        font-size: 18px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 .member-name {
+        font-size: 22px;
+        padding: 10px 0px 0px 0px
+    }
+
+    .oxi-addons-parent-wrapper-style-11 span.member-role {
+        font-size: 14px;
+        padding: 0px 5px 5px 5px
+    }
+}

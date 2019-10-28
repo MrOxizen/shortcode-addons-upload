@@ -54,7 +54,7 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-info' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-team-show' => ''
                 ],
             ]
         );
@@ -64,11 +64,11 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-info' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-team-show' => ''
                 ],
             ]
         );
-        
+
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
@@ -133,6 +133,7 @@ class Style_6 extends AdminStyle
             'sa_team_separetor',
             $this->style,
             [
+                'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
                 Controls::SEPARATOR => TRUE
             ]
@@ -155,7 +156,7 @@ class Style_6 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -622,7 +623,6 @@ class Style_6 extends AdminStyle
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'background-color:{{VALUE}};',
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons:before' => 'border-right-color:{{VALUE}};'
                 ],
             ]
         );
@@ -870,12 +870,12 @@ class Style_6 extends AdminStyle
                     ],
                 ],
             ]
-        ); 
+        );
         $this->add_group_control(
             'sa_divider_icons_border',
             $this->style,
             [
-                'type' => Controls::BORDER, 
+                'type' => Controls::BORDER,
                 'selector' => [
                     '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-6 .member-icon' => ''
                 ],
@@ -974,12 +974,12 @@ class Style_6 extends AdminStyle
                     ],
                 ],
             ]
-        ); 
+        );
         $this->add_group_control(
             'sa_divider_icons_border_hover',
             $this->style,
             [
-                'type' => Controls::BORDER, 
+                'type' => Controls::BORDER,
                 'selector' => [
                     '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-6 .member-icon:hover' => ''
                 ],
@@ -1199,7 +1199,7 @@ class Style_6 extends AdminStyle
                     ],
                     'sa_social_icons_border' => [
                         'label' => __('', SHORTCODE_ADDOONS),
-                        'type' => Controls::BORDER, 
+                        'type' => Controls::BORDER,
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6-{{KEY}}  .member-icon' => '',
                         ],
@@ -1229,7 +1229,7 @@ class Style_6 extends AdminStyle
                             'sa_social_icons_h_position' => 'separately'
                         ]
                     ],
-                     
+
                     'sa_social_icons_bg_color_hover' => [
                         'label' => __('Background ', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
@@ -1245,7 +1245,7 @@ class Style_6 extends AdminStyle
                     ],
                     'sa_social_icons_border_hover' => [
                         'label' => __('', SHORTCODE_ADDOONS),
-                        'type' => Controls::BORDER, 
+                        'type' => Controls::BORDER,
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6-{{KEY}}  .member-icon:hover' => '',
                         ],
@@ -1257,14 +1257,14 @@ class Style_6 extends AdminStyle
                     ],
                     'shortcode-addons-start-tab2-end' => [
                         'controller' => 'end_controls_tab',
-                    ], 
+                    ],
                     'shortcode-addons-start-tabs-end' => [
                         'controller' => 'end_controls_tabs',
                     ],
                     'sa_social_icons_separator' => [
                         'label' => esc_html__('', SHORTCODE_ADDOONS),
                         'type' => Controls::SEPARATOR,
-                        Controls::SEPARATOR=> TRUE,
+                        Controls::SEPARATOR => TRUE,
                         'controller' => 'add_control',
                     ],
                     'sa_social_icons_url' => [

@@ -133,6 +133,7 @@ class Style_5 extends AdminStyle
             'sa_team_separetor',
             $this->style,
             [
+                'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
                 Controls::SEPARATOR => TRUE
             ]
@@ -155,7 +156,7 @@ class Style_5 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -654,8 +655,7 @@ class Style_5 extends AdminStyle
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-5 .member-icons' => 'background-color:{{VALUE}};',
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-5 .member-icons:before' => 'border-right-color:{{VALUE}};'
-                ],
+                  ],
             ]
         );
         

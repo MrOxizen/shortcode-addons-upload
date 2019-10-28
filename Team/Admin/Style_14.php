@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_4
+ * Description of Style_14
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_4 extends AdminStyle
+class Style_14 extends AdminStyle
 {
 
     public function register_controls()
@@ -43,7 +43,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLUMN,
                 'default' => 'oxi-bt-col-lg-4',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4' => '',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14' => '',
                 ],
             ]
         );
@@ -54,7 +54,9 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-info' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-content-absolute' => '',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-content-absolute::before' => '',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-content-absolute::after' => ''
                 ],
             ]
         );
@@ -64,32 +66,11 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-info' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .oxi-team-show' => ''
                 ],
             ]
         );
-        $this->add_control(
-            'sa_team_ribbon_position_left',
-            $this->style,
-            [
-                'label' => __('Position Top Bottom', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
-                'default' => [
-                    'unit' => 'px',
-                    'size' => -15,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-content-absolute' => 'bottom: {{SIZE}}px;'
-                ],
-            ]
-        );
+        
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
@@ -107,7 +88,7 @@ class Style_4 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-team-show' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .oxi-team-show' => ''
                 ],
             ]
         );
@@ -121,33 +102,11 @@ class Style_4 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-team-show:hover' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .oxi-team-show:hover' => ''
                 ],
             ]
         );
-
-        $this->add_control(
-            'sa_team_hover_position',
-            $this->style,
-            [
-                'label' => __('Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => -10,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => -60,
-                        'max' => 60,
-                        'step' => 0.01,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-team-show-body-style-4:hover' => 'transform: translateY({{sa_team_hover_position.SIZE}}px);'
-                ],
-            ]
-        );
+ 
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
@@ -160,6 +119,38 @@ class Style_4 extends AdminStyle
             ]
         );
 
+        $this->add_responsive_control(
+            'sa_team_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [ 
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-content-absolute' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_team_padding',
             $this->style,
@@ -188,7 +179,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-content-absolute' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-content-absolute' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -221,7 +212,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4   .oxi-team-show-body-style-4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14   .oxi-team-show-body-style-14' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -249,7 +240,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 250,
+                    'size' => 280,
                 ],
                 'range' => [
                     'px' => [
@@ -269,7 +260,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-team-show-body-style-4' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .oxi-team-show-body-style-14' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -281,7 +272,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 250,
+                    'size' => 300,
                 ],
                 'range' => [
                     'px' => [
@@ -301,7 +292,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-team-pic-size:after' => 'padding-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .oxi-team-pic-size:after' => 'padding-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -309,6 +300,64 @@ class Style_4 extends AdminStyle
         $this->end_section_devider();
 
         $this->start_section_devider();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('TopBar Setting', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+      
+        $this->add_responsive_control(
+            'sa_team_top_height',
+            $this->style,
+            [
+                'label' => __('Top Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => '%',
+                    'size' => 33,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 150,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 10,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-name::before' => 'height: {{SIZE}}{{UNIT}};',  
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-name::after' => 'height: {{SIZE}}{{UNIT}};', 
+                ],
+            ]
+        );
+
+
+        $this->add_control(
+            'sa_team_top_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#ff6ba9',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-name::before' => 'background-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-name::after' => 'background-color:{{VALUE}};',
+                   ],
+            ]
+        ); 
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -344,7 +393,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-name' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-name' => ''
                 ],
             ]
         );
@@ -356,7 +405,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-name' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-name' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -388,7 +437,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -406,7 +455,7 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Divider', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
-                'default' => 'yes',
+                'default' => 'no',
                 'loader' => TRUE,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -544,7 +593,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-role' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-role' => ''
                 ],
             ]
         );
@@ -556,7 +605,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-role' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-role' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -588,7 +637,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-role' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-role' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -628,7 +677,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icon' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icon' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -660,7 +709,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icon' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icon' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -672,11 +721,11 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgb(255, 255, 255)',
+                'default' => 'rgba(255, 255, 255, 0.01)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icons' => 'background-color:{{VALUE}};',
-                 ],
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icons' => 'background-color:{{VALUE}};',
+                  ],
             ]
         );
         
@@ -709,7 +758,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -751,7 +800,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -792,7 +841,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#390075',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-4 .member-icon .oxi-icons' => 'color : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-14 .member-icon .oxi-icons' => 'color : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_position' => 'common'
@@ -827,7 +876,7 @@ class Style_4 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(255, 255, 255, 0)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-4 .member-icon' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-14 .member-icon' => 'background : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_bg_color_view' => 'common'
@@ -859,7 +908,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER, 
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-4 .member-icon' => ''
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-14 .member-icon' => ''
                 ],
                 'condition' => [
                     'sa_social_icons_border' => 'common'
@@ -896,7 +945,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-4 .member-icon .oxi-icons:hover' => 'color : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-14 .member-icon .oxi-icons:hover' => 'color : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_h_position' => 'common'
@@ -931,7 +980,7 @@ class Style_4 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(92, 92, 92, 1)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-4 .member-icon:hover ' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-14 .member-icon:hover ' => 'background : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_bg_h_color_view' => 'common'
@@ -963,7 +1012,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER, 
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-4 .member-icon:hover' => ''
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-14 .member-icon:hover' => ''
                 ],
                 'condition' => [
                     'sa_social_icons_border_hover' => 'common'
@@ -1010,7 +1059,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1042,7 +1091,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1074,7 +1123,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .member-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14 .member-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1159,7 +1208,7 @@ class Style_4 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4-{{KEY}}  .member-icon .oxi-icons' => 'color:{{VALUE}};',
+                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14-{{KEY}}  .member-icon .oxi-icons' => 'color:{{VALUE}};',
                         ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
@@ -1172,7 +1221,7 @@ class Style_4 extends AdminStyle
                         'oparetor' => 'RGB',
                         'default' => 'rgba(59,89,153,1.00)',
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4-{{KEY}}  .member-icon' => 'background:{{VALUE}};',
+                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14-{{KEY}}  .member-icon' => 'background:{{VALUE}};',
                         ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
@@ -1183,7 +1232,7 @@ class Style_4 extends AdminStyle
                         'label' => __('', SHORTCODE_ADDOONS),
                         'type' => Controls::BORDER, 
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4-{{KEY}}  .member-icon' => '',
+                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14-{{KEY}}  .member-icon' => '',
                         ],
                         'controller' => 'add_group_control',
                         'conditional' => Controls::OUTSIDE,
@@ -1204,7 +1253,7 @@ class Style_4 extends AdminStyle
                         'type' => Controls::COLOR,
                         'default' => '#7e00c2',
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4-{{KEY}}  .member-icon .oxi-icons:hover' => 'color:{{VALUE}};',
+                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14-{{KEY}}  .member-icon .oxi-icons:hover' => 'color:{{VALUE}};',
                         ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
@@ -1218,7 +1267,7 @@ class Style_4 extends AdminStyle
                         'oparetor' => 'RGB',
                         'default' => 'rgba(92, 92, 92, 1)',
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4-{{KEY}}  .member-icon:hover ' => 'background:{{VALUE}};',
+                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14-{{KEY}}  .member-icon:hover ' => 'background:{{VALUE}};',
                         ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
@@ -1229,7 +1278,7 @@ class Style_4 extends AdminStyle
                         'label' => __('', SHORTCODE_ADDOONS),
                         'type' => Controls::BORDER, 
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4-{{KEY}}  .member-icon:hover' => '',
+                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-14-{{KEY}}  .member-icon:hover' => '',
                         ],
                         'controller' => 'add_group_control',
                         'conditional' => Controls::OUTSIDE,

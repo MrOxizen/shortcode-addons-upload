@@ -132,6 +132,7 @@ class Style_1 extends AdminStyle
             'sa_team_separetor',
             $this->style,
             [
+                'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
                 Controls::SEPARATOR => TRUE
             ]
@@ -154,7 +155,7 @@ class Style_1 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
