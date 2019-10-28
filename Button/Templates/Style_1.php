@@ -78,9 +78,7 @@ class Style_1 extends Templates {
             .oxi-addons-container  .oxi-button-' . $oxiid . ':active{
                color:' . $styledata[43] . ';
                background:' . $styledata[45] . ';
-               border-style:' . $styledata[83] . '; 
-               border-color:' . $styledata[84] . ';
-               border-radius:' . $styledata[51] . 'px;
+              border-radius:' . $styledata[51] . 'px;
             }
             @media only screen and (min-width : 669px) and (max-width : 993px){
                 .oxi-addons-container .oxi-button-' . $oxiid . '{   
