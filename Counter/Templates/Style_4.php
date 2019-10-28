@@ -19,6 +19,7 @@ class Style_4 extends Templates {
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-counterup-min';
         wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery() {
@@ -64,6 +65,7 @@ class Style_4 extends Templates {
      }
 
     public function old_render() {
+        wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
