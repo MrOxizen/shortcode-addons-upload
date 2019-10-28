@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_3 extends Templates {
-    
+
     public function public_css() {
         wp_enqueue_style('Image_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_style('css_handaller_file_blur-effects_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style-blur-effects.css', false, SA_ADDONS_PLUGIN_VERSION);
@@ -30,7 +30,7 @@ class Style_3 extends Templates {
 //            $class = '';
 //        }
 
-      
+
 
 
         $target_blank = '';
@@ -54,13 +54,13 @@ class Style_3 extends Templates {
 //            print_r($data);   
 //            echo '</pre>';
 
-           $valueurllast = $valueurl1st = $heading = $valueurlbtn = $content = '';
-           
-           if (array_key_exists('sa_el_image_effect_url-url', $data) && $data['sa_el_image_effect_url-url'] != '') {
+            $valueurllast = $valueurl1st = $heading = $valueurlbtn = $content = '';
+
+            if (array_key_exists('sa_el_image_effect_url-url', $data) && $data['sa_el_image_effect_url-url'] != '') {
                 if (array_key_exists('sa_el_image_effect_btn_text', $data) && $data['sa_el_image_effect_btn_text'] != '') {
-                    $valueurlbtn = '<div class="oxi-addons-image-effects-button"><a '.$this->url_render('sa_el_image_effect_url', $data).'  '.$target_blank.'" class="img-btn ihewc-button "    ' . $this->animation_render('sa-ie-button-side-animation', $style) . '>' . $this->text_render($data['sa_el_image_effect_btn_text']) . '</a></div>';
+                    $valueurlbtn = '<div class="oxi-addons-image-effects-button"><a ' . $this->url_render('sa_el_image_effect_url', $data) . '  ' . $target_blank . '" class="img-btn ihewc-button "    ' . $this->animation_render('sa-ie-button-side-animation', $style) . '>' . $this->text_render($data['sa_el_image_effect_btn_text']) . '</a></div>';
                 } else {
-                    $valueurl1st = '<a '.$this->url_render('sa_el_image_effect_url', $data).'   " '.$target_blank.'>';
+                    $valueurl1st = '<a ' . $this->url_render('sa_el_image_effect_url', $data) . '   " ' . $target_blank . '>';
                     $valueurllast = '</a>';
                 }
             }
@@ -70,14 +70,14 @@ class Style_3 extends Templates {
             if (array_key_exists('sa_el_image_effect_descriptions', $data) && $data['sa_el_image_effect_descriptions'] != '') {
                 $content = '<div class="ihewc-content ihewc-delay-sm  ' . $style['sa-ie-descriptions-animation-class'] . '  ">' . $this->text_render($data['sa_el_image_effect_descriptions']) . '</div>';
             }
-            
-            
-            
+
+
+
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' " >';
             echo '<div class="sa_ie_temp_3 ihewc-hover-padding oxi-m-width" ' . $this->animation_render('sa-ie-main-box-animation', $style) . '>
                 <div class="sa_for_margin">
-                '.$valueurl1st.'
-                    <div class="ihewc-hover sa_image_effect_temp_3 sa_image_effect_temp_3_'.$key.'  ">
+                ' . $valueurl1st . '
+                    <div class="ihewc-hover sa_image_effect_temp_3 sa_image_effect_temp_3_' . $key . '  ">
                         <div class="ihewc-hover-figure">
                             <div class="ihewc-hover-image">
                                 <img class="oxi-img-w-h" src="' . $this->media_render('sa_el_ie_box_image', $data) . '">
@@ -93,10 +93,10 @@ class Style_3 extends Templates {
                             </div>
                         </div>
                     </div>
-                '.$valueurllast.'
+                ' . $valueurllast . '
                     </div>
               </div>';
-        echo '</div>';
+            echo '</div>';
         }
     }
 
@@ -107,8 +107,8 @@ class Style_3 extends Templates {
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
-        echo oxi_addons_elements_stylejs('css/style-blinds-effects', 'image_effects', 'css', 'image-style-blinds-effects');
-        echo oxi_addons_elements_stylejs('css/style', 'image_effects', 'css', 'image-effects');
+        wp_enqueue_style('Image_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('css_handaller_file_blur-effects_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style-blur-effects.css', false, SA_ADDONS_PLUGIN_VERSION);
 
         echo '<div class="oxi-addons-container">
                  <div class="oxi-addons-row">';

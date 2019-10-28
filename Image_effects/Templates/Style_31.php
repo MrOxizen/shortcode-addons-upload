@@ -107,8 +107,6 @@ class Style_31 extends Templates {
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
-        echo oxi_addons_elements_stylejs('css/style-blinds-effects', 'image_effects', 'css', 'image-style-blinds-effects');
-        echo oxi_addons_elements_stylejs('css/style', 'image_effects', 'css', 'image-effects');
 
         echo '<div class="oxi-addons-container">
                  <div class="oxi-addons-row">';
@@ -336,9 +334,8 @@ class Style_31 extends Templates {
                 }
             }';
         wp_add_inline_style('shortcode-addons-style', $css);
-        echo oxi_addons_elements_stylejs('css/style', 'image_effects', 'css', 'image-effects');
-        echo oxi_addons_elements_stylejs('css/style-border-reveal-effects', 'image_effects', 'css', 'image-style-border-reveal-effects');
-        echo OxiAddonsInlineCSSData($css);
+         wp_enqueue_style('Image_effects_global_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/Style.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('css_handaller_file_throw-effects_css', SA_ADDONS_UPLOAD_URL . '/Image_effects/File/Css/style-throw-effects.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
 }
