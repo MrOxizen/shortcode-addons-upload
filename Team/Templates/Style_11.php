@@ -52,24 +52,24 @@ class Style_11 extends Templates
                                 ' . $image . '
                             </div> 
                             <div class="member-content-absolute">
-                            <div class="member-info">
-                                ' . $name . '
-                                ' . $divider . '
-                                ' . $desgnation . '
+                                <div class="member-info">
+                                    ' . $name . '
+                                    ' . $divider . '
+                                    ' . $desgnation . '
+                                </div>
+                                <div class="member-icons">';
+                                    $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
+                                    foreach ($datas as $key => $data) {
+                                        if ($data['sa_social_icons_url-url'] != '') {
+                                            $link = $this->url_render('sa_social_icons_url', $data);
+                                        }
+                                        if ($data['sa_social_icons_icon'] != '') {
+                                            $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
+                                        }
+                                        echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
+                                    }
+                                echo  '</div>
                             </div>
-                        <div class="member-icons">';
-            $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
-            foreach ($datas as $key => $data) {
-                if ($data['sa_social_icons_url-url'] != '') {
-                    $link = $this->url_render('sa_social_icons_url', $data);
-                }
-                if ($data['sa_social_icons_icon'] != '') {
-                    $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
-                }
-                echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
-            }
-            echo  '</div>
-                        </div>
                         </div> 
                     </div>
                  </div>';

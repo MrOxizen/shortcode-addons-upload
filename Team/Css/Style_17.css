@@ -1,0 +1,287 @@
+.oxi-addons-parent-wrapper-style-17 {
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17 {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px) translateX(0px);
+    -moz-transform: translateY(0px) translateX(0px);
+    -o-transform: translateY(0px) translateX(0px);
+    transform: translateY(0px) translateX(0px)
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17:hover {
+    -webkit-transform: translateY(-10px) translateX(0px);
+    -ms-transform: translateY(-10px) translateX(0px);
+    -moz-transform: translateY(-10px) translateX(0px);
+    -o-transform: translateY(-10px) translateX(0px);
+    transform: translateY(-10px) translateX(0px)
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-show {
+    width: 100%;
+    float: left;
+    position: relative;
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    -ms-transform: translateY(0) translateX(0);
+    -o-transform: translateY(0) translateX(0);
+    -moz-transform: translateY(0) translateX(0)
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17 {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-photo {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 50%;
+    padding: 12px
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-photo:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 1.2s ease-in-out;
+    border: 4px solid;
+    border-radius: 50%;
+    border-left-color: #0c8187;
+    border-top-color: #0c8187;
+    border-right-color: #000000;
+    border-bottom-color: #000000
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17:hover .member-photo::before {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-pic-size {
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-pic-size:after {
+    padding-bottom: 100%;
+    content: "";
+    display: block
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-pic-size img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    z-index: 1
+}
+.oxi-addons-parent-wrapper-style-17 .member-icons {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; 
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 50%;
+    background:rgba(140,140,140,0.53);
+}
+.oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17:hover .member-icons {
+    padding: 10px 10px 10px 10px;
+    opacity: 1;
+    height: auto
+}
+
+.oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17:hover .member-icons {
+    padding: 10px 10px 10px 10px;
+    opacity: 1;
+    height: auto;
+    z-index: 1
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-icon {
+    line-height: 40px;
+    border: 2px solid #fff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    Border-radius: 50px 50px 50px 50px;
+    margin: 5px 2px 0px 2px
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-icon .oxi-icons {
+    font-size: 18px;
+    color: #fff;
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-info {
+    width: 100%;
+    float: left;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: +1
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-info {
+    width: 100%;
+    left: 0; 
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-info span {
+    width: 100%;
+    float: right
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-name {
+    font-size: 20px;
+    display: inline-block;
+    background: rgba(2, 158, 153, 1);
+    bottom: 0;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    transition: all 0.5s linear
+}
+
+.oxi-addons-parent-wrapper-style-17 .member-role {
+    font-size: 14px;
+    display: inline-block;
+    color: #ffffff;
+    background: rgba(110, 110, 110, 1.00);
+    font-family: "Crete Round";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 7px 20px 7px 20px;
+    transition: all 0.5s linear
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi-addons-parent-wrapper-style-17 {
+        padding: 10px 0px 10px 0px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17 {
+        max-width: 300px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-photo {
+        padding: 12px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .oxi-team-pic-size:after {
+        padding-bottom: 100%
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-icons {
+        top: 12px;
+        left: 12px;
+        bottom: 12px;
+        right: 12px
+    }
+
+   
+    .oxi-addons-parent-wrapper-style-17 .member-icon {
+        line-height: 40px;
+        border: 2px solid;
+        height: 40px;
+        width: 40px;
+        Border-radius: 50px 50px 50px 50px;
+        margin: 5px 2px 0px 2px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-icon .oxi-icons {
+        font-size: 18px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-name {
+        font-size: 20px;
+        padding: 10px 20px 10px 20px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-role {
+        font-size: 14px;
+        padding: 7px 20px 7px 20px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .oxi-addons-parent-wrapper-style-17 {
+        padding: 10px 0px 10px 0px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17 {
+        max-width: 300px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-photo {
+        padding: 12px
+    } 
+    .oxi-addons-parent-wrapper-style-17 .oxi-team-pic-size:after {
+        padding-bottom: 100%
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-icons {
+        
+        top: 12px;
+        left: 12px;
+        bottom: 12px;
+        right: 12px
+    }
+
+
+    .oxi-addons-parent-wrapper-style-17 .member-icon {
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+        Border-radius: 50px 50px 50px 50px;
+        margin: 5px 2px 0px 2px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-icon .oxi-icons {
+        font-size: 18px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-name {
+        font-size: 20px;
+        padding: 10px 20px 10px 20px
+    }
+
+    .oxi-addons-parent-wrapper-style-17 .member-role {
+        font-size: 14px;
+        padding: 7px 20px 7px 20px
+    }
+}

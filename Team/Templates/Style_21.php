@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_15
+ * Description of Style_20
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_16 extends Templates
+class Style_21 extends Templates
 {
     public function default_render($style, $child, $admin)
     {
@@ -23,13 +23,13 @@ class Style_16 extends Templates
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
 
-            $name = $desgnation = $image = $link = $divider = '';
+            $name = $desgnation = $description = $image = $link = $divider = '';
             if (array_key_exists('sa_price_table_name', $value) && $value['sa_price_table_name'] != '') {
-                $name = '<span><' . $style['sa_team_name_tag'] . ' class="member-name">' . $this->text_render($value['sa_price_table_name']) . '</' . $style['sa_team_name_tag'] . '></span>';
+                $name = '<' . $style['sa_team_name_tag'] . ' class="member-name">' . $this->text_render($value['sa_price_table_name']) . '</' . $style['sa_team_name_tag'] . '>';
             }
             if (array_key_exists('sa_price_table_desgnation', $value) && $value['sa_price_table_desgnation'] != '') {
-                $desgnation = '<span><p class="member-role">' . $this->text_render($value['sa_price_table_desgnation']) . '</p></span>';
-            }
+                $desgnation = '<p class="member-role">' . $this->text_render($value['sa_price_table_desgnation']) . '</p>';
+            } 
 
             if ($this->media_render('sa_team_front_image', $value) != '') {
                 $image = ' 
@@ -44,35 +44,34 @@ class Style_16 extends Templates
                         </div>';
             }
 
-            echo '<div class="oxi-addons-parent-wrapper-style-16 oxi-addons-parent-wrapper-style-16-' . $v['id'] . ' ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_team_column', $style) . '">
-                   <div class="oxi-team-show-body-style-16" ' . $this->animation_render('sa_team_animation', $style) . ' >
+            echo '<div class="oxi-addons-parent-wrapper-style-21 oxi-addons-parent-wrapper-style-21-' . $v['id'] . ' ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_team_column', $style) . '">
+                   <div class="oxi-team-show-body-style-21" ' . $this->animation_render('sa_team_animation', $style) . ' >
                     <div class="oxi-team-show">
-                        <div class="member-photo">
-                                <div class="oxi-team-pic-size">
-                                    ' . $image . '
-                                    <div class="member-info">
-                                    ' . $name . '
-                                    ' . $divider . '
-                                    ' . $desgnation . '
-                                     </div>
-                                </div>  
-                        </div> 
-                            
-                            <div class="member-content-absolute">
-                            <div class="member-icons">';
-                            
-                                $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
-                                foreach ($datas as $key => $data) {
-                                    if ($data['sa_social_icons_url-url'] != '') {
-                                        $link = $this->url_render('sa_social_icons_url', $data);
-                                    }
-                                    if ($data['sa_social_icons_icon'] != '') {
-                                        $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
-                                    }
-                                    echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
-                                }
-                        echo  '</div>
+                    <div class="member-photo">
+                    <div class="oxi-team-pic-size">
+                        ' . $image . '
+                        <div class="oxi-team-pic-size-span"></div>
+                    </div> 
+                    <div class="member-content-absolute">
+                        <div class="member-info">
+                            ' . $name . '
+                            ' . $divider . '
+                            ' . $desgnation . '
                         </div>
+                        <div class="member-icons">';
+                            $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
+                            foreach ($datas as $key => $data) {
+                                if ($data['sa_social_icons_url-url'] != '') {
+                                    $link = $this->url_render('sa_social_icons_url', $data);
+                                }
+                                if ($data['sa_social_icons_icon'] != '') {
+                                    $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
+                                }
+                                echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
+                            }
+                        echo  '</div>
+                    </div>
+                </div> 
                     </div>
                  </div>';
             if ($admin == 'admin') :
@@ -88,20 +87,7 @@ class Style_16 extends Templates
             echo ' </div>';
         }
     }
-    public function inline_public_css()
-    {
-        $style = $this->style;
-        $align = '';
-        if($style['sa_team_main_alignment'] == 'left'){
-            $align = 'transform: translateX(-100%);';
-        }else{
-            $align = 'transform: translateX(100%);';
-        }
-        return '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16 .oxi-team-show-body-style-16:hover .member-name,
-                .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16 .oxi-team-show-body-style-16:hover .member-role{
-                    '.$align.'
-             }';
-    }
+
 
     public function old_render()
     {
@@ -155,23 +141,18 @@ class Style_16 extends Templates
                             <div class="member-photo">
                                 <div class="oxi-team-pic-size">
                                     <img src="' . OxiAddonsUrlConvert($data[5]) . '" alt="' . OxiAddonsTextConvert($data[1]) . '">
-                                    <div class="member-info ">
-                                        <span>
-                                        <h3 class="member-name">' . OxiAddonsTextConvert($data[1]) . '</h3>
-                                        </span> 
-                                        <span>
-                                            <div class="member-role">' . OxiAddonsTextConvert($data[3]) . '</div>
-                                        </span>       
-                                    </div>   
+                                    <div class="oxi-team-pic-size-span"></div>    
                                 </div>
                                 <div class="member-content-absolute">
-                                ' . $socialdata . ' 
+                                    ' . $socialdata . ' 
+                                    <div class="member-info ">
+                                        <h3 class="member-name">' . OxiAddonsTextConvert($data[1]) . '</h3>                          
+                                        <span class="member-role">' . OxiAddonsTextConvert($data[3]) . '</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>';
-            
-            echo '</div> ';
+                    </div> </div> ';
         }
         echo ' </div>
             </div> ';
@@ -223,22 +204,6 @@ class Style_16 extends Templates
                             border-bottom-color: transparent !important;
                          }';
         }
-        if ($styledata[179] == 'right') {
-            $css .= '.oxi-addons-team-' . $oxiid . ':hover .member-name,'
-                    . ' .oxi-addons-team-' . $oxiid . ':hover .member-role{
-                    transform: translateX(100%);
-                }';
-        } elseif ($styledata[179] == 'center') {
-            $css .= '.oxi-addons-team-' . $oxiid . ':hover .member-name, '
-                    . '.oxi-addons-team-' . $oxiid . ':hover .member-role{
-                    transform: translateY(300%);
-                }';
-        } else {
-            $css .= '.oxi-addons-team-' . $oxiid . ':hover .member-name, '
-                    . '.oxi-addons-team-' . $oxiid . ':hover .member-role{
-                    transform: translateX(-100%);
-                }';
-        }
         $css .= '.oxi-addons-team-' . $oxiid . '{
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 27) . ';
                 }
@@ -277,6 +242,7 @@ class Style_16 extends Templates
                     float:left;
                     display: flex;
                     align-items: flex-end;
+                    overflow: hidden;
                 }
                 .oxi-addons-team-' . $oxiid . ' .oxi-team-pic-size{
                     width: 100%;
@@ -296,38 +262,53 @@ class Style_16 extends Templates
                     width: 100%;
                     height: 100%;
                     display: block;
-                    z-index: 1;
+                }  
+                .oxi-addons-team-' . $oxiid . ' .oxi-team-pic-size .oxi-team-pic-size-span{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0%;
+                    background-color: transparent;
                 }
-                .oxi-addons-team-' . $oxiid . ' .member-content-absolute {
+                .oxi-addons-team-' . $oxiid . ':hover .oxi-team-pic-size-span{
+                    transition: all 0.4s ease 0s;
+                    background:' . $styledata[183] . ';
+                    height: 100%;
+                }
+                .oxi-addons-team-' . $oxiid . ' .member-content-absolute{
                     position:absolute; 
+                    left: 0; 
+                    right: 0; 
+                    bottom:' . $styledata[187] . 'px;
                     width:100%;
+                    transition: all 0.5s ease 0.2s;
+                    background: ' . $styledata[185] . ';
                     float:left;
                     z-index:1;
-                    top:0;
-                    bottom:0;
+                    transform: translateY(100%);
+                }
+                .oxi-addons-team-' . $oxiid . ':hover .member-content-absolute {
+                    background: ' . $styledata[185] . ';
+                    opacity: 1;
+                    bottom: 0px;
+                    -webkit-transform: translateY(0%);
+                    -ms-transform: translateY(0%);
+                    -o-transform: translateY(0%);
+                    -moz-transform: translateY(0%);
+                    transform: translateY(0%);    
                 }
                 .oxi-addons-team-' . $oxiid . ' .member-icons{
                     position: absolute;
-                    top: 0; 
-                    left: 0;
-                    bottom: 0; 
-                    right: 0;
+                    top:-' . $styledata[187] / 2 . 'px;
+                    width: 100%;
+                    transition: all 0.5s ;
+                    text-align: center;          
                     display: flex;
-                    -webkit-box-pack: center;
-                    -ms-flex-pack: center;
-                    justify-content: center;  
-                    webkit-box-align: center;
-                    -ms-flex-align: center;
+                    justify-content: center;
                     align-items: center;
-                    opacity: 0;
-                    background: ' . $styledata[185] . ';
                 }
-                .oxi-addons-team-' . $oxiid . ':hover .member-icons{
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 107) . ';   
-                    opacity:1;
-                    height:auto;
-                }
-                .oxi-addons-team-' . $oxiid . ' .member-icon{
+                .oxi-addons-team-' . $oxiid . ' .member-icon {
                     line-height: ' . $styledata[191] . 'px;               
                     border:' . $styledata[211] . 'px ' . $styledata[101] . ';
                     height:' . $styledata[191] . 'px;
@@ -341,42 +322,37 @@ class Style_16 extends Templates
                 .oxi-addons-team-' . $oxiid . ' .member-icon .oxi-icons {
                     font-size: ' . $styledata[175] . 'px;
                 }
+                .oxi-addons-team-' . $oxiid . ':hover .member-icon .oxi-icons {
+                    -webkit-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
                 .oxi-addons-team-' . $oxiid . ' .member-info {                
-                    width: 100%;
-                    float: left;
-                    position: absolute;
-                    bottom:' . $styledata[151] . 'px;
+                    width: 100%;                
+                    float:left;
                     display:flex;
                     flex-direction:column;
-                    z-index:+1;
-                }
-                .oxi-addons-team-' . $oxiid . ' .member-info {
-                    width:100%;
-                    left:0;
-                    text-align:' . $styledata[179] . ';
-                }            
-                .oxi-addons-team-' . $oxiid . ' .member-info span {
-                    width:100%;
-                    float:right;
+                    margin-top:' . $styledata[187] / 2 . 'px;
                 }
                 .oxi-addons-team-' . $oxiid . ' .member-name {
                     font-size: ' . $styledata[69] . 'px;
-                    display: inline-block;                
-                    background: ' . $styledata[7] . ';     
-                    bottom:0;
+                    margin: 0;
+                    margin-bottom: 0px;
+                    margin-top: 0px;
                     color: ' . $styledata[73] . ';
                     ' . OxiAddonsFontSettings($styledata, 75) . '
                     padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 81) . ';
-                    transition: all 0.5s linear ;    
                 }
-                .oxi-addons-team-' . $oxiid . ' .member-role {
+                .oxi-addons-team-' . $oxiid . ' span.member-role {
                     font-size: ' . $styledata[123] . 'px;
-                    display: inline-block;
+                    margin: 0;
+                    margin-bottom: 0px;
+                    margin-top: 0px;
                     color: ' . $styledata[127] . ';
-                    background: ' . $styledata[9] . ';    
                     ' . OxiAddonsFontSettings($styledata, 129) . '
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 135) . ';  
-                    transition: all 0.5s linear ;    
+                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 135) . '; 
                 } 
                 @media only screen and (min-width : 669px) and (max-width : 993px){
                     .oxi-addons-team-' . $oxiid . '{
@@ -386,29 +362,35 @@ class Style_16 extends Templates
                         max-width: ' . $styledata[44] . 'px;
                     }
                     .oxi-addons-team-' . $oxiid . ' .oxi-team-pic-size:after{
-                        padding-bottom: ' . ($styledata[48] / $styledata[44] * 100) . '%;
+                        padding-bottom: ' . ($styledata[48] / $styledata[44] * 100) . '%;                    
                     }
-                    .oxi-addons-team-' . $oxiid . ':hover .member-icons{
-                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 108) . ';  
+                    .oxi-addons-team-' . $oxiid . ' .member-content-absolute{                   
+                        bottom:' . $styledata[188] . 'px;                    
                     }
-                    .oxi-addons-team-' . $oxiid . ' .member-icon{
+                    .oxi-addons-team-' . $oxiid . ' .member-icons{                   
+                        top:-' . $styledata[188] / 2 . 'px;
+                    }
+                    .oxi-addons-team-' . $oxiid . ' .member-icon {
                         line-height: ' . $styledata[192] . 'px;               
                         border:' . $styledata[212] . 'px ' . $styledata[101] . ';
                         height:' . $styledata[192] . 'px;
-                        width:' . $styledata[188] . 'px;
+                        width:' . $styledata[188] . 'px;                    
                         Border-radius:' . OxiAddonsPaddingMarginSanitize($styledata, 244) . ';  
                         margin:' . OxiAddonsPaddingMarginSanitize($styledata, 260) . ';  
                     }            
                     .oxi-addons-team-' . $oxiid . ' .member-icon .oxi-icons {
                         font-size: ' . $styledata[176] . 'px;
-                    }  
+                    }
+                    .oxi-addons-team-' . $oxiid . ' .member-info {   
+                        margin-top:' . $styledata[188] / 2 . 'px;
+                    }
                     .oxi-addons-team-' . $oxiid . ' .member-name {
-                        font-size: ' . $styledata[70] . 'px;
+                        font-size: ' . $styledata[70] . 'px;                    
                         padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 82) . ';
                     }
-                    .oxi-addons-team-' . $oxiid . ' .member-role {
-                        font-size: ' . $styledata[124] . 'px;
-                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 136) . ';
+                    .oxi-addons-team-' . $oxiid . ' span.member-role {
+                        font-size: ' . $styledata[124] . 'px;                   
+                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 136) . '; 
                     } 
                 }
                 @media only screen and (max-width : 668px){ 
@@ -419,29 +401,35 @@ class Style_16 extends Templates
                         max-width: ' . $styledata[45] . 'px;
                     }
                     .oxi-addons-team-' . $oxiid . ' .oxi-team-pic-size:after{
-                        padding-bottom: ' . ($styledata[49] / $styledata[45] * 100) . '%;
+                        padding-bottom: ' . ($styledata[49] / $styledata[45] * 100) . '%;                    
                     }
-                    .oxi-addons-team-' . $oxiid . ':hover .member-icons{
-                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 109) . ';  
+                    .oxi-addons-team-' . $oxiid . ' .member-content-absolute{                   
+                        bottom:' . $styledata[189] . 'px;                    
                     }
-                    .oxi-addons-team-' . $oxiid . ' .member-icon{
+                    .oxi-addons-team-' . $oxiid . ' .member-icons{                   
+                        top:-' . $styledata[189] / 2 . 'px;
+                    }
+                    .oxi-addons-team-' . $oxiid . ' .member-icon {
                         line-height: ' . $styledata[193] . 'px;               
                         border:' . $styledata[213] . 'px ' . $styledata[101] . ';
                         height:' . $styledata[193] . 'px;
-                        width:' . $styledata[189] . 'px;
+                        width:' . $styledata[189] . 'px;                    
                         Border-radius:' . OxiAddonsPaddingMarginSanitize($styledata, 245) . ';  
                         margin:' . OxiAddonsPaddingMarginSanitize($styledata, 261) . ';  
                     }            
                     .oxi-addons-team-' . $oxiid . ' .member-icon .oxi-icons {
                         font-size: ' . $styledata[177] . 'px;
-                    }  
+                    }
+                    .oxi-addons-team-' . $oxiid . ' .member-info {   
+                        margin-top:' . $styledata[189] / 2 . 'px;
+                    }
                     .oxi-addons-team-' . $oxiid . ' .member-name {
-                        font-size: ' . $styledata[71] . 'px;
+                        font-size: ' . $styledata[71] . 'px;                    
                         padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 83) . ';
                     }
-                    .oxi-addons-team-' . $oxiid . ' .member-role {
-                        font-size: ' . $styledata[125] . 'px;
-                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 137) . ';
+                    .oxi-addons-team-' . $oxiid . ' span.member-role {
+                        font-size: ' . $styledata[125] . 'px;                   
+                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 137) . '; 
                     } 
                 }';
         wp_add_inline_style('shortcode-addons-style', $css);

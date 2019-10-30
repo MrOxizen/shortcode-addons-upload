@@ -419,7 +419,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider-main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-divider-main' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -454,7 +454,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-divider' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -467,7 +467,7 @@ class Style_6 extends AdminStyle
                     'sa_divider_switter' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-divider' => ''
                 ],
             ]
         );
@@ -502,7 +502,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -607,7 +607,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-icons' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -622,7 +622,7 @@ class Style_6 extends AdminStyle
                 'default' => '#2196f3',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'background-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-icons' => 'background-color:{{VALUE}};',
                 ],
             ]
         );
@@ -669,7 +669,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'left: {{SIZE}}px;'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-icons' => 'left: {{SIZE}}px;'
                 ],
             ]
         );
@@ -727,7 +727,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .member-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

@@ -47,7 +47,30 @@ class Style_16 extends AdminStyle
                 ],
             ]
         );
-
+        $this->add_control(
+            'sa_team_main_alignment',
+            $this->style,
+            [
+                'label' => __('Content Align', SHORTCODE_ADDOONS),
+                'separator' => TRUE,
+                'type' => Controls::CHOOSE, 
+                'default' => 'left',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ], 
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-16 .member-name' => 'float: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-16 .member-role' => 'float: {{VALUE}};'
+                ],
+            ]
+        );
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [

@@ -419,7 +419,7 @@ class Style_8 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider-main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-8 .member-divider-main' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -454,7 +454,7 @@ class Style_8 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-8 .member-divider' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -467,7 +467,7 @@ class Style_8 extends AdminStyle
                     'sa_divider_switter' => 'yes'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-8 .member-divider' => ''
                 ],
             ]
         );
@@ -502,7 +502,7 @@ class Style_8 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-8 .member-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

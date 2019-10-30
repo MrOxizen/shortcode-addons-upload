@@ -220,7 +220,7 @@
         max-width: 60px;
     }
 
-    .oxi-addons-parent-wrapper-style-1 span.member-role {
+    .oxi-addons-parent-wrapper-style-1 .member-role {
         font-size: 15px;
         padding: 5px 0px 5px 0px
     }
@@ -280,10 +280,9 @@
 
     .oxi-addons-parent-wrapper-style-1 .member-divider div {
         max-width: 60px;
-        border-top: px dashed #ffffff
     }
 
-    .oxi-addons-parent-wrapper-style-1 span.member-role {
+    .oxi-addons-parent-wrapper-style-1 .member-role {
         font-size: 15px;
         padding: 5px 0px 5px 0px
     }

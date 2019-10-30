@@ -129,12 +129,7 @@
     left: 0;
     text-align: left
 }
-
-.oxi-addons-parent-wrapper-style-16 .member-info span {
-    width: 100%;
-    float: right
-}
-
+ 
 .oxi-addons-parent-wrapper-style-16 .member-name {
     font-size: 18px;
     display: inline-block;
@@ -167,6 +162,10 @@
 .oxi-addons-parent-wrapper-style-16 .oxi-team-show-body-style-16:hover .member-name, 
 .oxi-addons-parent-wrapper-style-16 .oxi-team-show-body-style-16:hover .member-role {
     transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
