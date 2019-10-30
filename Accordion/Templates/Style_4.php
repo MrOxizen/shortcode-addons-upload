@@ -49,7 +49,7 @@ class Style_4 extends Templates {
                         </div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addonsAC-F-content" >
+                $details = '<div class="oxi-addonsAC-F-content">
                                     <div class="oxi-addonsAC-F-Content-details">
                                         ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                                     </div>
@@ -92,7 +92,7 @@ class Style_4 extends Templates {
                                 }else{
                                     jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-F-content").slideUp();
                                     $This.next().slideDown();
-                                    jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-F-content").removeClass("oxi-active");
+                                    jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-F-heading").removeClass("oxi-active");
                                     $This.addClass("oxi-active");
                                 }
                             });';
