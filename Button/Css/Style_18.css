@@ -39,9 +39,7 @@ and open the template in the editor.
     text-align: center
 }
 
-.oxi-addons-align-btn18 .oxi-button-btn18:hover,
-.oxi-addons-align-btn18 .oxi-button-btn18:focus,
-.oxi-addons-align-btn18 .oxi-button-btn18:active {
+.oxi-addons-align-btn18 .oxi-button-btn18:hover{
     color: #000000;
     background: rgba(255, 255, 255, 0.00);
     border-width: 0px 0px 0px 0px;

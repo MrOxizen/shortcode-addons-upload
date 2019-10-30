@@ -24,7 +24,7 @@ class Style_2 extends Templates {
 
     public function inline_public_jquery() {
         $style = $this->style;
-        $jquery = 'jQuery(".oxi-addons-counter-style2 .oxi-addons-counter-number").counterUp({
+        $jquery = 'jQuery(".oxi-addons-counter-style2-' . $this->WRAPPER . ' .oxi-addons-counter-number").counterUp({
                     delay: ' . $style['sa_counter_delay-size'] . ',
                     time: ' . $style['sa_counter_duration-size'] . '
                 })';
@@ -44,7 +44,7 @@ class Style_2 extends Templates {
                                 </div>
                          </div>';
             }
-           
+
             if (array_key_exists('sa_counter_divider_on', $style) && $style['sa_counter_divider_on'] != '0') {
                 $divider = '<div class="oxi-addons-counter-body-data"> 
                                 <div class="oxi-addons-counter-divider">
@@ -61,8 +61,8 @@ class Style_2 extends Templates {
                                 </div>
                             </div>';
             }
-            
-             if (array_key_exists('sa_counter_icon', $style) && $style['sa_counter_icon'] != '0') {
+
+            if (array_key_exists('sa_counter_icon', $style) && $style['sa_counter_icon'] != '0') {
                 $icon = '<div class="oxi-addons-counter-body">
                             <div class="oxi-addons-counter-body-data oxi-addons-counter-icons"> 
                                 <div class="oxi-addons-counter-icon">
@@ -73,22 +73,22 @@ class Style_2 extends Templates {
             }
 
             echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
-                    <div class="oxi-addons-counter-style2 ' . $style['sa_counter_align'] . '"> ';
+                    <div class="oxi-addons-counter-style2 oxi-addons-counter-style2-' . $this->WRAPPER . ' ' . $style['sa_counter_align'] . '"> ';
             if ($style['sa_counter_align'] == 'left') {
                 echo $icon;
             }
-            
+
             echo '<div class="oxi-addons-counter-body">';
-            
-             $rearrange = explode(',', $style['sa_counter_rearrange']);
-               foreach ($rearrange as $arrange) {
-                    if ($arrange != ''):
-                        if (isset($$arrange)) {
-                            echo $$arrange;
-                        }
-                    endif;
-                }
-          
+
+            $rearrange = explode(',', $style['sa_counter_rearrange']);
+            foreach ($rearrange as $arrange) {
+                if ($arrange != ''):
+                    if (isset($$arrange)) {
+                        echo $$arrange;
+                    }
+                endif;
+            }
+
             echo '</div>';
             if ($style['sa_counter_align'] == 'right') {
                 echo $icon;

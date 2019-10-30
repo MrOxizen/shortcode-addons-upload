@@ -25,7 +25,7 @@ class Style_1 extends Templates {
 
     public function inline_public_jquery() {
         $style = $this->style;
-        $jquery = 'jQuery(".oxi-addons-counter-style1 .oxi-addons-counter-number").counterUp({
+        $jquery = 'jQuery(".oxi-addons-counter-style1-' . $this->WRAPPER . ' .oxi-addons-counter-number").counterUp({
                     delay: ' . $style['sa_counter_delay-size'] . ',
                     time: ' . $style['sa_counter_duration-size'] . '
                 })';
@@ -69,7 +69,7 @@ class Style_1 extends Templates {
             }
 
             echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
-                    <div class="oxi-addons-counter-style1 ' . $style['sa_counter_align'] . '"> ';
+                    <div class="oxi-addons-counter-style1 oxi-addons-counter-style1-'.$this->WRAPPER.' ' . $style['sa_counter_align'] . '"> ';
 
             $rearrange = explode(',', $style['sa_counter_rearrange']);
             foreach ($rearrange as $arrange) {

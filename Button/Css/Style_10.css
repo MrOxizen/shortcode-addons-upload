@@ -75,9 +75,7 @@ and open the template in the editor.
     transition: .5s !important
 }
 
-.oxi-addons-align-btn10 .oxi-button-btn10:hover,
-.oxi-addons-align-btn10 .oxi-button-btn10:focus,
-.oxi-addons-align-btn10 .oxi-button-btn10:active {
+.oxi-addons-align-btn10 .oxi-button-btn10:hover{
     background: rgba(255, 255, 255, 1.00);
     border-width: 2px 2px 2px 2px;
     border-color: #4449b3;

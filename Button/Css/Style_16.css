@@ -45,9 +45,7 @@ and open the template in the editor.
     transition: none;
 }*/
 
-.oxi-addons-align-btn16 .oxi-button-btn16:hover,
-.oxi-addons-align-btn16 .oxi-button-btn16:focus,
-.oxi-addons-align-btn16 .oxi-button-btn16:active {
+.oxi-addons-align-btn16 .oxi-button-btn16:hover{
     background: rgba(33, 33, 33, 0.51);
     border-width: 2px 2px 2px 2px;
     border-style: solid;
