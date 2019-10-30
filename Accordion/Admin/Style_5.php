@@ -298,7 +298,7 @@ class Style_5 extends AdminStyle {
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .sa_el_ac_style_5 .oxi-addonsAC-Fi-content' => 'background: {{VALUE}};',
-                '{{WRAPPER}} .sa_el_ac_style_5 .oxi-addonsAC-FI-absulote' => 'border-bottom:10px solid {{VALUE}};',
+                '{{WRAPPER}} .sa_el_ac_style_5 .oxi-addonsAC-FI-desc-details::after' => 'border-bottom:10px solid {{VALUE}};',
             ]
                 ]
         );

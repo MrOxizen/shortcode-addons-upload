@@ -1,0 +1,223 @@
+
+
+
+
+
+
+
+.sa_element_ac_style_6
+
+
+
+
+
+
+
+.oxi-addons-AC-SX-row {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #0069b9;
+    transition: none;
+}
+.sa_element_ac_style_6 {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #0069b9;
+    padding: 10px 10px 10px 10px;
+    transition: none;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H {
+    width: 100%;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: rgba(214, 3, 3, 0);
+    border-radius: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px rgba(209, 209, 209, 1);
+    transition: none;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading {
+    width: calc(100% - 40px);
+    float: left;
+    order: 1;
+    font-size: 20px;
+    color: #0069b9;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    transition: none;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-deactive .arrow_order{
+    order: 2;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-active .arrow_order{
+    order: 2;
+}
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-heading,
+.oxi-addonsAC-SX-H:hover .oxi-addonsAC-SX-heading {
+    color: #0069b9;
+}
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active {
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    font-size: 13px;
+    width: 100%;
+    max-width: 30px;
+    height: 30px;
+    color: #f0960e;
+    border: 0px solid #d5de24;
+    border-radius: 0px 0px 0px 0px;
+    margin: 10px 10px 10px 10px;
+    transition: none;
+}
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive {
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    font-size: 13px;
+    width: 100%;
+    max-width: 30px;
+    height: 30px;
+    color: #f0960e;
+    border: 0px solid #3debdf;
+    border-radius: 0px 0px 0px 0px;
+    margin: 10px 10px 10px 10px;
+    transition: none;
+}
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H:hover .oxi-addonsAC-SX-deactive {
+    color: #f0960e;
+    border-color: #e8d8d8;
+    background: rgba(255, 255, 255, 0);
+    transition: none;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-active {
+    display: none;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-deactive {
+    display: none;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-C {
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 0px;
+    transition: none;
+}
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-C-b {
+    width: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 0px 0px rgba(230, 223, 223, 1);
+    border-radius: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 60px;
+    transition: none;
+}
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-C-b,
+.sa_element_ac_style_6 .oxi-addonsAC-SX-C-b p {
+    font-size: 15px;
+    color: #2e2e2e;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    transition: none;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_element_ac_style_6 {
+        padding: 8px 8px 8px 8px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H {
+        border-radius: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading {
+        font-size: 18px;
+        padding: 10px 10px 10px 10px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active {
+        font-size: 13px;
+        width: 100%;
+        max-width: 30px;
+        height: 30px;
+        border-radius: 0px 0px 0px 0px;
+        margin: 10px 10px 10px 10px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive {
+        font-size: 13px;
+        width: 100%;
+        max-width: 30px;
+        height: 30px;
+        border-radius: 0px 0px 0px 0px;
+        margin: 10px 10px 10px 10px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C {
+        padding: 0px 0px 0px 0px
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b {
+        border-radius: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 60px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b,
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_element_ac_style_6 {
+        padding: 10px 10px 10px 10px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H {
+        border-radius: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading {
+        font-size: 16px;
+        padding: 5px 5px 5px 5px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active {
+        font-size: 12px;
+        width: 100%;
+        max-width: 30px;
+        height: 30px;
+        border-radius: 0px 0px 0px 0px;
+        margin: 5px 5px 5px 5px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive {
+        font-size: 12px;
+        width: 100%;
+        max-width: 30px;
+        height: 30px;
+        border-radius: 0px 0px 0px 0px;
+        margin: 5px 5px 5px 5px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C {
+        padding: 30px #d5de24px #f0960epx 0px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b {
+        border-radius: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 60px;
+    }
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b,
+    .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b p {
+        font-size: 15px;
+    }
+}

@@ -46,19 +46,17 @@ class Style_5 extends Templates {
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
                 $details = '<div class="oxi-addonsAC-FI-desc-details">
-                                <div class="oxi-addonsAC-FI-absulote">
-                                </div>
                                 ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                             </div>';
             }
 
 
             echo '<div class=""  ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                    <div class="sa_el_ac_style_5    sa_el_ac_style_5_'.$key.'">
-                        <div class="oxi-addonsAC-FI-Content-details"  ref="#oxi-addonsAC-FI-Content-details-'.$key.'">
+                    <div class="sa_el_ac_style_5    sa_el_ac_style_5_' . $key . '">
+                        <div class="oxi-addonsAC-FI-Content-details oxi-addonsAC-FI-Content-details-'.$key.'"  ref="#oxi-addonsAC-FI-Content-details-' . $key . '">
                             ' . $title . '
                         </div>
-                        <div class="oxi-addonsAC-Fi-content" id="oxi-addonsAC-FI-Content-details-'.$key.'">
+                        <div class="oxi-addonsAC-Fi-content" id="oxi-addonsAC-FI-Content-details-' . $key . '">
                             ' . $details . '
                         </div>
                     </div>';
@@ -69,7 +67,6 @@ class Style_5 extends Templates {
     public function inline_public_jquery() {
         $arraykey = $this->style;
         $jquery = '';
-
 
         if (array_key_exists('sa_accordion_data', $this->style)):
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
@@ -110,6 +107,8 @@ class Style_5 extends Templates {
 
         return $jquery;
     }
+
+
 
     public function old_render() {
         $styledata = $this->dbdata;
