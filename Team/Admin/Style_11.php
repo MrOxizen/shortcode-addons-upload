@@ -579,7 +579,7 @@ class Style_11 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => 0,
+                        'min' => -200,
                         'max' => 200,
                         'step' => 1,
                     ],
