@@ -12,7 +12,6 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
@@ -121,22 +120,47 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_title_background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H ' => ''
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H' => ''
             ],
                 ]
         );
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Border Inside', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Border Outside', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_group_control(
                 'sa_el_ac_border_title', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H' => '',
+                '{{WRAPPER}} .sa_element_ac_style_6' => '',
             ]
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_group_control(
+                'sa_el_ac_border_tmain', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-row' => '',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
+        
+        
         $this->add_responsive_control(
                 'sa_el_ac_border_title_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
+            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 0,
@@ -159,7 +183,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -167,7 +191,7 @@ class Style_6 extends AdminStyle {
                 'sa_ac_box_shadow_nwo', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H' => ''
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H' => ''
             ],
                 ]
         );
@@ -202,7 +226,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -232,7 +256,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_6 ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -252,7 +276,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .heading-data' => ''
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading' => ''
             ],
                 ]
         );
@@ -261,7 +285,7 @@ class Style_6 extends AdminStyle {
                 'shortcode-addons-start-tabs', [
             'options' => [
                 'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover / Active', SHORTCODE_ADDOONS),
             ]
                 ]
         );
@@ -272,7 +296,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .heading-data' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -284,8 +308,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .heading-data,'
-                . ' .oxi-addons-ac-H:hover .heading-data' => 'color: {{VALUE}} !important;',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -296,7 +319,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::TEXTSHADOW,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .heading-data' => ''
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading' => ''
             ],
                 ]
         );
@@ -326,7 +349,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .heading-data' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -347,7 +370,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -358,7 +381,7 @@ class Style_6 extends AdminStyle {
             'default' => '#787878',
             'oparetor' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -367,7 +390,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => ''
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b' => ''
             ],
                 ]
         );
@@ -375,7 +398,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_descriptions_border_color', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => '',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C' => '',
             ]
                 ]
         );
@@ -405,7 +428,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -413,7 +436,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_descriptions_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => ''
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b' => ''
             ],
                 ]
         );
@@ -421,7 +444,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_descriptions_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -452,7 +475,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C-b' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -483,11 +506,11 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-C' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
-        
+
         $this->end_controls_section();
 
         $this->start_controls_section(
@@ -509,7 +532,7 @@ class Style_6 extends AdminStyle {
 //                    ],
 //                ],
 //        );
-        
+
         $this->add_responsive_control(
                 'sa_el_ac_opening_icon_height_and_width', $this->style, [
             'label' => __('Icon Height & Width', SHORTCODE_ADDOONS),
@@ -542,8 +565,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .icon_setting,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .icon_setting' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -573,8 +595,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .icon_setting,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .icon_setting' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -593,7 +614,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .icon_setting' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -604,7 +625,7 @@ class Style_6 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .icon_setting' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -612,7 +633,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .icon_setting' => '',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => '',
             ]
                 ]
         );
@@ -625,8 +646,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H:hover .icon_setting,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .icon_setting' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -637,8 +657,7 @@ class Style_6 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H:hover .icon_setting,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .icon_setting' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -648,8 +667,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H:hover .icon_setting,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .icon_setting' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'border-color: {{VALUE}};',
             ]
                 ]
         );
@@ -683,8 +701,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .icon_setting,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .icon_setting' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -714,8 +731,7 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .icon_setting,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .icon_setting' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -787,8 +803,8 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .span-deactive,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .span-active' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive,'
+                . '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -818,8 +834,8 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .span-deactive,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .span-active' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive,'
+                . '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -838,11 +854,11 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .span-deactive' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive' => 'color: {{VALUE}};',
             ]
                 ]
         );
-        
+
         $this->add_control(
                 'sa_el_ac_closing_arrow_background', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
@@ -850,16 +866,16 @@ class Style_6 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .span-deactive' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive' => 'background: {{VALUE}};',
             ]
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_el_ac_closing_arrow_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .span-deactive' => '',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive' => '',
             ]
                 ]
         );
@@ -872,8 +888,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H:hover .span-deactive,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .span-active' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -884,8 +899,7 @@ class Style_6 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H:hover .span-deactive,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .span-active' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'background: {{VALUE}};',
             ]
                 ]
         );
@@ -895,8 +909,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H:hover .span-deactive,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .span-active' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'border-color: {{VALUE}};',
             ]
                 ]
         );
@@ -929,8 +942,8 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .span-deactive,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .span-active ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive,'
+                . '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -960,8 +973,8 @@ class Style_6 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .span-deactive,'
-                . '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .span-active' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive,'
+                . '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );

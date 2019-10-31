@@ -1,22 +1,9 @@
 
 
-
-
-
-
-
-.sa_element_ac_style_6
-
-
-
-
-
-
-
-.oxi-addons-AC-SX-row {
+.sa_whole_div_ac_style_6{
     width: 100%;
+    height: auto;
     float: left;
-    border-bottom: 1px solid #0069b9;
     transition: none;
 }
 .sa_element_ac_style_6 {
@@ -59,10 +46,7 @@
     order: 2;
 }
 
-.sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-heading,
-.oxi-addonsAC-SX-H:hover .oxi-addonsAC-SX-heading {
-    color: #0069b9;
-}
+
 
 .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active {
     display: flex;
@@ -98,8 +82,7 @@
     transition: none;
 }
 
-.sa_element_ac_style_6 .oxi-addonsAC-SX-H:hover .oxi-addonsAC-SX-deactive {
-    color: #f0960e;
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H:hover .oxi-addonsAC-SX-deactive {  
     border-color: #e8d8d8;
     background: rgba(255, 255, 255, 0);
     transition: none;
@@ -109,6 +92,13 @@
 }
 .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-deactive {
     display: none;
+}
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    display: flex;
 }
 .sa_element_ac_style_6 .oxi-addonsAC-SX-C {
     display: none;
