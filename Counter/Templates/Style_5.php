@@ -24,7 +24,7 @@ class Style_5 extends Templates {
 
     public function inline_public_jquery() {
         $style = $this->style;
-        $jquery = 'jQuery(".oxi-number-style5").counterUp({
+        $jquery = 'jQuery(".oxi-number-style5-' . $this->WRAPPER . '").counterUp({
                     delay: ' . $style['sa_counter_delay-size'] . ',
                     time: ' . $style['sa_counter_duration-size'] . '
                 })';
@@ -61,7 +61,7 @@ class Style_5 extends Templates {
             if (array_key_exists('sa_counter_number_on', $style) && $style['sa_counter_number_on'] != '0') {
                 $number = '<div class="oxi-addons-counter-body-data">
                                 <div class="oxi-addons-counter-number">
-                                    <span class="oxi-number-style5">'
+                                    <span class="oxi-number-style5 oxi-number-style5-' . $this->WRAPPER . '">'
                         . $this->text_render($value['sa_counter_number']) . '
                                      </span> 
                                      ' . $value['sa_counter_number_sign'] . '

@@ -61,7 +61,6 @@ and open the template in the editor.
 .sa-cb-temp-1-button  .oxi-button:active{
     color:#886bbf;
     background:rgba(255,255,255,1.00);
-    line-height: 15px;
 
 }
 @media only screen and (min-width : 669px) and (max-width : 993px){

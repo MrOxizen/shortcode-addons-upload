@@ -71,9 +71,7 @@ and open the template in the editor.
     color: #4449b3;
 }
 
-.oxi-addons-align-btn9 .oxi-button-btn9:hover,
-.oxi-addons-align-btn9 .oxi-button-btn9:focus,
-.oxi-addons-align-btn9 .oxi-button-btn9:active {
+.oxi-addons-align-btn9 .oxi-button-btn9:hover{
     background: rgba(122, 129, 255, 1.00);
     border-width: 2px 2px 2px 2px;
     border-color: #4449b3;

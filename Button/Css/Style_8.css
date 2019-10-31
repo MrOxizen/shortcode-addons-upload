@@ -52,9 +52,7 @@ and open the template in the editor.
     transition: none;
 }
 
-.oxi-addons-align-btn8 .oxi-button-btn8:hover,
-.oxi-addons-align-btn8 .oxi-button-btn8:focus,
-.oxi-addons-align-btn8 .oxi-button-btn8:active {
+.oxi-addons-align-btn8 .oxi-button-btn8:hover{
     background: rgba(189, 189, 189, 1.00);
     border-width: 2px 2px 2px 2px;
     border-color: #383838;

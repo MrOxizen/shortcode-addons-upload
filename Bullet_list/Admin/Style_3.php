@@ -452,6 +452,37 @@ class Style_3 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
+                'sa-bl-lc-border-radius', $this->style, [
+            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+            'separator' => TRUE,
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 0,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-bullet-list-main-area .oxi-addons-list-type-1 .oxi-BL-link' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+        $this->add_responsive_control(
                 'sa-bl-lc-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'separator' => TRUE,

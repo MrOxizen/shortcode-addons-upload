@@ -634,7 +634,7 @@ class Style_1 extends AdminStyle
 
 
         $this->end_controls_tabs();
-
+        
 
         $this->add_group_control(
             'sa-ac-button-text-shadow',
@@ -646,6 +646,31 @@ class Style_1 extends AdminStyle
                     '{{WRAPPER}} .sa-cb-temp-1-button .oxi-button' => ''
                 ],
             ]
+        );
+        $this->add_control(
+                'sa-ac-button-text_alignment', $this->style, [
+            'label' => __('Alignment', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'center',
+            'options' => [
+                'left' => [
+                    'title' => __('Left', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-left',
+                ],
+                'center' => [
+                    'title' => __('Center', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-center',
+                ],
+                'right' => [
+                    'title' => __('Right', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-align-right',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa-cb-temp-1 .sa-cb-temp-1-button' => 'text-align: {{VALUE}};'
+            ],
+                ]
         );
         $this->add_group_control(
             'sa-ac-cont-bx-shadow',

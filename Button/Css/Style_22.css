@@ -41,9 +41,7 @@ and open the template in the editor.
     text-align: center
 }
 
-.oxi-addons-align-btn22 .oxi-button-btn22:hover,
-.oxi-addons-align-btn22 .oxi-button-btn22:focus,
-.oxi-addons-align-btn22 .oxi-button-btn22:active {
+.oxi-addons-align-btn22 .oxi-button-btn22:hover{
     color: #ffffff;
     background: rgba(107, 107, 107, 0.68);
     border-width: 0px 0px 0px 0px;

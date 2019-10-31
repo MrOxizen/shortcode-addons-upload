@@ -118,7 +118,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 220,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -181,7 +181,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -273,7 +273,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -354,7 +354,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -404,7 +404,7 @@ class Style_12 extends AdminStyle {
                     'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 15,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -449,7 +449,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => '',
             ],
             'range' => [
                 'px' => [

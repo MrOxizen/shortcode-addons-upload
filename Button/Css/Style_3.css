@@ -43,9 +43,7 @@ and open the template in the editor.
     text-align: center;
 }
 
-.oxi-addons-align-btn3 .oxi-button-btn3:hover,
-.oxi-addons-align-btn3 .oxi-button-btn3:focus,
-.oxi-addons-align-btn3 .oxi-button-btn3:active{
+.oxi-addons-align-btn3 .oxi-button-btn3:hover{
     background: rgba(240, 91, 116, 1);
     border-width: 0px 0px 0px 0px;
     border-style: dashed;
