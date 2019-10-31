@@ -52,7 +52,7 @@ class Style_1 extends Templates
     $style = explode('|', $stylefiles[0]);
     $css = '';
 
-    $jquery = 'jQuery(".oxi-addons-counter-' . $oxiid . '").countdown("' . $style[3] . ' ' . $style[5] . '").on("update.countdown", function(event) {
+    $jquery = 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-counter-' . $oxiid . '").countdown("' . $style[3] . ' ' . $style[5] . '").on("update.countdown", function(event) {
                             var jQuerythis = jQuery(this).html(event.strftime(\'<div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="oxi-countdown-section oxi-addons-counter-days"><div class="oxi-countdown-mid"><div class="oxi-countdown-amount">%D</div><div class="oxi-countdown-period">' . $stylefiles[3] . '</div></div> </div> </div> <div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"> <div class="oxi-countdown-section oxi-addons-counter-hours "><div class="oxi-countdown-mid"><div class="oxi-countdown-amount"> %H</div> <div class="oxi-countdown-period">' . $stylefiles[5] . '</div></div></div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="oxi-countdown-section oxi-addons-counter-minutes"><div class="oxi-countdown-mid"> <div class="oxi-countdown-amount"> %M </div> <div class="oxi-countdown-period"> ' . $stylefiles[7] . '</div> </div> </div> </div><div class="oxi-addons-lg-col-4 oxi-addons-md-col-2 oxi-addons-xs-col-2"><div class="oxi-countdown-section oxi-addons-counter-seconds"> <div class="oxi-countdown-mid"><div class="oxi-countdown-amount"> %S</div> <div class="oxi-countdown-period">' . $stylefiles[9] . ' </div></div></div></div>\'));
                           });';
     echo '<div class="oxi-addons-container">                      

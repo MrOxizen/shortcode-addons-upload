@@ -73,47 +73,138 @@ class Style_5 extends AdminStyle {
 
         $this->end_controls_section();
         $this->start_controls_section(
-                'shortcode-addons-general', [
-            'label' => esc_html__('General ', SHORTCODE_ADDOONS),
-                ]
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Divider Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
         );
-        $this->add_group_control(
-                'sa_head_container_border_btm', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container .oxi-addons-heading' => '',
-            ],
-                ]
+        $this->add_control(
+            'sa_divider_switter',
+            $this->style,
+            [
+                'label' => __('Divider', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
         );
         $this->add_responsive_control(
-                'sa_head_margin', $this->style, [
-            'label' => __('Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+            'sa_divider_alignment',
+            $this->style,
+            [
+                'label' => __('Alignment', SHORTCODE_ADDOONS),
+                'separator' => TRUE,
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'condition' => [
+                    'sa_divider_switter' => 'yes'
                 ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
+                'default' => 'center',
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
                 ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-heading-container-style-5 .heading-divider-main' => 'justify-content: {{VALUE}};'
                 ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-heading-container ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
-                ]
+        );
+        $this->add_responsive_control(
+            'sa_heading_divider_width',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 250,
+                ],
+                'condition' => [
+                    'sa_divider_switter' => 'yes'
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 800,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 250,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 10,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-heading-container-style-5 .heading-divider' => 'max-width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_divider_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'condition' => [
+                    'sa_divider_switter' => 'yes'
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-heading-container-style-5 .heading-divider' => ''
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_heading_divider_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'condition' => [
+                    'sa_divider_switter' => 'yes'
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-heading-container-style-5 .heading-divider' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
         );
         $this->end_controls_section();
 
@@ -148,11 +239,37 @@ class Style_5 extends AdminStyle {
             ],
                 ]
         );
+        $this->add_responsive_control(
+            'sa_heading_header_position',
+            $this->style,
+            [
+                'label' => __('Alignment', SHORTCODE_ADDOONS), 
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center',
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-heading-style-5 ' => 'justify-content: {{VALUE}};'
+                ],
+            ]
+        );
 
         $this->add_group_control(
                 'sa_head_typo', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'include' => Controls::ALIGNNORMAL,
+            'type' => Controls::TYPOGRAPHY, 
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-heading-style-5 .oxi-addons-heading-text ' => '',
             ],

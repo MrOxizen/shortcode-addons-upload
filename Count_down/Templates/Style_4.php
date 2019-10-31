@@ -36,7 +36,7 @@ class Style_4 extends Templates
 		$trim = ltrim($time[0], '0');
 		$times = array($trim, $time[1]);
 		$times = implode(',', $times);
-		$jquery = 'jQuery(".sa-addons-count-down-content-style-4").mbComingsoon({
+		$jquery = 'jQuery(".' . $this->WRAPPER . ' .sa-addons-count-down-content-style-4").mbComingsoon({
 					expiryDate  : new Date(' . $days_marge . ',' . $times . '),
 					localization: {
 						days   : "Days",

@@ -18,7 +18,7 @@ class Style_5 extends Templates {
 
     public function default_render($style, $child, $admin) {
     
-        $heading = $content = '';
+        $heading = $content = $divider = '';
         if ($style['sa_head_text'] != '') {
             $heading = '<' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading-text"> 
                                 ' . $this->text_render($style['sa_head_text']) . '
@@ -29,11 +29,17 @@ class Style_5 extends Templates {
                             ' . $this->text_render($style['sa_sub_head_text']) . '
                         </div>';
         }
+        if (array_key_exists('sa_divider_switter', $style) && $style['sa_divider_switter'] == 'yes') {
+            $divider = '<div class="heading-divider-main">
+                        <div class="heading-divider"></div>
+                    </div>';
+        }
 
-        echo '  <div class="oxi-addons-heading-container"   >
+        echo '  <div class="oxi-addons-heading-container-style-5"   >
                     <div class="oxi-addons-heading-style-5" '.$this->animation_render('sa_head_animation', $style).'>
                         ' . $heading . '
                     </div>
+                    '.$divider.'
                     <div class="oxi-addons-sub-heading-style-5">
                         ' . $content . '
                     </div>

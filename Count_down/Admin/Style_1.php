@@ -229,13 +229,9 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-        $this->end_controls_section();
-
-        $this->end_section_devider();
-
-        $this->end_section_tabs();
-
-
+        $this->end_controls_section(); 
+        $this->end_section_devider(); 
+        $this->end_section_tabs(); 
         $this->start_section_tabs(
             'shortcode-addons-start-tabs',
             [
@@ -289,7 +285,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_d_txt_sps' => 'shortcode-addons-count-number'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-1 .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-amount' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -304,7 +300,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_d_txt_sps' => 'shortcode-addons-count-number'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                    '{{WRAPPER}}  .sa-addons-count-down-content-style-1 .sa-addons-counter-days.shortcode-addons-count-number .sa-addons-countdown-period' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -351,7 +347,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_hours_txt_sps' => 's-a-count-hours'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-1 .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-amount' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -366,7 +362,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_hours_txt_sps' => 's-a-count-hours'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-1 .sa-addons-counter-hours.s-a-count-hours .sa-addons-countdown-period' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -420,7 +416,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_min_txt_sps' => 's-a-count-minute'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-1 .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-amount' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -435,7 +431,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_min_txt_sps' => 's-a-count-minute'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-1 .sa-addons-counter-minutes.s-a-count-minute .sa-addons-countdown-period' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -485,7 +481,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_seco_txt_sps' => 's-a-count-second'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-amount' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-1 .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-amount' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -500,7 +496,7 @@ class Style_1 extends AdminStyle
                     'sa_cd_seco_txt_sps' => 's-a-count-second'
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-period' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-count-down-content-style-1 .sa-addons-counter-seconds.s-a-count-second .sa-addons-countdown-period' => 'color: {{VALUE}};'
                 ],
             ]
         );
