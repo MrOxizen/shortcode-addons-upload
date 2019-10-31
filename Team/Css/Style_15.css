@@ -30,16 +30,18 @@
     overflow: hidden; 
 }
 .oxi-addons-parent-wrapper-style-15 .member-divider-main {
-    width: 100%;
-    padding: 5px 5px 5px 5px;
+    width: 100%; 
     justify-content: center;
     display: flex
 }
 
 .oxi-addons-parent-wrapper-style-15 .member-divider {
     width: 100%;
-    max-width: 60px;
-    border-top: 2px dashed #ffffff
+    max-width: 400px;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    border-top: 5px dashed #3eb39c
 }
 
 .oxi-addons-parent-wrapper-style-15 .oxi-team-show-body-style-15 {

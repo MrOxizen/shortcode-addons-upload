@@ -3,8 +3,7 @@
     float: left
 }
 .oxi-addons-heading-container-style-5 .heading-divider-main {
-    width: 100%;
-    padding: 5px 5px 5px 5px;
+    width: 100%; 
     justify-content: center;
     display: flex
 }
@@ -12,6 +11,9 @@
 .oxi-addons-heading-container-style-5 .heading-divider {
     width: 100%;
     max-width: 400px;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
     border-top: 5px dashed #3eb39c
 }
 
