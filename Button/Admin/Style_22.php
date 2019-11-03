@@ -525,7 +525,7 @@ class Style_22 extends AdminStyle {
                 ]
         );
        $this->add_group_control(
-                'sa-btn-icon-bg', $this->style, [
+                'sa-btn-icon-hover-bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn22 .oxi-button-btn22:hover .sa-button-icon1' => ''
