@@ -115,7 +115,7 @@ class Style_10 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 50,
+                    'max' => 300,
                     'step' => 1,
                 ],
                 'em' => [
@@ -149,7 +149,7 @@ class Style_10 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 250,
+                    'max' => 300,
                     'step' => 1,
                 ],
                 'em' => [
