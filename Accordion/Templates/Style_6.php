@@ -12,6 +12,8 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
+
 use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_6 extends Templates {
@@ -19,13 +21,13 @@ class Style_6 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $arrow_order = '';
-        $icon_order = 'icon_order';
+        $icon_order = "style = 'order: 2'";
         if ($style['sa_el_ac_icon_position'] == 'right') {
-            $arrow_order = 'arrow_order';
+            $arrow_order = 'style="order: 2;"';
             $icon_order = '';
         } elseif ($style['sa_el_ac_icon_position'] == 'left') {
             $arrow_order = '';
-            $icon_order = 'icon_order';
+            $icon_order = 'style="order: 2;"';
         }
 
         $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
@@ -41,11 +43,15 @@ class Style_6 extends Templates {
             
             
             if ($style['sa_el_ac_arrow_icon'] == 'yes') {
-                $active_icon = '<div class="oxi-addonsAC-SX-active   ' . $arrow_order . '"><i class="fas fa-arrow-down oxi-icons"></i></div>';
-                $inactive_icon = '<div class="oxi-addonsAC-SX-deactive   ' . $arrow_order . '"><i class="fas fa-arrow-right oxi-icons"></i></div>';
+                $active_icon = '<div class="oxi-addonsAC-SX-active" ' . $arrow_order . '><i class="fas fa-arrow-down oxi-icons"></i></div>';
+                if ($style['sa_el_ac_icon_position'] == 'right') {
+                    $inactive_icon = '<div class="oxi-addonsAC-SX-deactive"  ' . $arrow_order . '><i class="fas fa-arrow-left oxi-icons"></i></div>';
+                }else{
+                    $inactive_icon = '<div class="oxi-addonsAC-SX-deactive"  ' . $arrow_order . '><i class="fas fa-arrow-right oxi-icons"></i></div>';
+                }
             }
             if ($data['sa_icon_yes_no'] == 'yes') {
-                $icon = '<div class="icon_setting ' . $icon_order . '">' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
+                    $icon = '<div class="icon_setting"  ' . $icon_order . '>' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
                 $heading = '<div class="oxi-addonsAC-SX-heading">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
@@ -57,15 +63,16 @@ class Style_6 extends Templates {
                             </div>
                         </div>';
             }
-            
-            echo '<div class="sa_element_ac_style_6    sa_element_ac_style_6_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                        <div class="oxi-addonsAC-SX-H" ref="#oxi-addonsAC-SX-H-id'.$key.'">
-                            ' . $active_icon . '
-                            ' . $inactive_icon . '
-                            ' . $icon . '
-                            ' . $heading . '
-                        </div>
-                        ' . $details . '';
+            echo '<div class="sa_whole_div_ac_style_6">';
+                echo '<div class="sa_element_ac_style_6    sa_element_ac_style_6_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                            <div class="oxi-addonsAC-SX-H" ref="#oxi-addonsAC-SX-H-id'.$key.'">
+                                ' . $active_icon . '
+                                ' . $inactive_icon . '
+                                ' . $icon . '
+                                ' . $heading . '
+                            </div>
+                            ' . $details . '';
+                echo '</div>';
             echo '</div>';
             
         }

@@ -35,7 +35,7 @@ and open the template in the editor.
     -o-transition: all 0.15s ease-in-out;
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-       }
+}
 
 .oxi-addons-align-btn5 .oxi-button-btn5.sa-width-dymanic{
     max-width: 220px;
@@ -45,19 +45,26 @@ and open the template in the editor.
     text-align: center;
 }
 .oxi-addons-align-btn5 .oxi-button-btn5 .oxi-icons{
-   
+
     font-size: 20px;
     color: #ffffff;
-   padding: 0px 0px 0px 15px;
+    padding: 0px 0px 0px 15px;
 }
 .oxi-addons-align-btn5 .oxi-button-btn5:hover {
     color: #ffffff;
-   background: rgba(214, 88, 66, 1.00);
+    background: rgba(214, 88, 66, 1.00);
     border-radius: 5px;
     border-width: 0px 0px 0px 0px;
     border-color: #000000;
     border-style: solid;
-    box-shadow: 1px 4px 0px 0px rgba(175, 58, 42, 1);}
+    box-shadow: 1px 4px 0px 0px rgba(175, 58, 42, 1);
+}
+.oxi-addons-align-btn5 .oxi-button-btn5:active {
+    margin-top: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
 @media only screen and (min-width:669px) and (max-width:993px) {
     .oxi-addons-align-btn5 .oxi-button-btn5  {

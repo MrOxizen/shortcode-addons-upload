@@ -122,11 +122,9 @@ class Style_18 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn18 .oxi-button-btn18.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-align-btn18 .oxi-button-btn18' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
-            'condition' => [
-                'sa_btn_width_choose' => 'sa-width-dymanic',
-            ],
+           
                 ]
         );
         $this->add_control(
