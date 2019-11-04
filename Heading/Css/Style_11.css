@@ -6,13 +6,7 @@
 .oxi-addons-heading-style-11 {
     width: 100%;
     float: left;
-    display: block;
-    border-bottom-width: 2px;
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    border-style: solid;
-    border-color: #34c76a;
+    display: block; 
     font-family: "ABeeZee";
     font-weight: 500;
     font-style: normal;

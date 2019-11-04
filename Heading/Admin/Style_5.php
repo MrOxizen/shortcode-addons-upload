@@ -175,7 +175,7 @@ class Style_5 extends AdminStyle {
             'sa_heading_divider_padding',
             $this->style,
             [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'label' => __('Margin', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
                 'condition' => [
                     'sa_divider_switter' => 'yes'
