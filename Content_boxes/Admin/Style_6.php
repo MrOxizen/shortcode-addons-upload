@@ -448,34 +448,7 @@ class Style_6 extends AdminStyle
                 ],
             ]
         );
-        $this->add_control(
-            'sa_icon_box_content_align',
-            $this->style,
-            [
-                'label' => __('Button Align', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE,
-                'operator' => Controls::OPERATOR_ICON,
-                'toggle' => TRUE,
-                'default' => 'center',
-                'options' => [
-                    'left' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-right',
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => 'text-align: {{VALUE}};'
-                ],
-            ]
-        );
+        
         $this->add_responsive_control(
             'sa-ac-content-padding',
             $this->style,
