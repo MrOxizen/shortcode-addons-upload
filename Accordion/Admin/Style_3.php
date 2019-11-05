@@ -286,7 +286,7 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa_el_ac_title_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
-            'separator' => TRUE,
+//            'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_3 .oxi-addonsAC-title' => ''
             ],

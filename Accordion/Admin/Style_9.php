@@ -293,7 +293,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H:hover .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -491,7 +491,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-C' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-C' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -505,7 +505,7 @@ class Style_9 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_el_ac_number_showing', $this->style, [
+                'sa_el_ac_arrow_icon', $this->style, [
             'label' => __('Showing Number', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
@@ -547,8 +547,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-number' => 'height:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-number' => ' width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-number' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};'                
             ],
                 ]
         );
@@ -726,24 +725,14 @@ class Style_9 extends AdminStyle {
             'showing' => false,
                 ]
         );
-        $this->add_control(
-                'sa_el_ac_arrow_icon', $this->style, [
-            'label' => __('Showing Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
+        
         $this->add_control(
                 'sa_el_ac_icon_position', $this->style, [
             'label' => __('Icon Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
             'loader' => TRUE,
-            'default' => 'left',
+            'default' => 'right',
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -786,13 +775,12 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => 'height:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => 'width:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'height:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};'                
             ],
                 ]
         );
+        
         
         $this->add_responsive_control(
                 'sa_el_ac_arrow_icon_icon_size', $this->style, [
@@ -862,6 +850,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => '',
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => '',
             ]
                 ]
         );

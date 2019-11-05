@@ -33,8 +33,10 @@ class Style_9 extends Templates {
 
 
         $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
-
-        foreach ($all_data as $key => $data) {
+        
+        $count = 1;
+        
+        foreach ($all_data as $key => $data ) {
 
 
 //            print_r('<pre>');
@@ -42,10 +44,10 @@ class Style_9 extends Templates {
 //            print_r('</pre>');
 
 
-            $heading = $active_icon = $inactive_icon = $details = '';
+            $heading = $active_icon = $inactive_icon = $details = $number = '';
             
-            $count = 1;
-            if ($style['sa_el_ac_number_showing'] == 'yes'){
+            
+            if ($style['sa_el_ac_arrow_icon'] == 'yes'){
                 $number = '<div class="oxi-addons-AC-number" ' . $icon_position . '>
                             ' . $count . '
                         </div>';
@@ -53,7 +55,7 @@ class Style_9 extends Templates {
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
                 $heading = '<div class="oxi-addons-AC-N-heading-data">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
-            if ($style['sa_el_ac_arrow_icon'] == 'yes') {
+            if ($data['sa_icon_yes_no'] == 'yes') {
                 $active_icon = '<div class="oxi-addons-AC-N-active" ' . $arrow_position . '>' . $this->font_awesome_render($data['sa_el_ac_opening_active_icon_adding']) . '</div>';                
                 $inactive_icon = '<div class="oxi-addons-AC-N-deactive"  ' . $arrow_position . '>' . $this->font_awesome_render($data['sa_el_ac_opening_deactive_icon_adding']) . '</div>';           
             }
@@ -117,6 +119,7 @@ class Style_9 extends Templates {
             endif;
 
         endif;
+        
 //        $opening = '';
 //        foreach ($opening as $key => $value) {
 //            echo $key;
