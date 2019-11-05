@@ -29,12 +29,16 @@ class Style_7 extends Templates {
 //            $icon_order = 'style="order: 2;"';
 //        }
         
+        
         $icon_position = '';
-        if('sa_el_ac_icon_position' == 'right'){
-            $icon_position = 'style=" right: -40px; position: absolute;"';
-        }elseif('sa_el_ac_icon_position' == 'left'){
-            $icon_position = 'style="left: -40px; position: absolute;"';
+        if($style['sa_el_ac_icon_position'] == 'right'){
+            $icon_position = 'style="right: -40px; position:absolute;"';
+        }elseif($style['sa_el_ac_icon_position'] == 'left'){
+            $icon_position = 'style="left: -40px; position:absolute;"';
         }
+        
+//        echo $icon_position;
+        
         
         
 
@@ -45,6 +49,12 @@ class Style_7 extends Templates {
 //            print_r('<pre>');
 //            print_r($style);
 //            print_r('</pre>');
+            
+            
+            
+        
+            
+            
 
             $icon = $title = $details = '';
 
@@ -60,7 +70,7 @@ class Style_7 extends Templates {
           
             
             if ($data['sa_icon_yes_no'] == 'yes') {
-                $icon = '<div class="oxi-addons-AC-SV-icon" '.$icon_position.'>' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
+                $icon = '<div class="oxi-addons-AC-SV-icon " '.$icon_position.'>' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
                 $title = '<div class="oxi-addons-AC-SV-header">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
@@ -91,7 +101,7 @@ class Style_7 extends Templates {
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
                 if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
                     $jquery .= 'jQuery(".sa_element_ac_style_7_' . $key . ' .oxi-addons-AC-SV-panel").addClass("active");
-                                jQuery(".sa_element_ac_style_7_' . $key . ' .oxi-addons-AC-SV-panel").next().slideDown();';
+                                jQuery(".sa_element_ac_style_7_' . $key . ' .oxi-addons-AC-SV-panel").children().slideDown();';
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] != 'onebyone'):
