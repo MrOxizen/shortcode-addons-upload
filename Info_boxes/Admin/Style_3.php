@@ -162,7 +162,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -196,7 +196,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -290,7 +290,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -336,7 +336,7 @@ class Style_3 extends AdminStyle
                 
                 'default' => [
                     'unit' => 'px',
-                    'size' => 40,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -368,7 +368,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 80,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -436,7 +436,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -496,7 +496,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 40,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -572,7 +572,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -640,7 +640,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
