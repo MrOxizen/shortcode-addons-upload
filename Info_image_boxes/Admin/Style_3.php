@@ -70,7 +70,7 @@ $this->add_repeater_control(
                             'type' => Controls::MEDIA,
                             'default' => [
                                 'type' => 'media-library',
-                                'link' => '',
+                                'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/star-soccer-ball-badge.png',
                             ],
                             'loader' => TRUE,
                             'controller' => 'add_group_control',
