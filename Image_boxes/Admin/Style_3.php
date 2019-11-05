@@ -120,7 +120,7 @@ class Style_3 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 1,
-                        'max' => 2000,
+                        'max' => 1200,
                         'step' => 1,
                     ],
                     'em' => [
@@ -152,7 +152,7 @@ class Style_3 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 1,
-                        'max' => 2000,
+                        'max' => 1200,
                         'step' => 1,
                     ],
                     'em' => [
@@ -191,7 +191,7 @@ class Style_3 extends AdminStyle
                         'step' => 1,
                     ],
                     '%' => [
-                        'min' => 0,
+                        'min' => -200,
                         'max' => 100,
                         'step' => .1,
                     ],
@@ -364,7 +364,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],

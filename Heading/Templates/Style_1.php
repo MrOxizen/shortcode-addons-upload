@@ -12,11 +12,14 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_1 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
 
         if ($style['sa_head_text'] != '') {
             echo ' <div class="oxi-addons-heading-container-style-1" > 
@@ -25,7 +28,8 @@ class Style_1 extends Templates {
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
@@ -75,5 +79,4 @@ class Style_1 extends Templates {
                 }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

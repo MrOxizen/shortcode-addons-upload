@@ -87,7 +87,7 @@ class Style_2 extends AdminStyle
                         'controller' => 'add_group_control',
                         'default' => [
                             'type' => 'media-library',
-                            'link' => '#asdas',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/pexels-photo-206558-1.jpeg',
                         ]
                     ],
                     'sa_image_boxes_button' => [
@@ -120,7 +120,7 @@ class Style_2 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 1,
-                        'max' => 2000,
+                        'max' => 1200,
                         'step' => 1,
                     ],
                     'em' => [
@@ -157,7 +157,7 @@ class Style_2 extends AdminStyle
                     ],
                     'px' => [
                         'min' => 1,
-                        'max' => 2000,
+                        'max' => 1200,
                         'step' => 1,
                     ],
                 ],
@@ -177,11 +177,11 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => -200,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -261,7 +261,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -350,7 +350,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -359,7 +359,7 @@ class Style_2 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -382,7 +382,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -391,7 +391,7 @@ class Style_2 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -414,7 +414,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -509,7 +509,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-button-data' => 'color: {{VALUE}};',
                 ]
@@ -533,7 +533,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -542,7 +542,7 @@ class Style_2 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -609,7 +609,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -654,7 +654,7 @@ class Style_2 extends AdminStyle
                 'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -663,7 +663,7 @@ class Style_2 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -686,7 +686,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -728,7 +728,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-heading' => 'color: {{VALUE}};',
                 ]
@@ -790,7 +790,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -829,7 +829,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-body' => 'color: {{VALUE}};',
                 ]
@@ -891,7 +891,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

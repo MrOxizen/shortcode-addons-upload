@@ -1,14 +1,13 @@
-.oxi-addons-heading-container-style-2  {
+.oxi-addons-heading-container-style-2 {
     text-align: center;
     width: 100%
 }
 
-.oxi-addons-heading-container-style-2  .oxi-addons-heading {
+.oxi-addons-heading-container-style-2 .oxi-addons-heading {
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
     background: url(https://www.oxilab.org/wp-content/uploads/2019/04/180168-nature-landscape-animals-trees-sunset-silhouette-birds-photo_manipulation-deer-horizon-reflection-orange.jpg);
-    text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -27,10 +26,11 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-heading-container-style-2  {
+    .oxi-addons-heading-container-style-2 {
         height: 80px
     }
-    .oxi-addons-heading-container-style-2  .oxi-addons-heading {
+
+    .oxi-addons-heading-container-style-2 .oxi-addons-heading {
         font-size: 60px;
         padding: 10px 10px 10px 10px;
         margin-top: 0px;
@@ -39,7 +39,7 @@
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-heading-container-style-2  .oxi-addons-heading {
+    .oxi-addons-heading-container-style-2 .oxi-addons-heading {
         font-size: 60px;
         padding: 10px 10px 10px 10px;
         margin-top: 0px;

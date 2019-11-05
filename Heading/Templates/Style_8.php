@@ -12,15 +12,15 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_8 extends Templates {
+class Style_8 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-//        echo '<pre>';
-//        print_r($style);
-//        echo '</pre>';
-//      print_r($this->media_render('sa_head_image',$style)) ;
+    public function default_render($style, $child, $admin)
+    {
+
         $heading = $content = $WM = '';
 
         if ($style['sa_head_heading_tag'] != '') {
@@ -33,7 +33,7 @@ class Style_8 extends Templates {
                             ' . $this->text_render($style['sa_sub_head_text']) . '
                         </' . $style['sa_sub_heading_tag'] . '>';
         }
-        
+
         if ($style['sa_head_heading_alignment'] == 'left') {
             $transformdata = "   
                 top: 50%;
@@ -46,9 +46,7 @@ class Style_8 extends Templates {
                 transform: translateX(-50%) translateY(-50%);
                 ";
         } else {
-            $transformdata = "  
-           
-              
+            $transformdata = "   
                 top: 50%;
                 right: 0%;
                 transform: translateY(-50%);";
@@ -59,8 +57,8 @@ class Style_8 extends Templates {
                   
                     </div>';
         }
-        
-        echo '<div class="OxiAddons-Heading" '.$this->animation_render('sa_head_animation', $style).' >
+
+        echo '<div class="OxiAddons-Heading" ' . $this->animation_render('sa_head_animation', $style) . ' >
                     <div class="oxi-addons-heading-container-style-8">
                      ' . $WM . '
                         <div class="oxi-addons-sub-heading-style-8">
@@ -73,7 +71,8 @@ class Style_8 extends Templates {
             </div>';
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
@@ -226,5 +225,4 @@ class Style_8 extends Templates {
                   }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

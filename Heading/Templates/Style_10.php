@@ -12,36 +12,35 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_10 extends Templates {
+class Style_10 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-//        echo '<pre>';
-//        print_r($style);
-//        echo '</pre>';
-//        echo  $style['sa_head_animation'];
-//      print_r($this->media_render('sa_head_image',$style)) ;
-$align = '';
-        if($style['sa_head_line_style'] == 'oxi_line_top_left' || $style['sa_head_line_style'] == 'oxi_line_btm_left'){
+    public function default_render($style, $child, $admin)
+    {
+
+        $align = $heading = $content  = '';
+        if ($style['sa_head_line_style'] == 'oxi_line_top_left' || $style['sa_head_line_style'] == 'oxi_line_btm_left') {
             $align = 'text-align : left';
-        }else if ($style['sa_head_line_style'] == 'oxi_line_top_right' ||  $style['sa_head_line_style'] == 'oxi_line_btm_right') {
+        } else if ($style['sa_head_line_style'] == 'oxi_line_top_right' ||  $style['sa_head_line_style'] == 'oxi_line_btm_right') {
             $align = 'text-align : right';
-        }else{
+        } else {
             $align = 'text-align : center';
         }
         if ($style['sa_head_text'] != '') {
-            $heading = '<' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading-text" style="'.$align.'"> 
+            $heading = '<' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading-text" style="' . $align . '"> 
                               ' . $this->text_render($style['sa_head_text']) . '
                         </' . $style['sa_head_heading_tag'] . '>';
         }
         if ($style['sa_sub_heading_tag']) {
-            $content = ' <' . $style['sa_sub_heading_tag'] . '  class="oxi-addons-sub-heading-text '.$style['sa_head_line_style'].'" style="'.$align.'"> 
+            $content = ' <' . $style['sa_sub_heading_tag'] . '  class="oxi-addons-sub-heading-text ' . $style['sa_head_line_style'] . '" style="' . $align . '"> 
                             ' . $this->text_render($style['sa_sub_head_text']) . '
                         </' . $style['sa_sub_heading_tag'] . '>';
         }
         echo '  <div class="oxi-addons-heading-container"   >
-                    <div class="oxi-addons-main-heading-body"  '.$this->animation_render('sa_head_animation', $style).'>
+                    <div class="oxi-addons-main-heading-body"  ' . $this->animation_render('sa_head_animation', $style) . '>
                         <div class="oxi-addons-sub-heading-style-10 ">
                             ' . $content . '
                         </div>
@@ -52,7 +51,8 @@ $align = '';
                 </div>';
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
@@ -60,23 +60,23 @@ $align = '';
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
         $heading = $content = '';
-       
-    $heading = $content = $WM = '';
-    if ($stylefiles[3] != '') {
-        $heading = '<' . $styledata[39] . ' class="oxi-addons-Heading-text"> 
+
+        $heading = $content = $WM = '';
+        if ($stylefiles[3] != '') {
+            $heading = '<' . $styledata[39] . ' class="oxi-addons-Heading-text"> 
                             ' . OxiAddonsTextConvert($stylefiles[3]) . '
                     </' . $styledata[39] . '>';
-    }
-    if ($stylefiles[5]) {
-        $content = ' <p class="oxi-addons-Content-text"> 
+        }
+        if ($stylefiles[5]) {
+            $content = ' <p class="oxi-addons-Content-text"> 
                         ' . OxiAddonsTextConvert($stylefiles[5])  . '
                     </p>';
-    }
+        }
 
 
-    $textalign = explode(":", $styledata[113]);
+        $textalign = explode(":", $styledata[113]);
 
-    echo '  <div class="oxi-addons-container">
+        echo '  <div class="oxi-addons-container">
                 <div class="oxi-addons-row">
                     <div class="OxiAddons-Heading-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 95) . '>
                         <div class="oxi-addons-main-heading-body' . $oxiid . '">
@@ -94,7 +94,7 @@ $align = '';
 
 
 
-    $css .= '.OxiAddons-Heading-' . $oxiid . '{
+        $css .= '.OxiAddons-Heading-' . $oxiid . '{
                 width: 100%;
                 float: left;
                 }
@@ -136,8 +136,8 @@ $align = '';
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 79) . ';
             }';
 
-    if ($styledata[107] == 1) {
-        $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::before{
+        if ($styledata[107] == 1) {
+            $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::before{
                 background: ' . $styledata[101] . ' none repeat scroll 0 0;
                 content: "";
                 left: 0%;
@@ -147,8 +147,8 @@ $align = '';
                 transform: translateX(-100%);
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
              }';
-    } elseif ($styledata[107] == 2) {
-        $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::before{
+        } elseif ($styledata[107] == 2) {
+            $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::before{
                 background: ' . $styledata[101] . ' none repeat scroll 0 0;
                 content: "";
                 right: 0%;
@@ -158,8 +158,8 @@ $align = '';
                 transform: translateX(0%);
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
              }';
-    } elseif ($styledata[107] == 3) {
-        $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
+        } elseif ($styledata[107] == 3) {
+            $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
                     background: ' . $styledata[101] . ' none repeat scroll 0 0;
                     content: "";
                     top: 100%;
@@ -172,8 +172,8 @@ $align = '';
                     margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
                 
              }';
-    } elseif ($styledata[107] == 4) {
-        $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
+        } elseif ($styledata[107] == 4) {
+            $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
                 background: ' . $styledata[101] . ' none repeat scroll 0 0;
                 content: "";
                 top: 100%;
@@ -185,8 +185,8 @@ $align = '';
                 transform: translateX(0%);
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
         }';
-    } else {
-        $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
+        } else {
+            $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
                 background: ' . $styledata[101] . ' none repeat scroll 0 0;
                 content: "";
                 top: 100%;
@@ -198,10 +198,10 @@ $align = '';
                 transform: translateX(0%);
                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
         }';
-    }
+        }
 
 
-    $css .= ' @media only screen and (min-width : 669px) and (max-width : 993px){
+        $css .= ' @media only screen and (min-width : 669px) and (max-width : 993px){
                 
                 .oxi-addons-Heading-body-' . $oxiid . ' .oxi-addons-Heading-text{
                     font-size: ' . $styledata[36] . 'px;
@@ -217,8 +217,8 @@ $align = '';
                     text-align:center;
                     position: relative;
                 }';
-    if ($styledata[107] == 3 || $styledata[107] == 4 || $styledata[107] == 5) {
-        $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
+        if ($styledata[107] == 3 || $styledata[107] == 4 || $styledata[107] == 5) {
+            $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
                             background: ' . $styledata[101] . ' none repeat scroll 0 0;
                             content: "";
                             top: 100%;
@@ -231,8 +231,8 @@ $align = '';
                             margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
 
                      }';
-    }
-    $css .=  '}      
+        }
+        $css .=  '}      
             @media only screen and (max-width : 668px){
                 
                 .oxi-addons-Heading-body-' . $oxiid . ' .oxi-addons-Heading-text{
@@ -249,8 +249,8 @@ $align = '';
                     text-align:center;
                     position: relative;
                 }';
-    if ($styledata[107] == 3 || $styledata[107] == 4 || $styledata[107] == 5) {
-        $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
+        if ($styledata[107] == 3 || $styledata[107] == 4 || $styledata[107] == 5) {
+            $css .= '.oxi-addons-Content-body-' . $oxiid . '  .oxi-addons-Content-text::after{
                             background: ' . $styledata[101] . ' none repeat scroll 0 0;
                             content: "";
                             top: 100%;
@@ -263,9 +263,8 @@ $align = '';
                             margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 19) . ';
 
                      }';
-    }
-    $css .= '}';
+        }
+        $css .= '}';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

@@ -101,7 +101,7 @@ class Style_4 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 1200,
                     'step' => 1,
                 ],
                 'em' => [
@@ -130,11 +130,11 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
-                    'min' => 0,
+                    'min' => -200,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -178,8 +178,8 @@ class Style_4 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
-                    'max' => 2000,
+                    'min' => 0,
+                    'max' => 1200,
                     'step' => 1,
                 ],
                 'em' => [
@@ -251,7 +251,7 @@ class Style_4 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 0,
+                    'min' => -200,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -338,7 +338,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -379,7 +379,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -414,7 +414,7 @@ class Style_4 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -458,7 +458,7 @@ class Style_4 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 1200,
                     'step' => 1,
                 ],
                 'em' => [
@@ -494,7 +494,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -503,7 +503,7 @@ class Style_4 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -588,7 +588,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -597,7 +597,7 @@ class Style_4 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -678,7 +678,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -687,7 +687,7 @@ class Style_4 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -707,57 +707,5 @@ class Style_4 extends AdminStyle {
 
         $this->end_section_tabs();
     }
-
-//    public function modal_opener() {
-//        $this->add_substitute_control('', [], [
-//            'type' => Controls::MODALOPENER,
-//            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
-//            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
-//            'showing' => TRUE,
-//        ]);
-//    }
-//
-//    public function modal_form_data() {
-//        echo '<div class="modal-header">                    
-//                    <h4 class="modal-title">Image Boxes Form</h4>
-//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-//                </div>
-//                <div class="modal-body">';
-//        $this->add_group_control(
-//                'sa_image_boxes_media', $this->style, [
-//            'label' => __('URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::MEDIA,
-//            'default' => [
-//                'type' => 'media-library',
-//                'link' => '#asdas',
-//            ]
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_heading', $this->style, [
-//            'label' => __('Title', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Lorem Ipsum',
-//            'placeholder' => 'Lorem Ipsum',
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_s_description', $this->style, [
-//            'label' => __('Short Description', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXTAREA,
-//            'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-//            'placeholder' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_icon', $this->style, [
-//            'label' => __('Icon', SHORTCODE_ADDOONS),
-//            'type' => Controls::ICON,
-//            'default' => 'fas fa-camera',
-//                ]
-//        );
-//        
-//        
-//        echo '</div>';
-//    }
+ 
 }

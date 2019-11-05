@@ -12,14 +12,15 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_6 extends Templates {
+class Style_6 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-//    echo '<pre>';
-//    print_r($style);
-//    echo '</pre>';
+    public function default_render($style, $child, $admin)
+    {
+ 
         $heading = $content = '';
         if ($style['sa_head_text'] != '') {
             $heading = '<div class="oxi-addons-img-body">
@@ -38,39 +39,40 @@ class Style_6 extends Templates {
                         </div>';
         }
 
-        echo '  <div class="oxi-addons-body-container" '.$this->animation_render('sa_head_animation', $style).'>
+        echo '  <div class="oxi-addons-body-container" ' . $this->animation_render('sa_head_animation', $style) . '>
                     ' . $content . '
                     ' . $heading . '
                 </div>      ';
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
-            $css = '';
+        $css = '';
         $stylefiles = explode('||#||', $style['css']);
 
         $styledata = explode('|', $stylefiles[0]);
         $heading = $content = '';
-           if ($stylefiles[3] != '') {
-               $heading = '<div class="oxi-addons-img-body-' . $oxiid . '">
+        if ($stylefiles[3] != '') {
+            $heading = '<div class="oxi-addons-img-body-' . $oxiid . '">
                                <div class="oxi-addons-Heading-body-' . $oxiid . '">
                                    <' . $styledata[39] . ' class="oxi-addons-Heading-text"> 
                                            ' . OxiAddonsTextConvert($stylefiles[3]) . '
                                    </' . $styledata[39] . '>
                                </div>
                            </div>';
-           }
-           if ($stylefiles[5] != '') {
-               $content = '<div class="oxi-addons-Content-body-' . $oxiid . '">
+        }
+        if ($stylefiles[5] != '') {
+            $content = '<div class="oxi-addons-Content-body-' . $oxiid . '">
                                <p class="oxi-addons-Content-text"> 
                                    ' . OxiAddonsTextConvert($stylefiles[5]) . '
                                </p>
                            </div>';
-           }
+        }
 
-           echo '  <div class="oxi-addons-container">
+        echo '  <div class="oxi-addons-container">
                        <div class="oxi-addons-row">
                            <div class="oxi-addons-body-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 95) . '>
                                ' . $content . '
@@ -82,7 +84,7 @@ class Style_6 extends Templates {
 
 
 
-           $css .= '
+        $css .= '
                    .oxi-addons-body-' . $oxiid . '{
                        padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 99) . ';
                        width: 100%;
@@ -166,5 +168,4 @@ class Style_6 extends Templates {
                    ';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

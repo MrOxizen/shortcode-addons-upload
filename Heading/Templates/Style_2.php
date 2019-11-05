@@ -12,19 +12,22 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates {
+class Style_2 extends Templates
+{
 
-     
-    public function default_render($style, $child, $admin) {
-//        echo '<pre>';
-//        print_r($style);
-//        echo '</pre>';
+
+    public function default_render($style, $child, $admin)
+    {
+        //        echo '<pre>';
+        //        print_r($style);
+        //        echo '</pre>';
         if ($style['sa_head_text'] != '') {
             echo ' <div class="oxi-addons-heading-container-style-2" > 
-                    <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading"  '.$this->animation_render('sa_head_animation', $style).' '
-                    . 'style= "background: url(' . $this->media_render('sa_head_image',$style) . ');
+                    <' . $style['sa_head_heading_tag'] . ' class="oxi-addons-heading"  ' . $this->animation_render('sa_head_animation', $style) . ' '
+                . 'style= "background: url(' . $this->media_render('sa_head_image', $style) . ');
                     -moz-background-size: 100% 100%;
                     -o-background-size: 100% 100%;
                     background-size: 100% 100%;
@@ -34,12 +37,13 @@ class Style_2 extends Templates {
                     -webkit-background-clip: text;
                     -moz-text-fill-color: transparent;
                     -moz-background-clip: text;  '
-                    . '">' . $this->text_render($style['sa_head_text']) . '</' . $style['sa_head_heading_tag'] . '>
+                . '">' . $this->text_render($style['sa_head_text']) . '</' . $style['sa_head_heading_tag'] . '>
                </div> ';
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
@@ -101,7 +105,6 @@ class Style_2 extends Templates {
                     }
                 } 
                 ';
-            wp_add_inline_style('shortcode-addons-style', $css);
+        wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }
