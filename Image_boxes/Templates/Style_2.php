@@ -17,9 +17,9 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_2 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        
-         $styledata = $this->style;
-        foreach ($styledata['sa_image_boxes_data_style_2'] as $key => $value) {
+        $datas = (array_key_exists('sa_image_boxes_data_style_2', $style) && is_array($style['sa_image_boxes_data_style_2']) ? $style['sa_image_boxes_data_style_2'] : []);
+      
+        foreach ($datas as $key => $value) {
             $heading = $content = $links = '';
             if (array_key_exists('sa_image_boxes_heading', $value) && $value['sa_image_boxes_heading'] != '') {
                 $heading = '<div class="oxi-addons-image-content-heading">
@@ -52,7 +52,7 @@ class Style_2 extends Templates {
 
             echo '<div class="oxi-addons-image-box-main-area ' . $this->column_render('sa-image-boxes-col', $style) . ' ">
                     <div class="oxi-addons-image-box-area ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list' : '') . '">
-                        <div class="oxi-addons-image-image "  style="background-image: url(\'' . $this->media_render('sa_image_boxes_media', $value) . '\');" ' . $this->animation_render('sa-image-boxes-animation', $style) . '>
+                        <div class="oxi-addons-image-image oxi-addons-image "  style="background-image: url(\'' . $this->media_render('sa_image_boxes_media', $value) . '\');" ' . $this->animation_render('sa-image-boxes-animation', $style) . '>
                             <div class="oxi-addons-image-content">
                                 ' . $heading . '
                                 ' . $content . '

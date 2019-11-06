@@ -65,7 +65,7 @@ class Style_4 extends AdminStyle {
                     'controller' => 'add_group_control',
                     'default' => [
                         'type' => 'media-library',
-                        'link' => '#asdas',
+                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/58686647_2318292518458074_4447429705770991616_n-e1556788997988-2.jpg',
                     ]
                 ],
                 'sa_image_boxes_heading' => [
@@ -96,7 +96,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 200,
+                'size' => 350,
             ],
             'range' => [
                 'px' => [
@@ -174,7 +174,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 200,
+                'size' => 180,
             ],
             'range' => [
                 'px' => [
@@ -482,7 +482,7 @@ class Style_4 extends AdminStyle {
                 'sa-image-boxes-icon-four-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-content-boxes-four-area-data .oxi-addons-content-boxes-four-area-icon i' => 'color: {{VALUE}};',
             ]
@@ -534,7 +534,7 @@ class Style_4 extends AdminStyle {
                 'sa-image-boxes-four-heading-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-heading' => 'color: {{VALUE}};',
             ]
@@ -562,7 +562,7 @@ class Style_4 extends AdminStyle {
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
+            'default' => 'left',
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
@@ -624,7 +624,7 @@ class Style_4 extends AdminStyle {
                 'sa-image-boxes-four-short-description-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-content-boxes-four-area .oxi-addons-content-boxes-content' => 'color: {{VALUE}};',
             ]
@@ -652,7 +652,7 @@ class Style_4 extends AdminStyle {
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
+            'default' => 'left',
             'options' => [
                 'left' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),

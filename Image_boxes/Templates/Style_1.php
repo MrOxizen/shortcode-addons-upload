@@ -20,9 +20,9 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-
-        $styledata = $this->style;
-        foreach ($styledata['sa_image_boxes_data_style_1'] as $key => $value) {
+        $datas = (array_key_exists('sa_image_boxes_data_style_1', $style) && is_array($style['sa_image_boxes_data_style_1']) ? $style['sa_image_boxes_data_style_1'] : []);
+      
+        foreach ($datas as $key => $value) {
             $link = $endlink = $heading = $image = $imageposition = $headingposition = '';
             if (array_key_exists('sa_ib_url-url', $value) && $value['sa_ib_url-url'] != '') {
                 $link .= '<a class="oxi-addons-link" ' . $this->url_render('sa_ib_url', $value) . '>';

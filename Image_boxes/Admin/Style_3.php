@@ -87,7 +87,7 @@ class Style_3 extends AdminStyle
                         'controller' => 'add_group_control',
                         'default' => [
                             'type' => 'media-library',
-                            'link' => '#asdas',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/pexels-photo-1250426.jpeg',
                         ]
                     ],
                     'sa_image_boxes_button' => [
@@ -115,7 +115,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 200,
+                    'size' => 350,
                 ],
                 'range' => [
                     'px' => [
@@ -146,17 +146,17 @@ class Style_3 extends AdminStyle
                 'label' => __('Height', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
-                    'unit' => 'px',
-                    'size' => 200,
+                    'unit' => '%',
+                    'size' => 50,
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 1,
+                        'min' => 0,
                         'max' => 1200,
                         'step' => 1,
                     ],
-                    'em' => [
-                        'min' => 1,
+                    '%' => [
+                        'min' => 0,
                         'max' => 200,
                         'step' => .1,
                     ],
@@ -591,7 +591,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-button-data:hover' => 'color: {{VALUE}};',
                 ]
@@ -737,7 +737,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-heading' => 'color: {{VALUE}};',
                 ]
@@ -838,7 +838,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-image-boxes-area-container .oxi-addons-image-content-body' => 'color: {{VALUE}};',
                 ]

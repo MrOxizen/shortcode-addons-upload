@@ -170,7 +170,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-icon-boxes-area .oxi-addons-icon-box' => '',
+                    '{{WRAPPER}} .oxi-addons-icon-boxes-area .oxi-addons-icon-box:hover' => '',
                 ]
             ]
         );

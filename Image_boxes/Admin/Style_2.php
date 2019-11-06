@@ -115,7 +115,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 450,
+                    'size' => 350,
                 ],
                 'range' => [
                     'px' => [
@@ -585,7 +585,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-image-box-area .oxi-addons-image-content-button-data:hover' => 'color: {{VALUE}};',
                 ]

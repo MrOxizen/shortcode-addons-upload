@@ -478,7 +478,7 @@ class Style_1 extends Templates {
     </div>';
         if ($stylefiles[23] == '') {
             $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-inner"));}, 500);';
-            echo OxiAddonsInlineCSSData($js, 'js', 'oxi-addons-animation');
+              wp_add_inline_script('shortcode-addons-jquery', $js);
         } else {
             echo 'pore dimo pari na';
         }

@@ -18,8 +18,9 @@ class Style_4 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-        $styledata = $this->style;
-        foreach ($styledata['sa_image_boxes_data_style_4'] as $key => $value) {
+        $datas = (array_key_exists('sa_image_boxes_data_style_4', $style) && is_array($style['sa_image_boxes_data_style_4']) ? $style['sa_image_boxes_data_style_4'] : []);
+      
+        foreach ($datas  as $key => $value) {
             $heading = $content = $icon = '';
             if (array_key_exists('sa_image_boxes_icon', $value) && $value['sa_image_boxes_icon'] != '') {
                 $icon = '<div class="oxi-addons-content-boxes-four-area-icon">
