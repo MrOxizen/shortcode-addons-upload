@@ -30,15 +30,15 @@ class Style_2 extends Templates {
 
         foreach ($all_data as $key => $data) {
 
-            
+
 //            print_r('<pre>');
 //            print_r($style);
 //            print_r('</pre>');
 
-            
+
             $icon = $heading = $details = '';
             if ($data['sa_icon_yes_no'] == 'yes') {
-                $icon = '<div class="oxi-addonsAC-2-icon" '.$order.'>' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
+                $icon = '<div class="oxi-addonsAC-2-icon" ' . $order . '>' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
                 $heading = ' <div class="oxi-addonsAC-2-heading-data" > ' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
@@ -48,9 +48,9 @@ class Style_2 extends Templates {
                                ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                             </div>';
             }
-            
-            
-            
+
+
+
             echo '<div class="sa_ac_style_2   sa_ac_style_2_' . $key . '"   ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                     <div class="oxi-addonsAC">
                             ' . $icon . '
@@ -97,7 +97,7 @@ class Style_2 extends Templates {
                                 }
                             });';
             endif;
-            
+
         endif;
 
 
@@ -107,7 +107,6 @@ class Style_2 extends Templates {
     public function old_render() {
         $styledata = $this->dbdata;
         $child = $this->child;
-        $oxiid = $style['id'];
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
@@ -115,7 +114,7 @@ class Style_2 extends Templates {
 
         echo '<div class="oxi-addons-container">
         <div class="oxi-addons-row">';
-        foreach ($listdata as $value) {
+        foreach ($child as $value) {
             $data = explode('||#||', $value['files']);
             $icon = $heading = $details = '';
             if ($stylefiles[2] != '') {
@@ -129,7 +128,7 @@ class Style_2 extends Templates {
                                ' . OxiAddonsTextConvert($data[4]) . '
                             </div>';
             }
-            echo '<div class="oxi-addonsAC-wrapper-' . $oxiid . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 69) . '>
+            echo '<div class="oxi-addonsAC-wrapper-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 69) . '>
                     <div class="oxi-addonsAC-' . $oxiid . '" ref="#oxi-addonsAC-' . $oxiid . '-d-' . $value['id'] . '">
                             ' . $icon . '
                         <div class="oxi-addonsAC-2-content">
@@ -302,11 +301,8 @@ class Style_2 extends Templates {
         }
         $jquery .= '});';
 
-        echo OxiAddonsInlineCSSData($css);
-        echo OxiAddonsInlineCSSData($jquery, 'js');
-
-
         wp_add_inline_style('shortcode-addons-style', $css);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }
