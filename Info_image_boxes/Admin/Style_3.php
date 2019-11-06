@@ -43,58 +43,56 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-$this->add_repeater_control(
-                'sa_Info_image_boxes_data',
-                $this->style,
-                [
-                    'label' => __('', SHORTCODE_ADDOONS),
-                    'type' => Controls::REPEATER,
-                    'fields' => [
-                        'sa_info_image_h_text' => [
-                            'label' => __('Heading', SHORTCODE_ADDOONS),
-                            'type' => Controls::TEXT,
-                            'placeholder' => 'Your Heading Here',
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3.oxi-addons-main-wrapper-style-3-{{KEY}} .oxi-addons-main-content .oxi-addons-heading' => '',
-                            ],
-                        ],
-                        'sa_info_image_content_text' => [
-                            'label' => __('Content', SHORTCODE_ADDOONS),
-                            'type' => Controls::TEXTAREA,
-                            'placeholder' => 'Your Content Here',
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3-{{KEY}}   .oxi-addons-main-content .oxi-addons-details' => '',
-                            ],
-                        ],
-                        'sa_info_image_img_src' => [
-                            'type' => Controls::MEDIA,
-                            'default' => [
-                                'type' => 'media-library',
-                                'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/star-soccer-ball-badge.png',
-                            ],
-                            'loader' => TRUE,
-                            'controller' => 'add_group_control',
-                        ],
-                        'sa_info_image_url_open' => [
-                            'label' => __('Link Active', SHORTCODE_ADDOONS),
-                            'type' => Controls::SWITCHER,
-                            'default' => '',
-                            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                            'label_off' => __('No', SHORTCODE_ADDOONS),
-                            'return_value' => 'link_show',
-                        ],
-                        'sa_info_image_url' => [
-                            'type' => Controls::URL,
-                            'loader' => TRUE,
-                            'conditional' => Controls::INSIDE,
-                            'condition' => [
-                                'sa_info_image_url_open' => 'link_show',
-                            ],
-                            'controller' => 'add_group_control',
-                        ],
+        $this->add_repeater_control(
+                'sa_Info_image_boxes_data', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::REPEATER,
+            'fields' => [
+                'sa_info_image_h_text' => [
+                    'label' => __('Heading', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXT,
+                    'placeholder' => 'Your Heading Here',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3.oxi-addons-main-wrapper-style-3-{{KEY}} .oxi-addons-main-content .oxi-addons-heading' => '',
                     ],
-                    'title_field' => 'sa_info_image_h_text',
-                    'button' => 'Add New Boxes',
+                ],
+                'sa_info_image_content_text' => [
+                    'label' => __('Content', SHORTCODE_ADDOONS),
+                    'type' => Controls::TEXTAREA,
+                    'placeholder' => 'Your Content Here',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3-{{KEY}}   .oxi-addons-main-content .oxi-addons-details' => '',
+                    ],
+                ],
+                'sa_info_image_img_src' => [
+                    'type' => Controls::MEDIA,
+                    'default' => [
+                        'type' => 'media-library',
+                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/star-soccer-ball-badge.png',
+                    ],
+                    'loader' => TRUE,
+                    'controller' => 'add_group_control',
+                ],
+                'sa_info_image_url_open' => [
+                    'label' => __('Link Active', SHORTCODE_ADDOONS),
+                    'type' => Controls::SWITCHER,
+                    'default' => '',
+                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                    'label_off' => __('No', SHORTCODE_ADDOONS),
+                    'return_value' => 'link_show',
+                ],
+                'sa_info_image_url' => [
+                    'type' => Controls::URL,
+                    'loader' => TRUE,
+                    'conditional' => Controls::INSIDE,
+                    'condition' => [
+                        'sa_info_image_url_open' => 'link_show',
+                    ],
+                    'controller' => 'add_group_control',
+                ],
+            ],
+            'title_field' => 'sa_info_image_h_text',
+            'button' => 'Add New Boxes',
                 ]
         );
         $this->add_group_control(
@@ -117,23 +115,19 @@ $this->add_repeater_control(
         $this->start_controls_tab();
 
         $this->add_group_control(
-                'sa_info_image_bg_color',
-                $this->style,
-                [
-                    'type' => Controls::BACKGROUND,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3  .oxi-addons-main-wrapper-style-3' => ''
-                    ],
+                'sa_info_image_bg_color', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3  .oxi-addons-main-wrapper-style-3' => ''
+            ],
                 ]
         );
         $this->add_group_control(
-                'sa_info_image_normal_boxshadow',
-                $this->style,
-                [
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3' => ''
-                    ],
+                'sa_info_image_normal_boxshadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3' => ''
+            ],
                 ]
         );
         $this->add_responsive_control(
@@ -170,23 +164,19 @@ $this->add_repeater_control(
         $this->start_controls_tab();
 
         $this->add_group_control(
-                'sa_info_image_bg_hover_color',
-                $this->style,
-                [
-                    'type' => Controls::BACKGROUND,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3  .oxi-addons-main-wrapper-style-3:hover' => ''
-                    ],
+                'sa_info_image_bg_hover_color', $this->style, [
+            'type' => Controls::BACKGROUND,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3  .oxi-addons-main-wrapper-style-3:hover' => ''
+            ],
                 ]
         );
         $this->add_group_control(
-                'sa_info_image_hover_boxshadow',
-                $this->style,
-                [
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3:hover' => ''
-                    ],
+                'sa_info_image_hover_boxshadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3:hover' => ''
+            ],
                 ]
         );
         $this->add_responsive_control(
@@ -420,13 +410,11 @@ $this->add_repeater_control(
                 ]
         );
         $this->add_group_control(
-                'sa_info_image_img_boxshadow',
-                $this->style,
-                [
-                    'type' => Controls::BOXSHADOW,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-image-main .oxi-addons-img' => ''
-                    ],
+                'sa_info_image_img_boxshadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-image-main .oxi-addons-img' => ''
+            ],
                 ]
         );
         $this->end_controls_section();
@@ -505,7 +493,7 @@ $this->add_repeater_control(
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}}.oxi-addons-info-image-parent-wrapper-style-3  .oxi-addons-main-content .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-info-image-parent-wrapper-style-3 .oxi-addons-main-content .oxi-addons-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -598,4 +586,5 @@ $this->add_repeater_control(
         $this->end_section_devider();
         $this->end_section_tabs();
     }
+
 }
