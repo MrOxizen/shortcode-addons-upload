@@ -113,7 +113,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -146,7 +146,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -201,7 +201,7 @@ class Style_2 extends AdminStyle
                 
                 'default' => [
                     'unit' => 'px',
-                    'size' => 40,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -233,7 +233,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 80,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -300,7 +300,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -335,7 +335,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2:hover .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2:hover .oxi_addons__icon_style_2 .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -348,7 +348,7 @@ class Style_2 extends AdminStyle
                 'default' => '#28aaa5',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2:hover .oxi-icons' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2:hover .oxi_addons__icon_style_2 .oxi-icons' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -360,7 +360,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 40,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -381,7 +381,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2:hover .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_2:hover .oxi_addons__icon_style_2 .oxi-icons' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -425,7 +425,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -512,7 +512,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -579,7 +579,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [

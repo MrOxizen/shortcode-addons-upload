@@ -119,13 +119,13 @@ class Style_1 extends Templates {
     public function old_render() {
         $styledata = $this->dbdata;
         $child = $this->child;
-        $oxiid = $style['id'];
+        $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
 
         echo '<div class="oxi-addons-container">
             <div class="oxi-addons-row">';
-        foreach ($listdata as $value) {
+        foreach ($child as $value) {
             $data = explode('||#||', $value['files']);
             $sactive = $sdactive = $heading = $details = '';
             if ($stylefiles[2] != '') {
@@ -144,7 +144,7 @@ class Style_1 extends Templates {
                             </div>
                         </div>';
             }
-            echo '<div class="oxi-addons-AC-' . $oxiid . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 69) . '>
+            echo '<div class="oxi-addons-AC-' . $oxiid . ' ' . OxiAddonsAdminDefine('') . '" ' . OxiAddonsAnimation($styledata, 69) . '>
                         <div class="oxi-addons-ac-H-' . $oxiid . '" ref="#oxi-addons-ac-H-' . $oxiid . '-id-' . $value['id'] . '">
                             ' . $sactive . '
                             ' . $sdactive . '
@@ -367,8 +367,8 @@ class Style_1 extends Templates {
 
         $jquery .= '});';
 
-
-        wp_add_inline_style('shortcode-addons-style', $css);
+ wp_add_inline_style('shortcode-addons-style', $css);
+         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

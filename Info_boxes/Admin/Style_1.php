@@ -113,7 +113,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -146,7 +146,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -199,7 +199,7 @@ class Style_1 extends AdminStyle
                 
                 'default' => [
                     'unit' => 'px',
-                    'size' => 40,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -256,7 +256,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => ' #fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_1:hover .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_1:hover .oxi_addons__icon_style_1 .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -300,7 +300,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -387,7 +387,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -454,7 +454,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 5,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [

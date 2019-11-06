@@ -119,7 +119,7 @@ class Style_5 extends Templates {
 
         echo '<div class="oxi-addons-container">';
         echo '<div class="oxi-addons-row">';
-        foreach ($listdata as $value) {
+        foreach ($child as $value) {
             $data = explode('||#||', $value['files']);
             $title = $details = '';
             if ($data[2] != '') {
@@ -134,7 +134,7 @@ class Style_5 extends Templates {
                                         ' . OxiAddonsTextConvert($data[4]) . '
                                     </div>';
             }
-            echo '<div class="' . OxiAddonsAdminDefine($user) . '"  ' . OxiAddonsAnimation($styledata, 61) . '>
+            echo '<div class="' . OxiAddonsAdminDefine('') . '"  ' . OxiAddonsAnimation($styledata, 61) . '>
                             <div class="oxi-addonsAC-FI-' . $oxiid . '">
                                 <div class="oxi-addonsAC-FI-Content-details' . $oxiid . '" ref="#oxi-addonsAC-FI-Content-details' . $oxiid . '-d-' . $value['id'] . '">
                                    ' . $title . ' 
@@ -298,11 +298,8 @@ class Style_5 extends Templates {
 
         $jquery .= '});';
 
-        echo OxiAddonsInlineCSSData($css);
-        echo OxiAddonsInlineCSSData($jquery, 'js');
-
-
         wp_add_inline_style('shortcode-addons-style', $css);
+         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

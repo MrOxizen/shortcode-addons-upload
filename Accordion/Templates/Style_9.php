@@ -34,6 +34,8 @@ class Style_9 extends Templates {
 
         $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
 
+        $count = 1;
+
         foreach ($all_data as $key => $data) {
 
 
@@ -42,10 +44,10 @@ class Style_9 extends Templates {
 //            print_r('</pre>');
 
 
-            $heading = $active_icon = $inactive_icon = $details = '';
-            
-            $count = 1;
-            if ($style['sa_el_ac_number_showing'] == 'yes'){
+            $heading = $active_icon = $inactive_icon = $details = $number = '';
+
+
+            if ($style['sa_el_ac_arrow_icon'] == 'yes') {
                 $number = '<div class="oxi-addons-AC-number" ' . $icon_position . '>
                             ' . $count . '
                         </div>';
@@ -53,19 +55,19 @@ class Style_9 extends Templates {
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
                 $heading = '<div class="oxi-addons-AC-N-heading-data">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
-            if ($style['sa_el_ac_arrow_icon'] == 'yes') {
-                $active_icon = '<div class="oxi-addons-AC-N-active" ' . $arrow_position . '>' . $this->font_awesome_render($data['sa_el_ac_opening_active_icon_adding']) . '</div>';                
-                $inactive_icon = '<div class="oxi-addons-AC-N-deactive"  ' . $arrow_position . '>' . $this->font_awesome_render($data['sa_el_ac_opening_deactive_icon_adding']) . '</div>';           
+            if ($data['sa_icon_yes_no'] == 'yes') {
+                $active_icon = '<div class="oxi-addons-AC-N-active" ' . $arrow_position . '>' . $this->font_awesome_render($data['sa_el_ac_opening_active_icon_adding']) . '</div>';
+                $inactive_icon = '<div class="oxi-addons-AC-N-deactive"  ' . $arrow_position . '>' . $this->font_awesome_render($data['sa_el_ac_opening_deactive_icon_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-AC-N-C" id="oxi-addons-AC-N-H-id'.$key.'">
+                $details = '<div class="oxi-addons-AC-N-C" id="oxi-addons-AC-N-H-id' . $key . '">
                                 <div class="oxi-addons-AC-N-C-b">
                                     ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                                 </div>
                             </div>';
-            }            
+            }
             echo '<div class="sa_element_ac_style_9 " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                        <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id'.$key.'">
+                        <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id' . $key . '">
                             ' . $number . '                            
                             ' . $heading . '
                             ' . $active_icon . '
@@ -117,6 +119,7 @@ class Style_9 extends Templates {
             endif;
 
         endif;
+
 //        $opening = '';
 //        foreach ($opening as $key => $value) {
 //            echo $key;
@@ -134,7 +137,7 @@ class Style_9 extends Templates {
         $count = 1;
         echo '<div class="oxi-addons-container">';
         echo '<div class="oxi-addons-row">';
-        foreach ($listdata as $value) {
+        foreach ($child as $value) {
             $data = explode('||#||', $value['files']);
             $heading = $aticon = $daticon = $details = '';
             if ($data[2] != '') {
@@ -153,7 +156,7 @@ class Style_9 extends Templates {
                             </div>
                         </div>';
             }
-            echo '<div class="oxi-addons-AC-N-' . $oxiid . ' ' . OxiAddonsAdminDefine($user) . '" ' . OxiAddonsAnimation($styledata, 69) . '>
+            echo '<div class="oxi-addons-AC-N-' . $oxiid . ' ' . OxiAddonsAdminDefine('') . '" ' . OxiAddonsAnimation($styledata, 69) . '>
                         <div class="oxi-addons-AC-N-H-' . $oxiid . '" ref="#oxi-addons-AC-N-H-' . $oxiid . '-id-' . $value['id'] . '">
                             <div class="oxi-addons-AC-number">' . $count . '</div>
                             ' . $heading . '
@@ -404,11 +407,8 @@ class Style_9 extends Templates {
         $jquery .= '});';
 
 
-        echo OxiAddonsInlineCSSData($css);
-        echo OxiAddonsInlineCSSData($jquery, 'js');
-
-
         wp_add_inline_style('shortcode-addons-style', $css);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

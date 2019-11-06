@@ -152,7 +152,7 @@ class Style_7 extends Templates {
         echo '<div class="oxi-addons-container">
             <div class="oxi-addons-row">
             <div class="oxi-addons-AC-SV-row">';
-        foreach ($listdata as $value) {
+        foreach ($child as $value) {
             $data = explode('||#||', $value['files']);
             $aticon = $otitle = $details = '';
             if ($data[6] != '') {
@@ -348,8 +348,8 @@ class Style_7 extends Templates {
         }
 
         $jquery .= '});';
-        echo OxiAddonsInlineCSSData($css);
-        echo OxiAddonsInlineCSSData($jquery, 'js');
+       wp_add_inline_style('shortcode-addons-style', $css);
+         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

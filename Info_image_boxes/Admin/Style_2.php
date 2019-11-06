@@ -43,6 +43,27 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
+        $this->add_control(
+                'sa_info_image_img_layout', $this->style, [
+            'label' => __('LayOut', SHORTCODE_ADDOONS),
+            'type' => Controls::CHOOSE,
+            'operator' => Controls::OPERATOR_ICON,
+            'default' => 'row',
+            'options' => [
+                'column' => [
+                    'title' => __('Column', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-sort-amount-up',
+                ],
+                'row' => [
+                    'title' => __('Row', SHORTCODE_ADDOONS),
+                    'icon' => 'fas fa-exchange-alt',
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-main-wrapper-style-2' => 'flex-direction:{{VALUE}};',
+            ],
+                ]
+        );
         $this->add_repeater_control(
                 'sa_Info_image_boxes_data',
                 $this->style,

@@ -32,15 +32,16 @@
     transition: none;
 }
 
-.sa_element_ac_style_9 .oxi-addons-AC-number {
-    background: rgba(255, 36, 36, 1);
+.sa_element_ac_style_9 .oxi-addons-AC-number {   
     font-size: 18px;
     color: #ffffff;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px 30px 5px 30px;
     margin: 0px 0px 0px 10px;
-    box-shadow: 1px 1px 15px 1px rgba(36, 34, 34, 1);
+    /*box-shadow: 1px 1px 15px 1px rgba(36, 34, 34, 1);*/
     transition: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-heading-data {
@@ -70,11 +71,6 @@
     justify-content: center;
     font-size: 18px;
     width: 100%;
-    max-width: 35px;
-    height: 35px;
-    color: #83a626;
-    border: 1px solid #83a626;
-    border-radius: 5px 5px 5px 5px;
     margin: 10px 10px 10px 10px;
     transition: none;
 }
@@ -86,18 +82,11 @@
     justify-content: center;
     font-size: 18px;
     width: 100%;
-    max-width: 35px;
-    height: 35px;
-    color: #83a626;
-    border: 1px solid #83a626;
-    border-radius: 5px 5px 5px 5px;
     margin: 10px 10px 10px 10px;
     transition: none;
 }
 
 .sa_element_ac_style_9 .oxi-addons-AC-N-H:hover .oxi-addons-AC-N-deactive {
-    color: #83a626;
-    border-color: #83a626;
     transition: none;
 }
 
@@ -122,9 +111,9 @@
     float: left;
     border: 2px solid #000000;
     background: #175208;
-    box-shadow: 0px 0px 0px 0px rgba(102, 102, 102, 1);
-    border-radius: 5px 5px 5px 5px;
-    padding: 15px 15px 15px 15px;
+    /*box-shadow: 0px 0px 0px 0px rgba(102, 102, 102, 1);*/
+    /*border-radius: 5px 5px 5px 5px;*/
+    /*padding: 15px 15px 15px 15px;*/
     transition: none;
 }
 
@@ -155,8 +144,6 @@
     .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active {
         font-size: 16px;
         width: 100%;
-        max-width: 30px;
-        height: 30px;
         border-radius: 4px 4px 4px 4px;
         margin: 8px 8px 8px 8px;
     }
