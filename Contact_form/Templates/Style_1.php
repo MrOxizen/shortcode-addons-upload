@@ -84,17 +84,17 @@ class Style_1 extends Templates {
                     <div class="oxi-addons-form-warp-style1" ' . $this->animation_render('sa_cf_animation', $style) . '>
                         <form  method="post" class="oxi-addons-form"> 
                                 ' . $contacttitle . ' ' . $contactinfo . '' . $successfuldata . '
-                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate ' . $coldata . '" oxi-validate=" ' . $stylefiles[5] . '">
+                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate ' . $coldata . '" oxi-validate=" ' . $this->text_render($style['sa_cf_emali_title']) . '">
                                         <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-name" type="text" name="oxi-addons-form-input-data-name">
-                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $stylefiles[3] . '"></span>
+                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_name_title']) . '"></span>
                                 </div>
-                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate  ' . $coldata . '" oxi-validate = " ' . $stylefiles[9] . '">
+                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate  ' . $coldata . '" oxi-validate = " ' . $this->text_render($style['sa_cf_email_title_text']) . '">
                                         <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-email" type="text" name="oxi-addons-form-input-data-email">
-                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $stylefiles[7] . '"></span>
+                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_emali_title']) . '"></span>
                                 </div>
-                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate oxi-addons-lg-col-1" oxi-validate = " ' . $stylefiles[13] . '">
+                                <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate oxi-addons-lg-col-1" oxi-validate = " ' . $this->text_render($style['sa_cf_msg_title_text']) . '">
                                         <textarea class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-massage" name="oxi-addons-form-input-data-massage"></textarea>
-                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $stylefiles[11] . '"></span>
+                                        <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_msg_title']) . '"></span>
                                 </div>
                                 <div class="oxi-addons-form-btn oxi-addons-lg-col-1">
                                         <div class="oxi-addons-form-btn-warp">
@@ -118,6 +118,7 @@ class Style_1 extends Templates {
         $styledata = explode('|', $stylefiles[0]);
         $jquery = '';
         $css = '';
+       
         $successfuldata = '';
         if ($styledata[49] == 'style-1') {
             $coldata = 'oxi-addons-lg-col-1 oxi-addons-md-col-1 oxi-addons-xs-col-1';

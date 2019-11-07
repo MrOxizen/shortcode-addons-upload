@@ -332,7 +332,7 @@ class Style_7 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_info_boxes_details_typo',
+            'sa_info_boxes_btn_typo',
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
@@ -656,7 +656,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons_image::after' => 'padding-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__info_boxes_main_style_7 .oxi_addons_image::after' => 'padding-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );

@@ -26,7 +26,7 @@ class Style_9 extends Templates
 
             $icon = $heading = $details = $sub_heading = '';
             if (array_key_exists('sa_info_info_box_sub_title', $value) && $value['sa_info_info_box_sub_title'] != '') {
-                $sub_heading = '<p class="oxi_addons__sub_heading_style_9">' . $this->text_render($value['sa_info_info_box_title']) . '</p>';
+                $sub_heading = '<div class="oxi_addons__sub_heading_style_9">' . $this->text_render($value['sa_info_info_box_sub_title']) . '</div>';
             }
             if (array_key_exists('sa_info_info_box_title', $value) && $value['sa_info_info_box_title'] != '') {
                 $heading = '<' . $style['sa_info_tag'] . ' class="oxi_addons__heading_style_9">' . $this->text_render($value['sa_info_info_box_title']) . '</' . $style['sa_info_tag'] . '>';
