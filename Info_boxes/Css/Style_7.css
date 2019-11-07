@@ -2,6 +2,7 @@
     padding: 5px; 
 } 
 .oxi_addons__info_boxes_main_style_7 {
+    overflow: hidden;  
     position: relative;
     width: 100%;
     display: flex;

@@ -329,7 +329,7 @@ class Style_5 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_info_boxes_details_typo',
+            'sa_info_boxes_button_typo',
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
