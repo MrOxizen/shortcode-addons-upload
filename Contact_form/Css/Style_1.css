@@ -212,6 +212,10 @@
     background:rgba(0, 109, 163, 1);
     border-color:#ffffff;
 }
+.oxi-addons-form-success-wrapper{
+    width:100%;
+    float: left;
+}
 .oxi-addons-form-warp-style1 .oxi-addons-form-success{
     width:100%;
     float: left;
