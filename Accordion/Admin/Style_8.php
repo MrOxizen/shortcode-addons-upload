@@ -420,7 +420,7 @@ class Style_8 extends AdminStyle {
                 'sa_el_ac_descriptions_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b' => ''
             ],
                 ]
         );

@@ -53,7 +53,7 @@ class Style_5 extends Templates {
 
             echo '<div class=""  ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                     <div class="sa_el_ac_style_5    sa_el_ac_style_5_' . $key . '">
-                        <div class="oxi-addonsAC-FI-Content-details oxi-addonsAC-FI-Content-details-'.$key.'"  ref="#oxi-addonsAC-FI-Content-details-' . $key . '">
+                        <div class="oxi-addonsAC-FI-Content-details oxi-addonsAC-FI-Content-details-' . $key . '"  ref="#oxi-addonsAC-FI-Content-details-' . $key . '">
                             ' . $title . '
                         </div>
                         <div class="oxi-addonsAC-Fi-content" id="oxi-addonsAC-FI-Content-details-' . $key . '">
@@ -107,8 +107,6 @@ class Style_5 extends Templates {
 
         return $jquery;
     }
-
-
 
     public function old_render() {
         $styledata = $this->dbdata;
@@ -299,7 +297,7 @@ class Style_5 extends Templates {
         $jquery .= '});';
 
         wp_add_inline_style('shortcode-addons-style', $css);
-         wp_add_inline_script('shortcode-addons-jquery', $jquery);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }
