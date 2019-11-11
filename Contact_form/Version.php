@@ -1,7 +1,8 @@
 <?php
 /*
   Plugin Name: Shortcode Addons
-  Version: 1.7.2
+  Version: 2.0.0
+ * Edit By Sabibur Rahman
  */
 
-return array('2.0.0', '3rd Party Widgets', true);
+return array('2.0.0', '3rd Party Widgets', true, 'far fa-address-card');
