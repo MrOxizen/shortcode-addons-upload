@@ -378,7 +378,7 @@ class Style_4 extends Templates {
         $jquery .= '});';
 
         wp_add_inline_style('shortcode-addons-style', $css);
-         wp_add_inline_script('shortcode-addons-jquery', $jquery);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

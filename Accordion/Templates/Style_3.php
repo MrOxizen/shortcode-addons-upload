@@ -36,9 +36,9 @@ class Style_3 extends Templates {
 //            print_r('</pre>');
 
 
-            
+
             $icon = $heading = $descriptions = '';
-            
+
             if ($data['sa_icon_yes_no'] == 'yes') {
                 $icon = '<div class="oxi-addonsAC-icon">
                             ' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '
@@ -56,9 +56,9 @@ class Style_3 extends Templates {
                                     </div>
                                 </div>';
             }
-            
+
             echo '<div class="" ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                            <div class="sa_ac_style_3 sa_ac_style_3_'.$key.'" >
+                            <div class="sa_ac_style_3 sa_ac_style_3_' . $key . '" >
                                 <div class="oxi-addonsAC-heading">
                                     ' . $icon . '
                                     ' . $heading . '
@@ -68,7 +68,6 @@ class Style_3 extends Templates {
                                ' . $descriptions . '
                             </div>';
             echo '</div>';
-            
         }
     }
 
@@ -96,8 +95,8 @@ class Style_3 extends Templates {
                                     $This.addClass("oxi-active");
                                 }
                             });';
-            
-                                
+
+
             else:
                 $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-heading").on("click",function () {
                                 $This = jQuery(this);
@@ -340,8 +339,8 @@ class Style_3 extends Templates {
 
         $jquery .= '});';
 
-         wp_add_inline_style('shortcode-addons-style', $css);
-         wp_add_inline_script('shortcode-addons-jquery', $jquery);
+        wp_add_inline_style('shortcode-addons-style', $css);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

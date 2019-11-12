@@ -12,8 +12,6 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
-
 use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_6 extends Templates {
@@ -34,47 +32,46 @@ class Style_6 extends Templates {
 
         foreach ($all_data as $key => $data) {
 
-           
+
 //            print_r('<pre>');
 //            print_r($style);
 //            print_r('</pre>');
-            
+
             $active_icon = $inactive_icon = $icon = $heading = $details = '';
-            
-            
+
+
             if ($style['sa_el_ac_arrow_icon'] == 'yes') {
                 $active_icon = '<div class="oxi-addonsAC-SX-active" ' . $arrow_order . '><i class="fas fa-arrow-down oxi-icons"></i></div>';
                 if ($style['sa_el_ac_icon_position'] == 'right') {
                     $inactive_icon = '<div class="oxi-addonsAC-SX-deactive"  ' . $arrow_order . '><i class="fas fa-arrow-left oxi-icons"></i></div>';
-                }else{
+                } else {
                     $inactive_icon = '<div class="oxi-addonsAC-SX-deactive"  ' . $arrow_order . '><i class="fas fa-arrow-right oxi-icons"></i></div>';
                 }
             }
             if ($data['sa_icon_yes_no'] == 'yes') {
-                    $icon = '<div class="icon_setting"  ' . $icon_order . '>' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
+                $icon = '<div class="icon_setting"  ' . $icon_order . '>' . $this->font_awesome_render($data['sa_el_ac_opening_icon_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_title_adding', $data) && $data['sa_el_ac_title_adding'] != '') {
                 $heading = '<div class="oxi-addonsAC-SX-heading">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addonsAC-SX-C" id="oxi-addonsAC-SX-H-id'.$key.'">
+                $details = '<div class="oxi-addonsAC-SX-C" id="oxi-addonsAC-SX-H-id' . $key . '">
                             <div class="oxi-addonsAC-SX-C-b">
                                 ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                             </div>
                         </div>';
             }
             echo '<div class="sa_whole_div_ac_style_6">';
-                echo '<div class="sa_element_ac_style_6    sa_element_ac_style_6_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                            <div class="oxi-addonsAC-SX-H" ref="#oxi-addonsAC-SX-H-id'.$key.'">
+            echo '<div class="sa_element_ac_style_6    sa_element_ac_style_6_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                            <div class="oxi-addonsAC-SX-H" ref="#oxi-addonsAC-SX-H-id' . $key . '">
                                 ' . $active_icon . '
                                 ' . $inactive_icon . '
                                 ' . $icon . '
                                 ' . $heading . '
                             </div>
                             ' . $details . '';
-                echo '</div>';
             echo '</div>';
-            
+            echo '</div>';
         }
     }
 
@@ -116,7 +113,7 @@ class Style_6 extends Templates {
                     });
                     ';
             endif;
-            
+
         endif;
 //        $opening = '';
 //        foreach ($opening as $key => $value) {
@@ -403,7 +400,7 @@ class Style_6 extends Templates {
 
 
         wp_add_inline_style('shortcode-addons-style', $css);
-         wp_add_inline_script('shortcode-addons-jquery', $jquery);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

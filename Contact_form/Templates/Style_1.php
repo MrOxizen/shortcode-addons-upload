@@ -22,7 +22,17 @@ class Style_1 extends Templates {
      * @since 2.0.0
      */
     public function inline_public_jquery() {
-        $js = ' $(".oxi-addons-contact-form").submit(function (e) {
+        $js = ' jQuery(".oxi-addons-form-input-data-style1").each(function(){
+                    jQuery(this).on("blur", function(){
+                        if(jQuery(this).val().trim() != "") {
+                            jQuery(this).addClass("oxi-is-val");
+                        }
+                        else {
+                            jQuery(this).removeClass("oxi-is-val");
+                        }
+                    })    
+                })
+                $(".oxi-addons-contact-form").submit(function (e) {
                     e.preventDefault();
                     return false;
                 });
@@ -33,6 +43,39 @@ class Style_1 extends Templates {
                     var $this = $(this),
                         $class = $this.data("class"),
                         $function = $this.data("function");
+                        
+                    $Form   = $(this).parents().find("form");
+                    var oxiname = $Form.find(".oxi-addons-form-input-data-name");
+                    console.log(oxiname);
+                    if(oxiname.val().trim() == ""){
+                        var thisAlert = $(oxiname).parent();
+                        $(thisAlert).addClass("oxi-alert-validate");
+                        return false;
+                    }
+                     else {
+                        var thisAlert = $(oxiname).parent();
+                        $(thisAlert).removeClass("oxi-alert-validate");
+                    }
+                    var oxiemail = $Form.find(".oxi-addons-form-input-data-email");
+                    if($(oxiemail).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                        var thisAlert = $(oxiemail).parent();
+                        $(thisAlert).addClass("oxi-alert-validate");
+                        return false;
+                    }
+                    else {
+                        var thisAlert = $(oxiemail).parent();
+                        $(thisAlert).removeClass("oxi-alert-validate");
+                    }
+                    var oximessage = $Form.find(".oxi-addons-form-input-data-massage");
+                    if($(oximessage).val().trim() == ""){
+                        var thisAlert = jQuery(oximessage).parent();
+                        $(thisAlert).addClass("oxi-alert-validate");
+                        return false;
+                    }  
+                     else {
+                        var thisAlert = jQuery(oximessage).parent();
+                        $(thisAlert).removeClass("oxi-alert-validate");
+                    }   
 
                     if ($class === "" || $function === "") {
                         return;
@@ -69,7 +112,6 @@ class Style_1 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-      
         if ($style['sa_cf_form_style'] == 'sa_style1') {
             $coldata = 'oxi-addons-lg-col-1 oxi-addons-md-col-1 oxi-addons-xs-col-1';
         } else {
@@ -95,15 +137,15 @@ class Style_1 extends Templates {
                         <form  method="post" class="oxi-addons-contact-form" id="oxi-addons-contact-form-' . $this->oxiid . '"> 
                             ' . $contacttitle . ' ' . $contactinfo . '
                             <div class="oxi-addons-form-success-wrapper"></div>
-                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate ' . $coldata . '" oxi-validate=" ' . $this->text_render($style['sa_cf_emali_title']) . '">
+                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate ' . $coldata . '" oxi-validate=" ' . $this->text_render($style['sa_cf_name_err_text']) . '">
                                     <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-name" type="text" name="oxi-addons-form-input-data-name">
                                     <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_name_title']) . '"></span>
                             </div>
-                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate  ' . $coldata . '" oxi-validate = " ' . $this->text_render($style['sa_cf_email_title_text']) . '">
+                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate  ' . $coldata . '" oxi-validate = " ' . $this->text_render($style['sa_cf_email_err_text']) . '">
                                     <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-email" type="text" name="oxi-addons-form-input-data-email">
                                     <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_emali_title']) . '"></span>
                             </div>
-                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate oxi-addons-lg-col-1" oxi-validate = " ' . $this->text_render($style['sa_cf_msg_title_text']) . '">
+                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate oxi-addons-lg-col-1" oxi-validate = " ' . $this->text_render($style['sa_cf_msg_err_text']) . '">
                                     <textarea class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-massage" name="oxi-addons-form-input-data-massage"></textarea>
                                     <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_msg_title']) . '"></span>
                             </div>

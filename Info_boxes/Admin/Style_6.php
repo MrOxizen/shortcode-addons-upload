@@ -118,6 +118,16 @@ class Style_6 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_group_control(
+                'sa_info_bg_color', $this->style, [
+            'label' => __('Background Color', SHORTCODE_ADDOONS),
+            'type' => Controls::BACKGROUND,
+            'oparetor' => 'RGB',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons__info_boxes_main_style_6' => ''
+            ],
+                ]
+        );
 
         $this->start_controls_tab();
 
@@ -170,6 +180,17 @@ class Style_6 extends AdminStyle {
         );
         $this->end_controls_tab();
         $this->start_controls_tab();
+        $this->add_group_control(
+                'sa_info_bg_color_hover', $this->style, [
+            'label' => __('Background Color', SHORTCODE_ADDOONS),
+            'type' => Controls::BACKGROUND,
+            'oparetor' => 'RGB',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons__info_boxes_main_style_6:hover' => ''
+            ],
+                ]
+        );
+
         $this->add_group_control(
                 'sa_info_boxes_border_hover', $this->style, [
             'type' => Controls::BORDER,
@@ -636,6 +657,16 @@ class Style_6 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
+                'sa_info_icon_bg_color', $this->style, [
+            'label' => __('Background Color', SHORTCODE_ADDOONS),
+            'type' => Controls::BACKGROUND,
+            'oparetor' => 'RGB',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5' => ''
+            ],
+                ]
+        );
+        $this->add_group_control(
                 'sa_info_boxes_icon_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
@@ -644,7 +675,7 @@ class Style_6 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_info_boxes_info_hover_border_radius', $this->style, [
+                'sa_info_boxes_info_border_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -676,6 +707,8 @@ class Style_6 extends AdminStyle {
         );
         $this->end_controls_tab(); // end tab
         $this->start_controls_tab(); // end tab
+        
+        
         $this->add_control(
                 'sa_info_color_icon_hover', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -683,6 +716,16 @@ class Style_6 extends AdminStyle {
             'default' => ' #730068',
             'selector' => [
                 '{{WRAPPER}} .oxi_addons__info_boxes_main_style_6:hover .oxi-icons' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_info_icon_Hover_bg_color', $this->style, [
+            'label' => __('Background Color', SHORTCODE_ADDOONS),
+            'type' => Controls::BACKGROUND,
+            'oparetor' => 'RGB',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons__info_boxes_main_style_5' => ''
             ],
                 ]
         );
@@ -821,6 +864,15 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab(); // start tab
         $this->add_control(
                 'sa_info_boxes_heading_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -831,7 +883,21 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-
+        
+         $this->end_controls_tab(); // end tab
+        $this->start_controls_tab(); // end tab
+         $this->add_control(
+                'sa_info_boxes_heading_color_hover', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#757575',
+            'selector' => [
+                '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_6:hover .oxi_addons__heading_style_6' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+         $this->end_controls_tab(); // end tab
+        $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_info_boxes_heading_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -880,7 +946,16 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-
+          $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab(); // start tab
+        
         $this->add_control(
                 'sa_info_boxes_details_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -891,7 +966,20 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-
+         $this->end_controls_tab(); // end tab
+        $this->start_controls_tab(); // end tab
+          $this->add_control(
+                'sa_info_boxes_details_color_hover', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#808080',
+            'selector' => [
+                '{{WRAPPER}}  .oxi_addons__info_boxes_main_style_6:hover .oxi_addons__details_style_6' => 'color:{{VALUE}};'
+            ],
+                ]
+        );
+         $this->end_controls_tab(); // end tab
+        $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_info_boxes_details_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),

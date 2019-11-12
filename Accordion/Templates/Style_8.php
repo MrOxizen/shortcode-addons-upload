@@ -12,7 +12,6 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_8 extends Templates {
@@ -28,10 +27,10 @@ class Style_8 extends Templates {
             $arrow_position = 'style="left: -18px;"';
             $icon_position = 'style="right: -18px;"';
         }
-        
-        
-        
-        
+
+
+
+
 
         $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
 
@@ -42,11 +41,11 @@ class Style_8 extends Templates {
 //            print_r($style);
 //            print_r('</pre>');
 
-            
+
             $active_icon = $inactive_icon = $icon = $heading = $details = '';
-            
+
             if ($style['sa_el_ac_arrow_icon'] == 'yes') {
-                    $active_icon = '<div class="oxi-addons-AC-EG-active" ' . $arrow_position . '><i class="fas fa-arrow-down oxi-icons"></i></div>';
+                $active_icon = '<div class="oxi-addons-AC-EG-active" ' . $arrow_position . '><i class="fas fa-arrow-down oxi-icons"></i></div>';
                 if ($style['sa_el_ac_icon_position'] == 'right') {
                     $inactive_icon = '<div class="oxi-addons-AC-EG-deactive"  ' . $arrow_position . '><i class="fas fa-arrow-left oxi-icons"></i></div>';
                 } else {
@@ -60,14 +59,14 @@ class Style_8 extends Templates {
                 $heading = '<div class="oxi-addons-AC-EG-heading">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-AC-EG-C" id="oxi-addons-AC-EG-H-id-'.$key.'">
+                $details = '<div class="oxi-addons-AC-EG-C" id="oxi-addons-AC-EG-H-id-' . $key . '">
                                 <div class="oxi-addons-AC-EG-C-b">
                                     ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                                 </div>
                             </div>';
             }
-            echo '<div class="sa_element_ac_style_8 sa_element_ac_style_8_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                        <div class="oxi-addons-AC-EG-H" ref="#oxi-addons-AC-EG-H-id-'.$key.'">
+            echo '<div class="sa_element_ac_style_8 sa_element_ac_style_8_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                        <div class="oxi-addons-AC-EG-H" ref="#oxi-addons-AC-EG-H-id-' . $key . '">
                             ' . $active_icon . '
                             ' . $inactive_icon . '
                             ' . $icon . '
@@ -75,8 +74,6 @@ class Style_8 extends Templates {
                         </div>
                         ' . $details . '';
             echo '</div>';
-          
-            
         }
     }
 
@@ -88,8 +85,8 @@ class Style_8 extends Templates {
         if (array_key_exists('sa_accordion_data', $this->style)):
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
                 if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
-                    $jquery .= 'jQuery(".sa_element_ac_style_8_'.$key.'   .oxi-addons-AC-EG-H").addClass("active");
-                                jQuery(".sa_element_ac_style_8_'.$key.'   .oxi-addons-AC-EG-H").next().slideDown();';
+                    $jquery .= 'jQuery(".sa_element_ac_style_8_' . $key . '   .oxi-addons-AC-EG-H").addClass("active");
+                                jQuery(".sa_element_ac_style_8_' . $key . '   .oxi-addons-AC-EG-H").next().slideDown();';
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] != 'onebyone'):
@@ -407,7 +404,7 @@ class Style_8 extends Templates {
 
 
         wp_add_inline_style('shortcode-addons-style', $css);
-         wp_add_inline_script('shortcode-addons-jquery', $jquery);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

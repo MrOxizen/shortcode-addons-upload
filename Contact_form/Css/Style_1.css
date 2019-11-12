@@ -38,9 +38,7 @@
     padding: 15px 15px 15px 15px;  
     font-family:"Open Sans"; font-weight:600; font-style:normal; line-height:1.3; text-align:left;                           
 }
-.oxi-addons-form-warp-style1 .oxi-addons-form-title{
-    margin: 0 auto;
-}
+
 .oxi-addons-form-warp-style1 .oxi-addons-form-content{
     display: block;
     Width:100%;
@@ -51,9 +49,7 @@
     padding: 10px 10px 10px 10px;  
     font-family:"Open Sans"; font-weight:300; font-style:normal; line-height:1.3; text-align:left;
 }
-.oxi-addons-form-warp-style1 .oxi-addons-form-content{
-    margin: 0 auto;
-}
+
 .oxi-addons-form-warp-style1 .oxi-addons-form-input-style1{
     margin:0 0 0 0;
     position: relative;
@@ -68,7 +64,6 @@
     outline: none;
     border: none;
     box-shadow:none;
-    padding: 0;
     margin: 0;
     background: transparent;
     position: relative;
@@ -113,8 +108,8 @@
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 }
-.oxi-addons-form-input-data-style1:focus +  .oxi-focus-input-style1::after,
-.oxi-is-val.oxi-addons-form-input-data-style1 + .oxi-focus-input-style1::after {
+.oxi-addons-form-input-data-style1:focus +  .oxi-focus-input-style1:after,
+.oxi-is-val.oxi-addons-form-input-data-style1 + .oxi-focus-input-style1:after {
     top: 0%;
     transform:translateY(-70%);
 }
@@ -168,8 +163,9 @@
     transition: opacity 0.4s;
 }
 .oxi-addons-form-warp-style1 .oxi-alert-validate::after {
-    content: "\f12a";
-    font-family: FontAwesome;
+    content: "\f06a";
+    font-family: "Font Awesome\ 5 Free" !important;
+    font-weight: 900;
     display: block;
     position: absolute;
     color: #f70042;
