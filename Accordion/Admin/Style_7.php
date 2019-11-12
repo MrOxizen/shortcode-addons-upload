@@ -247,15 +247,6 @@ class Style_7 extends AdminStyle {
             'showing' => false,
                 ]
         );
-        $this->add_group_control(
-                'sa_el_ac_title_typography', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'include' => Controls::ALIGNNORMAL,
-            'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-header' => ''
-            ],
-                ]
-        );
         $this->add_control(
                 'sa_el_ac_title_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
@@ -264,6 +255,15 @@ class Style_7 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-header' => 'color: {{VALUE}};',
             ]
+                ]
+        );
+        $this->add_group_control(
+                'sa_el_ac_title_typography', $this->style, [
+            'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
+            'selector' => [
+                '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-header' => ''
+            ],
                 ]
         );
         

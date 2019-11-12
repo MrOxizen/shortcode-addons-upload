@@ -15,20 +15,16 @@
     width: 100%;
     float: left;
     position: relative;
-    /*background: rgba(23, 142, 189, 1.00);*/
     border-radius: 0px 5px 5px 0px;
     padding: 10px 10px 10px 10px;
-    /*box-shadow: 0px 5px 0px 0px #1b7396, 0px 10px 5px rgba(168, 163, 163, 1.00);*/
     transition: none;
 }
 .sa_element_ac_style_7 .oxi-addons-AC-SV-panel:active {
     top: 3px;
-    /*box-shadow: 0px 2px 0px 0px #1b7396, 0px 5px 3px rgba(168, 163, 163, 1.00);*/
 }
 .sa_element_ac_style_7 .oxi-addons-AC-SV-panel:active .oxi-addons-AC-SV-icon {
     top: -3px;
     transition: none;
-    /*box-shadow: 0px 5px 0px 0px #0784ba, 1px 1px 0px 0px #0784ba, 2px 2px 0px 0px #0784ba, 2px 5px 0px 0px #0784ba, 6px 4px 2px #0784ba, 0px 10px 5px rgba(168, 163, 163, 1.00);*/
 }
 .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
     display: flex;
@@ -38,9 +34,6 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    max-width: 40px;
-    max-height: 40px;
-    /*left: -40px;*/
     background: #2561b4;
     top: 0px;
     font-size: 15px;
@@ -48,7 +41,6 @@
     border-right: 1px solid #0784ba;
     border-radius: 5px 0px 0px 5px;
     text-shadow: 1px 1px 0px #0784ba;
-    /*box-shadow: inset 0px 1px 0px #0784ba, 0px 5px 0px 0px #0784ba, 0px 10px 5px rgba(168, 163, 163, 1.00);*/
     transition: none;
 }
 .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
@@ -96,17 +88,12 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_element_ac_style_7 {
-        padding: 8px 8px 8px 52px;
-    }
     .sa_element_ac_style_7 .oxi-addons-AC-SV-panel {
         border-radius: 0px 5px 5px 0px;
         padding: 8px 8px 8px 8px;
     }
     .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
-        max-width: 35px;
-        max-height: 35px;
-        left: -35px;
+        left: -40px;
         font-size: 14px;
     }
     .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
@@ -132,9 +119,7 @@
         padding: 5px 5px 5px 5px;
     }
     .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
-        max-width: 30px;
-        max-height: 30px;
-        left: -30px;
+        left: -40px;
         font-size: 13px;
     }
     .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
