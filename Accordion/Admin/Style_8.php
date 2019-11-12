@@ -284,7 +284,8 @@ class Style_8 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H:hover .oxi-addons-AC-EG-heading' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H:hover .oxi-addons-AC-EG-heading,'
+                . '.sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-heading' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -346,7 +347,7 @@ class Style_8 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa.sa_element_ac_style_8 .oxi-addons-AC-EG-C-b' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -528,8 +529,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .icon_setting' => 'height:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .icon_setting' => ' width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .icon_setting' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -703,13 +703,13 @@ class Style_8 extends AdminStyle {
 
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Arrow Settings', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Open & Close Settings', SHORTCODE_ADDOONS),
             'showing' => false,
                 ]
         );
         $this->add_control(
                 'sa_el_ac_arrow_icon', $this->style, [
-            'label' => __('Showing Arrow', SHORTCODE_ADDOONS),
+            'label' => __('Showing Open & Close', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
             'default' => 'yes',
@@ -720,7 +720,7 @@ class Style_8 extends AdminStyle {
         );
         $this->add_control(
                 'sa_el_ac_icon_position', $this->style, [
-            'label' => __('Arrow Position', SHORTCODE_ADDOONS),
+            'label' => __('Open & Close Position', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_TEXT,
             'loader' => TRUE,
@@ -737,7 +737,7 @@ class Style_8 extends AdminStyle {
         );
         $this->add_responsive_control(
                 'sa_el_ac_arrow_height_and_width', $this->style, [
-            'label' => __('Icon Height & Width', SHORTCODE_ADDOONS),
+            'label' => __('Arrow Height & Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'loader' => true,
             'default' => [
@@ -767,10 +767,8 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-deactive' => 'height:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-deactive' => 'width:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-active' => 'height:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-active' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-deactive' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-active' => 'height:{{SIZE}}{{UNIT}}; width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
