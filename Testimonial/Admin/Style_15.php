@@ -112,7 +112,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 450,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -144,7 +144,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -189,7 +189,7 @@ class Style_15 extends AdminStyle {
         $this->end_section_devider();
         $this->start_section_devider();
 
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Information', SHORTCODE_ADDOONS),
@@ -199,6 +199,7 @@ class Style_15 extends AdminStyle {
         $this->add_group_control(
                 'sa-testimonial-profile-Information-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-info' => '',
             ]
@@ -242,7 +243,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -273,7 +274,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -303,7 +304,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -340,7 +341,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 70,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -370,7 +371,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 70,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -421,7 +422,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 70,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -447,6 +448,7 @@ class Style_15 extends AdminStyle {
         $this->add_group_control(
                 'sa-testimonial-profile-name-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-name' => '',
             ]
@@ -486,7 +488,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -520,6 +522,7 @@ class Style_15 extends AdminStyle {
         $this->add_group_control(
                 'sa-testimonial-profile-company-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-testimonials-fifteen-padding .oxi-testimonials-style-fifteen-working' => '',
             ]
@@ -552,7 +555,7 @@ class Style_15 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -586,63 +589,4 @@ class Style_15 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-//    public function modal_opener() {
-//        
-//        $this->add_substitute_control('', [], [
-//            'type' => Controls::MODALOPENER,
-//            'title' => __('Add New Testimonial', SHORTCODE_ADDOONS),
-//            'sub-title' => __('Open Testimonial Form', SHORTCODE_ADDOONS),
-//            'showing' => TRUE,
-//        ]);
-//    }
-//
-//    public function modal_form_data() {
-//        echo '<div class="modal-header">                    
-//                    <h4 class="modal-title">Testimonial Form</h4>
-//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-//                </div>
-//                <div class="modal-body">';
-//        $this->add_control(
-//                'sa_testi_profile_icon', $this->style, [
-//            'label' => __('Icon', SHORTCODE_ADDOONS),
-//            'type' => Controls::ICON,
-//            'default' => 'fas fa-globe',
-//            'placeholder' => 'fas fa-globe',
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_testi_profile_name', $this->style, [
-//            'label' => __('Name', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'John Mandis',
-//            'placeholder' => 'John Mandis',
-//                ]
-//        );
-//        $this->add_group_control(
-//                'sa_testi_profile_company_url', $this->style, [
-//            'label' => __('Company URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::URL,
-//            'default' => '',
-//            'placeholder' => 'https://www.yoururl.com',
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_testi_profile_company', $this->style, [
-//            'label' => __('Designation', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Graphics designer',
-//            'placeholder' => 'Graphics designer',
-//                ]
-//        );
-//        
-//        
-//        $this->add_control(
-//                'sa_testi_profile_description', $this->style, [
-//            'label' => __('Short Details', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXTAREA,
-//            'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua dapibus tellus blandit quis. Cras tempor non mi et vestibulum.',
-//                ]
-//        );
-//        echo '</div>';
-//    }
 }
