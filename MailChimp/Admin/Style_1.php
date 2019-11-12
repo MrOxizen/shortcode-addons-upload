@@ -138,6 +138,7 @@ class Style_1 extends AdminStyle
                 'placeholder' => 'You\'re Already Subscribed!',
             ]
         );
+
         $this->add_group_control(
             'sa_mail_chimp_input_typo',
             $this->style,
@@ -150,7 +151,16 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Success', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Error', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
         $this->add_control(
             'sa_mail_chimp_alert_color',
             $this->style,
@@ -169,7 +179,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(255, 255, 255, 0)    ',
+                'default' => 'rgba(119, 0, 0, 1)',
                 'operator' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'background-color:{{VALUE}};'
@@ -186,6 +196,47 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_mail_chimp_success_color',
+            $this->style,
+            [
+                'label' => __(' Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-success-text' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_success_bg_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#28a745',
+                'operator' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-success-text' => 'background-color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_mail_success_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-success-text' => ''
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+
+
         $this->add_responsive_control(
             'sa_mail_chimp_alert_border_radius',
             $this->style,
@@ -316,6 +367,7 @@ class Style_1 extends AdminStyle
                 'placeholder' => 'Email Address',
             ]
         );
+    
         $this->add_control(
             'sa_mail_chimp_input_placeholder_color',
             $this->style,
@@ -349,7 +401,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(255, 255, 255, 1)',
                 'operator' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -384,7 +436,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#121212',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email:focus' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email:focus' => 'border-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email:active' => 'border-color:{{VALUE}};'
                 ],
             ]
         );
@@ -395,8 +448,8 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __(' ', SHORTCODE_ADDOONS),
-                'type' => Controls::SEPARATOR, 
-                  Controls::SEPARATOR => True,  
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => True,
             ]
         );
         $this->add_responsive_control(
@@ -693,7 +746,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => 'color:{{VALUE}};', 
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -846,7 +899,7 @@ class Style_1 extends AdminStyle
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
-         
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
