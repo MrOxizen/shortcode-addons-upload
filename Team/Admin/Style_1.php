@@ -575,7 +575,20 @@ class Style_1 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('Social Box Setting', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_control(
+            'sa_social_box_switter',
+            $this->style,
+            [
+                'label' => __('Social Box', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
             ]
         );
         $this->add_responsive_control(
@@ -584,6 +597,9 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_social_box_switter' => 'yes'
+                ],
                 'default' => [
                     'unit' => 'px',
                     'size' => 40,
@@ -618,11 +634,15 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
+                'condition' => [
+                    'sa_social_box_switter' => 'yes'
+                ],
                 'default' => '#2196f3',
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons' => 'background-color:{{VALUE}};',
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons:before' => 'border-right-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .member-icons:before' => 'border-right-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1.oxi-team-right .member-icons:before' => 'border-left-color:{{VALUE}};'
                 ],
             ]
         );
@@ -633,6 +653,9 @@ class Style_1 extends AdminStyle
                 'label' => __('Icon Postion', SHORTCODE_ADDOONS),
                 'separator' => TRUE,
                 'type' => Controls::CHOOSE,
+                'condition' => [
+                    'sa_social_box_switter' => 'yes'
+                ],
                 'default' => 'left',
                 'loader' => TRUE,
                 'options' => [
@@ -654,9 +677,12 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Position Left', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
+                
                 'condition' => [
-                    'sa_banner_icon_position' => 'left'
+                    'sa_banner_icon_position' => 'left',
+                    'sa_social_box_switter' => 'yes'
                 ],
+               
                 'default' => [
                     'unit' => 'px',
                     'size' => -15,
@@ -679,9 +705,12 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Position Right', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
+                
                 'condition' => [
-                    'sa_banner_icon_position' => 'oxi-team-right'
+                    'sa_banner_icon_position' => 'oxi-team-right',
+                    'sa_social_box_switter' => 'yes'
                 ],
+                
                 'default' => [
                     'unit' => 'px',
                     'size' => -15,
@@ -705,6 +734,9 @@ class Style_1 extends AdminStyle
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
                 'separator' => TRUE,
+                'condition' => [
+                    'sa_social_box_switter' => 'yes'
+                ],
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -736,7 +768,10 @@ class Style_1 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('Social Icon Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => FALSE,
+                'condition' => [
+                    'sa_social_box_switter' => 'yes'
+                ],
             ]
         );
 
@@ -1080,9 +1115,6 @@ class Style_1 extends AdminStyle
                         'label' => __('Color', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
                         'default' => '#ffffff',
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2-{{KEY}}  .member-icon .oxi-icons' => 'color:{{VALUE}};',
-                        ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
                             'sa_social_icons_position' => 'separately'
@@ -1093,9 +1125,6 @@ class Style_1 extends AdminStyle
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                         'default' => 'rgba(59,89,153,1.00)',
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2-{{KEY}}  .member-icon .oxi-icons' => 'background:{{VALUE}};',
-                        ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
                             'sa_social_icons_bg_color_view' => 'separately'
@@ -1113,9 +1142,6 @@ class Style_1 extends AdminStyle
                         'label' => __('Color', SHORTCODE_ADDOONS),
                         'type' => Controls::COLOR,
                         'default' => '#7e00c2',
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2-{{KEY}}  .member-icon .oxi-icons:hover' => 'color:{{VALUE}};',
-                        ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
                             'sa_social_icons_h_position' => 'separately'
@@ -1127,9 +1153,6 @@ class Style_1 extends AdminStyle
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                         'default' => 'rgba(92, 92, 92, 1)',
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2-{{KEY}}  .member-icon .oxi-icons:hover ' => 'background:{{VALUE}};',
-                        ],
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
                             'sa_social_icons_bg_h_color_view' => 'separately'

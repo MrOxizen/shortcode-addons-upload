@@ -12,17 +12,13 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
-{
-    public function default_render($style, $child, $admin)
-    {
+class Style_1 extends Templates {
 
+    public function default_render($style, $child, $admin) {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-
             $name = $desgnation = $image = $link = $divider = '';
             if (array_key_exists('sa_price_table_name', $value) && $value['sa_price_table_name'] != '') {
                 $name = '<' . $style['sa_team_name_tag'] . ' class="member-name">' . $this->text_render($value['sa_price_table_name']) . '</' . $style['sa_team_name_tag'] . '>';
@@ -45,14 +41,15 @@ class Style_1 extends Templates
                         </div>';
             }
 
-            echo '<div class="oxi-addons-parent-wrapper-style-1 oxi-addons-parent-wrapper-style-1-' . $v['id'] . ' ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_team_column', $style) . ' ' .  $style['sa_banner_icon_position'] . ' ">
+            echo '<div class="oxi-addons-parent-wrapper-style-1 oxi-addons-parent-wrapper-style-1-' . $v['id'] . ' ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_team_column', $style) . ' ' . $style['sa_banner_icon_position'] . ' ">
                    <div class="oxi-team-show-body-style-1" ' . $this->animation_render('sa_team_animation', $style) . ' >
                     <div class="oxi-team-show">
                         <div class="member-photo">
                                 <div class="oxi-team-pic-size">
                                         ' . $image . '
-                                    </div>
-                            <div class="member-icons">';
+                                    </div>';
+                    if($style['sa_social_box_switter'] == 'yes'){       
+                           echo ' <div class="member-icons">';
             $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
             foreach ($datas as $key => $data) {
                 if ($data['sa_social_icons_url-url'] != '') {
@@ -61,10 +58,14 @@ class Style_1 extends Templates
                 if ($data['sa_social_icons_icon'] != '') {
                     $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
                 }
+                
                 echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
+                
+                
             }
-            echo  '</div>
-                        </div>
+            echo '</div>';
+                    }
+                        echo '</div>
                         <div class="member-info">
                             ' . $name . '
                             ' . $divider . '
@@ -86,9 +87,34 @@ class Style_1 extends Templates
         }
     }
 
+    public function inline_public_css() {
+        $childdata = $this->child;
+        $styledata = $this->style;
+        
+//        echo '<pre>';
+//        print()
+//        echo '</pre>';
+        $css = '';
+        foreach ($childdata as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
 
-    public function old_render()
-    {
+            $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
+
+            foreach ($datas as $key => $data) {
+                $css .= '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-1.oxi-addons-parent-wrapper-style-1-'.$v['id'].' .member-icon.member-icon-' . $key . ' .oxi-icons{
+                            '.(($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color'] . ';' : '' ).'
+                            '.(($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color'] . ';' : '' ).'
+                        }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-1.oxi-addons-parent-wrapper-style-1-'.$v['id'].' .member-icon.member-icon-' . $key . ' .oxi-icons:hover{
+                            '.(($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color_hover'] . ';' : '' ).'
+                            '.(($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color_hover'] . ';' : '' ).'
+                        }';
+            }
+        }
+        return $css;
+    }
+
+    public function old_render() {
         $listdata = $this->child;
         $styledata = $this->dbdata;
         $oxiid = $styledata['id'];
@@ -394,4 +420,5 @@ class Style_1 extends Templates
                 }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
+
 }
