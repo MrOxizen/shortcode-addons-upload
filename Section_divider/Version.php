@@ -5,4 +5,4 @@
   Edit & Checked By Sabibur Rahman
  */
 
-return array('2.0.0', 'Extensions', true, 'fas fa-puzzle-piece');
+return array('2.0.1', 'Extensions', true, 'fas fa-puzzle-piece');
