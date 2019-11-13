@@ -124,16 +124,6 @@ class Style_3 extends AdminStyle {
                 ]
         );
         $this->start_controls_tab();
-        $this->add_control(
-                'sa_el_ac_mailor', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .sa_ac_style_3 .oxi-addonsAC-title' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
         $this->add_group_control(
                 'sa_el_ac_titlckground', $this->style, [
             'type' => Controls::BACKGROUND,
@@ -153,16 +143,6 @@ class Style_3 extends AdminStyle {
 
         $this->end_controls_tab();
         $this->start_controls_tab();
-        $this->add_control(
-                'sa_el_ac_hover_main_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .sa_ac_style_3 .oxi-addonsAC-heading.oxi-active' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
         $this->add_control(
                 'sa_el_ac_hover_main_background', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
@@ -283,10 +263,43 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover / Active', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_el_ac_mailor', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsAC-heading .oxi-addonsAC-title' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_el_ac_hover_main_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsAC-heading.oxi-active .oxi-addonsAC-title' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_group_control(
                 'sa_el_ac_title_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
-//            'separator' => TRUE,
+            'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_3 .oxi-addonsAC-title' => ''
             ],
@@ -517,10 +530,46 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
+        
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover / Active', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_el_ac_icon_color_normal', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsAC-heading .oxi-addonsAC-icon' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_el_ac_icon_color_hover_or_active', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsAC-heading.oxi-active .oxi-addonsAC-icon' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
         $this->add_responsive_control(
                 'sa_el_ac_opening_icon_icon_padding', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
+            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 0,

@@ -905,8 +905,7 @@ class Style_4 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line' => 'width: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line-two' => 'width: {{SIZE}}{{UNIT}};',
-                ],
+                 ],
             ]
         );
         $this->add_control(
@@ -938,8 +937,7 @@ class Style_4 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line' => 'height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line-two' => 'height: {{SIZE}}{{UNIT}};',
-                ],
+                 ],
             ]
         );
         $this->add_responsive_control(
@@ -971,8 +969,7 @@ class Style_4 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line-two' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
+                 ],
             ]
         );
 

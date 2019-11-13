@@ -18,27 +18,14 @@ class Style_7 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-//        $arrow_order = '';
-//        $icon_order = "style = 'order: 2'";
-//        if ($style['sa_el_ac_icon_position'] == 'right') {
-//            $arrow_order = 'style="order: 2;"';
-//            $icon_order = '';
-//        } elseif ($style['sa_el_ac_icon_position'] == 'left') {
-//            $arrow_order = '';
-//            $icon_order = 'style="order: 2;"';
-//        }
 
 
         $icon_position = '';
         if ($style['sa_el_ac_icon_position'] == 'right') {
-            $icon_position = 'style="right: -40px; position:absolute;"';
+            $icon_position = 'style="right:0px; position:absolute; transform:translateX(100%);"';
         } elseif ($style['sa_el_ac_icon_position'] == 'left') {
-            $icon_position = 'style="left: -40px; position:absolute;"';
+            $icon_position = 'style="left:0px; position:absolute; transform:translateX(-100%);"';
         }
-
-//        echo $icon_position;
-
-
 
 
         $all_data = (array_key_exists('sa_accordion_data', $style) && is_array($style['sa_accordion_data'])) ? $style['sa_accordion_data'] : [];
@@ -48,24 +35,8 @@ class Style_7 extends Templates {
 //            print_r('<pre>');
 //            print_r($style);
 //            print_r('</pre>');
-
-
-
-
-
-
-
+            
             $icon = $title = $details = '';
-
-//            if ($style['sa_el_ac_arrow_icon'] == 'yes') {
-//                $active_icon = '<div class="oxi-addonsAC-SX-active" ' . $arrow_order . '><i class="fas fa-arrow-down oxi-icons"></i></div>';
-//                if ($style['sa_el_ac_icon_position'] == 'right') {
-//                    $inactive_icon = '<div class="oxi-addonsAC-SX-deactive"  ' . $arrow_order . '><i class="fas fa-arrow-left oxi-icons"></i></div>';
-//                } else {
-//                    $inactive_icon = '<div class="oxi-addonsAC-SX-deactive"  ' . $arrow_order . '><i class="fas fa-arrow-right oxi-icons"></i></div>';
-//                }
-//            }
-
 
 
             if ($data['sa_icon_yes_no'] == 'yes') {
@@ -132,10 +103,6 @@ class Style_7 extends Templates {
 
         endif;
 
-//        $opening = '';
-//        foreach ($opening as $key => $value) {
-//            echo $key;
-//        }
 
         return $jquery;
     }

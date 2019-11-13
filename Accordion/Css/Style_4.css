@@ -145,12 +145,8 @@ df*/
         font-size:18px;
         padding:5px 0px 5px 42px;
     }
-    .sa_el_ac_style_4 .oxi-addonsAC-F-content{
-        padding:10px 0px 10px 0px ;
-    }
     .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details{
         border-radius:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px;
     }
     .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details,
     .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details p{
@@ -158,9 +154,6 @@ df*/
     }
 }
 @media only screen and (max-width:668px){
-    .sa_el_ac_style_4{
-        padding:10px 0px 0px 0px ;
-    }
     .sa_el_ac_style_4 .oxi-addonsAC-F-heading-icon{
         width:100%;
         max-width:60px;
@@ -181,7 +174,6 @@ df*/
     }
     .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details{
         border-radius:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px ;
     }
     .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details,
     .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details p{

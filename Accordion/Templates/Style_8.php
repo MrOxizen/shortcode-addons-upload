@@ -21,14 +21,27 @@ class Style_8 extends Templates {
         $arrow_position = '';
         $icon_position = '';
         if ($style['sa_el_ac_icon_position'] == 'right') {
-            $arrow_position = 'style="right: -18px;"';
-            $icon_position = 'style="left: -18px;"';
+            $arrow_position = 'style="right: 0; transform: translate(50%, -50%); top: 50%;"';
+            $icon_position = 'style="left: 0; transform: translate(-50%, -50%); top: 50%;"';
         } elseif ($style['sa_el_ac_icon_position'] == 'left') {
-            $arrow_position = 'style="left: -18px;"';
-            $icon_position = 'style="right: -18px;"';
+            $arrow_position = 'style="left: 0; transform: translate(-50%, -50%); top: 50%;"';
+            $icon_position = 'style="right: 0; transform: translate(50%, -50%); top: 50%;"';
         }
 
 
+        
+        
+        
+//        
+//        element {
+//	left: 0;
+//	transform: translate(-50%, -50%);
+//	top: 50%;
+//}
+        
+        
+        
+        
 
 
 
@@ -45,11 +58,11 @@ class Style_8 extends Templates {
             $active_icon = $inactive_icon = $icon = $heading = $details = '';
 
             if ($style['sa_el_ac_arrow_icon'] == 'yes') {
-                $active_icon = '<div class="oxi-addons-AC-EG-active" ' . $arrow_position . '><i class="fas fa-arrow-down oxi-icons"></i></div>';
+                $active_icon = '<div class="oxi-addons-AC-EG-active" ' . $arrow_position . '><i class="fas fa-minus oxi-icons"></i></div>';
                 if ($style['sa_el_ac_icon_position'] == 'right') {
-                    $inactive_icon = '<div class="oxi-addons-AC-EG-deactive"  ' . $arrow_position . '><i class="fas fa-arrow-left oxi-icons"></i></div>';
+                    $inactive_icon = '<div class="oxi-addons-AC-EG-deactive"  ' . $arrow_position . '><i class="fas fa-plus oxi-icons"></i></div>';
                 } else {
-                    $inactive_icon = '<div class="oxi-addons-AC-EG-deactive"  ' . $arrow_position . '><i class="fas fa-arrow-right oxi-icons"></i></div>';
+                    $inactive_icon = '<div class="oxi-addons-AC-EG-deactive"  ' . $arrow_position . '><i class="fas fa-plus oxi-icons"></i></div>';
                 }
             }
             if ($data['sa_icon_yes_no'] == 'yes') {

@@ -239,7 +239,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-heading ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_el_ac_style_4 ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
@@ -263,9 +263,45 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
+        
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover / Active', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_el_ac_title_color', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsAC-F-heading .oxi-addonsAC-F-title' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+                'sa_el_ac_title_color_hover_or_active', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsAC-F-heading.oxi-active .oxi-addonsAC-F-title' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
         $this->add_group_control(
                 'sa_el_ac_title_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
+            'separator' => true,
             'selector' => [
                 '{{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-title' => ''
             ],
@@ -552,7 +588,7 @@ class Style_4 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-heading-icon' => 'background: {{VALUE}};',                
+                '{{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-heading-icon' => 'background: {{VALUE}};',
                 '{{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-absulote' => 'border-left: calc(60px/2) solid {{VALUE}};',
             ]
                 ]
