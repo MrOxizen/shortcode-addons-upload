@@ -46,7 +46,7 @@ class Style_5 extends AdminStyle {
                 'sa_el_ac_opening_type', $this->style, [
             'label' => __('Accordions Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'Toggle',
+            'default' => 'onebyone',
             'loader' => TRUE,
             'options' => [
                 'randomly' => __('Toggle', SHORTCODE_ADDOONS),
@@ -78,7 +78,7 @@ class Style_5 extends AdminStyle {
                 'sa_el_ac_title_adding' => [
                     'label' => esc_html__('Title', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => 'Lorem Ipsum Dolor',
+                    'default' => 'Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry? ',
                     'selector' => [
                         '{{WRAPPER}} .sa_el_ac_style_5_{{KEY}} .heading-data' => '',
                     ],
@@ -86,7 +86,7 @@ class Style_5 extends AdminStyle {
                 'sa_el_ac_desc_adding' => [
                     'label' => esc_html__('Description', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
-                    'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+                    'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry ',
                     'selector' => [
                         '{{WRAPPER}} .sa_el_ac_style_5_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
@@ -131,7 +131,6 @@ class Style_5 extends AdminStyle {
                 'sa_el_ac_border_title_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-//            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 0,
@@ -217,7 +216,7 @@ class Style_5 extends AdminStyle {
                 'sa_el_ac_dtitle_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#569987',
             'selector' => [
                 '{{WRAPPER}} .sa_el_ac_style_5 .oxi-addonsAC-FI-title' => 'color: {{VALUE}};',
             ]
@@ -246,7 +245,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -284,7 +283,7 @@ class Style_5 extends AdminStyle {
                 'sa_el_ac_descriptions_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_el_ac_style_5 .oxi-addonsAC-FI-desc-details' => 'color: {{VALUE}};',
             ]
@@ -294,7 +293,7 @@ class Style_5 extends AdminStyle {
                 'sa_el_ac_descriptions_background', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => 'rgba(71, 39, 38, 1)',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .sa_el_ac_style_5 .oxi-addonsAC-Fi-content' => 'background: {{VALUE}};',
@@ -368,11 +367,10 @@ class Style_5 extends AdminStyle {
         $this->add_responsive_control(
                 'sa_el_ac_descriptions_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
-//            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [

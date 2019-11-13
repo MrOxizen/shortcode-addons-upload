@@ -12,13 +12,11 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates
-{
-    public function default_render($style, $child, $admin)
-    {
+class Style_2 extends Templates {
+
+    public function default_render($style, $child, $admin) {
 
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
@@ -60,9 +58,9 @@ class Style_2 extends Templates
                 if ($data['sa_social_icons_icon'] != '') {
                     $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
                 }
-                echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
+                echo '<a ' . $link . ' class = "member-icon ' . $style['sa_social_icons_border_hover'] . ' member-icon-' . $key . '">' . $icon . '</a>';
             }
-            echo  '</div>
+            echo '</div>
                         </div>
                         <div class="member-info">
                             ' . $name . '
@@ -85,9 +83,42 @@ class Style_2 extends Templates
         }
     }
 
+    public function inline_public_css() {
+        $childdata = $this->child;
+        $styledata = $this->style;
 
-    public function old_render()
-    {
+        $css = '';
+        foreach ($childdata as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
+            $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
+
+            foreach ($datas as $key => $data) {
+                $css .= '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-2.oxi-addons-parent-wrapper-style-2-' . $v['id'] . ' .member-icon.member-icon-' . $key . ' .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color'] . ';' : '' ) . '
+                            
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-2.oxi-addons-parent-wrapper-style-2-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-2.oxi-addons-parent-wrapper-style-2-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-2.oxi-addons-parent-wrapper-style-2-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color_hover'] . ';' : '' ) . '
+                           }
+                           .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-2.oxi-addons-parent-wrapper-style-2-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color_hover'] . ';' : '' ) . '
+                        }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-2.oxi-addons-parent-wrapper-style-2-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_hover_color'] . ';' : '' ) . '
+                        }';
+            }
+        }
+        return $css;
+    }
+
+    public function old_render() {
         $listdata = $this->child;
         $styledata = $this->dbdata;
         $oxiid = $styledata['id'];
@@ -147,7 +178,7 @@ class Style_2 extends Templates
                             </div>
                         </div>
                     </div>';
-             
+
             echo '</div> ';
         }
         echo ' </div>
@@ -394,4 +425,5 @@ class Style_2 extends Templates
                 }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
+
 }

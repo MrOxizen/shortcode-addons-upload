@@ -363,7 +363,7 @@ class Style_13 extends AdminStyle {
                 'sa-testimonial-profile-image-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image img, {{WRAPPER}} .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen' => '',
+                '{{WRAPPER}} .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-image img' => '',
             ]
                 ]
         );
