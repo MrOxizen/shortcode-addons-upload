@@ -12,6 +12,7 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
@@ -45,7 +46,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_opening_type', $this->style, [
             'label' => __('Accordions Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'Toggle',
+            'default' => 'onebyone',
             'loader' => TRUE,
             'options' => [
                 'randomly' => __('Toggle', SHORTCODE_ADDOONS),
@@ -105,7 +106,6 @@ class Style_10 extends AdminStyle {
             'button' => 'Add New Item',
                 ]
         );
-
         $this->end_controls_section();
 
 
@@ -153,9 +153,9 @@ class Style_10 extends AdminStyle {
         );
         $this->add_control(
                 'sa_el_ac_title_colour', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
+            'label' => __('Border Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => 'border-color: {{VALUE}};',
             ]
@@ -245,7 +245,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -303,7 +303,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_title_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#333333',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
             ]
@@ -315,7 +315,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_title_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#030303',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-heading-data, .oxi-addons-AC-N-H:hover .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
             ]
@@ -376,7 +376,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_descriptions_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-C-b' => 'color: {{VALUE}};',
             ]
@@ -386,7 +386,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_descriptions_background', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-C-b' => 'background: {{VALUE}};',
@@ -455,7 +455,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -527,7 +527,7 @@ class Style_10 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 80,
             ],
             'range' => [
                 'px' => [
@@ -562,7 +562,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 24,
             ],
             'range' => [
                 'px' => [
@@ -599,7 +599,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H .oxi-addons-AC-number' => 'color: {{VALUE}};',
             ]
@@ -610,7 +610,7 @@ class Style_10 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => 'rgba(179, 179, 179, 1)',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H .oxi-addons-AC-number' => 'background: {{VALUE}};',
             ]
@@ -631,7 +631,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-number' => 'color: {{VALUE}};',
             ]
@@ -642,7 +642,7 @@ class Style_10 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => 'rgba(83, 167, 184, 1)',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-number' => 'background: {{VALUE}};',
             ]
@@ -652,7 +652,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_border', $this->style, [
             'label' => __('Border Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-number' => 'border-color: {{VALUE}};',
             ]
@@ -793,7 +793,7 @@ class Style_10 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 35,
             ],
             'range' => [
                 'px' => [
@@ -831,7 +831,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 20,
             ],
             'range' => [
                 'px' => [
@@ -869,7 +869,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_closing_arrow_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#b3b3b3',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => 'color: {{VALUE}};',
             ]
@@ -881,7 +881,7 @@ class Style_10 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => 'background: {{VALUE}};',
             ]
@@ -904,7 +904,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_closing_arrow_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'color: {{VALUE}};',
             ]
@@ -915,7 +915,7 @@ class Style_10 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#53a7b8',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'background: {{VALUE}};',
             ]
@@ -925,7 +925,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_closing_arrow_hover_border', $this->style, [
             'label' => __('Border Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'border-color: {{VALUE}};',
             ]
@@ -940,7 +940,7 @@ class Style_10 extends AdminStyle {
             'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 50,
             ],
             'range' => [
                 '%' => [
@@ -971,7 +971,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 5,
             ],
             'range' => [
                 '%' => [

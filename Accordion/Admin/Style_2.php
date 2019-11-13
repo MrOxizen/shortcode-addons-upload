@@ -94,7 +94,7 @@ class Style_2 extends AdminStyle {
                 'sa_el_ac_desc_adding' => [
                     'label' => esc_html__('Description', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
-                    'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+                    'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
                     'selector' => [
                         '{{WRAPPER}} .sa_ac_style_2_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
@@ -269,7 +269,7 @@ class Style_2 extends AdminStyle {
                 'sa_el_ac_title_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-heading-data' => 'color: {{VALUE}};',
             ]
@@ -281,7 +281,7 @@ class Style_2 extends AdminStyle {
                 'sa_el_ac_title_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-heading-data,'
                 . ' .sa_ac_style_2 .oxi-addonsAC:hover .oxi-addonsAC-2-heading-data' => 'color: {{VALUE}} !important;',
@@ -305,7 +305,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -344,7 +344,7 @@ class Style_2 extends AdminStyle {
                 'sa_el_ac_descriptions_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details' => 'color: {{VALUE}};',
             ]
@@ -354,7 +354,7 @@ class Style_2 extends AdminStyle {
                 'sa_el_ac_descriptions_background', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => 'rgba(17, 171, 109, 1)',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details' => 'background: {{VALUE}};',
@@ -431,7 +431,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -467,17 +467,6 @@ class Style_2 extends AdminStyle {
         );
 
 
-//        $this->add_control(
-//                'sa_el_ac_opening_icon_adding' => [
-//                    'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
-//                    'type' => Controls::ICON,
-//                    'default' => 'fab fa-facebook',
-//                    'conditional'=> Controls::INSIDE,
-//                    'condition' => [
-//                        'sa_icon_yes_no' => 'yes',
-//                    ],
-//                ],
-//        );
         $this->add_control(
                 'sa_el_ac_icon_position', $this->style, [
             'label' => __('Icon Position', SHORTCODE_ADDOONS),
@@ -520,7 +509,7 @@ class Style_2 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => 'rgba(4, 92, 21, 1)',
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-2-icon' => 'background: {{VALUE}};',
             ]
@@ -533,7 +522,7 @@ class Style_2 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 56,
             ],
             'range' => [
                 'px' => [
@@ -568,7 +557,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 40,
             ],
             'range' => [
                 'px' => [
@@ -607,7 +596,7 @@ class Style_2 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}}  .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-icon' => 'color: {{VALUE}};',
             ]
@@ -618,7 +607,7 @@ class Style_2 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => 'rgba(4, 92, 21, 1)',
             'selector' => [
                 '{{WRAPPER}}  .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-icon' => 'background: {{VALUE}};',
             ]
@@ -631,7 +620,7 @@ class Style_2 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 122,
             ],
             'range' => [
                 'px' => [
@@ -694,7 +683,7 @@ class Style_2 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_border', $this->style, [
             'label' => __('Border Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-icon' => 'border-color: {{VALUE}};',
             ]

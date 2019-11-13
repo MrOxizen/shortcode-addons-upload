@@ -45,7 +45,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_opening_type', $this->style, [
             'label' => __('Accordions Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'Toggle',
+            'default' => 'onebyone',
             'loader' => TRUE,
             'options' => [
                 'randomly' => __('Toggle', SHORTCODE_ADDOONS),
@@ -94,7 +94,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_desc_adding' => [
                     'label' => esc_html__('Description', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
-                    'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+                    'default' => 'Lorem Ipsum has been the industrys standard amar sonar bangla ami tomay valobashi of type and scrambled it to make a type specimen book. ',
                     'selector' => [
                         '{{WRAPPER}} .oa_ac_style_1_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
@@ -136,7 +136,6 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_border_title_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-//            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 0,
@@ -182,7 +181,7 @@ class Style_7 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -212,7 +211,7 @@ class Style_7 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -251,7 +250,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_title_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-header' => 'color: {{VALUE}};',
             ]
@@ -266,11 +265,9 @@ class Style_7 extends AdminStyle {
             ],
                 ]
         );
-        
         $this->add_group_control(
                 'sa_el_ac_title_text_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
-//            'separator' => TRUE,
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-header' => ''
             ],
@@ -321,7 +318,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_descriptions_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-details' => 'color: {{VALUE}};',
             ]
@@ -331,7 +328,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_descriptions_background', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-details' => 'background: {{VALUE}};',
@@ -359,11 +356,10 @@ class Style_7 extends AdminStyle {
         $this->add_responsive_control(
                 'sa_el_ac_descriptions_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
-//            'separator' => TRUE,
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -399,18 +395,6 @@ class Style_7 extends AdminStyle {
         );
 
 
-//        $this->add_control(
-//                'sa_el_ac_opening_icon_adding' => [
-//                    'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
-//                    'type' => Controls::ICON,
-//                    'default' => 'fab fa-facebook',
-//                    'conditional'=> Controls::INSIDE,
-//                    'condition' => [
-//                        'sa_icon_yes_no' => 'yes',
-//                    ],
-//                ],
-//        );
-        
         
          $this->add_control(
                 'sa_el_ac_icon_position', $this->style, [
@@ -438,7 +422,7 @@ class Style_7 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 40,
             ],
             'range' => [
                 'px' => [
@@ -473,7 +457,7 @@ class Style_7 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 24,
             ],
             'range' => [
                 'px' => [
@@ -510,7 +494,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-icon' => 'color: {{VALUE}};',
             ]
@@ -521,7 +505,7 @@ class Style_7 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_7 .oxi-addons-AC-SV-icon' => 'background: {{VALUE}};',
             ]
@@ -542,7 +526,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'color: {{VALUE}};',
             ]
@@ -553,7 +537,7 @@ class Style_7 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'background: {{VALUE}};',
             ]
@@ -563,7 +547,7 @@ class Style_7 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_border', $this->style, [
             'label' => __('Border Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'border-color: {{VALUE}};',
             ]
