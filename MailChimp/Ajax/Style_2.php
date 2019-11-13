@@ -29,6 +29,8 @@ class Style_2
         $api_key = $optional['api'];
         $list_id = $optional['id'];
         $email =  $style['oxi-addons-mailchimp-email'];
+        $fisrt_name =  $style['oxi-addons-mailchimp-first-name'];
+        $last_name =  $style['oxi-addons-mailchimp-last-name'];
         $data_center = substr($api_key, strpos($api_key, '-') + 1);
         $url = 'https://' . $data_center . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members';
 
@@ -37,8 +39,8 @@ class Style_2
             'status' => 'subscribed',
             'merge_fields' =>
             [
-                'FNAME' => '',
-                'LNAME' => '',
+                'FNAME' => $fisrt_name,
+                'LNAME' => $last_name,
             ]
         ]);
 
@@ -55,8 +57,10 @@ class Style_2
         curl_close($ch);
         if ($status_code == '200') {
             echo "success";
-        } else {
+        } elseif ($status_code == '400')  {
             echo "error";
+        }else {
+            echo "api_error";
         }
     }
 }

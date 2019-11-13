@@ -7,29 +7,30 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_8
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
  */
-class Style_1 {
+class Style_8
+{
 
     /**
      * load constructor
      *
      * @since 2.0.0
      */
-    public function __construct() {
-        
-    }
+    public function __construct()
+    { }
 
-    public function ajax_loader($rawdata = '', $optional, $optional2) {
-    
+    public function ajax_loader($rawdata = '', $optional, $optional2)
+    {
+
         parse_str($rawdata, $style);
         $api_key = $optional['api'];
         $list_id = $optional['id'];
-       $email =  $style['oxi-addons-mailchimp-email']; 
- 
+        $email =  $style['oxi-addons-mailchimp-email'];
+
         $data_center = substr($api_key, strpos($api_key, '-') + 1);
         $url = 'https://' . $data_center . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members';
 
@@ -53,14 +54,13 @@ class Style_1 {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
         $result = curl_exec($ch);
         $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);  
+        curl_close($ch);
         if ($status_code == '200') {
             echo "success";
-        } elseif ($status_code == '400')  {
+        } elseif ($status_code == '400') {
             echo "error";
-        }else {
+        } else {
             echo "api_error";
         }
     }
-
 }

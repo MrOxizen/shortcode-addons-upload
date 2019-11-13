@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_7
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates
+class Style_7 extends Templates
 {
 
     /**
@@ -27,7 +27,8 @@ class Style_2 extends Templates
     {
 
         $style = $this->style;
-        $success = $error = $loading_msg = $button_text = $icon = '';
+        $success = $error = $loading_msg = $button_text = $icon  = '';
+
         if (array_key_exists('sa_mail_chimp_audience_success', $style) && $style['sa_mail_chimp_audience_success'] != '') {
             $success = $this->text_render($style['sa_mail_chimp_audience_success']);
         }
@@ -59,9 +60,9 @@ class Style_2 extends Templates
                     if ($class === "" || $function === "") {
                         return;
                     }  
-                    var rawdata = $(".' .   $this->WRAPPER . ' #oxi-addons-mailchimp-form-style-2").serialize();
+                    var rawdata = $(".' .  $this->WRAPPER . ' #oxi-addons-mailchimp-form-style-7").serialize();
                     var   optional = ' . json_encode($api) . ';
-                    jQuery(".' .   $this->WRAPPER . ' .oxi-addons-mailchimp-button").html("' . $icon . ' ' . $loading_msg . '");
+                    jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-button").html("' . $icon . ' ' . $loading_msg . '");
                     $.ajax({
                         url: shortcode_addons_data.ajaxurl,
                         type: "post",
@@ -86,7 +87,7 @@ class Style_2 extends Templates
                                 jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-alert-text").fadeIn().html("The resource can not be found. Please insert valid API or Audience ID"); 
                                 jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-success-text").fadeOut(); 
                             }
-                            jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-button").html("' . $button_text . '");
+                            jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-button").html("' . $button_text . '"); 
                         },
                         error: function(response) {
                             console.log(response);
@@ -105,10 +106,10 @@ class Style_2 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        $button  = $email_placeholder = $first_placeholder =  $last_placeholder = '';
+        $button  = $email_placeholder = $heading = $details = $icon = '';
         if (array_key_exists('sa_mail_chimp_button_text', $style) && $style['sa_mail_chimp_button_text'] != '') {
             $button = '<div class="oxi-addons-mailchimp-button-section"> 
-                        <button type="submit" class="oxi-addons-mailchimp-button" data-class="SHORTCODE_ADDONS_UPLOAD\MailChimp\Ajax\Style_1" data-function="ajax_loader" > 
+                        <button type="submit" class="oxi-addons-mailchimp-button" data-class="SHORTCODE_ADDONS_UPLOAD\MailChimp\Ajax\Style_7" data-function="ajax_loader" > 
                             ' . $this->text_render($style['sa_mail_chimp_button_text']) . ' 
                         </button>
                     </div>';
@@ -116,24 +117,32 @@ class Style_2 extends Templates
         if ($style['sa_mail_chimp_placeholder'] != '') {
             $email_placeholder = 'placeholder="' . $this->text_render($style['sa_mail_chimp_placeholder']) . '"';
         }
-        if ($style['sa_mail_chimp_placeholder_first'] != '') {
-            $first_placeholder = 'placeholder="' . $this->text_render($style['sa_mail_chimp_placeholder_first']) . '"';
+        if (array_key_exists('sa_mail_chimp_title_text', $style) && $style['sa_mail_chimp_title_text'] != '') {
+            $heading = '<' . $style['sa_mail_chimp_title_tag'] . ' class="oxi-addons-mailchimp-heading-text"    >' . $this->text_render($style['sa_mail_chimp_title_text']) . '</' . $style['sa_mail_chimp_title_tag'] . '>';
         }
-        if ($style['sa_mail_chimp_placeholder_last'] != '') {
-            $last_placeholder = 'placeholder="' . $this->text_render($style['sa_mail_chimp_placeholder_last']) . '"';
+        if (array_key_exists('sa_mail_chimp_desc_text', $style) && $style['sa_mail_chimp_desc_text'] != '') {
+            $details = '<div class="oxi-addons-mailchimp-desc-text"    >' . $this->text_render($style['sa_mail_chimp_desc_text']) . '</div>';
         }
-        echo ' <div class="oxi-addons-mailchimp-style-2"> 
+        if (array_key_exists('sa_mail_chimp_icon', $style) && $style['sa_mail_chimp_icon'] != '') {
+            $icon = '
+                <div class="oxi-addons-mailchimp-icon">
+                    ' . $this->font_awesome_render($style['sa_mail_chimp_icon']) . '
+                </div>
+            ';
+        }
+        echo ' <div class="oxi-addons-mailchimp-style-7"> 
                 <div class="oxi-addons-mailchimp-alert">
                     <div class="oxi-addons-mailchimp-alert-text"> </div>
                     <div class="oxi-addons-mailchimp-success-text"> </div>
-                </div> 
-                <form  class="oxi-addons-mailchimp-form-data"  id="oxi-addons-mailchimp-form-style-2" method="post">';
+                </div>
+                ' . $icon . '
+                ' . $heading . '
+                ' . $details . '
+                <form  class="oxi-addons-mailchimp-form-data"  id="oxi-addons-mailchimp-form-style-7" method="post">';
         echo ' <div class="oxi-addons-btn-content">
                     <div class="oxi-addons-mailchimp-form">
                         <div class="oxi-addons-mailchimp-form-input-sec">
-                            <input type="email"  class="oxi-addons-mailchimp-input" data-email="oxi-addons-mailchimp-email" name="oxi-addons-mailchimp-email" id="oxi-addons-mailchimp-email" ' . $email_placeholder . ' required="required">
-                            <input type="text"  class="oxi-addons-mailchimp-input" data-first-name="oxi-addons-mailchimp-first-name" name="oxi-addons-mailchimp-first-name" id="oxi-addons-mailchimp-first-name" ' . $first_placeholder . '>
-                            <input type="text"  class="oxi-addons-mailchimp-input" data-last-name="oxi-addons-mailchimp-last-name" name="oxi-addons-mailchimp-last-name" id="oxi-addons-mailchimp-last-name"  ' . $last_placeholder . '>
+                            <input type="email"  class="oxi-addons-mailchimp-email" data-email="oxi-addons-mailchimp-email" name="oxi-addons-mailchimp-email" id="oxi-addons-mailchimp-email" ' . $email_placeholder . '  required="required">
                         </div>
                     </div>
                     ' . $button . '

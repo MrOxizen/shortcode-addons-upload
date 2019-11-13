@@ -53,7 +53,7 @@ class Style_1 extends Templates
                     e.preventDefault();
                     e.stopPropagation();
                     e.stopImmediatePropagation();
-                    var $this = $(this).find(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-button"),
+                    var $this = $(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-button"),
                         $class = $this.data("class"),
                         $function = $this.data("function"); 
                     if ($class === "" || $function === "") {
@@ -78,11 +78,15 @@ class Style_1 extends Templates
                             if (data === "success") { 
                                 jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-success-text").fadeIn().html("' . $success . '"); 
                                 jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-alert-text").fadeOut(); 
-                            } else { 
+                            } else if(data === "error") { 
                                 jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-alert-text").fadeIn().html("' . $error . '"); 
                                 jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-success-text").fadeOut(); 
-                            }  
-                            jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-button").html("' . $button_text . '");
+                            } else if(data === "api_error") {
+                                jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-alert-text").fadeOut(); 
+                                jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-alert-text").fadeIn().html("The resource can not be found. Please insert valid API or Audience ID"); 
+                                jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-success-text").fadeOut(); 
+                            }
+                            jQuery(".' .  $this->WRAPPER . ' .oxi-addons-mailchimp-button").html("' . $button_text . '"); 
                         },
                         error: function(response) {
                             console.log(response);
