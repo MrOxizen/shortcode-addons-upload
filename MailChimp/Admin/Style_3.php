@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle
+class Style_3 extends AdminStyle
 {
 
     public function register_controls()
@@ -73,7 +73,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3' => ''
                 ],
             ]
         );
@@ -105,7 +105,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -147,7 +147,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => ''
                 ],
             ]
         );
@@ -165,11 +165,11 @@ class Style_1 extends AdminStyle
             'sa_mail_chimp_success_color',
             $this->style,
             [
-                'label' => __(' Color', SHORTCODE_ADDOONS),
+                'label' => __('  Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-success-text' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-success-text' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -179,10 +179,10 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#28a745',
+                'default' => '#536fbd',
                 'operator' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-success-text' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-success-text' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -192,7 +192,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-success-text' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-success-text' => ''
                 ],
             ]
         );
@@ -207,7 +207,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -217,10 +217,10 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => 'rgba(119, 0, 0, 1)',
+                'default' => '#e63a3a',
                 'operator' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -230,12 +230,13 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => ''
                 ],
             ]
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
+
         $this->add_control(
             'sa_mail_chimp_separetor',
             $this->style,
@@ -245,7 +246,6 @@ class Style_1 extends AdminStyle
                 Controls::SEPARATOR => TRUE
             ]
         );
-
         $this->add_responsive_control(
             'sa_mail_chimp_alert_border_radius',
             $this->style,
@@ -274,7 +274,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -306,7 +306,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -338,7 +338,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-alert .oxi-addons-mailchimp-alert-text' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -354,6 +354,150 @@ class Style_1 extends AdminStyle
                 'showing' => FALSE,
             ]
         );
+
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'placeholder' => esc_html__('Placeholder', SHORTCODE_ADDOONS),
+                    'label' => esc_html__('Label', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_group_control(
+            'sa_mail_chimp_input_typo_placeholder',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-input::placeholder' =>  ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_input_placeholder_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#a8a8a8',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-input::placeholder' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_placeholder',
+            $this->style,
+            [
+                'label' => __('Email', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Email Address',
+                'placeholder' => 'Email Address', 
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_placeholder_first',
+            $this->style,
+            [
+                'label' => __('First Name', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Write Your First Name',
+                'placeholder' => 'Write Your First Name', 
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_placeholder_last',
+            $this->style,
+            [
+                'label' => __('Last Name', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Write Your Last Name',
+                'placeholder' => 'Write Your Last Name', 
+            ]
+        );
+
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_group_control(
+            'sa_mail_chimp_input_typo_label',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-label' =>  ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_input_label_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#a8a8a8',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-label' => 'color:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_label',
+            $this->style,
+            [
+                'label' => __('Email', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Email',
+                'placeholder' => 'Email',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-label.oxi-label-email' => ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_label_first',
+            $this->style,
+            [
+                'label' => __('First Name', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'First Name',
+                'placeholder' => 'First Name',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-label.oxi-label-first-name' => ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_mail_chimp_label_last',
+            $this->style,
+            [
+                'label' => __('Last Name', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => 'Last Name',
+                'placeholder' => 'Last Name',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-label.oxi-label-last-name' => ''
+                ],
+            ]
+        );
+
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+
+        $this->add_control(
+            'sa_mail_chimp_separetor',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => TRUE
+            ]
+        );
         $this->add_group_control(
             'sa_mail_chimp_input_typo',
             $this->style,
@@ -362,30 +506,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => ''
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_mail_chimp_placeholder',
-            $this->style,
-            [
-                'label' => __('Email Placeholder', SHORTCODE_ADDOONS),
-                'type' => Controls::TEXT,
-                'default' => 'Email Address',
-                'placeholder' => 'Email Address',
-            ]
-        );
-
-        $this->add_control(
-            'sa_mail_chimp_input_placeholder_color',
-            $this->style,
-            [
-                'label' => __('Placeholder Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#a8a8a8',
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email::placeholder' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input' => ''
                 ],
             ]
         );
@@ -397,7 +518,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#121212',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -410,7 +531,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(255, 255, 255, 1)',
                 'operator' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -431,7 +552,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input' => ''
                 ],
             ]
         );
@@ -445,8 +566,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#121212',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email:focus' => 'border-color:{{VALUE}};',
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email:active' => 'border-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input:focus' => 'border-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input:active' => 'border-color:{{VALUE}};'
                 ],
             ]
         );
@@ -489,7 +610,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -521,7 +642,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-form ..oxi-addons-mailchimp-input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -553,7 +674,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-form .oxi-addons-mailchimp-email' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-form-group' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -577,7 +698,7 @@ class Style_1 extends AdminStyle
                 'default' => 'fas fa-spinner',
                 'placeholder' => 'example:- fas fa-spinner',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => ''
                 ],
             ]
         );
@@ -632,7 +753,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-btn-content' => 'flex-direction: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-btn-content' => 'flex-direction: {{VALUE}};'
                 ],
             ]
         );
@@ -645,7 +766,7 @@ class Style_1 extends AdminStyle
                 'default' => 'Subscribe',
                 'placeholder' => 'Subscribe',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => ''
                 ],
             ]
         );
@@ -678,7 +799,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -690,7 +811,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -710,7 +831,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button-section' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button-section' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -731,7 +852,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => ' ',
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => ' ',
                 ],
             ]
         );
@@ -755,7 +876,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -768,7 +889,7 @@ class Style_1 extends AdminStyle
                 'default' => '#28a745',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -778,7 +899,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => ''
                 ],
             ]
         );
@@ -810,7 +931,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -821,7 +942,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button' => ''
                 ],
             ]
         );
@@ -835,7 +956,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button:hover' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -848,7 +969,7 @@ class Style_1 extends AdminStyle
                 'default' => '#28a745',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button:hover' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button:hover' => 'background-color:{{VALUE}};'
                 ],
             ]
         );
@@ -858,7 +979,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button:hover' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button:hover' => ''
                 ],
             ]
         );
@@ -890,7 +1011,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -901,7 +1022,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-mailchimp-style-1 .oxi-addons-mailchimp-button:hover' => ''
+                    '{{WRAPPER}} .oxi-addons-mailchimp-style-3 .oxi-addons-mailchimp-button:hover' => ''
                 ],
 
             ]
