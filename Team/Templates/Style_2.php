@@ -87,9 +87,6 @@ class Style_2 extends Templates {
         $childdata = $this->child;
         $styledata = $this->style;
 
-//        echo '<pre>';
-//        print()
-//        echo '</pre>';
         $css = '';
         foreach ($childdata as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);

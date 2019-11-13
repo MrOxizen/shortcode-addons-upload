@@ -45,7 +45,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_opening_type', $this->style, [
             'label' => __('Accordions Type', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'Toggle',
+            'default' => 'onebyone',
             'loader' => TRUE,
             'options' => [
                 'randomly' => __('Toggle', SHORTCODE_ADDOONS),
@@ -153,9 +153,9 @@ class Style_6 extends AdminStyle {
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
-        
-        
-        
+
+
+
         $this->add_responsive_control(
                 'sa_el_ac_border_title_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -294,7 +294,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_title_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#0bbfaa',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading' => 'color: {{VALUE}};',
             ]
@@ -306,7 +306,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_title_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#0bbfaa',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading' => 'color: {{VALUE}};',
             ]
@@ -368,7 +368,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_descriptions_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b' => 'color: {{VALUE}};',
             ]
@@ -378,7 +378,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_descriptions_background', $this->style, [
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-C' => 'background: {{VALUE}};',
@@ -455,7 +455,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -521,17 +521,6 @@ class Style_6 extends AdminStyle {
         );
 
 
-//        $this->add_control(
-//                'sa_el_ac_opening_icon_adding' => [
-//                    'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
-//                    'type' => Controls::ICON,
-//                    'default' => 'fab fa-facebook',
-//                    'conditional'=> Controls::INSIDE,
-//                    'condition' => [
-//                        'sa_icon_yes_no' => 'yes',
-//                    ],
-//                ],
-//        );
 
         $this->add_responsive_control(
                 'sa_el_ac_opening_icon_height_and_width', $this->style, [
@@ -540,7 +529,7 @@ class Style_6 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 50,
             ],
             'range' => [
                 'px' => [
@@ -575,7 +564,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 20,
             ],
             'range' => [
                 'px' => [
@@ -612,7 +601,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#b128db',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'color: {{VALUE}};',
             ]
@@ -623,7 +612,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting' => 'background: {{VALUE}};',
             ]
@@ -644,7 +633,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#222',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'color: {{VALUE}};',
             ]
@@ -655,7 +644,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'background: {{VALUE}};',
             ]
@@ -665,7 +654,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_opening_icon_icon_hover_border', $this->style, [
             'label' => __('Border Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .icon_setting' => 'border-color: {{VALUE}};',
             ]
@@ -773,12 +762,12 @@ class Style_6 extends AdminStyle {
         );
         $this->add_responsive_control(
                 'sa_el_ac_arrow_height_and_width', $this->style, [
-            'label' => __('Icon Height & Width', SHORTCODE_ADDOONS),
+            'label' => __('Arrow Height & Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 50,
             ],
             'range' => [
                 'px' => [
@@ -810,11 +799,11 @@ class Style_6 extends AdminStyle {
         );
         $this->add_responsive_control(
                 'sa_el_ac_arrow_icon_icon_size', $this->style, [
-            'label' => __('Icon Size', SHORTCODE_ADDOONS),
+            'label' => __('Arrow Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 20,
             ],
             'range' => [
                 'px' => [
@@ -852,7 +841,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_closing_arrow_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#b128db',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive' => 'color: {{VALUE}};',
             ]
@@ -864,7 +853,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive' => 'background: {{VALUE}};',
             ]
@@ -886,7 +875,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_closing_arrow_hover_color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#0bbfaa',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'color: {{VALUE}};',
             ]
@@ -897,7 +886,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'background: {{VALUE}};',
             ]
@@ -907,7 +896,7 @@ class Style_6 extends AdminStyle {
                 'sa_el_ac_closing_arrow_hover_border', $this->style, [
             'label' => __('Border Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active' => 'border-color: {{VALUE}};',
             ]

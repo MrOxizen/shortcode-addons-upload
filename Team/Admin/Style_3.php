@@ -722,7 +722,26 @@ class Style_3 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-
+        $this->add_control(
+            'sa_social_icons_style_settings',
+            $this->style,
+            [
+                'label' => __('Icon Style', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'condition' => [
+                    'sa_social_icons_border' => 'separately'
+                ],
+                'default' => 'style_one',
+                'loader' => TRUE,
+                'options' => [
+                    'style_one' => __('Style 1', SHORTCODE_ADDOONS),
+                    'style_two' => __('Style 2', SHORTCODE_ADDOONS),
+                    'style_three' => __('Style 3', SHORTCODE_ADDOONS),
+                    'style_four' => __('Style 4', SHORTCODE_ADDOONS),
+                    ],
+                
+            ]
+        );
 
         $this->add_responsive_control(
             'sa_social_icons_f_s',
@@ -854,13 +873,66 @@ class Style_3 extends AdminStyle
                 ],
             ]
         ); 
+        $this->add_control(
+            'sa_divider_icons_border_width',
+            $this->style,
+            [
+                'label' => __('Border Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_social_icons_border' => 'separately'
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 1,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .member-icon.separately' => 'border-width: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_divider_icons_border_type',
+            $this->style,
+            [
+                'label' => __('Border Style', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'condition' => [
+                    'sa_social_icons_border' => 'separately'
+                ],
+                'default' => 'solid',
+                'loader' => TRUE,
+                'options' => [
+                    'none' => __('None', SHORTCODE_ADDOONS),
+                    'solid' => __('Solid', SHORTCODE_ADDOONS),
+                    'dotted' => __('Dotted', SHORTCODE_ADDOONS),
+                    'dashed' => __('Dashed', SHORTCODE_ADDOONS),
+                    'double' => __('Double', SHORTCODE_ADDOONS),
+                    'grove' => __('Grove', SHORTCODE_ADDOONS),
+                    'ridge' => __('Ridge', SHORTCODE_ADDOONS),
+                    'inset' => __('Inset', SHORTCODE_ADDOONS),
+                    'outset' => __('Outset', SHORTCODE_ADDOONS),
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .member-icon.separately' => 'border-style: {{VALUE}};'
+                ],
+            ]
+        );
         $this->add_group_control(
             'sa_divider_icons_border',
             $this->style,
             [
                 'type' => Controls::BORDER, 
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-3 .member-icon' => ''
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-3 .member-icon.common' => ''
                 ],
                 'condition' => [
                     'sa_social_icons_border' => 'common'
@@ -889,6 +961,7 @@ class Style_3 extends AdminStyle
                 ],
             ]
         );
+        
         $this->add_control(
             'sa_social_icons_h_color',
             $this->style,
@@ -958,13 +1031,66 @@ class Style_3 extends AdminStyle
                 ],
             ]
         ); 
+        $this->add_control(
+            'sa_divider_icons_border_hover_width',
+            $this->style,
+            [
+                'label' => __('Border Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_social_icons_border_hover' => 'separately'
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 1,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .member-icon.separately:hover' => 'border-width: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_divider_icons_border_hover_type',
+            $this->style,
+            [
+                'label' => __('Border Style', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'condition' => [
+                    'sa_social_icons_border_hover' => 'separately'
+                ],
+                'default' => 'solid',
+                'loader' => TRUE,
+                'options' => [
+                    'none' => __('None', SHORTCODE_ADDOONS),
+                    'solid' => __('Solid', SHORTCODE_ADDOONS),
+                    'dotted' => __('Dotted', SHORTCODE_ADDOONS),
+                    'dashed' => __('Dashed', SHORTCODE_ADDOONS),
+                    'double' => __('Double', SHORTCODE_ADDOONS),
+                    'grove' => __('Grove', SHORTCODE_ADDOONS),
+                    'ridge' => __('Ridge', SHORTCODE_ADDOONS),
+                    'inset' => __('Inset', SHORTCODE_ADDOONS),
+                    'outset' => __('Outset', SHORTCODE_ADDOONS),
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .member-icon.separately:hover' => 'border-style: {{VALUE}};'
+                ],
+            ]
+        );
         $this->add_group_control(
             'sa_divider_icons_border_hover',
             $this->style,
             [
                 'type' => Controls::BORDER, 
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-3 .member-icon:hover' => ''
+                    '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-3 .member-icon.common:hover' => ''
                 ],
                 'condition' => [
                     'sa_social_icons_border_hover' => 'common'
@@ -1180,18 +1306,18 @@ class Style_3 extends AdminStyle
                             'sa_social_icons_bg_color_view' => 'separately'
                         ]
                     ],
-                    'sa_social_icons_border' => [
-                        'label' => __('', SHORTCODE_ADDOONS),
-                        'type' => Controls::BORDER, 
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3-{{KEY}}  .member-icon' => '',
-                        ],
-                        'controller' => 'add_group_control',
+                    'sa_social_icons_border_color' => [
+                        'label' => __('Border Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'oparetor' => 'RGB',
+                        'default' => 'rgba(59,89,153,1.00)',
+                        
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
-                            'sa_social_icons_border' => 'separately'
+                            'sa_social_icons_bg_color_view' => 'separately'
                         ]
                     ],
+                    
 
                     'shortcode-addons-start-tab1-end' => [
                         'controller' => 'end_controls_tab',
@@ -1226,16 +1352,15 @@ class Style_3 extends AdminStyle
                             'sa_social_icons_bg_h_color_view' => 'separately'
                         ]
                     ],
-                    'sa_social_icons_border_hover' => [
-                        'label' => __('', SHORTCODE_ADDOONS),
-                        'type' => Controls::BORDER, 
-                        'selector' => [
-                            '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3-{{KEY}}  .member-icon:hover' => '',
-                        ],
-                        'controller' => 'add_group_control',
+                    'sa_social_icons_border_hover_color' => [
+                        'label' => __('Border Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'oparetor' => 'RGB',
+                        'default' => 'rgba(59,89,153,1.00)',
+                        
                         'conditional' => Controls::OUTSIDE,
                         'condition' => [
-                            'sa_social_icons_border_hover' => 'separately'
+                            'sa_social_icons_bg_color_view' => 'separately'
                         ]
                     ],
                     'shortcode-addons-start-tab2-end' => [
