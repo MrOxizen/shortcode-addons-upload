@@ -46,9 +46,8 @@ class Style_4 extends Templates {
 
         echo '  <div class="oxi-addons-divider-sd4 ' . $style['sa_sd_align'] . '">
                      <div class="oxi-addons-divider ' . (array_key_exists('sa_sd_scroll', $style) && $style['sa_sd_scroll'] != '0' ? $style['sa_sd_scroll'] : '') . '">
-                </div>
-             
-            ';
+                    </div>
+                </div>';
     }
 
     public function old_render() {

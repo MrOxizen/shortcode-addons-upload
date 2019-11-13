@@ -45,10 +45,9 @@ class Style_12 extends Templates {
     public function default_render($style, $child, $admin) {
 
         echo '  <div class="oxi-addons-divider-sd12 ' . $style['sa_sd_align'] . '">
-                     <div class="oxi-addons-divider ' . (array_key_exists('sa_sd_scroll', $style) && $style['sa_sd_scroll'] != '0' ? $style['sa_sd_scroll'] : '') . '">
-                </div>
-             
-            ';
+                    <div class="oxi-addons-divider ' . (array_key_exists('sa_sd_scroll', $style) && $style['sa_sd_scroll'] != '0' ? $style['sa_sd_scroll'] : '') . '">
+                    </div>
+                </div>';
     }
 
     public function old_render() {
