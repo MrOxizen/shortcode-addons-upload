@@ -90,12 +90,12 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 2000,
+                    'size' => 100,
                 ],
                 'range' => [
                     'px' => [
                         'min' => 1,
-                        'max' => 10000,
+                        'max' => 1000,
                         'step' => 1,
                     ],
                     
@@ -110,12 +110,12 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 70,
+                    'size' => 600,
                 ],
                 'range' => [
                     'px' => [
                         'min' => 1,
-                        'max' => 2000,
+                        'max' => 1000,
                         'step' => 1,
                     ],
                     
