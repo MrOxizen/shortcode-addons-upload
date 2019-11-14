@@ -43,7 +43,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'Limited',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-before-text.oxi-addons-text' => ''
+            ],
                 ]
         );
         $this->add_group_control(
@@ -234,7 +236,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'Unlimited',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-CT-1 .oxi-addons-after-text' => ''
+            ],
                 ]
         );
         $this->add_group_control(
@@ -623,8 +627,10 @@ class Style_1 extends AdminStyle {
                 'sa_ct_first_content', $this->style, [
             'label' => __('Content', SHORTCODE_ADDOONS),
             'type' => Controls::TEXTAREA,
-            'loader' => TRUE,
             'placeholder' => 'Your Content Here',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-CT-1-content-One' => ''
+            ],
                 ]
         );
         $this->end_controls_section();
@@ -641,8 +647,10 @@ class Style_1 extends AdminStyle {
                 'sa_ct_second_content', $this->style, [
             'label' => __('Content', SHORTCODE_ADDOONS),
             'type' => Controls::TEXTAREA,
-            'loader' => TRUE,
             'placeholder' => 'Your Content Here',
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-CT-1-content-two' => ''
+            ],
                 ]
         );
         $this->end_controls_section();
