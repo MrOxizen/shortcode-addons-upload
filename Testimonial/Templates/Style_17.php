@@ -44,7 +44,7 @@ class Style_17 extends Templates {
             }
             if (array_key_exists('sa_testi_profile_company', $value) && $value['sa_testi_profile_company'] || array_key_exists('sa_testi_profile_designation', $value) && $value['sa_testi_profile_designation'] != '') {
                 $company = '<div class="oxi_addons_testimonial_working oxi_addons_testimonial_working-'.$key.'">
-                                    ' . $this->text_render($value['sa_testi_profile_designation']) . '<a ' . $this->url_render('sa_testi_profile_company_url', $value) . '>' . $this->text_render($value['sa_testi_profile_company']) . '</a>
+                                    ' . $this->text_render($value['sa_testi_profile_designation']) . ' <a ' . $this->url_render('sa_testi_profile_company_url', $value) . '>' . $this->text_render($value['sa_testi_profile_company']) . '</a>
                                  </div>';
             }
 

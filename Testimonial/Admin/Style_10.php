@@ -451,6 +451,16 @@ class Style_10 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_control(
+                'sa-testimonial-profile-name-color-hover', $this->style, [
+            'label' => __('Hover Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-ten-padding .oxi-testimonials-style-ten-name:hover' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
 
         $this->add_group_control(
                 'sa-testimonial-profile-name-shadow', $this->style, [

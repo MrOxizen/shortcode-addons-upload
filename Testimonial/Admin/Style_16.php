@@ -293,7 +293,7 @@ class Style_16 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-sixteen-padding .oxi-testimonials-style-sixteen-image' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-sixteen-padding .oxi-testimonials-style-sixteen-image-parent' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );

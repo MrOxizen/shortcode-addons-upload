@@ -16,15 +16,6 @@
     overflow: hidden
 }
 
-.oxi_addons_testimonial_eighteen_box:hover {
-    background: rgba(38, 173, 173, 1);
-    border-style: none;
-    border-color: #d1d1d1;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: px 5px 10px px rgba(61, 61, 61, 1);
-    ;
-    transition: all .3s linear
-}
 
 .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_content {
     width: 100%;
@@ -81,10 +72,6 @@
     line-height: 1.3;
     text-align: left;
     letter-spacing: 1px;
-}
-
-.oxi_addons_testimonial_eighteen_box:hover .oxi_addons_testimonial_name {
-    color: #ffffff
 }
 
 .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_working {
