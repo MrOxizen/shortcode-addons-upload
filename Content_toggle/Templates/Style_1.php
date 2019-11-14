@@ -49,14 +49,14 @@ class Style_1 extends Templates {
     }
 
     public function inline_public_jquery() {
-        
-         $jquery = 'jQuery(document).ready(function () {
-            jQuery(".oxi-addons-CT-1 .oxi-addons-switch").click(function () {
+
+        $jquery = 'jQuery(document).ready(function () {
+            jQuery(".' . $this->WRAPPER . ' .oxi-addons-CT-1 .oxi-addons-switch").click(function () {
                 jQuery(this).toggleClass("oxi-addons-switchOn");
                 jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-One").toggleClass("oxi-active");
                 jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-two").toggleClass("oxi-active");
             });
-            jQuery(".oxi-addons-CT-1 .oxi-addons-text").click(function () {
+            jQuery(".' . $this->WRAPPER . ' .oxi-addons-CT-1 .oxi-addons-text").click(function () {
                 jQuery(".oxi-addons-CT-1 .oxi-addons-switch").toggleClass("oxi-addons-switchOn");
                 jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-One").toggleClass("oxi-active");
                 jQuery(".oxi-addons-CT-1 .oxi-addons-CT-1-content-two").toggleClass("oxi-active");
