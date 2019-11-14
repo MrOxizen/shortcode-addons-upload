@@ -66,7 +66,7 @@ class Style_9 extends Templates {
                                 </div>
                             </div>';
             }
-            echo '<div class="sa_element_ac_style_9 " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+            echo '<div class="sa_element_ac_style_9 sa_element_ac_style_9_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                         <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id' . $key . '">
                             ' . $number . '                            
                             ' . $heading . '

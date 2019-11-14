@@ -98,7 +98,7 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Lorem Ipsum Dolor',
                     'selector' => [
-                        '{{WRAPPER}} .oa_ac_style_9_{{KEY}} .heading-data' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_9_{{KEY}} .heading-data' => '',
                     ],
                 ],
                 'sa_el_ac_desc_adding' => [
@@ -106,7 +106,7 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
                     'selector' => [
-                        '{{WRAPPER}} .oa_ac_style_9_{{KEY}} .oxi-addons-ac-C' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_9_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
                 ],
             ],
@@ -148,7 +148,7 @@ class Style_9 extends AdminStyle {
 //            'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -314,7 +314,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -393,7 +393,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -692,7 +692,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -927,7 +927,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

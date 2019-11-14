@@ -88,7 +88,7 @@ class Style_7 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Lorem Ipsum Dolor',
                     'selector' => [
-                        '{{WRAPPER}} .oa_ac_style_1_{{KEY}} .heading-data' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_7_{{KEY}} .heading-data' => '',
                     ],
                 ],
                 'sa_el_ac_desc_adding' => [
@@ -96,7 +96,7 @@ class Style_7 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum has been the industrys standard amar sonar bangla ami tomay valobashi of type and scrambled it to make a type specimen book. ',
                     'selector' => [
-                        '{{WRAPPER}} .oa_ac_style_1_{{KEY}} .oxi-addons-ac-C' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_7_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
                 ],
             ],
@@ -138,7 +138,7 @@ class Style_7 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -279,7 +279,7 @@ class Style_7 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -563,7 +563,7 @@ class Style_7 extends AdminStyle {
             'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -593,7 +593,7 @@ class Style_7 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
