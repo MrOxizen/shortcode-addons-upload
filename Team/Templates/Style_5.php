@@ -12,13 +12,11 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_5 extends Templates
-{
-    public function default_render($style, $child, $admin)
-    {
+class Style_5 extends Templates {
+
+    public function default_render($style, $child, $admin) {
 
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
@@ -57,7 +55,7 @@ class Style_5 extends Templates
                                 ' . $name . '
                                 ' . $divider . '
                                 ' . $desgnation . '
-                            </div>
+                            
                             <div class="member-icons">';
                                 $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
                                 foreach ($datas as $key => $data) {
@@ -67,9 +65,10 @@ class Style_5 extends Templates
                                     if ($data['sa_social_icons_icon'] != '') {
                                         $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
                                     }
-                                    echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
+                                    echo '<a ' . $link . ' class = "member-icon ' . $style['sa_social_icons_border'] . ' member-icon-' . $key . '">' . $icon . '</a>';
                                 }
-                        echo  '</div>
+                                echo '</div>
+                            </div>
                         </div>
                     </div>
                  </div>';
@@ -87,34 +86,67 @@ class Style_5 extends Templates
         }
     }
 
+    public function inline_public_css() {
+        $childdata = $this->child;
+        $styledata = $this->style;
 
-    public function old_render()
-    {
+        $css = '';
+        foreach ($childdata as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
+            $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
+
+            foreach ($datas as $key => $data) {
+                $css .= '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-5.oxi-addons-parent-wrapper-style-5-' . $v['id'] . ' .member-icon.member-icon-' . $key . ' .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color'] . ';' : '' ) . '
+                            
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-5.oxi-addons-parent-wrapper-style-5-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-5.oxi-addons-parent-wrapper-style-5-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-5.oxi-addons-parent-wrapper-style-5-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color_hover'] . ';' : '' ) . '
+                           }
+                           .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-5.oxi-addons-parent-wrapper-style-5-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color_hover'] . ';' : '' ) . '
+                        }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-5.oxi-addons-parent-wrapper-style-5-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_hover_color'] . ';' : '' ) . '
+                        }';
+            }
+        }
+        return $css;
+    }
+
+    public function old_render() {
         $listdata = $this->child;
         $styledata = $this->dbdata;
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
         $styledata = explode('|', $stylefiles[0]);
         $css = '';
-    echo '<div class="oxi-addons-container">
+        echo '<div class="oxi-addons-container">
             <div class="oxi-addons-row">';
-    foreach ($listdata as $value) {
-        $listid = $value['id'];
-        $data = explode('||#||', $value['files']);
-        $socialdata = '';
-        if ($data[7] != '{|}{|}') {
-            $socialmodal = explode("{|}||{|}", $data[7]);
-            $socialdata .= '<div class="member-icons">';
-            foreach ($socialmodal as $SOC) {
-                $rand = rand();
-                if (!empty($SOC)) {
-                    $socialalldata = explode("{|}{|}", $SOC);
-                    $socialdata .= ' <a href="' . OxiAddonsUrlConvert($socialalldata[1]) . '" class="member-icon member-iconsdd member-icon-' . $rand . '">' . oxi_addons_font_awesome($socialalldata[0]) . '</a>';
-                    $socialstyle = explode("{|}||{|}", $stylefiles[1]);
-                    foreach ($socialstyle as $socialSS) {
-                        $styledatacss = explode("{|}{|}", $socialSS);
-                        if (!empty($styledatacss[1]) && $styledatacss[1] == $socialalldata[0]) {
-                            $css .= '   .oxi-addons-team-' . $oxiid . ' .member-icon.member-icon-' . $rand . ' .oxi-icons{
+        foreach ($listdata as $value) {
+            $listid = $value['id'];
+            $data = explode('||#||', $value['files']);
+            $socialdata = '';
+            if ($data[7] != '{|}{|}') {
+                $socialmodal = explode("{|}||{|}", $data[7]);
+                $socialdata .= '<div class="member-icons">';
+                foreach ($socialmodal as $SOC) {
+                    $rand = rand();
+                    if (!empty($SOC)) {
+                        $socialalldata = explode("{|}{|}", $SOC);
+                        $socialdata .= ' <a href="' . OxiAddonsUrlConvert($socialalldata[1]) . '" class="member-icon member-iconsdd member-icon-' . $rand . '">' . oxi_addons_font_awesome($socialalldata[0]) . '</a>';
+                        $socialstyle = explode("{|}||{|}", $stylefiles[1]);
+                        foreach ($socialstyle as $socialSS) {
+                            $styledatacss = explode("{|}{|}", $socialSS);
+                            if (!empty($styledatacss[1]) && $styledatacss[1] == $socialalldata[0]) {
+                                $css .= '   .oxi-addons-team-' . $oxiid . ' .member-icon.member-icon-' . $rand . ' .oxi-icons{
                                             color: ' . $styledatacss[2] . ';
                                         }
                                         .oxi-addons-team-' . $oxiid . ' .member-icon.member-icon-' . $rand . '{
@@ -128,14 +160,14 @@ class Style_5 extends Templates
                                             background: ' . $styledatacss[6] . ';
                                             border-color: ' . $styledatacss[7] . ' !important;
                                         }';
+                            }
                         }
                     }
                 }
+                $socialdata .= '</div>';
             }
-            $socialdata .= '</div>';
-        }
-        echo '<div class="' . OxiAddonsItemRows($styledata, 3) . ' oxi-addons-team-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 65) . '>';
-        echo '  <div class="oxi-team-show-body">
+            echo '<div class="' . OxiAddonsItemRows($styledata, 3) . ' oxi-addons-team-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 65) . '>';
+            echo '  <div class="oxi-team-show-body">
                     <div class="oxi-team-show  oxi-team-center">
                         <div class="member-photo">
                             <div class="oxi-team-pic-size">
@@ -150,60 +182,60 @@ class Style_5 extends Templates
                             ' . $socialdata . ' 
                             </div>
                     </div>
-                </div>'; 
-        echo '</div> ';
-    }
-    echo ' </div>
+                </div>';
+            echo '</div> ';
+        }
+        echo ' </div>
         </div> ';
-    $Bordercolor = strpos($styledata[97], 'Left');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
+        $Bordercolor = strpos($styledata[97], 'Left');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
                         border-left-color: transparent !important;
                      }';
-    }
-    $Bordercolor = strpos($styledata[97], 'Right');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
+        }
+        $Bordercolor = strpos($styledata[97], 'Right');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
                         border-right-color: transparent !important;
                      }';
-    }
-    $Bordercolor = strpos($styledata[97], 'Top');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
+        }
+        $Bordercolor = strpos($styledata[97], 'Top');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
                         border-top-color: transparent !important;
                      }';
-    }
-    $Bordercolor = strpos($styledata[97], 'Bottom');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
+        }
+        $Bordercolor = strpos($styledata[97], 'Bottom');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon.member-iconsdd{
                         border-bottom-color: transparent !important;
                      }';
-    }
-    $Bordercolor = strpos($styledata[99], 'Left');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
+        }
+        $Bordercolor = strpos($styledata[99], 'Left');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
                         border-left-color: transparent !important;
                      }';
-    }
-    $Bordercolor = strpos($styledata[99], 'Right');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
+        }
+        $Bordercolor = strpos($styledata[99], 'Right');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
                         border-right-color: transparent !important;
                      }';
-    }
-    $Bordercolor = strpos($styledata[99], 'Top');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
+        }
+        $Bordercolor = strpos($styledata[99], 'Top');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
                         border-top-color: transparent !important;
                      }';
-    }
-    $Bordercolor = strpos($styledata[99], 'Bottom');
-    if ($Bordercolor === FALSE) {
-        $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
+        }
+        $Bordercolor = strpos($styledata[99], 'Bottom');
+        if ($Bordercolor === FALSE) {
+            $css .= '.oxi-addons-team-' . $oxiid . ' .member-icon:hover.member-iconsdd{
                         border-bottom-color: transparent !important;
                      }';
-    }
-    $css .= '.oxi-addons-team-' . $oxiid . '{
+        }
+        $css .= '.oxi-addons-team-' . $oxiid . '{
                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 27) . ';
             }
             .oxi-addons-team-' . $oxiid . ' .oxi-team-show-body {
@@ -391,4 +423,5 @@ class Style_5 extends Templates
             }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
+
 }
