@@ -18,8 +18,8 @@ class Style_2 extends Templates {
 
     public function public_jquery() {
         wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $this->JSHANDLE = 'jquery-counterup-min';
-        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery() {
@@ -295,7 +295,7 @@ class Style_2 extends Templates {
                         time: ' . ($styledata[189] * 1000) . '
                     })';
         wp_add_inline_style('shortcode-addons-style', $css);
-        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min.js', false, SA_ADDONS_PLUGIN_VERSION);
         wp_add_inline_script('jquery.countdown.min', $jquery);
     }
 
