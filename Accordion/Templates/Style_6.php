@@ -55,15 +55,15 @@ class Style_6 extends Templates {
                 $heading = '<div class="oxi-addonsAC-SX-heading">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addonsAC-SX-C" id="oxi-addonsAC-SX-H-id' . $key . '">
+                $details = '<div class="oxi-addonsAC-SX-C" id="oxi-addonsAC-SX-H-id-'.$this->oxiid.'-' . $key . '">
                             <div class="oxi-addonsAC-SX-C-b">
                                 ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                             </div>
                         </div>';
             }
             echo '<div class="sa_whole_div_ac_style_6">';
-            echo '<div class="sa_element_ac_style_6    sa_element_ac_style_6_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                            <div class="oxi-addonsAC-SX-H" ref="#oxi-addonsAC-SX-H-id' . $key . '">
+            echo '<div class="sa_element_ac_style_6    sa_element_ac_style_'.$this->oxiid.'_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                            <div class="oxi-addonsAC-SX-H" ref="#oxi-addonsAC-SX-H-id-'.$this->oxiid.'-' . $key . '">
                                 ' . $active_icon . '
                                 ' . $inactive_icon . '
                                 ' . $icon . '

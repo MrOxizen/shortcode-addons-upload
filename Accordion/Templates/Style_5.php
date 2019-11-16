@@ -52,11 +52,11 @@ class Style_5 extends Templates {
 
 
             echo '<div class=""  ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                    <div class="sa_el_ac_style_5    sa_el_ac_style_5_' . $key . '">
-                        <div class="oxi-addonsAC-FI-Content-details oxi-addonsAC-FI-Content-details-' . $key . '"  ref="#oxi-addonsAC-FI-Content-details-' . $key . '">
+                    <div class="sa_el_ac_style_5 sa_el_ac_style_'.$this->oxiid.'_' . $key . '">
+                        <div class="oxi-addonsAC-FI-Content-details oxi-addonsAC-FI-Content-details-' . $key . '"  ref="#oxi-addonsAC-FI-Content-details-'.$this->oxiid.'-' . $key . '">
                             ' . $title . '
                         </div>
-                        <div class="oxi-addonsAC-Fi-content" id="oxi-addonsAC-FI-Content-details-' . $key . '">
+                        <div class="oxi-addonsAC-Fi-content" id="oxi-addonsAC-FI-Content-details-'.$this->oxiid.'-' . $key . '">
                             ' . $details . '
                         </div>
                     </div>';
@@ -77,29 +77,29 @@ class Style_5 extends Templates {
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] == 'randomly'):
                 $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-FI-Content-details").click(function () {
-                        if(jQuery(this).hasClass("oxi-active")){
-                            var activeTab = jQuery(this).attr("ref");
-                            jQuery(activeTab).slideUp();
-                            jQuery(this).removeClass("oxi-active");
-                        }else{
-                            var activeTab = jQuery(this).attr("ref");
-                            jQuery(activeTab).slideDown();
-                            jQuery(this).addClass("oxi-active");
-                        }
-                    });';
+                                if(jQuery(this).hasClass("oxi-active")){
+                                    var activeTab = jQuery(this).attr("ref");
+                                    jQuery(activeTab).slideUp();
+                                    jQuery(this).removeClass("oxi-active");
+                                }else{
+                                    var activeTab = jQuery(this).attr("ref");
+                                    jQuery(activeTab).slideDown();
+                                    jQuery(this).addClass("oxi-active");
+                                }
+                            });';
             else:
                 $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-FI-Content-details").click(function () {
-                        if(jQuery(this).hasClass("oxi-active")){
-                            return false;
-                        }else{
-                            jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-Fi-content").slideUp();
-                            var activeTab = jQuery(this).attr("ref");
-                            jQuery(activeTab).slideDown();
-                            jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-FI-Content-details").removeClass("oxi-active");
-                            jQuery(this).addClass("oxi-active");
-                        }
-                    });
-                    ';
+                                    if(jQuery(this).hasClass("oxi-active")){
+                                        return false;
+                                    }else{
+                                        jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-Fi-content").slideUp();
+                                        var activeTab = jQuery(this).attr("ref");
+                                        jQuery(activeTab).slideDown();
+                                        jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-FI-Content-details").removeClass("oxi-active");
+                                        jQuery(this).addClass("oxi-active");
+                                    }
+                                });
+                                ';
             endif;
 
         endif;

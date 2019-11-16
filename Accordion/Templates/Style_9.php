@@ -60,14 +60,14 @@ class Style_9 extends Templates {
                 $inactive_icon = '<div class="oxi-addons-AC-N-deactive"  ' . $arrow_position . '>' . $this->font_awesome_render($data['sa_el_ac_opening_deactive_icon_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-AC-N-C" id="oxi-addons-AC-N-H-id' . $key . '">
+                $details = '<div class="oxi-addons-AC-N-C" id="oxi-addons-AC-N-H-id-'.$this->oxiid.'-' . $key . '">
                                 <div class="oxi-addons-AC-N-C-b">
                                     ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                                 </div>
                             </div>';
             }
-            echo '<div class="sa_element_ac_style_9 sa_element_ac_style_9_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                        <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id' . $key . '">
+            echo '<div class="sa_element_ac_style_9 sa_element_ac_style_'.$this->oxiid.'_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                        <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id-'.$this->oxiid.'-' . $key . '">
                             ' . $number . '                            
                             ' . $heading . '
                             ' . $active_icon . '

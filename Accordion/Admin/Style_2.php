@@ -88,7 +88,7 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Lorem Ipsum Dolor',
                     'selector' => [
-                        '{{WRAPPER}} .sa_ac_style_2_{{KEY}} .heading-data' => '',
+                        '{{WRAPPER}} .sa_ac_style_'.$this->oxiid.'_{{KEY}} .heading-data' => '',
                     ],
                 ],
                 'sa_el_ac_desc_adding' => [
@@ -96,7 +96,7 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
                     'selector' => [
-                        '{{WRAPPER}} .sa_ac_style_2_{{KEY}} .oxi-addons-ac-C' => '',
+                        '{{WRAPPER}} .sa_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
                 ],
             ],

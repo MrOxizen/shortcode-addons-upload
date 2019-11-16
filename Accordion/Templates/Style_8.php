@@ -72,14 +72,14 @@ class Style_8 extends Templates {
                 $heading = '<div class="oxi-addons-AC-EG-heading">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-AC-EG-C" id="oxi-addons-AC-EG-H-id-' . $key . '">
+                $details = '<div class="oxi-addons-AC-EG-C" id="oxi-addons-AC-EG-H-id-'.$this->oxiid.'-' . $key . '">
                                 <div class="oxi-addons-AC-EG-C-b">
                                     ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                                 </div>
                             </div>';
             }
-            echo '<div class="sa_element_ac_style_8 sa_element_ac_style_8_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                        <div class="oxi-addons-AC-EG-H" ref="#oxi-addons-AC-EG-H-id-' . $key . '">
+            echo '<div class="sa_element_ac_style_8 sa_element_ac_style_'.$this->oxiid.'_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                        <div class="oxi-addons-AC-EG-H" ref="#oxi-addons-AC-EG-H-id-'.$this->oxiid.'-' . $key . '">
                             ' . $active_icon . '
                             ' . $inactive_icon . '
                             ' . $icon . '

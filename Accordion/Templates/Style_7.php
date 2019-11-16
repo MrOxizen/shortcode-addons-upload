@@ -46,14 +46,14 @@ class Style_7 extends Templates {
                 $title = '<div class="oxi-addons-AC-SV-header">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-AC-SV-details" id="oxi-addons-AC-SV-' . $key . '">
+                $details = '<div class="oxi-addons-AC-SV-details" id="oxi-addons-AC-SV-'.$this->oxiid.'-' . $key . '">
                                  ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                             </div>';
             }
 
 
-            echo '<div class="sa_element_ac_style_7  sa_element_ac_style_7_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                        <div class="oxi-addons-AC-SV-panel"  ref="#oxi-addons-AC-SV-' . $key . '">
+            echo '<div class="sa_element_ac_style_7  sa_element_ac_style_'.$this->oxiid.'_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                        <div class="oxi-addons-AC-SV-panel"  ref="#oxi-addons-AC-SV-'.$this->oxiid.'-' . $key . '">
                             ' . $icon . '
                             ' . $title . '
                             ' . $details . '

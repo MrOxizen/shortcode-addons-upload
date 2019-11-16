@@ -60,7 +60,7 @@ class Style_1 extends Templates {
                             </div>';
             }
 
-            echo '<div class="oa_ac_style_1 oa_ac_style_1_' . $key . '"   ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+            echo '<div class="oa_ac_style_1 oa_ac_style_'.$this->oxiid.'_' . $key . '"   ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                         <div class="oxi-addons-ac-H">';
             echo $heading;
             echo $icon;

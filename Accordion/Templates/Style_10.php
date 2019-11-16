@@ -65,7 +65,7 @@ class Style_10 extends Templates {
                 }
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-AC-N-C" id="oxi-addons-AC-N-H-id-'.$key.'">
+                $details = '<div class="oxi-addons-AC-N-C" id="oxi-addons-AC-N-H-id-'.$this->oxiid.'-'.$key.'">
                             <div class="oxi-addons-AC-N-C-b">
                                 ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                             </div>
@@ -73,9 +73,9 @@ class Style_10 extends Templates {
             }
             
             
-            echo '<div class="sa_element_ac_style_10   sa_element_ac_style_10_'.$key.'" ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+            echo '<div class="sa_element_ac_style_10   sa_element_ac_style_'.$this->oxiid.'_'.$key.'" ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                     <div class="oxi-addons-AC-T-row">
-                        <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id-'.$key.'">
+                        <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id-'.$this->oxiid.'-'.$key.'">
                                 ' . $main_icon . '
                                 ' . $heading . '
                                 ' . $active_icon . '

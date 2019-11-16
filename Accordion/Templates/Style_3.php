@@ -58,7 +58,7 @@ class Style_3 extends Templates {
             }
 
             echo '<div class="" ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                            <div class="sa_ac_style_3 sa_ac_style_3_' . $key . '" >
+                            <div class="sa_ac_style_3 sa_ac_style_'.$this->oxiid.'_' . $key . '" >
                                 <div class="oxi-addonsAC-heading">
                                     ' . $icon . '
                                     ' . $heading . '
