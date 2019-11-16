@@ -80,8 +80,8 @@ class Style_4 extends Templates {
         if (array_key_exists('sa_accordion_data', $this->style)):
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
                 if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
-                    $jquery .= 'jQuery(".sa_el_ac_style_4_' . $key . ' .oxi-addonsAC-F-heading").addClass("oxi-active");
-                                jQuery(".sa_el_ac_style_4_' . $key . ' .oxi-addonsAC-F-content").slideDown();';
+                    $jquery .= 'jQuery(".' . $this->WRAPPER . ' .sa_el_ac_style_4_' . $key . ' .oxi-addonsAC-F-heading").addClass("oxi-active");
+                                jQuery(".' . $this->WRAPPER . ' .sa_el_ac_style_4_' . $key . ' .oxi-addonsAC-F-content").slideDown();';
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] == 'onebyone'):
