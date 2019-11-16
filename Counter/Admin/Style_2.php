@@ -12,7 +12,6 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
@@ -52,29 +51,34 @@ class Style_2 extends AdminStyle {
                     'label' => __('Title', SHORTCODE_ADDOONS),
                     'placeholder' => __('Title', SHORTCODE_ADDOONS),
                     'default' => 'Title',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-title-{{KEY}}' => ''
+                    ],
                 ],
                 'sa_counter_number' => [
                     'type' => Controls::NUMBER,
                     'label' => __('Number', SHORTCODE_ADDOONS),
                     'placeholder' => __('Number', SHORTCODE_ADDOONS),
                     'default' => 'Number',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-number-{{KEY}}' => ''
+                    ],
                 ],
                 'sa_counter_icon_class' => [
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
-                    'loader' => TRUE,
-                  
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-icon-{{KEY}}' => ''
+                    ],
                 ],
             ],
             'title_field' => 'sa_counter_title_text',
                 ]
         );
 
-        
+
         $this->add_control(
                 'sa_counter_duration', $this->style, [
             'label' => __('Counter Duration (ms)', SHORTCODE_ADDOONS),
@@ -156,12 +160,12 @@ class Style_2 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-         $this->add_rearrange_control(
+        $this->add_rearrange_control(
                 'sa_counter_rearrange', $this->style, [
             'type' => Controls::REARRANGE,
             'label' => __(' ', SHORTCODE_ADDOONS),
             'default' => 'title,number,divider,',
-                    'loader'=>TRUE,
+            'loader' => TRUE,
             'fields' => [
                 'title' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),
@@ -169,13 +173,13 @@ class Style_2 extends AdminStyle {
                 'number' => [
                     'label' => __('Number', SHORTCODE_ADDOONS),
                 ],
-               'divider' => [
+                'divider' => [
                     'label' => __('Divider', SHORTCODE_ADDOONS),
                 ],
             ],
                 ]
         );
-       
+
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
@@ -204,7 +208,7 @@ class Style_2 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_counter_title_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
@@ -389,7 +393,7 @@ class Style_2 extends AdminStyle {
                     'title' => __('Left', SHORTCODE_ADDOONS),
                     'icon' => 'fa fa-align-left',
                 ],
-                  'right' => [
+                'right' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
                     'icon' => 'fa fa-align-right',
                 ],
@@ -397,8 +401,7 @@ class Style_2 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-counter-style2 .oxi-addons-counter-title' => 'text-align: {{VALUE}} !important;',
                 '{{WRAPPER}} .oxi-addons-counter-style2 .oxi-addons-counter-number' => 'text-align: {{VALUE}} !important;',
-             ],
-                    
+            ],
                 ]
         );
         $this->add_responsive_control(

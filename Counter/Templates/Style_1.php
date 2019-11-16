@@ -17,20 +17,18 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function public_jquery() {
+        wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $this->JSHANDLE = 'jquery-counterup-min';
         wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        
     }
 
     public function inline_public_jquery() {
         $style = $this->style;
-        $jquery = 'jQuery(".oxi-addons-counter-style1-' . $this->WRAPPER . ' .oxi-addons-counter-number").counterUp({
+        $jquery = '$(".oxi-addons-counter-style1-' . $this->WRAPPER . ' .oxi-addons-counter-number").counterUp({
                     delay: ' . $style['sa_counter_delay-size'] . ',
                     time: ' . $style['sa_counter_duration-size'] . '
                 })';
         return $jquery;
-        ;
     }
 
     public function default_render($style, $child, $admin) {
@@ -39,14 +37,14 @@ class Style_1 extends Templates {
         foreach ($repeater as $key => $value) {
             if (array_key_exists('sa_counter_text_on', $style) && $style['sa_counter_text_on'] != '0') {
                 $title = '<div class="oxi-addons-counter-body-data">
-                                <div class="oxi-addons-counter-title">
+                                <div class="oxi-addons-counter-title oxi-addons-counter-title-' . $key . '">
                                     ' . $this->text_render($value['sa_counter_title_text']) . '
                                 </div>
                          </div>';
             }
             if (array_key_exists('sa_counter_icon', $style) && $style['sa_counter_icon'] != '0') {
                 $icon = '<div class="oxi-addons-counter-body-data"> 
-                            <div class="oxi-addons-counter-icon">
+                            <div class="oxi-addons-counter-icon oxi-addons-counter-icon-' . $key . '">
                                 ' . $this->font_awesome_render($value['sa_counter_icon_class']) . '
                             </div>
                         </div>';
@@ -62,14 +60,14 @@ class Style_1 extends Templates {
             }
             if (array_key_exists('sa_counter_number_on', $style) && $style['sa_counter_number_on'] != '0') {
                 $number = '<div class="oxi-addons-counter-body-data">
-                                <div class="oxi-addons-counter-number">
+                                <div class="oxi-addons-counter-number oxi-addons-counter-number-' . $key . '">
                                     ' . $this->text_render($value['sa_counter_number']) . '
                                 </div>
                             </div>';
             }
 
             echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
-                    <div class="oxi-addons-counter-style1 oxi-addons-counter-style1-'.$this->WRAPPER.' ' . $style['sa_counter_align'] . '"> ';
+                    <div class="oxi-addons-counter-style1 oxi-addons-counter-style1-' . $this->WRAPPER . ' ' . $style['sa_counter_align'] . '"> ';
 
             $rearrange = explode(',', $style['sa_counter_rearrange']);
             foreach ($rearrange as $arrange) {

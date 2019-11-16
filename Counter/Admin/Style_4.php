@@ -51,14 +51,18 @@ class Style_4 extends AdminStyle {
                     'label' => __('Title', SHORTCODE_ADDOONS),
                     'placeholder' => __('Title', SHORTCODE_ADDOONS),
                     'default' => 'Title',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-title-{{KEY}}' => ''
+                    ],
                 ],
                 'sa_counter_number' => [
                     'type' => Controls::NUMBER,
                     'label' => __('Number', SHORTCODE_ADDOONS),
                     'placeholder' => __('Number', SHORTCODE_ADDOONS),
                     'default' => 'Number',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-number-{{KEY}}' => ''
+                    ],
                 ],
             ],
             'title_field' => 'sa_counter_title_text',
@@ -268,12 +272,12 @@ class Style_4 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-         $this->add_rearrange_control(
+        $this->add_rearrange_control(
                 'sa_counter_rearrange', $this->style, [
             'type' => Controls::REARRANGE,
             'label' => __(' ', SHORTCODE_ADDOONS),
             'default' => 'title,number,icon,divider,',
-                    'loader'=>TRUE,
+            'loader' => TRUE,
             'fields' => [
                 'title' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),
@@ -281,7 +285,6 @@ class Style_4 extends AdminStyle {
                 'number' => [
                     'label' => __('Number', SHORTCODE_ADDOONS),
                 ],
-               
             ],
                 ]
         );

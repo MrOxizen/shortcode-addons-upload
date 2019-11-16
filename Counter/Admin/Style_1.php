@@ -51,21 +51,27 @@ class Style_1 extends AdminStyle {
                     'label' => __('Title', SHORTCODE_ADDOONS),
                     'placeholder' => __('Title', SHORTCODE_ADDOONS),
                     'default' => 'Title',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-title-{{KEY}}'=> ''
+                    ],
                 ],
                 'sa_counter_number' => [
                     'type' => Controls::NUMBER,
                     'label' => __('Number', SHORTCODE_ADDOONS),
                     'placeholder' => __('Number', SHORTCODE_ADDOONS),
                     'default' => 'Number',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-number-{{KEY}}'=> ''
+                    ],
                 ],
                 'sa_counter_icon_class' => [
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-icon-{{KEY}}'=> ''
+                    ],
                 ],
             ],
             'title_field' => 'sa_counter_title_text',
