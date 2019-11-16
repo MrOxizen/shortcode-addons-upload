@@ -76,7 +76,7 @@ class Style_5 extends Templates {
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] == 'randomly'):
-                $jquery .= 'jQuery(".oxi-addonsAC-FI-Content-details").click(function () {
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-FI-Content-details").click(function () {
                         if(jQuery(this).hasClass("oxi-active")){
                             var activeTab = jQuery(this).attr("ref");
                             jQuery(activeTab).slideUp();
@@ -88,14 +88,14 @@ class Style_5 extends Templates {
                         }
                     });';
             else:
-                $jquery .= 'jQuery(".oxi-addonsAC-FI-Content-details").click(function () {
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-FI-Content-details").click(function () {
                         if(jQuery(this).hasClass("oxi-active")){
                             return false;
                         }else{
-                            jQuery(".oxi-addonsAC-Fi-content").slideUp();
+                            jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-Fi-content").slideUp();
                             var activeTab = jQuery(this).attr("ref");
                             jQuery(activeTab).slideDown();
-                            jQuery(".oxi-addonsAC-FI-Content-details").removeClass("oxi-active");
+                            jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-FI-Content-details").removeClass("oxi-active");
                             jQuery(this).addClass("oxi-active");
                         }
                     });

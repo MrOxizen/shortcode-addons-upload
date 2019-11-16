@@ -106,7 +106,7 @@ class Style_10 extends Templates {
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] != 'onebyone'):
-                $jquery .= 'jQuery(".oxi-addons-AC-N-H").click(function () {
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-N-H").click(function () {
                         if(jQuery(this).hasClass("active")){
                             var activeTab = jQuery(this).attr("ref");
                             jQuery(activeTab).slideUp();
@@ -118,14 +118,14 @@ class Style_10 extends Templates {
                         }
                     });';
             else:
-                $jquery .= 'jQuery(".oxi-addons-AC-N-H").click(function () {
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-N-H").click(function () {
                         if(jQuery(this).hasClass("active")){
                             return false;
                         }else{
-                            jQuery(".oxi-addons-AC-N-C").slideUp();
+                            jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-N-C").slideUp();
                             var activeTab = jQuery(this).attr("ref");
                             jQuery(activeTab).slideDown();
-                            jQuery(".oxi-addons-AC-N-H").removeClass("active");
+                            jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-N-H").removeClass("active");
                             jQuery(this).addClass("active");
                         }
                     });
