@@ -64,6 +64,20 @@ class Style_4 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addons-counter-number-{{KEY}}' => ''
                     ],
                 ],
+                'sa_counter_bg' => [
+                    'type' => Controls::BACKGROUND,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-style4  .oxi-addons-counter-{{KEY}}' => ''
+                    ],
+                ],
+                'sa_counter_br' => [
+                    'type' => Controls::BORDER,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-counter-style4 .oxi-addons-counter-{{KEY}}' => ''
+                    ],
+                ],
             ],
             'title_field' => 'sa_counter_title_text',
                 ]
@@ -140,22 +154,8 @@ class Style_4 extends AdminStyle {
             'showing' => FALSE,
                 ]
         );
-        $this->add_group_control(
-                'sa_counter_bg', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style4  .oxi-addons-counter' => ''
-            ],]
-        );
-
-        $this->add_group_control(
-                'sa_counter_br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-counter-style4  .oxi-addons-counter' => ''
-            ],
-                ]
-        );
+       
+       
 
         $this->add_responsive_control(
                 'sa_counter_br_radius', $this->style, [
@@ -276,7 +276,7 @@ class Style_4 extends AdminStyle {
                 'sa_counter_rearrange', $this->style, [
             'type' => Controls::REARRANGE,
             'label' => __(' ', SHORTCODE_ADDOONS),
-            'default' => 'title,number,icon,divider,',
+            'default' => 'title,number,',
             'loader' => TRUE,
             'fields' => [
                 'title' => [
