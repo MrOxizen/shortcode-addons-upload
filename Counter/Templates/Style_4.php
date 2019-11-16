@@ -33,7 +33,7 @@ class Style_4 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-        
+
         $repeater = (array_key_exists('sa_counter_repeater', $style) && is_array($style['sa_counter_repeater'])) ? $style['sa_counter_repeater'] : [];
         foreach ($repeater as $key => $value) {
 
@@ -49,20 +49,20 @@ class Style_4 extends Templates {
 
             echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
                             <div class="oxi-addons-counter-style4">
-                                <div class="oxi-addons-counter ">';
+                                <div class="oxi-addons-counter oxi-addons-counter-' . $key . '">';
 
             $rearrange = explode(',', $style['sa_counter_rearrange']);
-               foreach ($rearrange as $arrange) {
-                    if ($arrange != ''):
-                        if (isset($$arrange)) {
-                            echo $$arrange;
-                        }
-                    endif;
-                }
+            foreach ($rearrange as $arrange) {
+                if ($arrange != ''):
+                    if (isset($$arrange)) {
+                        echo $$arrange;
+                    }
+                endif;
+            }
             echo '</div> ';
             echo '</div></div>';
         }
-     }
+    }
 
     public function old_render() {
         wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
