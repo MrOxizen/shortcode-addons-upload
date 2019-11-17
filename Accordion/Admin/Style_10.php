@@ -147,7 +147,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_title_background_hover', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => ''
+                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, {{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => ''
             ],
                 ]
         );
@@ -157,7 +157,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#fff',
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, {{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => 'border-color: {{VALUE}};',
             ]
                 ]
         );
@@ -317,7 +317,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#030303',
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-heading-data, .oxi-addons-AC-N-H:hover .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-heading-data, {{WRAPPER}} .oxi-addons-AC-N-H:hover .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
             ]
                 ]
         );

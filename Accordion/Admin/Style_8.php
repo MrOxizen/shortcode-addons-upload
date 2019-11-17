@@ -286,7 +286,7 @@ class Style_8 extends AdminStyle {
             'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H:hover .oxi-addons-AC-EG-heading,'
-                . '.sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-heading' => 'color: {{VALUE}};',
+                . '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-heading' => 'color: {{VALUE}};',
             ]
                 ]
         );

@@ -284,7 +284,7 @@ class Style_2 extends AdminStyle {
             'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC.oxi-active .oxi-addonsAC-2-heading-data,'
-                . ' .sa_ac_style_2 .oxi-addonsAC:hover .oxi-addonsAC-2-heading-data' => 'color: {{VALUE}} !important;',
+                . ' {{WRAPPER}} .sa_ac_style_2 .oxi-addonsAC:hover .oxi-addonsAC-2-heading-data' => 'color: {{VALUE}} !important;',
             ]
                 ]
         );

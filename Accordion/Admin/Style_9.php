@@ -413,7 +413,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-C' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-C-b' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -654,12 +654,20 @@ class Style_9 extends AdminStyle {
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
-
+        
+        $this->add_group_control(
+                'sa_ac_number_box_shadow_nwo', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'separator' => true,
+            'selector' => [
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-number' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_el_ac_opening_icon_icon_border_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 50,
@@ -853,6 +861,36 @@ class Style_9 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_responsive_control(
+                'sa_el_ac_closing_arrow_border_radius', $this->style, [
+            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 50,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
         $this->end_controls_tab();
         $this->start_controls_tab();
 
@@ -887,13 +925,10 @@ class Style_9 extends AdminStyle {
             ]
                 ]
         );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
         $this->add_responsive_control(
-                'sa_el_ac_closing_arrow_border_radius', $this->style, [
+                'sa_el_ac_closing_arrow_hoverr_border_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 50,
@@ -916,15 +951,18 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive,'
-                . '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
         $this->add_responsive_control(
                 'sa_el_ac_opening_arrow_padding', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
+            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => '',

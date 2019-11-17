@@ -138,7 +138,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-heading,'
-                . '.sa_el_ac_style_4 .oxi-addonsAC-F-heading.oxi-active' => '',
+                . ' {{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-heading.oxi-active' => '',
             ]
                 ]
         );

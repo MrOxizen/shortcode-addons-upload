@@ -284,7 +284,7 @@ class Style_1 extends AdminStyle {
             'default' => '#7300ff',
             'selector' => [
                 '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H.active .heading-data,'
-                . ' .oxi-addons-ac-H:hover .heading-data' => 'color: {{VALUE}} !important;',
+                . ' {{WRAPPER}} .oxi-addons-ac-H:hover .heading-data' => 'color: {{VALUE}} !important;',
             ]
                 ]
         );

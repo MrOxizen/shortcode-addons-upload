@@ -66,7 +66,7 @@ class Style_9 extends Templates {
                                 </div>
                             </div>';
             }
-            echo '<div class="sa_element_ac_style_9 sa_element_ac_style_'.$this->oxiid.'_'.$key.' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+            echo '<div class="sa_element_ac_style_9 sa_element_ac_style_'.$this->oxiid.'_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                         <div class="oxi-addons-AC-N-H" ref="#oxi-addons-AC-N-H-id-'.$this->oxiid.'-' . $key . '">
                             ' . $number . '                            
                             ' . $heading . '
@@ -87,8 +87,8 @@ class Style_9 extends Templates {
         if (array_key_exists('sa_accordion_data', $this->style)):
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
                 if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
-                    $jquery .= 'jQuery(".' . $this->WRAPPER . ' .sa_element_ac_style_9_' . $key . '   .oxi-addons-AC-N-H").addClass("active");
-                                jQuery(".' . $this->WRAPPER . ' .sa_element_ac_style_9_' . $key . '   .oxi-addons-AC-N-H").next().slideDown();';
+                    $jquery .= 'jQuery(".' . $this->WRAPPER . ' .sa_element_ac_style_'.$this->oxiid.'_' . $key . '   .oxi-addons-AC-N-H").addClass("active");
+                                jQuery(".' . $this->WRAPPER . ' .sa_element_ac_style_'.$this->oxiid.'_' . $key . '   .oxi-addons-AC-N-H").next().slideDown();';
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] != 'onebyone'):
