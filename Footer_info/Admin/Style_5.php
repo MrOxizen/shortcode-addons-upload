@@ -89,7 +89,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -226,7 +226,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 300,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -259,7 +259,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 80,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -356,7 +356,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Footer Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Footer Text', SHORTCODE_ADDOONS),
             'default' => '© Front. 2019 Oxilab.org All rights reserved.',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_5 .oxi_addons_FI_5_content' => '',
+            ],
                 ]
         );
         $this->add_responsive_control(
@@ -404,6 +406,7 @@ class Style_5 extends AdminStyle {
         $this->add_group_control(
                 'sa_fi_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+                     'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_5 .oxi_addons_FI_5_content' => ''
             ],
