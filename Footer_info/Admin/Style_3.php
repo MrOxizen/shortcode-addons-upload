@@ -655,7 +655,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon .oxi-icons-area .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_FI_3 .oxi_addons_FI_3_icon-area .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
