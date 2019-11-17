@@ -54,7 +54,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -194,7 +194,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Title Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Title Here', SHORTCODE_ADDOONS),
             'default' => 'Oxilab.org',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_text' => ''
+            ],
             'condition' => [
                 'sa_fi_logo_text' => 'yes',
                 'sa_fi_logo' => 'yes'
@@ -297,6 +299,7 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_logotext_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_logo_text' => ''
             ],
@@ -311,7 +314,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 80,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -344,7 +347,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 80,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -419,7 +422,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -481,7 +484,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -631,7 +634,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'Contact Us',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_contact' => ''
+            ],
             'condition' => [
                 'sa_fi_content' => 'yes',
             ]
@@ -643,7 +648,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Address', SHORTCODE_ADDOONS),
             'placeholder' => __('Address', SHORTCODE_ADDOONS),
             'default' => 'Dhaka, Bangladesh',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_address' => ''
+            ],
             'condition' => [
                 'sa_fi_content' => 'yes',
             ]
@@ -655,7 +662,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Phone Number', SHORTCODE_ADDOONS),
             'placeholder' => __('Mobile', SHORTCODE_ADDOONS),
             'default' => '+121 125478541',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_phone' => ''
+            ],
             'condition' => [
                 'sa_fi_content' => 'yes',
             ]
@@ -667,7 +676,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Email Address', SHORTCODE_ADDOONS),
             'placeholder' => __('example@mail.com', SHORTCODE_ADDOONS),
             'default' => 'contactinfo@oxilab.org',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_email' => ''
+            ],
             'condition' => [
                 'sa_fi_content' => 'yes',
             ]
@@ -724,6 +735,7 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_contact' => ''
             ],
@@ -785,6 +797,7 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_address_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_address' => ''
             ],
@@ -846,6 +859,7 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_phone_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_phone' => ''
             ],
@@ -907,6 +921,7 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_email_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_4 .oxi_addons_FI_4_email' => ''
             ],
@@ -1004,7 +1019,9 @@ class Style_4 extends AdminStyle {
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi_addons_FI_4 .sa_FI_4_icon_repeater_{{KEY}} .oxi_addons_FI_4_icon' => '',
+                    ],
                 ],
                 'sa_fi_icon_url' => [
                     'type' => Controls::URL,
@@ -1028,7 +1045,6 @@ class Style_4 extends AdminStyle {
                         '{{WRAPPER}} .oxi_addons_FI_4 .sa_FI_4_icon_repeater_{{KEY}} .oxi-icons' => 'color:{{VALUE}};',
                     ],
                 ],
-                
                 'shortcode-addons-start-tab1-end' => [
                     'controller' => 'end_controls_tab',
                 ],
@@ -1043,7 +1059,6 @@ class Style_4 extends AdminStyle {
                         '{{WRAPPER}} .oxi_addons_FI_4 .sa_FI_4_icon_repeater_{{KEY}} .oxi-icons:hover' => 'color:{{VALUE}};',
                     ],
                 ],
-               
                 'shortcode-addons-start-tab2-end' => [
                     'controller' => 'end_controls_tab',
                 ],
@@ -1129,7 +1144,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 40,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -1153,7 +1168,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        
+
 
 
         $this->add_responsive_control(

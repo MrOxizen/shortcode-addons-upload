@@ -89,7 +89,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -218,7 +218,9 @@ class Style_6 extends AdminStyle {
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fab fa-facebook',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_FI_6 .sa_FI_6_icon_repeater_{{KEY}} .oxi_addons_FI_6_icon' => '',
+                    ],
                 ],
                 'sa_fi_icon_url' => [
                     'type' => Controls::URL,
@@ -245,7 +247,7 @@ class Style_6 extends AdminStyle {
                 'sa_fi_repeater_bg' => [
                     'type' => Controls::BACKGROUND,
                     'controller' => 'add_group_control',
-                      'selector' => [
+                    'selector' => [
                         '{{WRAPPER}} .oxi_addons_FI_6 .sa_FI_6_icon_repeater_{{KEY}} .oxi-icons' => '',
                     ],
                 ],
@@ -264,7 +266,7 @@ class Style_6 extends AdminStyle {
                     ],
                 ],
                 'sa_fi_repeater_bg_hover' => [
-                     'type' => Controls::BACKGROUND,
+                    'type' => Controls::BACKGROUND,
                     'controller' => 'add_group_control',
                     'selector' => [
                         '{{WRAPPER}} .oxi_addons_FI_6 .sa_FI_6_icon_repeater_{{KEY}} .oxi-icons:hover' => '',
@@ -338,7 +340,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -368,7 +370,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -405,8 +407,8 @@ class Style_6 extends AdminStyle {
                 ]
         );
         $this->start_controls_tab();
-       
-         $this->add_group_control(
+
+        $this->add_group_control(
                 'sa_fi_icon_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
@@ -421,7 +423,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -455,8 +457,8 @@ class Style_6 extends AdminStyle {
         $this->end_controls_tab();
 
         $this->start_controls_tab();
-        
-        
+
+
         $this->add_group_control(
                 'sa_fi_icon_h_br', $this->style, [
             'type' => Controls::BORDER,
@@ -472,7 +474,7 @@ class Style_6 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -573,7 +575,9 @@ class Style_6 extends AdminStyle {
             'label' => __('Footer Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Footer Text', SHORTCODE_ADDOONS),
             'default' => '© Front. 2019 Oxilab.org All rights reserved.',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_FI_6 .oxi_addons_FI_6_content' => '',
+            ],
             'condition' => [
                 'sa_fi_text' => 'yes',
             ],
@@ -630,6 +634,7 @@ class Style_6 extends AdminStyle {
         $this->add_group_control(
                 'sa_fi_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_6 .oxi_addons_FI_6_content' => ''
             ],
