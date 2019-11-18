@@ -206,7 +206,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -255,7 +255,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 15,
                 ],
                 'range' => [
                     '%' => [
@@ -285,9 +285,10 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
+                'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -335,7 +336,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 30,
+                    'size' => 50,
                 ],
                 'range' => [
                     'px' => [
@@ -365,7 +366,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#96c346',
                 'selector' => [
                     '{{WRAPPER}} .sa-conten-box-style-2 .sa-icons' => 'color:{{VALUE}};'
                 ],
@@ -407,7 +408,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 15,
                 ],
                 'range' => [
                     '%' => [
@@ -446,7 +447,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#616161',
                 'selector' => [
                     '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-heading' => 'color:{{VALUE}};'
                 ],
@@ -482,7 +483,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -523,7 +524,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#7a7a7a',
                 'selector' => [
                     '{{WRAPPER}} .sa-conten-box-style-2 .sa-conten-box-style-2-content' => 'color:{{VALUE}};'
                 ],
@@ -559,7 +560,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -619,7 +620,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'color:{{VALUE}};'
                 ],
@@ -632,7 +633,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#787878',
+                'default' => 'rgba(150, 195, 70, 1)',
                 'selector' => [
                     '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'background:{{VALUE}};'
                 ],
@@ -657,7 +658,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -690,7 +691,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button:hover' => 'color:{{VALUE}};'
                 ],
@@ -703,7 +704,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#222',
+                'default' => 'rgba(47, 143, 74, 1)',
                 'selector' => [
                     '{{WRAPPER}}  .sa-conten-box-style-2-button .sa-button:hover' => 'background:{{VALUE}};'
                 ],
@@ -727,7 +728,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -797,12 +798,12 @@ class Style_2 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa-ac-cont-box-shadow',
+            'sa-ac-cont-box-shadow-button',
             $this->style,
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-data' => 'box-shadow:{{VALUE}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'box-shadow:{{VALUE}};'
                 ],
             ]
         );
@@ -822,7 +823,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -854,7 +855,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 20,
                 ],
                 'range' => [
                     '%' => [

@@ -77,7 +77,7 @@ class Style_9 extends AdminStyle
                     'sa_el_fa_icon' => [
                         'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fab fa-facebook',
+                        'default' => 'fas fa-coffee',
                         'selector' => [
                             '{{WRAPPER}} .sa_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-conten-icon-icon' => '',
                         ],
@@ -229,7 +229,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -278,7 +278,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -310,7 +310,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -427,7 +427,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'color:{{VALUE}};'
                 ],
@@ -439,7 +439,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'background:{{VALUE}};'
@@ -531,7 +531,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -609,7 +609,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-title' => 'color:{{VALUE}};'
                 ],
@@ -645,7 +645,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -686,7 +686,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-description' => 'color:{{VALUE}};'
                 ],
@@ -722,7 +722,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -782,7 +782,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'color:{{VALUE}};'
                 ],
@@ -795,7 +795,7 @@ class Style_9 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'background:{{VALUE}};'
                 ],
@@ -821,7 +821,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -854,7 +854,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name:hover' => 'color:{{VALUE}};'
                 ],
@@ -867,7 +867,7 @@ class Style_9 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#222',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}}  .oxi_cb_temp_9 .oxi-conten-button-name:hover' => 'background:{{VALUE}};'
                 ],
@@ -892,7 +892,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -986,7 +986,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -1018,7 +1018,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

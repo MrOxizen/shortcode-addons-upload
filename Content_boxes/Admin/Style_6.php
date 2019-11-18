@@ -220,7 +220,7 @@ class Style_6 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -252,7 +252,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -344,7 +344,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-heading' => 'color:{{VALUE}};'
                 ],
@@ -380,7 +380,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -421,7 +421,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => 'color:{{VALUE}};'
                 ],
@@ -457,7 +457,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -522,7 +522,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'color:{{VALUE}};'
                 ],
@@ -534,7 +534,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'background:{{VALUE}};'
@@ -559,7 +559,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -592,7 +592,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6-button .sa-button:hover' => 'color:{{VALUE}};'
                 ],
@@ -605,7 +605,7 @@ class Style_6 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#222',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}}  .sa-cb-temp-6-button .sa-button:hover' => 'background:{{VALUE}};'
                 ],
@@ -629,7 +629,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -724,7 +724,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -756,7 +756,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

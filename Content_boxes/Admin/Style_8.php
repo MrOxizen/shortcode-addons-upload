@@ -65,7 +65,7 @@ class Style_8 extends AdminStyle
                     'sa_el_content_box_fa_icon' => [
                         'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fab fa-facebook',
+                        'default' => 'fas fa-coffee',
                         'selector' => [
                             '{{WRAPPER}} .oxi_cb_tem_'.$this->oxiid.'_{{KEY}} .oxi-addons-content-icon-boxes-data' => '',
                         ],
@@ -208,7 +208,7 @@ class Style_8 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -240,7 +240,7 @@ class Style_8 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -403,7 +403,7 @@ class Style_8 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -447,7 +447,7 @@ class Style_8 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '30',
+                    'size' => 30,
                 ],
                 'range' => [
                     'px' => [
@@ -508,7 +508,7 @@ class Style_8 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_tem_8 .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
                 ],
@@ -544,7 +544,7 @@ class Style_8 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -585,7 +585,7 @@ class Style_8 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_tem_8 .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
                 ],
@@ -621,7 +621,7 @@ class Style_8 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

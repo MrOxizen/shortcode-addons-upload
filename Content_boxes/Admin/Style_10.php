@@ -62,7 +62,7 @@ class Style_10 extends AdminStyle
                     'sa_el_fa_icon' => [
                         'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fab fa-facebook',
+                        'default' => 'fas fa-coffee',
                         'selector' => [
                             '{{WRAPPER}} .oxi-contentbox-temp-'.$this->oxiid.'-{{KEY}} .oxi-contentbox-icon-icon' => '',
                         ],
@@ -241,7 +241,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -290,7 +290,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -322,7 +322,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -399,7 +399,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#c2976a',
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-icon-icon' => 'color:{{VALUE}};'
                 ],
@@ -452,7 +452,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -493,7 +493,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#c2976a',
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-title' => 'color:{{VALUE}};'
                 ],
@@ -529,7 +529,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -606,7 +606,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -801,7 +801,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

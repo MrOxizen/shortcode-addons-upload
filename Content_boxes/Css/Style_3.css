@@ -19,14 +19,6 @@ and open the template in the editor.
 .sa-cb-tem-3-data{
     width:100%;
     float:left;
-    background:rgba(255, 255, 255, 0);
-    border-radius:5px 5px 5px 5px;
-    border-width:0px 0px 0px 0px;
-    border-style:solid;
-    border-color:#341969;
-    padding:30px 10px 20px 10px;
-    margin:10px 10px 10px 10px;
-    box-shadow:1px 5px 10px 1px rgba(186, 164, 119, 0.57) ;
 }
 .sa-cb-tem-3 .sa-cb-tem-3-icon{
     display:block;
@@ -37,7 +29,6 @@ and open the template in the editor.
 .sa-cb-tem-3 .sa-cb-tem-3-icon-data{
     display:inline-block;
     position:relative;
-    padding:5px 5px 5px 5px ;
 }
 .sa-cb-tem-3 .sa-cb-tem-3-icon-data::before{
     display:block;
@@ -47,10 +38,6 @@ and open the template in the editor.
     right:0;
     bottom:0;
     left:0;
-    border-radius:120px 120px 120px 120px;
-    border-width:2px 2px 2px 2px;
-    border-style:solid;
-    border-color:#ab1bdb;
     -webkit-transition:all 0.35s ease-in-out;
     -moz-transition:all 0.35s ease-in-out;
     transition:all 0.35s ease-in-out;
@@ -63,9 +50,6 @@ and open the template in the editor.
 }
 .sa-cb-tem-3 .sa-cb-tem-3-oxi-icons{
     position:relative;
-    width:120px;
-    height:120px;
-    padding:5px 5px 5px 5px;
     display:flex;
     justify-content:center;
     align-items:center ;
@@ -78,14 +62,11 @@ and open the template in the editor.
     right:0;
     bottom:0;
     left:0;
-    border-radius:120px 120px 120px 120px;
-    border-width:2px 2px 2px 2px;
-    border-style:solid;
-    border-color:#ab1bdb ;
-}
-.sa-cb-tem-3 .oxi-icons{
-    font-size:70px;
-    color:#5c5c5c ;
+    -webkit-transition:all 0.35s ease-in-out;
+    -moz-transition:all 0.35s ease-in-out;
+    transition:all 0.35s ease-in-out;
+    opacity:1;
+    transform:scale(0.93) ;
 }
 .sa-cb-tem-3 .sa-cb-tem-3-heading{
     width:100%;
@@ -99,7 +80,6 @@ and open the template in the editor.
 .sa-cb-tem-3 .sa-cb-tem-3-content{
     width:100%;
     float:left;
-    font-size:14px;
     font-family:"Open Sans";
     font-weight:400;
     font-style:normal;
@@ -117,13 +97,6 @@ and open the template in the editor.
     font-style:normal;
     line-height:1;
     text-align:center;
-    border-style:none;
-    border-color:#ffffff ;
-}
-.sa-cb-tem-3-button .sa-button:hover,
-.sa-cb-tem-3-button .sa-button:focus,
-.sa-cb-tem-3-button .sa-button:active{
-    
 }
 @media only screen and (min-width:669px) and (max-width:993px){
     .sa-cb-tem-3 .sa-cb-tem-3-oxi-icons{

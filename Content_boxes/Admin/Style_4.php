@@ -68,7 +68,7 @@ class Style_4 extends AdminStyle
                     'sa_el_box_heading' => [
                         'label' => esc_html__('Title', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
-                        'default' => 'This is Lorem',
+                        'default' => 'What is lorem ipsum ?',
                         'selector' => [
                             '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-4-heading' => '',
                         ],
@@ -76,7 +76,7 @@ class Style_4 extends AdminStyle
                     'sa_el_box_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXTAREA,
-                        'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
+                        'default' => 'Quisque laoreet eros elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla lectus nisi, consectetur quis ',
                         'selector' => [
                             '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-4-content' => '',
                         ],
@@ -172,6 +172,7 @@ class Style_4 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-4 .sa-cb-tem-4-content-inside' => 'background:{{VALUE}};'
                 ],
@@ -203,7 +204,7 @@ class Style_4 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -235,7 +236,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -282,8 +283,8 @@ class Style_4 extends AdminStyle
                 'label' => __('Image Height Ratio', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
-                    'unit' => 'px',
-                    'size' => 30,
+                    'unit' => '%',
+                    'size' => 60,
                 ],
                 'range' => [
                     'px' => [
@@ -327,14 +328,14 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#4f4f4f',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-4 .sa-cb-tem-4-heading' => 'color:{{VALUE}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa-ac-title-heading-typho',
+            'sa-ac-title-heading-typhograpy',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
@@ -362,7 +363,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 15,
                 ],
                 'range' => [
                     '%' => [
@@ -403,7 +404,7 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#3b3b3b',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-4 .sa-cb-tem-4-content' => 'color:{{VALUE}};'
                 ],
@@ -438,7 +439,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 15,
                 ],
                 'range' => [
                     '%' => [

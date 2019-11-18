@@ -223,7 +223,7 @@ class Style_7 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -255,7 +255,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -347,7 +347,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
                 ],
@@ -383,7 +383,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -424,7 +424,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
                 ],
@@ -460,7 +460,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -524,7 +524,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'color:{{VALUE}};'
                 ],
@@ -537,7 +537,7 @@ class Style_7 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button' => 'background:{{VALUE}};'
                 ],
@@ -563,7 +563,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -596,7 +596,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-content-boxes-button .oxi-button:hover' => 'color:{{VALUE}};'
                 ],
@@ -609,7 +609,7 @@ class Style_7 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#222',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}}  .oxi-addons-content-boxes-button .oxi-button:hover' => 'background:{{VALUE}};'
                 ],
@@ -634,7 +634,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -729,7 +729,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -761,7 +761,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

@@ -55,7 +55,7 @@ class Style_1 extends Templates {
             }
             if (array_key_exists('sa_el_btn_text', $data) && $data['sa_el_btn_text'] != '') {
                 $button .= '<div class="sa-cb-temp-1-button"  ' . $this->animation_render('sa-cb-btn-animation-temp-1', $style) . '>
-                                <a  class="oxi-button" ' . $this->url_render('sa_el_btn_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
+                                <a  class="oxi-adons-button" ' . $this->url_render('sa_el_btn_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
                             </div>';
             }
 

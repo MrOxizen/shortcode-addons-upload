@@ -66,7 +66,7 @@ class Style_11 extends AdminStyle
                     'sa_el_cb_fa_icon' => [
                         'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fab fa-facebook',
+                        'default' => 'fas fa-coffee',
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-cb-tem-'.$this->oxiid.'-{{KEY}} .oxi-content-box-icon' => '',
                         ],
@@ -234,7 +234,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -283,7 +283,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -315,7 +315,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -392,7 +392,7 @@ class Style_11 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#c2976a',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-icon-icon' => 'color:{{VALUE}};'
                 ],
@@ -445,7 +445,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -588,7 +588,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -663,7 +663,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -704,7 +704,7 @@ class Style_11 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#c2976a',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-description' => 'color:{{VALUE}};'
                 ],
@@ -740,7 +740,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

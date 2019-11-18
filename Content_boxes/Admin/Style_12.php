@@ -64,7 +64,7 @@ class Style_12 extends AdminStyle {
                 'sa_el_cb_fa_icon' => [
                     'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'fab fa-facebook',
+                    'default' => 'fas fa-cannabis',
                     'selector' => [
                         '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-icon' => '',
                     ],
@@ -72,7 +72,7 @@ class Style_12 extends AdminStyle {
                 'sa_el_cb_title' => [
                     'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => 'Medical Cannavis',
+                    'default' => 'Medical Cannabis',
                     'selector' => [
                         '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-name' => '',
                     ],
@@ -220,7 +220,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-hover-background', $this->style, [
             'label' => __('Hover Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => 'yellow',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-inner' => 'background:{{VALUE}};'
@@ -236,7 +236,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -279,7 +279,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -309,7 +309,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -381,7 +381,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-icon-color', $this->style, [
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => 'green',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-icon' => 'color:{{VALUE}};'
             ],
@@ -427,7 +427,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -464,7 +464,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-heading-color', $this->style, [
             'label' => __('Font Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => 'black',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-name' => 'color:{{VALUE}};'
             ],
@@ -494,7 +494,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -532,7 +532,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-content-color', $this->style, [
             'label' => __('Font Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => 'black',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-desc' => 'color:{{VALUE}};'
             ],
@@ -562,7 +562,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -675,7 +675,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

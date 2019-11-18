@@ -211,7 +211,7 @@ class Style_5 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -243,7 +243,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -352,7 +352,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '30',
+                    'size' => 30,
                 ],
                 'range' => [
                     'px' => [
@@ -413,7 +413,7 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-heading' => 'color:{{VALUE}};'
                 ],
@@ -449,7 +449,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -490,7 +490,7 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-5 .sa-cb-tem-5-content' => 'color:{{VALUE}};'
                 ],
@@ -526,7 +526,7 @@ class Style_5 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
