@@ -110,23 +110,12 @@ class Style_2 extends AdminStyle
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
-                        'conditional' => Controls::INSIDE,
-                        'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_inside',
-                            'sa_icon_effects_type' => 'sa_effects_outside',
-                        ],
+                        
                         'selector' => [
                             '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:after' => 'background:{{VALUE}};',
                         ],
                     ],
-                    'sa_icon_effects_box_shadow' => [
-                        'label' => __('', SHORTCODE_ADDOONS),
-                        'type' => Controls::BOXSHADOW,
-                        'controller' => 'add_group_control',
-                        'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}' => '',
-                        ],
-                    ],
+                    
 
                     'shortcode-addons-start-tab1-end' => [
                         'controller' => 'end_controls_tab',
@@ -150,28 +139,12 @@ class Style_2 extends AdminStyle
                         'type' => Controls::COLOR,
                         'oparetor' => 'RGB',
                         'default' => '#2AD4BB',
-                        'conditional' => Controls::INSIDE,
-                        'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_inside',
-                            'sa_icon_effects_type' => 'sa_icon_effects_style_3',
-                        ],
+                        
                         'selector' => [
                             '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover:after' => 'background:{{VALUE}};',
                         ],
                     ],
-                    'sa_icon_effects_box_shadow_hover' => [
-                        'label' => __('', SHORTCODE_ADDOONS),
-                        'type' => Controls::BOXSHADOW,
-                        'controller' => 'add_group_control',
-                        'conditional' => Controls::INSIDE,
-                        'condition' => [
-                            'sa_icon_effects_type' => 'sa_effects_outside',
-                            'sa_icon_effects_type' => 'sa_icon_effects_style_3',
-                        ],
-                        'selector' => [
-                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover' => '',
-                        ],
-                    ],
+                    
 
                     'shortcode-addons-start-tab2-end' => [
                         'controller' => 'end_controls_tab',
@@ -181,7 +154,15 @@ class Style_2 extends AdminStyle
                         'controller' => 'end_controls_tabs',
                     ],
 
-
+                    'sa_icon_effects_box_shadow' => [
+                        'label' => __('', SHORTCODE_ADDOONS),
+                        'type' => Controls::BOXSHADOW,
+                       'controller' => 'add_group_control',
+                        'selector' => [
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}' => '',
+                            '{{WRAPPER}} .sa_addons_icon_effects_style_2.sa_icon_effects_unique_{{KEY}}:hover' => '',
+                        ],
+                    ],
                     'sa_icon_effects_url_open' => [
                         'label' => esc_html__('Link Enable', SHORTCODE_ADDOONS),
                         'type' => Controls::SWITCHER,
