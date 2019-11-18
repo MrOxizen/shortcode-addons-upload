@@ -70,7 +70,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-heading' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-3-heading' => '',
                         ],
                     ],
                     'sa_el_content' => [
@@ -78,7 +78,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-content' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-3-content' => '',
                         ],
                     ],
                     'sa_el_btn_text' => [
@@ -86,7 +86,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Buy Now',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-button' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-3-button' => '',
                         ],
                     ],
                     'sa_el_button_link' => [
@@ -802,7 +802,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -825,7 +825,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -838,7 +838,7 @@ class Style_3 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -848,7 +848,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -881,7 +881,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -896,7 +896,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button:hover' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button:hover' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -909,7 +909,7 @@ class Style_3 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => '#222',
                 'selector' => [
-                    '{{WRAPPER}}  .sa-cb-tem-3-button .oxi-button:hover' => 'background:{{VALUE}};'
+                    '{{WRAPPER}}  .sa-cb-tem-3-button .sa-button:hover' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -919,7 +919,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button:hover' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button:hover' => ''
                 ],
             ]
         );
@@ -951,7 +951,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -996,7 +996,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -1006,7 +1006,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -1046,7 +1046,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1078,7 +1078,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

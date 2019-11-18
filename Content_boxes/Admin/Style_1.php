@@ -62,7 +62,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum Dolor',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-temp-1-{{KEY}} .sa-cb-temp-1-heading' => '',
+                            '{{WRAPPER}} .sa-cb-temp-'.$this->oxiid.'-{{KEY}} .sa-cb-temp-1-heading' => '',
                         ],
                     ],
                     'sa_el_content' => [
@@ -70,7 +70,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-temp-1-{{KEY}} .sa-cb-temp-1-content' => '',
+                            '{{WRAPPER}} .sa-cb-temp-'.$this->oxiid.'-{{KEY}} .sa-cb-temp-1-content' => '',
                         ],
                     ],
                     'sa_el_btn_text' => [
@@ -78,7 +78,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Buy Now',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-temp-1-{{KEY}} .sa-cb-temp-1-button' => '',
+                            '{{WRAPPER}} .sa-cb-temp-'.$this->oxiid.'-{{KEY}} .sa-cb-temp-1-button' => '',
                         ],
                     ],
                     'sa_el_btn_link' => [

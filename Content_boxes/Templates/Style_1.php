@@ -60,8 +60,8 @@ class Style_1 extends Templates {
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-cb-temp-1 sa-cb-temp-1-'.$key.' ' . $class . ' "  ' . $this->animation_render('sa-cb-animation-temp-1', $style) . '>
-                        <div class="sa-cb-temp-1-data"  >
+            echo '<div class="sa-cb-temp-1 sa-cb-temp-'.$this->oxiid.'-'.$key.' ' . $class . ' "  ' . $this->animation_render('sa-cb-animation-temp-1', $style) . '>
+                        <div class="sa-cb-temp-1-data">
                             ' . $heading . '
                             ' . $content . '
                             ' . $button . '

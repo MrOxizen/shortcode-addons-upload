@@ -12,7 +12,7 @@ and open the template in the editor.
     Author     : biplo
 */
 
-.sa_cb_temp_7 {
+.oxi_cb_temp_7 {
     width: 100%;
     position: relative;
     max-width: auto;
@@ -36,20 +36,20 @@ and open the template in the editor.
     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
 }
 
-.sa_cb_temp_7 .oxi-addons-content-boxes-images-data {
+.oxi_cb_temp_7 .oxi-addons-content-boxes-images-data {
     position: relative;
     width: 100%; 
     float: left;
     overflow: hidden;
 }
 
-.sa_cb_temp_7 .oxi-addons-content-boxes-images-data::after {
+.oxi_cb_temp_7 .oxi-addons-content-boxes-images-data::after {
     display: block;
     content: "";
     padding-bottom: 60%;
 }
 
-.sa_cb_temp_7 .oxi-addons-img {
+.oxi_cb_temp_7 .oxi-addons-img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -58,11 +58,11 @@ and open the template in the editor.
     background-size: cover;
 }
 
-.sa_cb_temp_7:hover .oxi-addons-img {
+.oxi_cb_temp_7:hover .oxi-addons-img {
     transform: scale(1.2);
 }
 
-.sa_cb_temp_7 .oxi-addons-content-boxes-button {
+.oxi_cb_temp_7 .oxi-addons-content-boxes-button {
     width: 100%;
     float: left;
     text-align: center;
@@ -97,13 +97,13 @@ and open the template in the editor.
     border-color: #ededed;
 }
 
-.sa_cb_temp_7 .oxi-addons-content-boxes-content {
+.oxi_cb_temp_7 .oxi-addons-content-boxes-content {
     width: 100%;
     padding: 10px 10px 10px 10px;
     float: left;
 }
 
-.sa_cb_temp_7 .oxi-addons-content-boxes-heading {
+.oxi_cb_temp_7 .oxi-addons-content-boxes-heading {
     width: 100%;
     float: left;
     color: #ffffff;
@@ -116,7 +116,7 @@ and open the template in the editor.
     padding: 5px 5px 5px 5px;
 }
 
-.sa_cb_temp_7 .oxi-addons-content-boxes-content {
+.oxi_cb_temp_7 .oxi-addons-content-boxes-content {
     width: 100%;
     float: left;
     color: #ffffff;
@@ -135,7 +135,7 @@ and open the template in the editor.
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_cb_temp_7 {
+    .oxi_cb_temp_7 {
         max-width: 325px;
         padding: 10px 10px 10px 10px;
     }
@@ -144,7 +144,7 @@ and open the template in the editor.
         padding: 10px 10px 10px 10px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-images {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-images {
         height: 125px;
     }
 
@@ -163,23 +163,23 @@ and open the template in the editor.
         border-width: 1px 1px 1px 1px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-content {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-content {
         padding: 10px 10px 10px 10px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-heading {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-heading {
         font-size: 22px;
         padding: 5px 5px 5px 5px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-content {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-content {
         font-size: 14px;
         padding: 10px 5px 20px 5px;
     }
 }
 
 @media only screen and (max-width:668px) {
-    .sa_cb_temp_7 {
+    .oxi_cb_temp_7 {
         max-width: 325px;
         padding: 10px 10px 10px 10px;
     }
@@ -188,7 +188,7 @@ and open the template in the editor.
         padding: 10px 10px 10px 10px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-images {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-images {
         height: 125px;
     }
 
@@ -207,16 +207,16 @@ and open the template in the editor.
         border-width: 1px 1px 1px 1px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-content {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-content {
         padding: 10px 10px 10px 10px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-heading {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-heading {
         font-size: 20px;
         padding: 325px 10px px px;
     }
 
-    .sa_cb_temp_7 .oxi-addons-content-boxes-content {
+    .oxi_cb_temp_7 .oxi-addons-content-boxes-content {
         font-size: 14px;
         padding: 10px 5px 20px 5px;
     }

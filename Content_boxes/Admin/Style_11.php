@@ -68,7 +68,7 @@ class Style_11 extends AdminStyle
                         'type' => Controls::ICON,
                         'default' => 'fab fa-facebook',
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-cb-tem-11-{{KEY}} .oxi-content-box-icon' => '',
+                            '{{WRAPPER}} .oxi-addons-cb-tem-'.$this->oxiid.'-{{KEY}} .oxi-content-box-icon' => '',
                         ],
                     ],
                     'sa_el_cb_title' => [
@@ -76,7 +76,7 @@ class Style_11 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum Dolor',
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-cb-tem-11-{{KEY}} .oxi-cb11-title' => '',
+                            '{{WRAPPER}} .oxi-addons-cb-tem-'.$this->oxiid.'-{{KEY}} .oxi-cb11-title' => '',
                         ],
                     ],
                     'sa_el_cb_content' => [
@@ -84,7 +84,7 @@ class Style_11 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
                         'selector' => [
-                            '{{WRAPPER}} .oxi-addons-cb-tem-11-{{KEY}} .oxi-cb11-description' => '',
+                            '{{WRAPPER}} .oxi-addons-cb-tem-'.$this->oxiid.'-{{KEY}} .oxi-cb11-description' => '',
                         ],
                     ],
                 ],
@@ -516,7 +516,7 @@ class Style_11 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6 .oxi-addons-img-button' => 'width:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-addons-img-button' => 'width:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -548,7 +548,7 @@ class Style_11 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6 .oxi-addons-img-button' => 'height:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-addons-img-button' => 'height:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );

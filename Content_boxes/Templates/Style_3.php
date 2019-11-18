@@ -61,12 +61,12 @@ class Style_3 extends Templates {
             
             if (array_key_exists('sa_el_btn_text', $data) &&  $data['sa_el_btn_text'] != '') {
                 $button .= '<div class="sa-cb-tem-3-button" ' . $this->animation_render('sa-cb-btn-animation', $style) . '>
-                                <a  class="oxi-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
+                                <a  class="sa-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
                             </div> ';
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-cb-tem-3 sa-cb-tem-3-'.$key.' ' . $class . ' " ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+            echo '<div class="sa-cb-tem-3 sa-cb-tem-'.$this->oxiid.'-'.$key.' ' . $class . ' " ' . $this->animation_render('sa-cb-box-animation', $style) . '>
                         <div class="sa-cb-tem-3-data"  >     
                             ' . $icon . '
                             ' . $heading . '

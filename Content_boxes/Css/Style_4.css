@@ -29,7 +29,7 @@ and open the template in the editor.
     background-size: 100% 100%;
 }
 
-.oxi-addons-img {
+.sa-addons-img {
     position: relative;
 }
 
@@ -66,7 +66,7 @@ and open the template in the editor.
     padding-bottom: 60%;
 }
 
-.oxi-addons-img {
+.sa-addons-img {
     position: absolute;
     width: 100%;
     height: 100%;

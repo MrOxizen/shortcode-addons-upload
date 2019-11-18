@@ -73,7 +73,7 @@ class Style_7 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum',
                         'selector' => [
-                            '{{WRAPPER}} .sa_cb_temp_7_{{KEY}} .oxi-addons-content-boxes-heading' => '',
+                            '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-content-boxes-heading' => '',
                         ],
                     ],
                     'sa_el_content_box_content' => [
@@ -81,7 +81,7 @@ class Style_7 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua ',
                         'selector' => [
-                            '{{WRAPPER}} .sa_cb_temp_7_{{KEY}} .oxi-addons-content-boxes-content' => '',
+                            '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-content-boxes-content' => '',
                         ],
                     ],
                     'sa_el_content_box_btn_text' => [
@@ -89,7 +89,7 @@ class Style_7 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Learn More',
                         'selector' => [
-                            '{{WRAPPER}} .sa_cb_temp_7_{{KEY}} .oxi-addons-content-boxes-button' => '',
+                            '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-content-boxes-button' => '',
                         ],
                     ],
                     'sa_el_content_box_button_link' => [
@@ -178,7 +178,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_7.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
                 ],
                 'condition' => [
                     'sa-max-width-condition' => 'dynamic',
@@ -328,7 +328,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-images-data::after' => 'padding-bottom:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-images-data::after' => 'padding-bottom:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -349,7 +349,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-heading' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -360,7 +360,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-heading' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-heading' => ''
                 ],
             ]
         );
@@ -370,7 +370,7 @@ class Style_7 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-heading' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-heading' => ''
                 ],
             ]
         );
@@ -403,7 +403,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -426,7 +426,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-content' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -437,7 +437,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-content' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-content' => ''
                 ],
             ]
         );
@@ -447,7 +447,7 @@ class Style_7 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-content' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-content' => ''
                 ],
             ]
         );
@@ -480,7 +480,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -689,7 +689,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_7 .oxi-addons-content-boxes-button' => 'text-align: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_7 .oxi-addons-content-boxes-button' => 'text-align: {{VALUE}};'
                 ],
             ]
         );

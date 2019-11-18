@@ -70,7 +70,7 @@ class Style_4 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'This is Lorem',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-4-{{KEY}} .sa-cb-tem-4-heading' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-4-heading' => '',
                         ],
                     ],
                     'sa_el_box_content' => [
@@ -78,7 +78,7 @@ class Style_4 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-4-{{KEY}} .sa-cb-tem-4-content' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-4-content' => '',
                         ],
                     ],
                 ],

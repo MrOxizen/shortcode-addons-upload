@@ -55,15 +55,15 @@ class Style_6 extends Templates {
             }
             if (array_key_exists('sa_el_button_text', $data) &&  $data['sa_el_button_text'] != '') {
                 $button .= ' <div class="sa-cb-temp-6-button" ' . $this->animation_render('sa-cb-box-button-animation', $style) . '>
-                                <a  class="oxi-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_button_text']) . '</a>
+                                <a  class="sa-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_button_text']) . '</a>
                             </div>';
             }
             
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo ' <div class="sa-cb-temp-6  sa-cb-temp-6-'.$key.'   ' . $class . '" ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+            echo ' <div class="sa-cb-temp-6  sa-cb-temp-'.$this->oxiid.'-'.$key.'   ' . $class . '" ' . $this->animation_render('sa-cb-box-animation', $style) . '>
                     <div class="sa-cb-temp-6-data"> 
-                        <div class="oxi-addons-img-button">
+                        <div class="sa-addons-img-button">
                             <div class="sa-outer-div">
                                 '.$img.'
                             </div>

@@ -77,7 +77,7 @@ class Style_5 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum Dolor',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-5-{{KEY}} .sa-cb-tem-5-heading' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-5-heading' => '',
                         ],
                     ],
                     'sa_el_content_box_content' => [
@@ -85,7 +85,7 @@ class Style_5 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-5-{{KEY}} .sa-cb-tem-5-content' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-5-content' => '',
                         ],
                     ],
                 ],

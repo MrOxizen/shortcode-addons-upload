@@ -33,7 +33,7 @@ and open the template in the editor.
     float:left;
     text-align:center;
 }
-.sa-conten-box-style-2 .oxi-icons{
+.sa-conten-box-style-2 .sa-icons{
     display:inlne-block;
     font-size:50px;
     color:#96c346;
@@ -68,7 +68,7 @@ and open the template in the editor.
     float:left;
     text-align:center 
 }
-.sa-conten-box-style-2-button .oxi-button{
+.sa-conten-box-style-2-button .sa-button{
     display:inline-block;
     font-size:18px;
     font-family:"Open Sans";
@@ -85,9 +85,9 @@ and open the template in the editor.
     border-style:solid;
     border-color:#6a6199 ;
 }
- .oxi-button:hover,
- .oxi-button:focus,
- .oxi-button:active{
+ .sa-button:hover,
+ .sa-button:focus,
+ .sa-button:active{
     color:#ffffff;
     background:rgba(35, 173, 141, 1);
     border-radius:5px 5px 5px 5px;
@@ -104,7 +104,7 @@ and open the template in the editor.
         padding:20px 20px 20px 20px;
         margin:10px 10px 10px 10px ;
     }
-    .sa-conten-box-style-2 .oxi-icons{
+    .sa-conten-box-style-2 .sa-icons{
         font-size:50px;
         padding:10px 10px 10px 10px ;
     }
@@ -114,16 +114,16 @@ and open the template in the editor.
     .sa-conten-box-style-2 .sa-conten-box-style-2-content{
         font-size:16px;padding:0px 0px 14px 0px ;
     }
-    .sa-conten-box-style-2-button .oxi-button{
+    .sa-conten-box-style-2-button .sa-button{
         font-size:18px;
         padding:9px 15px 9px 15px;
         margin:20px 20px 20px 20px;
         border-radius:5px 5px 5px 5px;
         border-width:0px 0px 0px 0px ;
     }
-    .sa-conten-box-style-2-button .oxi-button:hover,
-    .sa-conten-box-style-2-button .oxi-button:focus,
-    .sa-conten-box-style-2-button .oxi-button:active{
+    .sa-conten-box-style-2-button .sa-button:hover,
+    .sa-conten-box-style-2-button .sa-button:focus,
+    .sa-conten-box-style-2-button .sa-button:active{
         border-radius:5px 5px 5px 5px ;
     }
 }
@@ -137,7 +137,7 @@ and open the template in the editor.
         padding:20px 20px 20px 20px;
         margin:10px 10px 10px 10px;
     }
-    .sa-conten-box-style-2 .oxi-icons{
+    .sa-conten-box-style-2 .sa-icons{
         font-size:50px;
         padding:10px 10px 10px 10px;
     }
@@ -147,16 +147,16 @@ and open the template in the editor.
     .sa-conten-box-style-2 .sa-conten-box-style-2-content{
         font-size:16px;padding:0px 0px 14px 0px ;
     }
-    .sa-conten-box-style-2-button .oxi-button{
+    .sa-conten-box-style-2-button .sa-button{
         font-size:18px;
         padding:9px 15px 9px 15px;
         margin:20px 20px 20px 20px;
         border-radius:5px 5px 5px 5px;
         border-width:0px 0px 0px 0px ;
     }
-    .sa-conten-box-style-2-button .oxi-button:hover,
-    .sa-conten-box-style-2-button .oxi-button:focus,
-    .sa-conten-box-style-2-button .oxi-button:active{
+    .sa-conten-box-style-2-button .sa-button:hover,
+    .sa-conten-box-style-2-button .sa-button:focus,
+    .sa-conten-box-style-2-button .sa-button:active{
         border-radius:5px 5px 5px 5px ;
     }
 }

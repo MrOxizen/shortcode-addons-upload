@@ -66,7 +66,7 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::ICON,
                     'default' => 'fab fa-facebook',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-icon' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-icon' => '',
                     ],
                 ],
                 'sa_el_cb_title' => [
@@ -74,7 +74,7 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Medical Cannavis',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-name' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-name' => '',
                     ],
                 ],
                 'sa_el_cb_content' => [
@@ -82,7 +82,7 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-desc' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-desc' => '',
                     ],
                 ],
                 'sa_el_cb_fa_arrow_icon' => [
@@ -90,7 +90,7 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::ICON,
                     'default' => 'fas fa-angle-right',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-arrow' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-arrow' => '',
                     ],
                 ],
                 'sa_el_arrow_icon_link' => [

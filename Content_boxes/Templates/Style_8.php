@@ -64,7 +64,7 @@ class Style_8 extends Templates {
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa_cb_tem_8    sa_cb_tem_8_'.$key.'   ' . $class . '" ' . $this->animation_render('sa-ac-content-box-box-animation', $style) . '>
+            echo '<div class="oxi_cb_tem_8    oxi_cb_tem_'.$this->oxiid.'_'.$key.'   ' . $class . '" ' . $this->animation_render('sa-ac-content-box-box-animation', $style) . '>
                     <div class="oxi-addons-content-boxes-data">
                             ' . $icon . '
                         <div class="oxi-addons-content-boxes-content-outside">

@@ -70,7 +70,7 @@ class Style_2 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum Dolor',
                         'selector' => [
-                            '{{WRAPPER}} .sa-conten-box-style-2-{{KEY}} .sa-conten-box-style-2-heading' => '',
+                            '{{WRAPPER}} .sa-conten-box-style-'.$this->oxiid.'-{{KEY}} .sa-conten-box-style-2-heading' => '',
                         ],
                     ],
                     'sa_el_content' => [
@@ -78,7 +78,7 @@ class Style_2 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
                         'selector' => [
-                            '{{WRAPPER}} .sa-conten-box-style-2-{{KEY}} .sa-conten-box-style-2-content' => '',
+                            '{{WRAPPER}} .sa-conten-box-style-'.$this->oxiid.'-{{KEY}} .sa-conten-box-style-2-content' => '',
                         ],
                     ],
                     'sa_el_btn_text' => [
@@ -86,7 +86,7 @@ class Style_2 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Buy Now',
                         'selector' => [
-                            '{{WRAPPER}} .sa-conten-box-style-2-{{KEY}} .sa-conten-box-style-2-button' => '',
+                            '{{WRAPPER}} .sa-conten-box-style-'.$this->oxiid.'-{{KEY}} .sa-conten-box-style-2-button' => '',
                         ],
                     ],
                     'sa_el_button_link' => [
@@ -355,7 +355,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2 .sa-icons' => 'font-size:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -367,7 +367,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2 .sa-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -395,7 +395,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'text-align: {{VALUE}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2 .sa-icons' => 'text-align: {{VALUE}};'
                 ],
             ]
         );
@@ -427,7 +427,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2 .sa-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -598,7 +598,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => ''
                 ],
             ]
         );
@@ -621,7 +621,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -634,7 +634,7 @@ class Style_2 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -644,7 +644,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => ''
                 ],
             ]
         );
@@ -677,7 +677,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -692,7 +692,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button:hover' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button:hover' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -705,7 +705,7 @@ class Style_2 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => '#222',
                 'selector' => [
-                    '{{WRAPPER}}  .sa-conten-box-style-2-button .oxi-button:hover' => 'background:{{VALUE}};'
+                    '{{WRAPPER}}  .sa-conten-box-style-2-button .sa-button:hover' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -715,7 +715,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button:hover' => ''
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button:hover' => ''
                 ],
             ]
         );
@@ -747,7 +747,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}}  .sa-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -792,7 +792,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => ''
                 ],
             ]
         );
@@ -842,7 +842,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -874,7 +874,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-conten-box-style-2-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-conten-box-style-2-button .sa-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

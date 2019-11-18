@@ -65,7 +65,7 @@ class Style_10 extends Templates {
             } 
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo ' <div class="sa-contentbox-temp-10  sa-contentbox-temp-10-'.$key.'   ' . $class . '">
+            echo ' <div class="oxi-contentbox-temp-10  oxi-contentbox-temp-'.$this->oxiid.'-'.$key.'   ' . $class . '">
                         <div class="oxi-contentbox-main"  ' . $this->animation_render('sa-c-b-box-animation', $style) . '>
                            ' . $link . '
                                 <div class="oxi-contentbox-body">

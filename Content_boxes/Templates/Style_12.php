@@ -73,7 +73,7 @@ class Style_12 extends Templates {
 
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '  <div class="oxi_cb_temp_12    oxi_cb_temp_12_' . $key . '     ' . $class . '">
+            echo '  <div class="oxi_cb_temp_12    oxi_cb_temp_'.$this->oxiid.'_' . $key . '     ' . $class . '">
                         <div class="oxi-addons-box" ' . $this->animation_render('sa-c-b-box-animation', $style) . '>
                           <div class="oxi-addons-box-outer">
                                 ' . $img . '

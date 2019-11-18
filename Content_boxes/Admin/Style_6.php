@@ -73,7 +73,7 @@ class Style_6 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum Dolor',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-temp-6-{{KEY}} .sa-cb-temp-6-heading' => '',
+                            '{{WRAPPER}} .sa-cb-temp-'.$this->oxiid.'-{{KEY}} .sa-cb-temp-6-heading' => '',
                         ],
                     ],
                     'sa_el_box_content' => [
@@ -81,7 +81,7 @@ class Style_6 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-temp-6-{{KEY}} .sa-cb-temp-6-content' => '',
+                            '{{WRAPPER}} .sa-cb-temp-'.$this->oxiid.'-{{KEY}} .sa-cb-temp-6-content' => '',
                         ],
                     ],
                     'sa_el_button_text' => [
@@ -89,7 +89,7 @@ class Style_6 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Learn More',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-temp-6-{{KEY}} .sa-cb-temp-6-button' => '',
+                            '{{WRAPPER}} .sa-cb-temp-'.$this->oxiid.'-{{KEY}} .sa-cb-temp-6-button' => '',
                         ],
                     ],
                     'sa_el_button_link' => [
@@ -501,7 +501,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => ''
                 ],
             ]
         );
@@ -524,7 +524,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -537,7 +537,7 @@ class Style_6 extends AdminStyle
                 'default' => '#787878',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -547,7 +547,7 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => ''
                 ],
             ]
         );
@@ -579,7 +579,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -594,7 +594,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#787878',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button:hover' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button:hover' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -607,7 +607,7 @@ class Style_6 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => '#222',
                 'selector' => [
-                    '{{WRAPPER}}  .sa-cb-temp-6-button .oxi-button:hover' => 'background:{{VALUE}};'
+                    '{{WRAPPER}}  .sa-cb-temp-6-button .sa-button:hover' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -617,7 +617,7 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button:hover' => ''
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button:hover' => ''
                 ],
             ]
         );
@@ -649,7 +649,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -694,7 +694,7 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => ''
                 ],
             ]
         );
@@ -704,7 +704,7 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => ''
                 ],
             ]
         );
@@ -744,7 +744,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -776,7 +776,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-temp-6-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

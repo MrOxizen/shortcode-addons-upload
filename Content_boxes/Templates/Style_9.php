@@ -69,7 +69,7 @@ class Style_9 extends Templates {
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';    
-            echo '    <div class="sa_cb_temp_9   sa_cb_temp_9'.$key.' ' . $class . '"  ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+            echo '    <div class="oxi_cb_temp_9   sa_cb_temp_'.$this->oxiid.'_'.$key.' ' . $class . '"  ' . $this->animation_render('sa-cb-box-animation', $style) . '>
                         
                             <div class="oxi-main">
                                 <div class="oxi-image">
