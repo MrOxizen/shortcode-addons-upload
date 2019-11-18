@@ -1035,7 +1035,7 @@ class Style_9 extends AdminStyle
                     
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-8 .member-icon.separately:hover' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-9 .member-icon.separately:hover' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1063,7 +1063,7 @@ class Style_9 extends AdminStyle
                     'outset' => __('Outset', SHORTCODE_ADDOONS),
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-8 .member-icon.separately:hover' => 'border-style: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-9 .member-icon.separately:hover' => 'border-style: {{VALUE}};'
                 ],
             ]
         );
