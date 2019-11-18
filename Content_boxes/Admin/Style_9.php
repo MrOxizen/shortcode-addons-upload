@@ -70,7 +70,7 @@ class Style_9 extends AdminStyle
                         'type' => Controls::MEDIA,
                         'default' => [
                             'type' => 'media-library',
-                            'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/uc_mobile_bullets.png',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/08/pexels-photo-96380-1.jpeg',
                         ],
                         'controller' => 'add_group_control',
                     ],
@@ -85,7 +85,7 @@ class Style_9 extends AdminStyle
                     'sa_el_title' => [
                         'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
-                        'default' => 'Lorem Ipsum Dolor',
+                        'default' => 'Fantastic',
                         'selector' => [
                             '{{WRAPPER}} .sa_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-conten-title' => '',
                         ],
@@ -93,7 +93,7 @@ class Style_9 extends AdminStyle
                     'sa_el_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
-                        'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s. ',
+                        'default' => 'Ac bibendum tristique. Sed euismod accumsan varius. Ut cursus, arcu eget efficitur malesuada, leo nibh posuere sapien,',
                         'selector' => [
                             '{{WRAPPER}} .sa_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-conten-description' => '',
                         ],
@@ -397,7 +397,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 30,
+                    'size' => 40,
                 ],
                 'range' => [
                     'px' => [
@@ -427,7 +427,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#c65bd9',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'color:{{VALUE}};'
                 ],
@@ -455,7 +455,7 @@ class Style_9 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 120,
+                    'size' => 100,
                 ],
                 'range' => [
                     'px' => [
@@ -488,7 +488,7 @@ class Style_9 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 120,
+                    'size' => 100,
                 ],
                 'range' => [
                     'px' => [
@@ -531,7 +531,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 100,
                 ],
                 'range' => [
                     '%' => [
@@ -609,7 +609,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#363636',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-title' => 'color:{{VALUE}};'
                 ],
@@ -645,7 +645,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -686,7 +686,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#696969',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-description' => 'color:{{VALUE}};'
                 ],
@@ -722,7 +722,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -795,7 +795,7 @@ class Style_9 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#fff',
+                'default' => 'rgba(199, 56, 235, 1)',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'background:{{VALUE}};'
                 ],
@@ -817,11 +817,10 @@ class Style_9 extends AdminStyle
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'separator' => TRUE,
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -854,7 +853,7 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name:hover' => 'color:{{VALUE}};'
                 ],
@@ -867,7 +866,7 @@ class Style_9 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#fff',
+                'default' => 'rgba(98, 9, 120, 1)',
                 'selector' => [
                     '{{WRAPPER}}  .oxi_cb_temp_9 .oxi-conten-button-name:hover' => 'background:{{VALUE}};'
                 ],
@@ -888,11 +887,10 @@ class Style_9 extends AdminStyle
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'separator' => TRUE,
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -929,6 +927,7 @@ class Style_9 extends AdminStyle
                 'label' => __('Button Align', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
+                'separator' => TRUE,
                 'toggle' => TRUE,
                 'default' => 'center',
                 'options' => [
@@ -986,7 +985,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -1018,7 +1017,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 20,
                 ],
                 'range' => [
                     '%' => [

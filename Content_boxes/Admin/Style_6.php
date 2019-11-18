@@ -64,7 +64,7 @@ class Style_6 extends AdminStyle
                         'type' => Controls::MEDIA,
                         'default' => [
                             'type' => 'media-library',
-                            'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/uc_mobile_bullets.png',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/joanna-kosinska-129039-unsplash-e1546670637877.jpg',
                         ],
                         'controller' => 'add_group_control',
                     ],
@@ -189,6 +189,7 @@ class Style_6 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6-data' => 'background:{{VALUE}};'
                 ],
@@ -299,8 +300,8 @@ class Style_6 extends AdminStyle
                 'label' => __('Image Height', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
-                    'unit' => 'px',
-                    'size' => 30,
+                    'unit' => '%',
+                    'size' => 60,
                 ],
                 'range' => [
                     'px' => [
@@ -344,7 +345,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#292929',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-heading' => 'color:{{VALUE}};'
                 ],
@@ -380,7 +381,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -421,7 +422,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#333333',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6 .sa-cb-temp-6-content' => 'color:{{VALUE}};'
                 ],
@@ -457,7 +458,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -522,7 +523,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'color:{{VALUE}};'
                 ],
@@ -534,7 +535,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#fff',
+                'default' => 'rgba(97, 68, 68, 0.85)',
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6-button .sa-button' => 'background:{{VALUE}};'
@@ -592,7 +593,7 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#222',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-temp-6-button .sa-button:hover' => 'color:{{VALUE}};'
                 ],
@@ -605,7 +606,7 @@ class Style_6 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#fff',
+                'default' => 'rgba(171, 66, 77, 1)',
                 'selector' => [
                     '{{WRAPPER}}  .sa-cb-temp-6-button .sa-button:hover' => 'background:{{VALUE}};'
                 ],
@@ -724,7 +725,7 @@ class Style_6 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 7,
                 ],
                 'range' => [
                     '%' => [

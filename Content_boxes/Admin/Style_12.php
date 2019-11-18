@@ -57,7 +57,7 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::MEDIA,
                     'default' => [
                         'type' => 'media-library',
-                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/macbook-apple-imac-computer-39284-1.jpeg',
+                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/08/pexels-photo-1105666-1.jpeg',
                     ],
                     'controller' => 'add_group_control',
                 ],
@@ -192,7 +192,7 @@ class Style_12 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
@@ -220,7 +220,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-hover-background', $this->style, [
             'label' => __('Hover Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => 'yellow',
+            'default' => 'rgba(184, 0, 58, 0.83)',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-inner' => 'background:{{VALUE}};'
@@ -352,7 +352,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 30,
+                'size' => 60,
             ],
             'range' => [
                 'px' => [
@@ -381,7 +381,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-icon-color', $this->style, [
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => 'green',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-icon' => 'color:{{VALUE}};'
             ],
@@ -427,7 +427,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => '',
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -464,7 +464,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-heading-color', $this->style, [
             'label' => __('Font Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => 'black',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-name' => 'color:{{VALUE}};'
             ],
@@ -494,7 +494,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => '',
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -532,7 +532,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-content-color', $this->style, [
             'label' => __('Font Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => 'black',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-desc' => 'color:{{VALUE}};'
             ],
@@ -562,7 +562,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => '',
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -601,7 +601,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 25,
+                'size' => 20,
             ],
             'range' => [
                 'px' => [
@@ -675,7 +675,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => '',
+                'size' => 10,
             ],
             'range' => [
                 '%' => [

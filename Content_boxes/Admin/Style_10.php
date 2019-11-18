@@ -369,7 +369,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 50,
+                    'size' => 60,
                 ],
                 'range' => [
                     'px' => [
@@ -399,7 +399,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#c2976a',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-icon-icon' => 'color:{{VALUE}};'
                 ],
@@ -452,7 +452,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -493,7 +493,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#c2976a',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-title' => 'color:{{VALUE}};'
                 ],
@@ -529,7 +529,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -570,7 +570,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-description' => 'color:{{VALUE}};'
                 ],
@@ -606,7 +606,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -644,7 +644,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-arrow-icon' => 'color:{{VALUE}};'
                 ],
@@ -656,7 +656,7 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Icon Box Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => 'rgba(0, 0, 0, 0.45)',
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-arrow-arrow' => 'background:{{VALUE}};'
@@ -704,7 +704,7 @@ class Style_10 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 120,
+                    'size' => 60,
                 ],
                 'range' => [
                     'px' => [
@@ -737,7 +737,7 @@ class Style_10 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 120,
+                    'size' => 60,
                 ],
                 'range' => [
                     'px' => [

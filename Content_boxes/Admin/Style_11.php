@@ -66,7 +66,7 @@ class Style_11 extends AdminStyle
                     'sa_el_cb_fa_icon' => [
                         'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fas fa-coffee',
+                        'default' => 'fab fa-youtube',
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-cb-tem-'.$this->oxiid.'-{{KEY}} .oxi-content-box-icon' => '',
                         ],
@@ -234,7 +234,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -283,7 +283,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -362,7 +362,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 30,
+                    'size' => 60,
                 ],
                 'range' => [
                     'px' => [
@@ -392,7 +392,7 @@ class Style_11 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#c2976a',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-icon-icon' => 'color:{{VALUE}};'
                 ],
@@ -496,7 +496,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 120,
+                    'size' => 150,
                 ],
                 'range' => [
                     'px' => [
@@ -516,7 +516,7 @@ class Style_11 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-addons-img-button' => 'width:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-hrbox-box' => 'width:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -528,7 +528,7 @@ class Style_11 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 50,
+                    'size' => 2,
                 ],
                 'range' => [
                     'px' => [
@@ -548,7 +548,7 @@ class Style_11 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-addons-img-button' => 'height:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-hrbox-box' => 'height:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -627,7 +627,7 @@ class Style_11 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-title' => 'color:{{VALUE}};'
                 ],
@@ -704,7 +704,7 @@ class Style_11 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#c2976a',
+                'default' => '#fff',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-description' => 'color:{{VALUE}};'
                 ],
