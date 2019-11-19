@@ -542,7 +542,7 @@ class Style_6 extends AdminStyle
             ]
         ); 
         $this->add_control(
-            'sa_info_banner_heading_color',
+            'sa_info_banner_icon_text_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),

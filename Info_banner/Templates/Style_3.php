@@ -16,23 +16,6 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_3 extends Templates {
 
-    public function inline_public_css() {
-        $style = $this->style;
-        if (array_key_exists('sa_info_banner_image_position', $style) && $style['sa_info_banner_image_position'] == 'left') {
-            $css = '.' . $this->WRAPPER . ' .oxi_addons__info_banner_style_3 .oxi_addons__image:hover {
-                        cursor: pointer;
-                        -o-transform: translate(-5%) !important;
-                        -moz-transform: translate(-5%) !important;
-                        -webkit-transform: translate(-5%) !important;
-                        transform: translate(-5%) !important;
-                        -ms-transform: translate(-5%) !important;
-                    }
-                ';
-            
-        }
-        return $css;
-    }
-
     public function default_render($style, $child, $admin) {
 
         $heading = $sub_heading = $details = $button = $image_and_content = $line = $image = '';
@@ -71,7 +54,7 @@ class Style_3 extends Templates {
             $image = '
             <div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12">
                 <div ' . $this->animation_render('sa_info_banner_front_image_animation', $style) . ' class="oxi_addons_image_main"  >
-                    <img ' . (array_key_exists('sa_info_banner_image_switcher', $style) && $style['sa_info_banner_image_switcher'] != 'yes' ? 'style="width: 100%; height: auto"' : '') . ' src="' . $this->media_render('sa_info_banner_front_image', $style) . '" class="oxi_addons__image" alt="front image"/>
+                    <img ' . (array_key_exists('sa_info_banner_image_switcher', $style) && $style['sa_info_banner_image_switcher'] != 'yes' ? 'style="width: 100%; height: auto"' : '') . ' src="' . $this->media_render('sa_info_banner_front_image', $style) . '" class="oxi_addons__image ' . (array_key_exists('sa_info_banner_image_position', $style) && $style['sa_info_banner_image_position'] == 'left' ? 'sa_image_left' : '') . '" alt="front image"/>
                 </div> 
             </div>
             ';
@@ -91,7 +74,6 @@ class Style_3 extends Templates {
                             </div> 
                 </div> 
             ';
-           
         } else {
             $image_and_content = '<div class="oxi-bt-col-lg-6 oxi-bt-col-md-12 oxi-bt-col-sm-12"> 
                                         <div class="oxi_addons__heading_line">

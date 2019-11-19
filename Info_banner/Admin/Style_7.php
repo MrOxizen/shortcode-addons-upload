@@ -437,7 +437,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#077777',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes_style_7 .oxi-addons-content-boxes-icon' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-content-boxes_style_7 .oxi-addons-content-boxes-icon .oxi-icons' => 'color:{{VALUE}};',
                 ],
             ]
         );
