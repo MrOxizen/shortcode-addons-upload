@@ -23,14 +23,14 @@ class Style_3 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-
-        $styledata = $this->style;
+        $datas = (array_key_exists('sa_image_accordion_data', $style) && is_array($style['sa_image_accordion_data']) ? $style['sa_image_accordion_data'] : []);
+     
 
         echo '<div class="oxi-addons-wrapper-image-accordion-three">
                 <div class="oxi-addons-accordion">
                     <section id="oxi-addons-slider">
                             <div class="oxi-addons-slider-content">';
-        foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
+        foreach ($datas as $key => $value) {
             echo '<div class="oxi-addons-image oxi-addons-image-first">
                                             <div class="oxi-addons-slider-item">
                                                 <div class="oxi-addons-item-img-1" data-src="' . $this->media_render('sa_image_accordion_image_1', $value) . '"></div>
@@ -46,8 +46,7 @@ class Style_3 extends Templates {
     }
 
     public function inline_public_jquery() {
-        $jquery = '';
-        $styledata = $this->style;
+        $jquery = ''; 
         $jquery .= 'jQuery(".oxi-addons-admin-absulote").addClass("oxi-addons-permission-class"); ';
         return $jquery;
     }

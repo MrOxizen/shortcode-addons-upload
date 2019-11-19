@@ -291,8 +291,8 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::ICON,
-                'default' => 'fas fa-angle-right',
-                'placeholder' => 'example:- fas fa-angle-right', 
+                'default' => 'far fa-play-circle',
+                'placeholder' => 'example:- far fa-play-circle', 
             ]
         );
         $this->add_group_control(
@@ -339,7 +339,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 17,
+                    'size' => 50,
                 ],
                 'range' => [
                     'px' => [

@@ -12,18 +12,20 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_3 extends Templates {
+class Style_3 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        $price = $heading = $details = $bodytitle = $bodytime = $button = $imageoverlay = '';
-        $css = '';
-        
+    public function default_render($style, $child, $admin)
+    {
+        $price = $heading = $details = $bodytitle = $bodytime = $button = $imageoverlay = ''; 
+
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
         foreach ($all_data as $key => $listitemdata) {
             if ($listitemdata['sa_event_t_price'] != '') {
-                $price = '<div class="oxi-addons-EW-image-overlay-price-main '.$style['sa_event_widgets_tp_rib_pos'].'">
+                $price = '<div class="oxi-addons-EW-image-overlay-price-main ' . $style['sa_event_widgets_tp_rib_pos'] . '">
                                 <div class="oxi-addons-EW-image-overlay-price">' . $this->text_render($listitemdata['sa_event_t_price']) . '</div>
                             </div>';
             }
@@ -43,7 +45,7 @@ class Style_3 extends Templates {
 
             if ($listitemdata['sa_event_t_button_link-url'] != '' && $listitemdata['sa_event_t_button'] != '') {
                 $button = '<div class="oxi-addons-EW-body-button">
-                              <a ' . $this->url_render('sa_event_t_button_link',$listitemdata) . ' class="oxi-addons-EW-body-button-link">' . $this->text_render($listitemdata['sa_event_t_button']) . '</a>
+                              <a ' . $this->url_render('sa_event_t_button_link', $listitemdata) . ' class="oxi-addons-EW-body-button-link">' . $this->text_render($listitemdata['sa_event_t_button']) . '</a>
                           </div>';
             } elseif ($listitemdata['sa_event_t_button_link-url'] == '' && $listitemdata['sa_event_t_button'] != '') {
                 $button = '<div class="oxi-addons-EW-body-button">
@@ -56,11 +58,10 @@ class Style_3 extends Templates {
                                         ' . $details . '
                                     </div>';
             }
-            if($this->media_render('sa_event_t_media', $listitemdata) != ''){
-                $media = $this->media_render('sa_event_t_media', $listitemdata) ;
+            if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
+                $media = $this->media_render('sa_event_t_media', $listitemdata);
             } else {
                 $media = 'https://www.oxilab.org/wp-content/uploads/2018/12/violinist-in-the-autumn-forest.png';
-                
             }
             echo '<div class="oxi-addons-EW-col  ' . $this->column_render('sa_event_widgets_col', $style) . '">
                 <div class="oxi-addons-EW-wrapper-style-3 oxi-addons-EW-wrapper-style-3-' . $key . '">
@@ -88,7 +89,8 @@ class Style_3 extends Templates {
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $style['id'];
@@ -132,7 +134,7 @@ class Style_3 extends Templates {
                                         ' . $details . '
                                     </div>';
             }
-            echo'<div class="' . OxiAddonsItemRows($styledata, 276) . '">
+            echo '<div class="' . OxiAddonsItemRows($styledata, 276) . '">
                 <div class="oxi-addons-EW-wrapper-' . $oxiid . ' oxi-addons-EW-wrapper-' . $oxiid . '-' . $value['id'] . '">
                     <div class="oxi-addons-EW-row" ' . OxiAddonsAnimation($styledata, 271) . '>
                         <div class="oxi-addons-EW-image">
@@ -163,8 +165,8 @@ class Style_3 extends Templates {
                         overflow: hidden;
                     }';
         }
-        echo'</div>';
-        echo'</div>';
+        echo '</div>';
+        echo '</div>';
 
         $transform = $styledata[269] == 'right' ? "rotate(45deg)" : "rotate(-45deg)";
         $leftRight = $styledata[269] == 'right' ? "right: -60px;" : "left: -60px;";
@@ -363,5 +365,4 @@ class Style_3 extends Templates {
     ';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

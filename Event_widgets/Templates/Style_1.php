@@ -12,13 +12,15 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_1 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        $date = $month = $heading = $content = $button = '';
-        $css = '';
+    public function default_render($style, $child, $admin)
+    {
+        $date = $month = $heading = $content = $button = ''; 
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
         if ($style['sa_event-widgets_date_and_month_pos'] == 'left') {
             $pos = 'left: 0;';
@@ -93,7 +95,8 @@ class Style_1 extends Templates {
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $style['id'];
@@ -346,5 +349,4 @@ class Style_1 extends Templates {
          }';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

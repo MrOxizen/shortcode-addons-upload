@@ -55,7 +55,7 @@ class Style_5 extends AdminStyle
                 'label' => __('Position Reverse', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
-                'default' => 'flex-start', 
+                'default' => 'flex-start',
                 'options' => [
                     'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
@@ -124,7 +124,7 @@ class Style_5 extends AdminStyle
                     ],
                     'px' => [
                         'min' => 0,
-                        'max' => 900,
+                        'max' => 1200,
                         'step' => 0.1,
                     ],
                 ],
@@ -741,7 +741,7 @@ class Style_5 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => 'rgba(232, 0, 75, 0.6)',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-headers-wrapper-style-5  .oxi-addons-main-button .oxi-addons-link-left:hover' => 'background-color:{{VALUE}};'
                 ],
@@ -1049,7 +1049,7 @@ class Style_5 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => 'rgba(20, 181, 250, 0.00)',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-headers-wrapper-style-5   .oxi-addons-link-right:hover' => 'background-color:{{VALUE}};'
                 ],

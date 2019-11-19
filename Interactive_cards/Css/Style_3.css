@@ -83,7 +83,8 @@ and open the template in the editor.
     float: left;
     padding: 180px 0px 180px 0px;
     background: rgba(15, 15, 15, 1);
-    position: relative
+    position: relative;
+    cursor: pointer
 }
 
 .oxi-addons-Interactive-card-style-3 .oxi-opacity-0 {

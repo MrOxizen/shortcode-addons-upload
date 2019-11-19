@@ -4,30 +4,34 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-} 
-.oxi_addons__banner_style_9  {
-    width: 100%; 
-	background: linear-gradient(rgba(77,66,66,0.00), rgba(77,66,66,0.00)), url("https://www.oxilab.org/wp-content/uploads/2019/04/home_mechanic3_slider_bg.jpg") no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	padding: 140px 140px 140px 140px;
-	overflow: hidden;
-	display: flex;
+}
+
+.oxi_addons__banner_style_9 {
+    width: 100%;
+    background: linear-gradient(rgba(77, 66, 66, 0.00), rgba(77, 66, 66, 0.00)), url("https://www.oxilab.org/wp-content/uploads/2019/04/home_mechanic3_slider_bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 140px 140px 140px 140px;
+    overflow: hidden;
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
+
 .oxi_addons__banner_style_9 .oxi_addons_image_main {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
 }
+
 .oxi_addons__banner_style_9 .oxi_addons__image {
     width: 400px;
     height: 350px;
 }
+
 .oxi_addons__banner_style_9 .oxi_addons__image:hover {
     cursor: pointer;
     -o-transform: translate(5%);
@@ -39,73 +43,75 @@
 
 .oxi_addons__banner_style_9 .oxi_addons__heading {
     font-size: 50px;
-	line-height: 1.2;
-	font-family: "Poppins";
-	font-weight: bold;
-	font-style: normal;
-	line-height: 1.3;
-	text-align: center;
-	color: #ffffff;
-	padding: 0px 0px 20px 0px;
+    line-height: 1.2;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    color: #ffffff;
+    padding: 0px 0px 20px 0px;
     width: 100%;
 }
 
-.oxi_addons__banner_style_9 .oxi_addons__heading_line{
+.oxi_addons__banner_style_9 .oxi_addons__heading_line {
     width: 100%;
     position: relative;
 }
-.oxi_addons__banner_style_9 .oxi_addons__line_main { 
+
+.oxi_addons__banner_style_9 .oxi_addons__line_main {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
 }
-.oxi_addons__banner_style_9 .oxi_addons__line { 
+
+.oxi_addons__banner_style_9 .oxi_addons__line {
     display: flex;
     justify-content: center;
     width: 20%;
     height: 4px;
     background: #ffffff;
 }
- 
+
 .oxi_addons__banner_style_9 .oxi_addons__heading span {
     color: #ff6e55;
 }
 
 .oxi_addons__banner_style_9 .oxi_addons__details {
     font-size: 16px;
-	line-height: 1;
-	font-family: "Poppins";
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1.3;
-	text-align: center;
-	color: #ebebeb;
-	padding: 20px 0px 20px 0px;
-	width: 100%;
+    line-height: 1;
+    font-family: "Poppins";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    color: #ebebeb;
+    padding: 20px 0px 20px 0px;
+    width: 100%;
 }
 
- 
+
 .oxi_addons__banner_style_9 .oxi_addons__button_main {
     width: 100%;
     display: flex;
     justify-content: center;
 }
- 
+
 .oxi_addons__banner_style_9 .oxi_addons__button {
-    background: rgba(240,36,66,0.00);
-	color: #fafafa;
-	display: inline-block;
-	font-family: "caros-bold";
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1.3;
-	text-align: left;
-	font-size: 18px;
-	border: 2px solid;
-	border-color: #ffffff;
-	border-radius: 50px 50px 50px 50px;
-	padding: 8px 35px 8px 35px;
-	margin: 1px 1px 15px 1px;
+    background: rgba(240, 36, 66, 0.00);
+    color: #fafafa;
+    display: inline-block;
+    font-family: "caros-bold";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    font-size: 18px;
+    border: 2px solid;
+    border-color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+    padding: 8px 35px 8px 35px;
+    margin: 1px 1px 15px 1px;
     box-shadow: 1px 6px 8px 1px rgba(36, 29, 29, 0.64);
     cursor: pointer
 }
@@ -116,7 +122,7 @@
     border-color: #dcbfff;
 }
 
- 
+
 
 
 @media only screen and (min-width:669px) and (max-width:993px) {
@@ -157,7 +163,7 @@
         margin: 10px 0px 0px 0px;
     }
 
-     
+
 }
 
 @media only screen and (max-width:668px) {
@@ -197,5 +203,5 @@
         padding: 8px 25px 8px 25px;
         margin: 10px 0px 0px 0px;
     }
- 
+
 }

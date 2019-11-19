@@ -21,16 +21,19 @@
     -o-transition: all 0.5 ease;
     flex-wrap: wrap;
 }
+
 .oxi_addons__banner_style_5 .oxi_addons_image_main {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
 }
+
 .oxi_addons__banner_style_5 .oxi_addons__image {
     width: 400px;
     height: 350px;
 }
+
 .oxi_addons__banner_style_5 .oxi_addons__image:hover {
     cursor: pointer;
     -o-transform: translate(5%);
@@ -51,16 +54,19 @@
     padding: 0px 0px 15px 0px;
     width: 100%;
 }
-.oxi_addons__banner_style_5 .oxi_addons__heading_line{
+
+.oxi_addons__banner_style_5 .oxi_addons__heading_line {
     width: 100%;
     position: relative;
 }
-.oxi_addons__banner_style_5 .oxi_addons__line_main { 
+
+.oxi_addons__banner_style_5 .oxi_addons__line_main {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
 }
-.oxi_addons__banner_style_5 .oxi_addons__line { 
+
+.oxi_addons__banner_style_5 .oxi_addons__line {
     display: flex;
     justify-content: center;
     width: 20%;

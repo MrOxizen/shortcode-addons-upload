@@ -1019,7 +1019,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => 'rgba(133, 133, 133, 1)',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-headers-wrapper-style-1 .oxi-addons-main-button .oxi-addons-link:hover' => 'background-color:{{VALUE}};'
                 ],

@@ -200,7 +200,7 @@ class Style_8 extends AdminStyle
                 'default' => 'rgba(10,119,173,0.73)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_5 .oxi_addons__button_left:hover' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__banner_style_8 .oxi_addons__overlay' => 'background-color:{{VALUE}};'
                 ],
             ]
         );

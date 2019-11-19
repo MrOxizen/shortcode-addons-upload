@@ -61,32 +61,32 @@ class Style_4 extends Templates {
         $repeater = (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
         foreach ($repeater as $key => $value) {
             if ($value['sa_is_image_view'] == 'top-to-bottom') {
-                 $jquery .= 'jQuery("#oxi-IS4-img-' . $key . '").mouseover(function(){ 
-                    var imgHeight= jQuery(".oxi-IS4-image-' . $key . '").height();  
-                    var outerHeight = jQuery("#oxi-addons-IS4-image-main-' . $key . '").outerHeight(); 
+                 $jquery .= 'jQuery(".'.$this->WRAPPER.' #oxi-IS4-img-' . $key . '").mouseover(function(){ 
+                    var imgHeight= jQuery(".'.$this->WRAPPER.' .oxi-IS4-image-' . $key . '").height();  
+                    var outerHeight = jQuery(".'.$this->WRAPPER.' #oxi-addons-IS4-image-main-' . $key . '").outerHeight(); 
                     var height = imgHeight-outerHeight; 
-                    jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(-" + height + "px)"});
+                    jQuery(".'.$this->WRAPPER.' .oxi-IS4-image-' . $key . '").css({"transform":"translateY(-" + height + "px)"});
                 });  
-                jQuery("#oxi-IS4-img-' . $key . '").mouseout(function(){ 
-                    jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(0px)"});
+                jQuery(".'.$this->WRAPPER.' #oxi-IS4-img-' . $key . '").mouseout(function(){ 
+                    jQuery(".'.$this->WRAPPER.' .oxi-IS4-image-' . $key . '").css({"transform":"translateY(0px)"});
                 });   
             ';
            
             } elseif ($value['sa_is_image_view'] == 'bottom-to-top') {
-                $jquery .= 'jQuery(".oxi-IS4-image-' . $key . '").css({
+                $jquery .= 'jQuery(".'.$this->WRAPPER.' .oxi-IS4-image-' . $key . '").css({
                         "position" : "absolute",
                         "bottom" : "0",
                         "left" : "0",
                         "Top" : "auto",
                     }); 
-                    jQuery("#oxi-IS4-img-' . $key . '").mouseover(function(){
-                            var imgHeight= jQuery(".oxi-IS4-image-' . $key . '").height();  
-                            var outerHeight = jQuery("#oxi-addons-IS4-image-main-' . $key . '").outerHeight(); 
+                    jQuery(".'.$this->WRAPPER.' #oxi-IS4-img-' . $key . '").mouseover(function(){
+                            var imgHeight= jQuery(".'.$this->WRAPPER.' .oxi-IS4-image-' . $key . '").height();  
+                            var outerHeight = jQuery(".'.$this->WRAPPER.' #oxi-addons-IS4-image-main-' . $key . '").outerHeight(); 
                             var height = imgHeight-outerHeight; 
-                            jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(" + height + "px)"});
+                            jQuery(".'.$this->WRAPPER.' .oxi-IS4-image-' . $key . '").css({"transform":"translateY(" + height + "px)"});
                         });  
-                        jQuery("#oxi-img-' . $key . '").mouseout(function(){ 
-                            jQuery(".oxi-IS4-image-' . $key . '").css({"transform":"translateY(0px)"});
+                        jQuery(".'.$this->WRAPPER.' #oxi-IS4-img-' . $key . '").mouseout(function(){ 
+                            jQuery(".'.$this->WRAPPER.' .oxi-IS4-image-' . $key . '").css({"transform":"translateY(0px)"});
                         });   
                     ';
             }

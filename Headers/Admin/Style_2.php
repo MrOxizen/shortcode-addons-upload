@@ -234,6 +234,34 @@ class Style_2 extends AdminStyle
                 'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
             ]
         );
+        $this->add_responsive_control(
+            'sa_headers_icon_left_position',
+            $this->style,
+            [
+                'label' => __('Icon Position ', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'center',
+                'loader' => TRUE,
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-headers-wrapper-style-2 .oxi-addons-main-icon' => 'justify-content : {{VALUE}};'
+                ],
+            ]
+        );
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
@@ -395,7 +423,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-headers-wrapper-style-1 .oxi-addons-line' => 'justify-content : {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-headers-wrapper-style-2 .oxi-addons-line' => 'justify-content : {{VALUE}};'
                 ],
             ]
         );
@@ -983,7 +1011,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => 'rgba(255, 255, 255, 1)',
-                'separetor' => 'RGB',
+                'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-headers-wrapper-style-2 .oxi-addons-main-button .oxi-addons-link:hover' => 'background-color:{{VALUE}};'
                 ],

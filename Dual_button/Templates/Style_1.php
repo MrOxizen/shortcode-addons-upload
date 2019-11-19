@@ -3,7 +3,7 @@
 namespace SHORTCODE_ADDONS_UPLOAD\Dual_button\Templates;
 
 if (!defined('ABSPATH')) {
-    exit;
+	exit;
 }
 
 /**
@@ -12,55 +12,58 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_1 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        $href = '';
-        $target = '';
-        $middle_text = $href_left = $left_btn_text = $icon_left = $icon_text = $href_right = $target_right = $right_btn_text = $pos = $icon_right = $middle_text = '';
-        if ($style['sa_dual_btn_left_link-url'] != '') {
-            $href_left = $this->url_render('sa_dual_btn_left_link', $style);
-        }
-        if ($style['sa_dual_btn_left_text'] != '') {
-            $left_btn_text = '<span class="oxi-text">' . $this->text_render($style['sa_dual_btn_left_text']) . '</span>';
-        }
-        if ($this->font_awesome_render($style['ssa_dual_btn_left_icon']) != '') {
-            $icon_left = $this->font_awesome_render($style['ssa_dual_btn_left_icon']);
-        }
-        if ($style['sa_dual_btn_left_position'] == 'left') {
-            $icon_text = $icon_left . $left_btn_text;
-        } else {
-            $icon_text = $left_btn_text . $icon_left;
-        }
+	public function default_render($style, $child, $admin)
+	{
+		$href = '';
+		$target = '';
+		$middle_text = $href_left = $left_btn_text = $icon_left = $icon_text = $href_right = $target_right = $right_btn_text = $pos = $icon_right = $middle_text = '';
+		if ($style['sa_dual_btn_left_link-url'] != '') {
+			$href_left = $this->url_render('sa_dual_btn_left_link', $style);
+		}
+		if ($style['sa_dual_btn_left_text'] != '') {
+			$left_btn_text = '<span class="oxi-text">' . $this->text_render($style['sa_dual_btn_left_text']) . '</span>';
+		}
+		if ($this->font_awesome_render($style['ssa_dual_btn_left_icon']) != '') {
+			$icon_left = $this->font_awesome_render($style['ssa_dual_btn_left_icon']);
+		}
+		if ($style['sa_dual_btn_left_position'] == 'left') {
+			$icon_text = $icon_left . $left_btn_text;
+		} else {
+			$icon_text = $left_btn_text . $icon_left;
+		}
 
-        //right
-        if ($style['sa_dual_btn_right_link-url'] != '') {
-            $href_right = $this->url_render('sa_dual_btn_right_link', $style);
-        }
+		//right
+		if ($style['sa_dual_btn_right_link-url'] != '') {
+			$href_right = $this->url_render('sa_dual_btn_right_link', $style);
+		}
 
-        if ($style['sa_dual_btn_right_text'] != '') {
-            $right_btn_text = '<span class="oxi-text">' . $this->text_render($style['sa_dual_btn_right_text']) . '</span>';
-        }
+		if ($style['sa_dual_btn_right_text'] != '') {
+			$right_btn_text = '<span class="oxi-text">' . $this->text_render($style['sa_dual_btn_right_text']) . '</span>';
+		}
 
-        if ($this->font_awesome_render($style['ssa_dual_btn_right_icon']) != '') {
-            $icon_right = $this->font_awesome_render($style['ssa_dual_btn_right_icon']);
-        }
-        if ($style['sa_dual_btn_mid_icon'] != '' || $style['sa_dual_btn_mid_text'] != '') {
-            if ($style['sa_dual_btn_mid_text_icon'] == 'text') {
-                $middle_text = $this->text_render($style['sa_dual_btn_mid_text']);
-            } else {
-                $middle_text = $this->font_awesome_render($style['sa_dual_btn_mid_icon']);
-            }
-            $middle_text = '<div class="oxi-addons-btn-group-before OxiAddonsEqualHeightWidth" > ' . $middle_text . '</div>';
-        }
-        if ($style['sa_dual_btn_right_position'] == 'left') {
-            $icon_text_right = $icon_right . $right_btn_text;
-        } else {
-            $icon_text_right = $right_btn_text . $icon_right;
-        }
-        echo '<div class=" oxi-dual-button" ' . $this->animation_render('sa_s_image_animation', $style) . '>
+		if ($this->font_awesome_render($style['ssa_dual_btn_right_icon']) != '') {
+			$icon_right = $this->font_awesome_render($style['ssa_dual_btn_right_icon']);
+		}
+		if ($style['sa_dual_btn_mid_icon'] != '' || $style['sa_dual_btn_mid_text'] != '') {
+			if ($style['sa_dual_btn_mid_text_icon'] == 'text') {
+				$middle_text = $this->text_render($style['sa_dual_btn_mid_text']);
+			} else {
+				$middle_text = $this->font_awesome_render($style['sa_dual_btn_mid_icon']);
+			}
+			$middle_text = '<div class="oxi-addons-btn-group-before OxiAddonsEqualHeightWidth" > ' . $middle_text . '</div>';
+		}
+		if ($style['sa_dual_btn_right_position'] == 'left') {
+			$icon_text_right = $icon_right . $right_btn_text;
+		} else {
+			$icon_text_right = $right_btn_text . $icon_right;
+		}
+		echo '<div class="oxi-dual-button-style-1" ' . $this->animation_render('sa_s_image_animation', $style) . '>
                          <div class="oxi-addons-dual-button-align">
                             <div class="oxi-addons-btn-group " >
                                     <a ' . $href_left . '   id="' . $style['sa_dual_btn_left_id'] . '"><div class="oxi-left-icon">' . $icon_text . '</div> 
@@ -69,71 +72,72 @@ class Style_1 extends Templates {
                              </div>
                         </div>
                     </div>';
-    }
+	}
 
-    public function old_render() {
-        $style = $this->dbdata;
-        $child = $this->child;
-        $oxiid = $style['id'];
-        $css = '';
-        $stylefiles = explode('||#||', $style['css']);
-        $styledata = explode('|', $stylefiles[0]);
+	public function old_render()
+	{
+		$style = $this->dbdata;
+		$child = $this->child;
+		$oxiid = $style['id'];
+		$css = '';
+		$stylefiles = explode('||#||', $style['css']);
+		$styledata = explode('|', $stylefiles[0]);
 
-        $href = '';
-        $target = '';
-        $middle_text = $href_left = $target_left = $left_btn_text = $icon_left = $icon_text = $href_right = $target_right = $right_btn_text = $pos = $icon_right = $middle_text = '';
-        if ($stylefiles[17] != '') {
-            $href_left = 'href="' . OxiAddonsUrlConvert($stylefiles[17]) . '"';
-        }
-        if ($styledata[25] != '') {
-            $target_left = 'target="' . $styledata[25] . '"';
-        }
-        if ($styledata[3] != '') {
-            $left_btn_text = '<span class="oxi-text">' . $stylefiles[3] . '</span>';
-        }
-        if ($styledata[9] != '') {
-            $icon_left = oxi_addons_font_awesome($stylefiles[9]);
-        }
-        if ($styledata[157] == 'left') {
-            $icon_text = $icon_left . $left_btn_text;
-        } else {
-            $icon_text = $left_btn_text . $icon_left;
-        }
+		$href = '';
+		$target = '';
+		$middle_text = $href_left = $target_left = $left_btn_text = $icon_left = $icon_text = $href_right = $target_right = $right_btn_text = $pos = $icon_right = $middle_text = '';
+		if ($stylefiles[17] != '') {
+			$href_left = 'href="' . OxiAddonsUrlConvert($stylefiles[17]) . '"';
+		}
+		if ($styledata[25] != '') {
+			$target_left = 'target="' . $styledata[25] . '"';
+		}
+		if ($styledata[3] != '') {
+			$left_btn_text = '<span class="oxi-text">' . $stylefiles[3] . '</span>';
+		}
+		if ($styledata[9] != '') {
+			$icon_left = oxi_addons_font_awesome($stylefiles[9]);
+		}
+		if ($styledata[157] == 'left') {
+			$icon_text = $icon_left . $left_btn_text;
+		} else {
+			$icon_text = $left_btn_text . $icon_left;
+		}
 
-        //right
-        if ($stylefiles[19] != '') {
-            $href_right = 'href="' . OxiAddonsUrlConvert($stylefiles[19]) . '"';
-        }
-        if ($styledata[27] != '') {
-            $target_right = 'target="' . $styledata[27] . '"';
-        }
-        if ($styledata[5] != '') {
-            $right_btn_text = '<span class="oxi-text">' . $stylefiles[5] . '</span>';
-        }
-        if ($styledata[3] == 'left') {
-            $pos = 'flex-start';
-        } elseif ($styledata[3] == 'center') {
-            $pos = 'center';
-        } else {
-            $pos = 'flex-end';
-        }
-        if ($styledata[11] != '') {
-            $icon_right = oxi_addons_font_awesome($stylefiles[11]);
-        }
-        if ($stylefiles[7] != '') {
-            if ($styledata[347] == 'text') {
-                $middle_text = $stylefiles[7];
-            } else {
-                $middle_text = oxi_addons_font_awesome($stylefiles[7]);
-            }
-            $middle_text = '<div class="oxi-addons-btn-group-before OxiAddonsEqualHeightWidth" > ' . $middle_text . '</div>';
-        }
-        if ($styledata[289] == 'left') {
-            $icon_text_right = $icon_right . $right_btn_text;
-        } else {
-            $icon_text_right = $right_btn_text . $icon_right;
-        }
-        echo '
+		//right
+		if ($stylefiles[19] != '') {
+			$href_right = 'href="' . OxiAddonsUrlConvert($stylefiles[19]) . '"';
+		}
+		if ($styledata[27] != '') {
+			$target_right = 'target="' . $styledata[27] . '"';
+		}
+		if ($styledata[5] != '') {
+			$right_btn_text = '<span class="oxi-text">' . $stylefiles[5] . '</span>';
+		}
+		if ($styledata[3] == 'left') {
+			$pos = 'flex-start';
+		} elseif ($styledata[3] == 'center') {
+			$pos = 'center';
+		} else {
+			$pos = 'flex-end';
+		}
+		if ($styledata[11] != '') {
+			$icon_right = oxi_addons_font_awesome($stylefiles[11]);
+		}
+		if ($stylefiles[7] != '') {
+			if ($styledata[347] == 'text') {
+				$middle_text = $stylefiles[7];
+			} else {
+				$middle_text = oxi_addons_font_awesome($stylefiles[7]);
+			}
+			$middle_text = '<div class="oxi-addons-btn-group-before OxiAddonsEqualHeightWidth" > ' . $middle_text . '</div>';
+		}
+		if ($styledata[289] == 'left') {
+			$icon_text_right = $icon_right . $right_btn_text;
+		} else {
+			$icon_text_right = $right_btn_text . $icon_right;
+		}
+		echo '
                 <div class="oxi-addons-row">
                     <div class=" oxi-button-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 21) . '>
                          <div class="oxi-addons-align-' . $oxiid . '">
@@ -146,12 +150,12 @@ class Style_1 extends Templates {
                     </div>
                  </div>
 		 ';
-        ?>
+		?>
 
 
         <?php
 
-        $css .= ' .oxi-addons-align-' . $oxiid . '{
+				$css .= ' .oxi-addons-align-' . $oxiid . '{
 				width :100%;
 				float :left ;
 				text-align : ' . $styledata[3] . ';
@@ -363,7 +367,6 @@ class Style_1 extends Templates {
 				}
             }
 			';
-        wp_add_inline_style('shortcode-addons-style', $css);
-    }
-
-}
+				wp_add_inline_style('shortcode-addons-style', $css);
+			}
+		}

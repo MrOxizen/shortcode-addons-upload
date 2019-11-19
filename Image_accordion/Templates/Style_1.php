@@ -18,12 +18,12 @@ class Style_1 extends Templates {
     
 
     public function default_render($style, $child, $admin) {
+        $datas = (array_key_exists('sa_image_accordion_data', $style) && is_array($style['sa_image_accordion_data']) ? $style['sa_image_accordion_data'] : []);
         
-        $styledata = $this->style;
         echo '<div class="oxi-addons-wrapper-image-accordion">
                 <div class="oxi-addons-accordion">
                     <ul class="oxi-addons-accordion-ul">';
-        foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
+        foreach ($datas as $key => $value) {
             if (array_key_exists('sa_image_accordion_url-url', $value) && $value['sa_image_accordion_url-url'] != '') {
                 $linkstart = '<a ' . $this->url_render('sa_image_accordion_url', $value) . ' class="oxi-link '.$style['sa-image_accordion-overlay_animation'].'" >';
             } else {
@@ -52,8 +52,10 @@ class Style_1 extends Templates {
     }
     public function inline_public_css() {
         $rt = '';
-        $styledata = $this->style;
-         foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
+        $style = $this->style;
+        $datas = (array_key_exists('sa_image_accordion_data', $style) && is_array($style['sa_image_accordion_data']) ? $style['sa_image_accordion_data'] : []);
+
+         foreach ($datas as $key => $value) {
             $rt .= $this->background_render('sa_image_accordion_image', $value, '.' . $this->WRAPPER . ' .oxi-addons-background-image-'.$key.'');
             
         }

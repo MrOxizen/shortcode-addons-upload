@@ -177,7 +177,7 @@ class Style_11 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 600,
+                    'size' => 450,
                 ], 
                 'range' => [
                     '%' => [
@@ -207,7 +207,7 @@ class Style_11 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 1200,
+                    'size' => 500,
                 ], 
                 'range' => [
                     '%' => [

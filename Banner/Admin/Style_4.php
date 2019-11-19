@@ -99,6 +99,28 @@ class Style_4 extends AdminStyle
                 Controls::SEPARATOR => TRUE
             ]
         );
+        $this->add_responsive_control(
+            'sa_banner_reverse_position',
+            $this->style,
+            [
+                'label' => __('Postion reverse', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE, 
+                'default' => 'row',
+                'options' => [
+                    'row' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ], 
+                    'row-reverse' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_4 ' => 'flex-direction: {{VALUE}};'
+                ],
+            ]
+        );
         $this->add_group_control(
             'sa_banner_main_background',
             $this->style,
@@ -163,6 +185,29 @@ class Style_4 extends AdminStyle
                 'return_value' => 'yes',
             ]
         ); 
+        $this->add_responsive_control(
+            'sa_banner_line_position',
+            $this->style,
+            [
+                'label' => __('Postion', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE, 
+                'default' => 'left',
+                'loader' => true,
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ], 
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__banner_style_4 .oxi_addons__line::before' => '{{VALUE}}: 0;   '
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_banner_line_width',
             $this->style,
@@ -517,7 +562,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -549,7 +594,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

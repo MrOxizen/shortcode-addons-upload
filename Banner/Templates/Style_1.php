@@ -62,7 +62,7 @@ class Style_1 extends Templates
                     $icon_right = '' . $iright . ' ' . $this->text_render($style['sa_banner_button_right_text']) . '';
                 } else {
                     $icon_right = '' . $this->text_render($style['sa_banner_button_right_text']) . ' ' . $iright . '';
-                }
+                }   
                 if (array_key_exists('sa_banner_button_right_link-url', $style) && $style['sa_banner_button_right_link-url'] != '') {
                     $right_button = '<div class="oxi_addons__button_right_main" ' . $this->animation_render('oxi_addons__button_right_main', $style) . '>
                                             <a ' . $this->url_render('sa_banner_button_right_link', $style) . ' class="oxi_addons__button_right">

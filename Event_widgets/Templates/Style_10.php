@@ -3,7 +3,7 @@
 namespace SHORTCODE_ADDONS_UPLOAD\Event_widgets\Templates;
 
 if (!defined('ABSPATH')) {
-    exit;
+  exit;
 }
 
 /**
@@ -12,85 +12,88 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_10 extends Templates {
+class Style_10 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+  public function default_render($style, $child, $admin)
+  {
 
-        $css = $media = '';
-        $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
-        $icon = $heading = $image = $content = $headersection = $bodysection = '';
-        if ($style['sa_event_widgets_overly_positon'] == 'left') {
-            $pos = ' 
+    $media = '';
+    $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
+
+    if ($style['sa_event_widgets_overly_positon'] == 'left') {
+      $pos = ' 
                          left: 0;';
-        } elseif ($style['sa_event_widgets_overly_positon'] == 'right') {
-            $pos = '
+    } elseif ($style['sa_event_widgets_overly_positon'] == 'right') {
+      $pos = '
                          right: 0;';
-        }
-        $date = $month = $headinglink = $link = $timeicon = $timetext = $addresstext = $addressicon = $datemonthsection = '';
-        foreach ($all_data as $key => $listitemdata) {
+    }
+    $date = $month = $headinglink = $link = $timeicon = $timetext = $addresstext = $addressicon = $datemonthsection = '';
+    foreach ($all_data as $key => $listitemdata) {
 
-            if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
-                $media = $this->media_render('sa_event_t_media', $listitemdata);
-            } else {
-                $media = 'https://www.oxilab.org/wp-content/uploads/2019/01/pexels-photo-167589.jpeg';
-            }
-            if ($listitemdata['sa_event_t_day'] != '') {
-                $date = '<div class="oxi-addons-EW-10-D">' . $this->text_render($listitemdata['sa_event_t_day']) . '</div>';
-            }
-            if ($listitemdata['sa_event_t_month'] != '') {
-                $month = '<div class="oxi-addons-EW-10-M">' . $this->text_render($listitemdata['sa_event_t_month']) . '</div>';
-            }
-            if ($date != '' || $month != '') {
-                $datemonthsection = '<div class="oxi-addons-EW-10-DM">
+      if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
+        $media = $this->media_render('sa_event_t_media', $listitemdata);
+      } else {
+        $media = 'https://www.oxilab.org/wp-content/uploads/2019/01/pexels-photo-167589.jpeg';
+      }
+      if ($listitemdata['sa_event_t_day'] != '') {
+        $date = '<div class="oxi-addons-EW-10-D">' . $this->text_render($listitemdata['sa_event_t_day']) . '</div>';
+      }
+      if ($listitemdata['sa_event_t_month'] != '') {
+        $month = '<div class="oxi-addons-EW-10-M">' . $this->text_render($listitemdata['sa_event_t_month']) . '</div>';
+      }
+      if ($date != '' || $month != '') {
+        $datemonthsection = '<div class="oxi-addons-EW-10-DM">
                                             ' . $date . '
                                             ' . $month . '
                                        </div>';
-            }
-            if ($listitemdata['sa_event_t_heading_link-url'] != '' && $listitemdata['sa_event_t_heading'] != '') {
-                $headinglink = '<div class="oxi-addons-EW-10-heading">
+      }
+      if ($listitemdata['sa_event_t_heading_link-url'] != '' && $listitemdata['sa_event_t_heading'] != '') {
+        $headinglink = '<div class="oxi-addons-EW-10-heading">
                                     <a ' . $this->url_render('sa_event_t_heading_link', $listitemdata) . '> <div class="oxi-addons-EW-10-H">' . $this->text_render($listitemdata['sa_event_t_heading']) . '</div></a>
                                   </div>';
-            } elseif ($listitemdata['sa_event_t_heading_link-url'] == '' && $listitemdata['sa_event_t_heading'] != '') {
-                $headinglink = '<div class="oxi-addons-EW-10-heading">
+      } elseif ($listitemdata['sa_event_t_heading_link-url'] == '' && $listitemdata['sa_event_t_heading'] != '') {
+        $headinglink = '<div class="oxi-addons-EW-10-heading">
                                         <div class="oxi-addons-EW-10-H">' . $this->text_render($listitemdata['sa_event_t_heading']) . '</div>
                                   </div>';
-            }
-            if ($listitemdata['sa_event_t_btn_link_url-url'] != '' && $listitemdata['sa_event_t_link_text'] != '') {
-                $link = '<div class="oxi-addons-EW-10-lan">
+      }
+      if ($listitemdata['sa_event_t_btn_link_url-url'] != '' && $listitemdata['sa_event_t_link_text'] != '') {
+        $link = '<div class="oxi-addons-EW-10-lan">
                                   <a ' . $this->url_render('sa_event_t_btn_link_url', $listitemdata) . ' > <div class="oxi-addons-EW-10-link">' . $this->text_render($listitemdata['sa_event_t_link_text']) . '</div></a>
                                </div>';
-            } elseif ($listitemdata['sa_event_t_btn_link_url-url'] == '' && $listitemdata['sa_event_t_link_text'] != '') {
-                $link = '<div class="oxi-addons-EW-10-lan">
+      } elseif ($listitemdata['sa_event_t_btn_link_url-url'] == '' && $listitemdata['sa_event_t_link_text'] != '') {
+        $link = '<div class="oxi-addons-EW-10-lan">
                                   <div class="oxi-addons-EW-10-link">' . $this->text_render($listitemdata['sa_event_t_link_text']) . '</div>
                              </div>';
-            }
-            if ($listitemdata['sa_event_t_info_time_icon'] != '') {
-                $timeicon = '  <div class="oxi-addons-EW-10-F-T-I">' . $this->font_awesome_render($listitemdata['sa_event_t_info_time_icon']) . '</div>';
-            }
-            if ($listitemdata['sa_event_t_info_time'] != '') {
-                $timetext = '<div class="oxi-addons-EW-10-F-T-T">' . $this->text_render($listitemdata['sa_event_t_info_time']) . '</div>';
-            }
-            if ($timeicon != '' || $timetext != '') {
-                $footertimesection = '<div class="oxi-addons-EW-10-F-T">
+      }
+      if ($listitemdata['sa_event_t_info_time_icon'] != '') {
+        $timeicon = '  <div class="oxi-addons-EW-10-F-T-I">' . $this->font_awesome_render($listitemdata['sa_event_t_info_time_icon']) . '</div>';
+      }
+      if ($listitemdata['sa_event_t_info_time'] != '') {
+        $timetext = '<div class="oxi-addons-EW-10-F-T-T">' . $this->text_render($listitemdata['sa_event_t_info_time']) . '</div>';
+      }
+      if ($timeicon != '' || $timetext != '') {
+        $footertimesection = '<div class="oxi-addons-EW-10-F-T">
                                                 ' . $timeicon . '
                                                 ' . $timetext . '
                                             </div>';
-            }
-            if ($listitemdata['sa_event_t_address_icon'] != '') {
-                $addressicon = '<div class="oxi-addons-EW-10-F-L-I">' . $this->font_awesome_render($listitemdata['sa_event_t_address_icon']) . '</div>';
-            }
-            if ($listitemdata['sa_event_t_address'] != '') {
-                $addresstext = '<div class="oxi-addons-EW-10-F-L-T">' . $this->text_render($listitemdata['sa_event_t_address']) . '</div>';
-            }
-            if ($timeicon != '' || $timetext != '') {
-                $footertextsection = '<div class="oxi-addons-EW-10-F-location">
+      }
+      if ($listitemdata['sa_event_t_address_icon'] != '') {
+        $addressicon = '<div class="oxi-addons-EW-10-F-L-I">' . $this->font_awesome_render($listitemdata['sa_event_t_address_icon']) . '</div>';
+      }
+      if ($listitemdata['sa_event_t_address'] != '') {
+        $addresstext = '<div class="oxi-addons-EW-10-F-L-T">' . $this->text_render($listitemdata['sa_event_t_address']) . '</div>';
+      }
+      if ($timeicon != '' || $timetext != '') {
+        $footertextsection = '<div class="oxi-addons-EW-10-F-location">
                                                 ' . $addressicon . '
                                                 ' . $addresstext . '
                                             </div>';
-            }
-            echo '   <div class="oxi-addons-EW-col ' . $this->column_render('sa_event_widgets_col', $style) . '">
+      }
+      echo '   <div class="oxi-addons-EW-col ' . $this->column_render('sa_event_widgets_col', $style) . '">
                         <div class="oxi-addons-EW-10-wrapper-style-10 oxi-addons-EW-10-wrapper-style-10-' . $key . '" ' . $this->animation_render('sa_event_widgets_animation', $style) . '>
                            <div class="oxi-addons-EW-10-row" ' . $this->animation_render('sa_event_widgets_animation', $style) . '>
                                 <div class="oxi-addons-EW-10-imagebody">
@@ -121,76 +124,77 @@ class Style_10 extends Templates {
                             </div>
                         </div>
                     </div>';
-        }
     }
+  }
 
-    public function old_render() {
-        $style = $this->dbdata;
-        $listdata = $this->child;
-        $oxiid = $style['id'];
-        $stylefiles = explode('||#||', $style['css']);
-        $styledata = explode('|', $stylefiles[0]);
-        $date = $month = $datemonthsection = $headinglink = $link = $timeicon = $timetext = $footertimesection = $addressicon = $addresstext = $footertextsection = '';
-        $css = '';
-        echo '<div class="oxi-addons-container">';
-        echo '<div class="oxi-addons-row">';
-        foreach ($listdata as $value) {
-            $listitemdata = explode('||#||', $value['files']);
-            if ($listitemdata[4] != '') {
-                $date = '<div class="oxi-addons-EW-10-D">' . OxiAddonsTextConvert($listitemdata[4]) . '</div>';
-            }
-            if ($listitemdata[4] != '') {
-                $month = '<div class="oxi-addons-EW-10-M">' . OxiAddonsTextConvert($listitemdata[6]) . '</div>';
-            }
-            if ($date != '' || $month != '') {
-                $datemonthsection = '<div class="oxi-addons-EW-10-DM">
+  public function old_render()
+  {
+    $style = $this->dbdata;
+    $listdata = $this->child;
+    $oxiid = $style['id'];
+    $stylefiles = explode('||#||', $style['css']);
+    $styledata = explode('|', $stylefiles[0]);
+    $date = $month = $datemonthsection = $headinglink = $link = $timeicon = $timetext = $footertimesection = $addressicon = $addresstext = $footertextsection = '';
+    $css = '';
+    echo '<div class="oxi-addons-container">';
+    echo '<div class="oxi-addons-row">';
+    foreach ($listdata as $value) {
+      $listitemdata = explode('||#||', $value['files']);
+      if ($listitemdata[4] != '') {
+        $date = '<div class="oxi-addons-EW-10-D">' . OxiAddonsTextConvert($listitemdata[4]) . '</div>';
+      }
+      if ($listitemdata[4] != '') {
+        $month = '<div class="oxi-addons-EW-10-M">' . OxiAddonsTextConvert($listitemdata[6]) . '</div>';
+      }
+      if ($date != '' || $month != '') {
+        $datemonthsection = '<div class="oxi-addons-EW-10-DM">
                                             ' . $date . '
                                             ' . $month . '
                                         </div>';
-            }
-            if ($listitemdata[10] != '' && $listitemdata[8] != '') {
-                $headinglink = '<div class="oxi-addons-EW-10-heading">
+      }
+      if ($listitemdata[10] != '' && $listitemdata[8] != '') {
+        $headinglink = '<div class="oxi-addons-EW-10-heading">
                                             <a href="' . OxiAddonsUrlConvert($listitemdata[10]) . '" target="' . $styledata[197] . '"> <div class="oxi-addons-EW-10-H">' . OxiAddonsTextConvert($listitemdata[8]) . '</div></a>
                                       </div>';
-            } elseif ($listitemdata[10] == '' && $listitemdata[8] != '') {
-                $headinglink = '<div class="oxi-addons-EW-10-heading">
+      } elseif ($listitemdata[10] == '' && $listitemdata[8] != '') {
+        $headinglink = '<div class="oxi-addons-EW-10-heading">
                                             <div class="oxi-addons-EW-10-H">' . OxiAddonsTextConvert($listitemdata[8]) . '</div>
                                       </div>';
-            }
-            if ($listitemdata[14] != '' && $listitemdata[12] != '') {
-                $link = '<div class="oxi-addons-EW-10-lan">
+      }
+      if ($listitemdata[14] != '' && $listitemdata[12] != '') {
+        $link = '<div class="oxi-addons-EW-10-lan">
                                   <a href="' . OxiAddonsUrlConvert($listitemdata[14]) . '" target="' . $styledata[199] . '"> <div class="oxi-addons-EW-10-link">' . OxiAddonsTextConvert($listitemdata[12]) . '</div></a>
                                </div>';
-            } elseif ($listitemdata[14] == '' && $listitemdata[12] != '') {
-                $link = '<div class="oxi-addons-EW-10-lan">
+      } elseif ($listitemdata[14] == '' && $listitemdata[12] != '') {
+        $link = '<div class="oxi-addons-EW-10-lan">
                                   <div class="oxi-addons-EW-10-link">' . OxiAddonsTextConvert($listitemdata[12]) . '</div>
                              </div>';
-            }
-            if ($listitemdata[18] != '') {
-                $timeicon = '  <div class="oxi-addons-EW-10-F-T-I">' . oxi_addons_font_awesome('' . $listitemdata[18] . '') . '</div>';
-            }
-            if ($listitemdata[16] != '') {
-                $timetext = '<div class="oxi-addons-EW-10-F-T-T">' . OxiAddonsTextConvert($listitemdata[16]) . '</div>';
-            }
-            if ($timeicon != '' || $timetext != '') {
-                $footertimesection = '<div class="oxi-addons-EW-10-F-T">
+      }
+      if ($listitemdata[18] != '') {
+        $timeicon = '  <div class="oxi-addons-EW-10-F-T-I">' . oxi_addons_font_awesome('' . $listitemdata[18] . '') . '</div>';
+      }
+      if ($listitemdata[16] != '') {
+        $timetext = '<div class="oxi-addons-EW-10-F-T-T">' . OxiAddonsTextConvert($listitemdata[16]) . '</div>';
+      }
+      if ($timeicon != '' || $timetext != '') {
+        $footertimesection = '<div class="oxi-addons-EW-10-F-T">
                                                 ' . $timeicon . '
                                                 ' . $timetext . '
                                             </div>';
-            }
-            if ($listitemdata[22] != '') {
-                $addressicon = '<div class="oxi-addons-EW-10-F-L-I">' . oxi_addons_font_awesome('' . $listitemdata[22] . '') . '</div>';
-            }
-            if ($listitemdata[20] != '') {
-                $addresstext = '<div class="oxi-addons-EW-10-F-L-T">' . OxiAddonsTextConvert($listitemdata[20]) . '</div>';
-            }
-            if ($timeicon != '' || $timetext != '') {
-                $footertextsection = '<div class="oxi-addons-EW-10-F-location">
+      }
+      if ($listitemdata[22] != '') {
+        $addressicon = '<div class="oxi-addons-EW-10-F-L-I">' . oxi_addons_font_awesome('' . $listitemdata[22] . '') . '</div>';
+      }
+      if ($listitemdata[20] != '') {
+        $addresstext = '<div class="oxi-addons-EW-10-F-L-T">' . OxiAddonsTextConvert($listitemdata[20]) . '</div>';
+      }
+      if ($timeicon != '' || $timetext != '') {
+        $footertextsection = '<div class="oxi-addons-EW-10-F-location">
                                                 ' . $addressicon . '
                                                 ' . $addresstext . '
                                             </div>';
-            }
-            echo '<div class="' . OxiAddonsItemRows($styledata, 203) . '">
+      }
+      echo '<div class="' . OxiAddonsItemRows($styledata, 203) . '">
                         <div class="oxi-addons-EW-10-wrapper-' . $oxiid . ' oxi-addons-EW-10-wrapper-' . $oxiid . '-' . $value['id'] . '">
                             <div class="oxi-addons-EW-10-row" ' . OxiAddonsAnimation($styledata, 223) . '>
                                 <div class="oxi-addons-EW-10-imagebody">
@@ -213,7 +217,7 @@ class Style_10 extends Templates {
                             </div>
                         </div>
                     </div>';
-            $css .= '.oxi-addons-EW-10-wrapper-' . $oxiid . '.oxi-addons-EW-10-wrapper-' . $oxiid . '-' . $value['id'] . ' .oxi-addons-EW-10-BG{
+      $css .= '.oxi-addons-EW-10-wrapper-' . $oxiid . '.oxi-addons-EW-10-wrapper-' . $oxiid . '-' . $value['id'] . ' .oxi-addons-EW-10-BG{
                         background: url(\'' . OxiAddonsUrlConvert($listitemdata[2]) . '\');
                         width: 100%;
                         height: 100%;
@@ -222,15 +226,15 @@ class Style_10 extends Templates {
                         background-size: cover;
                         position: relative;
                       }';
-        }
-        echo '</div>';
-        echo '</div>';
+    }
+    echo '</div>';
+    echo '</div>';
 
-        $overposition = $styledata[201] == 'right' ? "right:0" : "left:0";
-        $borderposition = $styledata[201] == 'right' ? "border-right" : "border-left";
-        $order = $styledata[201] == 'right' ? "order: -1" : "order: 1";
+    $overposition = $styledata[201] == 'right' ? "right:0" : "left:0";
+    $borderposition = $styledata[201] == 'right' ? "border-right" : "border-left";
+    $order = $styledata[201] == 'right' ? "order: -1" : "order: 1";
 
-        $css .= '
+    $css .= '
         .oxi-addons-EW-10-wrapper-' . $oxiid . '{
           width: 100%;
           max-width: ' . $styledata[7] . 'px;
@@ -420,7 +424,6 @@ class Style_10 extends Templates {
             padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 179) . ';
           }
         }';
-        wp_add_inline_style('shortcode-addons-style', $css);
-    }
-
+    wp_add_inline_style('shortcode-addons-style', $css);
+  }
 }

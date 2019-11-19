@@ -31,14 +31,14 @@ class Style_6 extends Templates {
                                 <symbol id="oxi-add-s-text">
                                   <text text-anchor="middle"
                                         x="50%"
-                                        y="35%"
+                                        y="40%"
                                         class="oxi-add-text--line"
                                         >
                                     ' . $this->text_render($styledata['sa_animated_first_text']) . '
                                   </text>
                                   <text text-anchor="middle"
                                         x="50%"
-                                        y="68%"
+                                        y="90%"
                                         class="oxi-add-text--line2"
                                         >
                                     ' . $this->text_render($styledata['sa_animated_second_text']) . '

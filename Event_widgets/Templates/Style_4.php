@@ -12,11 +12,14 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_4 extends Templates {
+class Style_4 extends Templates
+{
 
-    public function inline_public_jquery() {
+    public function inline_public_jquery()
+    {
         $a = $this->style['sa_event_widgets_opening'];
         $jquery = ' jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-info") . slideToggle("slow");
                     jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-head' . $a . '") . addClass("oxi-active");
@@ -33,9 +36,8 @@ class Style_4 extends Templates {
         return $jquery;
     }
 
-    public function default_render($style, $child, $admin) {
-        $price = $heading = $details = $bodytitle = $bodytime = $button = $imageoverlay = '';
-        $css = '';
+    public function default_render($style, $child, $admin)
+    {
         $imagepositionleft = $imagepositionright = '';
         $time = '';
         $title = '';
@@ -59,32 +61,32 @@ class Style_4 extends Templates {
                                         </div>';
             }
 
-            if ($listitemdata['sa_event_t_time'] != ''):
+            if ($listitemdata['sa_event_t_time'] != '') :
                 $time = '<div class="oxi-addons-EV-time">
                                 <p class="oxi-addons-EV-time-body">
                                    ' . $this->text_render($listitemdata['sa_event_t_time']) . '
                                 </p>
                             </div>';
             endif;
-            if ($listitemdata['sa_event_t_title'] != ''):
+            if ($listitemdata['sa_event_t_title'] != '') :
                 $title = '      <h3 class="oxi-addons-EV-title-text">
                                 ' . $this->text_render($listitemdata['sa_event_t_title']) . '
                             </h3>';
             endif;
-            if ($listitemdata['sa_event_t_Author'] != ''):
+            if ($listitemdata['sa_event_t_Author'] != '') :
                 $author = '     <h4 class="oxi-addons-EV-title-author-info">
                                 ' . $this->text_render($listitemdata['sa_event_t_Author']) . '
                             </h4>';
             endif;
-            if ($listitemdata['sa_event_t_info_text'] != ''):
+            if ($listitemdata['sa_event_t_info_text'] != '') :
                 $info_body = ' <div class="oxi-addons-EV-info-body">' . $this->text_render($listitemdata['sa_event_t_info_text']) . '</div>';
             endif;
-            if ($listitemdata['sa_event_t_location'] != ''):
+            if ($listitemdata['sa_event_t_location'] != '') :
                 $info_location = '  <div class="oxi-addons-EV-info-location">
                                     ' . $this->text_render($listitemdata['sa_event_t_location']) . '
                                  </div>';
             endif;
-            echo '<div class="oxi-addons-EV-style-4 .oxi-addons-EW-wrapper-style-4-'.$key.'">
+            echo '<div class="oxi-addons-EV-style-4 .oxi-addons-EW-wrapper-style-4-' . $key . '">
                 <div class="oxi-addons-EV-row" ' . $this->animation_render('sa_event_widgets_animation', $style) . '>
                     <div class="oxi-addons-EV-head">
                         ' . $imagepositionleft . '
@@ -105,7 +107,8 @@ class Style_4 extends Templates {
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $style['id'];
@@ -414,5 +417,4 @@ class Style_4 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
-
 }

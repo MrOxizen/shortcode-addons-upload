@@ -12,22 +12,30 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates {
+class Style_2 extends Templates
+{
 
-    public function public_css() {
+    public function public_css()
+    {
         wp_enqueue_style('oxi-addons-main-wrapper-image-comparison-style-2', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
+        $after = $before = '';
         $id = $style['shortcode-addons-elements-id'];
-        
+        if ($style['sa_image_compersion_button_controler'] == 'true') {
+            $before  = 'data-beer-label="' . $this->text_render($style['sa-image-comparison-before-text']) . '"';
+            $after  = 'data-beer-label="' . $this->text_render($style['sa-image-comparison-after-text']) . '"';
+        }
         echo '<div class="oxi-addons-main-wrapper-image-comparison-style-2">
 				  <div class="oxi-addons-main">
-                                        <div id="oxi-addons-beer-image-comparison-'.$id.'" class="beer-slider" data-beer-label="' . $this->text_render($style['sa-image-comparison-before-text']) . '">
+                     <div id="oxi-addons-beer-image-comparison-' . $id . '" class="beer-slider" ' . $before . '>
 						<img src="' . $this->media_render('sa-image-comparison-image-one', $style) . '" alt="">
-						<div class="beer-reveal" data-beer-label="' . $this->text_render($style['sa-image-comparison-after-text']) . '">
+						<div class="beer-reveal" ' . $after . '>
 							<img src="' . $this->media_render('sa-image-comparison-image-two', $style) . '" alt="">
 						</div>
 					</div>
@@ -35,16 +43,18 @@ class Style_2 extends Templates {
 				</div>';
     }
 
-    public function public_jquery() {
+    public function public_jquery()
+    {
         $this->JSHANDLE = 'jquery-BeerSlider';
         wp_enqueue_script('jquery-BeerSlider', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.js', true, SA_ADDONS_PLUGIN_VERSION);
-      }
+    }
 
-    public function inline_public_jquery() {
+    public function inline_public_jquery()
+    {
         $jquery = '';
         $styledata = $this->style;
         $id = $styledata['shortcode-addons-elements-id'];
-       
+
 
         $jquery .= ' 
                 $.fn.BeerSlider = function ( options ) {
@@ -53,20 +63,21 @@ class Style_2 extends Templates {
                             new BeerSlider(this, options);
                             });
                         };
-                       $("#oxi-addons-beer-image-comparison-'.$id.'").BeerSlider({start: ' . $styledata['sa-image-comparison-body-offset'] . '});
+                       $("#oxi-addons-beer-image-comparison-' . $id . '").BeerSlider({start: ' . $styledata['sa-image-comparison-body-offset'] . '});
                                  ';
         return $jquery;
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $oxiid = $style['id'];
         $stylefiles = explode('||#||', $style['css']);
         $styledata = explode('|', $stylefiles[0]);
- 
+
         wp_enqueue_style('BeerSlider', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('BeerSlider-js', SA_ADDONS_UPLOAD_URL . '/Image_comparison/File/BeerSlider.js', false, SA_ADDONS_PLUGIN_VERSION);
-        
+
 
         $css = $jquery = '';
 
@@ -177,5 +188,4 @@ class Style_2 extends Templates {
         wp_add_inline_style('BeerSlider', $css);
         wp_add_inline_script('BeerSlider-js', $jquery);
     }
-
 }

@@ -46,30 +46,30 @@ class Style_2 extends Templates {
         foreach ($repeater as $key => $value) {
             if ($value['sa_is_image_view'] == 'left_to_right') {
                 $jquery .= ' 
-                jQuery("#oxi-IS2-img-' . $key . '").mouseover (function(){
+                jQuery(".'.$this->WRAPPER.' #oxi-IS2-img-' . $key . '").mouseover (function(){
                     var imgWidth = jQuery(this).width();  
-                    var outerWidth = jQuery("#oxi-addons-IS2-image-main-' . $key . '").outerWidth(); 
+                    var outerWidth = jQuery(".'.$this->WRAPPER.' #oxi-addons-IS2-image-main-' . $key . '").outerWidth(); 
                     var height = imgWidth-outerWidth; 
                     jQuery(this).css({"transform":"translateX(-" + height + "px)"});
                 });  
-                jQuery("#oxi-IS2-img-' . $key . '").mouseout(function(){ 
+                jQuery(".'.$this->WRAPPER.' #oxi-IS2-img-' . $key . '").mouseout(function(){ 
                     jQuery(this).css({"transform":"translateX(0px)"});
                 });   
             ';
             } elseif ($value['sa_is_image_view'] == 'right_to_left') {
                 $jquery .= '  
-                    jQuery("#oxi-IS2-img-' . $key . '").css({
+                    jQuery(".'.$this->WRAPPER.' #oxi-IS2-img-' . $key . '").css({
                         "position" : "absolute",
                         "right" : "0",
                         "top" : "0"
                     }); 
-                jQuery("#oxi-IS2-img-' . $key . '").mouseover (function(){
+                jQuery(".'.$this->WRAPPER.' #oxi-IS2-img-' . $key . '").mouseover (function(){
                     var imgWidth = jQuery(this).width();  
-                    var outerWidth = jQuery("#oxi-addons-IS2-image-main-' . $key . '").outerWidth(); 
+                    var outerWidth = jQuery(".'.$this->WRAPPER.' #oxi-addons-IS2-image-main-' . $key . '").outerWidth(); 
                     var height = imgWidth-outerWidth; 
                     jQuery(this).css({"transform":"translateX(" + height + "px)"});
                 });  
-                jQuery("#oxi-IS2-img-' . $key . '").mouseout(function(){ 
+                jQuery(".'.$this->WRAPPER.' #oxi-IS2-img-' . $key . '").mouseout(function(){ 
                     jQuery(this).css({"transform":"translateX(0px)"});
                 });   
             ';

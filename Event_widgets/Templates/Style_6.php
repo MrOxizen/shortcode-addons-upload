@@ -3,7 +3,7 @@
 namespace SHORTCODE_ADDONS_UPLOAD\Event_widgets\Templates;
 
 if (!defined('ABSPATH')) {
-    exit;
+  exit;
 }
 
 /**
@@ -12,48 +12,50 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_6 extends Templates {
+class Style_6 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        $name = $time = $address = $details = $subdetails = $headersection = $footersection = '';
-        $css = '';
-        $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
+  public function default_render($style, $child, $admin)
+  {
+    $name = $time = $address = $details = $subdetails = $headersection = $footersection = ''; 
+    $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
 
-        foreach ($all_data as $key => $listitemdata) {
+    foreach ($all_data as $key => $listitemdata) {
 
-            if ($listitemdata['sa_event_t_name'] != '') {
-                $name = '<div class="oxi-addons-EW-6-H">' . $this->text_render($listitemdata['sa_event_t_name']) . '</div>';
-            }
-            if ($listitemdata['sa_event_t_info_time'] != '') {
-                $time = '<div class="oxi-addons-EW-6-T">' . $this->text_render($listitemdata['sa_event_t_info_time']) . '</div>';
-            }
-            if ($listitemdata['sa_event_t_info_address'] != '') {
-                $address = '<div class="oxi-addons-EW-6-AD">' . $this->text_render($listitemdata['sa_event_t_info_address']) . '</div>';
-            }
-            if ($listitemdata['sa_event_t_date'] != '') {
-                $details = '<div class="oxi-addons-EW-6-D">' . $this->text_render($listitemdata['sa_event_t_date']) . '</div>';
-            }
-            if ($listitemdata['sa_event_t_month'] != '') {
-                $subdetails = '  <div class="oxi-addons-EW-6-M">' . $this->text_render($listitemdata['sa_event_t_month']) . '</div>';
-            }
-            if ($name != '' || $time != '' || $address != '') {
-                $headersection = '<div class="oxi-addons-EW-6-content-box"> 
+      if ($listitemdata['sa_event_t_name'] != '') {
+        $name = '<div class="oxi-addons-EW-6-H">' . $this->text_render($listitemdata['sa_event_t_name']) . '</div>';
+      }
+      if ($listitemdata['sa_event_t_info_time'] != '') {
+        $time = '<div class="oxi-addons-EW-6-T">' . $this->text_render($listitemdata['sa_event_t_info_time']) . '</div>';
+      }
+      if ($listitemdata['sa_event_t_info_address'] != '') {
+        $address = '<div class="oxi-addons-EW-6-AD">' . $this->text_render($listitemdata['sa_event_t_info_address']) . '</div>';
+      }
+      if ($listitemdata['sa_event_t_date'] != '') {
+        $details = '<div class="oxi-addons-EW-6-D">' . $this->text_render($listitemdata['sa_event_t_date']) . '</div>';
+      }
+      if ($listitemdata['sa_event_t_month'] != '') {
+        $subdetails = '  <div class="oxi-addons-EW-6-M">' . $this->text_render($listitemdata['sa_event_t_month']) . '</div>';
+      }
+      if ($name != '' || $time != '' || $address != '') {
+        $headersection = '<div class="oxi-addons-EW-6-content-box"> 
                                           ' . $name . '
                                           ' . $time . '
                                           ' . $address . '
                                         </div>';
-            }
-            if ($details != '' || $subdetails != '') {
-                $footersection = '<div class="oxi-addons-EW-6-date-box">
+      }
+      if ($details != '' || $subdetails != '') {
+        $footersection = '<div class="oxi-addons-EW-6-date-box">
                                           <div class="oxi-addons-EW-6-DM">
                                               ' . $details . '
                                               ' . $subdetails . '
                                           </div>
                                       </div>';
-            }
-            echo '   <div class="oxi-addons-EW-col ' . $this->column_render('sa_event_widgets_col', $style) . '">
+      }
+      echo '   <div class="oxi-addons-EW-col ' . $this->column_render('sa_event_widgets_col', $style) . '">
                         <div class="oxi-addons-EW-wrapper-style-6 oxi-addons-EW-wrapper-style-6-' . $key . '" ' . $this->animation_render('sa_event_widgets_animation', $style) . '>
                            <div class="oxi-addons-EW-6-body">
                                ' . $headersection . '
@@ -61,49 +63,50 @@ class Style_6 extends Templates {
                            </div>
                         </div>
                     </div>';
-        }
     }
+  }
 
-    public function old_render() {
-        $style = $this->dbdata;
-        $listdata = $this->child;
-        $oxiid = $style['id'];
-        $stylefiles = explode('||#||', $style['css']);
-        $styledata = explode('|', $stylefiles[0]);
+  public function old_render()
+  {
+    $style = $this->dbdata;
+    $listdata = $this->child;
+    $oxiid = $style['id'];
+    $stylefiles = explode('||#||', $style['css']);
+    $styledata = explode('|', $stylefiles[0]);
 
-        $heading = $subheading = $details = $subdetails = $headersection = $footersection = '';
+    $heading = $subheading = $details = $subdetails = $headersection = $footersection = '';
 
-        echo '<div class="oxi-addons-container">';
-        echo '<div class="oxi-addons-row">';
-        foreach ($listdata as $value) {
-            $listitemdata = explode('||#||', $value['files']);
-            if ($listitemdata[2] != '') {
-                $heading = '<div class="oxi-addons-EW-6-H">' . OxiAddonsTextConvert($listitemdata[2]) . '</div>';
-            }
-            if ($listitemdata[4] != '') {
-                $subheading = '<div class="oxi-addons-EW-6-SH">' . OxiAddonsTextConvert($listitemdata[4]) . '</div>';
-            }
-            if ($listitemdata[6] != '') {
-                $details = '<div class="oxi-addons-EW-6-D">' . OxiAddonsTextConvert($listitemdata[6]) . '</div>';
-            }
-            if ($listitemdata[8] != '') {
-                $subdetails = '  <div class="oxi-addons-EW-6-M">' . OxiAddonsTextConvert($listitemdata[8]) . '</div>';
-            }
-            if ($heading != '' || $subheading != '') {
-                $headersection = '<div class="oxi-addons-EW-6-content-box">
+    echo '<div class="oxi-addons-container">';
+    echo '<div class="oxi-addons-row">';
+    foreach ($listdata as $value) {
+      $listitemdata = explode('||#||', $value['files']);
+      if ($listitemdata[2] != '') {
+        $heading = '<div class="oxi-addons-EW-6-H">' . OxiAddonsTextConvert($listitemdata[2]) . '</div>';
+      }
+      if ($listitemdata[4] != '') {
+        $subheading = '<div class="oxi-addons-EW-6-SH">' . OxiAddonsTextConvert($listitemdata[4]) . '</div>';
+      }
+      if ($listitemdata[6] != '') {
+        $details = '<div class="oxi-addons-EW-6-D">' . OxiAddonsTextConvert($listitemdata[6]) . '</div>';
+      }
+      if ($listitemdata[8] != '') {
+        $subdetails = '  <div class="oxi-addons-EW-6-M">' . OxiAddonsTextConvert($listitemdata[8]) . '</div>';
+      }
+      if ($heading != '' || $subheading != '') {
+        $headersection = '<div class="oxi-addons-EW-6-content-box">
                                           ' . $heading . '
                                           ' . $subheading . '
                                         </div>';
-            }
-            if ($details != '' || $subdetails != '') {
-                $footersection = '<div class="oxi-addons-EW-6-date-box">
+      }
+      if ($details != '' || $subdetails != '') {
+        $footersection = '<div class="oxi-addons-EW-6-date-box">
                                           <div class="oxi-addons-EW-6-DM">
                                               ' . $details . '
                                               ' . $subdetails . '
                                           </div>
                                       </div>';
-            }
-            echo'<div class="' . OxiAddonsItemRows($styledata, 177) . ' ">
+      }
+      echo '<div class="' . OxiAddonsItemRows($styledata, 177) . ' ">
                         <div class="oxi-addons-EW-6-wrapper-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 59) . '>
                            <div class="oxi-addons-EW-6-body">
                                ' . $headersection . '
@@ -111,11 +114,11 @@ class Style_6 extends Templates {
                            </div>
                        </div>
                     </div>';
-        }
-        echo'</div>';
-        echo'</div>';
+    }
+    echo '</div>';
+    echo '</div>';
 
-        $css = '.oxi-addons-EW-6-wrapper-' . $oxiid . '{
+    $css = '.oxi-addons-EW-6-wrapper-' . $oxiid . '{
               width: 100%;
               float: left;
               padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 37) . ';
@@ -220,7 +223,6 @@ class Style_6 extends Templates {
 
           ';
 
-        wp_add_inline_style('shortcode-addons-style', $css);
-    }
-
+    wp_add_inline_style('shortcode-addons-style', $css);
+  }
 }

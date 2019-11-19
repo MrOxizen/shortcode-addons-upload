@@ -4,12 +4,16 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;
     padding: 150px 80px 130px 80px;
     overflow: hidden;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+}
+.oxi_addons__banner_style_11 .oxi_addons_image_main {
+    display: flex;
+    justify-content: center;
 }
 
 .oxi_addons__banner_style_11 .oxi_addons__images_main {
@@ -17,10 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; 
+    width: 100%;
 }
 
-.oxi_addons__banner_style_11 .oxi_addons_image{
+.oxi_addons__banner_style_11 .oxi_addons_image {
     width: 700px;
     height: 100%
 }
@@ -33,63 +37,64 @@
     transform: translate(5%)
 }
 
- 
-.oxi_addons__banner_style_11 .oxi_addons__heading{
-    font-size: 25px; 
+
+.oxi_addons__banner_style_11 .oxi_addons__heading {
+    font-size: 25px;
     font-family: "Poppins";
     font-weight: 500;
     font-style: normal;
     line-height: 1.3;
-    text-align: center; 
+    text-align: center;
     color: #ffffff;
     padding: 0px 0px 5px 0px;
-    width: 100%; 
+    width: 100%;
 }
 
- 
+
 .oxi_addons__banner_style_11 .oxi_addons__heading_line {
     position: relative;
-    width: 100%; 
+    width: 100%;
 }
-.oxi_addons__banner_style_11 .oxi_addons__line_main { 
-    width: 100%; 
+
+.oxi_addons__banner_style_11 .oxi_addons__line_main {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.oxi_addons__banner_style_11 .oxi_addons__line{ 
+.oxi_addons__banner_style_11 .oxi_addons__line {
     width: 20%;
     height: 4px;
-    background: #ffffff; 
+    background: #ffffff;
 }
 
 .oxi_addons__banner_style_11 .oxi_addons__sub_heading {
-    font-size: 24px; 
+    font-size: 24px;
     font-family: "Poppins";
     font-weight: bold;
     font-style: normal;
     line-height: 1.3;
-    text-align: center; 
+    text-align: center;
     color: #ffffff;
     padding: 20px 0px 5px 0px;
-    width: 100%; 
+    width: 100%;
 }
 
 .oxi_addons__banner_style_11 .oxi_addons__details {
-    font-size: 18px; 
+    font-size: 18px;
     font-family: "inherit";
     font-weight: normal;
     font-style: normal;
     line-height: 1.3;
-    text-align: center; 
+    text-align: center;
     color: #ffffff;
     padding: 5px 0px 10px 0px;
-    width: 100%; 
+    width: 100%;
 }
 
 .oxi_addons__banner_style_11 .oxi_addons__button_main {
     text-align: center;
-    width: 100%; 
+    width: 100%;
 }
 
 .oxi_addons__banner_style_11 .oxi_addons__button {
@@ -100,7 +105,7 @@
     font-weight: bold;
     font-style: normal;
     line-height: 1.3;
-    text-align: center; 
+    text-align: center;
     font-size: 16px;
     border: 2px solid;
     border-color: solid;
@@ -114,7 +119,7 @@
 .oxi_addons__banner_style_11 .oxi_addons__button:hover {
     background: #ffffff;
     color: #140303;
-    box-shadow: 0px 0px 0px 0px rgba(23, 4, 4, 1); 
+    box-shadow: 0px 0px 0px 0px rgba(23, 4, 4, 1);
     border-color: #ffffff
 }
 
@@ -123,47 +128,55 @@
         padding: 150px 60px 130px 60px;
         display: block
     }
+
     .oxi_addons__banner_style_11 .oxi_addons_image_main {
         padding: 10px 10px 0px 10px
     }
+
     .oxi_addons__banner_style_11 .oxi_addons_image {
         width: 700px;
         max-width: 100%
     }
-    .oxi_addons__banner_style_11 .oxi_addons__heading{
+
+    .oxi_addons__banner_style_11 .oxi_addons__heading {
         font-size: 25px;
         line-height: 32.5px;
         padding: 10px 0px 10px 0px;
         text-align: center
-    } 
+    }
+
     .oxi_addons__banner_style_11 .oxi_addons__line {
         width: 20%;
         height: 4px;
         left: 50%;
         transform: translate(-50%)
     }
+
     .oxi_addons__banner_style_11 .oxi_addons__sub_heading {
         font-size: 24px;
         line-height: 32px;
         padding: 20px 0px 5px 0px;
         text-align: center
     }
+
     .oxi_addons__banner_style_11 .oxi_addons__details {
         font-size: 18px;
         line-height: 21px;
         padding: 5px 0px 10px 0px;
         text-align: center
     }
+
     .oxi_addons__banner_style_11 .oxi_addons__button_main {
         text-align: center
     }
+
     .oxi_addons__banner_style_11 .oxi_addons__button {
         font-size: 16px;
         border-radius: 50px 50px 50px 50px;
         padding: 10px 35px 10px 35px;
         margin: 5px 0px 10px 0px
     }
- 
+
 }
 
 @media only screen and (max-width:668px) {
@@ -171,45 +184,52 @@
         padding: 150px 30px 130px 30px;
         display: block
     }
+
     .oxi_addons__banner_style_11 .oxi_addons_image {
         padding: 10px 10px 0px 10px
     }
+
     .oxi_addons__banner_style_11 .oxi_addons_image {
         width: 700px;
         max-width: 100%
     }
-    .oxi_addons__banner_style_11 .oxi_addons__heading{
+
+    .oxi_addons__banner_style_11 .oxi_addons__heading {
         font-size: 25px;
         line-height: 32.5px;
         padding: 0px 0px 5px 0px;
         text-align: center
     }
-   
+
     .oxi_addons__banner_style_11 .oxi_addons__line {
         width: 20%;
-        height: 4px; 
-     
-}
+        height: 4px;
+
+    }
+
     .oxi_addons__banner_style_11 .oxi_addons__sub_heading {
         font-size: 20px;
         line-height: 30px;
         padding: 20px 0px 5px 0px;
         text-align: center
     }
+
     .oxi_addons__banner_style_11 .oxi_addons__details {
         font-size: 18px;
         line-height: 21px;
         padding: 5px 0px 10px 0px;
         text-align: center
     }
+
     .oxi_addons__banner_style_11 .oxi_addons__button_main {
         text-align: center
     }
+
     .oxi_addons__banner_style_11 .oxi_addons__button {
         font-size: 16px;
         border-radius: 50px 50px 50px 50px;
         padding: 10px 35px 10px 35px;
         margin: 5px 0px 10px 0px
     }
-  
+
 }

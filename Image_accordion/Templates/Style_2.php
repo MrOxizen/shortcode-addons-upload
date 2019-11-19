@@ -12,21 +12,25 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates {
-    
-    
+class Style_2 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
 
-        
-        $styledata = $this->style;
-        
+
+    public function default_render($style, $child, $admin)
+    {
+
+
+
+        $datas = (array_key_exists('sa_image_accordion_data', $style) && is_array($style['sa_image_accordion_data']) ? $style['sa_image_accordion_data'] : []);
+
         echo '<div class="oxi-addons-wrapper-image-two-accordion">
                 <div class="oxi-addons-accordion">
                     <ul class="oxi-addons-accordion-ul">';
-        foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
+        foreach ($datas as $key => $value) {
 
 
             if (array_key_exists('sa_image_accordion_url-url', $value) && $value['sa_image_accordion_url-url'] != '') {
@@ -47,26 +51,31 @@ class Style_2 extends Templates {
                         ' . $linkend . '
                      </div>
                 </li>';
-            
         }
         echo ' </ul>
             </div>
          </div>';
     }
 
-    public function inline_public_css() {
+    public function inline_public_css()
+    {
         $rt = '';
-        $styledata = $this->style;
-        foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
+        $style = $this->style;
+        $datas = (array_key_exists('sa_image_accordion_data', $style) && is_array($style['sa_image_accordion_data']) ? $style['sa_image_accordion_data'] : []);
+
+        foreach ($datas as $key => $value) {
             $rt .= $this->background_render('sa_image_accordion_image', $value, '.' . $this->WRAPPER . ' .oxi-addons-background-image-' . $key . '');
         }
         return $rt;
     }
-    
-    public function inline_public_jquery() {
+
+    public function inline_public_jquery()
+    {
         $jquery = '';
-        $styledata = $this->style;
-        foreach ($styledata['sa_image_accordion_data'] as $key => $value) {
+        $style = $this->style;
+        $datas = (array_key_exists('sa_image_accordion_data', $style) && is_array($style['sa_image_accordion_data']) ? $style['sa_image_accordion_data'] : []);
+
+        foreach ($datas as $key => $value) {
             $jquery .= 'jQuery(".oxi-addons-background-image-' . $key . '").on("click",function(){ 
                             jQuery(".oxi-addons-wrapper-image-two-accordion .oxi-addons-accordion-ul").children().removeClass("oxi-addClass");
                             jQuery(this).closest("li").addClass("oxi-addClass");
@@ -77,7 +86,8 @@ class Style_2 extends Templates {
         return $jquery;
     }
 
-    public function old_render() {
+    public function old_render()
+    {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -113,7 +123,7 @@ class Style_2 extends Templates {
               <p class="oxi-addons-details" >' . OxiAddonsTextConvert($data[5]) . ' </p>';
             echo $linkend;
             echo '</div>';
-            
+
             $jquery .= 'jQuery(".oxi-li-' . $key . '").on("click",function(){ 
                             jQuery(".oxi-addons-wrapper-' . $oxiid . ' .oxi-addons-accordion-ul").children().removeClass("oxi-addClass");
                             jQuery(this).closest("li").addClass("oxi-addClass");
@@ -301,5 +311,4 @@ class Style_2 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
-
 }

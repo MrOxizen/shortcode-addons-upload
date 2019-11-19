@@ -85,7 +85,7 @@
     text-align: left
 }
 
-.oxi-addons-headers-wrapper-style-4 .oxi-addons-main-button .oxi-addons-link {
+.oxi-addons-headers-wrapper-style-4  .oxi-addons-link {
     background: rgba(20, 175, 252, 0.00);
     color: #ffffff;
     display: inline-block;
@@ -103,7 +103,7 @@
     box-shadow: 0px 5px 15px 4px rgba(61, 61, 61, 0.36);
 }
 
-.oxi-addons-headers-wrapper-style-4 .oxi-addons-main-button .oxi-addons-link:hover {
+.oxi-addons-headers-wrapper-style-4  .oxi-addons-link:hover {
     background: rgba(255, 255, 255, 1.00);
     color: #474747;
     box-shadow: 0px 0px 0px 0px rgba(56, 56, 56, 1);
@@ -136,7 +136,7 @@
         font-size: 16px;
         padding: 10px 0px 10px 0px
     }
-    .oxi-addons-headers-wrapper-style-4 .oxi-addons-main-button .oxi-addons-link {
+    .oxi-addons-headers-wrapper-style-4  .oxi-addons-link {
         font-size: 16px;
         border-radius: 50px 50px 50px 50px;
         padding: 10px 30px 10px 30px;
@@ -177,7 +177,7 @@
         float: left;
         text-align: center
     }
-    .oxi-addons-headers-wrapper-style-4 .oxi-addons-main-button .oxi-addons-link {
+    .oxi-addons-headers-wrapper-style-4  .oxi-addons-link {
         font-size: 16px;
         border-radius: 50px 50px 50px 50px;
         padding: 10px 30px 10px 30px;

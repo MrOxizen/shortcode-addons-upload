@@ -12,16 +12,17 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_13 extends Templates {
+class Style_13 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        $css = $media = '';
+    public function default_render($style, $child, $admin)
+    {
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
-        $image = $details = $css = $title = $time = $location = $month = $day = $timeicon = $locicon = '';
+        $image = $details = $title = $time = $location = $month = $day = $timeicon = $locicon = '';
         foreach ($all_data as $key => $listitemdata) {
-//       
             if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
                 $image = '  <div class="oxi-addons-image">
                                 <img class="oxi-image" src="' . $this->media_render('sa_event_t_media', $listitemdata) . '">
@@ -31,7 +32,8 @@ class Style_13 extends Templates {
                 $title = '  <div class="oxi-addons-title">
                                 <a class="oxi-link" ' . $this->url_render('sa_event_t_title_link', $listitemdata) . '  > ' . $this->text_render($listitemdata['sa_event_t_title']) . '</a>
                             </div>';
-            }if ($listitemdata['sa_event_t_title_link-url'] == '' && $listitemdata['sa_event_t_title'] != '') {
+            }
+            if ($listitemdata['sa_event_t_title_link-url'] == '' && $listitemdata['sa_event_t_title'] != '') {
                 $title = '  <div class="oxi-addons-title ">
                                 ' . $this->text_render($listitemdata['sa_event_t_title']) . '
                             </div>';
@@ -96,7 +98,8 @@ class Style_13 extends Templates {
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $style = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $style['id'];
@@ -434,5 +437,4 @@ class Style_13 extends Templates {
             ';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
-
 }

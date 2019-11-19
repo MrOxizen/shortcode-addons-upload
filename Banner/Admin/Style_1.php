@@ -82,7 +82,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Button Postion', SHORTCODE_ADDOONS), 
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
-                'default' => 'center',
+                'default' => 'flex-start',
                 'options' => [
                     'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
@@ -914,8 +914,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::ICON,
-                'default' => 'fas fa-angle-right',
-                'placeholder' => 'example:- fas fa-angle-right',
+                'default' => 'far fa-play-circle',
+                'placeholder' => 'example:- far fa-play-circle',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_right' => ''
                 ],

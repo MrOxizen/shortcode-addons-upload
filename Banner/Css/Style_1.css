@@ -7,7 +7,7 @@
 }
 
 .oxi_addons__banner_style_1 {
-    background:linear-gradient(rgba(0,0,0,0.44),rgba(0,0,0,0.44)),url("https://www.oxilab.org/wp-content/uploads/2019/04/180168-nature-landscape-animals-trees-sunset-silhouette-birds-photo_manipulation-deer-horizon-reflection-orange.jpg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url("https://www.oxilab.org/wp-content/uploads/2019/04/180168-nature-landscape-animals-trees-sunset-silhouette-birds-photo_manipulation-deer-horizon-reflection-orange.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -26,7 +26,7 @@
 }
 
 .oxi_addons__banner_style_1 .oxi_addons__heading {
-    width: 100%; 
+    width: 100%;
     font-size: 80px;
     font-family: "caros-bold";
     font-weight: bold;
@@ -39,7 +39,7 @@
 }
 
 .oxi_addons__banner_style_1 .oxi_addons__details {
-    width: 100%; 
+    width: 100%;
     font-size: 16px;
     font-family: "caros-bold";
     font-weight: normal;
@@ -73,7 +73,6 @@
     border-radius: 50px 50px 50px 50px;
     padding: 10px 25px 10px 25px;
     margin: 0px 0px 0px 5px;
-    box-shadow: 0px 8px 15px 0px rgba(56, 55, 55, 0.4);
     cursor: pointer;
 }
 
@@ -113,7 +112,7 @@
 .oxi_addons__banner_style_1 .oxi_addons__button_right .oxi-icons {
     color: #ffffff;
     font-size: 26px;
-    padding-right: 5px
+    padding-left: 5px
 }
 
 .oxi_addons__banner_style_1 .oxi_addons__button_right .oxi-icons {
@@ -135,7 +134,6 @@
 
     .oxi_addons__banner_style_1 .oxi_addons__heading {
         width: 100%;
-        display: flex;
         font-size: 50px;
         padding: 5px 5px 20px 5px;
     }
