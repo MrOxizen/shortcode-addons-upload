@@ -240,6 +240,15 @@ class Style_16 extends AdminStyle {
             ],
                 ]
         );
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_group_control(
                 'sa-testimonial-body-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
@@ -248,6 +257,18 @@ class Style_16 extends AdminStyle {
             ]
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_group_control(
+                'sa-testimonial-body-boxshadow_hover', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-sixteen-padding .oxi-testimonials-style-sixteen:hover' => '',
+            ]
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_group_control(
                 'sa-testimonial-body-animation', $this->style, [
             'type' => Controls::ANIMATION,
@@ -293,7 +314,7 @@ class Style_16 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-sixteen-padding .oxi-testimonials-style-sixteen-image' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-testimonials-sixteen-padding .oxi-testimonials-style-sixteen-image-parent' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );

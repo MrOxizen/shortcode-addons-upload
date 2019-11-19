@@ -80,7 +80,7 @@ class Style_5 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry? ',
                     'selector' => [
-                        '{{WRAPPER}} .sa_el_ac_style_5_{{KEY}} .heading-data' => '',
+                        '{{WRAPPER}} .sa_el_ac_style_'.$this->oxiid.'_{{KEY}} .heading-data' => '',
                     ],
                 ],
                 'sa_el_ac_desc_adding' => [
@@ -88,7 +88,7 @@ class Style_5 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry ',
                     'selector' => [
-                        '{{WRAPPER}} .sa_el_ac_style_5_{{KEY}} .oxi-addons-ac-C' => '',
+                        '{{WRAPPER}} .sa_el_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
                 ],
             ],
@@ -133,7 +133,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -176,7 +176,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -324,7 +324,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -401,7 +401,7 @@ class Style_5 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

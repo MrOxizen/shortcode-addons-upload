@@ -27,7 +27,6 @@
     max-width: 85px;
     position: absolute;
     top: 0;
-    left: 0px;
     margin-top: -42.5px;
     width: 100%;
     vertical-align: middle;
@@ -197,7 +196,7 @@
 }
 
 .oxi-testimonials-seven-padding .sa-testimonial-profile-body-seven-right .oxi-testimonials-style-seven-image{
-    left: 100%;
+    left: 95%;
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);

@@ -70,32 +70,32 @@ class Style_9 extends AdminStyle
                         'type' => Controls::MEDIA,
                         'default' => [
                             'type' => 'media-library',
-                            'link' => 'https://www.oxilab.org/wp-content/uploads/2019/01/uc_mobile_bullets.png',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/08/pexels-photo-96380-1.jpeg',
                         ],
                         'controller' => 'add_group_control',
                     ],
                     'sa_el_fa_icon' => [
                         'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fab fa-facebook',
+                        'default' => 'fas fa-coffee',
                         'selector' => [
-                            '{{WRAPPER}} .sa_cb_temp_9{{KEY}} .oxi-conten-icon-icon' => '',
+                            '{{WRAPPER}} .sa_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-conten-icon-icon' => '',
                         ],
                     ],
                     'sa_el_title' => [
                         'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
-                        'default' => 'Lorem Ipsum Dolor',
+                        'default' => 'Fantastic',
                         'selector' => [
-                            '{{WRAPPER}} .sa_cb_temp_9{{KEY}} .oxi-conten-title' => '',
+                            '{{WRAPPER}} .sa_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-conten-title' => '',
                         ],
                     ],
                     'sa_el_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
-                        'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s. ',
+                        'default' => 'Ac bibendum tristique. Sed euismod accumsan varius. Ut cursus, arcu eget efficitur malesuada, leo nibh posuere sapien,',
                         'selector' => [
-                            '{{WRAPPER}} .sa_cb_temp_9{{KEY}} .oxi-conten-description' => '',
+                            '{{WRAPPER}} .sa_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-conten-description' => '',
                         ],
                     ],
                     'sa_el_btn_text' => [
@@ -103,7 +103,7 @@ class Style_9 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Learn More',
                         'selector' => [
-                            '{{WRAPPER}} .sa_cb_temp_9{{KEY}} .oxi-conten-button' => '',
+                            '{{WRAPPER}} .sa_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-conten-button' => '',
                         ],
                     ],
                     'sa_el_button_link' => [
@@ -193,7 +193,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9.sa-max-w-dynamic' => 'max-width:{{SIZE}}{{UNIT}};'
                 ],
                 'condition' => [
                     'sa-max-width-condition' => 'dynamic',
@@ -207,7 +207,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::BACKGROUND,
                 'loader' => true,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-content-body' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-content-body' => ''
                 ],
             ]
         );
@@ -217,7 +217,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-main' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-main' => ''
                 ],
             ]
         );
@@ -229,7 +229,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -249,7 +249,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -259,7 +259,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-main' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-main' => ''
                 ],
             ]
         );
@@ -278,7 +278,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -298,7 +298,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-content-body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-content-body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -310,7 +310,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -330,7 +330,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-main' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-main' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -376,7 +376,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-image::after' => 'padding-bottom:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-image::after' => 'padding-bottom:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -397,7 +397,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 30,
+                    'size' => 40,
                 ],
                 'range' => [
                     'px' => [
@@ -417,7 +417,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => 'font-size:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'font-size:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -427,9 +427,9 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#c65bd9',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -439,10 +439,10 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -455,7 +455,7 @@ class Style_9 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 120,
+                    'size' => 100,
                 ],
                 'range' => [
                     'px' => [
@@ -475,7 +475,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => 'height:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'height:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -488,7 +488,7 @@ class Style_9 extends AdminStyle
                 'loader' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 120,
+                    'size' => 100,
                 ],
                 'range' => [
                     'px' => [
@@ -508,7 +508,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => 'width:{{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'width:{{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -518,7 +518,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => ''
                 ],
             ]
         );
@@ -531,7 +531,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 100,
                 ],
                 'range' => [
                     '%' => [
@@ -551,7 +551,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -582,7 +582,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-icon-icon' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-icon-icon' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -609,9 +609,9 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#363636',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-title' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-title' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -622,7 +622,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-title' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-title' => ''
                 ],
             ]
         );
@@ -632,7 +632,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-title' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-title' => ''
                 ],
             ]
         );
@@ -645,7 +645,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -665,7 +665,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -686,9 +686,9 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#696969',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-description' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-description' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -699,7 +699,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-description' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-description' => ''
                 ],
             ]
         );
@@ -709,7 +709,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-description' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-description' => ''
                 ],
             ]
         );
@@ -722,7 +722,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -742,7 +742,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -761,7 +761,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => ''
                 ],
             ]
         );
@@ -782,9 +782,9 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#222',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -795,9 +795,9 @@ class Style_9 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#787878',
+                'default' => 'rgba(199, 56, 235, 1)',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -807,7 +807,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => ''
                 ],
             ]
         );
@@ -817,11 +817,10 @@ class Style_9 extends AdminStyle
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'separator' => TRUE,
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -841,7 +840,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -854,9 +853,9 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name:hover' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name:hover' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -867,9 +866,9 @@ class Style_9 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#222',
+                'default' => 'rgba(98, 9, 120, 1)',
                 'selector' => [
-                    '{{WRAPPER}}  .sa_cb_temp_9 .oxi-conten-button-name:hover' => 'background:{{VALUE}};'
+                    '{{WRAPPER}}  .oxi_cb_temp_9 .oxi-conten-button-name:hover' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -879,7 +878,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name:hover' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name:hover' => ''
                 ],
             ]
         );
@@ -888,11 +887,10 @@ class Style_9 extends AdminStyle
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'separator' => TRUE,
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -912,7 +910,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name:hover' => 'border-radius:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name:hover' => 'border-radius:{{VALUE}};'
                 ],
             ]
         );
@@ -929,6 +927,7 @@ class Style_9 extends AdminStyle
                 'label' => __('Button Align', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
+                'separator' => TRUE,
                 'toggle' => TRUE,
                 'default' => 'center',
                 'options' => [
@@ -946,7 +945,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button' => 'text-align: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button' => 'text-align: {{VALUE}};'
                 ],
             ]
         );
@@ -956,7 +955,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => ''
                 ],
             ]
         );
@@ -966,7 +965,7 @@ class Style_9 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => ''
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => ''
                 ],
             ]
         );
@@ -986,7 +985,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -1006,7 +1005,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1018,7 +1017,7 @@ class Style_9 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 20,
                 ],
                 'range' => [
                     '%' => [
@@ -1038,7 +1037,7 @@ class Style_9 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_cb_temp_9 .oxi-conten-button-name' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_cb_temp_9 .oxi-conten-button-name' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

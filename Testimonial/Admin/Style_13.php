@@ -556,7 +556,7 @@ class Style_13 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working' => 'color: {{VALUE}};',
             ]
                 ]
         );

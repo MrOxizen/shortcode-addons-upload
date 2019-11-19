@@ -57,24 +57,24 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::MEDIA,
                     'default' => [
                         'type' => 'media-library',
-                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/macbook-apple-imac-computer-39284-1.jpeg',
+                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/08/pexels-photo-1105666-1.jpeg',
                     ],
                     'controller' => 'add_group_control',
                 ],
                 'sa_el_cb_fa_icon' => [
                     'label' => esc_html__('Icon Class', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'fab fa-facebook',
+                    'default' => 'fas fa-cannabis',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-icon' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-icon' => '',
                     ],
                 ],
                 'sa_el_cb_title' => [
                     'label' => esc_html__('Heading', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => 'Medical Cannavis',
+                    'default' => 'Medical Cannabis',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-name' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-name' => '',
                     ],
                 ],
                 'sa_el_cb_content' => [
@@ -82,7 +82,7 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-desc' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-desc' => '',
                     ],
                 ],
                 'sa_el_cb_fa_arrow_icon' => [
@@ -90,7 +90,7 @@ class Style_12 extends AdminStyle {
                     'type' => Controls::ICON,
                     'default' => 'fas fa-angle-right',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_cb_temp_12_{{KEY}} .oxi-addons-box-arrow' => '',
+                        '{{WRAPPER}} .oxi_cb_temp_'.$this->oxiid.'_{{KEY}} .oxi-addons-box-arrow' => '',
                     ],
                 ],
                 'sa_el_arrow_icon_link' => [
@@ -192,7 +192,7 @@ class Style_12 extends AdminStyle {
             'loader' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
@@ -220,7 +220,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-hover-background', $this->style, [
             'label' => __('Hover Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => 'rgba(184, 0, 58, 0.83)',
             'oparetor' => 'RGB',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-inner' => 'background:{{VALUE}};'
@@ -236,7 +236,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -279,7 +279,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -309,7 +309,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -352,7 +352,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 30,
+                'size' => 60,
             ],
             'range' => [
                 'px' => [
@@ -381,7 +381,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-icon-color', $this->style, [
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-icon' => 'color:{{VALUE}};'
             ],
@@ -427,7 +427,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -464,7 +464,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-heading-color', $this->style, [
             'label' => __('Font Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-name' => 'color:{{VALUE}};'
             ],
@@ -494,7 +494,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -532,7 +532,7 @@ class Style_12 extends AdminStyle {
                 'sa-ac-content-color', $this->style, [
             'label' => __('Font Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#fff',
             'selector' => [
                 '{{WRAPPER}} .oxi_cb_temp_12 .oxi-addons-box-desc' => 'color:{{VALUE}};'
             ],
@@ -562,7 +562,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [
@@ -601,7 +601,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 25,
+                'size' => 20,
             ],
             'range' => [
                 'px' => [
@@ -675,7 +675,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'range' => [
                 '%' => [

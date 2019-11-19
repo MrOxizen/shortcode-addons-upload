@@ -70,7 +70,7 @@ class Style_7 extends Templates {
 
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa_cb_temp_7   sa_cb_temp_7_'.$key.' ' . $class . '" ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+            echo '<div class="oxi_cb_temp_7   oxi_cb_temp_'.$this->oxiid.'_'.$key.' ' . $class . '" ' . $this->animation_render('sa-cb-box-animation', $style) . '>
                     <div class="oxi-addons-content-boxes-data"> 
                     ' . $img . '  
                         <div class="oxi-addons-content-boxes-content-outside">

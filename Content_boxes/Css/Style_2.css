@@ -19,144 +19,49 @@ and open the template in the editor.
 .sa-conten-box-style-2-data{
     width:100%;
     float:left;
-    background:rgba(245,245,245,1.00);
-    border-radius:0px 0px 0px 0px;
-    border-width:0px 0px 0px 0px;
-    border-style:dashed;
-    border-color:#ffffff;
-    padding:20px 20px 20px 20px;
-    margin:10px 10px 10px 10px;
-    box-shadow:0px 2px 6px 0px rgba(219, 219, 219, 1) ;
 }
 .sa-conten-box-style-2 .sa-conten-box-style-2-icon{
     width:100%;
     float:left;
     text-align:center;
 }
-.sa-conten-box-style-2 .oxi-icons{
+.sa-conten-box-style-2 .sa-icons{
     display:inlne-block;
-    font-size:50px;
-    color:#96c346;
-    padding:10px 10px 10px 10px ;
 }
 .sa-conten-box-style-2 .sa-conten-box-style-2-heading{
     width:100%;
     float:left;
-    color:#1a1a1a;
-    font-size:22px;
     font-family:"Open Sans";
     font-weight:800;
     font-style:normal;
     line-height:1.5;
     text-align:center;
-    padding:10px 10px 10px 10px;
 }
 .sa-conten-box-style-2 .sa-conten-box-style-2-content{
     width:100%;
     float:left;
-    color:#1a1a1a;
-    font-size:16px;
     font-family:"Lato";
     font-weight:400;
     font-style:normal;
     line-height:1.5;
     text-align:center;
-    padding:0px 0px 14px 0px ;
 }
 .sa-conten-box-style-2 .sa-conten-box-style-2-button{
     width:100%;
     float:left;
     text-align:center 
 }
-.sa-conten-box-style-2-button .oxi-button{
+.sa-conten-box-style-2-button .sa-button{
     display:inline-block;
-    font-size:18px;
     font-family:"Open Sans";
     font-weight:300;
     font-style:normal;
     line-height:1;
     text-align:center;
-    padding:9px 15px 9px 15px;
-    margin:20px 20px 20px 20px;
-    color:#ffffff;
-    background:rgba(150, 195, 70, 1);
-    border-radius:5px 5px 5px 5px;
-    border-width:0px 0px 0px 0px;
-    border-style:solid;
-    border-color:#6a6199 ;
-}
- .oxi-button:hover,
- .oxi-button:focus,
- .oxi-button:active{
-    color:#ffffff;
-    background:rgba(35, 173, 141, 1);
-    border-radius:5px 5px 5px 5px;
-    border-style:solid;
-    border-color:#0776ad ;
 }
 @media only screen and (min-width:669px) and (max-width:993px){
-    .sa-conten-box-style-2{
-        max-width:300px 
-    }
-    .sa-conten-box-style-2-data{
-        border-radius:0px 0px 0px 0px;
-        border-width:0px 0px 0px 0px;
-        padding:20px 20px 20px 20px;
-        margin:10px 10px 10px 10px ;
-    }
-    .sa-conten-box-style-2 .oxi-icons{
-        font-size:50px;
-        padding:10px 10px 10px 10px ;
-    }
-    .sa-conten-box-style-2 .sa-conten-box-style-2-heading{
-        font-size:22px;padding:10px 10px 10px 10px ;
-    }
-    .sa-conten-box-style-2 .sa-conten-box-style-2-content{
-        font-size:16px;padding:0px 0px 14px 0px ;
-    }
-    .sa-conten-box-style-2-button .oxi-button{
-        font-size:18px;
-        padding:9px 15px 9px 15px;
-        margin:20px 20px 20px 20px;
-        border-radius:5px 5px 5px 5px;
-        border-width:0px 0px 0px 0px ;
-    }
-    .sa-conten-box-style-2-button .oxi-button:hover,
-    .sa-conten-box-style-2-button .oxi-button:focus,
-    .sa-conten-box-style-2-button .oxi-button:active{
-        border-radius:5px 5px 5px 5px ;
-    }
+    
 }
 @media only screen and (max-width:668px){
-    .sa-conten-box-style-2{
-        max-width:300px ;
-    }
-    .sa-conten-box-style-2-data{
-        border-radius:0px 0px 0px 0px;
-        border-width:0px 0px 0px 0px;
-        padding:20px 20px 20px 20px;
-        margin:10px 10px 10px 10px;
-    }
-    .sa-conten-box-style-2 .oxi-icons{
-        font-size:50px;
-        padding:10px 10px 10px 10px;
-    }
-    .sa-conten-box-style-2 .sa-conten-box-style-2-heading{
-        font-size:22px;padding:10px 10px 10px 10px ;
-    }
-    .sa-conten-box-style-2 .sa-conten-box-style-2-content{
-        font-size:16px;padding:0px 0px 14px 0px ;
-    }
-    .sa-conten-box-style-2-button .oxi-button{
-        font-size:18px;
-        padding:9px 15px 9px 15px;
-        margin:20px 20px 20px 20px;
-        border-radius:5px 5px 5px 5px;
-        border-width:0px 0px 0px 0px ;
-    }
-    .sa-conten-box-style-2-button .oxi-button:hover,
-    .sa-conten-box-style-2-button .oxi-button:focus,
-    .sa-conten-box-style-2-button .oxi-button:active{
-        border-radius:5px 5px 5px 5px ;
-    }
+    
 }

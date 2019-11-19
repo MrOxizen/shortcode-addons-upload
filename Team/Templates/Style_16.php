@@ -69,7 +69,7 @@ class Style_16 extends Templates
                                     if ($data['sa_social_icons_icon'] != '') {
                                         $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
                                     }
-                                    echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
+                                    echo '<a ' . $link . ' class = "member-icon ' . $style['sa_social_icons_border'] . ' member-icon-' . $key . '">' . $icon . '</a>';
                                 }
                         echo  '</div>
                         </div>
@@ -90,17 +90,49 @@ class Style_16 extends Templates
     }
     public function inline_public_css()
     {
-        $style = $this->style;
+        $childdata = $this->child;
+        $styledata = $this->style;
         $align = '';
-        if($style['sa_team_main_alignment'] == 'left'){
+        if($styledata['sa_team_main_alignment'] == 'left'){
             $align = 'transform: translateX(-100%);';
         }else{
             $align = 'transform: translateX(100%);';
         }
+        
+        
+
+        $css = '';
+        foreach ($childdata as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
+            $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
+
+            foreach ($datas as $key => $data) {
+                $css .= '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16.oxi-addons-parent-wrapper-style-16-' . $v['id'] . ' .member-icon.member-icon-' . $key . ' .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color'] . ';' : '' ) . '
+                            
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16.oxi-addons-parent-wrapper-style-16-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16.oxi-addons-parent-wrapper-style-16-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16.oxi-addons-parent-wrapper-style-16-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color_hover'] . ';' : '' ) . '
+                           }
+                           .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16.oxi-addons-parent-wrapper-style-16-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color_hover'] . ';' : '' ) . '
+                        }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16.oxi-addons-parent-wrapper-style-16-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_hover_color'] . ';' : '' ) . '
+                        }';
+            }
+        }
         return '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16 .oxi-team-show-body-style-16:hover .member-name,
                 .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-16 .oxi-team-show-body-style-16:hover .member-role{
                     '.$align.'
-             }';
+             }'.$css;
     }
 
     public function old_render()

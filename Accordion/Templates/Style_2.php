@@ -51,7 +51,7 @@ class Style_2 extends Templates {
 
 
 
-            echo '<div class="sa_ac_style_2   sa_ac_style_2_' . $key . '"   ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+            echo '<div class="sa_ac_style_2   sa_ac_style_'.$this->oxiid.'_' . $key . '"   ' . $this->animation_render('sa_ac_box_animation', $style) . '>
                     <div class="oxi-addonsAC">
                             ' . $icon . '
                         <div class="oxi-addonsAC-2-content">
@@ -71,8 +71,8 @@ class Style_2 extends Templates {
         if (array_key_exists('sa_accordion_data', $this->style)):
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
                 if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
-                    $jquery .= 'jQuery(".sa_ac_style_2_' . $key . ' .oxi-addonsAC").addClass("oxi-active");
-                                jQuery(".sa_ac_style_2_' . $key . ' .oxi-addonsAC-details").slideDown();';
+                    $jquery .= 'jQuery(".' . $this->WRAPPER . ' .sa_ac_style_'.$this->oxiid.'_' . $key . ' .oxi-addonsAC").addClass("oxi-active");
+                                jQuery(".' . $this->WRAPPER . ' .sa_ac_style_'.$this->oxiid.'_' . $key . ' .oxi-addonsAC-details").slideDown();';
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] == 'onebyone'):

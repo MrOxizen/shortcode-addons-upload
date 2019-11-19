@@ -38,7 +38,7 @@ class Style_2 extends Templates {
             $icon = $heading = $content = $button = '';
 
             if (array_key_exists('sa_el_fa_icon', $data) && $data['sa_el_fa_icon'] != '') {
-                $icon .= '<div class="oxi-icons">
+                $icon .= '<div class="sa-icons">
                                 ' . $this->font_awesome_render($data['sa_el_fa_icon']) . '
                             </div>';
             }
@@ -54,13 +54,13 @@ class Style_2 extends Templates {
             }
             if (array_key_exists('sa_el_btn_text', $data) && $data['sa_el_btn_text'] != '') {
                 $button .= '<div class="sa-conten-box-style-2-button" ' . $this->animation_render('sa-cb-btn-animation', $style) . '>
-                                <a  class="oxi-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
+                                <a  class="sa-button" ' . $this->url_render('sa_el_button_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
                             </div> ';
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-conten-box-style-2  sa-conten-box-style-2-' . $key . ' ' . $class . ' "   ' . $this->animation_render('sa-cb-box-animation', $style) . '>
-                        <div class="sa-conten-box-style-2-data">     
+            echo '<div class="sa-conten-box-style-2  sa-conten-box-style-'.$this->oxiid.'-' . $key . ' ' . $class . ' "   ' . $this->animation_render('sa-cb-box-animation', $style) . '>
+                        <div class="sa-conten-box-style-2-data">
                             ' . $icon . '
                             ' . $heading . '
                             ' . $content . '

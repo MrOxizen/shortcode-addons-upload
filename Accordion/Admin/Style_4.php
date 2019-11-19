@@ -89,7 +89,7 @@ class Style_4 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Lorem Ipsum Dolor',
                     'selector' => [
-                        '{{WRAPPER}} .sa_ac_style_2_{{KEY}} .heading-data' => '',
+                        '{{WRAPPER}} .sa_el_ac_style_'.$this->oxiid.'_{{KEY}} .heading-data' => '',
                     ],
                 ],
                 'sa_el_ac_desc_adding' => [
@@ -97,7 +97,7 @@ class Style_4 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.',
                     'selector' => [
-                        '{{WRAPPER}} .sa_ac_style_2_{{KEY}} .oxi-addons-ac-C' => '',
+                        '{{WRAPPER}} .sa_el_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
                 ],
             ],
@@ -138,7 +138,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-heading,'
-                . '.sa_el_ac_style_4 .oxi-addonsAC-F-heading.oxi-active' => '',
+                . ' {{WRAPPER}} .sa_el_ac_style_4 .oxi-addonsAC-F-heading.oxi-active' => '',
             ]
                 ]
         );
@@ -176,7 +176,7 @@ class Style_4 extends AdminStyle {
             'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -219,7 +219,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -313,7 +313,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -391,7 +391,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -469,7 +469,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -645,7 +645,7 @@ class Style_4 extends AdminStyle {
             'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

@@ -72,14 +72,14 @@ class Style_8 extends Templates {
                 $heading = '<div class="oxi-addons-AC-EG-heading">' . $this->text_render($data['sa_el_ac_title_adding']) . '</div>';
             }
             if (array_key_exists('sa_el_ac_desc_adding', $data) && $data['sa_el_ac_desc_adding'] != '') {
-                $details = '<div class="oxi-addons-AC-EG-C" id="oxi-addons-AC-EG-H-id-' . $key . '">
+                $details = '<div class="oxi-addons-AC-EG-C" id="oxi-addons-AC-EG-H-id-'.$this->oxiid.'-' . $key . '">
                                 <div class="oxi-addons-AC-EG-C-b">
                                     ' . $this->text_render($data['sa_el_ac_desc_adding']) . '
                                 </div>
                             </div>';
             }
-            echo '<div class="sa_element_ac_style_8 sa_element_ac_style_8_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                        <div class="oxi-addons-AC-EG-H" ref="#oxi-addons-AC-EG-H-id-' . $key . '">
+            echo '<div class="sa_element_ac_style_8 sa_element_ac_style_'.$this->oxiid.'_' . $key . ' " ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                        <div class="oxi-addons-AC-EG-H" ref="#oxi-addons-AC-EG-H-id-'.$this->oxiid.'-' . $key . '">
                             ' . $active_icon . '
                             ' . $inactive_icon . '
                             ' . $icon . '
@@ -98,12 +98,12 @@ class Style_8 extends Templates {
         if (array_key_exists('sa_accordion_data', $this->style)):
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
                 if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
-                    $jquery .= 'jQuery(".sa_element_ac_style_8_' . $key . '   .oxi-addons-AC-EG-H").addClass("active");
-                                jQuery(".sa_element_ac_style_8_' . $key . '   .oxi-addons-AC-EG-H").next().slideDown();';
+                    $jquery .= 'jQuery(".' . $this->WRAPPER . ' .sa_element_ac_style_'.$this->oxiid.'_' . $key . '   .oxi-addons-AC-EG-H").addClass("active");
+                                jQuery(".' . $this->WRAPPER . ' .sa_element_ac_style_'.$this->oxiid.'_' . $key . '   .oxi-addons-AC-EG-H").next().slideDown();';
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] != 'onebyone'):
-                $jquery .= 'jQuery(".oxi-addons-AC-EG-H").click(function () {
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-EG-H").click(function () {
                         if(jQuery(this).hasClass("active")){
                             var activeTab = jQuery(this).attr("ref");
                             jQuery(activeTab).slideUp();
@@ -115,14 +115,14 @@ class Style_8 extends Templates {
                         }
                     });';
             else:
-                $jquery .= 'jQuery(".oxi-addons-AC-EG-H").click(function () {
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-EG-H").click(function () {
                         if(jQuery(this).hasClass("active")){
                             return false;
                         }else{
-                            jQuery(".oxi-addons-AC-EG-C").slideUp();
+                            jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-EG-C").slideUp();
                             var activeTab = jQuery(this).attr("ref");
                             jQuery(activeTab).slideDown();
-                            jQuery(".oxi-addons-AC-EG-H").removeClass("active");
+                            jQuery(".' . $this->WRAPPER . ' .oxi-addons-AC-EG-H").removeClass("active");
                             jQuery(this).addClass("active");
                         }
                     });

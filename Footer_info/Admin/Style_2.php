@@ -54,7 +54,7 @@ class Style_2 extends AdminStyle {
                 'sa_fi_rep_nam' => [
                     'type' => Controls::TEXT,
                     'label' => __('Name', SHORTCODE_ADDOONS),
-                  ],
+                ],
                 'sa_fi_icon' => [
                     'label' => __('Icon', SHORTCODE_ADDOONS),
                     'type' => Controls::SWITCHER,
@@ -69,10 +69,13 @@ class Style_2 extends AdminStyle {
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'fas fa-envelope',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_FI_2.oxi_addons_FI_2{{KEY}} .oxi_addons_FI_2_icon' => ''
+                    ],
                     'condition' => [
                         'sa_fi_icon' => 'yes',
                     ],
+                    'conditional' => Controls::INSIDE,
                 ],
                 'sa_fi_icon_bg' => [
                     'type' => Controls::BACKGROUND,
@@ -86,14 +89,18 @@ class Style_2 extends AdminStyle {
                     'label' => __('Content Text One', SHORTCODE_ADDOONS),
                     'placeholder' => __('First Text', SHORTCODE_ADDOONS),
                     'default' => 'info@oxilab.org',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_FI_2.oxi_addons_FI_2{{KEY}} .oxi_addons_FI_2_C_A' => ''
+                    ],
                 ],
                 'sa_fi_content_text2' => [
                     'type' => Controls::TEXT,
                     'label' => __('Content Text Tow', SHORTCODE_ADDOONS),
                     'placeholder' => __('Second Text', SHORTCODE_ADDOONS),
                     'default' => 'Contact@oxilab.org',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_FI_2.oxi_addons_FI_2{{KEY}} .oxi_addons_FI_2_C_A2' => ''
+                    ],
                 ],
             ],
             'title_field' => 'sa_fi_rep_nam',
@@ -123,7 +130,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 320,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -171,7 +178,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -216,7 +223,7 @@ class Style_2 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -335,7 +342,7 @@ class Style_2 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -378,6 +385,7 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_first_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A' => ''
             ],
@@ -439,6 +447,7 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_second_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_FI_2 .oxi_addons_FI_2_C_A2' => ''
             ],
@@ -543,7 +552,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 80,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -573,7 +582,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 40,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -625,7 +634,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -668,7 +677,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

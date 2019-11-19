@@ -90,7 +90,7 @@ class Style_10 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                     'selector' => [
-                        '{{WRAPPER}} .sa_element_ac_style_10_{{KEY}} .oxi-addons-AC-N-heading-data' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-AC-N-heading-data' => '',
                     ],
                 ],
                 'sa_el_ac_desc_adding' => [
@@ -98,7 +98,7 @@ class Style_10 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
                     'selector' => [
-                        '{{WRAPPER}} .sa_element_ac_style_10_{{KEY}} .oxi-addons-AC-N-C-b' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-AC-N-C-b' => '',
                     ],
                 ],
             ],
@@ -147,7 +147,7 @@ class Style_10 extends AdminStyle {
                 'sa_el_ac_title_background_hover', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => ''
+                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, {{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => ''
             ],
                 ]
         );
@@ -157,7 +157,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#fff',
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H:hover, {{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active' => 'border-color: {{VALUE}};',
             ]
                 ]
         );
@@ -172,7 +172,7 @@ class Style_10 extends AdminStyle {
             'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -215,7 +215,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -317,7 +317,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#030303',
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-heading-data, .oxi-addons-AC-N-H:hover .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa_element_ac_style_10 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-heading-data, {{WRAPPER}} .oxi-addons-AC-N-H:hover .oxi-addons-AC-N-heading-data' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -338,7 +338,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -416,7 +416,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -486,7 +486,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -668,7 +668,7 @@ class Style_10 extends AdminStyle {
             'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -698,7 +698,7 @@ class Style_10 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

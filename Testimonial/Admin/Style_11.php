@@ -472,6 +472,16 @@ class Style_11 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_control(
+                'sa-testimonial-profile-name-color-hover', $this->style, [
+            'label' => __('Hover Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#787878',
+            'selector' => [
+                '{{WRAPPER}} .oxi-testimonials-eleven-padding .oxi-testimonials-style-eleven-name:hover' => 'color: {{VALUE}};',
+            ]
+                ]
+        );
         $this->add_group_control(
                 'sa-testimonial-profile-name-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
@@ -600,20 +610,11 @@ class Style_11 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-eleven-padding .oxi-testimonials-style-eleven-working a' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-eleven-padding .oxi-testimonials-style-eleven-working' => 'color: {{VALUE}};',
             ]
                 ]
         );
-        $this->add_control(
-                'sa-testimonial-profile-company-hover-color', $this->style, [
-            'label' => __('Company Hover Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#787878',
-            'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-eleven-padding .oxi-testimonials-style-eleven-working a:hover' => 'color: {{VALUE}};',
-            ]
-                ]
-        );
+     
         $this->add_group_control(
                 'sa-testimonial-profile-company-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,

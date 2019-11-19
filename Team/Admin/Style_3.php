@@ -872,7 +872,8 @@ class Style_3 extends AdminStyle
                     ],
                 ],
             ]
-        ); 
+        );
+       
         $this->add_control(
             'sa_divider_icons_border_width',
             $this->style,

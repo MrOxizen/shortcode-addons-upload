@@ -64,7 +64,7 @@ class Style_5 extends Templates {
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-cb-tem-5   sa-cb-tem-5-'.$key.'  ' . $class . '" ' . $this->animation_render('sa-cb-content-box-animation', $style) . '>
+            echo '<div class="sa-cb-tem-5   sa-cb-tem-'.$this->oxiid.'-'.$key.'  ' . $class . '" ' . $this->animation_render('sa-cb-content-box-animation', $style) . '>
                     <div class="sa-cb-tem-5-data">  
                         <div class="sa-cb-h-ratio">
                         ' . $icon . '

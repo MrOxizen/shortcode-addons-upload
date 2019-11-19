@@ -55,13 +55,13 @@ class Style_1 extends Templates {
             }
             if (array_key_exists('sa_el_btn_text', $data) && $data['sa_el_btn_text'] != '') {
                 $button .= '<div class="sa-cb-temp-1-button"  ' . $this->animation_render('sa-cb-btn-animation-temp-1', $style) . '>
-                                <a  class="oxi-button" ' . $this->url_render('sa_el_btn_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
+                                <a  class="oxi-adons-button" ' . $this->url_render('sa_el_btn_link', $data) . '>' . $this->text_render($data['sa_el_btn_text']) . '</a>
                             </div>';
             }
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-cb-temp-1 sa-cb-temp-1-'.$key.' ' . $class . ' "  ' . $this->animation_render('sa-cb-animation-temp-1', $style) . '>
-                        <div class="sa-cb-temp-1-data"  >
+            echo '<div class="sa-cb-temp-1 sa-cb-temp-'.$this->oxiid.'-'.$key.' ' . $class . ' "  ' . $this->animation_render('sa-cb-animation-temp-1', $style) . '>
+                        <div class="sa-cb-temp-1-data">
                             ' . $heading . '
                             ' . $content . '
                             ' . $button . '

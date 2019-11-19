@@ -17,14 +17,14 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_4 extends Templates {
 
     public function public_jquery() {
-        $this->JSHANDLE = 'jquery-counterup-min';
-        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        $this->JSHANDLE = 'jquery-counterup-min';
     }
 
     public function inline_public_jquery() {
         $style = $this->style;
-        $jquery = 'jQuery(".oxi-number-style4-' . $this->WRAPPER . '").counterUp({
+        $jquery = '$(".oxi-number-style4-' . $this->WRAPPER . '").counterUp({
                     delay: ' . $style['sa_counter_delay-size'] . ',
                     time: ' . $style['sa_counter_duration-size'] . '
                 })';
@@ -33,36 +33,36 @@ class Style_4 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-        
+
         $repeater = (array_key_exists('sa_counter_repeater', $style) && is_array($style['sa_counter_repeater'])) ? $style['sa_counter_repeater'] : [];
         foreach ($repeater as $key => $value) {
 
             $title = $number = '';
 
             if (array_key_exists('sa_counter_text_on', $style) && $style['sa_counter_text_on'] != '0') {
-                $title = '<div class="oxi-addons-title">' . $this->text_render($value['sa_counter_title_text']) . '</div>';
+                $title = '<div class="oxi-addons-title oxi-addons-counter-title-' . $key . '">' . $this->text_render($value['sa_counter_title_text']) . '</div>';
             }
             if (array_key_exists('sa_counter_number_on', $style) && $style['sa_counter_number_on'] != '0') {
-                $number = '<div class="oxi-addons-number "> <span class="oxi-number-style4 oxi-number-style4-' . $this->WRAPPER . '">' . $this->text_render($value['sa_counter_number']) . '</span> + </div>
+                $number = '<div class="oxi-addons-number oxi-addons-counter-number-' . $key . '"> <span class="oxi-number-style4 oxi-number-style4-' . $this->WRAPPER . '">' . $this->text_render($value['sa_counter_number']) . '</span> + </div>
                                   ';
             }
 
             echo '<div class = "' . $this->column_render('sa_counter_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '" ' . $this->animation_render('sa_counter_animation', $style) . '>
                             <div class="oxi-addons-counter-style4">
-                                <div class="oxi-addons-counter ">';
+                                <div class="oxi-addons-counter oxi-addons-counter-' . $key . '">';
 
             $rearrange = explode(',', $style['sa_counter_rearrange']);
-               foreach ($rearrange as $arrange) {
-                    if ($arrange != ''):
-                        if (isset($$arrange)) {
-                            echo $$arrange;
-                        }
-                    endif;
-                }
+            foreach ($rearrange as $arrange) {
+                if ($arrange != ''):
+                    if (isset($$arrange)) {
+                        echo $$arrange;
+                    }
+                endif;
+            }
             echo '</div> ';
             echo '</div></div>';
         }
-     }
+    }
 
     public function old_render() {
         wp_enqueue_script('waypoints.min', SA_ADDONS_URL . '/assets/front/js/waypoints.min.js', false, SA_ADDONS_PLUGIN_VERSION);
@@ -175,7 +175,7 @@ class Style_4 extends Templates {
                         time: ' . ($styledata[49] * 1000) . '
                 })';
         wp_add_inline_style('shortcode-addons-style', $css);
-        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-counterup-min', SA_ADDONS_UPLOAD_URL . '/Counter/file/jquery-counterup-min.js', false, SA_ADDONS_PLUGIN_VERSION);
         wp_add_inline_script('jquery.countdown.min', $jquery);
     }
 

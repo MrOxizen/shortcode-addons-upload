@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : biplo
 */
 
-.sa_cb_temp_9 {
+.oxi_cb_temp_9 {
     max-width: auto;
     margin: 0 auto;
     display: flex;
@@ -16,35 +16,31 @@ and open the template in the editor.
     align-items: center;
 }
 
-.sa_cb_temp_9 .oxi-main {
+.oxi_cb_temp_9 .oxi-main {
     width: 100%;
     float: left;
     position: relative;
     overflow: hidden;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 0px 0px 2px 0px;
-    border-radius: 0px 0px 5px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.sa_cb_temp_9 .oxi-image {
+.oxi_cb_temp_9 .oxi-image {
     position: relative;
     width: 100%;
     float: left;
     margin-bottom: -60px;
 }
 
-.sa_cb_temp_9 .oxi-image::after {
+.oxi_cb_temp_9 .oxi-image::after {
     display: block;
     content: "";
     padding-bottom: 60%;
 }
 
-.sa_cb_temp_9 .oxi-image-img {
+.oxi_cb_temp_9 .oxi-image-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,197 +48,78 @@ and open the template in the editor.
     background-size: cover;
 }
 
-.sa_cb_temp_9 .oxi-content-body {
+.oxi_cb_temp_9 .oxi-content-body {
     width: 100%;
     float: left;
-    background: #ffffff;
     text-align: center;
-    padding: 0px 0px 0px 0px;
     position: relative;
     top: 60px;
     transition: 0.3s;
 }
 
-.sa_cb_temp_9 .oxi-main:hover .oxi-content-body {
+.oxi_cb_temp_9 .oxi-main:hover .oxi-content-body {
     top: 0;
     transition: 0.3s;
 }
 
-.sa_cb_temp_9 .oxi-conten-icon {
+.oxi_cb_temp_9 .oxi-conten-icon {
     display: inline-block;
     margin-top: -40px;
     position: relative;
 }
 
-.sa_cb_temp_9 .oxi-conten-icon-icon {
-    width: 100px;
+.oxi_cb_temp_9 .oxi-conten-icon-icon {
     height: auto;
-    font-size: 48px;
-    color: #0e1470;
-    background: #ffffff;
-    border-radius: 150px 150px 150px 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-style: solid;
-    border-color: #ffffff;
-    border-width: 1px 1px 1px 1px;
 }
 
-.sa_cb_temp_9 .oxi-conten-title {
+.oxi_cb_temp_9 .oxi-conten-title {
     width: 100%;
-    float: left;
-    font-size: 24px;
-    color: #2c302c;
     font-family: "Roboto";
     font-weight: 700;
     font-style: normal;
     line-height: 1.3;
     text-align: center;
-    padding: 15px 20px 5px 20px;
 }
 
-.sa_cb_temp_9 .oxi-conten-description {
+.oxi_cb_temp_9 .oxi-conten-description {
     width: 100%;
     float: left;
-    font-size: 15px;
-    color: #696363;
     font-family: "Roboto";
     font-weight: 300;
     font-style: normal;
     line-height: 1.4;
     text-align: center;
-    padding: 10px 20px 10px 20px;
 }
 
-.sa_cb_temp_9 .oxi-conten-button {
+.oxi_cb_temp_9 .oxi-conten-button {
     display: block;
     width: 100%;
     float: left;
     text-align: center;
-    padding: 10px 10px 10px 10px;
 }
 
-.sa_cb_temp_9 .oxi-conten-button-name {
+.oxi_cb_temp_9 .oxi-conten-button-name {
     display: inline-block;
-    font-size: 18px;
-    color: #ffffff;
-    background: rgba(31, 10, 189, 1);
-    border-width: 0px 0px 0px 0px;
-    border-style: dotted;
     border-color: transparent;
-    border-radius: 3px 3px 3px 3px;
     font-family: "Roboto";
     font-weight: 500;
     font-style: normal;
     line-height: 1.3;
     text-align: left;
-    padding: 8px 22px 8px 22px;
     text-decoration: none;
 }
 
-.sa_cb_temp_9 .oxi-conten-button-name:hover {
-    color: #ffffff;
-    background: rgba(8, 19, 82, 1);
-    border-style: dotted;
-    border-color: #b39696;
+.oxi_cb_temp_9 .oxi-conten-button-name:hover {
     text-decoration: none;
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_cb_temp_9 {
-        padding: 10px 10px 10px 10px;
-    }
 
-    .sa_cb_temp_9 .oxi-main {
-        width: 326px;
-        border-width: 0px 0px 2px 0px;
-        border-radius: 0px 0px 5px 5px;
-    }
-
-    .sa_cb_temp_9 .oxi-content-body {
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-icon-icon {
-        width: 100px;
-        height: 100px;
-        font-size: 48px;
-        border-radius: 150px 150px 150px 150px;
-        border-width: 1px 1px 1px 1px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-title {
-        font-size: 24px;
-        padding: 15px 20px 5px 20px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-description {
-        font-size: 15px;
-        padding: 10px 20px 10px 20px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-button {
-        padding: 10px 10px 10px 10px
-    }
-
-    .sa_cb_temp_9 .oxi-conten-button-name {
-        font-size: 18px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 3px 3px 3px 3px;
-        padding: 8px 22px 8px 22px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-button-name:hover {
-        border-radius: 5px 5px 5px 5px;
-    }
 }
 
 @media only screen and (max-width:668px) {
-    .sa_cb_temp_9 {
-        padding: 10px 10px 10px 10px;
-    }
-
-    .sa_cb_temp_9 .oxi-main {
-        width: 326px;
-        border-width: 0px 0px 2px 0px;
-        border-radius: 0px 0px 5px 5px;
-    }
-
-    .sa_cb_temp_9 .oxi-content-body {
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-icon-icon {
-        width: 100px;
-        height: 100px;
-        font-size: 48px;
-        border-radius: 150px 150px 150px 150px;
-        border-width: 1px 1px 1px 1px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-title {
-        font-size: 24px;
-        padding: 15px 20px 5px 20px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-description {
-        font-size: 15px;
-        padding: 10px 20px 10px 20px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-button {
-        padding: 10px 10px 10px 10px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-button-name {
-        font-size: 18px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 3px 3px 3px 3px;
-        padding: 8px 22px 8px 22px;
-    }
-
-    .sa_cb_temp_9 .oxi-conten-button-name:hover {
-        border-radius: 5px 5px 5px 5px;
-    }
+    
 }

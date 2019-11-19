@@ -54,7 +54,7 @@ class Style_4 extends Templates {
             }
             
             if ($this->media_render('sa_el_box_image',$data) != '') {
-                $img = '<div class="oxi-addons-img" style="background: url(\'' . $this->media_render('sa_el_box_image', $data) . '\');
+                $img = '<div class="sa-addons-img" style="background: url(\'' . $this->media_render('sa_el_box_image', $data) . '\');
                             background-size: cover;">
                           </div>';
             }
@@ -63,7 +63,7 @@ class Style_4 extends Templates {
 
            
            echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
-            echo '<div class="sa-cb-tem-4 sa-cb-tem-4-'.$key.' ' . $class . '" ' . $this->animation_render('sa-ac-animation', $style) . '>
+            echo '<div class="sa-cb-tem-4 sa-cb-tem-'.$this->oxiid.'-'.$key.' ' . $class . '" ' . $this->animation_render('sa-ac-animation', $style) . '>
                     <div class="sa-cb-tem-innar">
                         <div class="sa-cb-tem-4-data">  
                             <div class="sa-cb-image-body">

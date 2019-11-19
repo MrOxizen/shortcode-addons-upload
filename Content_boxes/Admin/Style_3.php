@@ -70,15 +70,15 @@ class Style_3 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Lorem Ipsum',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-heading' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-3-heading' => '',
                         ],
                     ],
                     'sa_el_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXTAREA,
-                        'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+                        'default' => 'Nullam tincidunt nibh congue turpis scelerisque porttitor. Aenean gravida faucibus euismod. Duis quis nibh lacinia, consequat sapien nec, commodo massa ',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-content' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-3-content' => '',
                         ],
                     ],
                     'sa_el_btn_text' => [
@@ -86,7 +86,7 @@ class Style_3 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Buy Now',
                         'selector' => [
-                            '{{WRAPPER}} .sa-cb-tem-3-{{KEY}} .sa-cb-tem-3-button' => '',
+                            '{{WRAPPER}} .sa-cb-tem-'.$this->oxiid.'-{{KEY}} .sa-cb-tem-3-button' => '',
                         ],
                     ],
                     'sa_el_button_link' => [
@@ -112,10 +112,6 @@ class Style_3 extends AdminStyle
                 'showing' => true,
             ]
         );
-
-
-
-
 
 
         $this->add_group_control(
@@ -212,7 +208,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -261,7 +257,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -293,7 +289,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -341,22 +337,22 @@ class Style_3 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 30,
+                    'size' => 70,
                 ],
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 200,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 100,
+                        'max' => 50,
                         'step' => 0.1,
                     ],
                     'rem' => [
                         'min' => 0,
-                        'max' => 100,
+                        'max' => 50,
                         'step' => 0.1,
                     ],
                 ],
@@ -371,7 +367,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Icon Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#5c5c5c',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-3 .oxi-icons' => 'color:{{VALUE}};'
                 ],
@@ -405,7 +401,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 140,
                 ],
                 'range' => [
                     '%' => [
@@ -450,7 +446,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 140,
                 ],
                 'range' => [
                     '%' => [
@@ -486,7 +482,7 @@ class Style_3 extends AdminStyle
                 'separator' => true,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 50,
+                    'size' => 140,
                 ],
                 'range' => [
                     'px' => [
@@ -518,7 +514,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 50,
+                    'size' => 140,
                 ],
                 'range' => [
                     'px' => [
@@ -579,7 +575,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -611,7 +607,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -650,7 +646,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#7d6262',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-3 .sa-cb-tem-3-heading' => 'color:{{VALUE}};'
                 ],
@@ -686,7 +682,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 5,
                 ],
                 'range' => [
                     '%' => [
@@ -727,7 +723,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Font Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#7d6262',
                 'selector' => [
                     '{{WRAPPER}} .sa-cb-tem-3 .sa-cb-tem-3-content' => 'color:{{VALUE}};'
                 ],
@@ -763,7 +759,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -802,7 +798,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -823,9 +819,9 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -836,9 +832,9 @@ class Style_3 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#787878',
+                'default' => 'rgba(156, 76, 76, 1)',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -848,7 +844,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -861,7 +857,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 50,
                 ],
                 'range' => [
                     '%' => [
@@ -881,7 +877,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -894,9 +890,9 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#787878',
+                'default' => '#9c4c4c',
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button:hover' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button:hover' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -907,9 +903,9 @@ class Style_3 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
-                'default' => '#222',
+                'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}}  .sa-cb-tem-3-button .oxi-button:hover' => 'background:{{VALUE}};'
+                    '{{WRAPPER}}  .sa-cb-tem-3-button .sa-button:hover' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -919,7 +915,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button:hover' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button:hover' => ''
                 ],
             ]
         );
@@ -931,7 +927,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 50,
                 ],
                 'range' => [
                     '%' => [
@@ -951,7 +947,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -996,7 +992,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -1006,7 +1002,7 @@ class Style_3 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => ''
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => ''
                 ],
             ]
         );
@@ -1026,7 +1022,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'range' => [
                     '%' => [
@@ -1035,7 +1031,7 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -1046,7 +1042,7 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1058,7 +1054,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 15,
                 ],
                 'range' => [
                     '%' => [
@@ -1067,18 +1063,18 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                     'px' => [
-                        'min' => -200,
-                        'max' => 200,
+                        'min' => -50,
+                        'max' => 50,
                         'step' => 1,
                     ],
                     'em' => [
-                        'min' => 0,
+                        'min' => -50,
                         'max' => 10,
                         'step' => .1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-cb-tem-3-button .oxi-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa-cb-tem-3-button .sa-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

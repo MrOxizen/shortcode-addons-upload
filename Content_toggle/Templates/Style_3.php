@@ -51,7 +51,7 @@ class Style_3 extends Templates {
     public function inline_public_jquery() {
 
         $jquery = 'jQuery(document).ready(function () {
-            jQuery(".oxi-addons-CT .oxi-addons-switch").click(function () {
+            jQuery(".' . $this->WRAPPER . ' .oxi-addons-CT .oxi-addons-switch").click(function () {
                 jQuery(".oxi-addons-CT .oxi-addons-CT-content-One").toggleClass("oxi-active");
                 jQuery(".oxi-addons-CT .oxi-addons-CT-content-two").toggleClass("oxi-active");
                 jQuery(".oxi-addons-CT .oxi-addons-before-text").toggleClass("oxi-active");

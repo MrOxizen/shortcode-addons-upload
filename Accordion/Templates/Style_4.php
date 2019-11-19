@@ -56,8 +56,8 @@ class Style_4 extends Templates {
                                 </div>';
             }
 
-            echo '<div class="" ' . $this->animation_render('sa_ac_box_animation', $style) . '>
-                            <div class="sa_el_ac_style_4 sa_el_ac_style_4_' . $key . '">
+            echo '<div  ' . $this->animation_render('sa_ac_box_animation', $style) . '>
+                            <div class="sa_el_ac_style_4 sa_el_ac_style_'.$this->oxiid.'_' . $key . '">
                                 <div class="oxi-addonsAC-F-heading">
                                     <div class="oxi-addonsAC-F-heading-icon">
                                        ' . $icon . '
@@ -80,8 +80,8 @@ class Style_4 extends Templates {
         if (array_key_exists('sa_accordion_data', $this->style)):
             foreach ($this->style['sa_accordion_data'] as $key => $value) {
                 if (array_key_exists('sa_ac_active', $value) && $value['sa_ac_active'] == 'yes'):
-                    $jquery .= 'jQuery(".sa_el_ac_style_4_' . $key . ' .oxi-addonsAC-F-heading").addClass("oxi-active");
-                                jQuery(".sa_el_ac_style_4_' . $key . ' .oxi-addonsAC-F-content").slideDown();';
+                    $jquery .= 'jQuery(".' . $this->WRAPPER . ' .sa_el_ac_style_'.$this->oxiid.'_' . $key . ' .oxi-addonsAC-F-heading").addClass("oxi-active");
+                                jQuery(".' . $this->WRAPPER . ' .sa_el_ac_style_'.$this->oxiid.'_' . $key . ' .oxi-addonsAC-F-content").slideDown();';
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] == 'onebyone'):

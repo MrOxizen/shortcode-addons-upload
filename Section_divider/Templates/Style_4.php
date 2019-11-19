@@ -28,13 +28,13 @@ class Style_4 extends Templates {
             if ($this->style['sa_sd_align'] == 'sa_sd_top'):
                 $css .= '.oxi-addons-preview-data#oxi-addons-preview-data {
                             padding-bottom: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px !important;
-                                    background-color: rgb(156, 63, 112);
+                                   
                                     padding: 0;
                          }';
             else:
                 $css .= '.oxi-addons-preview-data#oxi-addons-preview-data {
                             padding-top: ' . ($style['sa_sd_height-lap-size'] + 50) . 'px !important;
-                                    background-color: rgb(156, 63, 112);
+                                   
                                     padding: 0;
                          }';
             endif;
@@ -46,9 +46,8 @@ class Style_4 extends Templates {
 
         echo '  <div class="oxi-addons-divider-sd4 ' . $style['sa_sd_align'] . '">
                      <div class="oxi-addons-divider ' . (array_key_exists('sa_sd_scroll', $style) && $style['sa_sd_scroll'] != '0' ? $style['sa_sd_scroll'] : '') . '">
-                </div>
-             
-            ';
+                    </div>
+                </div>';
     }
 
     public function old_render() {

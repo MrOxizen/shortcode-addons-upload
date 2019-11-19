@@ -34,16 +34,16 @@ class Style_17 extends Templates
             if ($this->media_render('sa_team_front_image', $value) != '') {
                 $image = ' 
                     <div class="oxi-team-pic-size">
-                        <img   src="' . $this->media_render('sa_team_front_image', $value) . '" class="oxi_addons__image" alt="front image"/>
+                        <img  src="' . $this->media_render('sa_team_front_image', $value) . '" class="oxi_addons__image" alt="front image"/>
                     </div>  
                 ';
             }
             if (array_key_exists('sa_divider_switter', $style) && $style['sa_divider_switter'] == 'yes') {
                 $divider = '<div class="member-divider-main">
-                            <div class="member-divider"></div>
-                        </div>';
+                                <div class="member-divider"></div>
+                            </div>';
             }
-
+            echo '';
             echo '<div class="oxi-addons-parent-wrapper-style-17 oxi-addons-parent-wrapper-style-17-' . $v['id'] . ' ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . ' ' . $this->column_render('sa_team_column', $style) . '">
                     <div class="oxi-team-show-body-style-17" ' . $this->animation_render('sa_team_animation', $style) . ' >
                         <div class="oxi-team-show">
@@ -65,7 +65,7 @@ class Style_17 extends Templates
                                                 if ($data['sa_social_icons_icon'] != '') {
                                                 $icon = $this->font_awesome_render($data['sa_social_icons_icon']);
                                             }
-                                            echo '<a ' . $link . ' class = "member-icon member-icon-' . $key . '">' . $icon . '</a>';
+                                            echo '<a ' . $link . ' class = "member-icon ' . $style['sa_social_icons_border'] . ' member-icon-' . $key . '">' . $icon . '</a>';
                                         }
                                 echo  '</div>
                             </div> 
@@ -86,17 +86,56 @@ class Style_17 extends Templates
     }
     public function inline_public_css()
     {
-        $style = $this->style;
+        $childdata = $this->child;
+        $styledata = $this->style;
         $align = '';
-        if($style['sa_team_main_alignment'] == 'left'){
+        if($styledata['sa_team_main_alignment'] == 'left'){
             $align = 'transform: translateX(-100%);';
         }else{
             $align = 'transform: translateX(100%);';
         }
+
+        $align = '';
+        if($styledata['sa_team_main_alignment'] == 'left'){
+            $align = 'transform: translateX(-100%);';
+        }else{
+            $align = 'transform: translateX(100%);';
+        }
+        
+        
+
+        $css = '';
+        foreach ($childdata as $v) {
+            $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+
+            $datas = (array_key_exists('sa_team_repeater', $value) && is_array($value['sa_team_repeater']) ? $value['sa_team_repeater'] : []);
+
+            foreach ($datas as $key => $data) {
+                $css .= '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17.oxi-addons-parent-wrapper-style-17-' . $v['id'] . ' .member-icon.member-icon-' . $key . ' .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color'] . ';' : '' ) . '
+                            
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17.oxi-addons-parent-wrapper-style-17-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17.oxi-addons-parent-wrapper-style-17-' . $v['id'] . ' .member-icon.member-icon-' . $key . '{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_color'] . ';' : '' ) . '
+                            }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17.oxi-addons-parent-wrapper-style-17-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover .oxi-icons{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'color: ' . $data['sa_social_icons_color_hover'] . ';' : '' ) . '
+                           }
+                           .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17.oxi-addons-parent-wrapper-style-17-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'background: ' . $data['sa_social_icons_bg_color_hover'] . ';' : '' ) . '
+                        }
+                        .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17.oxi-addons-parent-wrapper-style-17-' . $v['id'] . ' .member-icon.member-icon-' . $key . ':hover{
+                            ' . (($styledata["sa_social_icons_position"] == "separately") ? 'border-color: ' . $data['sa_social_icons_border_hover_color'] . ';' : '' ) . '
+                        }';
+            }
+        }
         return '.' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17:hover .member-name,
                 .' . $this->WRAPPER . ' .oxi-addons-parent-wrapper-style-17 .oxi-team-show-body-style-17:hover .member-role{
                     '.$align.'
-             }';
+             }'.$css;
     }
 
     public function old_render()

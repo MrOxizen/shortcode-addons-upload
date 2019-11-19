@@ -98,7 +98,7 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'Lorem Ipsum Dolor',
                     'selector' => [
-                        '{{WRAPPER}} .oa_ac_style_9_{{KEY}} .heading-data' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_'.$this->oxiid.'_{{KEY}} .heading-data' => '',
                     ],
                 ],
                 'sa_el_ac_desc_adding' => [
@@ -106,7 +106,7 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
                     'selector' => [
-                        '{{WRAPPER}} .oa_ac_style_9_{{KEY}} .oxi-addons-ac-C' => '',
+                        '{{WRAPPER}} .sa_element_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-ac-C' => '',
                     ],
                 ],
             ],
@@ -148,7 +148,7 @@ class Style_9 extends AdminStyle {
 //            'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -314,7 +314,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -393,7 +393,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -413,7 +413,7 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-C' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-C-b' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -654,12 +654,20 @@ class Style_9 extends AdminStyle {
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
-
+        
+        $this->add_group_control(
+                'sa_ac_number_box_shadow_nwo', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'separator' => true,
+            'selector' => [
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-number' => ''
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_el_ac_opening_icon_icon_border_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 50,
@@ -692,7 +700,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -853,6 +861,36 @@ class Style_9 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_responsive_control(
+                'sa_el_ac_closing_arrow_border_radius', $this->style, [
+            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => 50,
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => -200,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
         $this->end_controls_tab();
         $this->start_controls_tab();
 
@@ -887,13 +925,10 @@ class Style_9 extends AdminStyle {
             ]
                 ]
         );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
         $this->add_responsive_control(
-                'sa_el_ac_closing_arrow_border_radius', $this->style, [
+                'sa_el_ac_closing_arrow_hoverr_border_radius', $this->style, [
             'label' => __('Border Radius', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-            'separator' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 50,
@@ -916,18 +951,21 @@ class Style_9 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H .oxi-addons-AC-N-deactive,'
-                . '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_element_ac_style_9 .oxi-addons-AC-N-H.active .oxi-addons-AC-N-active' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
         $this->add_responsive_control(
                 'sa_el_ac_opening_arrow_padding', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
+            'separator' => true,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

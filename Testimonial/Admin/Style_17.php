@@ -394,31 +394,7 @@ class Style_17 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-testimonial-profile-name_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_name' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_group_control(
                 'sa-testimonial-profile-name-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -506,31 +482,7 @@ class Style_17 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-testimonial-profile-company_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_working' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_group_control(
                 'sa-testimonial-profile-company-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -565,7 +517,7 @@ class Style_17 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_working a' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_working' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -655,6 +607,7 @@ class Style_17 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_rating i' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_rating' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -686,31 +639,7 @@ class Style_17 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-testimonial-profile-Information_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'left',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_testimonial_eighteen_box .oxi_addons_testimonial_bottom_details' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_group_control(
                 'sa-testimonial-profile-Information-shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
