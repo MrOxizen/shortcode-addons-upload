@@ -117,19 +117,14 @@ class Style_3 extends AdminStyle {
             'title_field' => 'sa_image_progress_bar_data_name',
                 ]
         );
-        $this->add_control(
+        $this->add_group_control(
                 'sa_image_progress_bar_background', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'separator' => TRUE,
-            'oparetor' => 'RGB',
-            'default' => '#787878',
+            'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .oxi-addons-main-wrapper-style-3' => '',
             ]
                 ]
         );
-
         $this->add_responsive_control(
                 'sa_image_progress_bar_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),

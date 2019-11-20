@@ -304,16 +304,13 @@ class Style_7 extends AdminStyle
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'left',
                 'loader' => TRUE,
-                'condition' => [
-                    'sa_info_banner_image_position' => 'left',
-                    'sa_info_banner_image_position' => 'right'
-                ],
+              
                 'options' => [
-                    'left' => [
+                    'icon_left' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-left',
                     ],
-                    'right' => [
+                    'icon_right' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-right',
                     ],
@@ -437,7 +434,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#077777',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-content-boxes_style_7 .oxi-addons-content-boxes-icon' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons-content-boxes_style_7 .oxi-addons-content-boxes-icon .oxi-icons' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -588,6 +585,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => esc_html__('Icon Line Settings', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
+                
             ]
         ); 
         $this->add_group_control(
@@ -635,8 +633,7 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
                 'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
-                'selector' => [
+               'selector' => [
                     '{{WRAPPER}} .oxi-addons-content-boxes_style_7 .oxi_addons__heading' => ''
                 ],
             ]
@@ -700,7 +697,6 @@ class Style_7 extends AdminStyle
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
                 'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-content-boxes_style_7 .oxi_addons__details' => ''
                 ],

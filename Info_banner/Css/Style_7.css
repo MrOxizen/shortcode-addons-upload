@@ -205,6 +205,50 @@
     }
 }
 
+.oxi-addons-main-wrapper_style_7.left .oxi-icon-first .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.left .oxi-icon-first .oxi_addons__details {
+    text-align: left;
+}
+
+.oxi-addons-main-wrapper_style_7.left .oxi-icon-last .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.left .oxi-icon-last .oxi_addons__details {
+    text-align: left
+}
+.oxi-addons-main-wrapper_style_7.left.icon_right .oxi-icon-first .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.left.icon_right .oxi-icon-first .oxi_addons__details {
+    text-align: right;
+}
+
+.oxi-addons-main-wrapper_style_7.left.icon_right .oxi-icon-last .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.left.icon_right .oxi-icon-last .oxi_addons__details {
+    text-align: right;
+}
+.oxi-addons-main-wrapper_style_7 .oxi-icon-first .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7 .oxi-icon-first .oxi_addons__details {
+    text-align: right
+}
+
+.oxi-addons-main-wrapper_style_7 .oxi-icon-last .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7 .oxi-icon-last .oxi_addons__details {
+    text-align: left
+}
+.oxi-addons-main-wrapper_style_7.right .oxi-icon-first .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.right .oxi-icon-first .oxi_addons__details {
+    text-align: left;
+}
+.oxi-addons-main-wrapper_style_7.right .oxi-icon-last .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.right .oxi-icon-last .oxi_addons__details {
+    text-align: left
+}
+.oxi-addons-main-wrapper_style_7.right.icon_right .oxi-icon-first .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.right.icon_right .oxi-icon-first .oxi_addons__details {
+    text-align: right;
+}
+.oxi-addons-main-wrapper_style_7.right.icon_right .oxi-icon-last .oxi_addons__heading,
+.oxi-addons-main-wrapper_style_7.right.icon_right .oxi-icon-last .oxi_addons__details {
+    text-align: right;
+}
+
 @media only screen and (max-width:668px) {
     .oxi-addons-main-wrapper_style_7 {
         display: block
@@ -248,14 +292,4 @@
         width: 46px;
         height: 46px
     }
-}
-
-.oxi-addons-main-wrapper_style_7 .oxi-icon-first .oxi_addons__heading,
-.oxi-addons-main-wrapper_style_7 .oxi-icon-first .oxi_addons__details {
-    text-align: right
-}
-
-.oxi-addons-main-wrapper_style_7 .oxi-icon-last .oxi_addons__heading,
-.oxi-addons-main-wrapper_style_7 .oxi-icon-last .oxi_addons__details {
-    text-align: left
 }

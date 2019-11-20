@@ -16,21 +16,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_5 extends Templates {
     
-    public function inline_public_css() {
-        $style = $this->style;
-         if ($style['sa_info_banner_image_position'] == 'left') {
-          $css =   '.' . $this->WRAPPER . ' .oxi_addons__info_banner_style_5 .oxi_addons__image:hover {
-                cursor: pointer;
-                -o-transform: translate(-5%) !important;
-                -moz-transform: translate(-5%) !important;
-                -webkit-transform: translate(-5%) !important;
-                transform: translate(-5%) !important;
-                -ms-transform: translate(-5%) !important;
-            }
-        ';
-          return $css;
-        }
-    }
+  
 
     public function default_render($style, $child, $admin) {
 
@@ -39,7 +25,7 @@ class Style_5 extends Templates {
         if ($this->media_render('sa_info_banner_front_image', $style) != '') {
             $image = ' 
                 <div ' . $this->animation_render('sa_info_banner_front_image_animation', $style) . ' class="oxi_addons__image_main" ' . (array_key_exists('sa_info_banner_image_position', $style) && $style['sa_info_banner_image_position'] != 'left' ? 'style="transform: translateX(0%)"' : '') . '>
-                    <img ' . (array_key_exists('sa_info_banner_image_switcher', $style) && $style['sa_info_banner_image_switcher'] != 'yes' ? 'style="width: 150%; max-width: 150%; height: auto"' : '') . ' src="' . $this->media_render('sa_info_banner_front_image', $style) . '" class="oxi_addons__image" alt="front image"/>
+                    <img ' . (array_key_exists('sa_info_banner_image_switcher', $style) && $style['sa_info_banner_image_switcher'] != 'yes' ? 'style="width: 150%; max-width: 150%; height: auto"' : '') . ' src="' . $this->media_render('sa_info_banner_front_image', $style) . '" class="oxi_addons__image ' . (array_key_exists('sa_info_banner_image_position', $style) && $style['sa_info_banner_image_position'] == 'left' ? 'sa_image_left' : '') . '" alt="front image"/>
                 </div>  
             ';
         }

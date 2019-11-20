@@ -26,7 +26,7 @@ class Style_6 extends Templates
         if ($this->media_render('sa_info_banner_front_image', $style) != '') {
             $image = ' 
                 <div ' . $this->animation_render('sa_info_banner_front_image_animation', $style) . ' class="oxi_addons__image_main" ' . (array_key_exists('sa_info_banner_image_position', $style) && $style['sa_info_banner_image_position'] != 'left' ? 'style="transform: translateX(0%)"' : '') . '>
-                    <img ' . (array_key_exists('sa_info_banner_image_switcher', $style) && $style['sa_info_banner_image_switcher'] != 'yes' ? 'style="width: 100%; max-width: 100%; height: auto"' : '') . ' src="' . $this->media_render('sa_info_banner_front_image', $style) . '" class="oxi_addons__image" alt="front image"/>
+                    <img ' . (array_key_exists('sa_info_banner_image_switcher', $style) && $style['sa_info_banner_image_switcher'] != 'yes' ? 'style="width: 100%; max-width: 100%; height: auto"' : '') . ' src="' . $this->media_render('sa_info_banner_front_image', $style) . '" class="oxi_addons__image ' . (array_key_exists('sa_info_banner_image_position', $style) && $style['sa_info_banner_image_position'] == 'left' ? 'sa_image_left' : '') . '" alt="front image"/>
                 </div>  
             ';
         }
@@ -41,16 +41,7 @@ class Style_6 extends Templates
           <div class="oxi_addons__info_banner_style_6">'; 
           if ($style['sa_info_banner_image_position'] == 'left') {
             echo '<div class="oxi-bt-col-lg-3 oxi-bt-col-md-12 oxi-bt-col-sm-12">' . $image . '</div> ';
-            $this->CSSDATA .= '
-            .oxi_addons__info_banner_style_6 .oxi_addons__image_main .oxi_addons__image:hover {
-                cursor: pointer;
-                -o-transform: translate(-5%);
-                -moz-transform: translate(-5%);
-                -webkit-transform: translate(-5%);
-                transform: translate(-5%);
-                -ms-transform: translate(-5%);
-            }
-        ';  
+            
         }
          
         echo '<div class="oxi-bt-col-lg-9 oxi-bt-col-md-12 oxi-bt-col-sm-12">  

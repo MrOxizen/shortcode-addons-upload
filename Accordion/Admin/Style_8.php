@@ -94,7 +94,7 @@ class Style_8 extends AdminStyle {
                 ],
                 'sa_el_ac_desc_adding' => [
                     'label' => esc_html__('Description', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXTAREA,
+                    'type' => Controls::WYSIWYG,
                     'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survamar sonar bangla ami tomay valobashi chirodin tomar akash tomar batash amar prane omayamar prane bajay bashi sonar bangla ami tomay valobashiived not only five centuries, ftware like Aldus PageMaker including versions of Lorem Ipsum. ',
                     'selector' => [
                         '{{WRAPPER}} .sa_element_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-ac-C' => '',

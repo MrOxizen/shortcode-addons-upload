@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
 } 
- 
+
 .oxi_addons__info_banner_style_4 {
     width: 100%; 
     background: linear-gradient(45deg, rgba(3, 59, 77, 1.00) 0%, rgba(0, 205, 224, 0.50) 100%), url("https://www.oxilab.org/wp-content/uploads/2019/01/26_900x.jpg") no-repeat center center;
@@ -39,6 +39,14 @@
     transform: translate(5%);
     -ms-transform: translate(5%);
 } 
+.oxi_addons__info_banner_style_4 .oxi_addons__image.sa_image_left:hover {
+    cursor: pointer;
+    -o-transform: translate(-5%) !important;
+    -moz-transform: translate(-5%) !important;
+    -webkit-transform: translate(-5%) !important;
+    transform: translate(-5%) !important;
+    -ms-transform: translate(-5%) !important;
+} 
 
 .oxi_addons__info_banner_style_4 .oxi_addons__icon_main {
     width: 100%; 
@@ -47,7 +55,7 @@
     align-items: center;
     padding: 10px 0px 10px 0px;
 }
- 
+
 .oxi_addons__info_banner_style_4  .oxi_addons__icon {
     display: flex;
     align-items: center;
@@ -78,11 +86,11 @@
     padding: 10px 0px 10px 0px;
     width: 100%;
 } 
- 
+
 .oxi_addons__info_banner_style_4 .oxi_addons__heading span {
     color: #ff8f0f;
 }
- 
+
 .oxi_addons__info_banner_style_4 .oxi_addons__details {
     font-size: 18px;
     font-family: "Lato";
@@ -94,13 +102,13 @@
     padding: 20px 0px 20px 0px;
     width: 100%; 
 }
- 
+
 .oxi_addons__info_banner_style_4 .oxi_addons__button_main {
     width: 100%;
     display: flex;
     justify-content: center;
 }
- 
+
 .oxi_addons__info_banner_style_4 .oxi_addons__button{
     background: rgba(255, 143, 15, 1);
     color: #ffffff;
@@ -130,7 +138,7 @@
         padding: 0px 50px 0px 50px;
         display: block
     } 
-     
+
     .oxi_addons__info_banner_style_4  .oxi_addons__icon { 
         border-radius: 50px 50px 50px 50px;
         padding: 15px 15px 15px 15px;
@@ -138,7 +146,7 @@
         height: 60px
     }
     .oxi_addons__info_banner_style_4  .oxi-icons { 
-         font-size: 35px;
+        font-size: 35px;
         color: #ffffff; 
     } 
     .oxi_addons__info_banner_style_4 .oxi_addons__heading {
@@ -169,7 +177,7 @@
         height: 60px
     }
     .oxi_addons__info_banner_style_4  .oxi-icons { 
-         font-size: 35px;
+        font-size: 35px;
         color: #ffffff; 
     } 
     .oxi_addons__info_banner_style_4 .oxi_addons__heading {

@@ -156,7 +156,7 @@ class Style_1 extends Templates
                 </div>
             </div>
             ';
-        $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-previous::before {
+        $this->inline_css .= '.' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_1 .jp-type-playlist .jp-previous::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_pre_icon'] != '' ? $this->style['sa_ap_list_audio_pre_icon'] : '') . '" !important;
             ' . $previous_type . ';
         }
@@ -263,18 +263,7 @@ class Style_1 extends Templates
         $jquery = '';
         echo '<div class="oxi-addons-container"> ';
         echo '<div class="oxi-addons-row"> ';
-        echo '<div class="oxi-addons-show-playlist-' . $oxiid . '">
-                <div class="oxi-addons-playlist">
-                    <h1>For Delete and edit playlist</h1>
-                    <ul class="oxi-ul">';
-        foreach ($listdata as $value) {
-            $data = explode('||#||', $value['files']);
-            echo '<li class=""> ' . $data[3] . '';
-        }
-        echo '</li>';
-        echo ' </ul>
-                </div>
-            </div>';
+    
 
         $suffle_repeat = $volume_control = $player_control = $time_control = $progress = $playlist = $title = $repeat = $shuffle = '';
         $previous_type = $play_type = $pause_type = $stop_type = $next_type = $min_volume_type = $mute_volume_type = $max_volume_type = $repeat_type = $shuffle_type = '';

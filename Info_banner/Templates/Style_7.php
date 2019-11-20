@@ -12,14 +12,11 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_7 extends Templates
-{
+class Style_7 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
         $datas = (array_key_exists('sa_info_banner_repeater', $style) && is_array($style['sa_info_banner_repeater']) ? $style['sa_info_banner_repeater'] : []);
 
         $iconboxfirst = $iconboxlast = $icon = $heading = $content = '';
@@ -42,7 +39,7 @@ class Style_7 extends Templates
                                     <div class="oxi-addons-content-boxes_style_7">
                                          <div class="oxi-addons-content-boxes-main">                        
                                             <div class="oxi-addons-box">
-                                                ' . (($style['sa_info_banner_image_position'] == 'center' || $style['sa_info_banner_icon_position'] == 'right') ? '<div class="oxi-addons-header-content">' . $heading . '' . $content . ' </div>' . $icon . '' : $icon . '<div class="oxi-addons-header-content">' . $heading . '' . $content . '</div>') . '
+                                                ' . (($style['sa_info_banner_image_position'] == 'center' || $style['sa_info_banner_icon_position'] == 'icon_right') ? '<div class="oxi-addons-header-content">' . $heading . '' . $content . ' </div>' . $icon . '' : $icon . '<div class="oxi-addons-header-content">' . $heading . '' . $content . '</div>') . '
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +49,7 @@ class Style_7 extends Templates
                                     <div class="oxi-addons-content-boxes_style_7">
                                          <div class="oxi-addons-content-boxes-main">                        
                                             <div class="oxi-addons-box">
-                                                ' . (($style['sa_info_banner_image_position'] == 'center' || $style['sa_info_banner_icon_position'] == 'left') ? $icon . '<div class="oxi-addons-header-content">' . $heading . '' . $content . '</div>' : '<div class="oxi-addons-header-content">' . $heading . '' . $content . '</div>' . $icon) . '
+                                                ' . (($style['sa_info_banner_image_position'] == 'center' || $style['sa_info_banner_icon_position'] == 'icon_left') ? $icon . '<div class="oxi-addons-header-content">' . $heading . '' . $content . '</div>' : '<div class="oxi-addons-header-content">' . $heading . '' . $content . '</div>' . $icon) . '
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +72,7 @@ class Style_7 extends Templates
                             </div>
                       </div>';
 
-        echo '<div class="oxi-addons-main-wrapper_style_7">';
+        echo '<div class="oxi-addons-main-wrapper_style_7 ' . $style['sa_info_banner_image_position'] . ' ' . $style['sa_info_banner_icon_position'] . '">';
         if ($style['sa_info_banner_image_position'] == 'left') {
             echo $imagebody;
             echo $iconboxfirst;
@@ -92,8 +89,7 @@ class Style_7 extends Templates
         echo '</div>';
     }
 
-    public function old_render()
-    {
+    public function old_render() {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $oxiid = $styledata['id'];
@@ -229,8 +225,8 @@ class Style_7 extends Templates
             echo $imagebody;
         }
         echo ''
-            . '</div>'
-            . '</div></div>';
+        . '</div>'
+        . '</div></div>';
         $css .= ' 
             .oxi-info-banner-style-7-static{
                 overflow:hidden;
@@ -460,4 +456,5 @@ class Style_7 extends Templates
         }
         wp_add_inline_style('shortcode-addons-style', $css);
     }
+
 }
