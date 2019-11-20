@@ -385,7 +385,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_3 .jp-current-time' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_3 .jp-current-time' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -452,7 +452,7 @@ class Style_3 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_list_container_style_3 .jp-duration' => '',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_3 .jp-duration' => 'color: {{VALUE}};',
                 ],
             ]
         );
