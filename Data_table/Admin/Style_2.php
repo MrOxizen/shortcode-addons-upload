@@ -2226,7 +2226,7 @@ class Style_2 extends AdminStyle
                                                         'sa_type' . $key => 'icon'
                                                     ],
                                                 ]
-                                            );
+                                            ); 
                                             ?>
                         </div>
                     </div> 
@@ -2237,4 +2237,5 @@ class Style_2 extends AdminStyle
 
         echo '</div>'; 
     }
+   
 }

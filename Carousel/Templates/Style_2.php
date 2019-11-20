@@ -49,7 +49,7 @@ class Style_2 extends Templates
         }
         echo '</div>';
         if ($styledata['sa_carousel_cen_mod_on_off'] == 'true') {
-            $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_carousel_style_2 .oxi-owl-item, 
+            $this->inline_css .= '.' . $this->WRAPPER . ' .sa_addons_carousel_style_2 .oxi-owl-item, 
                             ' . $this->WRAPPER . ' .sa_addons_carousel_style_2 .oxi-owl-item{
                 opacity:0.8;
                 transform:scale(0.94);

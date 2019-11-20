@@ -112,7 +112,7 @@ class Style_1 extends AdminStyle
                             ],
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_top .sa_addons_tooltip_text' => 'margin-top: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_unique_{{KEY}}.sa_tooltip_top .sa_addons_tooltip_text' => 'margin-bottom: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -134,8 +134,9 @@ class Style_1 extends AdminStyle
                                 'step' => 1,
                             ],
                         ],
+                    
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_bottom .sa_addons_tooltip_text' => 'margin-top: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_unique_{{KEY}}.sa_tooltip_bottom .sa_addons_tooltip_text' => 'margin-top: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -158,7 +159,7 @@ class Style_1 extends AdminStyle
                             ],
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_left .sa_addons_tooltip_text' => 'margin-left: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_unique_{{KEY}}.sa_tooltip_left .sa_addons_tooltip_text' => 'margin-right: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -181,7 +182,7 @@ class Style_1 extends AdminStyle
                             ],
                         ],
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_right .sa_addons_tooltip_text' => 'margin-left: {{SIZE}}px;'
+                            '{{WRAPPER}} .sa_addons_tooltip_style_1.sa_tooltip_unique_{{KEY}}.sa_tooltip_right .sa_addons_tooltip_text' => 'margin-left: {{SIZE}}px;'
                         ],
                         'conditional' => Controls::INSIDE,
                         'condition' => [
@@ -206,7 +207,7 @@ class Style_1 extends AdminStyle
                             'sa_tooltip_url_open' => 'yes'
                         ]
                     ],
-                    
+
                 ],
                 'title_field' => 'sa_tooltip_icon',
                 'button' => 'Add Tooltip Item',

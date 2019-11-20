@@ -1,4 +1,5 @@
 <?php
+ 
 
 namespace SHORTCODE_ADDONS_UPLOAD\Data_table\Templates;
 

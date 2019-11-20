@@ -53,7 +53,7 @@ class Style_1 extends Templates
                 ' . $audio . '
             </div>
         </div>';
-        $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_ap_container_style_1 .mejs-replay button::after, .' . $this->WRAPPER . ' .sa_addons_ap_container_style_1 .mejs-play button::after {
+        $this->inline_css .= '.' . $this->WRAPPER . ' .sa_addons_ap_container_style_1 .mejs-replay button::after, .' . $this->WRAPPER . ' .sa_addons_ap_container_style_1 .mejs-play button::after {
             content: "\\' . $this->text_render($this->style['sa_ap_audio_ply_icon'] != '' ? $this->style['sa_ap_audio_ply_icon'] : '') . '" !important;
         }
         .' . $this->WRAPPER . ' .sa_addons_ap_container_style_1 .mejs-pause button::after {

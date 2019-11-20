@@ -92,6 +92,10 @@
     top: auto
 }
 
+.sa_addons_ap_container_style_1 .mejs-time-handle-content { 
+    display: none; 
+}
+
 .sa_addons_ap_container_style_1 .mejs-button>button {
     margin: 0
 }
