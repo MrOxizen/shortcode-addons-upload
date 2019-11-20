@@ -85,7 +85,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'sa_el_ac_desc_adding' => [
                     'label' => esc_html__('Description', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXTAREA,
+                    'type' => Controls::WYSIWYG,
                     'default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry ',
                     'selector' => [
                         '{{WRAPPER}} .sa_el_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-ac-C' => '',

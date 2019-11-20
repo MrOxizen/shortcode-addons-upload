@@ -93,7 +93,7 @@ class Style_7 extends AdminStyle {
                 ],
                 'sa_el_ac_desc_adding' => [
                     'label' => esc_html__('Description', SHORTCODE_ADDOONS),
-                    'type' => Controls::TEXTAREA,
+                    'type' => Controls::WYSIWYG,
                     'default' => 'Lorem Ipsum has been the industrys standard amar sonar bangla ami tomay valobashi of type and scrambled it to make a type specimen book. ',
                     'selector' => [
                         '{{WRAPPER}} .sa_element_ac_style_'.$this->oxiid.'_{{KEY}} .oxi-addons-ac-C' => '',
