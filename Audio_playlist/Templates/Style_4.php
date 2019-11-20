@@ -159,7 +159,7 @@ class Style_4 extends Templates
                 </div>
             </div>
             ';
-        $this->CSSDATA .= '.' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_4 .jp-type-playlist .jp-previous::before {
+        $this->inline_css .= '.' . $this->WRAPPER . ' .sa_addons_ap_list_container_style_4 .jp-type-playlist .jp-previous::before {
             content: "\\' . $this->text_render($this->style['sa_ap_list_audio_pre_icon'] != '' ? $this->style['sa_ap_list_audio_pre_icon'] : '') . '" !important;
             ' . $previous_type . ';
         }
