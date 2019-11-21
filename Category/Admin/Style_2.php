@@ -191,7 +191,7 @@ class Style_2 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_category_menu_item_padding',
+            'sa_category_menu_body_margin',
             $this->style,
             [
                 'label' => __('Menu Body Margin', SHORTCODE_ADDOONS),
@@ -496,6 +496,38 @@ class Style_2 extends AdminStyle
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_category_container_style_2 .sa_addons_category_menu_item:hover' => '',
+                ],
+            ]
+        );
+         $this->add_responsive_control(
+            'sa_category_menu_item_b_r_hover',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_category_container_style_2 .sa_addons_category_menu_item:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
