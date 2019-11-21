@@ -151,7 +151,7 @@ class Style_3 extends AdminStyle {
         );
 
         $this->end_controls_section();
-        
+
         $this->end_section_devider();
 
         $this->start_section_devider();
@@ -161,7 +161,7 @@ class Style_3 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-         $this->start_controls_tabs(
+        $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
                 'normal' => esc_html__('Normal Icon', SHORTCODE_ADDOONS),
@@ -187,7 +187,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-exclamation-triangle',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-F-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
             ],
@@ -287,7 +289,7 @@ class Style_3 extends AdminStyle {
 
         $this->end_controls_tab();
         $this->start_controls_tab();
-            
+
         $this->add_control(
                 'sa_ab_ci', $this->style, [
             'label' => __('Cross Icon', SHORTCODE_ADDOONS),
@@ -305,7 +307,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-times',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-L-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
             ],
@@ -462,7 +466,7 @@ class Style_3 extends AdminStyle {
                 ]
         );
         $this->start_section_devider();
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Content Body Setting', SHORTCODE_ADDOONS),
@@ -480,38 +484,7 @@ class Style_3 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
-        $this->add_control(
-                'sa_ab_content_align', $this->style, [
-            'label' => __('Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-H' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-DC' => 'text-align: {{VALUE}};',
-            ],
-            'condition' => [
-                'sa_ab_text' => 'yes',
-            ],
-                ]
-        );
         
-
         $this->add_group_control(
                 'sa_ab_content_bg', $this->style, [
             'type' => Controls::BACKGROUND,
@@ -520,7 +493,7 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-         $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_ab_content_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -599,7 +572,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'Warning',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-H' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -611,7 +586,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Description', SHORTCODE_ADDOONS),
             'placeholder' => __('Description', SHORTCODE_ADDOONS),
             'default' => 'THIS A ERROR MESSAGE BOX, LOOKS PRETTY SLICK.',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-DC' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -629,6 +606,7 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-H' => ''
             ],
@@ -690,6 +668,7 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa_address_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-TH-3 .oxi-addonsAL-TH-DC' => ''
             ],

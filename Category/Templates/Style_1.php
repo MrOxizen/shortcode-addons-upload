@@ -29,21 +29,22 @@ class Style_1 extends Templates
             $active_default = $styledata['sa_category_parent_cat'];
         endif;
         echo '<div class="sa_addons_category_container_style_1 ">
-           <div class="sa_addons_category_menu sa_addons_category_menu_' . $oxiid . ' ">';
-        foreach ($all_cat_data as $value) :
-            if ($active_default == $value['sa_category_item_text']) :
-                $cat = '*';
-                $class = 'sa_active';
-            else :
-                $class = '';
-                $cat = '.' . $this->CatStringToClassReplacce($value['sa_category_item_text'], $oxiid) . '';
-            endif;
-            echo '<div class="sa_addons_category_menu_item ' . $styledata['sa_category_menu_w_type'] . '  ' . $class . ' " sa_ref="' . $cat . '">
-                    ' . $value['sa_category_item_text'] . '
-                </div>
-        ';
-        endforeach;
-        echo '</div>';
+                    <div class="sa_addons_category_menu sa_addons_category_menu_' . $oxiid . ' ">';
+                 foreach ($all_cat_data as $value) :
+                     if ($active_default == $value['sa_category_item_text']) :
+                         $cat = '*';
+                         $class = 'sa_active';
+                     else :
+                         $class = '';
+                         $cat = '.' . $this->CatStringToClassReplacce($value['sa_category_item_text'], $oxiid) . '';
+                     endif;
+                     echo '<div class="sa_addons_category_menu_item ' . $styledata['sa_category_menu_w_type'] . '  ' . $class . ' " sa_ref="' . $cat . '">
+                             ' . $value['sa_category_item_text'] . '
+                         </div>
+                 ';
+                 endforeach;
+           echo '</div>';
+       
         echo '<div class="sa_addons_category_style_1  sa_addons_category_' . $oxiid . '">
                 <div class="sa_addons_category_data_style_1  sa_addons_category_data_' . $oxiid . '">';
 
@@ -79,6 +80,7 @@ class Style_1 extends Templates
         echo '
             </div>
         </div>';
+         echo '</div>';
     }
 
     public function public_jquery()

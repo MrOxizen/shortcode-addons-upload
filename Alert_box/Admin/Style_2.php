@@ -166,10 +166,9 @@ class Style_2 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-row' => ''
             ],
-            
                 ]
         );
-         $this->start_controls_tabs(
+        $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
                 'normal' => esc_html__('Normal Icon', SHORTCODE_ADDOONS),
@@ -195,7 +194,9 @@ class Style_2 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-check-circle',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
             ],
@@ -248,7 +249,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_responsive_control(
                 'sa_ab_icon_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -283,7 +284,7 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-         $this->end_controls_tab();
+        $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
                 'sa_ab_ci', $this->style, [
@@ -302,7 +303,9 @@ class Style_2 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-times',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-L-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
             ],
@@ -420,43 +423,16 @@ class Style_2 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
-        $this->add_control(
-                'sa_ab_content_align', $this->style, [
-            'label' => __('Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-H' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-DC' => 'text-align: {{VALUE}};',
-            ],
-            'condition' => [
-                'sa_ab_text' => 'yes',
-            ],
-                ]
-        );
+        
         $this->add_control(
                 'sa_ab_content_header', $this->style, [
             'type' => Controls::TEXT,
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'Success',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-H' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -468,7 +444,9 @@ class Style_2 extends AdminStyle {
             'label' => __('Description', SHORTCODE_ADDOONS),
             'placeholder' => __('Description', SHORTCODE_ADDOONS),
             'default' => 'There are many variations of passages',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-DC' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -501,6 +479,7 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-H' => ''
             ],
@@ -562,6 +541,7 @@ class Style_2 extends AdminStyle {
         $this->add_group_control(
                 'sa_address_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-2 .oxi-addonsAL-T-DC' => ''
             ],

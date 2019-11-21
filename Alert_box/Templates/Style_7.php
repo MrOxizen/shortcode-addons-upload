@@ -50,7 +50,7 @@ class Style_7 extends Templates {
                                 </div>
                             </div>';
         }
-        echo '<div class="oxi-addons-AL-SE-7" ' . $this->animation_render('sa_ab_animation', $style) . '>
+        echo '<div class="oxi-addons-AL-SE-7 oxi-addons-AL-SE-7-' . $this->oxiid . '" ' . $this->animation_render('sa_ab_animation', $style) . '>
                         <div class="oxi-addonsAL-SE-row">
                             ' . $firsticon . '
                             ' . $contentsection . '
@@ -62,8 +62,8 @@ class Style_7 extends Templates {
     public function inline_public_jquery() {
 
         $jquery = 'jQuery(document).ready(function(){
-                jQuery(".oxi-addons-AL-SE-7 .oxi-addonsAL-SE-col-three").click(function(){
-                    jQuery(".oxi-addons-AL-SE-7").hide();
+                jQuery(".oxi-addons-AL-SE-7-' . $this->oxiid . ' .oxi-addonsAL-SE-col-three").click(function(){
+                    jQuery(".oxi-addons-AL-SE-7-' . $this->oxiid . '").hide();
                 });
            
             });';
