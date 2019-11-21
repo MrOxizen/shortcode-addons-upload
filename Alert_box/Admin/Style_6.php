@@ -195,7 +195,7 @@ class Style_6 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'far fa-bell',
-             'selector' => [
+            'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-SI-6 .oxi-addonsAL-SI-F-icon' => ''
             ],
             'condition' => [
@@ -250,7 +250,7 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-       
+
         $this->add_responsive_control(
                 'sa_ab_icon_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -359,7 +359,7 @@ class Style_6 extends AdminStyle {
             ],
                 ]
         );
-       
+
         $this->add_responsive_control(
                 'sa_ab_ci_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -426,36 +426,7 @@ class Style_6 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
-        $this->add_control(
-                'sa_ab_content_align', $this->style, [
-            'label' => __('Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-SI-6 .oxi-addonsAL-SI-H' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-AL-SI-6 .oxi-addonsAL-SI-DC' => 'text-align: {{VALUE}};',
-            ],
-            'condition' => [
-                'sa_ab_text' => 'yes',
-            ],
-                ]
-        );
+        
         $this->add_control(
                 'sa_ab_content_header', $this->style, [
             'type' => Controls::TEXT,
@@ -511,6 +482,7 @@ class Style_6 extends AdminStyle {
         $this->add_group_control(
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-SI-6 .oxi-addonsAL-SI-H' => ''
             ],
@@ -572,6 +544,7 @@ class Style_6 extends AdminStyle {
         $this->add_group_control(
                 'sa_address_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-SI-6 .oxi-addonsAL-SI-DC' => ''
             ],

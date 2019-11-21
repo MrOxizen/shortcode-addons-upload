@@ -17,9 +17,9 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        
+
         $firsticon = $heading = $details = $contentsection = $lasticon = '';
-        
+
         if (array_key_exists('sa_ab_icon', $style) && $style['sa_ab_icon'] != '0') {
             $firsticon = '<div class="oxi-addonsAL-col-one">
                                         <div class="oxi-addonsAL-F-icon">
@@ -50,7 +50,7 @@ class Style_1 extends Templates {
                                 </div>
                             </div>';
         }
-        echo '<div class="oxi-addons-AL-1" '.$this->animation_render('sa_ab_animation', $style).'>
+        echo '<div class="oxi-addons-AL-1 oxi-addons-AL-1-' . $this->oxiid . '" ' . $this->animation_render('sa_ab_animation', $style) . '>
                         <div class="oxi-addonsAL-row">
                             ' . $firsticon . '
                             ' . $contentsection . '
@@ -58,18 +58,18 @@ class Style_1 extends Templates {
                     </div>
                 </div>';
     }
-    
-    
-      public function inline_public_jquery() {
-        
-         $jquery = 'jQuery(document).ready(function(){
-                jQuery(".oxi-addons-AL-1 .oxi-addonsAL-col-three").click(function(){
-                    jQuery(".oxi-addons-AL-1").hide();
+
+    public function inline_public_jquery() {
+
+        $jquery = 'jQuery(document).ready(function(){
+                jQuery(".oxi-addons-AL-1-' . $this->oxiid . ' .oxi-addonsAL-col-three").click(function(){
+                    jQuery(".oxi-addons-AL-1-' . $this->oxiid . '").hide();
                 });
            
             });';
         return $jquery;
     }
+
     public function old_render() {
         $style = $this->dbdata;
         $oxiid = $style['id'];
@@ -255,7 +255,7 @@ class Style_1 extends Templates {
 
 
         wp_add_inline_style('shortcode-addons-style', $css);
-         wp_add_inline_script('shortcode-addons-jquery', $jquery);
+        wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
 
 }

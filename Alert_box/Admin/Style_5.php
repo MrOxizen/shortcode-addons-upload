@@ -311,7 +311,7 @@ class Style_5 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-click-icon' => 'text-align: {{VALUE}};',
-             ],
+            ],
             'condition' => [
                 'sa_ab_main_icon' => 'yes',
             ],
@@ -579,7 +579,7 @@ class Style_5 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-exclamation-triangle',
-             'selector' => [
+            'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-F-icon' => ''
             ],
             'condition' => [
@@ -820,36 +820,7 @@ class Style_5 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
-        $this->add_control(
-                'sa_ab_content_align', $this->style, [
-            'label' => __('Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'left',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-H' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-DC' => 'text-align: {{VALUE}};',
-            ],
-            'condition' => [
-                'sa_ab_text' => 'yes',
-            ],
-                ]
-        );
+       
         $this->add_control(
                 'sa_ab_content_header', $this->style, [
             'type' => Controls::TEXT,
@@ -902,6 +873,7 @@ class Style_5 extends AdminStyle {
         $this->add_group_control(
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-H' => ''
             ],
