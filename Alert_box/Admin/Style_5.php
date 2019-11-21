@@ -205,7 +205,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Text', SHORTCODE_ADDOONS),
             'default' => 'Click Here',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-click-text' => ''
+            ],
                 ]
         );
         $this->add_group_control(
@@ -321,7 +323,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-mouse-pointer',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-click-icon .oxi-icons' => ''
+            ],
             'condition' => [
                 'sa_ab_main_icon' => 'yes',
             ],
@@ -575,7 +579,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-exclamation-triangle',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-F-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
             ],
@@ -692,7 +698,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-times',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-L-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
             ],
@@ -848,7 +856,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'ERROR',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-H' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -860,7 +870,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Description', SHORTCODE_ADDOONS),
             'placeholder' => __('Description', SHORTCODE_ADDOONS),
             'default' => 'This a Error Message Box, Looks Pretty Slick',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FI-5 .oxi-addonsAL-FI-DC' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],

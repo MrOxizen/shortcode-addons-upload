@@ -160,7 +160,7 @@ class Style_1 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-         $this->start_controls_tabs(
+        $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
                 'normal' => esc_html__('Normal Icon', SHORTCODE_ADDOONS),
@@ -186,7 +186,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-exclamation-triangle',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-1 .oxi-addonsAL-F-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
             ],
@@ -303,7 +305,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-times',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-1 .oxi-addonsAL-L-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
             ],
@@ -400,7 +404,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-         $this->end_controls_tab();
+        $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->end_controls_section();
         $this->end_section_devider();
@@ -468,7 +472,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'ERROR',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-1 .oxi-addonsAL-H' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -480,7 +486,9 @@ class Style_1 extends AdminStyle {
             'label' => __('Description', SHORTCODE_ADDOONS),
             'placeholder' => __('Description', SHORTCODE_ADDOONS),
             'default' => 'This a Error Message Box, Looks Pretty Slick',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-1 .oxi-addonsAL-DC' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
