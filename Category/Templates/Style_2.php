@@ -76,6 +76,7 @@ class Style_2 extends Templates {
         echo '
             </div>
         </div>';
+        echo '</div>';
     }
 
     public function inline_public_css() {
