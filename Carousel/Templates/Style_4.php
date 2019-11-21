@@ -605,7 +605,7 @@ class Style_4 extends Templates
         wp_add_inline_style('owl.carousel', $css);
         wp_add_inline_script('owl.carousel', $jquery);
     }
-    public function OxiAddonscolReplacecarousel1($data)
+    public function OxiAddonscolReplacecarousel4($data)
     {
         if ($data == 'oxi-addons-lg-col-1' || $data == 'oxi-addons-md-col-1' || $data == 'oxi-addons-xs-col-1') {
             $datareturn = '1';
