@@ -47,7 +47,7 @@ class Style_1 extends Templates
     public function inline_public_jquery()
     {
         return 'setTimeout(function () {
-            oxiequalHeight($("' . $this->WRAPPER . ' .oxi_addons__info_boxes_main_style_1"));
+            oxiequalHeight($(".' . $this->WRAPPER . ' .oxi_addons__info_boxes_main_style_1"));
         }, 500)';
     }
 
