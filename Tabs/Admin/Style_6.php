@@ -85,7 +85,7 @@ class Style_6 extends AdminStyle
                     ],
                     'sa_tabs_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXTAREA,
+                        'type' => Controls::WYSIWYG,
                         'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                         'selector' => [
                             '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-body-{{KEY}}' => '',
@@ -314,7 +314,8 @@ class Style_6 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -722,7 +723,8 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -745,7 +747,8 @@ class Style_6 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#499be3',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -761,6 +764,7 @@ class Style_6 extends AdminStyle
                 'default' => '#636363',
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header-two:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -775,6 +779,7 @@ class Style_6 extends AdminStyle
                 'default' => '#636363',
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-6 .sa-addons-header-two.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );

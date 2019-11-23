@@ -56,6 +56,7 @@ class Style_14 extends Templates
         echo '</div>
                 <div class="sa-addons-main-tab-body ">';
         foreach ($all_data  as $key => $value_body) {
+            $icon = '';
             if (array_key_exists('sa_tabs_url_open', $value_body) && $value_body['sa_tabs_url_open'] != '0') :
                 if ($value_body['sa_tabs_url-target'] != 'yes') :
                     $linkopening = ", '_self'";

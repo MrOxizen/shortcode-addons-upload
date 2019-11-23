@@ -85,7 +85,7 @@ class Style_4 extends AdminStyle
                     ],
                     'sa_tabs_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXTAREA,
+                        'type' => Controls::WYSIWYG,
                         'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                         'selector' => [
                             '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-body-{{KEY}}' => '',
@@ -538,6 +538,40 @@ class Style_4 extends AdminStyle
                 ],
             ]
         );
+        $this->add_responsive_control(
+            'sa_tabs_headding_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                Controls::SEPARATOR => TRUE,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => -50,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => -10,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
 
         $this->end_controls_section();
         $this->end_section_devider();
@@ -690,7 +724,8 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -713,7 +748,8 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#1c1c1c',
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -729,6 +765,7 @@ class Style_4 extends AdminStyle
                 'default' => '#575757',
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -743,6 +780,7 @@ class Style_4 extends AdminStyle
                 'default' => '#ff5c5c',
                 'selector' => [
                     '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-header-two.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
