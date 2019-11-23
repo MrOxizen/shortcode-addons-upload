@@ -96,7 +96,7 @@ class Style_11 extends AdminStyle
                     ],
                     'sa_tabs_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXTAREA,
+                        'type' => Controls::WYSIWYG,
                         'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                         'selector' => [
                             '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa-addons-body-{{KEY}}' => '',
@@ -216,7 +216,7 @@ class Style_11 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => -200,
+                        'min' => 200,
                         'max' => 200,
                         'step' => 1,
                     ],
@@ -740,7 +740,8 @@ class Style_11 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-11 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -759,7 +760,7 @@ class Style_11 extends AdminStyle
 
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa_tabs_icon' => 'display: {{VALUE}};'
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-11 .sa_tabs_icon' => 'display: {{VALUE}};',
                 ],
             ]
         );

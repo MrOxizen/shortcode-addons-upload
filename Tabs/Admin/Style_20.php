@@ -84,7 +84,7 @@ class Style_20 extends AdminStyle
                     ],
                     'sa_tabs_content' => [
                         'label' => esc_html__('Content', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXTAREA,
+                        'type' => Controls::WYSIWYG,
                         'default' => 'unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
                         'selector' => [
                             '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-body-{{KEY}}' => '',
@@ -297,7 +297,8 @@ class Style_20 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-main-tab-header' => ''
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-main-tab-header' => '',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header-two' => '',
                 ],
             ]
         );
@@ -678,11 +679,69 @@ class Style_20 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}  .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                    'active' => esc_html__('Active', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_tabs_headding_icon_c',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#ffffff',
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
 
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_tabs_headding_icon_c_h',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#ffffff',
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header-two:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_tabs_headding_icon_c_a',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#ffffff',
+                'selector' => [
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-20 .sa-addons-header-two.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->add_control(
             'sa_tabs_headding_icon_style',
             $this->style,

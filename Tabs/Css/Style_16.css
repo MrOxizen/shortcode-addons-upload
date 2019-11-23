@@ -186,7 +186,7 @@
         border-radius: 10px 10px 10px 10px
     }
     .sa-addons-tabs-main-wrapper-style-16 .sa-addons-main-tab-body {
-        width: 100%;
+        width: 100% !important;
         border: none !important;
         background: transparent
     }
