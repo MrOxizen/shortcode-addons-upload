@@ -9,7 +9,6 @@
     width: 100%;
     float: left;
     border-radius: 0px 0px 0px 0px;
-    box-shadow: 1px 1px 10px 1px rgba(199, 199, 199, 1);
     overflow: hidden
 }
 
@@ -134,7 +133,8 @@
 .oxi-addons-EW-wrapper-style-1 .oxi-addons-EW-C-button-link:active {
     color: #ffffff;
     background-color: rgba(20, 122, 122, 1);
-    border-color: #009448
+    border-color: #009448;
+    cursor: pointer;
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
