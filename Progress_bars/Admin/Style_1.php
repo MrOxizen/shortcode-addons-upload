@@ -128,12 +128,12 @@ class Style_1 extends AdminStyle
             ]
         );
         
-        $this->add_group_control(
-                'sa_image_progress_bar_background', $this->style, [
-            'type' => Controls::BACKGROUND,
+        $this->add_control(
+            'sa_image_progress_bar_background', $this->style, [
+            'type' => Controls::GRADIENT,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-wrapper-style-1' => 'background:{{VALUE}}',
             ]
                 ]
         );

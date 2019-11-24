@@ -73,9 +73,6 @@
 .sa_addons_cta_style_3 .sa_addons_cta_btn:hover {
     color: #0088e3;
     background: rgba(255, 255, 255, 1.00);
-    border-style: solid;
-    border-color: #ffffff;
-    border-radius: 50px 50px 50px 50px
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
@@ -101,9 +98,6 @@
         border-width: 2px 2px 2px 2px;
         border-radius: 50px 50px 50px 50px;
         padding: 15px 25px 15px 25px
-    }
-    .sa_addons_cta_style_3 .sa_addons_cta_btn:hover {
-        border-radius: 50px 50px 50px 50px
     }
 }
 
@@ -131,7 +125,5 @@
         border-radius: 50px 50px 50px 50px;
         padding: 12px 25px 12px 25px
     }
-    .sa_addons_cta_style_3 .sa_addons_cta_btn:hover {
-        border-radius: 50px 50px 50px 50px
-    }
+
 }
