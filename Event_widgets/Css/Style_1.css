@@ -125,7 +125,8 @@
     border-color: #0000bd;
     border-radius: 0px 0px 0px 0px;
     padding: 7px 13px 7px 13px;
-    margin: 15px 0px 0px 0px
+    margin: 15px 0px 0px 0px;
+    cursor: pointer;
 }
 
 .oxi-addons-EW-wrapper-style-1 .oxi-addons-EW-C-button-link:hover,

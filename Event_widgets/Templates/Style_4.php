@@ -45,7 +45,7 @@ class Style_4 extends Templates
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
 
         foreach ($all_data as $key => $listitemdata) {
-            if ($this->media_render('sa_event_t_media', $style) != '') {
+            if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
                 $media = $this->media_render('sa_event_t_media', $listitemdata);
             } else {
 

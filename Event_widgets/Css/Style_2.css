@@ -133,22 +133,17 @@
     text-align : left 
 }
 .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link{
+    cursor: pointer;
     display : inline-block;
-    font-size : 16px;
-    color : #ffffff;
-    background : rgba(15,160,189,1.00);
     font-family : "sans-serif";
     font-weight : 400;
     font-style : normal;
     border : 0px solid #40eb0c;
-    border-radius : 0px 0px 0px 0px;
-    padding : 4px 10px 4px 10px;
-    margin : 0px 0px 0px 2px 
 }
 .oxi-addons-EW-wrapper-style-2 .oxi-addons-EW-2-button-link:hover{
     color : #ffffff;
     background : rgba(10,91,107,1.00);
-    border-Color : #1a1919 
+    border-Color : #1a1919 ;
 }
 @media only screen and (min-width : 669px) and (max-width : 993px){
     .oxi-addons-EW-wrapper-style-2{
