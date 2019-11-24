@@ -27,7 +27,7 @@ class Style_6 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-       
+
 
         $this->add_repeater_control(
                 'sa_oh_repeater', $this->style, [
@@ -38,20 +38,26 @@ class Style_6 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-6 .oxi-addonsOH-SX-child-{{KEY}} .oxi-addonsOH-SX-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_time_text' => [
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-6 .oxi-addonsOH-SX-child-{{KEY}} .oxi-addonsOH-SX-date' => ''
+                    ],
                 ],
                 'sa_oh_icon_cls' => [
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'far fa-clock',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-6 .oxi-addonsOH-SX-child-{{KEY}} .oxi-addonsOH-SX-icon' => ''
+                    ],
                 ],
             ],
             'title_field' => 'sa_oh_day_text',
@@ -69,7 +75,7 @@ class Style_6 extends AdminStyle {
             'showing' => FALSE,
                 ]
         );
-         $this->add_group_control(
+        $this->add_group_control(
                 'sa_oh_conter_br', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
@@ -86,7 +92,7 @@ class Style_6 extends AdminStyle {
             ]
                 ]
         );
-       
+
         $this->start_controls_tab();
         $this->add_responsive_control(
                 'sa_oh_icon_size', $this->style, [

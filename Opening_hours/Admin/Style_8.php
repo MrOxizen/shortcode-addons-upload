@@ -50,7 +50,9 @@ class Style_8 extends AdminStyle {
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'far fa-clock',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-icon' => ''
+                    ],
                 ],
                 'sa_oh_icon_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
@@ -70,7 +72,9 @@ class Style_8 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday to Saturday',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -90,7 +94,9 @@ class Style_8 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),

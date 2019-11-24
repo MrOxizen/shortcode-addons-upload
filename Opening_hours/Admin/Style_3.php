@@ -52,20 +52,26 @@ class Style_3 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-TH-wrapper-3.oxi-addonsOH-TH-wrapper-3-{{KEY}} .oxi-addonsOH-TH-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_time_text' => [
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-TH-wrapper-3.oxi-addonsOH-TH-wrapper-3-{{KEY}} .oxi-addonsOH-TH-date' => ''
+                    ],
                 ],
                 'sa_oh_icon_cls' => [
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'far fa-clock',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-TH-wrapper-3.oxi-addonsOH-TH-wrapper-3-{{KEY}} .oxi-addonsOH-TH-icon' => ''
+                    ],
                 ],
             ],
             'title_field' => 'sa_oh_day_text',

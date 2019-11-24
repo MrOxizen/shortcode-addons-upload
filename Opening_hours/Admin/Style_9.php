@@ -178,7 +178,9 @@ class Style_9 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Header', SHORTCODE_ADDOONS),
             'default' => 'RESERVATIONS',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-header' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -186,7 +188,9 @@ class Style_9 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Sub Header', SHORTCODE_ADDOONS),
             'default' => 'Opening Hours',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-subheader' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -194,7 +198,9 @@ class Style_9 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Footer', SHORTCODE_ADDOONS),
             'default' => 'Book your table now',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-footertext' => ''
+            ],
                 ]
         );
         $this->start_controls_tabs(
@@ -444,7 +450,9 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday to Saturday',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -464,7 +472,9 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
@@ -658,14 +668,15 @@ class Style_9 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-button-link' => ''
+            ],
                 ]
         );
         $this->add_group_control(
                 'sa_oh_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
-                ]
+               ]
         );
         $this->add_control(
                 'sa_oh_btn_position', $this->style, [

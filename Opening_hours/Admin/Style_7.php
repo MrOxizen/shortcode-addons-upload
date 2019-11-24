@@ -70,7 +70,9 @@ class Style_7 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Title', SHORTCODE_ADDOONS),
                     'default' => 'Opening Hours',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SV-wrapper-7.oxi-addonsOH-SV-wrapper-7-{{KEY}} .oxi-addonsOH-SV-title' => ''
+                    ],
                 ],
                 'sa_oh_title_color' => [
                     'label' => __('Title Color', SHORTCODE_ADDOONS),
@@ -91,7 +93,9 @@ class Style_7 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SV-wrapper-7.oxi-addonsOH-SV-wrapper-7-{{KEY}} .oxi-addonsOH-SV-heading' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -111,7 +115,9 @@ class Style_7 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SV-wrapper-7.oxi-addonsOH-SV-wrapper-7-{{KEY}} .oxi-addonsOH-SV-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
