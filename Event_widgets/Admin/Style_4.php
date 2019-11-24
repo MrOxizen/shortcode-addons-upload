@@ -245,7 +245,7 @@ class Style_4 extends AdminStyle {
                 'sa_event_widgets_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .shortcode-addons-wrapper-179 .oxi-addons-EV-style-4 .oxi-addons-EV-row' => ''
+                '{{WRAPPER}} .oxi-addons-EV-style-4 .oxi-addons-EV-row' => ''
             ],
                 ]
         );
