@@ -58,6 +58,13 @@ class Style_2 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2.oxi-addonsOH-T-wrapper-2-{{KEY}} .oxi-addonsOH-T-row' => ''
                     ],
                 ],
+                'sa_oh_br' => [
+                    'type' => Controls::BORDER,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2.oxi-addonsOH-T-wrapper-2-{{KEY}} .oxi-addonsOH-T-row' => ''
+                    ],
+                ],
                 'sa_oh_start_tabs' => [
                     'controller' => 'start_controls_tabs',
                     'options' => [
@@ -141,7 +148,7 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-
+       
 
         $this->end_controls_section();
 
@@ -187,14 +194,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_oh_br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2 .oxi-addonsOH-T-row' => ''
-            ],
-                ]
-        );
+        
 
         $this->add_responsive_control(
                 'sa_oh_br_radius', $this->style, [
