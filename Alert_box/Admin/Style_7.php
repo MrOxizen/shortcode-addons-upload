@@ -456,7 +456,7 @@ class Style_7 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_header_tx_shadow', $this->style, [
+                'sa_icon_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons' => ''
