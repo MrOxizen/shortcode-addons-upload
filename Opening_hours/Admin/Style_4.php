@@ -58,6 +58,21 @@ class Style_4 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-row' => ''
                     ],
                 ],
+                'sa_oh_br' => [
+                    'type' => Controls::BORDER,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-row' => ''
+                    ],
+                ],
+                'sa_oh_box_shadow' => [
+                    'type' => Controls::BOXSHADOW,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-row' => ''
+                    ],
+                ],
+             
                 'sa_oh_start_tabs' => [
                     'controller' => 'start_controls_tabs',
                     'options' => [
@@ -201,14 +216,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_oh_br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4 .oxi-addonsOH-F-row' => ''
-            ],
-                ]
-        );
+
 
         $this->add_responsive_control(
                 'sa_oh_br_radius', $this->style, [
@@ -240,14 +248,7 @@ class Style_4 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4 .oxi-addonsOH-F-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
-        $this->add_group_control(
-                'sa_oh_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4 .oxi-addonsOH-F-row' => ''
-            ],
-                ]
-        );
+       
 
         $this->add_group_control(
                 'sa_oh_animation', $this->style, [
@@ -486,7 +487,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_oh_day_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -539,7 +540,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_oh_time_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
