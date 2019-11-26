@@ -113,7 +113,7 @@ class Style_8 extends Templates {
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
 
-            echo '<div class="sa_button_effect_temp_8   sa_o_f_m   sa_button_effect_temp_8_' . $key . '   "  ' . $this->animation_render('sa-be-main-box-animation', $style) . '>';
+            echo '<div class="oxi_addons_button_effect_style_8   sa_o_f_m   oxi_addons_button_effect_style_8_' . $key . '   "  ' . $this->animation_render('sa-be-main-box-animation', $style) . '>';
             echo '  <div class="oxi-button-hover-map">
                         <div class="oxi-button-hover-map-body ' . $style['sa_effects_select_icon'] . '">
                             <div class="oxi-button-hover">
