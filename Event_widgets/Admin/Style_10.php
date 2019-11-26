@@ -116,11 +116,11 @@ class Style_10 extends AdminStyle {
                 ],
                 'sa_event_widgets_overly_color' => [
                     'label' => __('Overly Background', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'oparetor' => 'RGB',
+                    'type' => Controls::BACKGROUND,
                     'default' => 'rgba(5, 5, 5, 0.76)',
+                    'controller' => 'add_group_control',
                     'selector' => [
-                        '{{WRAPPER}}  .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-10-IM-O' => 'background : {{VALUE}}; '
+                        '{{WRAPPER}}  .oxi-addons-EW-10-wrapper-style-10.oxi-addons-EW-10-wrapper-style-10-{{KEY}} .oxi-addons-EW-10-IM-O' => '',
                     ],
                 ],
                 'sa_event_widgets_border' => [
