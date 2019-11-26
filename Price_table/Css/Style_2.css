@@ -151,7 +151,7 @@
     align-items: center;
 }
 
-.oxi-addons-parent-wrapper-style-2   .oxi-addons-link {
+.oxi-addons-parent-wrapper-style-2 .oxi-addons-link {
     font-size: 16px;
     color: #ffffff;
     background: rgba(20, 145, 199, 1); 
@@ -166,7 +166,7 @@
     cursor: pointer;
 }
 
-.oxi-addons-parent-wrapper-style-2 .oxi-addons-button .oxi-addons-link:hover {
+.oxi-addons-parent-wrapper-style-2 .oxi-addons-link:hover {
     color: #ffffff;
     background: rgba(23, 128, 163, 1.00);
     border-color: #cccccc;
