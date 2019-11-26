@@ -1009,6 +1009,8 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-main-button .oxi-addons-link' => ' ',
                 ],

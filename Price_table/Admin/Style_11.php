@@ -1416,6 +1416,7 @@ class Style_11 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-11 .oxi-addons-link' => ' ',
                 ],

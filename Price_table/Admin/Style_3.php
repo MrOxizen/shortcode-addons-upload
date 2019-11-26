@@ -1249,6 +1249,7 @@ class Style_3 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .oxi-addons-link' => ' ',
                 ],
