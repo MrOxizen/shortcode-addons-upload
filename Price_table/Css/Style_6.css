@@ -15,7 +15,7 @@
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 7px 15px -6px rgba(18, 18, 18, 0.49); 
     transform: scale(1);
-    transition: all .5s !important;
+    transition: all .5s;
     cursor: pointer;
     max-width: 250px
 }

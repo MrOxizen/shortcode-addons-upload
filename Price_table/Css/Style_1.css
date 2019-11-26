@@ -18,13 +18,13 @@
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 5px 10px 0px rgba(219, 219, 219, 1);
     transform: scale(1);
-    transition: all .5s !important;
+    transition: all .5s ;
     cursor: pointer;
     max-width: 250px;
-    -webkit-transition: all .5s !important;
-    -moz-transition: all .5s !important;
-    -ms-transition: all .5s !important;
-    -o-transition: all .5s !important;
+    -webkit-transition: all .5s ;
+    -moz-transition: all .5s ;
+    -ms-transition: all .5s ;
+    -o-transition: all .5s ;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -ms-border-radius: 10px 10px 10px 10px;
@@ -205,14 +205,14 @@
 }
 @media only screen and (min-width:669px) and (max-width:993px) {
     .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon {
-        right: -69px !important;
-        top: -9px !important
+        right: -69px ;
+        top: -9px 
     }
 }
 
 @media only screen and (max-width:668px) {
     .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon {
-        right: -78px !important;
-        top: -4px !important
+        right: -78px ;
+        top: -4px 
     }
 }
