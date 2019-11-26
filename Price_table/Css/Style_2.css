@@ -23,7 +23,7 @@
     max-width: 250px
 }
 
-.oxi-addons-parent-wrapper-style-2:hover {
+.oxi-addons-parent-wrapper-style-2 .oxi-addons-wrapper-style-2:hover {
     transform: scale(1) translateY(-10px)
 }
 
