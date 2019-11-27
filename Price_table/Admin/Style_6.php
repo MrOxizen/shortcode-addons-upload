@@ -381,7 +381,7 @@ class Style_6 extends AdminStyle
                 'default' => 'rgba(255,255,255,0.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-feature' => 'background: {{VALUE}};'
                 ],
             ]
         );
@@ -392,7 +392,7 @@ class Style_6 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-feature' => ''
                 ],
             ]
         );

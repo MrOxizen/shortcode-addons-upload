@@ -413,7 +413,7 @@ class Style_2 extends AdminStyle
                 'default' => 'rgba(255,255,255,0.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-main-feature' => 'background: {{VALUE}};'
                 ],
             ]
         );
@@ -489,7 +489,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
