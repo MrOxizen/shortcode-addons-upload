@@ -1,11 +1,11 @@
-.oxi-addons-flip-box-style-4 * {
+.oxi-addons-flip-box-style-9 * {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     text-decoration: none
 }
 
-.oxi-addons-flip-box-style-4 {
+.oxi-addons-flip-box-style-9 {
     max-width: 280px;
     height: 300px;
     width: 100%;
@@ -15,20 +15,20 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-boxes-body:after {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-boxes-body:after {
     padding-bottom: 107.14285714286%;
     content: "";
     display: block
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-section-box {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section-box {
     width: 100%;
     height: 100%;
     float: left;
     padding: 5px 5px 5px 5px
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-section {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section {
     width: 100%;
     height: 100%;
     display: flex;
@@ -49,7 +49,7 @@
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@
     
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon .oxi-icons {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon .oxi-icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@
     border-radius: 50px 50px 50px 50px
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-headding {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-headding {
     width: 100%;
     font-size: 20px;
     color: #333333;
@@ -88,14 +88,14 @@
 }
 
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-section-box {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section-box {
     width: 100%;
     height: 100%;
     float: left;
     padding: 5px 5px 5px 5px
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-section {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section {
     width: 100%;
     height: 100%;
     display: flex;
@@ -112,7 +112,7 @@
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.28);
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-headding {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-headding {
     width: 100%;
     font-size: 20px;
     color: #333333;
@@ -125,7 +125,7 @@
     padding: 20px 10px 20px 10px
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-info {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-info {
     width: 100%;
     font-size: 16px;
     color: #888888;
@@ -138,14 +138,14 @@
     padding: 0px 10px 10px 10px
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button {
     width: 100%;
     float: left;
     text-align: center;
     padding: 20px 20px 0px 20px
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button-data {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data {
     display: inline-block;
     font-size: 14px;
     color: #ffffff;
@@ -163,7 +163,7 @@
     padding: 10px 20px 10px 20px
 }
 
-.oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button-data:hover {
+.oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data:hover {
     color: #ffffff;
     background: rgba(102, 81, 237, 1);
     border-style: solid;
@@ -172,26 +172,26 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-flip-box-style-4 {
+    .oxi-addons-flip-box-style-9 {
         max-width: 280px;
         height: 300px;
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-boxes-body:after {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-boxes-body:after {
         padding-bottom: 107.14285714286%
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-section-box {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section-box {
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-section {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section {
         border-width: 2px 2px 2px 2px;
         border-radius: 5px 5px 5px 5px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon {
         padding: 20px 10px 20px 10px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon .oxi-icons {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon .oxi-icons {
         font-size: 20px;
         width: 60px;
         height: 60px;
@@ -199,62 +199,62 @@
         border-width: 1px 1px 1px 1px;
         border-radius: 50px 50px 50px 50px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-headding {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-headding {
         font-size: 20px;
         padding: 10px 10px 10px 10px
     }
 
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-section-box {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section-box {
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-section {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section {
         border-width: 2px 2px 2px 2px;
         border-radius: 5px 5px 5px 5px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-headding {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-headding {
         font-size: 20px;
         padding: 20px 10px 20px 10px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-info {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-info {
         font-size: 16px;
         padding: 0px 10px 10px 10px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button {
         padding: 20px 20px 0px 20px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button-data {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data {
         font-size: 14px;
         border-width: 1px 1px 1px 1px;
         border-radius: 40px 40px 40px 40px;
         padding: 10px 20px 10px 20px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button-data:hover {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data:hover {
         border-radius: 40px 40px 40px 40px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-flip-box-style-4 {
+    .oxi-addons-flip-box-style-9 {
         max-width: 280px;
         height: 300px;
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-boxes-body:after {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-boxes-body:after {
         padding-bottom: 107.14285714286%
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-section-box {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section-box {
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-section {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section {
         border-width: 2px 2px 2px 2px;
         border-radius: 5px 5px 5px 5px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon {
         padding: 20px 10px 20px 10px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon .oxi-icons {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon .oxi-icons {
         font-size: 20px;
         width: 60px;
         height: 60px;
@@ -262,37 +262,37 @@
         border-width: 1px 1px 1px 1px;
         border-radius: 50px 50px 50px 50px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-headding {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-headding {
         font-size: 20px;
         padding: 10px 10px 10px 10px
     }
 
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-section-box {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section-box {
         padding: 5px 5px 5px 5px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-section {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section {
         border-width: 2px 2px 2px 2px;
         border-radius: 5px 5px 5px 5px;
         padding: 0px 0px 0px 0px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-headding {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-headding {
         font-size: 20px;
         padding: 20px 10px 20px 10px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-info {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-info {
         font-size: 16px;
         padding: 0px 10px 10px 10px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button {
         padding: 20px 20px 0px 20px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button-data {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data {
         font-size: 14px;
         border-width: 1px 1px 1px 1px;
         border-radius: 40px 40px 40px 40px;
         padding: 10px 20px 10px 20px
     }
-    .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-back-button-data:hover {
+    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data:hover {
         border-radius: 40px 40px 40px 40px
     }
 }
