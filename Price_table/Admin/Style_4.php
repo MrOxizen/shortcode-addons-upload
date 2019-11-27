@@ -581,6 +581,18 @@ class Style_4 extends AdminStyle
                 ],
             ]
         );
+        
+         $this->add_group_control(
+            'sa_price_table_box_box_sadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-addons-price-box' => ''
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_price_table_price_box_padding',
             $this->style,

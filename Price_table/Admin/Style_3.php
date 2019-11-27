@@ -491,8 +491,18 @@ class Style_3 extends AdminStyle
                 ],
             ]
         );
-
-
+        $this->add_control(
+            'sa_price_table_title_bg_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .oxi-addons-price-title' => 'background: {{VALUE}};'
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_price_table_title_padding',
             $this->style,
@@ -577,7 +587,18 @@ class Style_3 extends AdminStyle
                 ],
             ]
         );
-
+        $this->add_control(
+            'sa_price_table_subtitle_bg_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .oxi-addons-price-subtitle' => 'background: {{VALUE}};'
+                ],
+            ]
+        );
 
         $this->add_responsive_control(
             'sa_price_table_sub_title_padding',
@@ -644,7 +665,18 @@ class Style_3 extends AdminStyle
                 ],
             ]
         );
-
+        $this->add_control(
+            'sa_price_table_details_bg_color',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-3 .oxi-addons-price-short-details' => 'background: {{VALUE}};'
+                ],
+            ]
+        );
 
         $this->add_responsive_control(
             'sa_price_table_details_padding',
