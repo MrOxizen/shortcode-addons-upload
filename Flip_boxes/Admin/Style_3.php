@@ -74,13 +74,13 @@ class Style_3 extends AdminStyle {
                 'sa_flip_boxes_icon' => [
                     'label' => __('Icon', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'fas fa-camera',
+                    'default' => 'fab fa-twitter',
                 ],
                 'sa_flip_boxes_heading' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
-                    'default' => 'Heading',
-                    'placeholder' => 'Heading',
+                    'default' => 'Vokalia',
+                    'placeholder' => 'Vokalia',
                 ],
                 'sa_flip_boxes_font_description' => [
                     'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
@@ -190,7 +190,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 450,
+                'size' => 280,
             ],
             'range' => [
                 'px' => [
@@ -198,10 +198,10 @@ class Style_3 extends AdminStyle {
                     'max' => 2000,
                     'step' => 1,
                 ],
-                'em' => [
+                '%' => [
                     'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'rem' => [
                     'min' => 1,
@@ -220,7 +220,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
@@ -230,7 +230,7 @@ class Style_3 extends AdminStyle {
                 ],
                 '%' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
             ],
@@ -247,22 +247,22 @@ class Style_3 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 0,
                     'max' => 100,
-                    'step' => .1,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 20,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -281,22 +281,22 @@ class Style_3 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 0,
                     'max' => 100,
-                    'step' => .1,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 20,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -387,7 +387,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -402,7 +402,7 @@ class Style_3 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -424,18 +424,18 @@ class Style_3 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 200,
+                'size' => 30,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 1000,
                     'step' => 1,
                 ],
-                'em' => [
+                '%' => [
                     'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'rem' => [
                     'min' => 1,
@@ -454,12 +454,12 @@ class Style_3 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => 50,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 300,
                     'step' => 1,
                 ],
             ],
@@ -481,7 +481,7 @@ class Style_3 extends AdminStyle {
                 'sa-flip-boxex-front-icon-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#008099',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-front-icon .oxi-icons' => 'color: {{VALUE}};',
             ]
@@ -502,22 +502,22 @@ class Style_3 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'min' => 1,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -541,7 +541,7 @@ class Style_3 extends AdminStyle {
                 'sa-flip-box-front-heading-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#525252',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-front-headding' => 'color: {{VALUE}};',
             ]
@@ -550,6 +550,7 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-front-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-front-headding' => '',
             ]
@@ -563,53 +564,29 @@ class Style_3 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-flip-box-front-heading_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-front-headding' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa-flip-box-front-heading-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'min' => 1,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -639,6 +616,7 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-front-info-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-front-info' => '',
             ]
@@ -652,53 +630,29 @@ class Style_3 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-flip-box-front-info_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-front-info' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa-flip-box-front-info-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'min' => 1,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -752,7 +706,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -794,7 +748,7 @@ class Style_3 extends AdminStyle {
                 'sa-flip-box-back-short-description-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-back-info' => 'color: {{VALUE}};',
             ]
@@ -803,6 +757,7 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-back-short-description-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-back-info' => '',
             ]
@@ -816,53 +771,29 @@ class Style_3 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-flip-box-back-short-description_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-3 .oxi-addons-flip-box-back-info' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa-flip-box-back-short-description-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'min' => 1,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -876,62 +807,5 @@ class Style_3 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-//    public function modal_opener() {
-//        $this->add_substitute_control('', [], [
-//            'type' => Controls::MODALOPENER,
-//            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
-//            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
-//            'showing' => TRUE,
-//        ]);
-//    }
-//
-//    public function modal_form_data() {
-//        echo '<div class="modal-header">                    
-//                    <h4 class="modal-title">Image Boxes Form</h4>
-//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-//                </div>
-//                <div class="modal-body">';
-//        $this->add_control(
-//                'sa_image_boxes_heading', $this->style, [
-//            'label' => __('Title', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Heading',
-//            'placeholder' => 'Heading',
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_s_description', $this->style, [
-//            'label' => __('Short Description', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Lorem ipsum dolor sit amet',
-//            'placeholder' => 'Lorem ipsum dolor sit amet',
-//                ]
-//        );
-//        $this->add_group_control(
-//                'sa_image_boxes_media', $this->style, [
-//            'label' => __('URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::MEDIA,
-//            'default' => [
-//                'type' => 'media-library',
-//                'link' => '#asdas',
-//            ]
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_button', $this->style, [
-//            'label' => __('Button Text', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Learn More',
-//                ]
-//        );
-//        $this->add_group_control(
-//                'sa_image_boxes_button_url', $this->style, [
-//            'label' => __('URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::URL,
-//            'default' => '',
-//            'placeholder' => 'https://www.yoururl.com',
-//                ]
-//        );
-//        echo '</div>';
-//    }
+
 }

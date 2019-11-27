@@ -41,7 +41,6 @@
     left: 0;
     top: 0;
     z-index: 1;
-    opacity: 0;
     content: "";
     background: rgba(128, 109, 109, 0.44);
     transition: all 0.35s;
@@ -51,9 +50,6 @@
     -o-transition: all 0.35s;
 }
 
-.oxi-addons-parent-wrapper-style-1:hover .oxi-addons-image-overlay::after {
-    opacity: 1
-}
 
 .oxi-addons-parent-wrapper-style-1 .oxi-addons-image-overlay::before {
     content: "";

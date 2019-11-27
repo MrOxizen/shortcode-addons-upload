@@ -60,20 +60,18 @@ class Style_1 extends AdminStyle {
                 ],
                 'sa_product_boxes_image_overlay' => [
                     'label' => __('Overlay Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'oparetor' => 'RGB',
-                    'default' => '#757575',
+                    'type' => Controls::GRADIENT,
+                    'default' => 'rgba(77, 77, 77, 0.51)',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-heading-one' => 'color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-image-overlay::after' => 'background:{{VALUE}};'
                     ],
                 ],
                 'sa_product_boxes_image_hover_overlay' => [
                     'label' => __('Hover Overlay Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'oparetor' => 'RGB',
-                    'default' => '#757575',
+                    'type' => Controls::GRADIENT,
+                    'default' => 'rgba(61, 230, 9, 0.54)',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-heading-one' => 'color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-image-overlay:hover::after' => 'background:{{VALUE}};'
                     ],
                 ],
                 'sa_product_boxes_heading_one' => [
@@ -138,16 +136,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-
-        $this->add_group_control(
-                'sa_product_boxes_bg_color', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'separator' => TRUE,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-image-overlay::after' => 'background: {{VALUE}};'
-            ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa_product_boxes_bg_color_width', $this->style, [
             'label' => __('Max  Width', SHORTCODE_ADDOONS),

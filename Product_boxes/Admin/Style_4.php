@@ -54,6 +54,7 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS), 
                 'title_field' => 'sa_product_boxes_title',
+                 'type' => Controls::REPEATER,
                 'fields' => [ 
                     'sa_product_boxes_image' => [
                         'type' => Controls::MEDIA,

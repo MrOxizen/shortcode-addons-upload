@@ -54,6 +54,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS), 
                 'title_field' => 'sa_product_boxes_title',
+                 'type' => Controls::REPEATER,
                 'fields' => [ 
                     'sa_product_boxes_front_image' => [
                         'type' => Controls::MEDIA,
@@ -149,7 +150,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::BACKGROUND,
                 'separator' => TRUE,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-image-overlay::after' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-2 .oxi-addons-main-content' => 'background: {{VALUE}};'
                 ],
             ]
         );
