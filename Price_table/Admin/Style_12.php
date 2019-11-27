@@ -325,7 +325,7 @@ class Style_12 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [

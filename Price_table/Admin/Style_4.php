@@ -294,7 +294,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -1164,7 +1164,7 @@ class Style_4 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -1611,8 +1611,8 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Button Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Click ME',
-                'placeholder' => 'Click ME',
+                'default' => 'Buy Now',
+                'placeholder' => 'Buy Now',
             ]
         );
         $this->add_group_control(

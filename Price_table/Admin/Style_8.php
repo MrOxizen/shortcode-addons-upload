@@ -79,7 +79,7 @@ class Style_8 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 600,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [

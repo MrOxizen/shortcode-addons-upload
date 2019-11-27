@@ -79,7 +79,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 300,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -325,7 +325,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
