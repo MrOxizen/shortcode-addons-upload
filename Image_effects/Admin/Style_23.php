@@ -247,7 +247,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -291,7 +291,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -331,7 +331,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -361,7 +361,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -461,7 +461,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -551,7 +551,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -645,7 +645,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -716,7 +716,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -788,7 +788,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -818,7 +818,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
