@@ -45,7 +45,6 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    ;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
 }
 
@@ -108,7 +107,6 @@
     border-radius: 5px 5px 5px 5px;
     padding: 0px 0px 0px 0px;
     background: rgba(250, 250, 250, 1);
-    ;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.28);
 }
 
@@ -171,128 +169,3 @@
     border-radius: 40px 40px 40px 40px
 }
 
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-flip-box-style-9 {
-        max-width: 280px;
-        height: 300px;
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-boxes-body:after {
-        padding-bottom: 107.14285714286%
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section {
-        border-width: 2px 2px 2px 2px;
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon {
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon .oxi-icons {
-        font-size: 20px;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        border-width: 1px 1px 1px 1px;
-        border-radius: 50px 50px 50px 50px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-headding {
-        font-size: 20px;
-        padding: 10px 10px 10px 10px
-    }
-
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section {
-        border-width: 2px 2px 2px 2px;
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-headding {
-        font-size: 20px;
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-info {
-        font-size: 16px;
-        padding: 0px 10px 10px 10px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button {
-        padding: 20px 20px 0px 20px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data {
-        font-size: 14px;
-        border-width: 1px 1px 1px 1px;
-        border-radius: 40px 40px 40px 40px;
-        padding: 10px 20px 10px 20px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data:hover {
-        border-radius: 40px 40px 40px 40px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-addons-flip-box-style-9 {
-        max-width: 280px;
-        height: 300px;
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-boxes-body:after {
-        padding-bottom: 107.14285714286%
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-section {
-        border-width: 2px 2px 2px 2px;
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon {
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-icon .oxi-icons {
-        font-size: 20px;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        border-width: 1px 1px 1px 1px;
-        border-radius: 50px 50px 50px 50px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-front-headding {
-        font-size: 20px;
-        padding: 10px 10px 10px 10px
-    }
-
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-section {
-        border-width: 2px 2px 2px 2px;
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-headding {
-        font-size: 20px;
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-info {
-        font-size: 16px;
-        padding: 0px 10px 10px 10px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button {
-        padding: 20px 20px 0px 20px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data {
-        font-size: 14px;
-        border-width: 1px 1px 1px 1px;
-        border-radius: 40px 40px 40px 40px;
-        padding: 10px 20px 10px 20px
-    }
-    .oxi-addons-flip-box-style-9 .oxi-addons-flip-box-back-button-data:hover {
-        border-radius: 40px 40px 40px 40px
-    }
-}

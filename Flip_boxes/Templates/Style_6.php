@@ -41,7 +41,7 @@ class Style_6 extends Templates {
                 $endlink .= '</a>';
             }
             echo ' '.$startlink.' <div class="oxi-flip-box-col-style-6 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
-                        <div class="oxi-addons-flip-box-style-6">
+                        <div class="oxi-addons-flip-box-style-6 oxi-addons-flip-box-style-6-'.$key.'">
                             <div class="oxi-addons-flip-boxes-body"  ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">
                                     <div class="oxi-addons-flip-box-flip ' . $styledata['sa-ac-flip_boxes_flip_direction'] . '">

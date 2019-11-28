@@ -324,8 +324,8 @@ class Style_1 extends AdminStyle {
                 'sa-flip-boxes-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-front-style-1' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-back-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-1 .oxi-addons-flip-box-front-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-1 .oxi-addons-flip-box-back-style-1' => '',
             ]
                 ]
         );
@@ -335,8 +335,8 @@ class Style_1 extends AdminStyle {
                 'sa-flip-boxes-hover-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-front-style-1:hover' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-back-style-1:hover' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-1 .oxi-addons-flip-box-front-style-1:hover' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-1 .oxi-addons-flip-box-back-style-1:hover' => '',
             ]
                 ]
         );
