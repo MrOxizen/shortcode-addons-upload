@@ -597,7 +597,7 @@ class Style_6 extends AdminStyle
             'sa_price_table_price_box_padding',
             $this->style,
             [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'label' => __('Margin', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
@@ -621,7 +621,7 @@ class Style_6 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-price-box' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-price-position' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

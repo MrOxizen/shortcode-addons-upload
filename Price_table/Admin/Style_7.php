@@ -493,7 +493,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-addons-main-icon' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-icon' => 'justify-content: {{VALUE}};'
                 ],
             ]
         );
@@ -526,7 +526,7 @@ class Style_7 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -538,7 +538,7 @@ class Style_7 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => ' #ffdd33',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-6 .oxi-icons' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-icons' => 'color:{{VALUE}};'
                 ],
             ]
         );
