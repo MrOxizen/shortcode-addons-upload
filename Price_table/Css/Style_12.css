@@ -32,7 +32,7 @@
     padding: 0 0 15px 0; 
 }
 
-.oxi-addons-parent-wrapper-style-12:hover .oxi-addons-parent {
+.oxi-addons-parent-wrapper-style-12 .oxi-addons-parent:hover {
     transform: scale(1) translateY(-10px)
 }
 .oxi-addons-parent-wrapper-style-12 .oxi-addons-title {

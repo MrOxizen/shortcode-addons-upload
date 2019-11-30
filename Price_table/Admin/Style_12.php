@@ -99,7 +99,7 @@ class Style_12 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_price_table_button_border',
+            'sa_price_table__border',
             $this->style,
             [
                 'type' => Controls::BORDER,
@@ -204,7 +204,7 @@ class Style_12 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12:hover .oxi-addons-parent' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12 .oxi-addons-parent:hover' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
                 ],
             ]
         );
@@ -226,7 +226,7 @@ class Style_12 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12:hover .oxi-addons-parent' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12 .oxi-addons-parent:hover' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
                 ],
             ]
         );
