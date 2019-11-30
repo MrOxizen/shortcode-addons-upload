@@ -91,18 +91,20 @@ class Style_8 extends AdminStyle {
                     'type' => Controls::ICON,
                     'default' => 'fab fa-twitter',
                 ],
-                'sa_flip_boxes_body_link' => [
-                    'label' => __('URL', SHORTCODE_ADDOONS),
-                    'type' => Controls::URL,
-                    'controller' => 'add_group_control',
-                    'default' => '',
-                    'placeholder' => 'https://www.yoururl.com',
-                ],
+                
                 'shortcode-addons-start-tab2-end' => [
                     'controller' => 'end_controls_tab',
                 ],
                 'shortcode-addons-end-flip-box-tabs' => [
                     'controller' => 'end_controls_tabs',
+                ],
+                'sa_flip_boxes_body_link' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'separator' => true,
+                    'type' => Controls::URL,
+                    'controller' => 'add_group_control',
+                    'default' => '',
+                    'placeholder' => 'https://www.yoururl.com',
                 ],
             ],
             'title_field' => 'sa_flip_boxes_heading',

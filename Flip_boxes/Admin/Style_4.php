@@ -436,12 +436,12 @@ class Style_4 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 25,
+                'size' => 60,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 300,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
@@ -535,6 +535,36 @@ class Style_4 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon .oxi-icons' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+        $this->add_responsive_control(
+                'sa-flip-boxes-front-icon-margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-flip-box-style-4 .oxi-addons-flip-box-front-icon' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );

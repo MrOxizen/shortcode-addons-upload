@@ -105,6 +105,14 @@ class Style_10 extends AdminStyle {
                 'shortcode-addons-end-flip-box-tabs' => [
                     'controller' => 'end_controls_tabs',
                 ],
+                 'sa_flip_boxes_button_link' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'type' => Controls::URL,
+                    'separator' => true,
+                    'controller' => 'add_group_control',
+                    'default' => '',
+                    'placeholder' => 'https://www.yoururl.com',
+                ],
             ],
             'title_field' => 'sa_flip_boxes_heading',
                 ]
@@ -521,6 +529,36 @@ class Style_10 extends AdminStyle {
             ]
                 ]
         );
+        $this->add_responsive_control(
+                'sa-flip-boxes-front-icon-margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-flip-box-style-10 .oxi-addons-flip-box-front-icon' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
 
         $this->end_controls_section();
         $this->end_section_devider();
@@ -776,6 +814,36 @@ class Style_10 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-10 .oxi-addons-flip-box-back-icon .oxi-icons' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+        $this->add_responsive_control(
+                'sa-flip-boxes-back-icon-margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-flip-box-style-10 .oxi-addons-flip-box-back-icon' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
