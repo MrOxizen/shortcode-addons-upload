@@ -136,7 +136,7 @@ class Style_12 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12 .oxi-addons-wrapper-style-12' => 'transform: scale({{SIZE}});'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12 .oxi-addons-parent' => 'transform: scale({{SIZE}});'
                 ],
             ]
         );
@@ -204,7 +204,7 @@ class Style_12 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12 .oxi-addons-wrapper-style-12:hover' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12:hover .oxi-addons-parent' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
                 ],
             ]
         );
@@ -226,7 +226,7 @@ class Style_12 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12 .oxi-addons-wrapper-style-12:hover' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-12:hover .oxi-addons-parent' => 'transform: scale({{sa_price_table_hover_scale.SIZE}}) translateY({{sa_price_table_hover_position.SIZE}}px);'
                 ],
             ]
         );
