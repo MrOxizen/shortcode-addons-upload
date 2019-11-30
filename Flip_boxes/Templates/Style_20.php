@@ -22,7 +22,7 @@ class Style_20 extends Templates {
         
         $styledata = $this->style;
         foreach ($styledata['sa_flip_boxes_data_style_1'] as $key => $value) {
-            $icon = $image = $backinfo = $heading = $button = $img_icon = '';
+            $icon = $image = $backinfo = $heading = $button = $img_icon = $bt = $bc = '';
             if ($this->media_render('sa_flip_boxes_media', $value) != '') {
                 $image = ' <img src="' . $this->media_render('sa_flip_boxes_media', $value) . '">';
             }
@@ -46,6 +46,9 @@ class Style_20 extends Templates {
                             </div>
                         </div>
                     </a> ';
+            }elseif($value['sa_flip_boxes_button_text'] == '' && $this->url_render('sa_flip_boxes_button_link', $value) != ''){
+                $bt = '<a '.$this->url_render('sa_flip_boxes_button_link', $value).'">';
+                $bc = '</a>';
             }
             if ($value['sa_flip_boxes_description'] != '') {
                 $backinfo = '   <div class="oxi-addons-flip-box-back-info">
@@ -54,6 +57,7 @@ class Style_20 extends Templates {
             }
             echo'<div class="oxi-flip-box-col-20 ' . $this->column_render('sa-flip-boxes-col', $style) . ' " >
                         <div class="oxi-addons-flip-box-style-20">
+                        '.$bt.'
                             <div class="oxi-addons-flip-boxes-body" ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">
                                     <div class="oxi-addons-flip-box-flip ' . $styledata['sa-ac-flip_boxes_flip_direction'] . '">
@@ -80,6 +84,7 @@ class Style_20 extends Templates {
                                     </div>
                                 </div>
                             </div>
+                        '.$bc.'
                         </div>
                     </div>';
         }
