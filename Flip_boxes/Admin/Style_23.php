@@ -109,18 +109,20 @@ class Style_23 extends AdminStyle {
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore',
                 ],
-                'sa_flip_boxes_button_link' => [
-                    'label' => __('URL', SHORTCODE_ADDOONS),
-                    'type' => Controls::URL,
-                    'controller' => 'add_group_control',
-                    'default' => '',
-                    'placeholder' => 'https://www.yoururl.com',
-                ],
+                
                 'shortcode-addons-start-tab2-end' => [
                     'controller' => 'end_controls_tab',
                 ],
                 'shortcode-addons-end-flip-box-tabs' => [
                     'controller' => 'end_controls_tabs',
+                ],
+                'sa_flip_boxes_button_link' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'type' => Controls::URL,
+                    'separator' => true,
+                    'controller' => 'add_group_control',
+                    'default' => '',
+                    'placeholder' => 'https://www.yoururl.com',
                 ],
             ],
             'title_field' => 'sa_flip_boxes_heading',
@@ -201,20 +203,20 @@ class Style_23 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 450,
+                'size' => 280,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 1500,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 1,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
-                ],
-                'rem' => [
                     'min' => 1,
                     'max' => 200,
                     'step' => 0.1,
@@ -231,18 +233,23 @@ class Style_23 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 300,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 1000,
+                    'max' => 150,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 1,
                     'max' => 200,
                     'step' => 1,
+                ],
+                'em' => [
+                    'min' => 1,
+                    'max' => 200,
+                    'step' => 0.1,
                 ],
             ],
             'selector' => [
@@ -258,22 +265,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 0,
                     'max' => 100,
-                    'step' => .1,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 20,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -292,12 +299,12 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
@@ -307,7 +314,7 @@ class Style_23 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 20,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -398,12 +405,12 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
@@ -413,7 +420,7 @@ class Style_23 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -428,12 +435,12 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
@@ -443,7 +450,7 @@ class Style_23 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -464,13 +471,13 @@ class Style_23 extends AdminStyle {
             'label' => __('Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
-                'unit' => '%',
+                'unit' => 'px',
                 'size' => 100,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
@@ -480,7 +487,7 @@ class Style_23 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 0.1,
                 ],
             ],
@@ -496,12 +503,12 @@ class Style_23 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => 30,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 300,
                     'step' => 1,
                 ],
             ],
@@ -523,7 +530,7 @@ class Style_23 extends AdminStyle {
                 'sa-flip-boxex-front-icon-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-23 .oxi-addons-flip-box-front-icon .oxi-icons' => 'color: {{VALUE}};',
             ]
@@ -544,22 +551,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -574,22 +581,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
+                    'max' => 100,
                     'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -644,7 +651,7 @@ class Style_23 extends AdminStyle {
                 'sa-flip-box-front-heading-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#e65245',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-23 .oxi-addons-flip-box-front-headding' => 'color: {{VALUE}};',
             ]
@@ -673,22 +680,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -738,22 +745,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'min' => 1,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -808,7 +815,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -839,7 +846,7 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -876,7 +883,7 @@ class Style_23 extends AdminStyle {
                 'sa-flip-box-back-heading-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-23 .oxi-addons-flip-box-back-headding' => 'color: {{VALUE}};',
             ]
@@ -905,22 +912,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -951,7 +958,7 @@ class Style_23 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
@@ -961,7 +968,7 @@ class Style_23 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 0.1,
                 ],
             ],
@@ -977,12 +984,12 @@ class Style_23 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => 25,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 300,
                     'step' => 1,
                 ],
             ],
@@ -1004,7 +1011,7 @@ class Style_23 extends AdminStyle {
                 'sa-flip-boxex-back-icon-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#e65245',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-23 .oxi-addons-flip-box-back-icon .oxi-icons' => 'color: {{VALUE}};',
             ]
@@ -1025,22 +1032,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -1055,22 +1062,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -1123,7 +1130,7 @@ class Style_23 extends AdminStyle {
                 'sa-flip-box-back-short-description-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-23 .oxi-addons-flip-box-back-info' => 'color: {{VALUE}};',
             ]
@@ -1152,22 +1159,22 @@ class Style_23 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -1181,62 +1188,4 @@ class Style_23 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-//    public function modal_opener() {
-//        $this->add_substitute_control('', [], [
-//            'type' => Controls::MODALOPENER,
-//            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
-//            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
-//            'showing' => TRUE,
-//        ]);
-//    }
-//
-//    public function modal_form_data() {
-//        echo '<div class="modal-header">                    
-//                    <h4 class="modal-title">Image Boxes Form</h4>
-//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-//                </div>
-//                <div class="modal-body">';
-//        $this->add_control(
-//                'sa_image_boxes_heading', $this->style, [
-//            'label' => __('Title', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Heading',
-//            'placeholder' => 'Heading',
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_s_description', $this->style, [
-//            'label' => __('Short Description', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Lorem ipsum dolor sit amet',
-//            'placeholder' => 'Lorem ipsum dolor sit amet',
-//                ]
-//        );
-//        $this->add_group_control(
-//                'sa_image_boxes_media', $this->style, [
-//            'label' => __('URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::MEDIA,
-//            'default' => [
-//                'type' => 'media-library',
-//                'link' => '#asdas',
-//            ]
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_button', $this->style, [
-//            'label' => __('Button Text', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Learn More',
-//                ]
-//        );
-//        $this->add_group_control(
-//                'sa_image_boxes_button_url', $this->style, [
-//            'label' => __('URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::URL,
-//            'default' => '',
-//            'placeholder' => 'https://www.yoururl.com',
-//                ]
-//        );
-//        echo '</div>';
-//    }
 }

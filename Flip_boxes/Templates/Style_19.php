@@ -24,8 +24,10 @@ class Style_19 extends Templates {
 
         $styledata = $this->style;
         foreach ($styledata['sa_flip_boxes_data_style_19'] as $key => $value) {
-            $back_hadding = $backinfo = $button = $bt = $bc = '';
-            
+            $image = $back_hadding = $backinfo = $button = $bt = $bc = '';
+            if ($this->media_render('sa_flip_boxes_media', $value) != '') {
+                $image = ' <img src="' . $this->media_render('sa_flip_boxes_media', $value) . '">';
+            }
             if ($value['sa_flip_back_boxes_heading'] != '') {
                 $back_hadding .= '<div class="oxi-addons-flip-box-back-headding">
                             ' . $this->text_render($value['sa_flip_back_boxes_heading']) . '
@@ -54,8 +56,8 @@ class Style_19 extends Templates {
                                             <div class="oxi-addons-flip-box-style">
                                                 <div class="oxi-addons-flip-box-front">
                                                     <div class="oxi-addons-flip-box-front-section-box">
-                                                        <div class="oxi-addons-flip-box-front-section">
-                                                            
+                                                        <div class="oxi-addons-flip-box-front-section oxi-addons-flip-box-front-section-'.$key.'">
+                                                            '.$image.'
                                                         </div>  
                                                     </div>
                                                 </div>
@@ -78,6 +80,10 @@ class Style_19 extends Templates {
                         '.$bc.'
                         </div>
                     </div>';
+            
+            $this->inline_css .= '.'.$this->WRAPPER.' .oxi-addons-flip-box-style-19 .oxi-addons-flip-box-front-section-'.$key.':before{
+                        background: ' . $value['sa_flip_boxes_overlay_color'] . ';
+                    }';
         }
     }
 

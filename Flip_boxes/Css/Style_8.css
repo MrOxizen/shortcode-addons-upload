@@ -36,17 +36,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-width: 0px 0px 0px 0px;
+    border-width: px;
     border-style: none;
     border-color: #39dfa5;
     border-radius: 2px 2px 2px 2px;
     padding: 0px 0px 0px 0px;
-    background: linear-gradient(rgba(71, 81, 82, 1.00), rgba(71, 81, 82, 1.00)), url("https://www.oxilab.org/wp-content/uploads/2019/05/dog.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    ;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
 }
 
@@ -65,7 +59,7 @@
     color: #ffffff;
     background: rgba(104, 81, 237, 0.00);
     line-height: 100px;
-    border-width: 0px 0px 0px 0px;
+    border-width: 0px;
     border-style: none;
     border-color: #6048e8;
     border-radius: 0px 0px 0px 0px
@@ -85,7 +79,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-width: 0px 0px 0px 0px;
+    border-width: 0px;
     border-style: none;
     border-color: #39dfa5;
     border-radius: 2px 2px 2px 2px;
@@ -109,7 +103,7 @@
     color: #ffffff;
     background: rgba(104, 81, 237, 0.00);
     line-height: 100px;
-    border-width: 0px 0px 0px 0px;
+    border-width: 0px;
     border-style: none;
     border-color: #6048e8;
     border-radius: 0px 0px 0px 0px

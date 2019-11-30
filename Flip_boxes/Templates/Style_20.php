@@ -56,7 +56,7 @@ class Style_20 extends Templates {
                        </div>';
             }
             echo'<div class="oxi-flip-box-col-20 ' . $this->column_render('sa-flip-boxes-col', $style) . ' " >
-                        <div class="oxi-addons-flip-box-style-20">
+                        <div class="oxi-addons-flip-box-style-20 oxi-addons-flip-box-style-20-'.$key.'">
                         '.$bt.'
                             <div class="oxi-addons-flip-boxes-body" ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">

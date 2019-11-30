@@ -70,6 +70,13 @@ class Style_20 extends AdminStyle {
                 'shortcode-addons-start-tab1' => [
                     'controller' => 'start_controls_tab',
                 ],
+                'sa-flip-box-front-background' => [
+                    'type' => Controls::BACKGROUND,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-flip-box-style-20-{{KEY}} .oxi-addons-flip-box-front-section' => '',
+                    ]
+                ],
                 'sa_flip_boxes_icon' => [
                     'label' => __('Icon', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
@@ -86,6 +93,13 @@ class Style_20 extends AdminStyle {
                 ],
                 'shortcode-addons-start-tab2' => [
                     'controller' => 'start_controls_tab',
+                ],
+                'sa-flip-box-back-background' => [
+                    'type' => Controls::BACKGROUND,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons-flip-box-style-20-{{KEY}} .oxi-addons-flip-box-back-section' => '',
+                    ]
                 ],
                 'sa_flip_boxes_description' => [
                     'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
@@ -366,16 +380,6 @@ class Style_20 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-
-        $this->add_group_control(
-                'sa-flip-box-front-background', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-front-section' => '',
-            ]
-                ]
-        );
-
         $this->add_group_control(
                 'sa-flip-box-front-border', $this->style, [
             'type' => Controls::BORDER,
@@ -479,7 +483,7 @@ class Style_20 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-front-image-icon oxi-icons' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
-             ],
+            ],
                 ]
         );
         $this->add_control(
@@ -560,7 +564,7 @@ class Style_20 extends AdminStyle {
             ]
                 ]
         );
-          $this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa-flip-boxes-front-icon-margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
@@ -579,7 +583,6 @@ class Style_20 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
-                
                 'em' => [
                     'min' => 0,
                     'max' => 100,
@@ -681,15 +684,7 @@ class Style_20 extends AdminStyle {
                 ]
         );
 
-        $this->add_group_control(
-                'sa-flip-box-back-background', $this->style, [
-            'type' => Controls::BACKGROUND,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-style' => '',
-            ]
-                ]
-        );
-        
+
         $this->add_group_control(
                 'sa-flip-box-back-border', $this->style, [
             'type' => Controls::BORDER,
@@ -718,7 +713,6 @@ class Style_20 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
-                
                 'em' => [
                     'min' => 0,
                     'max' => 100,
@@ -749,7 +743,6 @@ class Style_20 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
-                
                 'em' => [
                     'min' => 0,
                     'max' => 100,

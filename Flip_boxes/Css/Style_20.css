@@ -35,17 +35,11 @@
      flex-direction: column;
      justify-content: flex-end;
      align-items: center;
-     border-width: 5px 0px 0px 0px;
+     border-width: 0px;
      border-style: solid;
      border-color: #ec8206;
      border-radius: 5px 5px 5px 5px;
      padding: 0px 0px 0px 0px;
-     background: linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)), url("https://www.oxilab.org/wp-content/uploads/2019/05/back-girl.jpg") no-repeat center center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     ;
      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
  }
  
@@ -61,7 +55,7 @@
      color: #ffffff;
      background: rgba(95, 67, 232, 0.00);
      line-height: 60px;
-     border-width: 0px 0px 0px 0px;
+     border-width: 0px;
      border-style: none;
      border-color: #6048e8;
      border-radius: 0px 0px 0px 0px
@@ -93,7 +87,7 @@
      justify-content: center;
      align-items: center;
      background: rgba(236, 130, 6, 1.00);
-     border-width: 0px 0px 0px 0px;
+     border-width: 0px;
      border-style: none;
      border-color: #39dfa5;
      padding: 0px 0px 0px 0px;
@@ -125,7 +119,7 @@
      font-size: 14px;
      color: #ec8206;
      background: rgba(255, 255, 255, 1.00);
-     border-width: 0px 0px 0px 0px;
+     border-width: 0px;
      border-style: none;
      border-color: #212020;
      font-family: "Open Sans";

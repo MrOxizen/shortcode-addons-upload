@@ -40,7 +40,7 @@
 .oxi-addons-flip-box-style-1 .oxi-addons-flip-box-front-section {
     width: 100%;
     height: 100%;
-    border-width: 3px 3px 3px 3px;
+    border-width: 0px;
     border-style: solid;
     border-color: #e3e3e3;
     padding: 7px 7px 7px 7px;
@@ -74,7 +74,7 @@
     left: 50%;
     color: #8b00cc;
     background: rgba(255, 255, 255, 1.00);
-    border-width: 1px 1px 1px 1px;
+    border-width: 0px;
     border-style: dotted;
     border-color: #007899;
     height: 60px;
@@ -135,7 +135,7 @@
 .oxi-addons-flip-box-style-1 .oxi-addons-flip-box-back-section {
     width: 100%;
     height: 100%;
-    border-width: 3px 3px 3px 3px;
+    border-width: 0px;
     border-style: solid;
     border-color: #ffffff;
     padding: 7px 7px 7px 7px;
@@ -176,7 +176,7 @@
     color: #d600cb;
     background: rgba(255, 255, 255, 1.00);
     font-size: 14px;
-    border-width: 0px 0px 0px 0px;
+    border-width: 0px;
     border-style: solid;
     border-color: #ffffff;
     font-family: "Open Sans";

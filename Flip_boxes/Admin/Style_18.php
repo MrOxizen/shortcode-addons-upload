@@ -76,7 +76,7 @@ class Style_18 extends AdminStyle {
                     'controller' => 'add_group_control',
                     'default' => [
                         'type' => 'media-library',
-                        'link' => '#asdas',
+                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/1-5.jpg',
                     ]
                 ],
                 'sa_flip_boxes_heading' => [
