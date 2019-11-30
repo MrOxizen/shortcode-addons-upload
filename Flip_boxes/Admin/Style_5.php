@@ -60,6 +60,36 @@ class Style_5 extends AdminStyle {
             'separator' => TRUE,
             'button' => 'Add New Flip Box',
             'fields' => [
+                'shortcode-addons-start-flip-box-tabs' => [
+                    'controller' => 'start_controls_tabs',
+                    'options' => [
+                        'front' => esc_html__('Front Box Data', SHORTCODE_ADDOONS),
+                        'backend' => esc_html__('Back Box Data', SHORTCODE_ADDOONS),
+                    ]
+                ],
+                'shortcode-addons-start-tab1' => [
+                    'controller' => 'start_controls_tab',
+                ],
+                'sa_flip_boxes_media' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'type' => Controls::MEDIA,
+                    'controller' => 'add_group_control',
+                    'default' => [
+                        'type' => 'media-library',
+                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/1-5.jpg',
+                    ]
+                ],
+                'sa_flip_boxes_overlay_color' => [
+                    'label' => __('Overlay Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::GRADIENT,
+                    'default' => '#e198e6',
+                ],
+                'shortcode-addons-start-tab1-end' => [
+                    'controller' => 'end_controls_tab',
+                ],
+                'shortcode-addons-start-tab2' => [
+                    'controller' => 'start_controls_tab',
+                ],
                 'sa_flip_back_boxes_heading' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
@@ -83,6 +113,12 @@ class Style_5 extends AdminStyle {
                     'controller' => 'add_group_control',
                     'default' => '',
                     'placeholder' => 'https://www.yoururl.com',
+                ],
+                'shortcode-addons-start-tab2-end' => [
+                    'controller' => 'end_controls_tab',
+                ],
+                'shortcode-addons-end-flip-box-tabs' => [
+                    'controller' => 'end_controls_tabs',
                 ],
             ],
             'title_field' => 'sa_flip_back_boxes_heading',
@@ -618,7 +654,7 @@ class Style_5 extends AdminStyle {
             ]
                 ]
         );
-        
+
 
         $this->add_responsive_control(
                 'sa-flip-box-backend-button-padding', $this->style, [
@@ -639,7 +675,6 @@ class Style_5 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
-                
                 'em' => [
                     'min' => 0,
                     'max' => 100,
@@ -670,7 +705,6 @@ class Style_5 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
-                
                 'em' => [
                     'min' => 0,
                     'max' => 100,
@@ -736,7 +770,6 @@ class Style_5 extends AdminStyle {
                 'size' => '',
             ],
             'range' => [
-                
                 'px' => [
                     'min' => 1,
                     'max' => 500,
@@ -833,6 +866,5 @@ class Style_5 extends AdminStyle {
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
 
 }
