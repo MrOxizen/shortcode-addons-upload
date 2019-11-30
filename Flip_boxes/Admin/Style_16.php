@@ -100,6 +100,14 @@ class Style_16 extends AdminStyle {
                 'shortcode-addons-end-flip-box-tabs' => [
                     'controller' => 'end_controls_tabs',
                 ],
+                'sa_flip_boxes_button_link' => [
+                    'label' => __('URL', SHORTCODE_ADDOONS),
+                    'separator' => true,
+                    'type' => Controls::URL,
+                    'controller' => 'add_group_control',
+                    'default' => '',
+                    'placeholder' => 'https://www.yoururl.com',
+                ],
             ],
             'title_field' => 'sa_flip_boxes_heading',
                 ]
