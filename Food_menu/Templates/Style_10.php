@@ -16,9 +16,11 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_10 extends Templates {
+class Style_10 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $class = '';
         if ($style['sa-max-w-condition'] == 'custom') {
             $class = 'sa-max-w-auto';
@@ -31,30 +33,10 @@ class Style_10 extends Templates {
         } else {
             $admin_class = '';
         }
-
-
-
-
-
-
-//            echo '<pre>';
-//            print_r($style);
-//            echo '</pre>';
-//        if ($style['sa-fm-body-price-alignment'] == 'left') {
-//            $position = "sa-fm-temp-1-left";
-//        } elseif ($style['sa-fm-body-price-alignment'] == 'right') {
-//            $position = "sa-fm-temp-1-right";
-//        } else {
-//            $position = "sa-fm-temp-1-center";
-//        }
-
         $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
         foreach ($all_data as $key => $data) {
-
-
             $heading = $item = $price = $button = '';
-
 
             if (array_key_exists('sa_el_insert_food_heading', $data) && $data['sa_el_insert_food_heading'] != '') {
                 $heading = '<div class="oxi-addons-grid-item">
@@ -77,14 +59,7 @@ class Style_10 extends Templates {
                                 <a ' . $this->url_render('sa_el_button_link', $data) . ' " class="oxi-addons-button-anchor">' . $this->text_render($data['sa_el_insert_food_button']) . '</a>
                             </div>
                           </div>';
-            }
-
-
-//            echo '<pre>';
-//            print_r($class);
-//            echo '</pre>';
-
-
+            } 
             echo '<div class=" ' . $this->column_render('sa-ac-column', $style) . '   ' . $admin_class . ' ">';
 
             echo '  <div class="oxi-addons-box-temp-10 margin-auto  ' . $class . '"  ' . $this->animation_render('sa-fm-box-animation-temp-10', $style) . '>
@@ -108,7 +83,8 @@ class Style_10 extends Templates {
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
@@ -175,7 +151,7 @@ class Style_10 extends Templates {
                           </div>
                         </div> ';
 
-            
+
             echo '</div>';
 
             $css .= ' .oxi-addons-bg-img-' . $value['styleid'] . '-' . $value['id'] . '   .oxi-addons-box-outer{
@@ -340,5 +316,4 @@ class Style_10 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-animation', $jquery);
     }
-
 }

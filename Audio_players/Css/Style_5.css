@@ -95,9 +95,13 @@
     background: rgba(89, 89, 89, 0.04);
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
     left: -25%;
     bottom: 40%
+}
+.sa_addons_ap_container_style_5 .mejs-playpause-button > button {
+    overflow: visible;
 }
 
 .sa_addons_ap_container_style_5 .mejs-play button::after,
@@ -189,7 +193,7 @@
     border-radius: 50px 50px 50px 50px
 }
 
-.sa_addons_ap_container_style_4.sa_show_progress_time_handle .mejs-time-handle {
+.sa_addons_ap_container_style_5.sa_show_progress_time_handle .mejs-time-handle {
     display: block;
 }
 

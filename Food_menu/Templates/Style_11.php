@@ -16,9 +16,11 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_11 extends Templates {
+class Style_11 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $class = '';
         if ($style['sa-max-w-condition'] == 'custom') {
             $class = 'sa-max-w-auto';
@@ -38,34 +40,11 @@ class Style_11 extends Templates {
             $position = "sa-fm-temp-1-right";
         } else {
             $position = "sa-fm-temp-1-center";
-        }
-
-
-
-
-
-
-//            echo '<pre>';
-//            print_r($style);
-//            echo '</pre>';
-//        if ($style['sa-fm-body-price-alignment'] == 'left') {
-//            $position = "sa-fm-temp-1-left";
-//        } elseif ($style['sa-fm-body-price-alignment'] == 'right') {
-//            $position = "sa-fm-temp-1-right";
-//        } else {
-//            $position = "sa-fm-temp-1-center";
-//        }
-
+        }  
         $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
-        foreach ($all_data as $key => $data) {
-            
-            
-            
-            
-            $heading = $descriptions = $price = $img = '';
-
-
+        foreach ($all_data as $key => $data) { 
+            $heading = $descriptions = $price = $img = ''; 
             if (array_key_exists('sa_el_insert_food_heading', $data) && $data['sa_el_insert_food_heading'] != '') {
                 $heading = '<div class="oxi-addons-box-food-heading">
                                 ' . $this->text_render($data['sa_el_insert_food_heading']) . '
@@ -90,10 +69,7 @@ class Style_11 extends Templates {
                                 ' . $price . '
                             </div>
                         </div>';
-            }
-
-
-
+            } 
             echo '<div class=" ' . $this->column_render('sa-ac-column', $style) . ' ">';
 
             echo ' <div class="sa_fm_template_11  ' . $class . '" ' . $this->animation_render('sa-fm-box-animation-temp-10', $style) . '>
@@ -106,15 +82,13 @@ class Style_11 extends Templates {
                                         ' . $img . '
                                 </div>
                             </div>
-                        </div>';
-
-
-
+                        </div>'; 
             echo '</div>';
         }
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
@@ -258,5 +232,4 @@ class Style_11 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-animation', $jquery);
     }
-
 }

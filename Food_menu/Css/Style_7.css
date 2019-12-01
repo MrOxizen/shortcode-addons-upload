@@ -81,7 +81,7 @@ and open the template in the editor.
     background:radial-gradient(closest-side,rgba(255, 255, 255, 1),rgba(255, 255, 255, 1) 50%,transparent 50%);
     background-size:40px 50px;
     background-position:30px 24px;
-    background-repeat:repeat-x ;
+    background-repeat:repeat-x;
 }
 .oxi-addonsFM-SV-C-sape:after{
     background:radial-gradient(closest-side,transparent,transparent 50%, rgba(255, 255, 255, 1) 50%);

@@ -10,11 +10,12 @@ and open the template in the editor.
 
 .oa-fm-style-3 {
     width: 100%;
-    float: left; 
+    float: left;
 }
 
-.oa-fm-3-no-style {
+.oa-fm-style-3  .oa-fm-3-no-style {
     margin: auto;
+    display: flex;
 }
 
 .oa-fm-style-3 .oxi-addonsFM-row {
@@ -93,8 +94,12 @@ and open the template in the editor.
     background: rgba(232, 5, 5, 1.00);
     font-size: 16px;
     color: #ffffff;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 2px 2px 2px; 
+    border-radius: 2px 2px 2px 2px;
+    padding: 2px 5px 2px 5px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -ms-border-radius: 2px 2px 2px 2px;
+    -o-border-radius: 2px 2px 2px 2px;
 }
 
 .oa-fm-style-3 .oxi-addonsFM-TH-info {
@@ -126,13 +131,13 @@ and open the template in the editor.
         padding: 10px 10px 10px 10px;
     }
 
-   
+
     .oa-fm-style-3 .oxi-addonsFM-images .oxi-addonsFM-img {
         border-radius: 100px 100px 100px 100px;
     }
 
     .oxi-addonsFM-TH-heading-body {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .oa-fm-style-3 .oxi-addonsFM-TH-price {
@@ -171,7 +176,7 @@ and open the template in the editor.
     }
 
     .oa-fm-style-3 .oxi-addonsFM-TH-info {
-        font-size: 13px; 
+        font-size: 13px;
         text-align: center;
         padding: 15px 15px 15px 15px;
     }
@@ -193,13 +198,13 @@ and open the template in the editor.
         padding: 10px 10px 10px 10px;
     }
 
- 
+
     .oa-fm-style-3 .oxi-addonsFM-images .oxi-addonsFM-img {
         border-radius: 100px 100px 100px 100px;
     }
 
     .oxi-addonsFM-TH-heading-body {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .oa-fm-style-3 .oxi-addonsFM-TH-price {

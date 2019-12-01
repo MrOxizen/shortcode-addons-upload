@@ -1,5 +1,5 @@
 <?php
- 
+
 
 namespace SHORTCODE_ADDONS_UPLOAD\Data_table\Templates;
 
@@ -32,19 +32,28 @@ class Style_2 extends Templates
                 <table class="table oxi-addons-datatable-style-2" id="datatables">
                     <thead>
                         <tr>';
-                            $repeater = [];
-                            if (array_key_exists('sa_datatable_column_repeater', $style)) :
-                                foreach ($style['sa_datatable_column_repeater'] as $key => $value) {
-                                    $repeater[$key] = $key;
-                                    foreach ($value as $values) {
-                                        echo ' <th>' . $this->text_render($values) . '</th>';
-                                    }
-                                }
-                            endif;
-                            if ($admin == 'admin') :
-                                echo '<th>Manage</th>';
-                            endif;
-            echo '          </tr> 
+        $repeater = [];
+
+        if (array_key_exists('sa_datatable_column_repeater', $style)) :
+            foreach ($style['sa_datatable_column_repeater'] as $key => $value) {
+                $repeater[$key] = $key;
+                $icon = $text = '';
+                if ($value['sa_datatable_head_true'] === 'yes') {
+                    if ($value['sa_datatable_head_icon']) {
+                        $icon =  $this->font_awesome_render($value['sa_datatable_head_icon']);
+                    }
+                }
+                if ($value['sa_datatable_head']) {
+                    $text =  $this->text_render($value['sa_datatable_head']);
+                }
+
+                echo ' <th class="oxi-header-icon">'.$icon.' '.$text.'</th>';
+            }
+        endif;
+        if ($admin == 'admin') :
+            echo '<th>Manage</th>';
+        endif;
+        echo '          </tr> 
                      </thead>
                     <tbody>';
         foreach ($child as $v) {
@@ -81,7 +90,7 @@ class Style_2 extends Templates
                 if (array_key_exists($type, $val)) :
                     if ($val[$type]  == 'icon') {
                         if (array_key_exists($icon, $val)) :
-                            echo '<td>
+                            echo '<td class="oxi-body-icon">
                             ' . $this->font_awesome_render($val[$icon]) . '
                         </td>';
                         else :
@@ -90,17 +99,17 @@ class Style_2 extends Templates
                     }
                 endif;
             }
-                    if ($admin == 'admin') :
-                        echo '  <td>
+            if ($admin == 'admin') :
+                echo '  <td>
                                     <div class="oxi-addons-admin-absulate-edit datatable_edit_delete">
                                         <button class="btn btn-primary shortcode-addons-template-item-edit datatable_btn " type="button" value="' . $v['id'] . '"><i class="fas fa-edit oxi-icon"></i></button>
                                         <button class="btn btn-danger shortcode-addons-template-item-delete datatable_btn " type="submit" value="' . $v['id'] . '"><i class="fas fa-trash oxi-icon"></i></button>
                                         </div>
                                     </td>';
-                    endif;
+            endif;
 
-                    echo '</tr>';
-        } 
+            echo '</tr>';
+        }
         echo '      </tbody>
                  </table>
                  
@@ -234,135 +243,134 @@ class Style_2 extends Templates
         wp_enqueue_style('datatable-style', SA_ADDONS_UPLOAD_URL . '/Data_table/File/datatable-style.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('datatables-min-js', SA_ADDONS_UPLOAD_URL . '/Data_table/File/datatables-min.js', false, SA_ADDONS_PLUGIN_VERSION);
 
-       $css = '';
-    $jquery = $icon_weight = '';
-    if ($styledata[463] == 'regular') {
-        $icon_weight = 'font-weight: 500;';
-    } else {
-        $icon_weight = 'font-weight: 900;';
-    }
-    echo '<div class="oxi-addons-container">
+        $css = '';
+        $jquery = $icon_weight = '';
+        if ($styledata[463] == 'regular') {
+            $icon_weight = 'font-weight: 500;';
+        } else {
+            $icon_weight = 'font-weight: 900;';
+        }
+        echo '<div class="oxi-addons-container">
           <div class="oxi-addons-row">
         <div class="oxi-addons-wrapper-' . $oxiid . '">
             <table class="table oxi-addons-datatable-' . $oxiid . '" id="datatables">
                 <thead>
                     <tr>';
-    $tablehead = explode('{{}}', $stylefiles[2]);
-    foreach ($tablehead as $value) {
-        echo ' <th>' . OxiAddonsTextConvert($value) . '</th>';
-    }
-  
-    echo '</tr> 
+        $tablehead = explode('{{}}', $stylefiles[2]);
+        foreach ($tablehead as $value) {
+            echo ' <th>' . OxiAddonsTextConvert($value) . '</th>';
+        }
+
+        echo '</tr> 
                 </thead>
             <tbody>';
-    foreach ($listdata as $value) {
-        $listarray = [];
-        foreach ($tablehead as $val) {
-            $listarray[OxiStringToClassReplacce($val)] = '';
-        }
-        $listfiles = explode('{{}}', $value['files']);
-        foreach ($listfiles as $val) {
-            if ($val != '' && $val != '{{}}') {
-                $tdvalue = explode('{{||}}', $val);
-                $listarray[$tdvalue[0]] = $tdvalue[1];
+        foreach ($listdata as $value) {
+            $listarray = [];
+            foreach ($tablehead as $val) {
+                $listarray[OxiStringToClassReplacce($val)] = '';
             }
+            $listfiles = explode('{{}}', $value['files']);
+            foreach ($listfiles as $val) {
+                if ($val != '' && $val != '{{}}') {
+                    $tdvalue = explode('{{||}}', $val);
+                    $listarray[$tdvalue[0]] = $tdvalue[1];
+                }
+            }
+            echo '<tr>';
+            foreach ($tablehead as $val) {
+                $tablefulldata = explode("||type||", $listarray[OxiStringToClassReplacce($val)]);
+
+                if ($tablefulldata[0] == 'name') {
+                    if ($tablefulldata[3] != '') {
+                        echo '<td>' . OxiAddonsTextConvert($tablefulldata[3]) . '</td>';
+                    } else {
+                        echo '<td></td>';
+                    }
+                } elseif ($tablefulldata[0] == 'icon') {
+                    if ($tablefulldata[2] != '') {
+                        echo '<td class="oxi-table-icon">' . oxi_addons_font_awesome($tablefulldata[2]) . '</td>';
+                    } else {
+                        echo '<td></td>';
+                    }
+                } elseif ($tablefulldata[0] == 'image') {
+                    if ($tablefulldata[1] != '') {
+                        echo '<td><img class="img-fluid oxi-table-image" src="' . OxiAddonsUrlConvert($tablefulldata[1]) . '" alt="' . $tablefulldata[3] . '"></td>';
+                    } else {
+                        echo '<td></td>';
+                    }
+                }
+            }
+            echo '</tr>';
         }
-        echo '<tr>';
-        foreach ($tablehead as $val) { 
-             $tablefulldata = explode("||type||", $listarray[OxiStringToClassReplacce($val)]);
-              
-            if($tablefulldata[0]== 'name'){
-                if ($tablefulldata[3] != '') {
-                    echo '<td>' . OxiAddonsTextConvert($tablefulldata[3]) . '</td>';
-                } else {
-                    echo '<td></td>';
-                }
-            }elseif($tablefulldata[0]== 'icon'){
-                if ($tablefulldata[2] != '') {
-                    echo '<td class="oxi-table-icon">' . oxi_addons_font_awesome($tablefulldata[2]) . '</td>';
-                } else {
-                    echo '<td></td>';
-                }
-            }elseif($tablefulldata[0]== 'image'){
-                  if ($tablefulldata[1] != '') {
-                    echo '<td><img class="img-fluid oxi-table-image" src="' . OxiAddonsUrlConvert($tablefulldata[1]) . '" alt="'.$tablefulldata[3].'"></td>';
-                } else {
-                    echo '<td></td>';
-                }
-            }              
-            
-        } 
-        echo '</tr>';
-    }
-    echo '</tbody>
+        echo '</tbody>
             </table>
         </div>
     </div> </div>';
 
-    $jquery .= '
+        $jquery .= '
         jQuery(".oxi-addons-datatable-' . $oxiid . '").DataTable({
             responsive: true, 
             dom: "lBfrtip",
              buttons: [';
 
-    if ($styledata[233] == 'true') {
-        $jquery .= '"pdf",';
-    }
-    if ($styledata[235] == 'true') {
-        $jquery .= '"excel",';
-    }
-    if ($styledata[237] == 'true') {
-        $jquery .= '"copy",';
-    }
-    if ($styledata[239] == 'true') {
-        $jquery .= '"print",';
-    }
-    if ($styledata[241] == 'true') {
-        $jquery .= '"csv",';
-    }
+        if ($styledata[233] == 'true') {
+            $jquery .= '"pdf",';
+        }
+        if ($styledata[235] == 'true') {
+            $jquery .= '"excel",';
+        }
+        if ($styledata[237] == 'true') {
+            $jquery .= '"copy",';
+        }
+        if ($styledata[239] == 'true') {
+            $jquery .= '"print",';
+        }
+        if ($styledata[241] == 'true') {
+            $jquery .= '"csv",';
+        }
 
-    $jquery .= ' ],  ';
-    if ($styledata[537] == '5') {
-        $jquery .= 'pageLength : 5,';
-    } elseif ($styledata[537] == '10') {
-        $jquery .= 'pageLength : 10,';
-    } elseif ($styledata[537] == '20') {
-        $jquery .= 'pageLength : 20,';
-    } elseif ($styledata[537] == '30') {
-        $jquery .= 'pageLength : 30,';
-    } elseif ($styledata[537] == '50') {
-        $jquery .= 'pageLength : 50,';
-    } elseif ($styledata[537] == '80') {
-        $jquery .= 'pageLength : 80,';
-    } elseif ($styledata[537] == '100') {
-        $jquery .= 'pageLength : 100,';
-    }
-    $jquery .= '  
+        $jquery .= ' ],  ';
+        if ($styledata[537] == '5') {
+            $jquery .= 'pageLength : 5,';
+        } elseif ($styledata[537] == '10') {
+            $jquery .= 'pageLength : 10,';
+        } elseif ($styledata[537] == '20') {
+            $jquery .= 'pageLength : 20,';
+        } elseif ($styledata[537] == '30') {
+            $jquery .= 'pageLength : 30,';
+        } elseif ($styledata[537] == '50') {
+            $jquery .= 'pageLength : 50,';
+        } elseif ($styledata[537] == '80') {
+            $jquery .= 'pageLength : 80,';
+        } elseif ($styledata[537] == '100') {
+            $jquery .= 'pageLength : 100,';
+        }
+        $jquery .= '  
             lengthMenu: [5, 10, 20, 30, 50, 80, 100], ';
-    if ($styledata[359] == 'true') {
-        $jquery .= '"lengthChange": true,';
-    } else {
-        $jquery .= '"lengthChange": true,';
-    }
-    if ($styledata[285] == 'true') {
-        $jquery .= '"bFilter": true,';
-    } else {
-        $jquery .= '"bFilter": false,';
-    }
-    if ($styledata[359] == 'true') {
-        $jquery .= '"bInfo": true,';
-    } else {
-        $jquery .= '"bInfo": false,';
-    }
-    if ($styledata[389] == 'true') {
-        $jquery .= '"bPaginate": true, ';
-    } else {
-        $jquery .= '"bPaginate": false, ';
-    }
-    $jquery .= '});';
+        if ($styledata[359] == 'true') {
+            $jquery .= '"lengthChange": true,';
+        } else {
+            $jquery .= '"lengthChange": true,';
+        }
+        if ($styledata[285] == 'true') {
+            $jquery .= '"bFilter": true,';
+        } else {
+            $jquery .= '"bFilter": false,';
+        }
+        if ($styledata[359] == 'true') {
+            $jquery .= '"bInfo": true,';
+        } else {
+            $jquery .= '"bInfo": false,';
+        }
+        if ($styledata[389] == 'true') {
+            $jquery .= '"bPaginate": true, ';
+        } else {
+            $jquery .= '"bPaginate": false, ';
+        }
+        $jquery .= '});';
 
 
-    $jquery .= '
+        $jquery .= '
         jQuery(".oxi-addons-wrapper-' . $oxiid . ' .dataTables_length").addClass("oxi_datatable_length");
         jQuery(".oxi-addons-wrapper-' . $oxiid . ' .dataTables_length > label").addClass("oxi_show_entries_label");
         jQuery(".oxi-addons-wrapper-' . $oxiid . ' .oxi_datatable_length  select").addClass("oxi_datatable_select_box");
@@ -376,15 +384,15 @@ class Style_2 extends Templates
         jQuery(".oxi-addons-datatable-' . $oxiid . ' > tbody").addClass("oxi_datatable_body"); 
 
     ';
-    $height= '';
-    if($styledata[581] != true){
-       $height ='height: ' . $styledata[577] . 'px;';
-    }
-    $css .= '
+        $height = '';
+        if ($styledata[581] != true) {
+            $height = 'height: ' . $styledata[577] . 'px;';
+        }
+        $css .= '
     .oxi-addons-wrapper-' . $oxiid . '  .oxi-table-image{ 
           max-width: ' . $styledata[573] . 'px;
            width: 100%;
-        ' . $height. '
+        ' . $height . '
     }
     .oxi-addons-wrapper-' . $oxiid . '  .oxi-table-icon .oxi-icons{ 
           font-size: ' . $styledata[567] . 'px; 
@@ -578,13 +586,13 @@ class Style_2 extends Templates
      .oxi-addons-wrapper-' . $oxiid . ' table.dataTable .oxi_datatable_thead .sorting:after{
          opacity: 0.3;
      }';
-    $visibility_icon = '';
-    if ($styledata[565] == 'true') {
-        $visibility_icon = "display: block;";
-    } else {
-        $visibility_icon = "display: none;";
-    }
-    $css .= '  .oxi-addons-wrapper-' . $oxiid . ' .table.dataTable .oxi_datatable_thead .sorting:after, 
+        $visibility_icon = '';
+        if ($styledata[565] == 'true') {
+            $visibility_icon = "display: block;";
+        } else {
+            $visibility_icon = "display: none;";
+        }
+        $css .= '  .oxi-addons-wrapper-' . $oxiid . ' .table.dataTable .oxi_datatable_thead .sorting:after, 
    .oxi-addons-wrapper-' . $oxiid . '  table.dataTable .oxi_datatable_thead .sorting_asc:after,
    .oxi-addons-wrapper-' . $oxiid . ' table.dataTable .oxi_datatable_thead .sorting_desc:after,  
    .oxi-addons-wrapper-' . $oxiid . '  table.dataTable .oxi_datatable_thead .sorting_desc disabled:after{
@@ -623,34 +631,34 @@ class Style_2 extends Templates
      
     ';
 
-    $border_thead_left = $border_thead_right = $border_thead_top = $border_thead_bottom = '';
-    if ($styledata[539] == 0) {
-        $border_thead_left = "border-left-width: $styledata[541]px !important;";
-    }
-    if ($styledata[541] == 0) {
-        $border_thead_right = "border-right-width: $styledata[539]px !important;";
-    }
-    if ($styledata[543] == 0) {
-        $border_thead_top = "border-top-width: $styledata[545]px !important;";
-    }
-    if ($styledata[545] == 0) {
-        $border_thead_bottom = "border-bottom-width: $styledata[543]px !important;";
-    }
+        $border_thead_left = $border_thead_right = $border_thead_top = $border_thead_bottom = '';
+        if ($styledata[539] == 0) {
+            $border_thead_left = "border-left-width: $styledata[541]px !important;";
+        }
+        if ($styledata[541] == 0) {
+            $border_thead_right = "border-right-width: $styledata[539]px !important;";
+        }
+        if ($styledata[543] == 0) {
+            $border_thead_top = "border-top-width: $styledata[545]px !important;";
+        }
+        if ($styledata[545] == 0) {
+            $border_thead_bottom = "border-bottom-width: $styledata[543]px !important;";
+        }
 
-    $border_tbody_left = $border_tbody_right = $border_tbody_top = $border_tbody_bottom = '';
-    if ($styledata[550] == 0) {
-        $border_tbody_left = "border-left-width: $styledata[552]px !important;";
-    }
-    if ($styledata[552] == 0) {
-        $border_tbody_right = "border-right-width: $styledata[550]px !important;";
-    }
-    if ($styledata[554] == 0) {
-        $border_tbody_top = "border-top-width: $styledata[556]px !important;";
-    }
-    if ($styledata[556] == 0) {
-        $border_tbody_bottom = "border-bottom-width: $styledata[554]px !important;";
-    }
-    $css .= '
+        $border_tbody_left = $border_tbody_right = $border_tbody_top = $border_tbody_bottom = '';
+        if ($styledata[550] == 0) {
+            $border_tbody_left = "border-left-width: $styledata[552]px !important;";
+        }
+        if ($styledata[552] == 0) {
+            $border_tbody_right = "border-right-width: $styledata[550]px !important;";
+        }
+        if ($styledata[554] == 0) {
+            $border_tbody_top = "border-top-width: $styledata[556]px !important;";
+        }
+        if ($styledata[556] == 0) {
+            $border_tbody_bottom = "border-bottom-width: $styledata[554]px !important;";
+        }
+        $css .= '
     .oxi-addons-wrapper-' . $oxiid . ' table.dataTable .sorting_asc,
     .oxi-addons-wrapper-' . $oxiid . ' table.dataTable .sorting,
     .oxi-addons-wrapper-' . $oxiid . ' table.dataTable .sorting_desc{

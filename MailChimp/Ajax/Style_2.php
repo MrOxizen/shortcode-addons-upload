@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\MailChimp\Ajax;
+namespace SHORTCODE_ADDONS_UPLOAD\Mailchimp\Ajax;
 
 if (!defined('ABSPATH')) {
     exit;

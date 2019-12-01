@@ -955,7 +955,7 @@ class Style_3 extends AdminStyle
                 'showing' => FALSE,
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_ap_audio_v_prog_w',
             $this->style,
             [
@@ -1151,6 +1151,18 @@ class Style_3 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
+        $this->add_control(
+            'sa_ap_audio_prog_sparator',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => TRUE ,
+                'condition' => [
+                    'sa_ap_audio_prog_time_han' => 'yes'
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_ap_audio_prog_time_han_w_h',
             $this->style,
@@ -1172,6 +1184,9 @@ class Style_3 extends AdminStyle
                         'max' => 5,
                         'step' => .1,
                     ],
+                ],
+                'condition' => [
+                    'sa_ap_audio_prog_time_han' => 'yes'
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-time-handle' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
@@ -1200,6 +1215,9 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
+                'condition' => [
+                    'sa_ap_audio_prog_time_han' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-time-handle' => 'left: {{SIZE}}{{UNIT}}; top: {{SIZE}}{{UNIT}};',
                 ],
@@ -1213,6 +1231,9 @@ class Style_3 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#0099d6',
                 'oparetor' => 'RGB',
+                'condition' => [
+                    'sa_ap_audio_prog_time_han' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-time-handle' => 'background: {{VALUE}} !important;'
                 ],
@@ -1225,6 +1246,9 @@ class Style_3 extends AdminStyle
                 'type' => Controls::BORDER,
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-time-handle' => ''
+                ],
+                'condition' => [
+                    'sa_ap_audio_prog_time_han' => 'yes'
                 ],
             ]
         );
@@ -1255,6 +1279,9 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
+                'condition' => [
+                    'sa_ap_audio_prog_time_han' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-time-handle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -1274,6 +1301,19 @@ class Style_3 extends AdminStyle
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'sa_ap_audio_prog_volu_sparator',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => TRUE ,
+                'condition' => [
+                    'sa_ap_audio_prog_volu_han' => 'yes'
+                ],
+
             ]
         );
         $this->add_responsive_control(
@@ -1297,6 +1337,9 @@ class Style_3 extends AdminStyle
                         'max' => 5,
                         'step' => .1,
                     ],
+                ],
+                'condition' => [
+                    'sa_ap_audio_prog_volu_han' => 'yes'
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-horizontal-volume-handle' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
@@ -1325,6 +1368,9 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
+                'condition' => [
+                    'sa_ap_audio_prog_volu_han' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-horizontal-volume-handle' => 'top: {{SIZE}}{{UNIT}};',
                 ],
@@ -1338,6 +1384,9 @@ class Style_3 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'oparetor' => 'RGB',
+                'condition' => [
+                    'sa_ap_audio_prog_volu_han' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-horizontal-volume-handle' => 'background: {{VALUE}} !important;'
                 ],
@@ -1350,6 +1399,9 @@ class Style_3 extends AdminStyle
                 'type' => Controls::BORDER,
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-horizontal-volume-handle' => ''
+                ],
+                'condition' => [
+                    'sa_ap_audio_prog_volu_han' => 'yes'
                 ],
             ]
         );
@@ -1379,6 +1431,9 @@ class Style_3 extends AdminStyle
                         'max' => 10,
                         'step' => .1,
                     ],
+                ],
+                'condition' => [
+                    'sa_ap_audio_prog_volu_han' => 'yes'
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-horizontal-volume-handle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -1541,11 +1596,12 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-pause button::after' => 'font-size: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-playpause-button > button' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
-                    
-                ],
+                'selector' => [ 
+                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-play button::after' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-pause button::after' => 'font-size: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-replay button::after' => 'font-size: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-playpause-button>button' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                 ], 
             ]
         );
         $this->add_responsive_control(
@@ -1651,39 +1707,7 @@ class Style_3 extends AdminStyle
                 'default' => 'f144',
             ]
         );
-        $this->add_responsive_control(
-            'sa_ap_audio_ply_icon_s',
-            $this->style,
-            [
-                'label' => __('Size', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '22',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-replay button::after' => 'font-size: {{SIZE}}{{UNIT}};',
-                        
-                ],
-            ]
-        );
+        
         $this->add_control(
             'sa_ap_audio_ply_icon_c',
             $this->style,

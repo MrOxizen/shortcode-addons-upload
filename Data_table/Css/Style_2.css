@@ -57,7 +57,10 @@
     width: 100%;
     height: auto;
 }
-.oxi-addons-wrapper-datatable-style-2 .oxi-icons{
+.oxi-addons-wrapper-datatable-style-2  .oxi-header-icon .oxi-icons{
+    font-size: 16px;
+}
+.oxi-addons-wrapper-datatable-style-2  .oxi-body-icon .oxi-icons{
     font-size: 16px;
 }
 
@@ -118,13 +121,7 @@
     padding: 5px 15px 5px 15px;
     margin: 0px 0px 5px 0px
 }
-
-.oxi-addons-wrapper-datatable-style-2 .oxi_export_button:hover {
-    background: rgba(90, 186, 189, 1.00) !important;
-    color: #f7f7f7 !important;
-    border-color: #76b4bf !important
-}
-
+ 
 .oxi-addons-wrapper-datatable-style-2 .dataTables_filter>.oxi_filter_label {
     font-size: 16px;
     font-family: "Bree Serif";
@@ -300,8 +297,7 @@
 }
 
 .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
-    border-left-width: 1px !important;
-    width: 70px !important
+    border-left-width: 1px !important; 
 }
 
 .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_tr:last-child .oxi_datatable_th {
@@ -446,12 +442,7 @@
     .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_body>tr>td {
         font-size: 16px !important;
         padding: 12px 8px 10px 8px !important
-    }
-
-    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
-        border-left-width: 1px !important;
-        width: 120px !important
-    }
+    } 
 }
 
 @media only screen and (max-width:668px) {
@@ -544,9 +535,5 @@
         font-size: 16px !important;
         padding: 12px 8px 10px 8px !important
     }
-
-    .oxi-addons-wrapper-datatable-style-2 table.dataTable .oxi_datatable_thead .oxi_datatable_th:first-child {
-        border-left-width: 1px !important;
-        width: 180px !important
-    }
+ 
 }

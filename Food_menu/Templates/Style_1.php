@@ -43,17 +43,11 @@ class Style_1 extends Templates {
 
         $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
-        foreach ($all_data as $key => $data) {
-            
-            
-            
-
-            $heading = $price = $img = '';
-
-
+        foreach ($all_data as $key => $data) {  
+            $heading = $price = $img = ''; 
             if (array_key_exists('sa_el_insert_price', $data) && $data['sa_el_insert_price'] != '') {
                 $price = '<div class="oxi-addonsFM-date ">
-                                $ ' . $this->text_render($data['sa_el_insert_price']) . '
+                                $' . $this->text_render($data['sa_el_insert_price']) . '
                             </div> ';
             }
             if (array_key_exists('sa_el_insert_food_name', $data) && $data['sa_el_insert_food_name'] != '') {
@@ -79,7 +73,7 @@ class Style_1 extends Templates {
 
 
             echo '<a ' . $this->url_render('sa_el_price_link', $data) . '>
-                  <div class="sa-fm-temp-1 oxi-addonsFM-wrapper  ">
+                  <div class="sa-fm-temp-1 oxi-addonsFM-wrapper">
                   <div class="oxi-addons-fm-box-outer   oxi-addons-fm-box-outer-'.$key.'   ' . $class . '">
                     <div class="oxi-addonsFM-row "  ' . $this->animation_render('sa-fm-animation-temp-1', $style) . '>
                         <div class="oxi-addons-fm-box-inner">
