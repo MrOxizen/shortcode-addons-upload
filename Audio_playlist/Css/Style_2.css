@@ -27,7 +27,7 @@
 .sa_addons_ap_list_container_style_2 .jp-controls button,
 .sa_addons_ap_list_container_style_2 .jp-toggles button,
 .sa_addons_ap_list_container_style_2 .jp-volume-controls button {
-    text-indent: 0px !important
+    text-indent: 0px 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-audio,
@@ -44,7 +44,7 @@
 .sa_addons_ap_list_container_style_2 .jp-interface {
     position: static;
     width: 100%;
-    background: rgba(73, 165, 173, 1) !important;
+    background: rgba(73, 165, 173, 1);
     padding: 25px 15px 25px 15px
 }
 
@@ -90,7 +90,7 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls .jp-mute {
-    background: rgba(255, 255, 255, 0.00) !important;
+    background: rgba(255, 255, 255, 0.00) ;
     top: 0;
     border-radius: 0px 0px 0px 0px;
     width: 50px;
@@ -102,7 +102,7 @@
     content: "\f026";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #ffffff !important;
+    color: #ffffff ;
     font-size: 18px;
     position: absolute;
     left: 50%;
@@ -113,12 +113,12 @@
 .sa_addons_ap_list_container_style_2 .jp-state-muted .jp-volume-controls .jp-mute::before {
     content: "\f6a9";
     font-weight: 900;
-    color: #3ac297 !important
+    color: #3ac297 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls .jp-volume-max,
 .jp-audio-stream .jp-volume-controls .jp-volume-max {
-    background: rgba(219, 88, 79, 0.00) !important;
+    background: rgba(219, 88, 79, 0.00) ;
     top: 0;
     border-radius: 0px 0px 0px 0px;
     width: 50px;
@@ -130,7 +130,7 @@
     content: "\f028";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #ffffff !important;
+    color: #ffffff ;
     font-size: 18px;
     position: absolute;
     left: 50%;
@@ -139,7 +139,7 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-volume-controls .jp-volume-max:focus::before {
-    color: #3ac297 !important
+    color: #3ac297 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-audio .jp-volume-controls,
@@ -156,7 +156,7 @@
     width: 500px;
     height: 5px;
     max-width: 100%;
-    padding: 0 !important;
+    padding: 0 ;
     overflow: hidden;
     cursor: pointer;
     border-radius: 0px 0px 0px 0px;
@@ -211,7 +211,7 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous {
-    background: rgba(255, 255, 255, 1.00) !important;
+    background: rgba(255, 255, 255, 1.00) ;
     border-radius: 100px 100px 100px 100px;
     width: 50px;
     height: 50px;
@@ -223,7 +223,7 @@
     content: "\f04a";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #333333 !important;
+    color: #333333 ;
     font-size: 16px;
     position: absolute;
     left: 50%;
@@ -232,12 +232,12 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-previous:focus::before {
-    color: #49a5ad !important
+    color: #49a5ad 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-play,
 .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play {
-    background: rgba(255, 255, 255, 1.00) !important;
+    background: rgba(255, 255, 255, 1.00) ;
     border-radius: 100px 100px 100px 100px;
     width: 80px;
     height: 80px;
@@ -250,7 +250,7 @@
     content: "\f04b";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #171717 !important;
+    color: #171717 ;
     font-size: 16px;
     position: absolute;
     left: 50%;
@@ -261,12 +261,12 @@
 .sa_addons_ap_list_container_style_2 .jp-state-playing div.jp-type-playlist .jp-play::before {
     content: "\f04c";
     font-weight: 900;
-    color: #212121 !important
+    color: #212121 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop,
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus {
-    background: rgba(242, 115, 111, 0.00) !important;
+    background: rgba(242, 115, 111, 0.00) ;
     border-radius: 0px 0px 0px 0px;
     width: 50px;
     height: 50px;
@@ -279,7 +279,7 @@
     content: "\f04d";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #ffffff !important;
+    color: #ffffff ;
     font-size: 16px;
     position: absolute;
     left: 50%;
@@ -288,12 +288,12 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-stop:focus::before {
-    color: #49a5ad !important
+    color: #49a5ad 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next,
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus {
-    background: rgba(255, 255, 255, 1.00) !important;
+    background: rgba(255, 255, 255, 1.00) ;
     border-radius: 100px 100px 100px 100px;
     width: 50px;
     height: 50px;
@@ -306,7 +306,7 @@
     content: "\f04e";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #171717 !important;
+    color: #171717 ;
     font-size: 16px;
     position: absolute;
     left: 50%;
@@ -315,11 +315,11 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-type-playlist .jp-next:focus::before {
-    color: #49a5ad !important
+    color: #49a5ad 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-repeat {
-    background: rgba(204, 68, 219, 0.00) !important;
+    background: rgba(204, 68, 219, 0.00) ;
     border-radius: 0px 0px 0px 0px;
     width: 20px;
     height: 20px;
@@ -331,7 +331,7 @@
     content: "\f2f9";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #ffffff !important;
+    color: #ffffff ;
     font-size: 14px;
     position: absolute;
     left: 50%;
@@ -340,11 +340,11 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-repeat:focus::before {
-    color: #3ac297 !important
+    color: #3ac297 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-shuffle {
-    background: rgba(252, 67, 53, 0.00) !important;
+    background: rgba(252, 67, 53, 0.00) ;
     border-radius: 0px 0px 0px 0px;
     width: 20px;
     height: 20px;
@@ -356,7 +356,7 @@
     content: "\f074";
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    color: #ffffff !important;
+    color: #ffffff ;
     font-size: 18px;
     position: absolute;
     left: 50%;
@@ -365,11 +365,11 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-shuffle:focus::before {
-    color: #3ac297 !important
+    color: #3ac297 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-audio .jp-controls-holder {
-    height: auto !important
+    height: auto 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-audio .jp-toggles {
@@ -379,17 +379,17 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-progress {
-    background: rgba(217, 217, 217, 1.00) !important;
+    background: rgba(217, 217, 217, 1.00) ;
     border-radius: 0px 0px 0px 0px;
     width: 100%;
     height: 8px;
     margin: 0px 0px 0px 0px;
     overflow: hidden;
-    padding: 0 !important
+    padding: 0 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-seek-bar {
-    background: rgba(255, 255, 255, 1.00) !important;
+    background: rgba(255, 255, 255, 1.00) ;
     width: 0;
     height: 100%;
     overflow: hidden;
@@ -397,20 +397,20 @@
 }
 
 .sa_addons_ap_list_container_style_2 .jp-play-bar {
-    background: #3ac297 !important;
+    background: #3ac297 ;
     width: 0;
     height: 100%;
     overflow: hidden
 }
 
 .sa_addons_ap_list_container_style_2 .jp-playlist {
-    background: rgba(255, 255, 255, 1.00) !important;
+    background: rgba(255, 255, 255, 1.00) ;
     padding: 0px 0px 0px 0px
 }
 
 .sa_addons_ap_list_container_style_2 .jp-playlist li {
     position: relative;
-    background: rgba(44, 108, 133, 1) !important;
+    background: rgba(44, 108, 133, 1) ;
     font-family: "Open Sans";
     font-weight: 100;
     font-style: normal;
@@ -420,17 +420,17 @@
     border-bottom: none;
     overflow: hidden;
     margin: 0;
-    padding: 0 !important
+    padding: 0 
 }
 
 .sa_addons_ap_list_container_style_2 .jp-playlist li .jp-playlist-item {
     font-size: 14px;
     padding: 5px 15px 5px 15px!important;
-    color: #ffffff !important
+    color: #ffffff 
 }
 
 .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
-    background: rgba(32, 70, 176, 1.00) !important;
+    background: rgba(32, 70, 176, 1.00) ;
     margin: 0px;
     border-top: none;
     border-bottom: none;
@@ -453,7 +453,7 @@
 }
 
 .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist .jp-playlist-item:hover {
-    color: #f5f2f2 !important
+    color: #f5f2f2 
 }
 
 .sa_addons_ap_list_container_style_2 .sa_addons_ap_list_img {
@@ -622,7 +622,7 @@
         margin: 0px 0px 0px 0px
     }
     .sa_addons_ap_list_container_style_2 .jp-playlist li {
-        padding: 5px 15px 5px 15px !important
+        padding: 5px 15px 5px 15px 
     }
     .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
         padding: 5px 15px 5px 15px
@@ -763,7 +763,7 @@
         margin: 0px 0px 0px 0px
     }
     .sa_addons_ap_list_container_style_2 .jp-playlist li {
-        padding: 5px 15px 5px 15px !important
+        padding: 5px 15px 5px 15px 
     }
     .sa_addons_ap_list_container_style_2 div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
         padding: 5px 15px 5px 15px

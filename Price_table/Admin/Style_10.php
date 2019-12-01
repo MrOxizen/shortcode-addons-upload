@@ -79,7 +79,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 300,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -325,7 +325,7 @@ class Style_10 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -1533,6 +1533,7 @@ class Style_10 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-10 .oxi-addons-link' => ' ',
                 ],

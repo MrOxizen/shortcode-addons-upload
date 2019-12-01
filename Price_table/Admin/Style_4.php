@@ -294,7 +294,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 //'loader' => TRUE,
                 'range' => [
@@ -381,7 +381,7 @@ class Style_4 extends AdminStyle
                 'default' => 'rgba(255,255,255,0.00)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature' => 'background: {{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-addons-main-feature' => 'background: {{VALUE}};'
                 ],
             ]
         );
@@ -392,7 +392,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-7 .oxi-addons-main-feature' => ''
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-addons-main-feature' => ''
                 ],
             ]
         );
@@ -578,6 +578,18 @@ class Style_4 extends AdminStyle
                 ], 
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-addons-price-box' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        
+         $this->add_group_control(
+            'sa_price_table_box_box_sadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-addons-price-box' => ''
                 ],
             ]
         );
@@ -1164,7 +1176,7 @@ class Style_4 extends AdminStyle
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 10,
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -1372,6 +1384,7 @@ class Style_4 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-parent-wrapper-style-4 .oxi-addons-link' => ' ',
                 ],
@@ -1610,8 +1623,8 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Button Text', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'default' => 'Click ME',
-                'placeholder' => 'Click ME',
+                'default' => 'Buy Now',
+                'placeholder' => 'Buy Now',
             ]
         );
         $this->add_group_control(

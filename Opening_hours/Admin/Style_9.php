@@ -43,7 +43,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 600,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -91,7 +91,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -178,7 +178,9 @@ class Style_9 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Header', SHORTCODE_ADDOONS),
             'default' => 'RESERVATIONS',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-header' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -186,7 +188,9 @@ class Style_9 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Sub Header', SHORTCODE_ADDOONS),
             'default' => 'Opening Hours',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-subheader' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -194,7 +198,9 @@ class Style_9 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Footer', SHORTCODE_ADDOONS),
             'default' => 'Book your table now',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-footertext' => ''
+            ],
                 ]
         );
         $this->start_controls_tabs(
@@ -444,7 +450,9 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday to Saturday',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -464,7 +472,9 @@ class Style_9 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
@@ -610,14 +620,91 @@ class Style_9 extends AdminStyle {
 
         $this->end_controls_tab();
         $this->end_controls_tabs();
+        
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'cp' => esc_html__('Content Padding', SHORTCODE_ADDOONS),
+                'hp' => esc_html__('Hover Padding', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+                'sa_oh_content_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+                'sa_oh_content_hover_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-content:hover' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
+        
         $this->add_responsive_control(
                 'sa_oh_contentT_padding', $this->style, [
-            'label' => __('Content Padding', SHORTCODE_ADDOONS),
+            'label' => __('Full Content Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 10,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -658,14 +745,15 @@ class Style_9 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-9 .oxi-addonsOH-SX-button-link' => ''
+            ],
                 ]
         );
         $this->add_group_control(
                 'sa_oh_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
-                ]
+               ]
         );
         $this->add_control(
                 'sa_oh_btn_position', $this->style, [
@@ -741,7 +829,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -825,7 +913,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -881,7 +969,7 @@ class Style_9 extends AdminStyle {
             'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 10,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
@@ -911,7 +999,7 @@ class Style_9 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
            'default' => [
                 'unit' => 'px',
-                'size' => 10,
+                'size' => '',
             ],
             'range' => [
                 '%' => [

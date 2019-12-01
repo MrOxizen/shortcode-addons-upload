@@ -51,35 +51,35 @@ class Style_4 extends AdminStyle {
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-4-{{KEY}} .oxi-addons-EW-body-time' => '',
+                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-'.$this->oxiid.'-{{KEY}} .oxi-addons-EW-body-time' => '',
                     ],
                 ],
                 'sa_event_t_title' => [
                     'label' => __('Title', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-4-{{KEY}} .oxi-addons-EW-body-time' => '',
+                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-'.$this->oxiid.'-{{KEY}} .oxi-addons-EW-body-time' => '',
                     ],
                 ],
                 'sa_event_t_Author' => [
                     'label' => __('Author', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-4-{{KEY}} .oxi-addons-EW-image-overlay-heading' => '',
+                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-'.$this->oxiid.'-{{KEY}} .oxi-addons-EW-image-overlay-heading' => '',
                     ],
                 ],
                 'sa_event_t_location' => [
                     'label' => __('Location', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-4-{{KEY}} .oxi-addons-EW-image-overlay-price' => '',
+                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-'.$this->oxiid.'-{{KEY}} .oxi-addons-EW-image-overlay-price' => '',
                     ],
                 ],
                 'sa_event_t_info_text' => [
                     'label' => __('Info text', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-4-{{KEY}} .oxi-addons-EW-image-overlay-details' => '',
+                        '{{WRAPPER}} .oxi-addons-EW-wrapper-style-4.oxi-addons-EW-wrapper-style-'.$this->oxiid.'-{{KEY}} .oxi-addons-EW-image-overlay-details' => '',
                     ],
                 ],
             ],
@@ -237,7 +237,7 @@ class Style_4 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-EW-wrapper-style-3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-EV-style-4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -245,7 +245,7 @@ class Style_4 extends AdminStyle {
                 'sa_event_widgets_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .shortcode-addons-wrapper-179 .oxi-addons-EV-style-4 .oxi-addons-EV-row' => ''
+                '{{WRAPPER}} .oxi-addons-EV-style-4 .oxi-addons-EV-row' => ''
             ],
                 ]
         );

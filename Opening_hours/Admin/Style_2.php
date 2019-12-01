@@ -58,6 +58,13 @@ class Style_2 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2.oxi-addonsOH-T-wrapper-2-{{KEY}} .oxi-addonsOH-T-row' => ''
                     ],
                 ],
+                'sa_oh_br' => [
+                    'type' => Controls::BORDER,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2.oxi-addonsOH-T-wrapper-2-{{KEY}} .oxi-addonsOH-T-row' => ''
+                    ],
+                ],
                 'sa_oh_start_tabs' => [
                     'controller' => 'start_controls_tabs',
                     'options' => [
@@ -73,7 +80,9 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'SUN',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2.oxi-addonsOH-T-wrapper-2-{{KEY}} .oxi-addonsOH-T-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -93,7 +102,9 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2.oxi-addonsOH-T-wrapper-2-{{KEY}} .oxi-addonsOH-T-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
@@ -114,10 +125,12 @@ class Style_2 extends AdminStyle {
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'far fa-clock',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2.oxi-addonsOH-T-wrapper-2-{{KEY}} .oxi-addonsOH-T-icon' => ''
+                    ],
                 ],
                 'sa_oh_icon_color' => [
-                    'label' => __('Time Color', SHORTCODE_ADDOONS),
+                    'label' => __('Icon Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
                     'default' => '#000000',
                     'selector' => [
@@ -135,7 +148,7 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-
+       
 
         $this->end_controls_section();
 
@@ -181,14 +194,7 @@ class Style_2 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_oh_br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addonsOH-T-wrapper-2 .oxi-addonsOH-T-row' => ''
-            ],
-                ]
-        );
+        
 
         $this->add_responsive_control(
                 'sa_oh_br_radius', $this->style, [

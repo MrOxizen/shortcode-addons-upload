@@ -12,14 +12,11 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates
-{
+class Style_2 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
         $title = '';
         $oxiid = $this->oxiid;
 
@@ -198,15 +195,16 @@ class Style_2 extends Templates
         }
         ';
     }
-    public function public_jquery()
-    {
+
+    public function public_jquery() {
+        echo wp_enqueue_media();
         $this->JSHANDLE = 'jplayer-playlist-min';
         wp_enqueue_style('jplayer-pink-flag-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/skin/pink-flag/css/jplayer-pink-flag-min.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('jquery-jplayer-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jquery-jplayer-min.js', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('jplayer-playlist-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jplayer-playlist-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
-    public function inline_public_jquery()
-    {
+
+    public function inline_public_jquery() {
         $jquery = '';
         $styledata = $this->style;
         $oxiid = $this->oxiid;
@@ -246,8 +244,7 @@ class Style_2 extends Templates
         return $jquery;
     }
 
-    public function old_render()
-    {
+    public function old_render() {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -257,14 +254,14 @@ class Style_2 extends Templates
 
         echo wp_enqueue_media();
         wp_enqueue_style('jplayer-pink-flag-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/skin/pink-flag/css/jplayer-pink-flag-min.css', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('jplayer-playlist-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jplayer-playlist-min.js', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('jquery-jplayer-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jquery-jplayer-min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jplayer-playlist-min', SA_ADDONS_UPLOAD_URL . '/Audio_playlist/File/jplayer-playlist-min.js', false, SA_ADDONS_PLUGIN_VERSION);
 
         $css = '';
         $jquery = '';
         echo '<div class="oxi-addons-container"> ';
         echo '<div class="oxi-addons-row"> ';
-        
+
         $suffle_repeat = $volume_control = $player_control = $time_control = $progress = $playlist = $title = $repeat = $shuffle = '';
         $previous_type = $play_type = $pause_type = $stop_type = $next_type = $min_volume_type = $mute_volume_type = $max_volume_type = $repeat_type = $shuffle_type = '';
         if ($styledata[804] == 'regular') {
@@ -1243,6 +1240,7 @@ class Style_2 extends Templates
             }
         }';
         wp_add_inline_style('shortcode-addons-style', $css);
-        wp_add_inline_script('jquery-jplayer-min', $jquery);
+        wp_add_inline_script('jplayer-playlist-min', $jquery);
     }
+
 }

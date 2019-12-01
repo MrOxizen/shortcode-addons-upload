@@ -195,7 +195,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'far fa-bell',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-F-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_icon' => 'yes',
             ],
@@ -248,7 +250,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-       
+
         $this->add_responsive_control(
                 'sa_ab_icon_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -302,7 +304,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-times',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-L-icon' => ''
+            ],
             'condition' => [
                 'sa_ab_ci' => 'yes',
             ],
@@ -355,7 +359,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-       
+
         $this->add_responsive_control(
                 'sa_ab_ci_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -476,43 +480,16 @@ class Style_4 extends AdminStyle {
             'return_value' => 'yes',
                 ]
         );
-        $this->add_control(
-                'sa_ab_content_align', $this->style, [
-            'label' => __('Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => 'text-align: {{VALUE}};',
-            ],
-            'condition' => [
-                'sa_ab_text' => 'yes',
-            ],
-                ]
-        );
+        
         $this->add_control(
                 'sa_ab_content_header', $this->style, [
             'type' => Controls::TEXT,
             'label' => __('Header Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Header Text', SHORTCODE_ADDOONS),
             'default' => 'Alert',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -524,7 +501,9 @@ class Style_4 extends AdminStyle {
             'label' => __('Description', SHORTCODE_ADDOONS),
             'placeholder' => __('Description', SHORTCODE_ADDOONS),
             'default' => 'This is a Nice Alert Box',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => ''
+            ],
             'condition' => [
                 'sa_ab_text' => 'yes',
             ],
@@ -557,6 +536,7 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_header_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-H' => ''
             ],
@@ -618,6 +598,7 @@ class Style_4 extends AdminStyle {
         $this->add_group_control(
                 'sa_address_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-AL-FO-4 .oxi-addonsAL-FO-DC' => ''
             ],

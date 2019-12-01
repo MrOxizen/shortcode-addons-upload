@@ -91,6 +91,7 @@ class Style_1 extends AdminStyle {
                 'sa_event_t_head' => [
                     'label' => __('Heading Text', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
+                    'default' => 'Contrary to Popular',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-C-heading' => '',
                     ],
@@ -98,6 +99,7 @@ class Style_1 extends AdminStyle {
                 'sa_event_t_info_text' => [
                     'label' => __('Info text', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
+                    'default' => 'Lorem ipsum dolor sit amet dolor sit amet consectetur adipiscing.',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-C-text' => '',
                     ],
@@ -105,6 +107,7 @@ class Style_1 extends AdminStyle {
                 'sa_event_t_button' => [
                     'label' => __('Button Text', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
+                    'default' => 'Click Here',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-EW-wrapper-style-1.oxi-addons-EW-wrapper-style-1-{{KEY}} .oxi-addons-EW-C-button-link' => '',
                     ],

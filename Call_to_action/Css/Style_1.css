@@ -51,7 +51,6 @@
     font-size: 18px;
     color: #242424;
     background: rgba(255, 208, 18, 1.00);
-    border-width: 0px 0px 0px 0px;
     border-style: solid;
     border-color: #ffffff;
     font-family: "Raleway";
@@ -90,7 +89,6 @@
     }
     .sa_addons_cta_style_1 .sa_addons_cta_btn_content .sa_addons_cta_btn {
         font-size: 16px;
-        border-width: 0px 0px 0px 0px;
         border-radius: 50px 50px 50px 50px;
         padding: 15px 25px 15px 25px
     }
@@ -118,7 +116,6 @@
     }
     .sa_addons_cta_style_1 .sa_addons_cta_btn_content .sa_addons_cta_btn {
         font-size: 12px;
-        border-width: 0px 0px 0px 0px;
         border-radius: 50px 50px 50px 50px;
         padding: 15px 20px 15px 20px
     }

@@ -58,6 +58,21 @@ class Style_4 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-row' => ''
                     ],
                 ],
+                'sa_oh_br' => [
+                    'type' => Controls::BORDER,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-row' => ''
+                    ],
+                ],
+                'sa_oh_box_shadow' => [
+                    'type' => Controls::BOXSHADOW,
+                    'controller' => 'add_group_control',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-row' => ''
+                    ],
+                ],
+             
                 'sa_oh_start_tabs' => [
                     'controller' => 'start_controls_tabs',
                     'options' => [
@@ -74,10 +89,12 @@ class Style_4 extends AdminStyle {
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'far fa-clock',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-icon' => ''
+                    ],
                 ],
                 'sa_oh_icon_color' => [
-                    'label' => __('Time Color', SHORTCODE_ADDOONS),
+                    'label' => __('Icon Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
                     'default' => '#000000',
                     'selector' => [
@@ -108,7 +125,9 @@ class Style_4 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday to Saturday',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -128,7 +147,9 @@ class Style_4 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4.oxi-addonsOH-F-wrapper-4-{{KEY}} .oxi-addonsOH-F-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
@@ -195,14 +216,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_group_control(
-                'sa_oh_br', $this->style, [
-            'type' => Controls::BORDER,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4 .oxi-addonsOH-F-row' => ''
-            ],
-                ]
-        );
+
 
         $this->add_responsive_control(
                 'sa_oh_br_radius', $this->style, [
@@ -234,14 +248,7 @@ class Style_4 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4 .oxi-addonsOH-F-row' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],]
         );
-        $this->add_group_control(
-                'sa_oh_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addonsOH-F-wrapper-4 .oxi-addonsOH-F-row' => ''
-            ],
-                ]
-        );
+       
 
         $this->add_group_control(
                 'sa_oh_animation', $this->style, [
@@ -480,7 +487,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_oh_day_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,
@@ -533,7 +540,7 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_oh_time_tx_shadow', $this->style, [
             'type' => Controls::TEXTSHADOW,

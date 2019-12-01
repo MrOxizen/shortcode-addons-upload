@@ -50,7 +50,9 @@ class Style_8 extends AdminStyle {
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
                     'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
                     'default' => 'far fa-clock',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-icon' => ''
+                    ],
                 ],
                 'sa_oh_icon_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
@@ -70,7 +72,9 @@ class Style_8 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday to Saturday',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-heading-text' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -90,7 +94,9 @@ class Style_8 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .sa_oh_wrapper_{{KEY}} .oxi-addonsOH-SX-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),
@@ -307,6 +313,82 @@ class Style_8 extends AdminStyle {
 
 
 
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
+        
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'cp' => esc_html__('Content Padding', SHORTCODE_ADDOONS),
+                'hp' => esc_html__('Hover Padding', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+                'sa_oh_content_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .oxi-addonsOH-SX-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+                'sa_oh_content_hover_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addonsOH-SX-wrapper-8 .oxi-addonsOH-SX-content:hover' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
         $this->end_controls_tab();
         $this->end_controls_tabs();
         

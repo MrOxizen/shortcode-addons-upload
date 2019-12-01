@@ -108,7 +108,7 @@ class Style_1 extends Templates {
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
 
-            echo '<div class="sa_button_effect_temp_1   sa_o_f_m   sa_button_effect_temp_1_'.$key.'   "  ' . $this->animation_render('sa-be-main-box-animation', $style) . '>';
+            echo '<div class="oxi_addons_button_effect_style_1   sa_o_f_m   oxi_addons_button_effect_style_1_'.$key.'   "  ' . $this->animation_render('sa-be-main-box-animation', $style) . '>';
             echo '  <div class="oxi-button-hover-map-139">
                         <div class="oxi-button-hover-map-body">
                             <div class="oxi-button-hover">

@@ -75,7 +75,9 @@ class Style_24 extends AdminStyle {
                     'label' => __('Title Text', SHORTCODE_ADDOONS),
                     'placeholder' => __('Title Text', SHORTCODE_ADDOONS),
                     'default' => 'Fully Customizable',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style24.oxi-hover-effects-style24-{{KEY}} .oxi-hover-info .oxi-button-heading' => ''
+                    ],
                 ],
                 'sa_he_title_color' => [
                     'label' => __('Color', SHORTCODE_ADDOONS),
@@ -89,7 +91,6 @@ class Style_24 extends AdminStyle {
                     'label' => __('Animaton', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
                     'default' => 'ihewc-fade-up',
-                    'loader' => TRUE,
                     'options' => [
                         'ihewc-fade-up' => __('Fade Up', SHORTCODE_ADDOONS),
                         'ihewc-fade-down' => __('Fade Down', SHORTCODE_ADDOONS),
@@ -103,6 +104,10 @@ class Style_24 extends AdminStyle {
                         'ihewc-zoom-out' => __('Zoom Out', SHORTCODE_ADDOONS),
                         'ihewc-flip-x' => __('Flip X', SHORTCODE_ADDOONS),
                         'ihewc-flip-y' => __('Flip Y', SHORTCODE_ADDOONS),
+                    ],
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style24.oxi-hover-effects-style24-{{KEY}} .oxi-button-heading' => '',
+                        '{{WRAPPER}} .oxi-hover-effects-style24.oxi-hover-effects-style24-{{KEY}} .headingunderline-body' => ''
                     ],
                 ],
                 'sa_oh_end_tab_1' => [
@@ -116,7 +121,9 @@ class Style_24 extends AdminStyle {
                     'label' => __('Description Text', SHORTCODE_ADDOONS),
                     'placeholder' => __('Description Text', SHORTCODE_ADDOONS),
                     'default' => 'Lorem ipsum dolor sit amt, consecrate disciplining elite.',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style24.oxi-hover-effects-style24-{{KEY}} .oxi-hover-info .oxi-button-content' => ''
+                    ],
                 ],
                 'sa_he_des_color' => [
                     'label' => __('Color', SHORTCODE_ADDOONS),
@@ -130,7 +137,6 @@ class Style_24 extends AdminStyle {
                     'label' => __('Animaton', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
                     'default' => 'ihewc-fade-up',
-                    'loader' => TRUE,
                     'options' => [
                         'ihewc-fade-up' => __('Fade Up', SHORTCODE_ADDOONS),
                         'ihewc-fade-down' => __('Fade Down', SHORTCODE_ADDOONS),
@@ -145,6 +151,9 @@ class Style_24 extends AdminStyle {
                         'ihewc-flip-x' => __('Flip X', SHORTCODE_ADDOONS),
                         'ihewc-flip-y' => __('Flip Y', SHORTCODE_ADDOONS),
                     ],
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style24.oxi-hover-effects-style24-{{KEY}} .oxi-button-content' => '',
+                    ],
                 ],
                 'sa_oh_end_tab_2' => [
                     'controller' => 'end_controls_tab',
@@ -157,7 +166,9 @@ class Style_24 extends AdminStyle {
                     'label' => __('Button Text', SHORTCODE_ADDOONS),
                     'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
                     'default' => 'Buy Now',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style24.oxi-hover-effects-style24-{{KEY}} .oxi-he-button' => '',
+                    ],
                 ],
                 'sa_oh_start_tabs2' => [
                     'controller' => 'start_controls_tabs',
@@ -215,8 +226,7 @@ class Style_24 extends AdminStyle {
                     'label' => __('Animaton', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
                     'default' => 'ihewc-fade-up',
-                    'loader' => TRUE,
-                    'options' => [
+                     'options' => [
                         'ihewc-fade-up' => __('Fade Up', SHORTCODE_ADDOONS),
                         'ihewc-fade-down' => __('Fade Down', SHORTCODE_ADDOONS),
                         'ihewc-fade-left' => __('Fade Left', SHORTCODE_ADDOONS),
@@ -229,6 +239,9 @@ class Style_24 extends AdminStyle {
                         'ihewc-zoom-out' => __('Zoom Out', SHORTCODE_ADDOONS),
                         'ihewc-flip-x' => __('Flip X', SHORTCODE_ADDOONS),
                         'ihewc-flip-y' => __('Flip Y', SHORTCODE_ADDOONS),
+                    ],
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-hover-effects-style24.oxi-hover-effects-style24-{{KEY}} .oxi-he-button' => '',
                     ],
                 ],
                 'sa_oh_end_tab_3' => [
@@ -329,9 +342,14 @@ class Style_24 extends AdminStyle {
                     'max' => 500,
                     'step' => 1,
                 ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-hover-effects-style24 .oxi-hover-effects-map-style24:after' => 'padding-bottom:{{SIZE}}%;'
+                '{{WRAPPER}} .oxi-hover-effects-style24 .oxi-hover-effects-map-style24:after' => 'padding-bottom:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -499,6 +517,32 @@ class Style_24 extends AdminStyle {
                 ]
         );
 
+        $this->add_control(
+                'sa_he_content_transiton', $this->style, [
+            'label' => __('Animation Transition', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 's',
+                'size' => '0.35',
+            ],
+            'range' => [
+                's' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 0.05,
+                ],
+                'ms' => [
+                    'min' => 0,
+                    'max' => 10000,
+                    'step' => 1,
+                ],
+            ],
+           'selector' => [
+                '{{WRAPPER}} .oxi-hover-effects-style24 .oxi-hover-effects .oxi-hover-info' => 'transition-duration: {{SIZE}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-hover-effects-style24 .oxi-hover-effects .oxi-hover-img' => 'transition-duration: {{SIZE}}{{UNIT}}',
+            ],
+                ]
+        );
         $this->add_responsive_control(
                 'sa_he_content_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -672,6 +716,11 @@ class Style_24 extends AdminStyle {
                 'px' => [
                     'min' => 0,
                     'max' => 1500,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [

@@ -11,23 +11,23 @@ and open the template in the editor.
 
 
 
-.sa_button_effect_temp_7{
+.oxi_addons_button_effect_style_7{
     height: auto;
     margin: auto;
 }
-.sa_button_effect_temp_7 .oxi-button-hover-map{
+.oxi_addons_button_effect_style_7 .oxi-button-hover-map{
     max-width: auto;
     width: 100%;
     margin: 0 auto;
     position: relative;
     height: 100%;
 }
-.sa_button_effect_temp_7 .oxi-button-hover-map-161:after{
+.oxi_addons_button_effect_style_7 .oxi-button-hover-map-161:after{
     padding-bottom: 80%;
     content: "";
     display: block;
 }
-.sa_button_effect_temp_7 .oxi-button-hover-map-body{
+.oxi_addons_button_effect_style_7 .oxi-button-hover-map-body{
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@ and open the template in the editor.
     height: 100%;
     display: block;
 }
-.sa_button_effect_temp_7 .oxi-button-hover{
+.oxi_addons_button_effect_style_7 .oxi-button-hover{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -48,12 +48,12 @@ and open the template in the editor.
     border-radius: 0px 0px 0px 0px;
     box-shadow:  0px 0px 3px 1px rgba(224, 224, 224, 0.74);
 }
-.sa_button_effect_temp_7 .oxi-button-hover:hover{
+.oxi_addons_button_effect_style_7 .oxi-button-hover:hover{
     box-shadow:  0px 0px 3px 1px rgba(109, 3, 222, 0.49);
     border-radius: 0px 0px 0px 0px;
 }
-.sa_button_effect_temp_7 .oxi-button-img,
-.sa_button_effect_temp_7 .oxi-button-img img{
+.oxi_addons_button_effect_style_7 .oxi-button-img,
+.oxi_addons_button_effect_style_7 .oxi-button-img img{
     position: absolute;
     display: block;
     top: 0;
@@ -64,11 +64,11 @@ and open the template in the editor.
     height: 100% !important;
     border-radius: 0px 0px 0px 0px;
 }
-.sa_button_effect_temp_7 .oxi-button-img:hover,
-.sa_button_effect_temp_7 .oxi-button-img:hover img{
+.oxi_addons_button_effect_style_7 .oxi-button-img:hover,
+.oxi_addons_button_effect_style_7 .oxi-button-img:hover img{
     border-radius: 0px 0px 0px 0px;
 }
-/*.sa_button_effect_temp_7 .oxi-button-info{
+/*.oxi_addons_button_effect_style_7 .oxi-button-info{
     display:flex;
     justify-content: center; align-items: center;
     position: absolute;
@@ -85,12 +85,12 @@ and open the template in the editor.
     padding: 20px 20px 20px 20px;
     border-radius: 0px 0px 0px 0px;
 }*/
-.sa_button_effect_temp_7 .oxi-button-hover:hover .oxi-button-info{
+.oxi_addons_button_effect_style_7 .oxi-button-hover:hover .oxi-button-info{
     opacity:1;
     border-radius: 0px 0px 0px 0px;
 }
 
-.sa_button_effect_temp_7 .oxi-button-hover a .oxi-icons{
+.oxi_addons_button_effect_style_7 .oxi-button-hover a .oxi-icons{
     background: rgba(255, 255, 255, 1);
     color: #9100bd;
     display: inline-flex;
@@ -107,7 +107,7 @@ and open the template in the editor.
     border-radius: 50px 50px 50px 50px;
     margin:3px 3px 3px 3px;
 }
-.sa_button_effect_temp_7 .oxi-button-hover:hover a .oxi-icons:hover{
+.oxi_addons_button_effect_style_7 .oxi-button-hover:hover a .oxi-icons:hover{
     background: rgba(145, 0, 189, 0.81);
     color: #ffffff;
     border-color:#ffffff;
@@ -115,32 +115,32 @@ and open the template in the editor.
     border-radius: 50px 50px 50px 50px;
 }
 @media only screen and (min-width : 669px) and (max-width : 993px){
-    .sa_button_effect_temp_7{
+    .oxi_addons_button_effect_style_7{
         padding: 3px 3px 3px 3px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover:hover{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover:hover{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-img,
-    .sa_button_effect_temp_7 .oxi-button-img img{
+    .oxi_addons_button_effect_style_7 .oxi-button-img,
+    .oxi_addons_button_effect_style_7 .oxi-button-img img{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-img:hover,
-    .sa_button_effect_temp_7 .oxi-button-img:hover img{
+    .oxi_addons_button_effect_style_7 .oxi-button-img:hover,
+    .oxi_addons_button_effect_style_7 .oxi-button-img:hover img{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-info{
+    .oxi_addons_button_effect_style_7 .oxi-button-info{
         padding: 20px 20px 20px 20px;
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover:hover .oxi-button-info{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover:hover .oxi-button-info{
         border-radius: 0px 0px 0px 0px;
     }
 
-    .sa_button_effect_temp_7 .oxi-button-hover a .oxi-icons{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover a .oxi-icons{
         font-size: 18px;
         width: 40px;
         height: 40px;
@@ -148,36 +148,36 @@ and open the template in the editor.
         border-radius: 50px 50px 50px 50px;
         margin:3px 3px 3px 3px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover:hover a .oxi-icons:hover{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover:hover a .oxi-icons:hover{
         border-radius: 50px 50px 50px 50px;
     }
 }
 @media only screen and (max-width : 668px){
-    .sa_button_effect_temp_7{
+    .oxi_addons_button_effect_style_7{
         padding: 3px 3px 3px 3px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover:hover{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover:hover{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-img,
-    .sa_button_effect_temp_7 .oxi-button-img img{
+    .oxi_addons_button_effect_style_7 .oxi-button-img,
+    .oxi_addons_button_effect_style_7 .oxi-button-img img{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-img:hover,
-    .sa_button_effect_temp_7 .oxi-button-img:hover img{
+    .oxi_addons_button_effect_style_7 .oxi-button-img:hover,
+    .oxi_addons_button_effect_style_7 .oxi-button-img:hover img{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-info{
+    .oxi_addons_button_effect_style_7 .oxi-button-info{
         padding: 20px 20px 20px 20px;
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover:hover .oxi-button-info{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover:hover .oxi-button-info{
         border-radius: 0px 0px 0px 0px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover a .oxi-icons{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover a .oxi-icons{
         font-size: 18px;
         width: 40px;
         height: 40px;
@@ -185,39 +185,39 @@ and open the template in the editor.
         border-radius: 50px 50px 50px 50px;
         margin:3px 3px 3px 3px;
     }
-    .sa_button_effect_temp_7 .oxi-button-hover:hover a .oxi-icons:hover{
+    .oxi_addons_button_effect_style_7 .oxi-button-hover:hover a .oxi-icons:hover{
         border-radius: 50px 50px 50px 50px;
     }
 }
-.sa_button_effect_temp_7 .oxi-button-left-to-right .oxi-button-hover a{
+.oxi_addons_button_effect_style_7 .oxi-button-left-to-right .oxi-button-hover a{
     -webkit-transform: rotateZ(360deg);
     -moz-transform: rotateZ(360deg);
     -ms-transform: rotateZ(360deg);
     -o-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
 }
-.sa_button_effect_temp_7 .oxi-button-left-to-right:hover .oxi-button-hover a{
+.oxi_addons_button_effect_style_7 .oxi-button-left-to-right:hover .oxi-button-hover a{
     -webkit-transform: rotateZ(0deg);
     -moz-transform: rotateZ(0deg);
     -ms-transform: rotateZ(0deg);
     -o-transform: rotateZ(0deg);
     transform: rotateZ(0deg);
 }
-.sa_button_effect_temp_7 .oxi-button-right-to-left .oxi-button-hover a{
+.oxi_addons_button_effect_style_7 .oxi-button-right-to-left .oxi-button-hover a{
     -webkit-transform: rotateZ(-360deg);
     -moz-transform: rotateZ(-360deg);
     -ms-transform: rotateZ(-360deg);
     -o-transform: rotateZ(-360deg);
     transform: rotateZ(-360deg);
 }
-.sa_button_effect_temp_7 .oxi-button-right-to-left:hover .oxi-button-hover a{
+.oxi_addons_button_effect_style_7 .oxi-button-right-to-left:hover .oxi-button-hover a{
     -webkit-transform: rotateZ(0deg);
     -moz-transform: rotateZ(0deg);
     -ms-transform: rotateZ(0deg);
     -o-transform: rotateZ(0deg);
     transform: rotateZ(0deg);
 }
-.sa_button_effect_temp_7 .top-left {
+.oxi_addons_button_effect_style_7 .top-left {
     display: flex;
     position: absolute;
     top: 0;
@@ -228,7 +228,7 @@ and open the template in the editor.
     background: rgba(238, 30, 245, 0.49);
     padding: 20px 20px 20px 20px;
 }
-.sa_button_effect_temp_7 .top-middle {
+.oxi_addons_button_effect_style_7 .top-middle {
     display: flex;
     position: absolute;
     top: 0;
@@ -240,7 +240,7 @@ and open the template in the editor.
     padding: 20px 20px 20px 20px;
     justify-content: center;
 }
-.sa_button_effect_temp_7 .top-right {
+.oxi_addons_button_effect_style_7 .top-right {
     display: flex;
     position: absolute;
     top: 0;
@@ -252,7 +252,7 @@ and open the template in the editor.
     padding: 20px 20px 20px 20px;
     justify-content: end;
 }
-.sa_button_effect_temp_7 .middle-left {
+.oxi_addons_button_effect_style_7 .middle-left {
     display: flex;
     align-items: center;
     position: absolute;
@@ -264,7 +264,7 @@ and open the template in the editor.
     background: rgba(238, 30, 245, 0.49);
     padding: 20px 20px 20px 20px;
 }
-.sa_button_effect_temp_7 .middle-middle {
+.oxi_addons_button_effect_style_7 .middle-middle {
     display: flex;
     align-items: center;
     position: absolute;
@@ -277,7 +277,7 @@ and open the template in the editor.
     padding: 20px 20px 20px 20px;
     justify-content: center;
 }
-.sa_button_effect_temp_7 .middle-right {
+.oxi_addons_button_effect_style_7 .middle-right {
     display: flex;
     align-items: center;
     position: absolute;
@@ -290,7 +290,7 @@ and open the template in the editor.
     padding: 20px 20px 20px 20px;
     justify-content: end;
 }
-.sa_button_effect_temp_7 .bottom-left {
+.oxi_addons_button_effect_style_7 .bottom-left {
     display: flex;
     align-items: end;
     position: absolute;
@@ -302,7 +302,7 @@ and open the template in the editor.
     background: rgba(238, 30, 245, 0.49);
     padding: 20px 20px 20px 20px;
 }
-.sa_button_effect_temp_7 .bottom-middle {
+.oxi_addons_button_effect_style_7 .bottom-middle {
     display: flex;
     align-items: end;
     position: absolute;
@@ -315,7 +315,7 @@ and open the template in the editor.
     padding: 20px 20px 20px 20px;
     justify-content: center;
 }
-.sa_button_effect_temp_7 .bottom-right {
+.oxi_addons_button_effect_style_7 .bottom-right {
     display: flex;
     align-items: end;
     position: absolute;

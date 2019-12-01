@@ -18,23 +18,8 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_4 extends Templates
 {
 
-    public function inline_public_jquery()
-    {
-        $a = $this->style['sa_event_widgets_opening'];
-        $jquery = ' jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-info") . slideToggle("slow");
-                    jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-head' . $a . '") . addClass("oxi-active");
-                    jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-info' . $a . '") . slideToggle("slow");
-                    jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-head") . on("click", function () {
-                    if (jQuery(this) . hasClass("oxi-active")) {
-                        jQuery(this) . removeClass("oxi-active");
-                        jQuery(this) . parent() . children(".oxi-addons-EV-info") . slideToggle("slow");
-                    } else {
-                        jQuery(this) . addClass("oxi-active");
-                        jQuery(this) . parent() . children(".oxi-addons-EV-info") . slideToggle("slow");
-                    }
-                });';
-        return $jquery;
-    }
+    
+    
 
     public function default_render($style, $child, $admin)
     {
@@ -45,7 +30,7 @@ class Style_4 extends Templates
         $all_data = (array_key_exists('sa_event_widgets_data', $style) && is_array($style['sa_event_widgets_data'])) ? $style['sa_event_widgets_data'] : [];
 
         foreach ($all_data as $key => $listitemdata) {
-            if ($this->media_render('sa_event_t_media', $style) != '') {
+            if ($this->media_render('sa_event_t_media', $listitemdata) != '') {
                 $media = $this->media_render('sa_event_t_media', $listitemdata);
             } else {
 
@@ -86,7 +71,7 @@ class Style_4 extends Templates
                                     ' . $this->text_render($listitemdata['sa_event_t_location']) . '
                                  </div>';
             endif;
-            echo '<div class="oxi-addons-EV-style-4 .oxi-addons-EW-wrapper-style-4-' . $key . '">
+            echo '<div class="oxi-addons-EV-style-4 .oxi-addons-EW-wrapper-style-'.$this->oxiid.'-' . $key . '">
                 <div class="oxi-addons-EV-row" ' . $this->animation_render('sa_event_widgets_animation', $style) . '>
                     <div class="oxi-addons-EV-head">
                         ' . $imagepositionleft . '
@@ -106,6 +91,28 @@ class Style_4 extends Templates
             </div>';
         }
     }
+    
+    
+    
+    public function inline_public_jquery()
+    {
+        $a = $this->style['sa_event_widgets_opening'];
+        $jquery = ' jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-info") . slideToggle("slow");
+                    jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-head' . $a . '") . addClass("oxi-active");
+                    jQuery(".oxi-addons-EV-style-4 .oxi-addons-EV-info' . $a . '") . slideToggle("slow");
+                    jQuery(" .' . $this->WRAPPER . '  .oxi-addons-EV-style-4 .oxi-addons-EV-head") . on("click", function () {
+                    if (jQuery(this) . hasClass("oxi-active")) {
+                        jQuery(this) . removeClass("oxi-active");
+                        jQuery(this) . parent() . children(".oxi-addons-EV-info") . slideToggle("slow");
+                    } else {
+                        jQuery(this) . addClass("oxi-active");
+                        jQuery(this) . parent() . children(".oxi-addons-EV-info") . slideToggle("slow");
+                    }
+                });';
+        return $jquery;
+    }
+    
+    
 
     public function old_render()
     {

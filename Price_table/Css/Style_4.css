@@ -18,7 +18,7 @@
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 4px 5px -1px rgba(196, 196, 196, 1);
     transform: scale(1);
-    transition: all .5s !important; 
+    transition: all .5s; 
     max-width: 250px
 }
 
@@ -50,7 +50,6 @@
     height: 40px;
     max-height: 100%;
     line-height: 1.5;
-    left: -66px;
     top: 15px;
     transform: rotate(-45deg);
     transform-origin: 50% 50%;
@@ -184,7 +183,7 @@
     align-items: center;
 }
 
-.oxi-addons-parent-wrapper-style-4   .oxi-addons-link { 
+.oxi-addons-parent-wrapper-style-4 .oxi-addons-link { 
     color: #ffffff;
     background: rgba(15, 125, 96, 1);
     border: 0px none;

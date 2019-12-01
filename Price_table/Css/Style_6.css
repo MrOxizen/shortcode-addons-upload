@@ -15,7 +15,7 @@
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 7px 15px -6px rgba(18, 18, 18, 0.49); 
     transform: scale(1);
-    transition: all .5s !important;
+    transition: all .5s;
     cursor: pointer;
     max-width: 250px
 }
@@ -61,7 +61,6 @@
     height: 40px;
     max-height: 100%;
     line-height: 1.5;
-    left: -66px;
     top: 15px;
     transform: rotate(-45deg);
     transform-origin: 50% 50%;
@@ -196,8 +195,7 @@
     align-items: center;
 }
 
-.oxi-addons-parent-wrapper-style-6 .oxi-addons-button .oxi-addons-link {
-    font-size: px;
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-link {
     color: #ffffff;
     background: rgba(14, 158, 139, 1.00);
     border: 0px none;
@@ -206,13 +204,12 @@
     font-family: "Nunito";
     font-weight: 100;
     font-style: normal;
-    ;
     border-radius: 50px 50px 50px 50px;
     padding: 10px 30px 10px 30px;
     box-shadow: 0px 6px 14px -4px rgba(61, 61, 61, 1);
 }
 
-.oxi-addons-parent-wrapper-style-6 .oxi-addons-button .oxi-addons-link:hover {
+.oxi-addons-parent-wrapper-style-6 .oxi-addons-link:hover {
     color: #ffffff;
     background: rgba(25, 117, 106, 1.00);
     border-color: #ffffff;

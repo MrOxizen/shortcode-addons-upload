@@ -207,7 +207,7 @@
     .sa-addons-tabs-main-wrapper-style-4 .sa-active::before {
         display: none
     }
-    .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line {
+    .sa-addons-tabs-main-wrapper-style-4.show_line_setting .sa-addons-line {
         display: none
     }
     .sa-addons-tabs-main-wrapper-style-4 .sa-addons-line-two {

@@ -36,17 +36,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-width: 0px 0px 0px 0px;
+    border-width: px;
     border-style: none;
     border-color: #39dfa5;
     border-radius: 2px 2px 2px 2px;
     padding: 0px 0px 0px 0px;
-    background: linear-gradient(rgba(71, 81, 82, 1.00), rgba(71, 81, 82, 1.00)), url("https://www.oxilab.org/wp-content/uploads/2019/05/dog.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    ;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
 }
 
@@ -65,7 +59,7 @@
     color: #ffffff;
     background: rgba(104, 81, 237, 0.00);
     line-height: 100px;
-    border-width: 0px 0px 0px 0px;
+    border-width: 0px;
     border-style: none;
     border-color: #6048e8;
     border-radius: 0px 0px 0px 0px
@@ -85,13 +79,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-width: 0px 0px 0px 0px;
+    border-width: 0px;
     border-style: none;
     border-color: #39dfa5;
     border-radius: 2px 2px 2px 2px;
     padding: 0px 0px 0px 0px;
     background: rgba(71, 81, 82, 1.00);
-    ;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.28);
 }
 
@@ -110,108 +103,9 @@
     color: #ffffff;
     background: rgba(104, 81, 237, 0.00);
     line-height: 100px;
-    border-width: 0px 0px 0px 0px;
+    border-width: 0px;
     border-style: none;
     border-color: #6048e8;
     border-radius: 0px 0px 0px 0px
 }
 
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-flip-box-style-8 {
-        max-width: 200px;
-        height: 200px;
-        padding: 5px 5px 5px 5px;
-        border-radius: 2px 2px 2px 2px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-boxes-body:after {
-        padding-bottom: 100%
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-section {
-        border-width: 0px 0px 0px 0px;
-        border-radius: 2px 2px 2px 2px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-icon {
-        padding: 10px 10px 10px 10px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-icon .oxi-icons {
-        font-size: 80px;
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-section {
-        border-width: 0px 0px 0px 0px;
-        border-radius: 2px 2px 2px 2px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-icon {
-        padding: 10px 10px 10px 10px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-icon .oxi-icons {
-        font-size: 80px;
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 0px 0px 0px 0px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-addons-flip-box-style-8 {
-        max-width: 200px;
-        height: 200px;
-        padding: 5px 5px 5px 5px;
-        border-radius: 2px 2px 2px 2px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-boxes-body:after {
-        padding-bottom: 100%
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-section {
-        border-width: 0px 0px 0px 0px;
-        border-radius: 2px 2px 2px 2px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-icon {
-        padding: 10px 10px 10px 10px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-front-icon .oxi-icons {
-        font-size: 80px;
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-section {
-        border-width: 0px 0px 0px 0px;
-        border-radius: 2px 2px 2px 2px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-icon {
-        padding: 10px 10px 10px 10px
-    }
-    .oxi-addons-flip-box-style-8 .oxi-addons-flip-box-back-icon .oxi-icons {
-        font-size: 80px;
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 0px 0px 0px 0px
-    }
-}

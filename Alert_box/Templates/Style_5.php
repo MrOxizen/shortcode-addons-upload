@@ -62,7 +62,7 @@ class Style_5 extends Templates {
                                     ' . $this->text_render($style['sa_ab_main_text']) . '
                                 </div>';
         }
-        echo ' <div class="oxi-addons-AL-FI-5">
+        echo ' <div class="oxi-addons-AL-FI-5 oxi-addons-AL-FI-5-' . $this->oxiid . '">
                         <div class="oxi-addonsAL-FI-click-box">
                             <div class="oxi-addonsAL-FI-A-C">
                                 ' . $clickicon . '
@@ -82,14 +82,14 @@ class Style_5 extends Templates {
     public function inline_public_jquery() {
 
         $jquery = 'jQuery(document).ready(function(){
-                jQuery(".oxi-addons-AL-FI-5 .oxi-addonsAL-FI-click-box").click(function(){
-                    jQuery(".oxi-addons-AL-FI-5 .oxi-addonsAL-FI-FI-DN").show();
+                jQuery(".oxi-addons-AL-FI-5-' . $this->oxiid . ' .oxi-addonsAL-FI-click-box").click(function(){
+                    jQuery(".oxi-addons-AL-FI-5-' . $this->oxiid . ' .oxi-addonsAL-FI-FI-DN").show();
                 });
-                jQuery(".oxi-addons-AL-FI-5 .oxi-addonsAL-FI-click-box").click(function(){
-                    jQuery(".oxi-addons-AL-FI-5 .oxi-addonsAL-FI-click-box").hide();
+                jQuery(".oxi-addons-AL-FI-5-' . $this->oxiid . ' .oxi-addonsAL-FI-click-box").click(function(){
+                    jQuery(".oxi-addons-AL-FI-5-' . $this->oxiid . ' .oxi-addonsAL-FI-click-box").hide();
                 });
-                jQuery(".oxi-addons-AL-FI-5 .oxi-addonsAL-FI-col-three").click(function(){
-                    jQuery(".oxi-addons-AL-FI-5 .oxi-addonsAL-FI-FI-DN").hide();
+                jQuery(".oxi-addons-AL-FI-5-' . $this->oxiid . ' .oxi-addonsAL-FI-col-three").click(function(){
+                    jQuery(".oxi-addons-AL-FI-5-' . $this->oxiid . ' .oxi-addonsAL-FI-FI-DN").hide();
                 });
            
             });';

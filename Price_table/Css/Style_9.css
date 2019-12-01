@@ -16,17 +16,17 @@
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0px 5px 10px 1px rgba(201, 201, 201, 0.6);
     transform: scale(1);
-    transition: all .5s !important;
+    transition: all .5s;
     cursor: pointer;
     max-width: 250px;
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -ms-border-radius: 5px 5px 5px 5px;
     -o-border-radius: 5px 5px 5px 5px;
-    -webkit-transition: all .5s !important;
-    -moz-transition: all .5s !important;
-    -ms-transition: all .5s !important;
-    -o-transition: all .5s !important;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
 }
 .oxi-addons-parent-wrapper-style-9  .oxi_addons_heading_main{
     width: 100%;
@@ -188,7 +188,7 @@
     align-items: center;
 } 
 
-.oxi-addons-parent-wrapper-style-9   .oxi-addons-link {
+.oxi-addons-parent-wrapper-style-9 .oxi-addons-link {
     width: 100%;
 	font-size: 16px;
 	color: #ffffff;
@@ -211,7 +211,7 @@
 	-o-border-radius: 0px 0px 0px 0px;
 }
 
-.oxi-addons-parent-wrapper-style-9  .oxi-addons-link:hover {
+.oxi-addons-parent-wrapper-style-9 .oxi-addons-link:hover {
     color: #ffffff;
     background: rgba(7, 97, 171, 1.00);
     border-color: #dbdbdb;

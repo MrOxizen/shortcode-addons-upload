@@ -2468,7 +2468,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} ..sa_addons_ap_list_container_style_2 .jp-volume-controls .jp-volume-max::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_addons_ap_list_container_style_2 .jp-volume-controls .jp-volume-max::before' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );

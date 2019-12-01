@@ -191,24 +191,19 @@ class Style_17 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 450,
+                'size' => 280,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 1500,
                     'step' => 1,
                 ],
-                'em' => [
+                '%' => [
                     'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => 0.1,
-                ],
+                    'max' => 100,
+                    'step' => 1,
+                ]
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17' => 'max-width:{{SIZE}}{{UNIT}};',
@@ -221,17 +216,17 @@ class Style_17 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 210,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 1000,
+                    'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
             ],
@@ -248,22 +243,22 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 0,
                     'max' => 100,
-                    'step' => .1,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 20,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -282,22 +277,22 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 0,
                     'max' => 100,
-                    'step' => .1,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 20,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -321,8 +316,8 @@ class Style_17 extends AdminStyle {
                 'sa-flip-boxes-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-front-style-1' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-back-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-section' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-section' => '',
             ]
                 ]
         );
@@ -332,8 +327,8 @@ class Style_17 extends AdminStyle {
                 'sa-flip-boxes-hover-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-front-style-1:hover' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-back-style-1:hover' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-section:hover' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-section:hover' => '',
             ]
                 ]
         );
@@ -388,12 +383,12 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 '%' => [
@@ -403,7 +398,7 @@ class Style_17 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -425,24 +420,19 @@ class Style_17 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 200,
+                'size' => 60,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 500,
                     'step' => 1,
                 ],
-                'em' => [
+                '%' => [
                     'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
-                ],
-                'rem' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => 0.1,
-                ],
+                    'max' => 100,
+                    'step' => 1,
+                ]
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-icon .oxi-icons' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
@@ -455,12 +445,12 @@ class Style_17 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 20,
+                'size' => 60,
             ],
             'range' => [
                 'px' => [
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 500,
                     'step' => 1,
                 ],
             ],
@@ -482,7 +472,7 @@ class Style_17 extends AdminStyle {
                 'sa-flip-boxex-front-icon-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-icon .oxi-icons' => 'color: {{VALUE}};',
             ]
@@ -503,27 +493,58 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-icon .oxi-icons' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ]
+                ]
+        );
+         $this->add_responsive_control(
+                'sa-flip-boxes-front-icon-margin', $this->style, [
+            'label' => __('Margin', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-icon' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -542,7 +563,7 @@ class Style_17 extends AdminStyle {
                 'sa-flip-box-front-heading-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-headding' => 'color: {{VALUE}};',
             ]
@@ -551,6 +572,7 @@ class Style_17 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-front-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-headding' => '',
             ]
@@ -564,53 +586,28 @@ class Style_17 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-flip-box-front-heading_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-front-headding' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
         $this->add_responsive_control(
                 'sa-flip-box-front-heading-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -665,7 +662,7 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
@@ -704,7 +701,7 @@ class Style_17 extends AdminStyle {
                 'sa-flip-box-back-short-description-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-info' => 'color: {{VALUE}};',
             ]
@@ -713,6 +710,7 @@ class Style_17 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-back-short-description-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-info' => '',
             ]
@@ -726,53 +724,28 @@ class Style_17 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-flip-box-back-short-description_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-info' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
         $this->add_responsive_control(
                 'sa-flip-box-back-short-description-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -794,6 +767,7 @@ class Style_17 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-backend-button-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-button .oxi-addons-flip-box-back-button-data' => '',
             ]
@@ -808,31 +782,6 @@ class Style_17 extends AdminStyle {
             ]
                 ]
         );
-        $this->add_control(
-                'sa-flip-box-backend-button_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-button' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
 
         $this->add_responsive_control(
                 'sa-flip-box-backend-button-padding', $this->style, [
@@ -840,22 +789,22 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -870,22 +819,22 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
+                    'max' => 100,
+                    'step' => 1,
                 ],
                 'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'min' => 1,
+                    'max' => 500,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -915,7 +864,7 @@ class Style_17 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => 'rgba(122, 122, 122, 0.01)',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-button .oxi-addons-flip-box-back-button-data' => 'background: {{VALUE}};',
             ]
@@ -925,7 +874,7 @@ class Style_17 extends AdminStyle {
                 'sa-flip-boxes-backend-button-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-button .oxi-addons-flip-box-back-button-data' => 'color: {{VALUE}};',
             ]
@@ -945,22 +894,22 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -979,7 +928,7 @@ class Style_17 extends AdminStyle {
             'label' => __('Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
-            'default' => '#787878',
+            'default' => 'rgba(122, 122, 122, 0.01)',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-button .oxi-addons-flip-box-back-button-data:hover' => 'background: {{VALUE}};',
             ]
@@ -989,7 +938,7 @@ class Style_17 extends AdminStyle {
                 'sa-flip-boxes-backend-hover-button-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#787878',
+            'default' => '#000000',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-17 .oxi-addons-flip-box-back-button .oxi-addons-flip-box-back-button-data:hover' => 'color: {{VALUE}};',
             ]
@@ -1009,22 +958,22 @@ class Style_17 extends AdminStyle {
             'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => '',
             ],
             'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 500,
+                    'step' => 1,
+                ],
                 '%' => [
                     'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 10,
+                    'max' => 100,
                     'step' => .1,
                 ],
             ],
@@ -1045,62 +994,5 @@ class Style_17 extends AdminStyle {
         $this->end_section_tabs();
     }
 
-//    public function modal_opener() {
-//        $this->add_substitute_control('', [], [
-//            'type' => Controls::MODALOPENER,
-//            'title' => __('Add New Image Boxes', SHORTCODE_ADDOONS),
-//            'sub-title' => __('Open Image Boxes Form', SHORTCODE_ADDOONS),
-//            'showing' => TRUE,
-//        ]);
-//    }
-//
-//    public function modal_form_data() {
-//        echo '<div class="modal-header">                    
-//                    <h4 class="modal-title">Image Boxes Form</h4>
-//                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-//                </div>
-//                <div class="modal-body">';
-//        $this->add_control(
-//                'sa_image_boxes_heading', $this->style, [
-//            'label' => __('Title', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Heading',
-//            'placeholder' => 'Heading',
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_s_description', $this->style, [
-//            'label' => __('Short Description', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Lorem ipsum dolor sit amet',
-//            'placeholder' => 'Lorem ipsum dolor sit amet',
-//                ]
-//        );
-//        $this->add_group_control(
-//                'sa_image_boxes_media', $this->style, [
-//            'label' => __('URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::MEDIA,
-//            'default' => [
-//                'type' => 'media-library',
-//                'link' => '#asdas',
-//            ]
-//                ]
-//        );
-//        $this->add_control(
-//                'sa_image_boxes_button', $this->style, [
-//            'label' => __('Button Text', SHORTCODE_ADDOONS),
-//            'type' => Controls::TEXT,
-//            'default' => 'Learn More',
-//                ]
-//        );
-//        $this->add_group_control(
-//                'sa_image_boxes_button_url', $this->style, [
-//            'label' => __('URL', SHORTCODE_ADDOONS),
-//            'type' => Controls::URL,
-//            'default' => '',
-//            'placeholder' => 'https://www.yoururl.com',
-//                ]
-//        );
-//        echo '</div>';
-//    }
+
 }

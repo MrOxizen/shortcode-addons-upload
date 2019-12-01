@@ -35,17 +35,11 @@
      flex-direction: column;
      justify-content: flex-start;
      align-items: center;
-     border-width: 0px 0px 0px 0px;
+     border-width: 0px;
      border-style: none;
      border-color: #39dfa5;
      border-radius: 6px 6px 6px 6px;
      padding: 0px 0px 0px 0px;
-     background: linear-gradient(rgba(29, 174, 104, 1.00), rgba(29, 174, 104, 1.00)), url("https://www.oxilab.org/wp-content/uploads/2019/05/dog.jpg") no-repeat center center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     ;
      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
  }
  
@@ -58,7 +52,7 @@
      width: 60px;
      height: 100px;
      background: rgba(255, 255, 255, 1.00);
-     border-width: 0px 0px 0px 0px;
+     border-width: 0px;
      border-style: none;
      border-color: #999999;
      border-radius: 0px 0px 40px 40px;
@@ -99,7 +93,6 @@
      font-style: normal;
      line-height: 1.3;
      text-align: center;
-     ;
      padding: 10px 10px 10px 10px
  }
  
@@ -117,13 +110,7 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     background: linear-gradient(rgba(15, 15, 15, 0.07), rgba(15, 15, 15, 0.07)), url("https://www.oxilab.org/wp-content/uploads/2019/05/dog.jpg") no-repeat center center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     ;
-     border-width: 0px 0px 0px 0px;
+     border-width: 0px;
      border-style: none;
      border-color: #fff;
      border-radius: 6px 6px 6px 6px;
@@ -141,7 +128,6 @@
      font-style: normal;
      line-height: 1.3;
      text-align: center;
-     ;
      padding: 10px 10px 10px 10px
  }
  
@@ -164,122 +150,7 @@
      font-style: normal;
      line-height: 1.3;
      text-align: center;
-     ;
      padding: 10px 10px 10px 10px
  }
  
- @media only screen and (min-width:669px) and (max-width:993px) {
-     .oxi-addons-flip-box-style-12 {
-         max-width: 280px;
-         height: 320px;
-         padding: 5px 5px 5px 5px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-boxes-body:after {
-         padding-bottom: 114.28571428571%
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-section-box {
-         padding: 5px 5px 5px 5px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-section {
-         border-width: 0px 0px 0px 0px;
-         border-radius: 6px 6px 6px 6px;
-         padding: 0px 0px 0px 0px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-icon-box {
-         width: 60px;
-         height: 100px;
-         border-width: 0px 0px 0px 0px;
-         border-radius: 0px 0px 40px 40px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-icon .oxi-icons {
-         font-size: oxi_addons-flip-box-front-icon-bg-color px;
-         padding: 0px 0px 10px 0px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-headding {
-         font-size: 30px;
-         padding: 10px 10px 10px 10px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-info {
-         font-size: 16px;
-         padding: 10px 10px 10px 10px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-section-box {
-         padding: 5px 5px 5px 5px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-section {
-         border-width: 0px 0px 0px 0px;
-         border-radius: 6px 6px 6px 6px;
-         padding: 0px 0px 0px 0px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-headding {
-         font-size: 22px;
-         padding: 10px 10px 10px 10px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-headding-border {
-         width: 60px;
-         height: 2px;
-         background: oxi_addons-flip-box-back-info-font-size
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-info {
-         font-size: 16px;
-         padding: 10px 10px 10px 10px
-     }
- }
  
- @media only screen and (max-width:668px) {
-     .oxi-addons-flip-box-style-12 {
-         max-width: 280px;
-         height: 320px;
-         padding: 5px 5px 5px 5px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-boxes-body:after {
-         padding-bottom: 114.28571428571%
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-section-box {
-         padding: 5px 5px 5px 5px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-section {
-         border-width: 0px 0px 0px 0px;
-         border-radius: 6px 6px 6px 6px;
-         padding: 0px 0px 0px 0px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-icon-box {
-         width: 60px;
-         height: 100px;
-         border-width: 0px 0px 0px 0px;
-         border-radius: 0px 0px 40px 40px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-icon .oxi-icons {
-         font-size: rgba(255, 255, 255, 1.00)px;
-         padding: 0px 0px 10px 0px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-headding {
-         font-size: 30px;
-         padding: 10px 10px 10px 10px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-front-info {
-         font-size: 16px;
-         padding: 10px 10px 10px 10px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-section-box {
-         padding: 5px 5px 5px 5px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-section {
-         border-width: 0px 0px 0px 0px;
-         border-radius: 6px 6px 6px 6px;
-         padding: 0px 0px 0px 0px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-headding {
-         font-size: 22px;
-         padding: 10px 10px 10px 10px
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-headding-border {
-         width: 60px;
-         height: 2px;
-         background: 16
-     }
-     .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-info {
-         font-size: 16px;
-         padding: 10px 10px 10px 10px
-     }
- }

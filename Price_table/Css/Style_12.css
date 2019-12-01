@@ -17,19 +17,23 @@
     float: left; 
     overflow: hidden;
     padding: 10px 15px;
-	border-radius: 10px 10px 10px 10px;
-	border-width: 2px 2px 2px 2px;
-	border-style: solid;
-	border-color: #41007a;
-	background: rgba(238,246,249,1.00);
-	margin: 0px 0px 0px 0px;
-	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 10px 10px 10px 10px;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #41007a;
+    background: rgba(238,246,249,1.00);
+    margin: 0px 0px 0px 0px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
 } 
 .oxi-addons-parent-wrapper-style-12  .oxi-addons-heading-main{
     width: 100%;
     float: left;
     position: relative;  
     padding: 0 0 15px 0; 
+}
+
+.oxi-addons-parent-wrapper-style-12 .oxi-addons-parent:hover {
+    transform: scale(1) translateY(-10px)
 }
 .oxi-addons-parent-wrapper-style-12 .oxi-addons-title {
     font-size: 26px;
@@ -52,9 +56,7 @@
     flex-direction: column; 
 } 
 
-.oxi-addons-wrapper-style-12:hover {
-    transform: scale(1) translateY(-10px)
-}
+
 
 
 .oxi-addons-parent-wrapper-style-12 .oxi-addons-main {
@@ -75,7 +77,7 @@
 .oxi-addons-parent-wrapper-style-12 .oxi-addons-rating {
     color: rgb(255, 163, 47);
 }
- 
+
 
 .oxi-addons-parent-wrapper-style-12 .oxi-addons-main-feature { 
     width: 100%;
@@ -107,9 +109,9 @@
     color: #424242;
     font-weight: normal
 }
- 
 
-  
+
+
 .oxi-addons-parent-wrapper-style-12 .oxi-addons-price {
     width: 100%;
     float: left;
@@ -134,15 +136,15 @@
     color: #8b8b8b;  
 }
 
- 
+
 .oxi-addons-parent-wrapper-style-12 .oxi-addons-button {
-	width: 100%;
-	float: left;
-	z-index: 999;
-	text-align: center;
-	padding: 15px 5px 5px 5px;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
+    width: 100%;
+    float: left;
+    z-index: 999;
+    text-align: center;
+    padding: 15px 5px 5px 5px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
     transition: all 0.35s ease;
     display: flex;
     justify-content: center;
@@ -150,27 +152,27 @@
 } 
 
 .oxi-addons-parent-wrapper-style-12   .oxi-addons-link { 
-	font-size: 16px;
-	color: #ffffff;
-	background: rgba(38,125,244,1.00);
-	border: 0px solid;
-	border-color: #db5a5a;
-	display: inline-block;
-	font-family: "Montserrat";
-	font-weight: 100;
-	font-style: normal;
-	border-radius: 0px 0px 0px 0px;
-	padding: 10px 30px 10px 30px;
-	-webkit-transition: all 0.35s ease;
-	-moz-transition: all 0.35s ease;
-	transition: all 0.35s ease;
-	cursor: pointer;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-ms-border-radius: 0px 0px 0px 0px;
-	-o-border-radius: 0px 0px 0px 0px;
-	-ms-transition: all 0.35s ease;
-	-o-transition: all 0.35s ease;
+    font-size: 16px;
+    color: #ffffff;
+    background: rgba(38,125,244,1.00);
+    border: 0px solid;
+    border-color: #db5a5a;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-weight: 100;
+    font-style: normal;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px 30px 10px 30px;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -ms-border-radius: 0px 0px 0px 0px;
+    -o-border-radius: 0px 0px 0px 0px;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
 }
 
 .oxi-addons-parent-wrapper-style-12  .oxi-addons-link:hover {
@@ -190,11 +192,11 @@
         padding: 10px 0px 10px 0px
     }
 
-    
+
     .oxi-addons-parent-wrapper-style-12 .oxi-addons-feature {
         font-size: 18px; 
     }
-   
+
     .oxi-addons-parent-wrapper-style-12 .oxi-addons-title {
         font-size: 24px;
         padding: 5px 5px 5px 5px
@@ -228,16 +230,16 @@
         -moz-border-radius: 0px;
         -ms-border-radius: 0px;
         -o-border-radius: 0px;
-}
+    }
     .oxi-addons-parent-wrapper-style-12 .oxi-addons-main {
         padding: 10px 0px 10px 0px
     }
 
-    
+
     .oxi-addons-parent-wrapper-style-12 .oxi-addons-feature {
         font-size: 18px; 
     }
- 
+
     .oxi-addons-parent-wrapper-style-12 .oxi-addons-title {
         font-size: 24px;
         padding: 5px 5px 5px 5px
@@ -263,5 +265,5 @@
         -moz-border-radius: 0px;
         -ms-border-radius: 0px;
         -o-border-radius: 0px;
-}
+    }
 }

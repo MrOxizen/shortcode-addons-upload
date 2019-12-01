@@ -69,7 +69,9 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Day', SHORTCODE_ADDOONS),
                     'default' => 'Sunday',
-                    'loader' => TRUE,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-wrapper-1.oxi-addonsOH-wrapper-1-{{KEY}} .oxi-addonsOH-heading' => ''
+                    ],
                 ],
                 'sa_oh_day_color' => [
                     'label' => __('Day Color', SHORTCODE_ADDOONS),
@@ -89,7 +91,9 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'label' => __('Time', SHORTCODE_ADDOONS),
                     'default' => '10:00-17:00',
-                    'loader' => TRUE,
+                     'selector' => [
+                        '{{WRAPPER}} .oxi-addonsOH-wrapper-1.oxi-addonsOH-wrapper-1-{{KEY}} .oxi-addonsOH-date' => ''
+                    ],
                 ],
                 'sa_oh_time_color' => [
                     'label' => __('Time Color', SHORTCODE_ADDOONS),

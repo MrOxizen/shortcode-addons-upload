@@ -18,12 +18,12 @@
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 5px 10px 1px rgba(201, 201, 201, 0.6); 
     transform: scale(1);
-    transition: all .5s !important;
+    transition: all .5s;
     cursor: pointer;
     max-width: 250px
 }
 
-.oxi-addons-parent-wrapper-style-2:hover {
+.oxi-addons-parent-wrapper-style-2 .oxi-addons-wrapper-style-2:hover {
     transform: scale(1) translateY(-10px)
 }
 
@@ -151,7 +151,7 @@
     align-items: center;
 }
 
-.oxi-addons-parent-wrapper-style-2   .oxi-addons-link {
+.oxi-addons-parent-wrapper-style-2 .oxi-addons-link {
     font-size: 16px;
     color: #ffffff;
     background: rgba(20, 145, 199, 1); 
@@ -166,7 +166,7 @@
     cursor: pointer;
 }
 
-.oxi-addons-parent-wrapper-style-2 .oxi-addons-button .oxi-addons-link:hover {
+.oxi-addons-parent-wrapper-style-2 .oxi-addons-link:hover {
     color: #ffffff;
     background: rgba(23, 128, 163, 1.00);
     border-color: #cccccc;

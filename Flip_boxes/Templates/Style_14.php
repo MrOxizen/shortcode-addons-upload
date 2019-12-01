@@ -24,7 +24,7 @@ class Style_14 extends Templates {
 
         $styledata = $this->style;
         foreach ($styledata['sa_flip_boxes_data_style_14'] as $key => $value) {
-            $fronticon = $back_icon = $front_hadding = $front_info = $back_hadding = $backinfo = $button = '';
+            $fronticon = $back_icon = $front_hadding = $front_info = $back_hadding = $backinfo = $button = $bt = $bc = '';
             if ($value['sa_flip_boxes_number'] != '') {
                 $fronticon .= '<div class="oxi-addons-flip-box-front-icon">
                             <div class="oxi-addons-flip-box-front-icon-box">
@@ -56,18 +56,22 @@ class Style_14 extends Templates {
                                     </div>
                                 </div>';
             }
-                if ($value['sa_flip_boxes_back_description'] != '') {
-                    $backinfo .= '<div class="oxi-addons-flip-box-back-info">
+            if ($value['sa_flip_boxes_back_description'] != '') {
+                $backinfo .= '<div class="oxi-addons-flip-box-back-info">
                         ' . $this->text_render($value['sa_flip_boxes_back_description']) . '
                         </div>';
-                }
-                if ($value['sa_flip_boxes_button_text'] != '') {
-                    $button .= '<div class="oxi-addons-flip-box-back-button">
+            }
+            if ($value['sa_flip_boxes_button_text'] != '') {
+                $button .= '<div class="oxi-addons-flip-box-back-button">
                             <a ' . $this->url_render('sa_flip_boxes_button_link', $value) . ' class="oxi-addons-flip-box-back-button-data" >' . $this->text_render($value['sa_flip_boxes_button_text']) . ' </a>
                         </div>';
-                }
-                echo '  <div class="oxi-flip-box-col-style-14 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
+            }elseif($value['sa_flip_boxes_button_text'] == '' && $this->url_render('sa_flip_boxes_button_link', $value) != ''){
+                $bt = '<a '.$this->url_render('sa_flip_boxes_button_link', $value).'">';
+                $bc = '</a>';
+            }
+            echo '  <div class="oxi-flip-box-col-style-14 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
                         <div class="oxi-addons-flip-box-style-14">
+                            '.$bt.'
                             <div class="oxi-addons-flip-boxes-body"  ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">
                                     <div class="oxi-addons-flip-box-flip ' . $styledata['sa-ac-flip_boxes_flip_direction'] . '">
@@ -97,11 +101,11 @@ class Style_14 extends Templates {
                                     </div>
                                 </div>
                             </div>
-                        </div>';
-
-                echo '</div>';
-            }
+                        '.$bc.'
+                        </div>
+                    </div>';
         }
+    }
 
     public function old_render() {
 
