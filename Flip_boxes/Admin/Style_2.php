@@ -333,7 +333,6 @@ class Style_2 extends AdminStyle {
             'type' => Controls::BOXSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-2 .oxi-addons-flip-box-front-section' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-style-2 .oxi-addons-flip-box-back-section' => '',
             ]
                 ]
         );
@@ -343,8 +342,7 @@ class Style_2 extends AdminStyle {
                 'sa-flip-boxes-hover-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-2 .oxi-addons-flip-box-front-section:hover' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-style-2 .oxi-addons-flip-box-back-section:hover' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-2 .oxi-addons-flip-box-back-section' => '',
             ]
                 ]
         );

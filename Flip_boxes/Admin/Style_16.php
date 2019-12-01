@@ -49,7 +49,7 @@ class Style_16 extends AdminStyle {
             'type' => Controls::COLUMN,
             'loader' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi-flip-box-col-style-10' => '',
+                '{{WRAPPER}} .oxi-flip-box-col-style-16' => '',
             ]
                 ]
         );

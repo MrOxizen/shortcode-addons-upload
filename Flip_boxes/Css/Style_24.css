@@ -24,7 +24,7 @@
 .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section-box {
     width: 100%;
     height: 100%;
-    border-width: 5px 5px 5px 5px;
+    border-width: 0px;
     border-style: solid;
     border-color: #c7103a;
     padding: 5px 5px 5px 5px;
@@ -41,12 +41,6 @@
     align-items: center;
     border-radius: 150px 150px 150px 150px;
     padding: 5px 5px 5px 5px;
-    background: linear-gradient(rgba(199, 16, 58, 1.00), rgba(199, 16, 58, 1.00)), url("https://www.oxilab.org/wp-content/uploads/2019/05/dog.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    ;
     position: relative;
 }
 
@@ -79,7 +73,7 @@
     width: 100%;
     height: 100%;
     float: left;
-    border-width: 8px 8px 8px 8px;
+    border-width: 0px;
     border-style: solid;
     border-color: #c71242;
     border-radius: 150px 150px 150px 150px;
@@ -140,84 +134,4 @@
     text-align: center;
     ;
     padding: 10px 10px 10px 10px
-}
-
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-flip-box-style-24 {
-        max-width: 280px;
-        height: 280px;
-        padding: 5px 5px 5px 5px;
-        border-radius: 150px 150px 150px 150px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-boxes-body:after {
-        padding-bottom: 100%
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section {
-        border-width: 5px 5px 5px 5px;
-        border-radius: 150px 150px 150px 150px;
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section {
-        border-width: 8px 8px 8px 8px;
-        border-radius: 150px 150px 150px 150px;
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-headding {
-        font-size: 24px;
-        padding: 20px 10px 5px 10px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-headding-border {
-        width: 80px;
-        height: 2px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-info {
-        font-size: 16px;
-        padding: 10px 10px 10px 10px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-addons-flip-box-style-24 {
-        max-width: 280px;
-        height: 280px;
-        padding: 5px 5px 5px 5px;
-        border-radius: 150px 150px 150px 150px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-boxes-body:after {
-        padding-bottom: 100%
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section {
-        border-width: 5px 5px 5px 5px;
-        border-radius: 150px 150px 150px 150px;
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section-box {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section {
-        border-width: 8px 8px 8px 8px;
-        border-radius: 150px 150px 150px 150px;
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-headding {
-        font-size: 24px;
-        padding: 20px 10px 5px 10px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-headding-border {
-        width: 80px;
-        height: 2px
-    }
-    .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-info {
-        font-size: 16px;
-        padding: 10px 10px 10px 10px
-    }
 }
