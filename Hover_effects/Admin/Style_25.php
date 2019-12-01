@@ -276,7 +276,7 @@ class Style_25 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => 'red',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-style15.oxi-hover-effects-style15-{{KEY}} .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-hover-effects-style25.oxi-hover-effects-style25-{{KEY}} .oxi-hover-info .headingunderline' => 'border-color:{{VALUE}};'
                     ],
                 ],
             ],
