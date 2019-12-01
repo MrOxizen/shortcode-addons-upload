@@ -70,9 +70,6 @@ class Style_3 extends Templates
         }
         .' . $this->WRAPPER . ' .sa_addons_ap_container_style_3 .mejs-playpause-button>button {
             content: "\\' . $this->text_render($this->style['sa_ap_audio_p_v_icon'] != '' ? $this->style['sa_ap_audio_p_v_icon'] : '') . '" !important;
-        }
-        .' . $this->WRAPPER . ' .sa_addons_ap_container_style_3 .mejs-volume-button {
-            right: calc(' . $style['sa_ap_audio_p_v_posi_x-size'] . 'px + ' . $style['sa_ap_audio_v_prog_w-size'] . 'px);
         } ';
         // echo "<pre>";
         // print_r($style);
@@ -81,6 +78,7 @@ class Style_3 extends Templates
     }
     public function public_jquery()
     {
+        echo  wp_enqueue_media();
         $this->JSHANDLE = 'mediaelement-min';
         wp_enqueue_script('mediaelement-min', SA_ADDONS_UPLOAD_URL . '/Audio_players/file/mediaelement-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
@@ -89,7 +87,7 @@ class Style_3 extends Templates
         $style = $this->style;
         $jquery = '';
         if ((array_key_exists('sa_ap_audio_play_pause', $style) && $style['sa_ap_audio_play_pause'] != '0') || (array_key_exists('sa_ap_audio_time', $style) && $style['sa_ap_audio_time'] != '0') || (array_key_exists('sa_ap_audio_volume', $style) && $style['sa_ap_audio_volume'] != '0') || (array_key_exists('sa_ap_audio_progress', $style) && $style['sa_ap_audio_progress'] != '0')) {
-            $jquery .= '  jQuery(" .' . $this->WRAPPER . ' .sa_addons_ap_container_style_3 #mediaplayer").mediaelementplayer({
+            $jquery .= '   $(" .' . $this->WRAPPER . ' .sa_addons_ap_container_style_3 #mediaplayer").mediaelementplayer({
                     features: [';
 
             if ($style['sa_ap_audio_play_pause'] == 'yes') {

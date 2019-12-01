@@ -688,7 +688,7 @@ class Style_5 extends AdminStyle
                 ],
             ]
         );
-        
+
         $this->add_control(
             'sa_ap_audio_pro_tooltip_color',
             $this->style,
@@ -714,7 +714,7 @@ class Style_5 extends AdminStyle
                 ],
             ]
         );
-        
+
 
         $this->add_responsive_control(
             'sa_ap_audio_pro_tooltip_b_r',
@@ -782,11 +782,15 @@ class Style_5 extends AdminStyle
         );
         $this->end_controls_section();
 
+      
+        $this->end_section_devider();
+
+        $this->start_section_devider(); 
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Audio Progress Bar Setting', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => TRUE,
             ]
         );
         $this->add_responsive_control(
@@ -947,237 +951,6 @@ class Style_5 extends AdminStyle
             ]
         );
         $this->end_controls_section();
-        $this->end_section_devider();
-
-        $this->start_section_devider();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Progress Bar Time Handle', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-
-        $this->add_control(
-            'sa_ap_audio_prog_time_han',
-            $this->style,
-            [
-                'label' => __('Time Handle', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => '',
-                'loader' => TRUE,
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_ap_audio_prog_time_han_w_h',
-            $this->style,
-            [
-                'label' => __('Width & Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '20',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 5,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time-handle' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_ap_audio_prog_time_han_posi',
-            $this->style,
-            [
-                'label' => __('Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '-5',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => -500,
-                        'max' => 500,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => -50,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time-handle' => 'left: {{SIZE}}{{UNIT}}; top: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_ap_audio_prog_time_han_bg',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#0099d6',
-                'oparetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time-handle' => 'background: {{VALUE}} !important;'
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_ap_audio_prog_time_han_b',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time-handle' => ''
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_ap_audio_prog_time_han_b_r',
-            $this->style,
-            [
-                'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '50',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time-handle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Time Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
-        $this->add_group_control(
-            'sa_ap_audio_time_typo',
-            $this->style,
-            [
-                'type' => Controls::TYPOGRAPHY,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time' => '',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_ap_audio_time_c',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time' => 'color: {{VALUE}} !important;',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'sa_ap_audio_time_posi_x',
-            $this->style,
-            [
-                'label' => __('Position X', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '80',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => -300,
-                        'max' => 300,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => -50,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => -20,
-                        'max' => 20,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time' => 'left: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_ap_audio_time_posi_y',
-            $this->style,
-            [
-                'label' => __('Position Y', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '8',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => -50,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => -20,
-                        'max' => 20,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-time' => 'bottom: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->end_controls_section();
-
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -1197,14 +970,14 @@ class Style_5 extends AdminStyle
             ]
         );
         $this->start_controls_tab();
-        
+
         $this->add_control(
             'sa_ap_audio_pau_icon',
             $this->style,
             [
                 'label' => __('Pause Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f28b',
             ]
         );
@@ -1236,10 +1009,10 @@ class Style_5 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-pause button::after' => 'font-size: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-playpause-button > button' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-pause button::after' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
-                    
+                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-play button::after' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-pause button::after' => 'font-size: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-playpause-button>button' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-replay button::after' => 'font-size: {{SIZE}}{{UNIT}};', 
                 ],
             ]
         );
@@ -1350,7 +1123,8 @@ class Style_5 extends AdminStyle
                     '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-pause button::after' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-play button::after' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-replay button::after' => 'color: {{VALUE}} !important;',
-                ], 
+                ],
+
             ]
         );
         $this->add_control(
@@ -1407,43 +1181,11 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Play Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f144',
             ]
         );
-        $this->add_responsive_control(
-            'sa_ap_audio_ply_icon_s',
-            $this->style,
-            [
-                'label' => __('Size', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '40',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_5 .mejs-replay button::after' => 'font-size: {{SIZE}}{{UNIT}};',
-                        
-                ],
-            ]
-        );
+
         $this->add_control(
             'sa_ap_audio_ply_icon_c',
             $this->style,
@@ -1465,7 +1207,7 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Volume Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f028',
             ]
         );
@@ -1513,7 +1255,7 @@ class Style_5 extends AdminStyle
                 ],
             ]
         );
-        
+
         $this->add_responsive_control(
             'sa_ap_audio_p_v_icon_margin',
             $this->style,
@@ -1555,7 +1297,7 @@ class Style_5 extends AdminStyle
             [
                 'label' => __('Mute Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f6a9',
             ]
         );

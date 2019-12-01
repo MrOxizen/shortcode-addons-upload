@@ -16,9 +16,11 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_3 extends Templates {
+class Style_3 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $class = '';
         if ($style['sa-max-w-condition'] == 'custom') {
             $class = 'sa-max-w-auto';
@@ -31,24 +33,14 @@ class Style_3 extends Templates {
         } else {
             $admin_class = '';
         }
-
-//        if ($style['sa-fm-body-price-alignment'] == 'left') {
-//            $position = "sa-fm-temp-1-left";
-//        } elseif ($style['sa-fm-body-price-alignment'] == 'right') {
-//            $position = "sa-fm-temp-1-right";
-//        } else {
-//            $position = "sa-fm-temp-1-center";
-//        }
-
-
-      $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
+        $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
         foreach ($all_data as $key => $data) {
 
-            
+
             $heading = $price = $category = $info = $image = '';
-            
-            
+
+
 
             if (array_key_exists('sa_el_insert_food_name', $data) && $data['sa_el_insert_food_name'] != '') {
                 $heading = '<div class="oxi-addonsFM-TH-heading">
@@ -57,7 +49,7 @@ class Style_3 extends Templates {
             }
             if (array_key_exists('sa_el_insert_price', $data) && $data['sa_el_insert_price'] != '') {
                 $price = '<div class="oxi-addonsFM-TH-price">
-                               $ ' . $this->text_render($data['sa_el_insert_price']) . '
+                               $' . $this->text_render($data['sa_el_insert_price']) . '
                             </div>';
             }
             if (array_key_exists('sa_el_insert_category_name', $data) && $data['sa_el_insert_category_name'] != '') {
@@ -72,21 +64,14 @@ class Style_3 extends Templates {
             }
             if ($this->media_render('sa_el_food_box_image', $data) != '') {
                 $image = '<div class="oxi-addonsFM-images">
-                                    <img src="' . $this->media_render('sa_el_food_box_image', $data) . '" alt="images" class="oxi-addons-img">
+                                    <img src="' . $this->media_render('sa_el_food_box_image', $data) . '" alt="images" class="oxi-addonsFM-img">
                             </div>';
             }
-
-
-//            echo '<pre>';
-//            print_r($data);
-//            echo '</pre>';
-
-
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . '  ' . $admin_class . '">';
 
             echo ' <a ' . $this->url_render('sa_el_price_link', $data) . '>
-                  <div class="oa-fm-style-3 " >
-                      <div class="oa-fm-3-no-style  oa-fm-3-no-style-'.$key.'    ' . $class . '">
+                  <div class="oa-fm-style-3">
+                      <div class="oa-fm-3-no-style  oa-fm-3-no-style-' . $key . '    ' . $class . '">
                     <div class="oxi-addonsFM-row"  ' . $this->animation_render('sa-fm-animation-temp-3', $style) . '>
                         <div class="oxi-addonsFM-content-body">
                                ' . $image . '
@@ -109,9 +94,10 @@ class Style_3 extends Templates {
         }
     }
 
-   
 
-    public function old_render() {
+
+    public function old_render()
+    {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
@@ -399,5 +385,4 @@ class Style_3 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-animation', $jquery);
     }
-
 }

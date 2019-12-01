@@ -12,442 +12,488 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_13 extends AdminStyle {
+class Style_13 extends AdminStyle
+{
 
-    public function register_controls() {
+    public function register_controls()
+    {
 
         $this->start_section_tabs(
-                'shortcode-addons-start-tabs',
-                [
-                ]
+            'shortcode-addons-start-tabs',
+            []
         );
 
         $this->start_section_devider();
         $this->start_controls_section(
-                'shortcode-addons',
-                [
-                    'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
-                    'showing' => TRUE,
-                ]
+            'shortcode-addons',
+            [
+                'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
         );
 
         $this->add_repeater_control(
-                'sa_social_icons_data',
-                $this->style,
-                [
-                    'label' => __('', SHORTCODE_ADDOONS),
-                    'type' => Controls::REPEATER,
-                    'loader' => TRUE,
-                    'fields' => [
-                        'sa_social_icons_icon' => [
-                            'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
-                            'type' => Controls::ICON,
-                            'default' => 'fab fa-facebook-f',
-                        ],
-                        'sa_social_icons_color' => [
-                            'label' => __('Color', SHORTCODE_ADDOONS),
-                            'type' => Controls::COLOR,
-                            'default' => '#ffffff',
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}} a.oxi-icon-style-13 .oxi-icons' => 'color:{{VALUE}};',
-                            ],
-                            'conditional' => Controls::OUTSIDE,
-                            'condition' => [
-                                'sa_social_icons_position' => 'separately'
-                            ]
-                        ],
-                        'sa_social_icons_color_hover' => [
-                            'label' => __('Hover Color', SHORTCODE_ADDOONS),
-                            'type' => Controls::COLOR,
-                            'default' => '#7e00c2',
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}} a.oxi-icon-style-13:hover .oxi-icons' => 'color:{{VALUE}};',
-                            ],
-                            'conditional' => Controls::OUTSIDE,
-                            'condition' => [
-                                'sa_social_icons_h_position' => 'separately'
-                            ]
-                        ],
-                        'sa_social_icons_bg_color' => [
-                            'label' => __('Background ', SHORTCODE_ADDOONS),
-                            'type' => Controls::COLOR,
-                            'oparetor' => 'RGB',
-                            'default' => 'rgba(59,89,153,1.00)',
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}} a.oxi-icon-style-13::after' => 'background:{{VALUE}};',
-                            ],
-                            'conditional' => Controls::OUTSIDE,
-                            'condition' => [
-                                'sa_social_icons_bg_color_view' => 'separately'
-                            ]
-                        ],
-                        'sa_social_icons_bg_color_hover' => [
-                            'label' => __('Hover Background ', SHORTCODE_ADDOONS),
-                            'type' => Controls::COLOR,
-                            'oparetor' => 'RGB',
-                            'default' => 'rgba(92, 92, 92, 1)',
-                            'selector' => [
-                                '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}}  a.oxi-icon-style-13:hover::after ' => 'background:{{VALUE}};',
-                            ],
-                            'conditional' => Controls::OUTSIDE,
-                            'condition' => [
-                                'sa_social_icons_bg_h_color_view' => 'separately'
-                            ]
-                        ],
-                        
-                        'sa_social_icons_url' => [
-                            'label' => esc_html__('Url', SHORTCODE_ADDOONS),
-                            'type' => Controls::URL,
-                            'controller' => 'add_group_control',
-                        ],
+            'sa_social_icons_data',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::REPEATER,
+                'loader' => TRUE,
+                'fields' => [
+                    'sa_social_icons_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fab fa-facebook-f',
                     ],
-                    'title_field' => 'sa_social_icons_icon',
-                    'button' => 'Add New Icon',
-                ]
+                    'sa_social_icons_color' => [
+                        'label' => __('Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'default' => '#ffffff',
+                        'selector' => [
+                            '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}} a.oxi-icon-style-13 .oxi-icons' => 'color:{{VALUE}};',
+                        ],
+                        'conditional' => Controls::OUTSIDE,
+                        'condition' => [
+                            'sa_social_icons_position' => 'separately'
+                        ]
+                    ],
+                    'sa_social_icons_color_hover' => [
+                        'label' => __('Hover Color', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'default' => '#7e00c2',
+                        'selector' => [
+                            '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}} a.oxi-icon-style-13:hover .oxi-icons' => 'color:{{VALUE}};',
+                        ],
+                        'conditional' => Controls::OUTSIDE,
+                        'condition' => [
+                            'sa_social_icons_h_position' => 'separately'
+                        ]
+                    ],
+                    'sa_social_icons_bg_color' => [
+                        'label' => __('Background ', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'oparetor' => 'RGB',
+                        'default' => 'rgba(59,89,153,1.00)',
+                        'selector' => [
+                            '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}} a.oxi-icon-style-13::after' => 'background:{{VALUE}};',
+                        ],
+                        'conditional' => Controls::OUTSIDE,
+                        'condition' => [
+                            'sa_social_icons_bg_color_view' => 'separately'
+                        ]
+                    ],
+                    'sa_social_icons_bg_color_hover' => [
+                        'label' => __('Hover Background ', SHORTCODE_ADDOONS),
+                        'type' => Controls::COLOR,
+                        'oparetor' => 'RGB',
+                        'default' => 'rgba(92, 92, 92, 1)',
+                        'selector' => [
+                            '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}}  a.oxi-icon-style-13:hover::after ' => 'background:{{VALUE}};',
+                        ],
+                        'conditional' => Controls::OUTSIDE,
+                        'condition' => [
+                            'sa_social_icons_bg_h_color_view' => 'separately'
+                        ]
+                    ],
+                    'sa_social_icons_bg_color_hover' => [
+                        'type' => Controls::BOXSHADOW,
+                        'selector' => [
+                            '{{WRAPPER}} .oxi-addons-social-style-13-{{KEY}}.oxi-addons-social-style-13 a.oxi-icon-style-13:hover' => ''
+                        ],
+                        'conditional' => Controls::OUTSIDE,
+                        'controller' => 'add_group_control',
+                        'condition' => [
+                            'sa_social_icons_h_box_shadow_view' => 'separately'
+                        ]
+                    ],
+
+                    'sa_social_icons_url' => [
+                        'label' => esc_html__('Url', SHORTCODE_ADDOONS),
+                        'type' => Controls::URL,
+                        'controller' => 'add_group_control',
+                    ],
+                ],
+                'title_field' => 'sa_social_icons_icon',
+                'button' => 'Add New Icon',
+            ]
         );
-        $this->add_control('sa-ac-gen-sep', $this->style, [
-            'type' => Controls::SEPARATOR,
-            'label' => esc_html__('', SHORTCODE_ADDOONS),
-            Controls::SEPARATOR => TRUE,
-                ]
+        $this->add_control(
+            'sa-ac-gen-sep',
+            $this->style,
+            [
+                'type' => Controls::SEPARATOR,
+                'label' => esc_html__('', SHORTCODE_ADDOONS),
+                Controls::SEPARATOR => TRUE,
+            ]
         );
         $this->add_responsive_control(
-                'sa_social_icons_w_hei',
-                $this->style,
-                [
-                    'label' => __('Width & Height', SHORTCODE_ADDOONS),
-                    'type' => Controls::SLIDER,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => '60',
+            'sa_social_icons_w_hei',
+            $this->style,
+            [
+                'label' => __('Width & Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '60',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 500,
+                        'step' => 1,
                     ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 500,
-                            'step' => 1,
-                        ],
-                        '%' => [
-                            'min' => 0,
-                            'max' => 50,
-                            'step' => .1,
-                        ],
-                        'em' => [
-                            'min' => 0,
-                            'max' => 5,
-                            'step' => .1,
-                        ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
                     ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-social-style-13 a.oxi-icon-style-13' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    'em' => [
+                        'min' => 0,
+                        'max' => 5,
+                        'step' => .1,
                     ],
-                ]
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-social-style-13 a.oxi-icon-style-13' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
         );
 
         $this->add_responsive_control(
-                'sa_social_icons_margin',
-                $this->style,
-                [
-                    'label' => __('Margin', SHORTCODE_ADDOONS),
-                    'type' => Controls::DIMENSIONS,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => '',
+            'sa_social_icons_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
                     ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 200,
-                            'step' => 1,
-                        ],
-                        '%' => [
-                            'min' => 0,
-                            'max' => 50,
-                            'step' => .1,
-                        ],
-                        'em' => [
-                            'min' => 0,
-                            'max' => 10,
-                            'step' => .1,
-                        ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
                     ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-social-style-13' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
                     ],
-                ]
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-social-style-13' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
         );
         $this->add_group_control(
-                'sa_social_icons_animation',
-                $this->style,
-                [
-                    'type' => Controls::ANIMATION,
-                ]
+            'sa_social_icons_animation',
+            $this->style,
+            [
+                'type' => Controls::ANIMATION,
+            ]
         );
 
         $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
         $this->start_controls_section(
-                'shortcode-addons',
-                [
-                    'label' => esc_html__('General Style', SHORTCODE_ADDOONS),
-                    'showing' => TRUE,
-                ]
+            'shortcode-addons',
+            [
+                'label' => esc_html__('General Style', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
         );
 
 
         $this->add_responsive_control(
-                'sa_social_icons_f_s',
-                $this->style,
-                [
-                    'label' => __('Size', SHORTCODE_ADDOONS),
-                    'type' => Controls::SLIDER,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => 25,
+            'sa_social_icons_f_s',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 25,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
                     ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 200,
-                            'step' => 1,
-                        ],
-                        '%' => [
-                            'min' => 0,
-                            'max' => 50,
-                            'step' => .1,
-                        ],
-                        'em' => [
-                            'min' => 0,
-                            'max' => 5,
-                            'step' => .1,
-                        ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
                     ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-social-style-13  a.oxi-icon-style-13 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                    'em' => [
+                        'min' => 0,
+                        'max' => 5,
+                        'step' => .1,
                     ],
-                ]
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-social-style-13  a.oxi-icon-style-13 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                ],
+            ]
         );
         $this->start_controls_tabs(
-                'shortcode-addons-start-tabs', [
-            'options' => [
-                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-            ]
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
                 ]
+            ]
         );
         $this->start_controls_tab();
         $this->add_control(
-                'sa_social_icons_position', $this->style, [
-            'label' => __('Color View', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_TEXT,
-            'loader' => TRUE,
-            'default' => 'separately',
-            'options' => [
-                'separately' => [
-                    'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+            'sa_social_icons_position',
+            $this->style,
+            [
+                'label' => __('Color View', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_TEXT,
+                'loader' => TRUE,
+                'default' => 'separately',
+                'options' => [
+                    'separately' => [
+                        'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+                    ],
+                    'common' => [
+                        'title' => __('Static', SHORTCODE_ADDOONS),
+                    ],
                 ],
-                'common' => [
-                    'title' => __('Static', SHORTCODE_ADDOONS),
-                ],
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_social_icons_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#390075',
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13 .oxi-icons' => 'color : {{VALUE}}; '
-            ],
-            'condition' => [
-                'sa_social_icons_position' => 'common'
             ]
-                ]
         );
         $this->add_control(
-                'sa_social_icons_bg_color_view', $this->style, [
-            'label' => __('Background View', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_TEXT,
-            'loader' => TRUE,
-            'default' => 'separately',
-            'options' => [
-                'separately' => [
-                    'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+            'sa_social_icons_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#390075',
+                'selector' => [
+                    '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13 .oxi-icons' => 'color : {{VALUE}}; '
                 ],
-                'common' => [
-                    'title' => __('Static', SHORTCODE_ADDOONS),
-                ],
-            ],
+                'condition' => [
+                    'sa_social_icons_position' => 'common'
                 ]
-        );
-        $this->add_control(
-                'sa_social_icons_bg_color', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(255, 255, 255, 0)',
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13 ' => 'background : {{VALUE}}; '
-            ],
-            'condition' => [
-                'sa_social_icons_bg_color_view' => 'common'
             ]
-                ]
         );
-
-
-        $this->add_group_control(
-                'sa_social_icons_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-social-style-13 a.oxi-icon-style-13' => '',
-            ],
-          
-                ]
+        $this->add_control(
+            'sa_social_icons_bg_color_view',
+            $this->style,
+            [
+                'label' => __('Background View', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_TEXT,
+                'loader' => TRUE,
+                'default' => 'separately',
+                'options' => [
+                    'separately' => [
+                        'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+                    ],
+                    'common' => [
+                        'title' => __('Static', SHORTCODE_ADDOONS),
+                    ],
+                ],
+            ]
         );
+        $this->add_control(
+            'sa_social_icons_bg_color',
+            $this->style,
+            [
+                'label' => __('Background', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => 'rgba(255, 255, 255, 0)',
+                'selector' => [
+                    '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13 ' => 'background : {{VALUE}}; '
+                ],
+                'condition' => [
+                    'sa_social_icons_bg_color_view' => 'common'
+                ]
+            ]
+        );
+ 
         $this->add_responsive_control(
-                'sa_social_icons_normal_border_radius',
-                $this->style,
-                [
-                    'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                    'type' => Controls::DIMENSIONS,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => '',
+            'sa_social_icons_normal_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
                     ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 200,
-                            'step' => 1,
-                        ],
-                        '%' => [
-                            'min' => 0,
-                            'max' => 50,
-                            'step' => .1,
-                        ],
-                        'em' => [
-                            'min' => 0,
-                            'max' => 10,
-                            'step' => .1,
-                        ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
                     ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-social-style-13  a.oxi-icon-style-13' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
                     ],
-                ]
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-social-style-13  a.oxi-icon-style-13' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
         );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-                'sa_social_icons_h_position', $this->style, [
-            'label' => __('Color View', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_TEXT,
-            'loader' => TRUE,
-            'default' => 'common',
-            'options' => [
-                'separately' => [
-                    'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+            'sa_social_icons_h_position',
+            $this->style,
+            [
+                'label' => __('Color View', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_TEXT,
+                'loader' => TRUE,
+                'default' => 'common',
+                'options' => [
+                    'separately' => [
+                        'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+                    ],
+                    'common' => [
+                        'title' => __('Static', SHORTCODE_ADDOONS),
+                    ],
                 ],
-                'common' => [
-                    'title' => __('Static', SHORTCODE_ADDOONS),
-                ],
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_social_icons_h_color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'default' => '#444',
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13:hover .oxi-icons' => 'color : {{VALUE}}; '
-            ],
-            'condition' => [
-                'sa_social_icons_h_position' => 'common'
             ]
-                ]
         );
         $this->add_control(
-                'sa_social_icons_bg_h_color_view', $this->style, [
-            'label' => __('Background View', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_TEXT,
-            'loader' => TRUE,
-            'default' => 'common',
-            'options' => [
-                'separately' => [
-                    'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+            'sa_social_icons_h_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#444',
+                'selector' => [
+                    '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13:hover .oxi-icons' => 'color : {{VALUE}}; '
                 ],
-                'common' => [
-                    'title' => __('Static', SHORTCODE_ADDOONS),
-                ],
-            ],
+                'condition' => [
+                    'sa_social_icons_h_position' => 'common'
                 ]
-        );
-        $this->add_control(
-                'sa_social_icons_h_bg_color', $this->style, [
-            'label' => __('Background', SHORTCODE_ADDOONS),
-            'type' => Controls::COLOR,
-            'oparetor' => 'RGB',
-            'default' => 'rgba(92, 92, 92, 0.0)',
-            'selector' => [
-                '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13:hover ' => 'background : {{VALUE}}; '
-            ],
-            'condition' => [
-                'sa_social_icons_bg_h_color_view' => 'common'
             ]
-                ]
         );
-       
-           $this->add_group_control(
-                'sa_social_icons_h_box_shadow', $this->style, [
-            'type' => Controls::BOXSHADOW,
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-social-style-13 a.oxi-icon-style-13:hover' => ''
-            ],
-          
-                ]
+        $this->add_control(
+            'sa_social_icons_bg_h_color_view',
+            $this->style,
+            [
+                'label' => __('Background View', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_TEXT,
+                'loader' => TRUE,
+                'default' => 'common',
+                'options' => [
+                    'separately' => [
+                        'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+                    ],
+                    'common' => [
+                        'title' => __('Static', SHORTCODE_ADDOONS),
+                    ],
+                ],
+            ]
         );
+        $this->add_control(
+            'sa_social_icons_h_bg_color',
+            $this->style,
+            [
+                'label' => __('Background', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => 'rgba(92, 92, 92, 0.0)',
+                'selector' => [
+                    '{{WRAPPER}}  .oxi-addons-social-style-13  a.oxi-icon-style-13:hover ' => 'background : {{VALUE}}; '
+                ],
+                'condition' => [
+                    'sa_social_icons_bg_h_color_view' => 'common'
+                ]
+            ]
+        );
+        $this->add_control(
+            'sa_social_icons_h_box_shadow_view',
+            $this->style,
+            [
+                'label' => __('Box Shadow View', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_TEXT,
+                'loader' => TRUE,
+                'default' => 'common',
+                'options' => [
+                    'separately' => [
+                        'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+                    ],
+                    'common' => [
+                        'title' => __('Static', SHORTCODE_ADDOONS),
+                    ],
+                ],
+
+            ]
+        );
+        $this->add_group_control(
+            'sa_social_icons_h_box_shadow',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-social-style-13 a.oxi-icon-style-13:hover' => ''
+                ],
+                'condition' => [
+                    'sa_social_icons_h_box_shadow_view' => 'common'
+                ]
+            ]
+        ); 
         $this->add_responsive_control(
-                'sa_social_icons_h_border_radius',
-                $this->style,
-                [
-                    'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                    'type' => Controls::DIMENSIONS,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => '',
+            'sa_social_icons_h_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
                     ],
-                    'range' => [
-                        'px' => [
-                            'min' => 0,
-                            'max' => 200,
-                            'step' => 1,
-                        ],
-                        '%' => [
-                            'min' => 0,
-                            'max' => 50,
-                            'step' => .1,
-                        ],
-                        'em' => [
-                            'min' => 0,
-                            'max' => 10,
-                            'step' => .1,
-                        ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
                     ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons-social-style-13  a.oxi-icon-style-13:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
                     ],
-                ]
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-social-style-13  a.oxi-icon-style-13:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
@@ -456,5 +502,4 @@ class Style_13 extends AdminStyle {
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-
 }

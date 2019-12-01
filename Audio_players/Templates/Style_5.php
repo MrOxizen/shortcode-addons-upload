@@ -72,6 +72,7 @@ class Style_5 extends Templates
     }
     public function public_jquery()
     {
+        echo  wp_enqueue_media();
         $this->JSHANDLE = 'mediaelement-min';
         wp_enqueue_script('mediaelement-min', SA_ADDONS_UPLOAD_URL . '/Audio_players/file/mediaelement-min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
@@ -80,15 +81,12 @@ class Style_5 extends Templates
         $style = $this->style;
         $jquery = '';
         if ((array_key_exists('sa_ap_audio_play_pause', $style) && $style['sa_ap_audio_play_pause'] != '0') || (array_key_exists('sa_ap_audio_time', $style) && $style['sa_ap_audio_time'] != '0') || (array_key_exists('sa_ap_audio_volume', $style) && $style['sa_ap_audio_volume'] != '0') || (array_key_exists('sa_ap_audio_progress', $style) && $style['sa_ap_audio_progress'] != '0')) {
-            $jquery .= '  jQuery(" .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 #mediaplayer").mediaelementplayer({
+            $jquery .= '   $(" .' . $this->WRAPPER . ' .sa_addons_ap_container_style_5 #mediaplayer").mediaelementplayer({
                     features: [';
 
             if ($style['sa_ap_audio_play_pause'] == 'yes') {
                 $jquery .= '"playpause",';
-            }
-            if ($style['sa_ap_audio_time'] == 'yes') {
-                $jquery .= '"current",';
-            }
+            } 
             if ($style['sa_ap_audio_progress'] == 'yes') {
                 $jquery .= '"progress",';
             }

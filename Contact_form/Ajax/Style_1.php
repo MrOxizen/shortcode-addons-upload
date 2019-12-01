@@ -28,6 +28,7 @@ class Style_1 {
         $name = $style['oxi-addons-form-input-data-name'];
         $email = $style['oxi-addons-form-input-data-email'];
         $massage = $style['oxi-addons-form-input-data-massage'];
+
         $fromemail = get_option('admin_email');
         if (!empty($optional)) {
             $receive = $optional;

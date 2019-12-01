@@ -8,187 +8,207 @@ and open the template in the editor.
     Author     : biplob
 */
 
-.oa-fm-content-4{
-    width:100%;
-    float:left; 
+.oa-fm-content-4 {
+    width: 100%;
+    float: left;
 }
+
 .oa-fm-inner-side-div {
     margin: 0 auto;
     display: flex;
 }
-.oa-fm-content-4 .oxi-addonsFM-FO-row{
-    width:100%;
-    max-width:px;
-    margin:0 auto;
-    Background:rgba(255,255,255,1.00);
-    border-radius:0px 0px 0px 0px;
-    overflow:auto;
-}
-.oa-fm-content-4 .oxi-addonsFM-FO-content-body{
-    width:100%;
-    float:left;
-    display:flex ;
+
+.oa-fm-content-4 .oxi-addonsFM-FO-row {
+    width: 100%; 
+    margin: 0 auto;
+    Background: rgba(255, 255, 255, 1.00);
+    border-radius: 0px 0px 0px 0px;
+    overflow: auto;
 }
 
-.oxi-addonsFM-FO-text-body{
-    flex-grow:10;
-}
-.oa-fm-content-4 .oxi-addonsFM-FO-image{
-    flex-grow:1;
-}
-.oa-fm-content-4 .oxi-addonsFM-FO-image img{
-    width:120px;
-    max-width:120px;
-    height:120px;
-    border-radius:5px 5px 5px 5px;
-    margin:10px 10px 10px 10px ;
-}
-.oa-fm-content-4 .oxi-addonsFM-FO-heading-body{
+.oa-fm-content-4 .oxi-addonsFM-FO-content-body {
+    width: 100%;
+    float: left;
     display: flex;
-    justify-content: space-between;
-    width:100%;
-    float:left; 
 }
-.oa-fm-content-4 .oxi-addonsFM-FO-price{
-    flex-grow:60;
-    font-size:20px;
-    color:#3d3d3d;
-    font-family:"Allerta";
-    font-weight:bold;
-    font-style:normal;
-    line-height:1.3;
-    text-align:right;
-    margin:0px 0px 0px 0px ;
-    float: left;
+
+.oxi-addonsFM-FO-text-body {
+    flex-grow: 10;
+}
+
+.oa-fm-content-4 .oxi-addonsFM-FO-image {
+    flex-grow: 1;
+}
+
+.oa-fm-content-4 .oxi-addonsFM-FO-image img {
+    width: 120px;
+    max-width: 120px;
+    height: 120px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+}
+
+.oa-fm-content-4 .oxi-addonsFM-FO-heading-body {
+    display: flex; 
     width: 100%;
-}
-.oa-fm-content-4 .oxi-addonsFM-FO-heading{
-    flex-grow:1;
-    font-size:23px;
-    color:#4a4a4a;
-    font-family:"Lato";
-    font-weight:700;
-    font-style:normal;
-    line-height:1.3;
-    text-align:left ;
     float: left;
+}
+
+.oa-fm-content-4 .oxi-addonsFM-FO-price {
+    flex-grow: 1;
+    font-size: 20px;
+    color: #3d3d3d;
+    font-family: "Allerta";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: right;
+    margin: 0px 0px 0px 0px; 
+}
+
+.oa-fm-content-4 .oxi-addonsFM-FO-heading {
+    flex-grow: 3;
+    font-size: 23px;
+    color: #4a4a4a;
+    font-family: "Lato";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left; 
+}
+
+.oa-fm-content-4 .oxi-addonsFM-FO-rating {
     width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #edb211;
+    text-align: left;
+    padding: 10px 0px 10px 0px;
 }
-.oa-fm-content-4 .oxi-addonsFM-FO-rating{
-    width:100%;
-    float:left;
-    font-size:20px;
-    color:#edb211;
-    text-align:left;
-    padding:10px 0px 10px 0px;
+
+.oa-fm-content-4 .oxi-addonsFM-FO-info {
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    color: #454242;
+    font-family: "Amiri";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 0px 0px 0px 0px;
 }
-.oa-fm-content-4 .oxi-addonsFM-FO-info{
-    width:100%;
-    float:left;
-    font-size:15px;
-    color:#454242;
-    font-family:"Amiri";
-    font-weight:normal;
-    font-style:normal;
-    line-height:1.3;
-    text-align:left;
-    padding:0px 0px 0px 0px ;
-}
-@media only screen and (min-width:669px) and (max-width:993px){
-    
-    .oa-fm-content-4 .oxi-addonsFM-FO-content-body{
-        flex-direction:column;
-        width:100% ;
-        float:left ;
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-content-body {
+        flex-direction: column;
+        width: 100%;
+        float: left;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-image{
-        text-align:center ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-image {
+        text-align: center;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-image img{
-        text-align:center;
-        border-radius:5px 5px 5px 5px;
-        margin:10px 10px 10px 10px ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-image img {
+        text-align: center;
+        border-radius: 5px 5px 5px 5px;
+        margin: 10px 10px 10px 10px;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-heading-body{
-        flex-direction:column;
-        width:100%;
-        float:left;
-        padding:20px 0px 0px 0px ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-heading-body {
+        flex-direction: column;
+        width: 100%;
+        float: left;
+        padding: 20px 0px 0px 0px;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-price{
-        font-size:20px;
-        margin:0px 0px 0px 0px;
-        text-align:center;
-        width:100%;
-        float:left ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-price {
+        font-size: 20px;
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        width: 100%;
+        float: left;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-heading{
-        font-size:30px;
-        text-align:center;
-        width:100%;
-        float:left ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-heading {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+        float: left;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-category{
-        text-align:center;
-        width:100%;
-        float:left;
-        font-size:20px;
-        padding:10px 0px 10px 0px ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-category {
+        text-align: center;
+        width: 100%;
+        float: left;
+        font-size: 20px;
+        padding: 10px 0px 10px 0px;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-info{
-        text-align:center;
-        width:100%;
-        float:left;
-        font-size:15px;
-        padding:0px 0px 0px 0px ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-info {
+        text-align: center;
+        width: 100%;
+        float: left;
+        font-size: 15px;
+        padding: 0px 0px 0px 0px;
     }
 }
-@media only screen and (max-width:668px){
-     
-    .oa-fm-content-4 .oxi-addonsFM-FO-content-body{
-        flex-direction:column;
-        width:100% ;
-        float:left ;
+
+@media only screen and (max-width:668px) {
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-content-body {
+        flex-direction: column;
+        width: 100%;
+        float: left;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-image{
-        text-align:center ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-image {
+        text-align: center;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-image img{
-        text-align:center;
-        border-radius:5px 5px 5px 5px;
-        margin:10px 10px 10px 10px;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-image img {
+        text-align: center;
+        border-radius: 5px 5px 5px 5px;
+        margin: 10px 10px 10px 10px;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-heading-body{
-        flex-direction:column;
-        width:100%;
-        float:left;
-        padding:20px 0px 0px 0px ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-heading-body {
+        flex-direction: column;
+        width: 100%;
+        float: left;
+        padding: 20px 0px 0px 0px;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-price{
-        font-size:20px;
-        margin:0px 0px 0px 0px;
-        text-align:center;
-        width:100%;
-        float:left ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-price {
+        font-size: 20px;
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        width: 100%;
+        float: left;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-heading{
-        font-size:23px;
-        text-align:center;
-        width:100%;
-        float:left ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-heading {
+        font-size: 23px;
+        text-align: center;
+        width: 100%;
+        float: left;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-category{
-        text-align:center;
-        width:100%;
-        float:left;
-        font-size:20px;
-        padding:10px 0px 10px 0px ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-category {
+        text-align: center;
+        width: 100%;
+        float: left;
+        font-size: 20px;
+        padding: 10px 0px 10px 0px;
     }
-    .oa-fm-content-4 .oxi-addonsFM-FO-info{
-        text-align:center;
-        width:100%;
-        float:left;
-        font-size:15px;
-        padding:0px 0px 0px 0px ;
+
+    .oa-fm-content-4 .oxi-addonsFM-FO-info {
+        text-align: center;
+        width: 100%;
+        float: left;
+        font-size: 15px;
+        padding: 0px 0px 0px 0px;
     }
 }

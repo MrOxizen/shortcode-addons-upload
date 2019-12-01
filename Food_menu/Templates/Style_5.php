@@ -31,20 +31,7 @@ class Style_5 extends Templates {
         } else {
             $admin_class = '';
         }
-
-//            echo '<pre>';
-//            print_r($style);
-//            echo '</pre>';
-//        if ($style['sa-fm-body-price-alignment'] == 'left') {
-//            $position = "sa-fm-temp-1-left";
-//        } elseif ($style['sa-fm-body-price-alignment'] == 'right') {
-//            $position = "sa-fm-temp-1-right";
-//        } else {
-//            $position = "sa-fm-temp-1-center";
-//        }
-
-
-        $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
+  $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
         foreach ($all_data as $key => $data) {
 
@@ -75,13 +62,6 @@ class Style_5 extends Templates {
                         background-size: cover;">
                         </div>';
             }
-
-
-//            echo '<pre>';
-//            print_r($data);
-//            echo '</pre>';
-
-
             echo '<div class=" ' . $this->column_render('sa-ac-column', $style) . '   ' . $admin_class . ' ">';
 
             echo '<a ' . $this->url_render('sa_el_price_link', $data) . '>

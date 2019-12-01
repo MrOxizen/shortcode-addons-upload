@@ -16,9 +16,11 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates {
+class Style_2 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $class = '';
         if ($style['sa-max-w-condition'] == 'custom') {
             $class = 'sa-max-w-auto';
@@ -31,17 +33,7 @@ class Style_2 extends Templates {
         } else {
             $admin_class = '';
         }
-
-//        if ($style['sa-fm-body-price-alignment'] == 'left') {
-//            $position = "sa-fm-temp-1-left";
-//        } elseif ($style['sa-fm-body-price-alignment'] == 'right') {
-//            $position = "sa-fm-temp-1-right";
-//        } else {
-//            $position = "sa-fm-temp-1-center";
-//        }
-
-
-       $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
+        $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
         foreach ($all_data as $key => $data) {
 
@@ -65,7 +57,7 @@ class Style_2 extends Templates {
             }
             if (array_key_exists('sa_el_insert_price', $data) && $data['sa_el_insert_price'] != '') {
                 $price = '<div class="oxi-addonsFM-ON-price">
-                               $ ' . $this->text_render($data['sa_el_insert_price']) . '
+                               $' . $this->text_render($data['sa_el_insert_price']) . '
                             </div>';
             }
             if (array_key_exists('sa_el_insert_food_desc', $data) && $data['sa_el_insert_food_desc'] != '') {
@@ -73,18 +65,11 @@ class Style_2 extends Templates {
                                 ' . $this->text_render($data['sa_el_insert_food_desc']) . '
                             </div>';
             }
-            
-
-//            echo '<pre>';
-//            print_r($data);
-//            echo '</pre>';
-
-
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';
 
             echo ' <a ' . $this->url_render('sa_el_price_link', $data) . '>
-                  <div class="oa_el_fm_template_2   ">
-                    <div class="oa_el_fm_tem_2_inner   oa_el_fm_tem_2_inner_'.$key.'  ' . $class . '">
+                  <div class="oa_el_fm_template_2">
+                    <div class="oa_el_fm_tem_2_inner  oa_el_fm_tem_2_inner_' . $key . '  ' . $class . '">
                       <div class="oxi-addonsFM-ON-row"  ' . $this->animation_render('sa-fm-animation-temp-2', $style) . '>
                         <div class="oxi-addonsFM-ON-content-body">
                            ' . $heading . '
@@ -100,35 +85,37 @@ class Style_2 extends Templates {
             echo '</div>';
         }
     }
-    
-      public function public_rating_render($data = '') {
-            $ratefull = 'fas fa-star';
-            $ratehalf = 'fas fa-star-half-alt';
-            $rateO = 'far fa-star';
 
-            if ($data > 4.5) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull);
-            } elseif ($data <= 4.5 && $data > 4) { 
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf);
-            } elseif ($data <= 4 && $data > 3.5) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO);
-            } elseif ($data <= 3.5 && $data > 3) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO);
-            } elseif ($data <= 3 && $data > 2.5) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($data <= 2.5 && $data > 2) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($data <= 2 && $data > 1.5) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($data <= 1.5 && $data > 1) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($data <= 1) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            }
+    public function public_rating_render($data = '')
+    {
+        $ratefull = 'fas fa-star';
+        $ratehalf = 'fas fa-star-half-alt';
+        $rateO = 'far fa-star';
+
+        if ($data > 4.5) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull);
+        } elseif ($data <= 4.5 && $data > 4) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf);
+        } elseif ($data <= 4 && $data > 3.5) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO);
+        } elseif ($data <= 3.5 && $data > 3) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO);
+        } elseif ($data <= 3 && $data > 2.5) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+        } elseif ($data <= 2.5 && $data > 2) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+        } elseif ($data <= 2 && $data > 1.5) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+        } elseif ($data <= 1.5 && $data > 1) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+        } elseif ($data <= 1) {
+            return $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
         }
-    
+    }
 
-    public function old_render() {
+
+    public function old_render()
+    {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
@@ -325,5 +312,4 @@ class Style_2 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-animation', $jquery);
     }
-
 }

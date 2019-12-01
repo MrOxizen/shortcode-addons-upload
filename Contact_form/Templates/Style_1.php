@@ -12,17 +12,20 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_1 extends Templates
+{
 
     /**
      * load public jquery
      *
      * @since 2.0.0
      */
-    public function inline_public_jquery() {
-        $js = ' jQuery(".oxi-addons-form-input-data-style1").each(function(){
+    public function inline_public_jquery()
+    {
+        $js = ' jQuery(".' . $this->WRAPPER . ' .oxi-addons-form-input-data-style1").each(function(){
                     jQuery(this).on("blur", function(){
                         if(jQuery(this).val().trim() != "") {
                             jQuery(this).addClass("oxi-is-val");
@@ -32,11 +35,11 @@ class Style_1 extends Templates {
                         }
                     })    
                 })
-                $(".oxi-addons-contact-form").submit(function (e) {
+                $(".' . $this->WRAPPER . ' .oxi-addons-contact-form").submit(function (e) {
                     e.preventDefault();
                     return false;
                 });
-                $(document).on("click", ".oxi-addons-contact-form-btn", function(e) {
+                $(document).on("click", ".oxi-addons-contact-form-btn-' . $this->oxiid . '", function(e) {
                     e.preventDefault();
                     e.stopPropagation();
                     e.stopImmediatePropagation();
@@ -45,8 +48,7 @@ class Style_1 extends Templates {
                         $function = $this.data("function");
                         
                     $Form   = $(this).parents().find("form");
-                    var oxiname = $Form.find(".oxi-addons-form-input-data-name");
-                    console.log(oxiname);
+                    var oxiname = $Form.find(".oxi-addons-form-input-data-name-' . $this->oxiid . '");
                     if(oxiname.val().trim() == ""){
                         var thisAlert = $(oxiname).parent();
                         $(thisAlert).addClass("oxi-alert-validate");
@@ -56,7 +58,7 @@ class Style_1 extends Templates {
                         var thisAlert = $(oxiname).parent();
                         $(thisAlert).removeClass("oxi-alert-validate");
                     }
-                    var oxiemail = $Form.find(".oxi-addons-form-input-data-email");
+                    var oxiemail = $Form.find(".oxi-addons-form-input-data-email-' . $this->oxiid . '");
                     if($(oxiemail).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
                         var thisAlert = $(oxiemail).parent();
                         $(thisAlert).addClass("oxi-alert-validate");
@@ -66,7 +68,7 @@ class Style_1 extends Templates {
                         var thisAlert = $(oxiemail).parent();
                         $(thisAlert).removeClass("oxi-alert-validate");
                     }
-                    var oximessage = $Form.find(".oxi-addons-form-input-data-massage");
+                    var oximessage = $Form.find(".oxi-addons-form-input-data-massage-' . $this->oxiid . '");
                     if($(oximessage).val().trim() == ""){
                         var thisAlert = jQuery(oximessage).parent();
                         $(thisAlert).addClass("oxi-alert-validate");
@@ -82,7 +84,7 @@ class Style_1 extends Templates {
                     }
                     $this.addClass("button--loading");
                     $("span", $this).html("Loading...");
-                    var rawdata = $("#oxi-addons-contact-form-' . $this->oxiid . '").serialize(),
+                    var rawdata = $(".' . $this->WRAPPER . ' #oxi-addons-contact-form-' . $this->oxiid . '").serialize(),
                         optional = $this.data("email"),
                         optional2 = $this.data("success");
                     $.ajax({
@@ -97,11 +99,11 @@ class Style_1 extends Templates {
                             optional: optional,
                             optional2: optional2
                         },
-                        success: function(response) {
+                        success: function(response) { 
                             if("sorry" !==response){
                                 $("#oxi-addons-contact-form-' . $this->oxiid . ' .oxi-addons-form-success-wrapper").html(response);
                             }
-                            $("#oxi-addons-contact-form-' . $this->oxiid . '").trigger("reset");
+                            $(".' . $this->WRAPPER . ' #oxi-addons-contact-form-' . $this->oxiid . '").trigger("reset");
                         },
                         error: function(response) {
                             console.log(response);
@@ -111,7 +113,8 @@ class Style_1 extends Templates {
         return $js;
     }
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         if ($style['sa_cf_form_style'] == 'sa_style1') {
             $coldata = 'oxi-addons-lg-col-1 oxi-addons-md-col-1 oxi-addons-xs-col-1';
         } else {
@@ -119,50 +122,47 @@ class Style_1 extends Templates {
         }
         if (!empty($style['sa_cf_title_text'])) {
             $contacttitle = '<div class="oxi-addons-form-title">
-                                    ' . $this->text_render($style['sa_cf_title_text']) . '
+                                ' . $this->text_render($style['sa_cf_title_text']) . '
                             </div>';
         } else {
             $contacttitle = '';
         }
         if (!empty($style['sa_cf_subtitle'])) {
             $contactinfo = '<div class="oxi-addons-form-content">
-                                     ' . $this->text_render($style['sa_cf_subtitle']) . '
+                                ' . $this->text_render($style['sa_cf_subtitle']) . '
                             </div>';
         } else {
             $contactinfo = '';
         }
-        echo '<div class="oxi-addons-container">
-                <div class="oxi-addons-row">
-                    <div class="oxi-addons-form-warp-style1" ' . $this->animation_render('sa_cf_animation', $style) . '>
-                        <form  method="post" class="oxi-addons-contact-form" id="oxi-addons-contact-form-' . $this->oxiid . '"> 
-                            ' . $contacttitle . ' ' . $contactinfo . '
-                            <div class="oxi-addons-form-success-wrapper"></div>
-                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate ' . $coldata . '" oxi-validate=" ' . $this->text_render($style['sa_cf_name_err_text']) . '">
-                                    <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-name" type="text" name="oxi-addons-form-input-data-name">
-                                    <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_name_title']) . '"></span>
+        echo '<div class="oxi-addons-form-warp-style1" ' . $this->animation_render('sa_cf_animation', $style) . '>
+                    <form  method="post" class="oxi-addons-contact-form" id="oxi-addons-contact-form-' . $this->oxiid . '"> 
+                        ' . $contacttitle . ' ' . $contactinfo . '
+                        <div class="oxi-addons-form-success-wrapper oxi-addons-messages-' . $this->oxiid . '"></div>
+                        <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate ' . $coldata . '" oxi-validate=" ' . $this->text_render($style['sa_cf_name_err_text']) . '">
+                            <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-name-' . $this->oxiid . '" type="text" name="oxi-addons-form-input-data-name">
+                            <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_name_title']) . '"></span>
+                        </div>
+                        <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate  ' . $coldata . '" oxi-validate = " ' . $this->text_render($style['sa_cf_email_err_text']) . '">
+                            <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-email-' . $this->oxiid . '" type="text" name="oxi-addons-form-input-data-email">
+                            <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_emali_title']) . '"></span>
+                        </div>
+                        <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate oxi-addons-lg-col-1" oxi-validate = " ' . $this->text_render($style['sa_cf_msg_err_text']) . '">
+                            <textarea class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-massage-' . $this->oxiid . '" name="oxi-addons-form-input-data-massage"></textarea>
+                            <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_msg_title']) . '"></span>
+                        </div>
+                        <div class="oxi-addons-form-btn oxi-addons-lg-col-1">
+                            <div class="oxi-addons-form-btn-warp">
+                                <button type="submit" class="oxi-addons-contact-form-btn-' . $this->oxiid . ' oxi-addons-btn" data-class="SHORTCODE_ADDONS_UPLOAD\Contact_form\Ajax\Style_1" data-function="ajax_loader" data-email="' . $style['sa_cf_admin_email'] . '"  data-success=\'' . $style['sa_cf_success_msg'] . '\'>
+                                    ' . $this->text_render($style['sa_cf_button']) . '
+                                </button>
                             </div>
-                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate  ' . $coldata . '" oxi-validate = " ' . $this->text_render($style['sa_cf_email_err_text']) . '">
-                                    <input class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-email" type="text" name="oxi-addons-form-input-data-email">
-                                    <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_emali_title']) . '"></span>
-                            </div>
-                            <div class="oxi-addons-form-input-style1 oxi-addons-form-input-validate oxi-addons-lg-col-1" oxi-validate = " ' . $this->text_render($style['sa_cf_msg_err_text']) . '">
-                                    <textarea class="oxi-addons-form-input-data-style1 oxi-addons-form-input-data-massage" name="oxi-addons-form-input-data-massage"></textarea>
-                                    <span class="oxi-focus-input-style1" oxi-data-placeholder="' . $this->text_render($style['sa_cf_msg_title']) . '"></span>
-                            </div>
-                            <div class="oxi-addons-form-btn oxi-addons-lg-col-1">
-                                    <div class="oxi-addons-form-btn-warp">
-                                          <button type="submit" class="oxi-addons-contact-form-btn oxi-addons-btn" data-class="SHORTCODE_ADDONS_UPLOAD\Contact_form\Ajax\Style_1" data-function="ajax_loader" data-email="' . $style['sa_cf_admin_email'] . '"  data-success=\'' . $style['sa_cf_success_msg'] . '\'>
-                                              ' . $this->text_render($style['sa_cf_button']) . '
-                                          </button>
-                                    </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>';
+                        </div>
+                    </form>
+                </div> ';
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $styledata = $this->dbdata;
         $oxiid = $styledata['id'];
         $stylefiles = explode('||#||', $styledata['css']);
@@ -190,17 +190,17 @@ class Style_1 extends Templates {
                     $receive = get_option('admin_email');
                 }
                 $msg = "<table width=100% border=1 cellspacing=0 cellpadding=5><tr><td>&nbsp;"
-                        . esc_html__('Name', 'OxiAddons') . "</td><td>&nbsp;$name</td></tr><tr><td>&nbsp;"
-                        . esc_html__('Email', 'OxiAddons') . "</td><td>&nbsp;$email</td></tr><tr><td>&nbsp;"
-                        . esc_html__('Message', 'OxiAddons') . "</td><td>&nbsp;$massage</td></tr></table>";
+                    . esc_html__('Name', 'OxiAddons') . "</td><td>&nbsp;$name</td></tr><tr><td>&nbsp;"
+                    . esc_html__('Email', 'OxiAddons') . "</td><td>&nbsp;$email</td></tr><tr><td>&nbsp;"
+                    . esc_html__('Message', 'OxiAddons') . "</td><td>&nbsp;$massage</td></tr></table>";
 
 
                 if (!empty($name) && !empty($email) && !empty($massage)) {
                     $subject = $name . ' Sent You a Contact Massage';
                     $headers = "From: $name <$fromemail>" . "\r\n" .
-                            "Content-type: text/html; charset=iso-8859-1\r\n" .
-                            "Reply-To: $email" . "\r\n" .
-                            "X-Mailer: PHP/" . phpversion();
+                        "Content-type: text/html; charset=iso-8859-1\r\n" .
+                        "Reply-To: $email" . "\r\n" .
+                        "X-Mailer: PHP/" . phpversion();
 
                     if (wp_mail($receive, $subject, $msg, $headers)) {
                         $successfuldata = '<div class="oxi-addons-form-success">
@@ -655,5 +655,4 @@ class Style_1 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
-
 }

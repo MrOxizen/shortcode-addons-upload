@@ -436,7 +436,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
                 'loader' => TRUE,
-                'default' => 'f30c',
+                'default' => 'f309',
             ]
         );
         $this->add_responsive_control(
@@ -745,7 +745,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#808080',
                 'condition' => [
                     'sa_datatable_show_entries_switter' => 'yes'
                 ],
@@ -797,6 +797,9 @@ class Style_1 extends AdminStyle
             [
                 'label' => esc_html__('Select Box Setting ', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
+                'condition' => [
+                    'sa_datatable_show_entries_switter' => 'yes'
+                ],
             ]
         );
         $this->add_control(
@@ -885,7 +888,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'width: {{SIZE}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -917,7 +920,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_length .oxi_datatable_select_box' => 'height: {{SIZE}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -1159,6 +1162,7 @@ class Style_1 extends AdminStyle
             'sa_datatable_button_hover_border',
             $this->style,
             [
+                'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::BORDER,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_export_button:hover' => ''
@@ -1167,7 +1171,14 @@ class Style_1 extends AdminStyle
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
-
+        $this->add_control(
+            'sa_datatable_button_hover_separetor',
+            $this->style,
+            [
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => TRUE, 
+            ]
+        );
         $this->add_responsive_control(
             'sa_datatable_button_border_radius',
             $this->style,
@@ -1349,7 +1360,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -1388,6 +1399,9 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter > .oxi_filter_label' => ''
                 ],
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
             ]
         );
 
@@ -1401,6 +1415,9 @@ class Style_1 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_filter > .oxi_filter_label' => 'color: {{VALUE}} !important;',
                 ],
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
             ]
         );
 
@@ -1411,6 +1428,9 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -1444,6 +1464,9 @@ class Style_1 extends AdminStyle
             [
                 'label' => esc_html__('Input Setting', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
             ]
         );
         $this->add_responsive_control(
@@ -1648,6 +1671,9 @@ class Style_1 extends AdminStyle
                 'label' => __('Typography', SHORTCODE_ADDOONS),
                 'type' => Controls::TYPOGRAPHY, 
                 'include' => Controls::ALIGNNORMAL,
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next' => '',
                     '{{WRAPPER}}  .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.previous' => ''
@@ -1671,6 +1697,9 @@ class Style_1 extends AdminStyle
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#4a4a4a',
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover' => 'color: {{VALUE}} !important;',
@@ -1687,6 +1716,9 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'default' => '#4a4a4a',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'color: {{VALUE}} !important;',
@@ -1701,6 +1733,9 @@ class Style_1 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => 'rgba(255,255,255,1.00)',
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'background-color: {{VALUE}} !important;',
@@ -1716,6 +1751,9 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -1750,6 +1788,10 @@ class Style_1 extends AdminStyle
             [
                 'label' => esc_html__('Pagination Button Setting ', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
+
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
             ]
         );
 

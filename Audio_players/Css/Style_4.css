@@ -307,7 +307,7 @@
 }
 
 .sa_addons_ap_container_style_4.sa_show_volume_handle .mejs-horizontal-volume-handle {
-    display: block;
+    display: block !important;
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {

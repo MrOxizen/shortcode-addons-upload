@@ -8,148 +8,177 @@ and open the template in the editor.
     Author     : biplob
 */
 
-.oa_el_fm_template_2{
-    width:100%;
-    float:left;
-    padding:5px 5px 5px 5px;
+.oa_el_fm_template_2 {
+    width: 100%;
+    float: left;
+    padding: 5px 5px 5px 5px;
 }
-.oa_el_fm_tem_2_inner {
+
+.oa_el_fm_template_2 .oa_el_fm_tem_2_inner {
     margin: auto;
     display: flex;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-row{
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-row {
     max-width: auto;
-    width:100%;
-    Background:rgba(212,34,165,1.00);
-    border-radius:0px 0px 0px 0px;
-    box-shadow:1px 1px 10px 1px rgba(199, 199, 199, 1);
-    overflow:hidden;
-    padding:10px 10px 10px 10px ;
+    width: 100%;
+    Background: rgba(212, 34, 165, 1.00);
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 1px 1px 10px 1px rgba(199, 199, 199, 1);
+    overflow: hidden;
+    padding: 10px 10px 10px 10px;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-content-body{
-    width:100%;
-    float:left;
-    background:rgba(212,34,165,1.00);
-    padding:15px 15px 15px 15px ;
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-content-body {
+    width: 100%;
+    float: left;
+    background: rgba(212, 34, 165, 1.00);
+    padding: 15px 15px 15px 15px;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-image{
-    width:100%;
-    float:left;
-    text-align:center ;
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-image {
+    width: 100%;
+    float: left;
+    text-align: center;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-image img{
-    width:120px;
-    height:120px;
-    border:5px solid #ffffff;
-    border-radius:100px 100px 100px 100px;
-    margin:10px 10px 10px 10px ;
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-image img {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #ffffff;
+    border-radius: 100px 100px 100px 100px;
+    margin: 10px 10px 10px 10px;
+    -webkit-border-radius: 100px 100px 100px 100px;
+    -moz-border-radius: 100px 100px 100px 100px;
+    -ms-border-radius: 100px 100px 100px 100px;
+    -o-border-radius: 100px 100px 100px 100px;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-price{
-    width:100%;
-    float:left;
-    font-size:20px;
-    color:#ffffff;
-    font-family:"Allerta";
-    font-weight:bold;
-    font-style:normal;
-    line-height:1.3;
-    text-align:center;
-    margin:20px 0px 0px 0px;
-    line-height:1 ;
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-price {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Allerta";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    line-height: 1;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-heading{
-    width:100%;
-    float:left;
-    font-size:23px;
-    color:#ffffff;
-    font-family:"Lato";
-    font-weight:700;
-    font-style:normal;
-    line-height:1.3;
-    text-align:center;
-    padding:14px 14px 14px 14px ;
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-heading {
+    width: 100%;
+    float: left;
+    font-size: 23px;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 14px 14px 14px 14px;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-rating{
-    width:100%;
-    float:left;
-    font-size:20px;
-    color:#f8c100;
-    text-align:center;
-    padding:20px 0px 0px 0px ;
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-rating {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #f8c100;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
 }
-.oa_el_fm_template_2 .oxi-addonsFM-ON-info{
-    width:100%;
-    float:left;
-    font-size:15px;
-    color:#dedede;
-    font-family:"Allerta";
-    font-weight:bold;
-    font-style:normal;
-    line-height:1.3;
-    text-align:center;
-    padding:20px 0px 0px 0px; 
+
+.oa_el_fm_template_2 .oxi-addonsFM-ON-info {
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    color: #dedede;
+    font-family: "Allerta";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
 }
-@media only screen and (min-width:669px) and (max-width:993px){
-    .oa_el_fm_template_2{
-        padding:5px 5px 5px 5px ;
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .oa_el_fm_template_2 {
+        padding: 5px 5px 5px 5px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-row{
-        border-radius:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-content-body{
-        padding:15px 15px 15px 15px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-content-body {
+        padding: 15px 15px 15px 15px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-image img{
-        border-radius:100px 100px 100px 100px;
-        margin:10px 10px 10px 10px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-image img {
+        border-radius: 100px 100px 100px 100px;
+        margin: 10px 10px 10px 10px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-price{
-        font-size:20px;
-        margin:20px 0px 0px 0px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-price {
+        font-size: 20px;
+        margin: 20px 0px 0px 0px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-heading{
-        font-size:30px;
-        padding:14px 14px 14px 14px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-heading {
+        font-size: 30px;
+        padding: 14px 14px 14px 14px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-rating{
-        font-size:20px;
-        padding:20px 0px 0px 0px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-rating {
+        font-size: 20px;
+        padding: 20px 0px 0px 0px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-info{
-        font-size:15px;
-        padding:20px 0px 0px 0px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-info {
+        font-size: 15px;
+        padding: 20px 0px 0px 0px;
     }
 }
-@media only screen and (max-width:668px){
-    .oa_el_fm_template_2{
-        padding:5px 5px 5px 5px ;
+
+@media only screen and (max-width:668px) {
+    .oa_el_fm_template_2 {
+        padding: 5px 5px 5px 5px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-row{
-        border-radius:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-row {
+        border-radius: 0px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-content-body{
-        padding:15px 15px 15px 15px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-content-body {
+        padding: 15px 15px 15px 15px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-image img{
-        border-radius:100px 100px 100px 100px;
-        margin:10px 10px 10px 10px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-image img {
+        border-radius: 100px 100px 100px 100px;
+        margin: 10px 10px 10px 10px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-price{
-        font-size:20px;
-        margin:20px 0px 0px 0px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-price {
+        font-size: 20px;
+        margin: 20px 0px 0px 0px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-heading{
-        font-size:23px;
-        padding:14px 14px 14px 14px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-heading {
+        font-size: 23px;
+        padding: 14px 14px 14px 14px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-rating{
-        font-size:20px;
-        padding:20px 0px 0px 0px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-rating {
+        font-size: 20px;
+        padding: 20px 0px 0px 0px;
     }
-    .oa_el_fm_template_2 .oxi-addonsFM-ON-info{
-        font-size:15px;
-        padding:20px 0px 0px 0px ;
+
+    .oa_el_fm_template_2 .oxi-addonsFM-ON-info {
+        font-size: 15px;
+        padding: 20px 0px 0px 0px;
     }
 }

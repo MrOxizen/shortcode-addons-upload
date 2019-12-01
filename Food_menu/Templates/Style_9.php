@@ -16,9 +16,11 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_9 extends Templates {
+class Style_9 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $class = '';
         if ($style['sa-max-w-condition'] == 'custom') {
             $class = 'sa-max-w-auto';
@@ -31,20 +33,7 @@ class Style_9 extends Templates {
         } else {
             $admin_class = '';
         }
-
-//            echo '<pre>';
-//            print_r($style);
-//            echo '</pre>';
-//        if ($style['sa-fm-body-price-alignment'] == 'left') {
-//            $position = "sa-fm-temp-1-left";
-//        } elseif ($style['sa-fm-body-price-alignment'] == 'right') {
-//            $position = "sa-fm-temp-1-right";
-//        } else {
-//            $position = "sa-fm-temp-1-center";
-//        }
-
-
-        echo' <div class="oa_fm_style_9">
+        echo ' <div class="oa_fm_style_9">
                     <div class="oxi-addonsFM-row" ' . $this->animation_render('sa-fm-box-animation-temp-6', $style) . '>
                         <div class="oxi-addonsFM-content-body">
                             <div class="oxi-addonsFM-text-body">';
@@ -52,11 +41,7 @@ class Style_9 extends Templates {
         $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
         foreach ($all_data as $key => $data) {
-
-
             $heading = $price = '';
-
-
             if (array_key_exists('sa_el_insert_food_name', $data) && $data['sa_el_insert_food_name'] != '') {
                 $heading = '<div class="oxi-addonsFM-TH-heading">
                                 ' . $this->text_render($data['sa_el_insert_food_name']) . '
@@ -67,18 +52,9 @@ class Style_9 extends Templates {
                                $' . $this->text_render($data['sa_el_insert_price']) . '
                             </div>';
             }
-
-
-//            echo '<pre>';
-//            print_r($data);
-//            echo '</pre>';
-
-
             echo '<div class=" ' . $this->column_render('sa-ac-column', $style) . '   ' . $admin_class . ' ">';
-
-
             echo '<a ' . $this->url_render('sa_el_price_link', $data) . '>
-                        <div class="oxi-addonsFM-TH-heading-body oxi-addonsFM-TH-heading-body-'.$key.'   ' . $class . ' ">
+                        <div class="oxi-addonsFM-TH-heading-body oxi-addonsFM-TH-heading-body-' . $key . '   ' . $class . ' ">
                             ' . $heading . '
                             ' . $price . '
                         </div>
@@ -91,7 +67,8 @@ class Style_9 extends Templates {
         </div>';
     }
 
-    public function old_render() {
+    public function old_render()
+    {
         $styledata = $this->dbdata;
         $listdata = $this->child;
         $stylename = $styledata['style_name'];
@@ -284,5 +261,4 @@ class Style_9 extends Templates {
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-animation', $jquery);
     }
-
 }

@@ -9,89 +9,105 @@ and open the template in the editor.
 */
 
 
-.sa-fm-temp-1{
-    width:100%;
-    float:left;
+.sa-fm-temp-1 {
+    width: 100%;
+    float: left; 
 }
-.oxi-addons-fm-box-outer{
+
+.sa-fm-temp-1 .oxi-addons-fm-box-outer {
     max-width: auto;
     margin: 0 auto;
     display: flex;
 }
-.oxi-addonsFM-row{
-    width:100%;
-    background: rgba(250, 250, 250, 1);
-    border-radius:0px 0px 0px 0px;
-    overflow:hidden;
+
+.sa-fm-temp-1 .oxi-addonsFM-row {
+    width: 100%;
+    margin: 0 auto;
+    Background: rgba(250, 250, 250, 1.00);
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 1px 1px 10px 1px rgba(199, 199, 199, 1);
+    overflow: hidden;
+    padding: 10px 10px 10px 10px;
 }
-.sa-fm-temp-1 .sa-image-pb{
-    position:relative;
-    width:100%;
-    float:left;
+
+.sa-fm-temp-1 .sa-image-pb {
+    position: relative;
+    width: 100%;
+    float: left;
 }
-.sa-fm-temp-1 .sa-image-pb:after{
-    display:block;
-    content:"";
-    padding-bottom:90%;
+
+.sa-fm-temp-1 .sa-image-pb:after {
+    display: block;
+    content: "";
+    padding-bottom: 90%;
 }
-.sa-fm-temp-1 .oxi-addonsFM-image{
+
+.sa-fm-temp-1 .oxi-addonsFM-image {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
 }
-.sa-fm-temp-1 .oxi-addonsFM-image-price{
-    position:absolute;
-    display:table;
-    bottom:0;
-    width:80px;
-    height:40px;
-    background:rgba(191, 2, 0, 1);
-    border:1px solid #ffffff;
-    border-radius:25px 0px 0px 25px;
-    margin:0px 0px 50px 0px;
+
+.sa-fm-temp-1 .oxi-addonsFM-image-price {
+    position: absolute;
+    display: table;
+    bottom: 0;
+    width: 80px;
+    height: 40px;
+    background: rgba(191, 2, 0, 1);
+    border: 1px solid #ffffff;
+    border-radius: 25px 0px 0px 25px;
+    margin: 0px 0px 50px 0px;
 }
-.sa-fm-temp-1 .oxi-addonsFM-image-price-table-cell{
-    display:table-cell;
-    vertical-align:middle;
-    text-align:center;
+
+.sa-fm-temp-1 .oxi-addonsFM-image-price-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
-.sa-fm-temp-1 .oxi-addonsFM-date{
-    font-size:20px;
-    color:#ffffff;
-    font-family:"Open Sans";
-    font-weight:bold;
-    font-style:normal;
-    line-height:1.3;
-    text-align:center;
-    margin:0px 0px 0px 0px;
-    line-height:1;
+
+.sa-fm-temp-1 .oxi-addonsFM-date {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    line-height: 1;
 }
-.sa-fm-temp-1 .oxi-addonsFM-content{
-    width:100%;
-    float:left;
-    background:rgba(191, 2, 0, 1);
+
+.sa-fm-temp-1 .oxi-addonsFM-content {
+    width: 100%;
+    float: left;
+    background: rgba(191, 2, 0, 1);
 }
-.sa-fm-temp-1 .oxi-addonsFM-heading{
-    width:100%;
-    float:left;
-    font-size:27px;
-    color:#ffffff;
-    font-family:"Lato";
-    font-weight:700;
-    font-style:normal;
-    line-height:1.3;
-    text-align:center;
-    padding:14px 14px 14px 14px;
+
+.sa-fm-temp-1 .oxi-addonsFM-heading {
+    width: 100%;
+    float: left;
+    font-size: 27px;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 14px 14px 14px 14px;
 }
+
 .oxi-addonsFM-image-price.sa-fm-temp-1-center {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .oxi-addonsFM-image-price.sa-fm-temp-1-right {
     right: 0;
 }
+
 .oxi-addonsFM-image-price.sa-fm-temp-1-left {
     left: 0;
-} 
+}

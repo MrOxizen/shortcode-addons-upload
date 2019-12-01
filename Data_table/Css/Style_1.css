@@ -112,11 +112,7 @@
     margin: 0px 0px 5px 0px
 }
 
-.oxi-addons-wrapper-datatable-style-1 .oxi_export_button:hover {
-    background: rgba(90, 186, 189, 1.00) !important;
-    color: #f7f7f7 !important;
-    border-color: #76b4bf !important
-}
+
 
 .oxi-addons-wrapper-datatable-style-1 .dataTables_filter>.oxi_filter_label {
     font-size: 16px;
@@ -157,8 +153,7 @@
     font-weight: 100;
     font-style: normal;
     line-height: 1.3;
-    text-align: left;
-    padding: 0px 0px 0px 0px
+    text-align: left; 
 }
 
 .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
@@ -390,8 +385,7 @@
     }
 
     .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
-        font-size: 16px;
-        padding: 0px 0px 0px 0px
+        font-size: 16px;  
     }
 
     .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
@@ -492,8 +486,7 @@
     }
 
     .oxi-addons-wrapper-datatable-style-1 .oxi_datatable_info {
-        font-size: 16px;
-        padding: 0px 0px 0px 0px
+        font-size: 16px; 
     }
 
     .oxi-addons-wrapper-datatable-style-1 .dataTables_wrapper .dataTables_paginate .paginate_button.next,

@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\MailChimp\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Mailchimp\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -109,7 +109,7 @@ class Style_8 extends Templates
         $button  = $email_placeholder = $heading = $details = $icon = '';
         if (array_key_exists('sa_mail_chimp_button_text', $style) && $style['sa_mail_chimp_button_text'] != '') {
             $button = '<div class="oxi-addons-mailchimp-button-section"> 
-                        <button type="submit" class="oxi-addons-mailchimp-button" data-class="SHORTCODE_ADDONS_UPLOAD\MailChimp\Ajax\Style_8" data-function="ajax_loader" > 
+                        <button type="submit" class="oxi-addons-mailchimp-button" data-class="SHORTCODE_ADDONS_UPLOAD\Mailchimp\Ajax\Style_8" data-function="ajax_loader" > 
                             ' . $this->text_render($style['sa_mail_chimp_button_text']) . ' 
                         </button>
                     </div>';

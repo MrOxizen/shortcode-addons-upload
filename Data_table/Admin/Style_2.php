@@ -61,6 +61,24 @@ class Style_2 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'ID',
                     ],
+                    'sa_datatable_head_true' => [
+                        'label' => __('Show Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::SWITCHER,
+                        'default' => 'no',
+                        'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                        'label_off' => __('No', SHORTCODE_ADDOONS),
+                        'loader' => TRUE,
+                        'return_value' => 'yes',
+                    ],
+                    'sa_datatable_head_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'conditional' => Controls::INSIDE, 
+                        'default' => 'fab fa-accusoft',
+                        'condition' => [
+                            'sa_datatable_head_true' => TRUE
+                        ]
+                    ],
                 ],
                 'title_field' => 'sa_datatable_head',
                 'button' => 'Add Column',
@@ -435,7 +453,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
                 'loader' => TRUE,
-                'default' => 'f30c',
+                'default' => 'f309',
             ]
         );
         $this->add_responsive_control(
@@ -528,6 +546,58 @@ class Style_2 extends AdminStyle
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Header Icon Setting', SHORTCODE_ADDOONS),
+                'showing' => TRUE,  
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_datatable_header_icon',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '16',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-header-icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_datatable_header_icon_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#ffffff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-header-icon .oxi-icons' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
         $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
@@ -702,7 +772,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-body-icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -714,7 +784,7 @@ class Style_2 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-icons' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .oxi-body-icon .oxi-icons' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -868,7 +938,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#ffffff',
+                'default' => '#808080',
                 'condition' => [
                     'sa_datatable_show_entries_switter' => 'yes'
                 ],
@@ -920,6 +990,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Select Box Setting ', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
+                'condition' => [
+                    'sa_datatable_show_entries_switter' => 'yes'
+                ],
             ]
         );
         $this->add_control(
@@ -1486,6 +1559,7 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Search Box Setting ', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
+
             ]
         );
         $this->add_control(
@@ -1511,6 +1585,9 @@ class Style_2 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter > .oxi_filter_label' => ''
                 ],
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
             ]
         );
 
@@ -1524,6 +1601,9 @@ class Style_2 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_filter > .oxi_filter_label' => 'color: {{VALUE}} !important;',
                 ],
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
             ]
         );
 
@@ -1534,6 +1614,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -1567,6 +1650,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Input Setting', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
+                'condition' => [
+                    'sa_datatable_search_box_switter' => 'yes'
+                ],
             ]
         );
         $this->add_responsive_control(
@@ -1769,6 +1855,9 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'label' => __('Typography', SHORTCODE_ADDOONS),
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
@@ -1789,11 +1878,15 @@ class Style_2 extends AdminStyle
         $this->start_controls_tab();
         $this->add_control(
             'sa_datatable_previous_next_color',
+
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#4a4a4a',
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover' => 'color: {{VALUE}} !important;',
@@ -1810,6 +1903,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'default' => '#4a4a4a',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'color: {{VALUE}} !important;',
@@ -1824,6 +1920,9 @@ class Style_2 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => 'rgba(255,255,255,1.00)',
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'oparetor' => 'RGB',
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-wrapper-datatable-style-2 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover' => 'background-color: {{VALUE}} !important;',
@@ -1839,6 +1938,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -1873,6 +1975,9 @@ class Style_2 extends AdminStyle
             [
                 'label' => esc_html__('Pagination Button Setting ', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
+                'condition' => [
+                    'sa_datatable_previous_next_switter' => 'yes'
+                ],
             ]
         );
 
@@ -2159,83 +2264,80 @@ class Style_2 extends AdminStyle
                 </div>
                 <div class="modal-body">';
         if (array_key_exists('sa_datatable_column_repeater', $this->style)) :
-            foreach ($this->style['sa_datatable_column_repeater'] as $key => $value) {
-                foreach ($value as $keys => $values) {
+            foreach ($this->style['sa_datatable_column_repeater'] as $key => $value) { 
                     ?>
                     <div class="oxi-addons-content-div">
                         <div class="oxi-head">
-                            <?php echo $key; ?> Setting
+                            <?php echo $value['sa_datatable_head']; ?> Setting
                             <div class="oxi-head-toggle"></div>
                         </div>
                         <div class="oxi-addons-content-div-body">
-                        <?php
-                                            $this->add_control(
-                                                'sa_type' . $key,
-                                                $this->style,
-                                                [
-                                                    'label' => __('Type', SHORTCODE_ADDOONS),
-                                                    'type' => Controls::SELECT,
-                                                    'default' => 'text',
-                                                    'loader' => FALSE,
-                                                    'options' => [
-                                                        'text' => __('Text', SHORTCODE_ADDOONS),
-                                                        'photo' => __('Upload Image', SHORTCODE_ADDOONS),
-                                                        'icon' => __('Icon', SHORTCODE_ADDOONS),
-                                                    ],
-                                                ]
-                                            );
-                                            $this->add_control(
-                                                'sa_datatable_modal_text' . $key,
-                                                [],
-                                                [
-                                                    'label' => __('Text', SHORTCODE_ADDOONS),
-                                                    'type' => Controls::TEXT,
-                                                    'loader' => FALSE,
-                                                    'default' => '',
-                                                    'condition' => [
-                                                        'sa_type' . $key => 'text'
-                                                    ],
-                                                ]
-                                            );
-                                            $this->add_group_control(
-                                                'sa_datatable_modal_photo' . $key,
-                                                [],
-                                                [
-                                                    'type' => Controls::MEDIA,
-                                                    'loader' => FALSE,
-                                                    'default' => [
-                                                        'type' => 'media-library',
-                                                        'link' => 'https://www.oxilab.org/wp-content/uploads/2019/04/rog_zephyrus_2.png',
-                                                    ],
-                                                    'condition' => [
-                                                        'sa_type' . $key => 'photo'
-                                                    ],
-                                                ]
-                                            );
+                            <?php
+                                                $this->add_control(
+                                                    'sa_type' . $key,
+                                                    $this->style,
+                                                    [
+                                                        'label' => __('Type', SHORTCODE_ADDOONS),
+                                                        'type' => Controls::SELECT,
+                                                        'default' => 'text',
+                                                        'loader' => FALSE,
+                                                        'options' => [
+                                                            'text' => __('Text', SHORTCODE_ADDOONS),
+                                                            'photo' => __('Upload Image', SHORTCODE_ADDOONS),
+                                                            'icon' => __('Icon', SHORTCODE_ADDOONS),
+                                                        ],
+                                                    ]
+                                                );
+                                                $this->add_control(
+                                                    'sa_datatable_modal_text' . $key,
+                                                    [],
+                                                    [
+                                                        'label' => __('Text', SHORTCODE_ADDOONS),
+                                                        'type' => Controls::TEXT,
+                                                        'loader' => FALSE,
+                                                        'default' => '',
+                                                        'condition' => [
+                                                            'sa_type' . $key => 'text'
+                                                        ],
+                                                    ]
+                                                );
+                                                $this->add_group_control(
+                                                    'sa_datatable_modal_photo' . $key,
+                                                    [],
+                                                    [
+                                                        'type' => Controls::MEDIA,
+                                                        'loader' => FALSE,
+                                                        'default' => [
+                                                            'type' => 'media-library',
+                                                            'link' => 'https://www.oxilab.org/wp-content/uploads/2019/04/rog_zephyrus_2.png',
+                                                        ],
+                                                        'condition' => [
+                                                            'sa_type' . $key => 'photo'
+                                                        ],
+                                                    ]
+                                                );
 
-                                            $this->add_control(
-                                                'sa_datatable_modal_icon' . $key,
-                                                [],
-                                                [
-                                                    'label' => __('Icon', SHORTCODE_ADDOONS),
-                                                    'type' => Controls::ICON,
-                                                    'loader' => FALSE,
-                                                    'default' => 'fas fa-angle-right',
-                                                    'placeholder' => 'example:- fas fa-angle-right',
-                                                    'condition' => [
-                                                        'sa_type' . $key => 'icon'
-                                                    ],
-                                                ]
-                                            ); 
-                                            ?>
+                                                $this->add_control(
+                                                    'sa_datatable_modal_icon' . $key,
+                                                    [],
+                                                    [
+                                                        'label' => __('Icon', SHORTCODE_ADDOONS),
+                                                        'type' => Controls::ICON,
+                                                        'loader' => FALSE,
+                                                        'default' => 'fas fa-angle-right',
+                                                        'placeholder' => 'example:- fas fa-angle-right',
+                                                        'condition' => [
+                                                            'sa_type' . $key => 'icon'
+                                                        ],
+                                                    ]
+                                                );
+                                                ?>
                         </div>
-                    </div> 
+                    </div>
 <?php
-                }
-            }
+                } 
         endif;
 
-        echo '</div>'; 
+        echo '</div>';
     }
-   
 }

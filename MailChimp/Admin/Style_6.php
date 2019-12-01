@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\MailChimp\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Mailchimp\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
