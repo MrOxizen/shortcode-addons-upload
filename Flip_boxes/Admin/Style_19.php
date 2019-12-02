@@ -666,9 +666,9 @@ class Style_19 extends AdminStyle {
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
+            'default' => 'flex-end',
             'options' => [
-                'left' => [
+                'flex-start' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-left',
                 ],
@@ -676,13 +676,13 @@ class Style_19 extends AdminStyle {
                     'title' => __('Center', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-center',
                 ],
-                'right' => [
+                'flex-end' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-right',
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-19 .oxi-addons-flip-box-back-link .oxi-icons' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-flip-box-style-19 .oxi-addons-flip-box-back-button' => 'justify-content: {{VALUE}};'
             ],
                 ]
         );

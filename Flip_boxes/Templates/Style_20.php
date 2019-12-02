@@ -39,13 +39,13 @@ class Style_20 extends Templates {
                     </div>';
             }
             if ($value['sa_flip_boxes_button_text'] != '') {
-                $button = '  <a '.$this->url_render('sa_flip_boxes_button_link', $value).'">
-                        <div class="oxi-addons-flip-box-back-button">
-                            <div class="oxi-addons-flip-box-back-button-data">
-                                ' . $this->text_render($value['sa_flip_boxes_button_text']) . '  
-                            </div>
-                        </div>
-                    </a> ';
+                $button = '<div class="oxi-addons-flip-box-back-button">
+                                <a '.$this->url_render('sa_flip_boxes_button_link', $value).'">
+                                   <div class="oxi-addons-flip-box-back-button-data">
+                                       ' . $this->text_render($value['sa_flip_boxes_button_text']) . '  
+                                   </div>
+                                </a>
+                            </div>';
             }elseif($value['sa_flip_boxes_button_text'] == '' && $this->url_render('sa_flip_boxes_button_link', $value) != ''){
                 $bt = '<a '.$this->url_render('sa_flip_boxes_button_link', $value).'">';
                 $bc = '</a>';
