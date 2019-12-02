@@ -76,7 +76,7 @@ class Style_24 extends AdminStyle {
                     'controller' => 'add_group_control',
                     'default' => [
                         'type' => 'media-library',
-                        'link' => '#asdas',
+                        'link' => '',
                     ]
                 ],
                 'shortcode-addons-start-tab1-end' => [
@@ -202,7 +202,7 @@ class Style_24 extends AdminStyle {
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 0.1,
                 ],
@@ -232,13 +232,12 @@ class Style_24 extends AdminStyle {
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 0.1,
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-24' => 'height:{{SIZE}}{{UNIT}};',
                 '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-boxes-body:after ' => 'padding-bottom:{{SIZE}}{{UNIT}};',
             ],
                 ]
