@@ -255,7 +255,6 @@ class Style_20 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-boxes-body:after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-flip-box-style-20' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -340,7 +339,6 @@ class Style_20 extends AdminStyle {
             'type' => Controls::BOXSHADOW,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-front-section-box' => '',
-                
             ]
                 ]
         );
@@ -693,7 +691,7 @@ class Style_20 extends AdminStyle {
                 'sa-flip-box-back-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-style' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-back-section' => '',
             ]
                 ]
         );
