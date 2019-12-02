@@ -11,8 +11,7 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
-    padding: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 0px;
 }
 
 .oxi-addons-flip-box-style-19 .oxi-addons-flip-boxes-body:after {
@@ -38,8 +37,8 @@
     border-width: 0px;
     border-style: none;
     border-color: #39dfa5;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 0px 0px 0px;
+    border-radius: 0px;
+    padding: 0px;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
     overflow: hidden;
 }
@@ -77,7 +76,7 @@
     border-width: 0px;
     border-style: none;
     border-color: #39dfa5;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 0px;
     padding: 0px 0px 0px 0px;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.28);
     position: relative
@@ -131,7 +130,7 @@
     border-width: 0px;
     border-style: none;
     border-color: #212020;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 0px;
     padding: 10px 15px 10px 20px
 }
 
@@ -140,5 +139,5 @@
     background: rgba(0, 0, 0, 0.00);
     border-style: none;
     border-color: #634ceb;
-    border-radius: 0px 0px 0px 0px
+    border-radius: 0px
 }

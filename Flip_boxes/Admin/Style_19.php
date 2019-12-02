@@ -203,12 +203,12 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
                 ]
@@ -228,12 +228,12 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
                 ],
@@ -395,7 +395,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -468,7 +468,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -536,7 +536,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -602,7 +602,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -631,7 +631,7 @@ class Style_19 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa-flip-box-backend-icon-font-size', $this->style, [
             'label' => __('Font Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -641,9 +641,19 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
-                    'max' => 1000,
+                    'min' => 0,
+                    'max' => 500,
                     'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
                 ],
             ],
             'selector' => [
@@ -687,7 +697,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -717,7 +727,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -792,7 +802,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -856,7 +866,7 @@ class Style_19 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],

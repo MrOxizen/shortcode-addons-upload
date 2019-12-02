@@ -208,17 +208,17 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 0.1,
                 ],
@@ -238,17 +238,17 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 0.1,
                 ],
@@ -339,8 +339,8 @@ class Style_20 extends AdminStyle {
                 'sa-flip-boxes-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-front-section-box' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-style' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-front-section-box' => '',
+                
             ]
                 ]
         );
@@ -350,8 +350,7 @@ class Style_20 extends AdminStyle {
                 'sa-flip-boxes-hover-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-front-section-box:hover' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-style:hover' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-20 .oxi-addons-flip-box-style' => '',
             ]
                 ]
         );
@@ -399,7 +398,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -429,7 +428,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -466,17 +465,17 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 1000,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 200,
                     'step' => .1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 200,
                     'step' => .1,
                 ],
@@ -496,7 +495,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 300,
                     'step' => 1,
                 ],
@@ -544,7 +543,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -642,7 +641,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -704,7 +703,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -734,7 +733,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -799,7 +798,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -858,7 +857,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -888,7 +887,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -963,7 +962,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -1027,7 +1026,7 @@ class Style_20 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],

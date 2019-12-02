@@ -424,7 +424,7 @@ class Style_18 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => '',
+                'size' => 265,
             ],
             'range' => [
                 'px' => [
@@ -736,6 +736,7 @@ class Style_18 extends AdminStyle {
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-18 .oxi-addons-flip-box-back-button .oxi-addons-flip-box-back-button-data' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-18 .oxi-addons-flip-box-back-button' => '',
             ]
                 ]
         );
