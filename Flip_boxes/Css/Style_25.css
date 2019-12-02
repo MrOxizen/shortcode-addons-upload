@@ -7,7 +7,6 @@
 
 .oxi-addons-flip-box-style-25 {
     max-width: 280px;
-    height: 320px;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -24,7 +23,6 @@
     height: 100%;
     float: left;
     border-radius: 0px;
-    padding: 8px 8px 8px 8px
 }
 
 .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-section {
@@ -76,7 +74,6 @@
     float: left;
     background: rgba(76, 78, 115, 1.00);
     border-radius: 0px;
-    padding: 8px 8px 8px 8px
 }
 
 .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-back-section {

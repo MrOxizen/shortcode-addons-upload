@@ -201,20 +201,20 @@ class Style_26 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 450,
+                'size' => 280,
             ],
             'range' => [
                 'px' => [
+                    'min' => 0,
+                    'max' => 1500,
+                    'step' => 1,
+                ],
+                '%' => [
                     'min' => 1,
-                    'max' => 2000,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
-                    'max' => 200,
-                    'step' => .1,
-                ],
-                'rem' => [
                     'min' => 1,
                     'max' => 200,
                     'step' => 0.1,
@@ -231,22 +231,26 @@ class Style_26 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 50,
+                'size' => 320,
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
-                    'max' => 1000,
+                    'min' => 0,
+                    'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 1,
-                    'max' => 200,
+                    'max' => 100,
                     'step' => 1,
+                ],
+                'em' => [
+                    'min' => 1,
+                    'max' => 200,
+                    'step' => 0.1,
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-26' => 'height:{{SIZE}}{{UNIT}};',
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-boxes-body:after ' => 'padding-bottom:{{SIZE}}{{UNIT}};',
             ],
                 ]
@@ -443,6 +447,7 @@ class Style_26 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-front-info-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-font-info' => '',
             ]
@@ -454,31 +459,6 @@ class Style_26 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-font-info' => '',
             ]
-                ]
-        );
-        $this->add_control(
-                'sa-flip-box-front-info_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-font-info' => 'text-align: {{VALUE}};'
-            ],
                 ]
         );
         $this->add_responsive_control(
@@ -534,6 +514,7 @@ class Style_26 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-front-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-front-headding' => '',
             ]
@@ -545,31 +526,6 @@ class Style_26 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-front-headding' => '',
             ]
-                ]
-        );
-        $this->add_control(
-                'sa-flip-box-front-heading_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-front-headding' => 'text-align: {{VALUE}};'
-            ],
                 ]
         );
         $this->add_responsive_control(
@@ -751,6 +707,7 @@ class Style_26 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-back-heading-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-back-headding' => '',
             ]
@@ -762,31 +719,6 @@ class Style_26 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-back-headding' => '',
             ]
-                ]
-        );
-        $this->add_control(
-                'sa-flip-box-back-heading_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-back-headding' => 'text-align: {{VALUE}};'
-            ],
                 ]
         );
         $this->add_responsive_control(
@@ -898,6 +830,7 @@ class Style_26 extends AdminStyle {
         $this->add_group_control(
                 'sa-flip-box-back-short-description-typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
+            'include' => Controls::ALIGNNORMAL,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-back-info' => '',
             ]
@@ -909,31 +842,6 @@ class Style_26 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-back-info' => '',
             ]
-                ]
-        );
-        $this->add_control(
-                'sa-flip-box-back-short-description_alignment', $this->style, [
-            'label' => __('Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-26 .oxi-addons-flip-box-back-info' => 'text-align: {{VALUE}};'
-            ],
                 ]
         );
         $this->add_responsive_control(

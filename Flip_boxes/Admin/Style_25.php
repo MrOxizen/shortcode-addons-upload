@@ -260,7 +260,6 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-25' => 'height:{{SIZE}}{{UNIT}};',
                 '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-boxes-body:after ' => 'padding-bottom:{{SIZE}}{{UNIT}};',
             ],
                 ]
