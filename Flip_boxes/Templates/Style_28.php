@@ -23,7 +23,7 @@ class Style_28 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $styledata = $this->style;
-        foreach ($styledata['sa_flip_boxes_data_style_18'] as $key => $value) {
+        foreach ($styledata['sa_flip_boxes_data_style_28'] as $key => $value) {
             $img = $front_hadding = $front_info = $back_hadding = $backinfo = $button = '';
             if ($this->media_render('sa_flip_boxes_media', $value) != '') {
                 $img .= '<div class="oxi-addons-flip-box-front-img">
