@@ -220,7 +220,7 @@ class Style_1 extends Templates {
                 if ($style['sa_display_post_button_show'] == 'show') {
                     $button = '<div class="oxi-addons__button-main">
                                 <a href="' . get_permalink($query->post->ID) . '" class="oxi-addons__btn-link"  target="' . $style['sa_display_post_button_url'] . '">
-                                    ' . OxiAddonsTextConvert($style['sa_display_post_button_text']) . '
+                                    ' . $this->text_render($style['sa_display_post_button_text']) . '
                                 </a>
                             </div>';
                 }
@@ -256,12 +256,12 @@ class Style_1 extends Templates {
 
                 if ($style['sa_display_post_meta_position'] == 'footer') {
                     $header_footer = '' . $title . '
-                                 ' . OxiAddonsTextConvert($content_excerpt) . '
+                                 ' . $this->text_render($content_excerpt) . '
                                  ' . $meta . '';
                 } else {
                     $header_footer = '' . $meta . '
                                  ' . $title . '
-                                 ' . OxiAddonsTextConvert($content_excerpt) . ' ';
+                                 ' . $this->text_render($content_excerpt) . ' ';
                 }
 
                 echo '<div class="oxi-addons__main-wrapper-post-style-1">
