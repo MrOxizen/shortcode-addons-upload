@@ -48,6 +48,7 @@ class Style_24 extends Templates {
             }
             echo '  <div class="oxi-flip-box-col-style-24 ' . $this->column_render('sa-flip-boxes-col', $style) . ' ">
                         <div class="oxi-addons-flip-box-style-24 oxi-addons-flip-box-front-section-'.$key.'">
+                            '.$startlink.'
                             <div class="oxi-addons-flip-boxes-body"  ' . $this->animation_render('sa-flip-boxes-animation', $style) . '>
                                 <div class="oxi-addons-flip-boxes-body-data">
                                     <div class="oxi-addons-flip-box-flip ' . $styledata['sa-ac-flip_boxes_flip_direction'] . '">
@@ -73,6 +74,7 @@ class Style_24 extends Templates {
                                     </div>
                                 </div>
                             </div>
+                        '.$endlink.'
                         </div>
                     </div>';
         }

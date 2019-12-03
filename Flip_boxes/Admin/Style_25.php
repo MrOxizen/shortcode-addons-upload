@@ -487,38 +487,17 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon' => 'max-width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number' => 'max-width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
-        $this->add_responsive_control(
-                'sa-flip-boxex-front-number-size', $this->style, [
-            'label' => __('Font Size', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => 20,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-                '%' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => .1,
-                ],
-            ],
+        $this->add_group_control(
+                'sa-flip-boxex-front-icon-typo', $this->style, [
+            'type' => Controls::TYPOGRAPHY,
+            'include' => '',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number' => 'font-size:{{SIZE}}{{UNIT}};',
-            ],
+                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon' => '',
+            ]
                 ]
         );
 
@@ -526,7 +505,7 @@ class Style_25 extends AdminStyle {
                 'sa-flip-boxex-front-icon-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number' => '',
             ]
                 ]
         );
@@ -544,7 +523,7 @@ class Style_25 extends AdminStyle {
                 'sa-flip-box-front-icon-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number' => '',
             ]
                 ]
         );
@@ -575,7 +554,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -605,7 +584,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );

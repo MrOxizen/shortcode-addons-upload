@@ -41,18 +41,20 @@
 }
 
 .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon {
-    padding: 0px;
+    width: 100%;
+    padding: 0px; 
+    display: flex;
+}
+
+.oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number {
+    font-size: 24px;
+    color: #ffffff;
     width: 100%;
     background: rgba(95, 67, 232, 0.00);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0px;
-}
-
-.oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number {
-    font-size: 24px;
-    color: #ffffff;
     
 }
 
