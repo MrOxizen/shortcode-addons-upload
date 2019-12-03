@@ -141,18 +141,18 @@ class Style_10 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 1000,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
                     'max' => 100,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
+                    'step' => .1,
                 ],
             ],
             'selector' => [
@@ -174,15 +174,15 @@ class Style_10 extends AdminStyle {
                     'max' => 1000,
                     'step' => 1,
                 ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
                 'em' => [
                     'min' => 0,
                     'max' => 100,
-                    'step' => 0.1,
-                ],
-                'rem' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 0.1,
+                    'step' => .1,
                 ],
             ],
             'selector' => [
@@ -199,7 +199,7 @@ class Style_10 extends AdminStyle {
         
         $this->add_control(
                 'sa-ie-bg-overlay-color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
+            'label' => __('Overlay Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
             'default' => 'blue',
@@ -217,17 +217,7 @@ class Style_10 extends AdminStyle {
                 ]
         );
 
-         $this->add_control(
-                'sa-ie-link-opening', $this->style, [
-            'label' => __('Link Opening', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
+        
 
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
@@ -757,37 +747,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_ie_button_side_text_align', $this->style, [
-            'label' => __('Text Align', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'default' => 'center',
-            'options' => [
-                'left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-left',
-                ],
-                'center' => [
-                    'title' => __('Center', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-center',
-                ],
-                'right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fa fa-align-right',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_10 .oxi-addons-image-effects-button' => 'text-align: {{VALUE}};'
-            ],
-                ]
-        );
-        $this->add_group_control(
-                'sa-ie-button-side-animation', $this->style, [
-            'type' => Controls::ANIMATION,
-                ]
-        );
+        
+        
         $this->add_responsive_control(
                 'sa-ie-buttons-padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),

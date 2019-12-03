@@ -93,10 +93,13 @@ class Style_8 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-divider-sd8 .oxi-addons-divider.sa_sd_scrolling' => 'animation-duration: {{SIZE}}{{UNIT}}',
-             ],
+            ],
+            'condition' => [
+                'sa_sd_scroll' => 'sa_sd_scrolling',
+            ],
                 ]
         );
-        
+
 
 
 
@@ -146,11 +149,11 @@ class Style_8 extends AdminStyle {
         $this->add_responsive_control(
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
-            'loader'=> TRUE,
+            'loader' => TRUE,
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
