@@ -196,17 +196,17 @@ class Style_3 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 0.1,
                 ],
@@ -226,17 +226,17 @@ class Style_3 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 0.1,
                 ],
