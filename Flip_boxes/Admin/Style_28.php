@@ -315,7 +315,7 @@ class Style_28 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-flip-box-col-style-28' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-28' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -425,7 +425,7 @@ class Style_28 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-28 .oxi-addons-flip-box-front-img::after' => 'padding-botttom:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-28 .oxi-addons-flip-box-front-img::after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
              ],
                 ]
         );

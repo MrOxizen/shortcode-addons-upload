@@ -497,6 +497,7 @@ class Style_25 extends AdminStyle {
             'include' => '',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number' => '',
             ]
                 ]
         );

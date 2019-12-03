@@ -44,6 +44,7 @@
     width: 100%;
     padding: 0px; 
     display: flex;
+    jsutify-content: center;
 }
 
 .oxi-addons-flip-box-style-25 .oxi-addons-flip-box-front-icon .oxi-number {
@@ -52,7 +53,7 @@
     width: 100%;
     background: rgba(95, 67, 232, 0.00);
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center;
     border-radius: 0px;
     
