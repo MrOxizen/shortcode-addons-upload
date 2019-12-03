@@ -203,7 +203,7 @@ class Style_7 extends AdminStyle {
         
         $this->add_control(
                 'sa-ie-bg-overlay-color', $this->style, [
-            'label' => __('Color', SHORTCODE_ADDOONS),
+            'label' => __('Overlay Background', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'oparetor' => 'RGB',
             'default' => 'blue',
