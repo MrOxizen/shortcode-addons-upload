@@ -38,7 +38,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::CHOOSE,
             'toggle' => TRUE,
             'loader' => TRUE,
-            'default' => 'center',
+            'default' => 'sa_sd_top',
             'options' => [
                 'sa_sd_top' => [
                     'title' => __('Top', SHORTCODE_ADDOONS),
@@ -68,6 +68,31 @@ class Style_1 extends AdminStyle {
             'label_on' => __('Yes', SHORTCODE_ADDOONS),
             'label_off' => __('No', SHORTCODE_ADDOONS),
             'return_value' => 'sa_sd_scrolling',
+                ]
+        );
+        $this->add_control(
+                'sa_sd_scrolling_Speed', $this->style, [
+            'label' => __('Scrolling Speed', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 's',
+                'size' => '150',
+            ],
+            'range' => [
+                's' => [
+                    'min' => 0,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                'ms' => [
+                    'min' => 0,
+                    'max' => 1000000,
+                    'step' => 100,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-divider-sd1 .oxi-addons-divider.sa_sd_scrolling' => 'animation-duration: {{SIZE}}{{UNIT}}',
+             ],
                 ]
         );
 

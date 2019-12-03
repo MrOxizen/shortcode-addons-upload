@@ -71,7 +71,31 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-
+$this->add_control(
+                'sa_sd_scrolling_Speed', $this->style, [
+            'label' => __('Scrolling Speed', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 's',
+                'size' => '150',
+            ],
+            'range' => [
+                's' => [
+                    'min' => 0,
+                    'max' => 1000,
+                    'step' => 1,
+                ],
+                'ms' => [
+                    'min' => 0,
+                    'max' => 1000000,
+                    'step' => 100,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-divider-sd2 .oxi-addons-divider.sa_sd_scrolling' => 'animation-duration: {{SIZE}}{{UNIT}}',
+             ],
+                ]
+        );
 
 
 
