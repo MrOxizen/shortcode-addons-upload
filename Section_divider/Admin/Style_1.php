@@ -93,6 +93,9 @@ class Style_1 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-divider-sd1 .oxi-addons-divider.sa_sd_scrolling' => 'animation-duration: {{SIZE}}{{UNIT}}',
              ],
+             'condition' => [
+                'sa_sd_scroll' => 'sa_sd_scrolling',
+            ],
                 ]
         );
 

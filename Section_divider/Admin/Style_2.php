@@ -54,7 +54,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::NUMBER,
             'label' => __('Z-Index', SHORTCODE_ADDOONS),
             'loader' => TRUE,
-                     'selector' => [
+            'selector' => [
                 '{{WRAPPER}} .oxi-addons-divider-sd2' => 'z-index:{{VALUE}};',
             ],
                 ]
@@ -71,7 +71,7 @@ class Style_2 extends AdminStyle {
                 ]
         );
 
-$this->add_control(
+        $this->add_control(
                 'sa_sd_scrolling_Speed', $this->style, [
             'label' => __('Scrolling Speed', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -93,7 +93,10 @@ $this->add_control(
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-divider-sd2 .oxi-addons-divider.sa_sd_scrolling' => 'animation-duration: {{SIZE}}{{UNIT}}',
-             ],
+            ],
+            'condition' => [
+                'sa_sd_scroll' => 'sa_sd_scrolling',
+            ],
                 ]
         );
 
@@ -145,7 +148,7 @@ $this->add_control(
         $this->add_responsive_control(
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
-            'loader'=> TRUE,
+            'loader' => TRUE,
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
@@ -186,7 +189,6 @@ $this->add_control(
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
-        
     }
 
 }
