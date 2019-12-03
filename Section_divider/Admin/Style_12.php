@@ -149,7 +149,7 @@ class Style_12 extends AdminStyle {
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => '',
             ],
             'range' => [
                 'px' => [

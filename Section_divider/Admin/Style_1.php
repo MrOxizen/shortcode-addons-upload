@@ -150,7 +150,7 @@ class Style_1 extends AdminStyle {
             'loader'=> TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => '',
             ],
             'range' => [
                 'px' => [

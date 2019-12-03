@@ -149,7 +149,7 @@ class Style_4 extends AdminStyle {
             'loader'=> TRUE,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => '',
             ],
             'range' => [
                 'px' => [

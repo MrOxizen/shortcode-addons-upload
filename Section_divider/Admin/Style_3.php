@@ -149,7 +149,7 @@ $this->add_control(
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
-                'size' => 120,
+                'size' => '',
             ],
             'range' => [
                 'px' => [
