@@ -33,10 +33,7 @@ class Style_19 extends Templates {
 
 
 
-        $target_blank = '';
-        if ($style['sa-ie-link-opening'] == 'yes') {
-            $target_blank = 'target="_blank"';
-        }
+       
 
 //            echo $alignments;
 //            echo '<pre>';
@@ -58,9 +55,9 @@ class Style_19 extends Templates {
 
             if (array_key_exists('sa_el_image_effect_url-url', $data) && $data['sa_el_image_effect_url-url'] != '') {
                 if (array_key_exists('sa_el_image_effect_btn_text', $data) && $data['sa_el_image_effect_btn_text'] != '') {
-                    $valueurlbtn = '<div class="oxi-addons-image-effects-button"><a ' . $this->url_render('sa_el_image_effect_url', $data) . '  ' . $target_blank . '" class="img-btn ihewc-button "    ' . $this->animation_render('sa-ie-button-side-animation', $style) . '>' . $this->text_render($data['sa_el_image_effect_btn_text']) . '</a></div>';
+                    $valueurlbtn = '<div class="oxi-addons-image-effects-button"><a ' . $this->url_render('sa_el_image_effect_url', $data) . ' " class="img-btn ihewc-button "    ' . $this->animation_render('sa-ie-button-side-animation', $style) . '>' . $this->text_render($data['sa_el_image_effect_btn_text']) . '</a></div>';
                 } else {
-                    $valueurl1st = '<a ' . $this->url_render('sa_el_image_effect_url', $data) . '   " ' . $target_blank . '>';
+                    $valueurl1st = '<a ' . $this->url_render('sa_el_image_effect_url', $data) . '   " >';
                     $valueurllast = '</a>';
                 }
             }
