@@ -793,6 +793,17 @@ class Style_1 extends AdminStyle {
                     'loader' => TRUE,
                 ]
         );
+        $this->add_group_control(
+                'sa_display_post_title_typo',
+                $this->style,
+                [
+                    'type' => Controls::TYPOGRAPHY,
+                    'include' => Controls::ALIGNNORMAL,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons__main-wrapper-post-style-1 .oxi-link ' => '',
+                    ],
+                ]
+        );
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs',
                 [
@@ -832,23 +843,14 @@ class Style_1 extends AdminStyle {
         $this->end_controls_tab();
         $this->end_controls_tabs();
 
-        $this->add_group_control(
-                'sa_display_post_title_typo',
-                $this->style,
-                [
-                    'type' => Controls::TYPOGRAPHY,
-                    'include' => Controls::ALIGNNORMAL,
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-addons__main-wrapper-post-style-1 .oxi-link ' => '',
-                    ],
-                ]
-        );
+        
         $this->add_responsive_control(
                 'sa_display_post_title_padding',
                 $this->style,
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
                     'type' => Controls::DIMENSIONS,
+                    'separator'=> TRUE,
                     'default' => [
                         'unit' => 'px',
                         'size' => '',
@@ -995,6 +997,17 @@ class Style_1 extends AdminStyle {
             'label' => esc_html__('Meta Name', SHORTCODE_ADDOONS),
                 ]
         );
+        $this->add_group_control(
+                'sa_display_post_meta_name_typo',
+                $this->style,
+                [
+                    'type' => Controls::TYPOGRAPHY,
+                    'include' => Controls::ALIGNNORMAL,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-addons__main-wrapper-post-style-1 .oxi-addons__meta-name > .oxi-name' => '',
+                    ],
+                ]
+        );
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
@@ -1003,6 +1016,7 @@ class Style_1 extends AdminStyle {
             ]
                 ]
         );
+        
         $this->start_controls_tab();
         $this->add_control(
                 'sa_display_post_meta_name_color',
