@@ -93,11 +93,6 @@ class Style_26 extends AdminStyle {
                     'default' => 'Heading',
                     'placeholder' => 'Heading',
                 ],
-                'sa_flip_boxes_back_icon' => [
-                    'label' => __('Icon', SHORTCODE_ADDOONS),
-                    'type' => Controls::ICON,
-                    'default' => 'fas fa-camera',
-                ],
                 'sa_flip_boxes_back_description' => [
                     'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
@@ -426,7 +421,7 @@ class Style_26 extends AdminStyle {
         $this->end_controls_section();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Font Info', SHORTCODE_ADDOONS),
+            'label' => esc_html__('Front Info', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
