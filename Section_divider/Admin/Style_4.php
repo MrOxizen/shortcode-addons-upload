@@ -92,7 +92,10 @@ class Style_4 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-divider-sd4 .oxi-addons-divider.sa_sd_scrolling' => 'animation-duration: {{SIZE}}{{UNIT}}',
-             ],
+            ],
+            'condition' => [
+                'sa_sd_scroll' => 'sa_sd_scrolling',
+            ],
                 ]
         );
 
@@ -146,7 +149,7 @@ class Style_4 extends AdminStyle {
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
-            'loader'=> TRUE,
+            'loader' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',

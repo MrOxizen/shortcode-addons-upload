@@ -71,7 +71,7 @@ class Style_5 extends AdminStyle {
                 ]
         );
 
-$this->add_control(
+        $this->add_control(
                 'sa_sd_scrolling_Speed', $this->style, [
             'label' => __('Scrolling Speed', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
@@ -93,7 +93,10 @@ $this->add_control(
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-divider-sd5 .oxi-addons-divider.sa_sd_scrolling' => 'animation-duration: {{SIZE}}{{UNIT}}',
-             ],
+            ],
+            'condition' => [
+                'sa_sd_scroll' => 'sa_sd_scrolling',
+            ],
                 ]
         );
 
@@ -146,7 +149,7 @@ $this->add_control(
                 'sa_sd_height', $this->style, [
             'label' => __('Height', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
-            'loader'=> TRUE,
+            'loader' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => 120,
