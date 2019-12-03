@@ -65,10 +65,9 @@ class Style_3 extends AdminStyle {
             'button' => 'Add New Icon',
             'fields' => [
                 'sa_ss_social_media' => [
-                    'label' => __('Chose', SHORTCODE_ADDOONS),
+                    'label' => __('Social Share Choose', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
-                    'default' => 'facebook',
-                    'loader' => TRUE,
+                    'default' => 'facebook', 
                     'options' => [
                         'facebook' => __('Facebook', SHORTCODE_ADDOONS),
                         'twitter' => __('Twitter', SHORTCODE_ADDOONS),
@@ -80,8 +79,7 @@ class Style_3 extends AdminStyle {
                'sa_ss_icon_icon' => [
                     'type' => Controls::ICON,
                     'label' => __('Icon Class', SHORTCODE_ADDOONS),
-                    'default' => 'fab fa-facebook-f',
-                    'loader' => TRUE,
+                    'default' => 'fab fa-facebook-f', 
                 ],
                 'shortcode-addons-start-tabs' => [
                     'controller' => 'start_controls_tabs',
@@ -95,8 +93,7 @@ class Style_3 extends AdminStyle {
                 ],
                 'sa_ss_icon_color' => [
                     'label' => __('Icon & Text Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'loader' => TRUE,
+                    'type' => Controls::COLOR, 
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => 'color: {{VALUE}};',
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => 'color: {{VALUE}};',
@@ -114,13 +111,11 @@ class Style_3 extends AdminStyle {
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-linkedin' => '',
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-google' => '',
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-pinterest' => '',
-                    ],
-                    'loader' => TRUE,
+                    ], 
                 ],
                 'sa_ss_border_color' => [
                     'label' => __('Border Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'loader' => TRUE,
+                    'type' => Controls::COLOR, 
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook' => 'border-color: {{VALUE}};',
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter' => 'border-color: {{VALUE}};',
@@ -148,8 +143,7 @@ class Style_3 extends AdminStyle {
                 ],
                 'sa_ss_icon_text_hover' => [
                     'label' => __('Hover Icon & Text Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'loader' => TRUE,
+                    'type' => Controls::COLOR, 
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => 'color: {{VALUE}};',
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => 'color: {{VALUE}};',
@@ -171,8 +165,7 @@ class Style_3 extends AdminStyle {
                 ],
                 'sa_ss_br_color_hover' => [
                     'label' => __('Hover Border Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'loader' => TRUE,
+                    'type' => Controls::COLOR, 
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => 'border-color: {{VALUE}};',
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-twitter:hover' => 'border-color: {{VALUE}};',
@@ -182,8 +175,7 @@ class Style_3 extends AdminStyle {
                     ],
                 ],
                 'sa_ss_repeater_box_hover' => [
-                    'type' => Controls::BOXSHADOW,
-                    'loader' => TRUE,
+                    'type' => Controls::BOXSHADOW, 
                     'controller' => 'add_group_control',
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-wrapper-ss3 .oxi-soical-share-{{KEY}} .oxi-addons-facebook:hover' => '',

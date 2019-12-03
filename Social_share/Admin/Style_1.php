@@ -65,10 +65,9 @@ class Style_1 extends AdminStyle {
             'button' => 'Add New Icon',
             'fields' => [
                 'sa_ss_social_media' => [
-                    'label' => __('Chose', SHORTCODE_ADDOONS),
+                    'label' => __('Social Share Choose', SHORTCODE_ADDOONS),
                     'type' => Controls::SELECT,
-                    'default' => 'facebook',
-                    'loader' => TRUE,
+                    'default' => 'facebook', 
                     'options' => [
                         'facebook' => __('Facebook', SHORTCODE_ADDOONS),
                         'twitter' => __('Twitter', SHORTCODE_ADDOONS),
@@ -79,8 +78,7 @@ class Style_1 extends AdminStyle {
                 ],
                 'sa_ss_icon_icon' => [
                     'type' => Controls::ICON,
-                    'label' => __('Icon Class', SHORTCODE_ADDOONS),
-                    'loader' => TRUE,
+                    'label' => __('Icon Class', SHORTCODE_ADDOONS), 
                 ],
                 'shortcode-addons-start-tabs' => [
                     'controller' => 'start_controls_tabs',

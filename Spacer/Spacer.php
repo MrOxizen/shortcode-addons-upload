@@ -12,13 +12,16 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Elements_Frontend;
 
-class Spacer extends Elements_Frontend {
+class Spacer extends Elements_Frontend
+{
 
     use \SHORTCODE_ADDONS\Support\Sanitization;
 
-    public function pre_created_templates() {
+    public function pre_created_templates()
+    {
         $return = _(' <div class="oxi-addons-row table-responsive abop" style="margin-bottom: 20px; opacity: 0; height: 0px">
                         <table class="table table-hover widefat oxi_addons_table_data" style="background-color: #fff; border: 1px solid #ccc">
                             <thead>
@@ -36,7 +39,7 @@ class Spacer extends Elements_Frontend {
             $return .= _('<td>' . $id . '</td>');
             $return .= _('<td>' . $this->admin_name_validation($value['name']) . '</td>');
             $return .= _('<td><span>Shortcode &nbsp;&nbsp;<input type="text" onclick="this.setSelectionRange(0, this.value.length)" value="[oxi_addons id=&quot;' . $id . '&quot;]"></span> <br>'
-                    . '<span>Php Code &nbsp;&nbsp; <input type="text" onclick="this.setSelectionRange(0, this.value.length)" value="&lt;?php echo do_shortcode(&#039;[oxi_addons  id=&quot;' . $id . '&quot;]&#039;); ?&gt;"></span></td>');
+                . '<span>Php Code &nbsp;&nbsp; <input type="text" onclick="this.setSelectionRange(0, this.value.length)" value="&lt;?php echo do_shortcode(&#039;[oxi_addons  id=&quot;' . $id . '&quot;]&#039;); ?&gt;"></span></td>');
             $return .= _('<td> 
                        <a href="#" data-id="' . $id . '" title="Edit"  class="btn btn-info oxieditid" style="float:left; margin-right: 5px; margin-left: 5px;">Edit</a>
                        <form method="post" class="oxi-addons-style-delete">
@@ -58,21 +61,23 @@ class Spacer extends Elements_Frontend {
         return $return;
     }
 
-    public function rander() {
+    public function rander()
+    {
         ?>
-        <div class="wrap">  
+        <div class="wrap">
             <div class="oxi-addons-wrapper">
                 <?php
-                apply_filters('shortcode-addons/admin_nav_menu', false);
-                $this->elements_home();
-                ?>
+                        apply_filters('shortcode-addons/admin_nav_menu', false);
+                        $this->elements_home();
+                        ?>
             </div>
         </div>
-        <?php
-    }
+    <?php
+        }
 
-    public function elements_home() {
-        echo _('<div class="oxi-addons-row">
+        public function elements_home()
+        {
+            echo _('<div class="oxi-addons-row">
                     <div class="oxi-addons-wrapper">
                         <div class="oxi-addons-import-layouts">
                             <h1>Shortcode Addons ›
@@ -81,13 +86,13 @@ class Spacer extends Elements_Frontend {
                             <p> View our  ' . $this->admin_name_validation($this->oxitype) . ' from Demo and select Which one You Want</p>
                         </div>
                     </div>');
-        echo $this->pre_created_templates();
-        echo _(' </div>');
-        ?>
+            echo $this->pre_created_templates();
+            echo _(' </div>');
+            ?>
 
         <div class="oxi-addons-row">
             <?php
-            echo _('<div class="oxi-addons-col-1 oxi-import">
+                    echo _('<div class="oxi-addons-col-1 oxi-import">
                         <div class="oxi-addons-style-preview">
                             <div class="oxilab-admin-style-preview-top">
                                 <a href="#" class="oxi-addons-addons-template-create">
@@ -102,7 +107,7 @@ class Spacer extends Elements_Frontend {
                         </div>
                     </div>');
 
-            echo _('<div class="modal fade" id="oxi-addons-style-create-modal" >
+                    echo _('<div class="modal fade" id="oxi-addons-style-create-modal" >
                         <form method="post" id="oxi-addons-style-modal-form">
                             <div class="modal-dialog modal-sm modal-dialog-centered">
                                 <div class="modal-content">
@@ -112,33 +117,37 @@ class Spacer extends Elements_Frontend {
                                     </div>
                                     <div class="modal-body" style="padding: 1em 0 0;">');
 
-            $this->add_control(
-                    'addons-style-name', [], [
-                'type' => 'text',
-                'label' => __('Name', SHORTCODE_ADDOONS),
-                'placeholder' => __('Shortcode Name', SHORTCODE_ADDOONS),
-                'default' => '',
-                    ]
-            );
+                    $this->add_control(
+                        'addons-style-name',
+                        [],
+                        [
+                            'type' => 'text',
+                            'label' => __('Name', SHORTCODE_ADDOONS),
+                            'placeholder' => __('Shortcode Name', SHORTCODE_ADDOONS),
+                            'default' => '',
+                        ]
+                    );
 
-            $this->add_responsive_control(
-                    'sa_spacer_size', [], [
-                'label' => __('Max Width', SHORTCODE_ADDOONS),
-                'type' => 'slider',
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 50,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 1,
-                        'max' => 2000,
-                        'step' => 1,
-                    ],
-                ],
-                    ]
-            );
-            echo _('                </div>
+                    $this->add_responsive_control(
+                        'sa_spacer_size',
+                        [],
+                        [
+                            'label' => __('Max Height', SHORTCODE_ADDOONS),
+                            'type' => 'slider',
+                            'default' => [
+                                'unit' => 'px',
+                                'size' => 50,
+                            ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 1,
+                                    'max' => 2000,
+                                    'step' => 1,
+                                ],
+                            ],
+                        ]
+                    );
+                    echo _('                </div>
                                     <div class="modal-footer">
                                         <input type="hidden" id="addons-oxi-type" name="addons-oxi-type" value="Spacer">
                                         <input type="hidden" id="shortcode-addons-elements-name" name="shortcode-addons-elements-name" value="Spacer">
@@ -171,20 +180,20 @@ class Spacer extends Elements_Frontend {
                             </div>
                         </form>
                     </div>');
-            ?>
+                    ?>
 
         </div>
 
-        <?php
+<?php
     }
 
     /**
      * Admin Notice JS file loader
      * @return void
      */
-    public function admin_ajax_load() {
+    public function admin_ajax_load()
+    {
         wp_enqueue_script('shortcode-addons-spacer', SA_ADDONS_UPLOAD_URL . '/Spacer/files/admin.js', true, SA_ADDONS_PLUGIN_VERSION);
         wp_localize_script('shortcode-addons-spacer', 'shortcode_addons_editor', array('ajaxurl' => admin_url('admin-ajax.php'), 'nonce' => wp_create_nonce('shortcode-addons-editor')));
     }
-
 }

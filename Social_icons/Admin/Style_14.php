@@ -99,7 +99,7 @@ class Style_14 extends AdminStyle
                             'sa_social_icons_bg_h_color_view' => 'separately'
                         ]
                     ],
-                    'sa_social_icons_bg_color_hover' => [
+                    'sa_social_icons_shadow' => [
                         'type' => Controls::BOXSHADOW,
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-social-style-14-{{KEY}}.oxi-addons-social-style-14 a.oxi-icon-style-14:hover' => ''
@@ -110,7 +110,6 @@ class Style_14 extends AdminStyle
                             'sa_social_icons_h_box_shadow_view' => 'separately'
                         ]
                     ],
-
                     'sa_social_icons_url' => [
                         'label' => esc_html__('Url', SHORTCODE_ADDOONS),
                         'type' => Controls::URL,
@@ -302,7 +301,7 @@ class Style_14 extends AdminStyle
                 'default' => 'separately',
                 'options' => [
                     'separately' => [
-                        'title' => __('Dynamic ', SHORTCODE_ADDOONS),
+                        'title' => __('Dynamic', SHORTCODE_ADDOONS),
                     ],
                     'common' => [
                         'title' => __('Static', SHORTCODE_ADDOONS),
@@ -319,7 +318,7 @@ class Style_14 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(255, 255, 255, 0)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-social-style-14  a.oxi-icon-style-14 ' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-social-style-14  a.oxi-icon-style-14::after' => 'background : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_bg_color_view' => 'common'
@@ -422,7 +421,7 @@ class Style_14 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(92, 92, 92, 0.0)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-social-style-14  a.oxi-icon-style-14:hover ' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-social-style-14  a.oxi-icon-style-14:hover::after' => 'background : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_bg_h_color_view' => 'common'
@@ -461,7 +460,7 @@ class Style_14 extends AdminStyle
                     'sa_social_icons_h_box_shadow_view' => 'common'
                 ]
             ]
-        ); 
+        );
         $this->add_responsive_control(
             'sa_social_icons_h_border_radius',
             $this->style,

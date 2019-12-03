@@ -57,8 +57,8 @@ class Style_2 extends Templates {
             $text_3 = $this->text_render($style['sa_t_b_3rd_text']);
         }
         echo ' 
-            <div class="oxi-addons-text-blocks-body" ' . $this->animation_render('sa_t_b_animation', $style) . '>
-                <div class="oxi-addons-text-blocks-style-2">';
+        <div class="oxi-addons-text-blocks-style-2">
+            <div class="oxi-addons-text-blocks-body" ' . $this->animation_render('sa_t_b_animation', $style) . '>';
         if ($style['sa_t_b_1st_style'] == 'headingbordercontent') {
             echo ' <div class="oxi-addons-text-blocks-heading ">' . $text_1 . '</div>
                     <div class="oxi-addons-text-blocks-border  '.$border_align.'">

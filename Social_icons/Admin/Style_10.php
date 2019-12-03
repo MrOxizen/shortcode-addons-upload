@@ -100,7 +100,7 @@ class Style_10 extends AdminStyle
                         ]
                     ],
                    
-                    'sa_social_icons_bg_color_hover' => [ 
+                    'sa_social_icons_shadow' => [ 
                             'type' => Controls::BOXSHADOW,
                             'selector' => [
                                 '{{WRAPPER}} .oxi-addons-social-style-10-{{KEY}} a.oxi-icon-style-10:after' => ''
