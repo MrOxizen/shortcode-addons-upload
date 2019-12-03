@@ -273,6 +273,7 @@ class Style_24 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section-box' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-img .oxi-image' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -367,7 +368,7 @@ class Style_24 extends AdminStyle {
                 'sa-flip-box-front-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section-box' => '',
             ]
                 ]
         );
@@ -376,7 +377,7 @@ class Style_24 extends AdminStyle {
                 'sa-flip-box-front-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section-box' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section' => '',
             ]
                 ]
         );
@@ -467,7 +468,7 @@ class Style_24 extends AdminStyle {
                 'sa-flip-box-back-background', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section-box' => '',
             ]
                 ]
         );
@@ -476,7 +477,7 @@ class Style_24 extends AdminStyle {
                 'sa-flip-box-back-border-back', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section-box' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section' => '',
             ]
                 ]
         );
