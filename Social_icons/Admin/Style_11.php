@@ -99,7 +99,7 @@ class Style_11 extends AdminStyle
                             'sa_social_icons_bg_h_color_view' => 'separately'
                         ]
                     ],
-                    'sa_social_icons_bg_color_hover' => [
+                    'sa_social_icons_shadow' => [
                         'type' => Controls::BOXSHADOW,
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-social-style-11-{{KEY}} a.oxi-icon-style-11:after' => ''

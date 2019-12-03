@@ -19,10 +19,7 @@ class Style_1 extends Templates {
         wp_enqueue_style('jquery_google_css', SA_ADDONS_UPLOAD_URL . '/Google_chart/File/chart-min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function default_render($style, $child, $admin) {
-        $styledata = $this->style;
-//        echo '<pre>';
-//        print_r($styledata);
-//        echo '</pre>';
+        $styledata = $this->style; 
         $oxiid = $styledata['shortcode-addons-elements-id'];
         echo '<div class="oxi-addons-chart-style-1">
                     <div class="oxi-addons-chart-' . $oxiid . '" ' . $this->animation_render('sa-google-chart-body-animation', $styledata) . '>
@@ -35,28 +32,29 @@ class Style_1 extends Templates {
         $jquery = '';
         $listdata = $this->style;
         $oxiid = $listdata['shortcode-addons-elements-id'];
-        
+        $datas = (array_key_exists('sa_google_chart_data_style_1', $listdata) && is_array($listdata['sa_google_chart_data_style_1']) ? $listdata['sa_google_chart_data_style_1'] : []);
+ 
         $oxi_addons_labels = '';
         
-        foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
+        foreach ($datas as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_labels .= "'" . $this->text_render($value['sa_google_chart_text_name']) . "',";
             }
         }
         $oxi_addons_BG_C = '';
-        foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
+        foreach ($datas as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_BG_C .= "'" . $value['sa-google_chart_background_color'] . "', ";
             }
         }
         $oxi_addons_B_C = '';
-        foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
+        foreach ($datas as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa-google_chart_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_B_C .= "'" . $value['sa-google_chart_color'] . "', ";
             }
         }
         $oxi_addons_data = '';
-        foreach ($listdata['sa_google_chart_data_style_1'] as $key => $value) {
+        foreach ($datas as $key => $value) {
             if ($value['sa_google_chart_text_name'] != '' && $value['sa-google_chart_color'] != '' && $value['sa-google_chart_background_color'] != '' && $value['sa_google_chart_value-size'] != '') {
                 $oxi_addons_data .= "'" . $value['sa_google_chart_value-size'] . "', ";
             }

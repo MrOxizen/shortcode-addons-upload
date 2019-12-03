@@ -99,7 +99,7 @@ class Style_12 extends AdminStyle
                             'sa_social_icons_bg_h_color_view' => 'separately'
                         ]
                     ],
-                    'sa_social_icons_bg_color_hover' => [
+                    'sa_social_icons_shadow' => [
                         'type' => Controls::BOXSHADOW,
                         'selector' => [
                             '{{WRAPPER}} .oxi-addons-social-style-12-{{KEY}}.oxi-addons-social-style-12  a.oxi-icon-style-12:hover' => ''
@@ -319,7 +319,7 @@ class Style_12 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(255, 255, 255, 0)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-social-style-12  a.oxi-icon-style-12 ' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-social-style-12  a.oxi-icon-style-12::after' => 'background : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_bg_color_view' => 'common'
@@ -423,7 +423,7 @@ class Style_12 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(92, 92, 92, 1)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-social-style-12  a.oxi-icon-style-12:hover ' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons-social-style-12  a.oxi-icon-style-12:hover::after' => 'background : {{VALUE}}; '
                 ],
                 'condition' => [
                     'sa_social_icons_bg_h_color_view' => 'common'
