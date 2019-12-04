@@ -12,9 +12,7 @@
     /*padding:10px 10px 10px 10px;*/
     margin:0 auto ;
 }
-.sa_ie_temp_4{
-    box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1);
-}
+
 .sa_ie_temp_4:hover,
 .sa_ie_temp_4.oxi-touch{
     box-shadow:0px 0px 0px px 0;

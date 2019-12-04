@@ -72,7 +72,7 @@ class Style_32 extends Templates {
 
             echo '<div class="  sa_ie_temp_style_32    ' . $this->column_render('sa-ac-column', $style) . ' " >';
             echo '<div class="sa_ie_temp_32 ihewc-hover-padding-32 oxi-m-width" ' . $this->animation_render('sa-ie-main-box-animation', $style) . '>
-                <div class="sa_for_margin">
+                <div class="sa_ie_inner">
                 ' . $valueurl1st . '
                     <div class="ihewc-hover sa_image_effect_temp_32 sa_image_effect_temp_32_' . $key . '  ' . $style['sa_effects_select_icon'] . '">
                         <div class="ihewc-hover-figure">

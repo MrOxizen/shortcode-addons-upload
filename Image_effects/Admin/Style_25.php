@@ -239,7 +239,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-main-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_25 .sa_ie_inner' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -258,7 +258,7 @@ class Style_25 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -269,7 +269,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25 ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_25 .sa_ie_inner ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -283,7 +283,7 @@ class Style_25 extends AdminStyle {
                 'sa-ie-main-hover-box-shadow-hover', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25:hover' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_25 .sa_ie_inner:hover' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -302,7 +302,7 @@ class Style_25 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -313,7 +313,7 @@ class Style_25 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_25:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_25 .sa_ie_inner:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -342,7 +342,7 @@ class Style_25 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -372,7 +372,7 @@ class Style_25 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
