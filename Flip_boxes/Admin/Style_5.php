@@ -203,17 +203,17 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
-                    'max' => 2000,
+                    'min' => 0,
+                    'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
                 ],
                 'em' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 0.1,
                 ],
@@ -233,14 +233,19 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
-                    'max' => 1000,
+                    'min' => 0,
+                    'max' => 1500,
                     'step' => 1,
                 ],
                 '%' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 100,
                     'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 0.1,
                 ],
             ],
             'selector' => [
@@ -276,9 +281,7 @@ class Style_5 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-front-style-1' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-front-section' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-back-style-1' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-back-section' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
@@ -340,8 +343,7 @@ class Style_5 extends AdminStyle {
                 'sa-flip-boxes-hover-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-front-section:hover' => '',
-                '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-back-section:hover' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-back-section' => '',
             ]
                 ]
         );
@@ -385,38 +387,6 @@ class Style_5 extends AdminStyle {
             'type' => Controls::BORDER,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-front-section' => '',
-            ]
-                ]
-        );
-
-
-        $this->add_responsive_control(
-                'sa-ib-content-font-box-margin', $this->style, [
-            'label' => __('Padding', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 2000,
-                    'step' => 1,
-                ],
-                '%' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-5 .oxi-addons-flip-box-front-section' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -473,7 +443,7 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -484,7 +454,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -540,7 +510,7 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -551,7 +521,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -606,7 +576,7 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -617,7 +587,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -666,7 +636,7 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -677,7 +647,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -696,7 +666,7 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -707,7 +677,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -771,7 +741,7 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -782,7 +752,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
@@ -835,7 +805,7 @@ class Style_5 extends AdminStyle {
             ],
             'range' => [
                 'px' => [
-                    'min' => 1,
+                    'min' => 0,
                     'max' => 500,
                     'step' => 1,
                 ],
@@ -846,7 +816,7 @@ class Style_5 extends AdminStyle {
                 ],
                 'em' => [
                     'min' => 0,
-                    'max' => 100,
+                    'max' => 200,
                     'step' => .1,
                 ],
             ],
