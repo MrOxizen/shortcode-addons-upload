@@ -71,7 +71,7 @@ class Style_15 extends Templates {
 
             echo '<div class="  sa_ie_temp_style_15   ' . $this->column_render('sa-ac-column', $style) . ' " >';
             echo '<div class="sa_ie_temp_15 ihewc-hover-padding-15 oxi-m-width" ' . $this->animation_render('sa-ie-main-box-animation', $style) . '>
-                <div class="sa_for_margin">
+                <div class="sa_ie_inner">
                 ' . $valueurl1st . '
                     <div class="ihewc-hover sa_image_effect_temp_15 sa_image_effect_temp_15_' . $key . '  ' . $style['sa_effects_select_icon'] . '">
                         <div class="ihewc-hover-figure">

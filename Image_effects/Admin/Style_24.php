@@ -200,7 +200,7 @@ class Style_24 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                ' {{WRAPPER}}  .sa_for_margin:hover .ihewc-hover-figure-caption' => 'background:{{VALUE}};'
+                ' {{WRAPPER}}  .sa_ie_inner:hover .ihewc-hover-figure-caption' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -221,40 +221,40 @@ class Style_24 extends AdminStyle {
                 'sa-ie-main-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_24' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_24 .sa_ie_inner' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
-        $this->add_responsive_control(
-                'sa-ie-main-box-border-radius', $this->style, [
-            'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_24 ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
+//        $this->add_responsive_control(
+//                'sa-ie-main-box-border-radius', $this->style, [
+//            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+//            'type' => Controls::DIMENSIONS,
+//            'default' => [
+//                'unit' => 'px',
+//                'size' => '',
+//            ],
+//            'range' => [
+//                '%' => [
+//                    'min' => 0,
+//                    'max' => 50,
+//                    'step' => .1,
+//                ],
+//                'px' => [
+//                    'min' => -200,
+//                    'max' => 200,
+//                    'step' => 1,
+//                ],
+//                'em' => [
+//                    'min' => 0,
+//                    'max' => 10,
+//                    'step' => .1,
+//                ],
+//            ],
+//            'selector' => [
+//                '{{WRAPPER}} .sa_ie_temp_24 .sa_ie_inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+//            ],
+//                ]
+//        );
 
         $this->end_controls_tab();
 
@@ -265,40 +265,40 @@ class Style_24 extends AdminStyle {
                 'sa-ie-main-hover-box-shadow-hover', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_24:hover' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_24 .sa_ie_inner:hover' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
-        $this->add_responsive_control(
-                'sa-ie-main-box-border-radius-hover', $this->style, [
-            'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'px' => [
-                    'min' => -200,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_24:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-            ],
-                ]
-        );
+//        $this->add_responsive_control(
+//                'sa-ie-main-box-border-radius-hover', $this->style, [
+//            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+//            'type' => Controls::DIMENSIONS,
+//            'default' => [
+//                'unit' => 'px',
+//                'size' => '',
+//            ],
+//            'range' => [
+//                '%' => [
+//                    'min' => 0,
+//                    'max' => 50,
+//                    'step' => .1,
+//                ],
+//                'px' => [
+//                    'min' => 0,
+//                    'max' => 200,
+//                    'step' => 1,
+//                ],
+//                'em' => [
+//                    'min' => 0,
+//                    'max' => 10,
+//                    'step' => .1,
+//                ],
+//            ],
+//            'selector' => [
+//                '{{WRAPPER}} .sa_ie_temp_24 .sa_ie_inner:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+//            ],
+//                ]
+//        );
         $this->end_controls_tab();
         $this->end_controls_tabs();
 
@@ -324,7 +324,7 @@ class Style_24 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -354,7 +354,7 @@ class Style_24 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],

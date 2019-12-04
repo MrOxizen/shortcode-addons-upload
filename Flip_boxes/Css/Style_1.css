@@ -186,7 +186,7 @@
     border-radius: 25px 25px 25px 25px
 }
 
-.oxi-addons-flip-box-style-1 .oxi-addons-flip-box-back-button:hover .oxi-addons-flip-box-back-button-data {
+.oxi-addons-flip-box-style-1 .oxi-addons-flip-box-back-button .oxi-addons-flip-box-back-button-data:hover {
     color: #ffffff;
     background: rgba(214, 0, 203, 1.00);
     border-style: dotted;

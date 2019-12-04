@@ -11,8 +11,8 @@
     /*max-width:350px;*/ 
    margin:0 auto ;
 }
-.sa_ie_temp_3{
-    box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1);
+
+.sa_ie_temp_3 .sa_ie_inner{
     overflow:hidden ;
 }
 .sa_ie_temp_3:hover, 
@@ -83,7 +83,6 @@
     color:#7900c9;
     background:rgba(255,255,255,1.00);
     border-width:0px 0px 0px 0px;
-    border-radius:5px 5px 5px 5px;
     border-color:#ffffff;
     border-style:solid;
     font-family:"Open Sans";
@@ -115,7 +114,6 @@
 .sa_ie_temp_3 .ihewc-button.img-btn:active{
     color:#ffffff;
     background:rgba(4, 160, 222, 1);
-    border-radius:3px 3px 3px 3px;
     border-color:#ffffff;
     border-style:solid;
     box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1);

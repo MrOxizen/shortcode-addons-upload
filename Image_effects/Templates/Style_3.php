@@ -72,7 +72,7 @@ class Style_3 extends Templates {
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' " >';
             echo '<div class="sa_ie_temp_3 ihewc-hover-padding oxi-m-width" ' . $this->animation_render('sa-ie-main-box-animation', $style) . '>
-                <div class="sa_for_margin">
+                <div class="sa_ie_inner">
                 ' . $valueurl1st . '
                     <div class="ihewc-hover sa_image_effect_temp_3 sa_image_effect_temp_3_' . $key . '  ">
                         <div class="ihewc-hover-figure">

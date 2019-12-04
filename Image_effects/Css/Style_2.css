@@ -11,8 +11,8 @@
     /*max-width:350px;*/ 
    margin:0 auto ;
 }
-.sa_ie_temp_2{
-    box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1);
+
+.sa_ie_temp_2 .sa_ie_inner{
     overflow:hidden ;
 }
 .sa_ie_temp_2:hover, 

@@ -198,15 +198,15 @@ class Style_23 extends AdminStyle {
             'oparetor' => 'RGB',
             'default' => 'blue',
             'selector' => [
-                '{{WRAPPER}} .sa_for_margin:hover,'
-                . ' {{WRAPPER}} .sa_for_margin:hover:before,'
-                . ' {{WRAPPER}} .sa_for_margin .ihewc-hover:before,'
-                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure,'
-                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure:before,'
-                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure:after,'
-                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption,'
-                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption:before,'
-                . ' {{WRAPPER}} .sa_for_margin:hover .ihewc-hover-figure-caption:after' => 'background:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_inner:hover,'
+                . ' {{WRAPPER}} .sa_ie_inner:hover:before,'
+                . ' {{WRAPPER}} .sa_ie_inner .ihewc-hover:before,'
+                . ' {{WRAPPER}} .sa_ie_inner:hover .ihewc-hover-figure,'
+                . ' {{WRAPPER}} .sa_ie_inner:hover .ihewc-hover-figure:before,'
+                . ' {{WRAPPER}} .sa_ie_inner:hover .ihewc-hover-figure:after,'
+                . ' {{WRAPPER}} .sa_ie_inner:hover .ihewc-hover-figure-caption,'
+                . ' {{WRAPPER}} .sa_ie_inner:hover .ihewc-hover-figure-caption:before,'
+                . ' {{WRAPPER}} .sa_ie_inner:hover .ihewc-hover-figure-caption:after' => 'background:{{VALUE}};'
             ],
                 ]
         );
@@ -227,7 +227,7 @@ class Style_23 extends AdminStyle {
                 'sa-ie-main-box-shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_23' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_23 .sa_ie_inner' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -246,7 +246,7 @@ class Style_23 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -257,7 +257,7 @@ class Style_23 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_23 ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_23 .sa_ie_inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -271,7 +271,7 @@ class Style_23 extends AdminStyle {
                 'sa-ie-main-hover-box-shadow-hover', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_23:hover' => 'box-shadow:{{VALUE}};'
+                '{{WRAPPER}} .sa_ie_temp_23 .sa_ie_inner:hover' => 'box-shadow:{{VALUE}};'
             ],
                 ]
         );
@@ -290,7 +290,7 @@ class Style_23 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -301,7 +301,7 @@ class Style_23 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_ie_temp_23:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sa_ie_temp_23 .sa_ie_inner:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -330,7 +330,7 @@ class Style_23 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -360,7 +360,7 @@ class Style_23 extends AdminStyle {
                     'step' => .1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
