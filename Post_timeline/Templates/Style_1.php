@@ -12,11 +12,14 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_1 extends Templates
+{
 
-    public function inline_public_jquery() {
+    public function inline_public_jquery()
+    {
         $style = $this->style;
         $js = '';
         $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-post-style-1 .oxi-addons__post-inner"));}, 500);';
@@ -24,27 +27,24 @@ class Style_1 extends Templates {
         return $js;
     }
 
-    function inline_public_css() {
+    function inline_public_css()
+    {
         $style = $this->style;
-       $hoverData = $css_inline = $final = '';
-       $poss = 0;
-       $div_wid = 0;
-       $arr_size = 0;
-       $bullet_wid = 0;
-       if ($style['sa_display_post_meta_position_effect'] == 'left') {
-           $css_inline = 'transform: translateX(-100%)';
-           $hoverData = 'transform: translateX(0)';
-       } elseif ($style['sa_display_post_meta_position_effect'] == 'top') {
-           $css_inline = 'transform: translateY(-100%)';
-           $hoverData = 'transform: translateY(0)';
-       } elseif ($style['sa_display_post_meta_position_effect'] == 'right') {
-           $css_inline = 'transform: translateX(100%)';
-           $hoverData = 'transform: translateX(0)';
-       } elseif ($style['sa_display_post_meta_position_effect'] == 'bottom') {
-           $css_inline = 'transform: translateY(100%)';
-           $hoverData = 'transform: translateY(0)';
-       }
-       $final .= ' .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__overlay{
+        $hoverData = $css_inline = $final = '';
+        if ($style['sa_display_post_meta_position_effect'] == 'left') {
+            $css_inline = 'transform: translateX(-100%)';
+            $hoverData = 'transform: translateX(0)';
+        } elseif ($style['sa_display_post_meta_position_effect'] == 'top') {
+            $css_inline = 'transform: translateY(-100%)';
+            $hoverData = 'transform: translateY(0)';
+        } elseif ($style['sa_display_post_meta_position_effect'] == 'right') {
+            $css_inline = 'transform: translateX(100%)';
+            $hoverData = 'transform: translateX(0)';
+        } elseif ($style['sa_display_post_meta_position_effect'] == 'bottom') {
+            $css_inline = 'transform: translateY(100%)';
+            $hoverData = 'transform: translateY(0)';
+        }
+        $final .= ' .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__overlay{
                        ' . $css_inline . '
                    }
                    .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__main-img:hover .oxi-addons__overlay{
@@ -56,63 +56,12 @@ class Style_1 extends Templates {
         $arr_size = $style['sa_display_post_arrow_size'];
         $br_clr = $style['sa_display_post_post_border-color'];
         $bullet_wid = $style['sa_display_post_bullet_width_height'];
-   
-       
-//        $final .= '
-//              .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:after{
-//                  width: ' . $div_wid . 'px;
-//                    height: ' .((( $poss * 4) / 2) + ( $poss * 2)). 'px;
-//                    top: ' .  $poss . 'px;
-//                }  
-//           
-//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:nth-last-child(2)::after{
-//                height: ' . (((( $poss * 4) / 2) + ( $poss * 2)) -  $poss) . 'px;
-//            }   
-//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:last-child::after{
-//                height: ' . ((( $poss * 4) / 2) + ( $poss * 2)) . 'px;
-//            }   
-//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__post-body::after{
-//                border-color: transparent transparent transparent ' . $br_clr . ';
-//            
-//                border-width: ' . $arr_size  . 'px;
-//                right: ' . (15 - ($arr_size  * 2) + 1) . 'px;
-//                top: ' . ( $poss + ($bullet_wid / 2) - $arr_size ) . 'px;
-//          
-//            }  
-//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:nth-child(2n) .oxi-addons__post-body::after{
-//                border-color: transparent ' . $br_clr . ' transparent transparent;
-//            
-//                border-width: ' . $arr_size  . 'px;
-//            
-//                left: ' . (15 - ($arr_size  * 2) + 1) . 'px;
-//               
-//                top: ' . (((( $poss * 4) / 2) + ( $poss * 2)) + ($bullet_wid / 2) - $arr_size ) . 'px;
-//         
-//            } 
-//         
-//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__timeline-bullet{   
-//                
-//               
-//                right: -' . (($bullet_wid - $div_wid) / 2) . 'px;
-//                top: ' .  $poss . 'px;
-//                width: ' . $bullet_wid . 'px;
-//                height: ' . $bullet_wid . 'px;
-//            
-//            }
-//           .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1:nth-child(2n) .oxi-addons__timeline-bullet{ 
-//                left: -' . ((($bullet_wid - $div_wid) / 2) + 2) . 'px;  
-//               
-//               
-//                top: ' . ((( $poss * 4) / 2) + ( $poss * 2)) . 'px;
-//                width: ' . $bullet_wid . 'px;
-//                height: ' . $bullet_wid . 'px;
-//             
-//            }
-//            ';
-      return $final;
+ 
+        return $final;
     }
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $button = $leftbutton = $rightbutton = '';
         $ssstyle = '';
 
@@ -126,19 +75,19 @@ class Style_1 extends Templates {
             'post_status' => 'publish',
             'tax_query' => []
         ];
-        if (array_key_exists('sa_display_post_author', $style)):
+        if (array_key_exists('sa_display_post_author', $style)) :
             $post_args['author__in'] = $style['sa_display_post_author'];
         endif;
         $key = $style['sa_display_post_post_type'];
-        if ($key != 'page'):
-            if (array_key_exists('sa_display_post_post_type-cat' . $key, $style)):
+        if ($key != 'page') :
+            if (array_key_exists('sa_display_post_post_type-cat' . $key, $style)) :
                 $post_args['tax_query'][] = array(
                     'taxonomy' => $key == 'post' ? 'category' : $key . '_category',
                     'field' => 'term_id',
                     'terms' => $style['sa_display_post_post_type-cat' . $key]
                 );
             endif;
-            if (array_key_exists('sa_display_post_post_type-tag' . $key, $style)):
+            if (array_key_exists('sa_display_post_post_type-tag' . $key, $style)) :
                 $post_args['tax_query'][] = array(
                     'taxonomy' => $key . '_tag',
                     'field' => 'term_id',
@@ -146,14 +95,14 @@ class Style_1 extends Templates {
                 );
             endif;
         endif;
-        if (array_key_exists('sa_display_post_post_type-include' . $key, $style)):
+        if (array_key_exists('sa_display_post_post_type-include' . $key, $style)) :
             $post_args['post__in'] = $style['sa_display_post_post_type-include' . $key];
         endif;
-        if (array_key_exists('sa_display_post_post_type-exclude' . $key, $style)):
+        if (array_key_exists('sa_display_post_post_type-exclude' . $key, $style)) :
             $post_args['post__not_in'] = $style['sa_display_post_post_type-exclude' . $key];
         endif;
 
-        echo '<div class="oxi-addons-container"><div class="oxi-addons-parent-post-style-1">';
+        echo '<div class="oxi-addons-parent-post-style-1">';
 
         $query = new \WP_Query($post_args);
         if ($query->have_posts()) {
@@ -277,29 +226,29 @@ class Style_1 extends Templates {
                         </div>
                     </div>
                 </div>';
-//                $hoverData = $style = '';
-//                if ($style[29] == 'left') {
-//                    $style = 'transform: translateX(-100%)';
-//                    $hoverData = 'transform: translateX(0)';
-//                } elseif ($style[29] == 'top') {
-//                    $style = 'transform: translateY(-100%)';
-//                    $hoverData = 'transform: translateY(0)';
-//                } elseif ($style[29] == 'right') {
-//                    $style = 'transform: translateX(100%)';
-//                    $hoverData = 'transform: translateX(0)';
-//                } elseif ($style[29] == 'bottom') {
-//                    $style = 'transform: translateY(100%)';
-//                    $hoverData = 'transform: translateY(0)';
-//                }
             }
             wp_reset_postdata();
         }
 
-        echo '</div>
-    </div>';
+        echo '</div>';
     }
 
-    public function old_render() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function old_render()
+    {
         $style = $this->dbdata;
         $child = $this->child;
         $oxiid = $style['id'];
@@ -478,7 +427,7 @@ class Style_1 extends Templates {
     </div>';
         if ($stylefiles[23] == '') {
             $js = 'setTimeout(function () {oxiequalHeight(jQuery(".oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__post-inner"));}, 500);';
-              wp_add_inline_script('shortcode-addons-jquery', $js);
+            wp_add_inline_script('shortcode-addons-jquery', $js);
         } else {
             echo 'pore dimo pari na';
         }
@@ -877,5 +826,4 @@ class Style_1 extends Templates {
             });";
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
-
 }
