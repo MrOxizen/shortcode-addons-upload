@@ -169,7 +169,7 @@ class Style_18 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-18 *' => 'transition: all {{SIZE}}s ease-in-out !important;',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-18 *' => 'transition: all {{SIZE}}s;',
             ],
                 ]
         );
