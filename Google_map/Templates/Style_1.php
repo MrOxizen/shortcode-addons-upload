@@ -18,52 +18,52 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
         
-        $oxiid = $this->oxiid;
-        echo '<div class="map-position-style1 map-position-' . $oxiid . '">
-                  <div  class="map-style1" id="map-' . $oxiid . '"></div>
-                </div>
+        echo '<div class="map-position-style1 map-position-' . $this->oxiid . '">
+                  <div  class="map-style1" id="map' . $this->oxiid . '"></div>
+              </div>
          ';
-    }
-
-    public function inline_public_jquery() {
+        
+         $style = $this->style;
         $key = $title = $lat = $lng = "";
-        if ($styledata[63] != "" && $styledata[59] != "" && $styledata[61] != "") {
-            if ($styledata[63] !== 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo') {
-                $key = $styledata[63];
-                $lat = $styledata[59];
-                $lng = $styledata[61];
+        if ($style['sa_gm_api'] != "" && $style['sa_gm_Longitude'] != "" && $style['sa_gm_latitude'] != "") {
+            if ($style['sa_gm_api'] !== 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo') {
+                $key = $style['sa_gm_api'];
+                $lat = $style['sa_gm_latitude'];
+                $lng = $style['sa_gm_Longitude'];
             } else {
                 $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-                $lat = 1.361827;
-                $lng = 103.853342;
-                //echo '<script type="text/javascript">alert("Please give your  correct APi key.")</script>';
+                $lat = 23.796306;
+                $lng = 90.373083;
+                echo '<script type="text/javascript">alert("Please give your  correct APi key.")</script>';
             }
         } else {
             $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-            $lat = 1.361827;
-            $lng = 103.853342;
-            //echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. Otherwise always show your default data.")</script>';
+            $lat = 23.796306;
+            $lng = 90.373083;
+            echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. Otherwise always show your default data.")</script>';
         }
-        $title = OxiAddonsTextConvert($stylefiles[5]);
+        $title = $this->text_render($style['sa_gm_place_title']);
+         
         $oxiid = $this->oxiid;
         $jquery = '';
         $jquery .= ' <script>
                   function initMap() {
 
-                    var uluru = { lat: ' . $lat . ', lng: ' . $lng . ' };
+                    var loglat = { lat: parseFloat(' . $lat . ') , lng:  parseFloat(' .$lng . ') };
+                        console.log(loglat)
                     var map = new google.maps.Map(
-                      document.getElementById("map' . $oxiid . '"), { zoom: ' . $styledata[57] . ', center: uluru }
+                      document.getElementById("map' . $oxiid . '"), { zoom: ' . $style['sa_gm_place_zoom'] . ', center: loglat }
                     );
                     marker = new google.maps.Marker({
                       map: map,
-                      position: uluru,
-                      title: "' . OxiAddonsTextConvert($stylefiles[5]) . '",
+                      position: loglat,
+                      title: "' . $title . '",
                       animation: google.maps.Animation.DROP
                     });
 
 
                     var contentString =`<div class="oxi_add_gmap_location_info-style1 oxi_add_gmap_location_info-' . $oxiid . '">
-                                          <div class="oxi_add_gmap_location_info_body-style1 oxi_add_gmap_location_info_body-' . $oxiid . '">' . OxiAddonsTextConvert($stylefiles[7]) . '</div>
+                                          <div class="oxi_add_gmap_location_info_body-style1 oxi_add_gmap_location_info_body-' . $oxiid . '">' . $this->text_render($style['sa_gm_place_location_info']) . '</div>
                                        </div>
                                           `;
 
@@ -79,18 +79,8 @@ class Style_1 extends Templates {
                     marker.addListener("click", toggleBounce);
 
                   }
-
-                  function toggleBounce() {
-                      if(' . $styledata[65] . ' == 1){
-                        if (marker.getAnimation() !== null) {
-                          marker.setAnimation(null);
-                        } else {
-                          marker.setAnimation(google.maps.Animation.BOUNCE);
-                        }
-                      }else{
-                          marker.setAnimation(null);
-                      }
-                  }
+                  
+                  
 
                 </script>';
 
@@ -98,8 +88,9 @@ class Style_1 extends Templates {
 
   
 
-        return $jquery;
-    }
+        echo $jquery;
+     }
+
 
     public function old_render() {
         $styledata = $this->dbdata;
@@ -144,13 +135,13 @@ class Style_1 extends Templates {
   <script>
     function initMap() {
       
-      var uluru = { lat: ' . $lat . ', lng: ' . $lng . ' };
+      var loglat = { lat: ' . $lat . ', lng: ' . $lng . ' };
       var map = new google.maps.Map(
-        document.getElementById("map' . $oxiid . '"), { zoom: ' . $styledata[57] . ', center: uluru }
+        document.getElementById("map' . $oxiid . '"), { zoom: ' . $styledata[57] . ', center: loglat }
       );
       marker = new google.maps.Marker({
         map: map,
-        position: uluru,
+        position: loglat,
         title: "' . OxiAddonsTextConvert($stylefiles[5]) . '",
         animation: google.maps.Animation.DROP
       });
