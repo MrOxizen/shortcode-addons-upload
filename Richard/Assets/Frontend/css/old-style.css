@@ -1,0 +1,238 @@
+.oxi-addons-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.oxilab-flip-box-wrapper{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.oxilab-flip-box-wrapper *{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;    
+}
+.oxilab-button-data{
+    line-height: 1.2;
+}
+.oxilab-flip-box-col-1, .oxilab-carousel-property {
+    width: 100%;
+    float: left;
+}
+.oxilab-flip-box-col-2{
+    width: 50%;
+    float: left;
+}
+.oxilab-flip-box-col-3 {
+    width: 33.33%;
+    float: left;
+}
+.oxilab-flip-box-col-4{
+    width: 25%;
+    float: left;
+}
+.oxilab-flip-box-col-5{
+    width: 20%;
+    float: left;
+}
+.oxilab-flip-box-col-6{
+    width: 16.66%;
+    float: left;
+}
+
+@media only screen and (min-width: 601px)and (max-width: 900px){
+    .oxilab-flip-box-col-6, .oxilab-flip-box-col-5{
+        width: 33.33%;
+    }
+
+    .oxilab-flip-box-col-4, .oxilab-flip-box-col-3{
+        width: 50%;
+    }
+    .image-ultimate-responsive-2{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .oxilab-flip-box-col-6, .oxilab-flip-box-col-5{
+        width: 50%;
+    }
+
+    .oxilab-flip-box-col-4, .oxilab-flip-box-col-3{
+        width: 100%;
+    }
+    .oxilab-flip-box-col-2{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 400px){
+    .oxilab-flip-box-col-6, .oxilab-flip-box-col-5{
+        width: 100%;
+    }
+
+}
+.owl-item .oxilab-flip-box-col-1,
+.owl-item .oxilab-flip-box-col-2,
+.owl-item .oxilab-flip-box-col-3,
+.owl-item .oxilab-flip-box-col-4,
+.owl-item .oxilab-flip-box-col-5,
+.owl-item .oxilab-flip-box-col-6{
+    width: 100%;
+}
+
+.oxilab-flip-box-body-absulote{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.oxilab-flip-box-flip{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.oxilab-flip-box-flip .oxilab-flip-box-style-data{
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.oxilab-flip-box-style{
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.oxilab-flip-box-style,
+.oxilab-flip-box-front,
+.oxilab-flip-box-back,
+.oxilab-flip-box-xflank,
+.oxilab-flip-box-yflank{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: inherit;
+    transition-duration: inherit;
+}
+.easing_easeInOutExpo * {
+    -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+.easing_easeInOutCirc * {
+    -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.easing_easeOutBack * {
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.oxilab-flip-box-front {
+    position: relative;
+}
+.oxilab-flip-box-back,
+.oxilab-flip-box-xflank,
+.oxilab-flip-box-yflank {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.oxilab-flip-box-flip:hover .oxilab-flip-box-front,
+.oxilab-flip-box-flip.active .oxilab-flip-box-front{
+    z-index: -1;
+}
+.oxilab-flip-box-flip:hover .oxilab-flip-box-front,
+.oxilab-flip-box-flip.active .oxilab-flip-box-front{
+    z-index: 1;
+}
+.oxilab-flip-box-flip-bottom-to-top .oxilab-flip-box-front {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.oxilab-flip-box-flip-bottom-to-top .oxilab-flip-box-back {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.oxilab-flip-box-flip-bottom-to-top.active .oxilab-flip-box-front,
+.oxilab-flip-box-flip-bottom-to-top:hover .oxilab-flip-box-front{
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.oxilab-flip-box-flip-bottom-to-top.active .oxilab-flip-box-back,
+.oxilab-flip-box-flip-bottom-to-top:hover .oxilab-flip-box-back {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.oxilab-flip-box-flip-left-to-right .oxilab-flip-box-front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.oxilab-flip-box-flip-left-to-right .oxilab-flip-box-back {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.oxilab-flip-box-flip-left-to-right.active .oxilab-flip-box-front,
+.oxilab-flip-box-flip-left-to-right:hover .oxilab-flip-box-front{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.oxilab-flip-box-flip-left-to-right.active .oxilab-flip-box-back,
+.oxilab-flip-box-flip-left-to-right:hover .oxilab-flip-box-back{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.oxilab-flip-box-flip-right-to-left .oxilab-flip-box-front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.oxilab-flip-box-flip-right-to-left .oxilab-flip-box-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.oxilab-flip-box-flip-right-to-left.active .oxilab-flip-box-front,
+.oxilab-flip-box-flip-right-to-left:hover .oxilab-flip-box-front{
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.oxilab-flip-box-flip-right-to-left.active .oxilab-flip-box-back,
+.oxilab-flip-box-flip-right-to-left:hover .oxilab-flip-box-back{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.oxilab-flip-box-flip-top-to-bottom .oxilab-flip-box-front {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.oxilab-flip-box-flip-top-to-bottom .oxilab-flip-box-back {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.oxilab-flip-box-flip-top-to-bottom.active .oxilab-flip-box-front,
+.oxilab-flip-box-flip-top-to-bottom:hover .oxilab-flip-box-front{
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.oxilab-flip-box-flip-top-to-bottom.active .oxilab-flip-box-back,
+.oxilab-flip-box-flip-top-to-bottom:hover .oxilab-flip-box-back {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
