@@ -423,7 +423,7 @@ class Style_3 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
                 'sa-flip-boxex-front-icon-size', $this->style, [
             'label' => __('Icon Size', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
