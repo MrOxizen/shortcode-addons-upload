@@ -14,16 +14,15 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_2 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-        echo '<div class="map-position-style1 map-position-' . $this->oxiid . '" ' . $this->animation_render('sa_gm_animation', $style) . '>
-                  <div  class="map-style1" id="map' . $this->oxiid . '"></div>
+        echo '<div class="map-position-style2 map-position-' . $this->oxiid . '" ' . $this->animation_render('sa_gm_animation', $style) . '>
+                  <div  class="map-style2" id="map' . $this->oxiid . '"></div>
               </div>
          ';
 
-        $style = $this->style;
         $key = $title = $lat = $lng = "";
         if ($style['sa_gm_api'] != "" && $style['sa_gm_Longitude'] != "" && $style['sa_gm_latitude'] != "") {
             if ($style['sa_gm_api'] !== 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo') {
@@ -32,14 +31,14 @@ class Style_1 extends Templates {
                 $lng = $style['sa_gm_Longitude'];
             } else {
                 $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-                $lat = 23.796306;
-                $lng = 90.373083;
+                $lat = 1.361827;
+                $lng = 103.853342;
                 echo '<script type="text/javascript">alert("Please give your  correct APi key.")</script>';
             }
         } else {
             $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-            $lat = 23.796306;
-            $lng = 90.373083;
+            $lat = 1.361827;
+            $lng = 103.853342;
             echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. Otherwise always show your default data.")</script>';
         }
         $title = $this->text_render($style['sa_gm_place_title']);
@@ -50,8 +49,12 @@ class Style_1 extends Templates {
                   function initMap() {
 
                     var loglat = { lat: parseFloat(' . $lat . ') , lng:  parseFloat(' . $lng . ') };
-                    var map = new google.maps.Map(
-                      document.getElementById("map' . $oxiid . '"), { zoom: ' . $style['sa_gm_place_zoom'] . ', center: loglat }
+                    var map = new google.maps.StreetViewPanorama(
+                      document.getElementById("map' . $oxiid . '"), { '
+                . '             zoom: ' . $style['sa_gm_place_zoom'] . ', 
+                                center: loglat,
+                                position: loglat,
+                             }
                     );
                     marker = new google.maps.Marker({
                       map: map,
@@ -61,8 +64,8 @@ class Style_1 extends Templates {
                     });
 
 
-                    var contentString =`<div class="oxi_add_gmap_location_info-style1 oxi_add_gmap_location_info-' . $oxiid . '">
-                                          <div class="oxi_add_gmap_location_info_body-style1 oxi_add_gmap_location_info_body-' . $oxiid . '">' . $this->text_render($style['sa_gm_place_location_info']) . '</div>
+                    var contentString =`<div class="oxi_add_gmap_location_info-style2 oxi_add_gmap_location_info-' . $oxiid . '">
+                                          <div class="oxi_add_gmap_location_info_body-style2 oxi_add_gmap_location_info_body-' . $oxiid . '">' . $this->text_render($style['sa_gm_place_location_info']) . '</div>
                                        </div>
                                           `;
 
@@ -100,13 +103,11 @@ class Style_1 extends Templates {
         echo '<div class="oxi-addons-container">
             <div class="oxi-addons-row">
                 <div class="map-position-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 53) . '>
-                  <div   id="map' . $oxiid . '"></div>
+                  <div id="map1' . $oxiid . '"></div>
                 </div>
             </div>
          </div>
         ';
-
-
         $key = $title = $lat = $lng = "";
         if ($styledata[63] != "" && $styledata[59] != "" && $styledata[61] != "") {
             if ($styledata[63] !== 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo') {
@@ -132,14 +133,20 @@ class Style_1 extends Templates {
        
   <script>
     function initMap() {
-      
-      var loglat = { lat: ' . $lat . ', lng: ' . $lng . ' };
-      var map = new google.maps.Map(
-        document.getElementById("map' . $oxiid . '"), { zoom: ' . $styledata[57] . ', center: loglat }
+      var uluru = { lat: ' . $lat . ', lng: ' . $lng . ' };
+      var map = new google.maps.StreetViewPanorama(
+        document.getElementById("map1' . $oxiid . '"), {
+                zoom: ' . $styledata[57] . ',
+                center: uluru ,
+                position: uluru
+                }
       );
+      
+      var image = "";
       marker = new google.maps.Marker({
         map: map,
-        position: loglat,
+        position: uluru,
+        icon: image,
         title: "' . OxiAddonsTextConvert($stylefiles[5]) . '",
         animation: google.maps.Animation.DROP
       });
@@ -180,7 +187,7 @@ class Style_1 extends Templates {
         echo '<script src="https://maps.googleapis.com/maps/api/js?key=' . $key . '&callback=initMap"  async defer></script>';
 
         $css .= '       
-            #map' . $oxiid . ' {
+            #map1' . $oxiid . ' {
                 height: ' . $styledata[7] . 'px;  /* The height is 400 pixels */
                 width: ' . $styledata[3] . '%;  /* The width is the width of the web page */
                }
@@ -203,17 +210,6 @@ class Style_1 extends Templates {
                 color: ' . $styledata[73] . ';
                 ' . OxiAddonsFontSettings($styledata, 47) . '
             }
-            .oxi_add_gmap_location_info_body-' . $oxiid . ' h1,
-            .oxi_add_gmap_location_info_body-' . $oxiid . ' h2,
-            .oxi_add_gmap_location_info_body-' . $oxiid . ' h3,
-            .oxi_add_gmap_location_info_body-' . $oxiid . ' h4,
-            .oxi_add_gmap_location_info_body-' . $oxiid . ' h5,
-            .oxi_add_gmap_location_info_body-' . $oxiid . ' h6{
-                text-align: center;
-                display: block;
-            }
-                
-            
        ';
         wp_add_inline_style('shortcode-addons-style', $css);
     }
