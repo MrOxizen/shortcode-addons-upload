@@ -5,12 +5,14 @@
 
 
 
-
-
-.ihewc-hover-padding{
-    /*max-width:350px;*/ 
+.sa_ie_temp_1{
    margin:0 auto ;
 }
+
+.ihewc-hover-padding{
+   margin:0 auto ;
+}
+
 
 .sa_ie_temp_1 .sa_ie_inner{
     overflow:hidden ;
@@ -34,6 +36,7 @@
 }
 .sa_ie_temp_1 .ihewc-hover-figure .ihewc-hover-figure-caption-content{
     padding:20px 20px 20px 20px;
+    text-align: center;
 }
 .sa_ie_temp_1,
 .sa_ie_temp_1 .ihewc-hover-figure,

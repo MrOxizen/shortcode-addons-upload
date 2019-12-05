@@ -7,8 +7,10 @@
 
 
 
+.sa_ie_temp_3{
+   margin:0 auto ;
+}
 .ihewc-hover-padding{
-    /*max-width:350px;*/ 
    margin:0 auto ;
 }
 
@@ -34,6 +36,7 @@
 }
 .sa_ie_temp_3 .ihewc-hover-figure .ihewc-hover-figure-caption-content{
     padding:20px 20px 20px 20px;
+    text-align: center;
 }
 .sa_ie_temp_3,
 .sa_ie_temp_3 .ihewc-hover-figure,
