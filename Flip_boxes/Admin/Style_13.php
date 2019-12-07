@@ -487,7 +487,7 @@ class Style_13 extends AdminStyle {
                 'sa-flip-box-front-icon-border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-13 .oxi-addons-flip-box-front-icon .oxi-icons' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-13 .oxi-addons-flip-box-front-icon' => '',
             ]
                 ]
         );
