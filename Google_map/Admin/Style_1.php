@@ -35,6 +35,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::NUMBER,
             'label' => __('Latitude', SHORTCODE_ADDOONS),
             'default' => '1.361827',
+             'step' => 0.1111
                 ]
         );
         $this->add_control(
@@ -42,6 +43,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::NUMBER,
             'label' => __('Longitude', SHORTCODE_ADDOONS),
             'default' => '103.853342',
+                     'step' => 0.1111
                 ]
         );
         $this->add_control(
@@ -77,7 +79,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .map-style1' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -107,7 +109,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .map-style1' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -137,7 +139,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .map-position-style1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -167,7 +169,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .map-position-style1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -188,9 +190,11 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_gm_place_title', $this->style, [
+                'sa_gm_place_zoom', $this->style, [
             'type' => Controls::NUMBER,
             'label' => __('Zoom Level', SHORTCODE_ADDOONS),
+                    'loader'=>TRUE,
+            'default'=> 14,
                 ]
         );
         $this->add_control(
@@ -198,49 +202,37 @@ class Style_1 extends AdminStyle {
             'type' => Controls::TEXT,
             'label' => __('Place Title', SHORTCODE_ADDOONS),
             'placeholder' => __('Place Title', SHORTCODE_ADDOONS),
+//            'selector' => [
+//                '{{WRAPPER}} .map-position-style1' => ''
+//            ],
                 ]
         );
-        $this->add_group_control(
-                'sa_gm_plase_text_typho', $this->style, [
-            'type' => Controls::TYPOGRAPHY,
-            'include' => Controls::ALIGNNORMAL,
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_T' => ''
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_gm_markar_location', $this->style, [
-            'label' => __('Marker Animation', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'default' => 'yes',
-            'loader' => TRUE,
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-        
+       
+
         $this->end_controls_section();
-        
+
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Info Window', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
                 ]
         );
         $this->add_control(
-                'sa_gm_place_title', $this->style, [
+                'sa_gm_place_location_info', $this->style, [
             'type' => Controls::TEXTAREA,
             'label' => __('Location Information', SHORTCODE_ADDOONS),
             'placeholder' => __('Location Information', SHORTCODE_ADDOONS),
+            'selector' => [
+                '{{WRAPPER}} .oxi_add_gmap_location_info_body-style1' => ''
+            ],
                 ]
         );
-         $this->add_group_control(
+        $this->add_group_control(
                 'sa_gm_Location_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_T' => ''
+                '{{WRAPPER}} .oxi_add_gmap_location_info_body-style1' => ''
             ],
                 ]
         );
@@ -250,7 +242,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#dddddd',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_FI_1 .oxi_addons_FI_1_T' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi_add_gmap_location_info_body-style1' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -280,7 +272,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_add_gmap_location_info-style1' => 'width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -310,13 +302,13 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn1 .oxi-button-btn1.sa-width-dymanic' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_add_gmap_location_info-style1' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
         $this->end_controls_section();
         $this->end_section_devider();
-        
+
         $this->end_section_tabs();
     }
 

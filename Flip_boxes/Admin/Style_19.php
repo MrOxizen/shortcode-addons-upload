@@ -168,7 +168,7 @@ class Style_19 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-19 *' => 'transition: all {{SIZE}}s ease-in-out !important;',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-19 *' => 'transition: all {{SIZE}}s;',
             ],
                 ]
         );

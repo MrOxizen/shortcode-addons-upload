@@ -1,0 +1,148 @@
+.oxi-addons-flip-box-style-24 * {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none
+}
+
+.oxi-addons-flip-box-style-24 {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-boxes-body:after {
+    padding-bottom: 117.85714285714%;
+    content: "";
+    display: block
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section-box {
+    width: 100%;
+    height: 100%;
+    float: left;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.23);
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-width: 0px;
+    border-style: solid;
+    border-color: #f44336;
+    border-radius: 6px 6px 6px 6px;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-icon {
+    text-align: center;
+    width: 100%;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-icon .oxi-icons {
+    font-size: 25px;
+    width: 100%;
+    background: rgba(244, 67, 54, 1.00);
+    color: #ffffff;
+    border-width: 0px;
+    border-style: none;
+    border-color: #999999;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px 10px 5px 10px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-headding {
+    width: 100%;
+    font-size: 22px;
+    color: #f44336;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 5px 5px 5px 5px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-front-info {
+    width: 100%;
+    font-size: 16px;
+    color: #242424;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section-box {
+    width: 100%;
+    height: 100%;
+    float: left;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.28);
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-width: 0px;
+    border-style: none;
+    border-color: #a6a6a6;
+    border-radius: 6px 6px 6px 6px;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-icon {
+    text-align: center;
+    width: 100%;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-icon .oxi-icons {
+    width: 100%;
+    background: rgba(255, 255, 255, 1.00);
+    border-width: 0px;
+    border-style: none;
+    border-color: #999999;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 25px;
+    color: #f44336;
+    padding: 5px 10px 5px 10px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-headding {
+    width: 100%;
+    font-size: 22px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 5px 0px 5px 0px
+}
+
+.oxi-addons-flip-box-style-24 .oxi-addons-flip-box-back-info {
+    width: 100%;
+    font-size: 16px;
+    color: #f2f2f2;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 5px 10px 10px 10px
+}

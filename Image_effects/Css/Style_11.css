@@ -1,3 +1,6 @@
+.sa_ie_temp_11 {
+    margin: 0 auto;
+}
 .ihewc-hover-padding-11 {
     /*    max-width:350px;
     padding:10px 10px 10px 10px;*/
@@ -31,7 +34,8 @@
 }
 
 .sa_ie_temp_11 .ihewc-hover-figure .ihewc-hover-figure-caption-content {
-    padding: 20px 20px 20px 20px
+    padding: 20px 20px 20px 20px;
+    text-align: center;
 }
 
 .sa_ie_temp_11,

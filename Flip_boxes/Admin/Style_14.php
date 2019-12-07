@@ -176,7 +176,7 @@ class Style_14 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-14 *' => 'transition: all {{SIZE}}s ease-in-out !important;',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-14 *' => 'transition: all {{SIZE}}s;',
             ],
                 ]
         );
