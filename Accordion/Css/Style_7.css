@@ -1,16 +1,14 @@
-
-
-
-
 .oxi-addons-AC-SV-row {
     width: 100%;
     float: left;
 }
+
 .sa_element_ac_style_7 {
     width: 100%;
     float: left;
     padding: 10px 10px 10px 52px;
 }
+
 .sa_element_ac_style_7 .oxi-addons-AC-SV-panel {
     width: 100%;
     float: left;
@@ -19,13 +17,16 @@
     padding: 10px 10px 10px 10px;
     transition: none;
 }
+
 .sa_element_ac_style_7 .oxi-addons-AC-SV-panel:active {
     top: 3px;
 }
+
 .sa_element_ac_style_7 .oxi-addons-AC-SV-panel:active .oxi-addons-AC-SV-icon {
     top: -3px;
     transition: none;
 }
+
 .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
     display: flex;
     justify-content: center;
@@ -42,6 +43,7 @@
     border-radius: 5px 0px 0px 5px;
     transition: none;
 }
+
 .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
     width: 100%;
     float: left;
@@ -57,6 +59,7 @@
     padding: 0px 0px 0px 0px;
     transition: none;
 }
+
 .sa_element_ac_style_7 .oxi-addons-AC-SV-details {
     display: none;
     width: 100%;
@@ -71,6 +74,7 @@
     padding: 10px 10px 10px 10px;
     transition: none;
 }
+
 .sa_element_ac_style_7 .oxi-active .oxi-addons-AC-SV-details {
     display: block;
     width: 100%;
@@ -91,18 +95,22 @@
         border-radius: 0px 5px 5px 0px;
         padding: 8px 8px 8px 8px;
     }
+
     .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
         left: -40px;
         font-size: 14px;
     }
+
     .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
         font-size: 18px;
         padding: 0px 0px 0px 0px;
     }
+
     .sa_element_ac_style_7 .oxi-addons-AC-SV-details {
         font-size: 12px;
         padding: 8px 8px 8px 8px;
     }
+
     .sa_element_ac_style_7 .oxi-active .oxi-addons-AC-SV-details {
         font-size: 12px;
         padding: 8px 8px 8px 8px;
@@ -113,25 +121,29 @@
     .sa_element_ac_style_7 {
         padding: 5px 5px 5px 52px;
     }
+
     .sa_element_ac_style_7 .oxi-addons-AC-SV-panel {
         border-radius: 0px 5px 5px 0px;
         padding: 5px 5px 5px 5px;
     }
+
     .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
         left: -40px;
         font-size: 13px;
     }
+
     .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
         font-size: 15px;
         padding: 0px 0px 0px 0px;
     }
+
     .sa_element_ac_style_7 .oxi-addons-AC-SV-details {
         font-size: 12px;
         padding: 5px 5px 5px 5px;
     }
+
     .sa_element_ac_style_7 .oxi-active .oxi-addons-AC-SV-details {
         font-size: 12px;
         padding: 5px 5px 5px 5px;
     }
 }
-

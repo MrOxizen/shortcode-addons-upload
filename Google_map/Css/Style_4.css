@@ -1,0 +1,41 @@
+
+
+
+.map-style4 {
+    width: 50%;
+    float: left;
+    height: 400px;
+}
+.pan-style4{
+    height: 400px;
+    width: 50%;
+    float: left;
+}
+.map-position-style4{
+
+   
+    height: 400px;
+    width: 100%;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0 auto;
+}
+.oxi_add_gmap_location_info-style4{
+
+    width: 200px;
+    height: 100px;
+}
+.oxi_add_gmap_location_info_body-style4{
+    font-size: 14px;
+    color: #c25555;
+    font-family:"Arimo"; font-weight:100; font-style:normal; line-height:1.3; text-align:left;
+}
+.oxi_add_gmap_location_info_body-style4 h1,
+.oxi_add_gmap_location_info_body-style4 h2,
+.oxi_add_gmap_location_info_body-style4 h3,
+.oxi_add_gmap_location_info_body-style4 h4,
+.oxi_add_gmap_location_info_body-style4 h5,
+.oxi_add_gmap_location_info_body-style4 h6{
+    text-align: center;
+    display: block;
+}

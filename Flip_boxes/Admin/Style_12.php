@@ -928,7 +928,7 @@ class Style_12 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-12  .oxi-addons-flip-box-back-headding-border' => 'width:{{SIZE}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-12  .oxi-addons-flip-box-back-headding-border' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -958,7 +958,7 @@ class Style_12 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-headding-border' => 'height:{{SIZE}}{{UNIT}}',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-12 .oxi-addons-flip-box-back-headding-border' => 'height:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
