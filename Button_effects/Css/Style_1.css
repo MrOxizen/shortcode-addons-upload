@@ -41,13 +41,8 @@ and open the template in the editor.
     -webkit-transition: all .35s ease-in-out;
     -moz-transition: all .35s ease-in-out;
     overflow: hidden;
-    border-radius: 0px 0px 0px 0px;
-    box-shadow:  0px 0px 3px 1px rgba(224, 224, 224, 0.74);
 }
-.oxi_addons_button_effect_style_1 .oxi-button-hover:hover{
-    box-shadow:  0px 0px 3px 1px rgba(238, 30, 245, 0.49);
-    border-radius: 0px 0px 0px 0px;
-}
+
 .oxi_addons_button_effect_style_1 .oxi-button-img,
 .oxi_addons_button_effect_style_1 .oxi-button-img img{
     position: absolute;
@@ -58,11 +53,10 @@ and open the template in the editor.
     right: 0;
     width: 100% !important;
     height: 100% !important;
-    border-radius: 0px 0px 0px 0px;
 }
 .oxi_addons_button_effect_style_1 .oxi-button-img:hover,
 .oxi_addons_button_effect_style_1 .oxi-button-img:hover img{
-    border-radius: 0px 0px 0px 0px;
+    
 }
 
 
@@ -79,7 +73,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 }
 .oxi_addons_button_effect_style_1 .top-middle {
@@ -90,7 +83,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 	justify-content: center;
 }
@@ -102,7 +94,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 	justify-content: end;
 }
@@ -115,7 +106,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 }
 .oxi_addons_button_effect_style_1 .middle-middle {
@@ -127,7 +117,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 	justify-content: center;
 }
@@ -140,7 +129,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 	justify-content: end;
 }
@@ -153,7 +141,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 }
 .oxi_addons_button_effect_style_1 .bottom-middle {
@@ -165,7 +152,6 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 	justify-content: center;
 }
@@ -178,30 +164,9 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(238, 30, 245, 0.49);
 	padding: 20px 20px 20px 20px;
 	justify-content: end;
 }
-
-
-
-
-
-
-
-/*.oxi_addons_button_effect_style_1 .oxi-button-info{
-    display:flex;
-    justify-content: center; 
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity:0;
-    background: rgba(238, 30, 245, 0.49);
-    padding: 20px 20px 20px 20px;
-}*/
 .oxi_addons_button_effect_style_1 .oxi-button-hover:hover .oxi-button-info{
     opacity:1;
 }
@@ -211,93 +176,15 @@ and open the template in the editor.
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
     text-align: center;
     text-decoration: none;
-    width: 40px;
-    height: 40px;
-    border-width: 0px 0px 0px 0px;
-    border-color:#ffffff;
-    border-style:solid;
-    border-radius: 50px 50px 50px 50px;
-    margin:3px 3px 3px 3px;
 }
 .oxi_addons_button_effect_style_1 .oxi-button-hover:hover a .oxi-icons:hover{
-    background: rgba(241, 30, 245, 1);
-    color: #ffffff;
-    border-color:#ffffff;
-    border-style:solid;
-    border-radius: 50px 50px 50px 50px;
+    
 }
 @media only screen and (min-width : 669px) and (max-width : 993px){
-    .oxi_addons_button_effect_style_1{
-        padding: 3px 3px 3px 3px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover:hover{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-img,
-    .oxi_addons_button_effect_style_1 .oxi-button-img img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-img:hover,
-    .oxi_addons_button_effect_style_1 .oxi-button-img:hover img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-info{
-        padding: 20px 20px 20px 20px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover:hover .oxi-button-info{
-        opacity:1;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover a .oxi-icons{
-        font-size: 18px;
-        width: 40px;
-        height: 40px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 50px 50px 50px 50px;
-        margin:3px 3px 3px 3px;
-    }
-    .oxi_addons_button_effect_style_1oxi_addons_button_effect_style_1 .oxi-button-hover:hover a .oxi-icons:hover{
-        border-radius: 50px 50px 50px 50px;
-    }
+    
 }
 @media only screen and (max-width : 668px){
-    .oxi_addons_button_effect_style_1{
-        padding: 3px 3px 3px 3px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover:hover{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-img,
-    .oxi_addons_button_effect_style_1 .oxi-button-img img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-img:hover,
-    .oxi_addons_button_effect_style_1 .oxi-button-img:hover img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-info{
-        padding: 20px 20px 20px 20px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover:hover .oxi-button-info{
-        opacity:1;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover a .oxi-icons{
-        font-size: 18px;
-        width: 40px;
-        height: 40px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 50px 50px 50px 50px;
-        margin:3px 3px 3px 3px;
-    }
-    .oxi_addons_button_effect_style_1 .oxi-button-hover:hover a .oxi-icons:hover{
-        border-radius: 50px 50px 50px 50px;
-    }
+    
 }
