@@ -502,7 +502,6 @@ class Style_8 extends AdminStyle {
                 'sa_el_ac_opening_icon_height_and_width', $this->style, [
             'label' => __('Icon Height & Width', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
-            'loader' => true,
             'default' => [
                 'unit' => 'px',
                 'size' => 30,

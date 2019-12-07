@@ -1,0 +1,33 @@
+
+
+
+
+.map-style3 {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+.map-position-style3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.gm-style .gm-style-iw-d {
+    box-sizing: border-box;
+    overflow: auto;
+    width: 250px;
+    font-size: 15px;
+    color: #5c5c5c;
+    font-family:"Voltaire"; font-weight:100; font-style:normal; line-height:1.3; text-align:center;
+}
+.gm-style .gm-style-iw-d h1,
+.gm-style .gm-style-iw-d h2,
+.gm-style .gm-style-iw-d h3,
+.gm-style .gm-style-iw-d h4,
+.gm-style .gm-style-iw-d h5,
+.gm-style .gm-style-iw-d h6{
+    text-align: center;
+    display: block;
+}

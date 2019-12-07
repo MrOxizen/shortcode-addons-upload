@@ -50,13 +50,6 @@ class Style_1 extends Templates
                    .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-post-style-1 .oxi-addons__main-img:hover .oxi-addons__overlay{
                        ' . $hoverData . '
                    }';
-
-        $poss = $style['sa_display_post_bullet_pos'];
-        $div_wid = $style['sa_display_post_divider_width_height'];
-        $arr_size = $style['sa_display_post_arrow_size'];
-        $br_clr = $style['sa_display_post_post_border-color'];
-        $bullet_wid = $style['sa_display_post_bullet_width_height'];
- 
         return $final;
     }
 
@@ -117,8 +110,7 @@ class Style_1 extends Templates
                             $ssstyle .= '
                                     background-position: center center;
                                     background-repeat: no-repeat;
-                                    background-size: cover;
-                                    padding-bottom:' . $style['sa_display_post_thumbnail_height'] . '%;';
+                                    background-size: cover; ';
                         }
                         $img = ' <a class="oxi-addons__post-link" href="' . get_permalink($query->post->ID) . '"  target="' . $style['sa_s_image_layout_linke_open'] . '">
                                 <div class="oxi-addons__main-img oxi-addons__main-img_' . $query->post->ID . '" style=" background-image: url(' . $image_url[0] . '); ' . $ssstyle . '">';
@@ -166,7 +158,7 @@ class Style_1 extends Templates
                 }
                 $avater = $meta = $align = $header_footer = $button = '';
                 $avater = get_avatar(get_the_author_meta('ID'));
-                if ($style['sa_display_post_button_show'] == 'show') {
+                if (array_key_exists('sa_display_post_button_show', $style) && $style['sa_display_post_button_show'] == 'yes') {
                     $button = '<div class="oxi-addons__button-main">
                                 <a href="' . get_permalink($query->post->ID) . '" class="oxi-addons__btn-link"  target="' . $style['sa_display_post_button_url'] . '">
                                     ' . $this->text_render($style['sa_display_post_button_text']) . '
@@ -215,8 +207,8 @@ class Style_1 extends Templates
 
                 echo '<div class="oxi-addons__main-wrapper-post-style-1">
                     <div class="oxi-addons__timeline-bullet"></div> 
-                      <div class="oxi-addons__post-body"  ' . $this->animation_render('sa_display_post_animation', $style) . '>
-                        <div class="oxi-addons__post-inner">  
+                      <div class="oxi-addons__post-body" >
+                        <div class="oxi-addons__post-inner"  ' . $this->animation_render('sa_display_post_animation', $style) . '>  
                            <div class="oxi-addons__post-main">
                                  ' . $img . '
                                 <div class="oxi-addons__article">
@@ -229,21 +221,8 @@ class Style_1 extends Templates
             }
             wp_reset_postdata();
         }
-
         echo '</div>';
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
