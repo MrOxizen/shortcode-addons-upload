@@ -74,6 +74,9 @@ and open the template in the editor.
     opacity:1;
     transform: translateY(0%) translateX(0%);
 }
+.oxi_addons_button_effect_style_11 .oxi-button-info{
+    transition: none;
+}
 .oxi_addons_button_effect_style_11 .oxi-button-hover a .oxi-icons{
     display: inline-flex;
     align-items: center;
@@ -85,6 +88,7 @@ and open the template in the editor.
     
 }
 .oxi_addons_button_effect_style_11 .overlayT{
+    background: rgba(153,3,222,0.49);
     position: absolute;
 }
 @media only screen and (min-width : 669px) and (max-width : 993px){

@@ -137,10 +137,10 @@ class Style_3 extends Templates {
         </script>';
 
         $key = '';
-        if ($this->text_render($style['sa_gm_api']) != 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo' && $this->text_render($style['sa_gm_api']) != '') {
+        if ($this->text_render($style['sa_gm_api']) != '') {
             $key = $this->text_render($style['sa_gm_api']);
         } else {
-            $key = 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo';
+            echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. ")</script>';
         }
 
         echo '
@@ -1265,10 +1265,10 @@ class Style_3 extends Templates {
 </script>';
 
         $key = '';
-        if (OxiAddonsTextConvert($styledata[3]) != 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo' && OxiAddonsTextConvert($styledata[3]) != '') {
+        if (OxiAddonsTextConvert($styledata[3]) != '') {
             $key = OxiAddonsTextConvert($styledata[3]);
         } else {
-            $key = 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo';
+            echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude.")</script>';
         }
 
         echo '

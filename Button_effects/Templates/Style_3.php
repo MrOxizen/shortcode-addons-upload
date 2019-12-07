@@ -21,12 +21,7 @@ class Style_3 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-//        $class = '';
-//        if ($style['sa-max-w-condition'] == 'dynamic') {
-//            $class = 'sa-max-w-dynamic';
-//        } elseif ($style['sa-max-w-condition'] == 'default') {
-//            $class = '';
-//        }
+
 
         if ($admin == 'admin') {
             $admin_class = 'oxi-addons-admin-edit-list';
@@ -35,14 +30,10 @@ class Style_3 extends Templates {
         }
 
 
-        $target_blank = '';
-        if ($style['sa-be-link-opening'] == 'yes') {
-            $target_blank = 'target="_blank"';
-        }
+    
 
 
-
-//        $alignments = '';
+        $alignments = '';
         if ($style['sa_alignments_select'] == 'tl') {
             $alignments = 'top-left';
         } elseif ($style['sa_alignments_select'] == 'tm') {
@@ -69,10 +60,6 @@ class Style_3 extends Templates {
 
 
 
-//            echo '<pre>';
-//            print_r($style);
-//            echo '</pre>';
-
 
 
 
@@ -82,10 +69,6 @@ class Style_3 extends Templates {
         foreach ($all_data as $key => $data) {
 
 
-
-//            echo '<pre>';
-//            print_r($data);
-//            echo '</pre>';
 
 
 
@@ -97,15 +80,12 @@ class Style_3 extends Templates {
                             background-size: cover;">
                           </div>';
             if (array_key_exists('sa_el_be_first_icon', $data) && $data['sa_el_be_first_icon'] != '') {
-                $first_icon .= '<a ' . $target_blank . ' ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
+                $first_icon .= '<a  ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
             }
             if (array_key_exists('sa_el_be_second_icon', $data) && $data['sa_el_be_second_icon'] != '') {
-                $second_icon .= '<a ' . $target_blank . ' ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
+                $second_icon .= '<a  ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
             }
             
-
-
-
 
 
             echo '<div class="' . $this->column_render('sa-ac-column', $style) . ' ' . $admin_class . '">';

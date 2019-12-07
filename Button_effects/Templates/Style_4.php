@@ -21,12 +21,7 @@ class Style_4 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-//        $class = '';
-//        if ($style['sa-max-w-condition'] == 'dynamic') {
-//            $class = 'sa-max-w-dynamic';
-//        } elseif ($style['sa-max-w-condition'] == 'default') {
-//            $class = '';
-//        }
+
 
         if ($admin == 'admin') {
             $admin_class = 'oxi-addons-admin-edit-list';
@@ -35,10 +30,7 @@ class Style_4 extends Templates {
         }
 
 
-        $target_blank = '';
-        if ($style['sa-be-link-opening'] == 'yes') {
-            $target_blank = 'target="_blank"';
-        }
+     
 
 
 
@@ -63,33 +55,11 @@ class Style_4 extends Templates {
             $alignments = 'bottom-right';
         }
         
-        
-//        echo $alignments;
-
-
-
-
-
-
-
-//            echo '<pre>';
-//            print_r($style);
-//            echo '</pre>';
-
-
-
-
+      
 
         $all_data = (array_key_exists('sa_icon_effects_data', $style) && is_array($style['sa_icon_effects_data'])) ? $style['sa_icon_effects_data'] : [];
 
         foreach ($all_data as $key => $data) {
-
-
-
-//            echo '<pre>';
-//            print_r($data);
-//            echo '</pre>';
-
 
 
             $first_icon = $second_icon = $img = '';
@@ -100,10 +70,10 @@ class Style_4 extends Templates {
                             background-size: cover;">
                           </div>';
             if (array_key_exists('sa_el_be_first_icon', $data) && $data['sa_el_be_first_icon'] != '') {
-                $first_icon .= '<a ' . $target_blank . ' ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
+                $first_icon .= '<a  ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
             }
             if (array_key_exists('sa_el_be_second_icon', $data) && $data['sa_el_be_second_icon'] != '') {
-                $second_icon .= '<a ' . $target_blank . ' ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
+                $second_icon .= '<a  ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
             }
 
 
