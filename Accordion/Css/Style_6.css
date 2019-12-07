@@ -1,11 +1,10 @@
-
-
-.sa_whole_div_ac_style_6{
+.sa_whole_div_ac_style_6 {
     width: 100%;
     height: auto;
     float: left;
     transition: none;
 }
+
 .sa_element_ac_style_6 {
     width: 100%;
     float: left;
@@ -13,6 +12,7 @@
     padding: 10px 10px 10px 10px;
     transition: none;
 }
+
 .sa_element_ac_style_6 .oxi-addonsAC-SX-H {
     width: 100%;
     float: left;
@@ -25,6 +25,7 @@
     box-shadow: 0px 0px 0px 0px rgba(209, 209, 209, 1);
     transition: none;
 }
+
 .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading {
     width: calc(100% - 40px);
     float: left;
@@ -39,10 +40,12 @@
     padding: 10px 10px 10px 10px;
     transition: none;
 }
-.sa_element_ac_style_6 .oxi-addonsAC-SX-deactive .arrow_order{
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-deactive .arrow_order {
     order: 2;
 }
-.sa_element_ac_style_6 .oxi-addonsAC-SX-active .arrow_order{
+
+.sa_element_ac_style_6 .oxi-addonsAC-SX-active .arrow_order {
     order: 2;
 }
 
@@ -82,16 +85,19 @@
     transition: none;
 }
 
-.sa_element_ac_style_6 .oxi-addonsAC-SX-H:hover .oxi-addonsAC-SX-deactive {  
+.sa_element_ac_style_6 .oxi-addonsAC-SX-H:hover .oxi-addonsAC-SX-deactive {
     border-color: #e8d8d8;
     transition: none;
 }
+
 .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-active {
     display: none;
 }
+
 .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-deactive {
     display: none;
 }
+
 .sa_element_ac_style_6 .oxi-addonsAC-SX-H .icon_setting {
     text-align: center;
     align-items: center;
@@ -99,6 +105,7 @@
     float: left;
     display: flex;
 }
+
 .sa_element_ac_style_6 .oxi-addonsAC-SX-C {
     display: none;
     width: 100%;
@@ -133,14 +140,17 @@
     .sa_element_ac_style_6 {
         padding: 8px 8px 8px 8px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H {
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading {
         font-size: 18px;
         padding: 10px 10px 10px 10px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active {
         font-size: 13px;
         width: 100%;
@@ -149,6 +159,7 @@
         border-radius: 0px 0px 0px 0px;
         margin: 10px 10px 10px 10px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive {
         font-size: 13px;
         width: 100%;
@@ -157,13 +168,16 @@
         border-radius: 0px 0px 0px 0px;
         margin: 10px 10px 10px 10px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-C {
         padding: 0px 0px 0px 0px
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b {
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 60px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b,
     .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b p {
         font-size: 13px;
@@ -174,14 +188,17 @@
     .sa_element_ac_style_6 {
         padding: 10px 10px 10px 10px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H {
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-heading {
         font-size: 16px;
         padding: 5px 5px 5px 5px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H.active .oxi-addonsAC-SX-active {
         font-size: 12px;
         width: 100%;
@@ -190,6 +207,7 @@
         border-radius: 0px 0px 0px 0px;
         margin: 5px 5px 5px 5px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-H .oxi-addonsAC-SX-deactive {
         font-size: 12px;
         width: 100%;
@@ -198,13 +216,13 @@
         border-radius: 0px 0px 0px 0px;
         margin: 5px 5px 5px 5px;
     }
-    .sa_element_ac_style_6 .oxi-addonsAC-SX-C {
-        padding: 30px #d5de24px #f0960epx 0px;
-    }
+ 
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b {
         border-radius: 0px 0px 0px 0px;
         padding: 0px 0px 0px 60px;
     }
+
     .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b,
     .sa_element_ac_style_6 .oxi-addonsAC-SX-C-b p {
         font-size: 15px;
