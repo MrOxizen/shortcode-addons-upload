@@ -52,7 +52,7 @@ class Style_8 extends AdminStyle {
                 'sa_el_be_first_icon' => [
                     'label' => esc_html__('First Icon Class', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'fab fa-facebook',
+                    'default' => 'fab fa-youtube',
                     'selector' => [
                         '{{WRAPPER}} .oxi_addons_button_effect_style_8_{{KEY}} .oxi-button-info' => '',
                     ],
@@ -134,17 +134,7 @@ class Style_8 extends AdminStyle {
                 ]
         );
 
-         $this->add_control(
-                'sa-be-link-opening', $this->style, [
-            'label' => __('Link Opening', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
+     
 
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [

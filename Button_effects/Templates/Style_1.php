@@ -36,11 +36,7 @@ class Style_1 extends Templates {
         }
         
         
-            $target_blank = '';
-        if($style['sa-be-link-opening'] == 'yes'){
-            $target_blank = 'target="_blank"';
-        }
-        
+       
         
         
         
@@ -96,10 +92,10 @@ class Style_1 extends Templates {
                           </div>';
                 
             if (array_key_exists('sa_el_be_first_icon', $data) && $data['sa_el_be_first_icon'] != '') {
-                $first_icon .= '<a '.$target_blank.' ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
+                $first_icon .= '<a  ' . $this->url_render('sa_el_be_first_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_first_icon']) . '</a>';
             }
             if (array_key_exists('sa_el_be_second_icon', $data) && $data['sa_el_be_second_icon'] != '') {
-                $second_icon .= '<a '.$target_blank.' ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
+                $second_icon .= '<a  ' . $this->url_render('sa_el_be_second_url', $data) . '>' . $this->font_awesome_render($data['sa_el_be_second_icon']) . '</a>';
             }
 
 

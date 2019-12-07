@@ -64,6 +64,9 @@ and open the template in the editor.
 .oxi_addons_button_effect_style_8 .oxi-button-hover:hover .oxi-button-info{
     opacity:1;
 }
+.oxi_addons_button_effect_style_8 .oxi-button-info{
+    transition: none;
+}
 
 .oxi_addons_button_effect_style_8 .oxi-button-hover a .oxi-icons{
     display: inline-flex;
