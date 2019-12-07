@@ -14,69 +14,72 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_4 extends Templates {
 
     public function default_render($style, $child, $admin) {
-
-        echo '<div class="map-position-style1 map-position-' . $this->oxiid . '" ' . $this->animation_render('sa_gm_animation', $style) . '>
-                  <div  class="map-style1" id="map' . $this->oxiid . '"></div>
+        $oxiid = $this->oxiid;
+        echo '<div class="map-position-style4 map-position-' . $oxiid . '" ' . $this->animation_render('sa_gm_animation', $style) . '>
+                  <div class ="map-style4"   id="map-' . $oxiid . '"></div>
+                  <div class ="pan-style4"   id="pan-' . $oxiid . '"></div>
               </div>
          ';
-
         $key = $title = $lat = $lng = "";
         if ($style['sa_gm_api'] != "" && $style['sa_gm_Longitude'] != "" && $style['sa_gm_latitude'] != "") {
             $key = $style['sa_gm_api'];
             $lat = $style['sa_gm_latitude'];
             $lng = $style['sa_gm_Longitude'];
         } else {
-            echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude.")</script>';
+            echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. ")</script>';
         }
         $title = $this->text_render($style['sa_gm_place_title']);
 
-        $oxiid = $this->oxiid;
-        $jquery = '';
-        $jquery .= ' <script>
-                  function initMap() {
+        echo '   
+       
+        <script>
+          function initMap() {
 
-                    var loglat = { lat: parseFloat(' . $lat . ') , lng:  parseFloat(' . $lng . ') };
-                    var map = new google.maps.Map(
-                      document.getElementById("map' . $oxiid . '"), { zoom: ' . $style['sa_gm_place_zoom'] . ', center: loglat }
-                    );
-                    marker = new google.maps.Marker({
-                      map: map,
-                      position: loglat,
-                      title: "' . $title . '",
-                      animation: google.maps.Animation.DROP
-                    });
+            var uluru = { lat: parseFloat(' . $lat . ') , lng:  parseFloat(' . $lng . ') };
+            var map = new google.maps.Map(
+              document.getElementById("map-' . $oxiid . '"), { zoom: ' . $style['sa_gm_place_zoom'] . ', center: uluru }
+            );
+            marker = new google.maps.Marker({
+              map: map,
+              position: uluru,
+              title: "' . $title . '",
+              animation: google.maps.Animation.DROP
+            });
+              var panorama = new google.maps.StreetViewPanorama(
+                  document.getElementById("pan-' . $oxiid . '"), {
+                    position: uluru,
+                    pov: {
+                      heading: 34,
+                      pitch: 10
+                    }
+                  });
+              map.setStreetView(panorama);
 
 
-                    var contentString =`<div class="oxi_add_gmap_location_info-style1 oxi_add_gmap_location_info-' . $oxiid . '">
-                                          <div class="oxi_add_gmap_location_info_body-style1 oxi_add_gmap_location_info_body-' . $oxiid . '">' . $this->text_render($style['sa_gm_place_location_info']) . '</div>
-                                       </div>
-                                          `;
-
-
-
-                    var infoWindow = new google.maps.InfoWindow({
-                      content: contentString
-                    })
-                    marker.addListener("click", function () {
-                      infoWindow.open(map, marker);
-                    });
-
-                    
-
-                  }
-                  
-                  
-
-                </script>';
-
-        $jquery .= '<script src="https://maps.googleapis.com/maps/api/js?key=' . $key . '&callback=initMap"  async defer></script>';
+            var contentString =`<div class="oxi_add_gmap_location_info-style4 oxi_add_gmap_location_info-' . $oxiid . '">
+                                  <div class="oxi_add_gmap_location_info_body-style4 oxi_add_gmap_location_info_body-' . $oxiid . '">' . $this->text_render($style['sa_gm_place_location_info']) . '</div>
+                               </div>
+                                  `;
 
 
 
-        echo $jquery;
+            var infoWindow = new google.maps.InfoWindow({
+              content: contentString
+            })
+            marker.addListener("click", function () {
+              infoWindow.open(map, marker);
+            });
+
+            
+
+          }
+
+        </script>';
+
+        echo '<script src="https://maps.googleapis.com/maps/api/js?key=' . $key . '&callback=initMap"  async defer></script>';
     }
 
     public function old_render() {
@@ -90,12 +93,11 @@ class Style_1 extends Templates {
             <div class="oxi-addons-row">
                 <div class="map-position-' . $oxiid . '" ' . OxiAddonsAnimation($styledata, 53) . '>
                   <div   id="map' . $oxiid . '"></div>
+                  <div   id="pan' . $oxiid . '"></div>
                 </div>
             </div>
          </div>
         ';
-
-
         $key = $title = $lat = $lng = "";
         if ($styledata[63] != "" && $styledata[59] != "" && $styledata[61] != "") {
             $key = $styledata[63];
@@ -112,16 +114,25 @@ class Style_1 extends Templates {
   <script>
     function initMap() {
       
-      var loglat = { lat: ' . $lat . ', lng: ' . $lng . ' };
+      var uluru = { lat: ' . $lat . ', lng: ' . $lng . ' };
       var map = new google.maps.Map(
-        document.getElementById("map' . $oxiid . '"), { zoom: ' . $styledata[57] . ', center: loglat }
+        document.getElementById("map' . $oxiid . '"), { zoom: ' . $styledata[57] . ', center: uluru }
       );
       marker = new google.maps.Marker({
         map: map,
-        position: loglat,
+        position: uluru,
         title: "' . OxiAddonsTextConvert($stylefiles[5]) . '",
         animation: google.maps.Animation.DROP
       });
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById("pan' . $oxiid . '"), {
+              position: uluru,
+              pov: {
+                heading: 34,
+                pitch: 10
+              }
+            });
+        map.setStreetView(panorama);
 
 
       var contentString =`<div class="oxi_add_gmap_location_info-' . $oxiid . '">
@@ -160,17 +171,23 @@ class Style_1 extends Templates {
 
         $css .= '       
             #map' . $oxiid . ' {
-                height: ' . $styledata[7] . 'px;  /* The height is 400 pixels */
-                width: ' . $styledata[3] . '%;  /* The width is the width of the web page */
+                width: 50%;
+                float: left;
+                height: ' . $styledata[7] . 'px;`
                }
+            #pan' . $oxiid . '{
+                height: ' . $styledata[7] . 'px;
+                width: 50%;
+                float: left;
+            }
             .map-position-' . $oxiid . '{
 
-                 display: flex;
-                 justify-content: center;
-                 flex-direction: column;
-                 align-items: center;
-                 padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 11) . ';
-                 margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 27) . ';
+                float: left;
+                height: ' . $styledata[7] . 'px;  /* The height is 400 pixels */
+                width: ' . $styledata[3] . '%;  /* The width is the width of the web page */
+                display: block;
+                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 11) . ';
+                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 27) . ';
             }
             .oxi_add_gmap_location_info-' . $oxiid . '{
                 

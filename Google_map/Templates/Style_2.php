@@ -25,21 +25,11 @@ class Style_2 extends Templates {
 
         $key = $title = $lat = $lng = "";
         if ($style['sa_gm_api'] != "" && $style['sa_gm_Longitude'] != "" && $style['sa_gm_latitude'] != "") {
-            if ($style['sa_gm_api'] !== 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo') {
-                $key = $style['sa_gm_api'];
-                $lat = $style['sa_gm_latitude'];
-                $lng = $style['sa_gm_Longitude'];
-            } else {
-                $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-                $lat = 1.361827;
-                $lng = 103.853342;
-                echo '<script type="text/javascript">alert("Please give your  correct APi key.")</script>';
-            }
+            $key = $style['sa_gm_api'];
+            $lat = $style['sa_gm_latitude'];
+            $lng = $style['sa_gm_Longitude'];
         } else {
-            $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-            $lat = 1.361827;
-            $lng = 103.853342;
-            echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. Otherwise always show your default data.")</script>';
+            echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude.")</script>';
         }
         $title = $this->text_render($style['sa_gm_place_title']);
 
@@ -78,7 +68,7 @@ class Style_2 extends Templates {
                       infoWindow.open(map, marker);
                     });
 
-                    marker.addListener("click", toggleBounce);
+                  
 
                   }
                   
@@ -110,21 +100,12 @@ class Style_2 extends Templates {
         ';
         $key = $title = $lat = $lng = "";
         if ($styledata[63] != "" && $styledata[59] != "" && $styledata[61] != "") {
-            if ($styledata[63] !== 'AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo') {
                 $key = $styledata[63];
                 $lat = $styledata[59];
                 $lng = $styledata[61];
-            } else {
-                $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-                $lat = 1.361827;
-                $lng = 103.853342;
-                //echo '<script type="text/javascript">alert("Please give your  correct APi key.")</script>';
-            }
+           
         } else {
-            $key = "AIzaSyDd40qP9Qll71WJ0IBZtUrtAs--klcYLNo";
-            $lat = 1.361827;
-            $lng = 103.853342;
-            //echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. Otherwise always show your default data.")</script>';
+           echo '<script type="text/javascript">alert("Please give your correct APi key, latitude and longitude. Otherwise always show your default data.")</script>';
         }
         $title = OxiAddonsTextConvert($stylefiles[5]);
 
