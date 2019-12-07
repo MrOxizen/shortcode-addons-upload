@@ -34,32 +34,8 @@ class Style_3 extends AdminStyle {
                 'sa_gm_repeater', $this->style, [
             'label' => __('Edit or Delete your Maps information', SHORTCODE_ADDOONS),
             'type' => Controls::REPEATER,
+            'button' => 'Add Location',
             'fields' => [
-                 'sa_gm_name' => [
-                    'type' => Controls::TEXT,
-                    'label' => __('Name', SHORTCODE_ADDOONS),
-                    'placeholder' => __('Enter A name', SHORTCODE_ADDOONS),
-                    'default' => 'Location 01',
-                
-                ],
-                 'sa_gm_locatio_title' => [
-                    'type' => Controls::TEXT,
-                    'label' => __('Location Title', SHORTCODE_ADDOONS),
-                    'placeholder' => __('Location Title', SHORTCODE_ADDOONS),
-                    'default' => 'Title 01',
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-styl1.oxi-hover-effects-styl1-{{KEY}} .oxi-hover-info .oxi-button-heading' => ''
-                    ],
-                ],
-                 'sa_gm_locatio_info' => [
-                    'type' => Controls::TEXTAREA,
-                    'label' => __('Location Information', SHORTCODE_ADDOONS),
-                    'placeholder' => __('Location Information', SHORTCODE_ADDOONS),
-                    'default' => '<h4>Google Map</h4> <hr> A very powerful Google Map implementation for Elementor with 8+ Map Types including Basic with Marker, Multiple Markers, Static, Polylines, Polygons, Overlay.',
-                    'selector' => [
-                        '{{WRAPPER}} .oxi-hover-effects-styl1.oxi-hover-effects-styl1-{{KEY}} .oxi-hover-info .oxi-button-heading' => ''
-                    ],
-                ],
                 'sa_gm_latitude' => [
                     'type' => Controls::NUMBER,
                     'label' => __('Latitude', SHORTCODE_ADDOONS),
@@ -72,8 +48,50 @@ class Style_3 extends AdminStyle {
                     'default' => '103.853342',
                     'step' => 0.1111
                 ],
+                'sa_gm_name' => [
+                    'type' => Controls::TEXT,
+                    'label' => __('Name', SHORTCODE_ADDOONS),
+                    'placeholder' => __('Enter A name', SHORTCODE_ADDOONS),
+                    'default' => 'Location 01',
+                ],
+                'sa_gm_locatio_title' => [
+                    'type' => Controls::TEXT,
+                    'label' => __('Location Title', SHORTCODE_ADDOONS),
+                    'placeholder' => __('Location Title', SHORTCODE_ADDOONS),
+                    'default' => 'Title 01',
+                ],
+                'sa_gm_locatio_info' => [
+                    'type' => Controls::TEXTAREA,
+                    'label' => __('Location Information', SHORTCODE_ADDOONS),
+                    'placeholder' => __('Location Information', SHORTCODE_ADDOONS),
+                    'default' => '<h4>Google Map</h4> <hr> A very powerful Google Map implementation for Elementor with 8+ Map Types including Basic with Marker, Multiple Markers, Static, Polylines, Polygons, Overlay.',
+                ],
+                'sa_oh_start_tabs' => [
+                    'controller' => 'start_controls_tabs',
+                    'options' => [
+                        'title' => esc_html__('Icon Image', SHORTCODE_ADDOONS),
+                    ]
+                ],
+                'sa_oh_start_tab_1' => [
+                    'controller' => 'start_controls_tab',
+                ],
+                'sa_gm_icon_media' => [
+                    'label' => __('Icon Image', SHORTCODE_ADDOONS),
+                    'type' => Controls::MEDIA,
+                    'controller' => 'add_group_control',
+                    'default' => [
+                        'type' => 'media-library',
+                        'link' => 'https://www.oxilab.org/wp-content/uploads/2019/06/pointer-cross-christian-sign-map-place-church-512-e1561014250852.png',
+                    ],
+                ],
+                'sa_oh_end_tab_3' => [
+                    'controller' => 'end_controls_tab',
+                ],
+                'sa_oh_end_tabs' => [
+                    'controller' => 'end_controls_tabs',
+                ],
             ],
-            'title_field' => 'sa_he_title_text',
+            'title_field' => 'sa_gm_name',
                 ]
         );
         $this->end_controls_section();
@@ -88,7 +106,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .oxi_add_gmap_location_info_body-style2' => ''
+                '{{WRAPPER}} .gm-style .gm-style-iw-d' => ''
             ],
                 ]
         );
@@ -98,7 +116,7 @@ class Style_3 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#dddddd',
             'selector' => [
-                '{{WRAPPER}} .oxi_add_gmap_location_info_body-style2' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .gm-style .gm-style-iw-d' => 'color:{{VALUE}};'
             ],
                 ]
         );
@@ -128,42 +146,13 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_add_gmap_location_info-style2' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .gm-style .gm-style-iw-d' => 'width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
-        $this->add_responsive_control(
-                'sa_gm_location_height', $this->style, [
-            'label' => __('Info Window Height', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 1500,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 100,
-                    'step' => .1,
-                ],
-                '%' => [
-                    'min' => 0,
-                    'max' => 500,
-                    'step' => 1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_add_gmap_location_info-style2' => 'height:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
+
         $this->end_controls_section();
-         $this->end_section_devider();
+        $this->end_section_devider();
 
         $this->start_section_devider();
         $this->start_controls_section(
@@ -172,7 +161,7 @@ class Style_3 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        
+
         $this->add_control(
                 'sa_gm_api', $this->style, [
             'type' => Controls::TEXT,
@@ -206,7 +195,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .map-style2' => 'max-width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .map-style3' => 'max-width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -236,11 +225,11 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .map-style2' => 'height:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .map-style3' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
-         $this->add_control(
+        $this->add_control(
                 'sa_gm_place_zoom', $this->style, [
             'type' => Controls::NUMBER,
             'label' => __('Zoom Level', SHORTCODE_ADDOONS),
@@ -249,18 +238,30 @@ class Style_3 extends AdminStyle {
                 ]
         );
         $this->add_control(
+                'sa_gm_map_ui', $this->style, [
+            'label' => __('Default Map UI', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => 'yes',
+            'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+
+        $this->add_control(
                 'sa_gm_color_theme', $this->style, [
             'label' => __('Color Themes', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'default' => 'sa_gm_theme_color_silver',
+            'default' => '3',
             'loader' => TRUE,
             'options' => [
-                'sa_gm_theme_color_standard' => __('Standard', SHORTCODE_ADDOONS),
-                'sa_gm_theme_color_silver' => __('Silver', SHORTCODE_ADDOONS),
-                'sa_gm_theme_color_retro' => __('Retro', SHORTCODE_ADDOONS),
-                'sa_gm_theme_color_dark' => __('Dark', SHORTCODE_ADDOONS),
-                'sa_gm_theme_color_night' => __('Night', SHORTCODE_ADDOONS),
-                'sa_gm_theme_color_aubergine' => __('Aubergine', SHORTCODE_ADDOONS),
+                '1' => __('Standard', SHORTCODE_ADDOONS),
+                '2' => __('Silver', SHORTCODE_ADDOONS),
+                '3' => __('Retro', SHORTCODE_ADDOONS),
+                '4' => __('Dark', SHORTCODE_ADDOONS),
+                '5' => __('Night', SHORTCODE_ADDOONS),
+                '6' => __('Aubergine', SHORTCODE_ADDOONS),
             ],
                 ]
         );
@@ -290,7 +291,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .map-position-style2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .map-position-style3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -320,7 +321,7 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .map-position-style2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .map-position-style3' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -331,10 +332,10 @@ class Style_3 extends AdminStyle {
         );
 
         $this->end_controls_section();
-       
-       
 
-        
+
+
+
         $this->end_section_devider();
 
         $this->end_section_tabs();
