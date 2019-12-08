@@ -101,9 +101,7 @@
     color: #607d8b
 }
 
-.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a:hover,
-.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a:active,
-.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a:focus {
+.oxi-testimonials-therteen-padding .oxi-testimonials-style-therteen-working a:hover{
     color: #80b5d1;
     text-decoration: none
 }
