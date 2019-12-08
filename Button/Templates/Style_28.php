@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_28 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        $text = $this->text_render($style['sa_btn_text']);
+        $text = '<span class="sa-text">' . $this->text_render($style['sa_btn_text']) . '</span>';
         $icon = (array_key_exists('sa_btn_icon', $style) && $style['sa_btn_icon'] != '0' ? $this->font_awesome_render($style['sa_btn_icon_class']) : '');
 
         if (array_key_exists('sa_btn_icon_position', $style) && $style['sa_btn_icon_position'] != '0'):

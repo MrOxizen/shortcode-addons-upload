@@ -30,7 +30,9 @@ class Style_10 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn10 .oxi-button-btn10 .sa-button-text1' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -50,7 +52,9 @@ class Style_10 extends AdminStyle {
             'label' => __('Button Second Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'SecondText',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn10 .oxi-button-btn10 .sa-button-text2' => ''
+            ],
             'condition' => [
                 'sa_btn_second_text_condition' => 'yes',
             ],
@@ -74,7 +78,9 @@ class Style_10 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-unlock-alt',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn10 .oxi-button-btn10 .oxi-icons' => ''
+            ],
             'condition' => [
                 'sa_btn_icon' => 'yes',
             ],
@@ -112,7 +118,6 @@ class Style_10 extends AdminStyle {
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
                 ]
         );
 
@@ -308,7 +313,8 @@ class Style_10 extends AdminStyle {
             'type' => Controls::BACKGROUND,
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn10 .oxi-button-btn10' => ''
-            ],]
+            ],
+                ]
         );
 
         $this->add_group_control(
@@ -504,7 +510,7 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-         $this->start_controls_tabs(
+        $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
                 'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
@@ -523,8 +529,8 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-         $this->end_controls_tab();
-         $this->start_controls_tab();
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_control(
                 'sa_btn_icon_hover_color', $this->style, [
             'label' => __('Hover Color', SHORTCODE_ADDOONS),
@@ -535,7 +541,7 @@ class Style_10 extends AdminStyle {
             ],
                 ]
         );
-         $this->end_controls_tab();
+        $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_responsive_control(
                 'sa_btn_second_text_padding', $this->style, [

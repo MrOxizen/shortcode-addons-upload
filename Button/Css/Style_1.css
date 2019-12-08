@@ -50,11 +50,11 @@ and open the template in the editor.
     border-color: #ff0000;
     border-radius: 50px
 }
-.oxi-addons-align-btn27 .oxi-button-btn27 .sa-button-text{
+.oxi-addons-align-btn1 .oxi-button-btn1 .sa-button-text{
     color: #ffffff;
    transition: .3s;
 }
-.oxi-addons-align-btn27 .oxi-button-btn27:hover .sa-button-text{
+.oxi-addons-align-btn1 .oxi-button-btn1:hover .sa-button-text{
     color: #000000;
    transition: .3s;
 }

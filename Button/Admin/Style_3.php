@@ -31,7 +31,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3 .sa-button-text' => ''
+            ],
                 ]
         );
 
@@ -53,7 +55,9 @@ class Style_3 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-angle-double-right',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3 .oxi-icons' => ''
+            ],
             'condition' => [
                 'sa_btn_icon' => 'yes',
             ],
@@ -63,8 +67,7 @@ class Style_3 extends AdminStyle {
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
-                ]
+                 ]
         );
 
 
@@ -222,7 +225,8 @@ class Style_3 extends AdminStyle {
              'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3:hover' => 'color:{{VALUE}} !important;'
             ],
                 ]
         );
@@ -300,7 +304,8 @@ class Style_3 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ffffff',
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3 .oxi-text2' => 'color:{{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3 .oxi-text2' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-align-btn3 .oxi-button-btn3:hover .oxi-text2' => 'color:{{VALUE}} !important;'
             ],
                 ]
         );
