@@ -11,16 +11,10 @@ and open the template in the editor.
 
 .oxi-addons-box-temp-10 {
     max-width: auto;
-    height: 400px;
-    padding: 0px 10px 40px 10px;
     margin: 0 auto;
 }
 
 .oxi-addons-box-temp-10 .oxi-addons-box-outer {
-    border-radius: 0px 0px 0px 0px;
-    border-width: 0px 0px 0px 0px;
-    border-color: transparent;
-    border-style: dotted;
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -40,10 +34,6 @@ and open the template in the editor.
 
 .oxi-addons-box-temp-10 .oxi-addons-box-inner {
     background: rgba(158, 158, 158, 0.39);
-    border-radius: 2px 2px 2px 2px;
-    border-width: 0px;
-    border-color: #ffffff;
-    border-style: solid;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -68,35 +58,20 @@ and open the template in the editor.
 
 .oxi-addons-box-temp-10 .oxi-addons-grid-item {
     width: 100%;
-    font-size: 28px;
-    color: #ffffff;
-    font-family: "Open Sans";
-    font-weight: 700;
     font-style: normal;
     line-height: 1.3;
-    text-align: left;
 }
 
 .oxi-addons-box-temp-10 .oxi-addons-food-name {
     width: 100%;
-    font-size: 18px;
-    color: #ffffff;
-    font-family: "Open Sans";
-    font-weight: 200;
     font-style: normal;
     line-height: 1.3;
-    text-align: left;
 }
 
 .oxi-addons-box-temp-10 .oxi-addons-price {
     width: 100%;
-    font-size: 38px;
-    color: #ffffff;
-    font-family: "Fugaz One";
-    font-weight: 600;
     font-style: normal;
     line-height: 1.3;
-    text-align: left;
 }
 
 .oxi-addons-box-temp-10 .oxi-addons-button {
@@ -108,78 +83,14 @@ and open the template in the editor.
 }
 
 .oxi-addons-box-temp-10 .oxi-addons-button-anchor {
-    font-size: 17px;
-    color: #ffffff;
     background: rgba(0, 0, 0, 1);
-    font-family: "Open Sans";
-    font-weight: 200;
-    font-style: normal;
-    line-height: 1.3;
     text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    border-width: 0px;
-    border-color: #738a00;
-    border-style: solid; 
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-box-temp-10 .oxi-addons-box {
-        max-width: 300px;
-        height: 400px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-box-outer {
-        border-width: 60px 0px 0px 0px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-box-inner {
-        border-width: 1px 1px 1px 1px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-grid-item {
-        font-size: 20px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-food-name {
-        font-size: 15px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-price {
-        font-size: 20px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-button-anchor {
-        font-size: 17px;
-    }
+    
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-box-temp-10 .oxi-addons-box {
-        max-width: 300px;
-        height: 400px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-box-outer {
-        border-width: 0px 0px 0px 0px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-box-inner {
-        border-width: 1px 1px 1px 1px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-grid-item {
-        font-size: 20px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-food-name {
-        font-size: 15px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-price {
-        font-size: 20px;
-    }
-
-    .oxi-addons-box-temp-10 .oxi-addons-button-anchor {
-        font-size: 17px;
-    }
+    
 }
