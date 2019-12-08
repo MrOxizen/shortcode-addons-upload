@@ -361,7 +361,7 @@ class Style_22 extends AdminStyle {
                 'sa-flip-boxes-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-front-section-box' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-22 .oxi-addons-flip-box-front-section-box' => '',
                
             ]
                 ]
@@ -758,7 +758,7 @@ class Style_22 extends AdminStyle {
                 'sa-flip-boxes-hover-boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-flip-box-back-section-box' => '',
+                '{{WRAPPER}} .oxi-addons-flip-box-style-22 .oxi-addons-flip-box-back-section-box' => '',
             ]
                 ]
         );
