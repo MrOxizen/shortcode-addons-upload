@@ -31,7 +31,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-              'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn5 .oxi-button-btn5 .sa-button-text' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -63,7 +65,9 @@ class Style_5 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-angle-double-right',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn5 .oxi-button-btn5 .oxi-icons' => ''
+            ],
             'condition' => [
                 'sa_btn_icon' => 'yes',
             ],
@@ -72,11 +76,9 @@ class Style_5 extends AdminStyle {
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
-            
                 ]
         );
-       
+
 
         $this->end_controls_section();
 
@@ -87,13 +89,13 @@ class Style_5 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-        
+
         $this->add_control(
                 'sa_btn_width_choose', $this->style, [
             'label' => __('Button Width', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'default' => 'sa-width-dymanic',
-                    'loader' => TRUE,
+            'loader' => TRUE,
             'label_on' => __('Dynamic', SHORTCODE_ADDOONS),
             'label_off' => __('Auto', SHORTCODE_ADDOONS),
             'return_value' => 'sa-width-dymanic',
@@ -155,14 +157,14 @@ class Style_5 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_group_control(
                 'sa_btn_animation', $this->style, [
             'type' => Controls::ANIMATION,
                 ]
         );
-        
-        
+
+
 
         $this->add_responsive_control(
                 'sa_btn_margin', $this->style, [
@@ -209,7 +211,7 @@ class Style_5 extends AdminStyle {
         );
 
 
-        
+
         $this->add_group_control(
                 'sa_btn_text_typho', $this->style, [
             'type' => Controls::TYPOGRAPHY,
@@ -310,7 +312,7 @@ class Style_5 extends AdminStyle {
                 'sa-btn-text-h-color', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-           'default' => '#ffffff',
+            'default' => '#ffffff',
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-align-btn5 .oxi-button-btn5:hover' => 'color:{{VALUE}};'
             ],
@@ -383,11 +385,11 @@ class Style_5 extends AdminStyle {
         $this->end_controls_tab();
 
         $this->end_controls_tabs();
-$this->add_responsive_control(
+        $this->add_responsive_control(
                 'sa_btn_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
-                    'separator' => TRUE,
+            'separator' => TRUE,
             'default' => [
                 'unit' => 'px',
                 'size' => '',

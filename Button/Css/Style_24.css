@@ -81,6 +81,9 @@ and open the template in the editor.
 
 
 
+.oxi-addons-align-btn24 .sa-button-text{
+        z-index: 999;
+}
 .oxi-addons-align-btn24 .sa-left-to-right .sa-button-text{
     position: absolute;
     transform: translateX(25%);

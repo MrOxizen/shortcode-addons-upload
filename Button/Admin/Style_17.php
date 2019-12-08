@@ -30,7 +30,9 @@ class Style_17 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn17 .oxi-button-btn17 .sa-text' => ''
+            ],
                 ]
         );
 
@@ -65,7 +67,9 @@ class Style_17 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-arrow-alt-circle-right',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn17 .sa-button-icon1' => ''
+            ],
             'condition' => [
                 'sa_btn_icon' => 'yes',
             ],
@@ -88,7 +92,9 @@ class Style_17 extends AdminStyle {
             'label' => __('Second Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-angle-double-right',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn17 .sa-button-icon2' => ''
+            ],
             'condition' => [
                 'sa_btn_icon2' => 'yes',
             ],
@@ -97,7 +103,6 @@ class Style_17 extends AdminStyle {
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
                 ]
         );
 
