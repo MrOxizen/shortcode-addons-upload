@@ -38,7 +38,7 @@ class Style_2 extends Templates
             foreach ($style['sa_datatable_column_repeater'] as $key => $value) {
                 $repeater[$key] = $key;
                 $icon = $text = '';
-                if ($value['sa_datatable_head_true'] === 'yes') {
+                if (isset($value['sa_datatable_head_true']) && $value['sa_datatable_head_true'] === 'yes') {
                     if ($value['sa_datatable_head_icon']) {
                         $icon =  $this->font_awesome_render($value['sa_datatable_head_icon']);
                     }

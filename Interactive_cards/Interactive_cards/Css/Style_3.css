@@ -1,0 +1,270 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplop
+*/
+.oxi-addons-Interactive-card-style-3 .oxi-addons-fancy-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-fancy-spinner div {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-fancy-spinner div.oxi-addons-ring {
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-animation: 2s oxi_fancy infinite alternate;
+    animation: 2s oxi_fancy infinite alternate
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(1) {
+    border-left-color: #1aa3e9;
+    border-right-color: #1aa3e9
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(2) {
+    border-top-color: #1aa3e9;
+    border-bottom-color: #1aa3e9;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-fancy-spinner div.oxi-addons-dot {
+    width: 1rem;
+    height: 1rem;
+    background: #1aa3e9
+}
+
+@-webkit-keyframes oxi_fancy {
+    to {
+        -webkit-transform: rotate(360deg) scale(0.5);
+        transform: rotate(360deg) scale(0.5)
+    }
+}
+
+@keyframes oxi_fancy {
+    to {
+        -webkit-transform: rotate(360deg) scale(0.5);
+        transform: rotate(360deg) scale(0.5)
+    }
+}
+
+.oxi-addons-Interactive-card-style-3 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-IC {
+    width: 100%;
+    float: left;
+    box-shadow: px px px px rgba(255, 255, 255, 0);
+
+    position: relative
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-IC .oxi-addons-ICfull-content-s3 {
+    width: 100%;
+    float: left;
+    padding: 180px 0px 180px 0px;
+    background: rgba(15, 15, 15, 1);
+    position: relative;
+    cursor: pointer
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-opacity-0 {
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+    position: absolute
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-IC .oxi-addons-IC-box {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-IC .oxi-addons-IC-box .oxi-addons-IC-body {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-IC .oxi-addons-image {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-IC .oxi-addons-image .oxi-addons-img {
+    width: 471px;
+    height: 250px
+}
+
+.oxi-addons-Interactive-card-style-3 .oxi-addons-load-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(15, 15, 15, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0
+}
+
+.oxi-addons-back-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: auto
+}
+
+.oxi-addons-back-content-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.oxi-addons-back-content-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.oxi-addons-back-image {
+    width: 100%;
+    float: left;
+    background: url(https://www.oxilab.org/wp-content/uploads/2019/04/beautiful-beauty-blue-414612.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.oxi-addons-back-image:after {
+    content: "";
+    display: inline-block;
+    padding-bottom: 60%
+}
+
+.oxi-addons-back-text {
+    width: 100%;
+    float: left;
+    padding: 20px 20px 20px 20px;
+    background: #ffffff
+}
+
+.oxi-addons-back-text-inner {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-back-heading {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-back-text-inner .oxi-addons-back-title {
+    width: 100%;
+    float: left;
+    line-height: 1;
+    font-size: 28px;
+    color: #292929;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-back-paragraph-section {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-back-text-inner .oxi-addons-back-paragraph {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #4d4d4d;
+    font-family: "Lato";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    ;
+    padding: 10px 10px 10px 10px
+}
+
+.oxi-addons-button {
+    width: 100%;
+    float: left;
+    text-align: left
+}
+
+.oxi-addons-back-text-inner a.oxi-addons-back-link {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+
+    padding: 12px 20px 12px 20px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 0px 0px 0px 0px;
+    display: inline-block;
+    background: rgba(22, 172, 227, 1);
+    border-width: 0px 0px 0px 0px;
+    border-style: dotted;
+    border-color: #225500
+}
+
+.oxi-addons-back-text-inner a.oxi-addons-back-link:hover {
+    color: #ffffff;
+    background: rgba(194, 21, 217, 1);
+    border-style: dotted;
+    border-color: #00eaff;
+    border-radius: 0px 0px 0px 0px;
+    text-decoration: none
+}
+
+span.oxi-close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    font-size: 14px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.44);
+    width: 25px;
+    height: 25px;
+    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 6px 0px 0px
+}
+
+.oxi-close-icon:hover {
+    cursor: pointer
+}

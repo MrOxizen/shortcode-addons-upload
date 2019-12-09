@@ -1,0 +1,154 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplop
+*/
+.oxi-addons-Interactive-card-style-2  .oxi-addons-fancy-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem
+}
+
+.oxi-addons-Interactive-card-style-2  .oxi-addons-fancy-spinner div {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-ring {
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-animation: 2s oxi_fancy infinite alternate;
+    animation: 2s oxi_fancy infinite alternate
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(1) {
+    border-left-color: #780000;
+    border-right-color: #780000
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-ring:nth-child(2) {
+    border-top-color: #780000;
+    border-bottom-color: #780000;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-fancy-spinner div.oxi-addons-dot {
+    width: 1rem;
+    height: 1rem;
+    background: #780000
+}
+
+@-webkit-keyframes oxi_fancy {
+    to {
+        -webkit-transform: rotate(360deg) scale(0.5);
+        transform: rotate(360deg) scale(0.5)
+    }
+}
+
+@keyframes oxi_fancy {
+    to {
+        -webkit-transform: rotate(360deg) scale(0.5);
+        transform: rotate(360deg) scale(0.5)
+    }
+}
+
+.oxi-addons-Interactive-card-style-2 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC {
+    width: 100%;
+    float: left;
+    box-shadow: px px px px rgba(255, 255, 255, 0);
+    ;
+    position: relative
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC .oxi-addons-ICfull-content-s2 {
+    width: 100%;
+    float: left;
+    padding: px px px px;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-opacity-0 {
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+    position: absolute
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC .oxi-addons-IC-box {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-IC .oxi-addons-IC-box .oxi-addons-IC-body {
+    width: 100%;
+    float: left
+}
+
+.oxi-addons-load-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-back-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-addons-back-content-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    font-size: 15px;
+    color: #ffffff;
+    background: rgba(26, 26, 26, 1.00);
+    width: 25px;
+    height: 25px;
+    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 17px 17px 0px 0px
+}
+
+.oxi-addons-Interactive-card-style-2 .oxi-close-icon:hover {
+    cursor: pointer
+}
