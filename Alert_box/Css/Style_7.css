@@ -21,7 +21,6 @@ and open the template in the editor.
     border-radius: 5px 5px 5px 5px;
     background: linear-gradient(0deg, rgba(145, 189, 0, 1) 0%, rgba(190, 219, 109, 1.00) 100%);
     box-shadow: 1px 1px 15px 2px rgba(204, 198, 198, 1);
-    ;
     padding: 20px 20px 20px 20px
 }
 
@@ -29,7 +28,6 @@ and open the template in the editor.
     justify-content: center;
     display: flex;
     align-items: center;
-    flex-grow: 1;
     background: rgba(46, 175, 184, 0.00);
     border-right: 2px solid #8aa72b
 }
