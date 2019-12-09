@@ -88,7 +88,6 @@ class Style_4 extends AdminStyle {
                     'max' => 2000,
                     'step' => 1,
                 ],
-                
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-2 .oxi-addons-main' => 'width:{{SIZE}}{{UNIT}};',
@@ -110,7 +109,6 @@ class Style_4 extends AdminStyle {
                     'max' => 20,
                     'step' => 0.5,
                 ],
-                
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_image_style_4_box .oxi_addons_font_view_img' => 'transition:all {{SIZE}}s ease-in-out;',
@@ -151,8 +149,8 @@ class Style_4 extends AdminStyle {
 
 
         $this->end_controls_section();
-        
-        
+
+
         $this->end_section_devider();
         $this->start_section_devider();
         $this->start_controls_section(
@@ -161,7 +159,15 @@ class Style_4 extends AdminStyle {
             'showing' => TRUE,
                 ]
         );
-
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'before' => esc_html__('Before Image', SHORTCODE_ADDOONS),
+                'after' => esc_html__('After Image', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
         $this->add_group_control(
                 'sa-image-comparison-image-one', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
@@ -170,11 +176,12 @@ class Style_4 extends AdminStyle {
                 'type' => 'media-library',
                 'link' => '#asdas',
             ],
-           
                 ]
         );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_group_control(
-            'sa-image-comparison-image-two', $this->style, [
+                'sa-image-comparison-image-two', $this->style, [
             'label' => __('URL', SHORTCODE_ADDOONS),
             'type' => Controls::MEDIA,
             'default' => [
@@ -184,9 +191,10 @@ class Style_4 extends AdminStyle {
                 ]
         );
 
-
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
         $this->end_controls_section();
-        
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }

@@ -197,6 +197,59 @@ class Style_1 extends AdminStyle
         );
 
         $this->end_controls_section();
+        
+
+       
+        $this->end_section_devider();
+        $this->start_section_devider();
+        
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Upload Image', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'before' => esc_html__('Before Image', SHORTCODE_ADDOONS),
+                'after' => esc_html__('After Image', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+        $this->add_group_control(
+            'sa-image-comparison-image-one',
+            $this->style,
+            [
+                'label' => __('URL', SHORTCODE_ADDOONS),
+                'type' => Controls::MEDIA,
+                'default' => [
+                    'type' => 'media-library',
+                    'link' => '#asdas',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_group_control(
+            'sa-image-comparison-image-two',
+            $this->style,
+            [
+                'label' => __('URL', SHORTCODE_ADDOONS),
+                'type' => Controls::MEDIA,
+                'default' => [
+                    'type' => 'media-library',
+                    'link' => '#asdas',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
+        $this->end_controls_section();
+        
         $this->start_controls_section(
             'shortcode-addons',
             [
@@ -221,45 +274,7 @@ class Style_1 extends AdminStyle
                 ]
             ]
         );
-
-        $this->end_controls_section();
-        $this->end_section_devider();
-        $this->start_section_devider();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Upload Image', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
-            ]
-        );
-
-        $this->add_group_control(
-            'sa-image-comparison-image-one',
-            $this->style,
-            [
-                'label' => __('URL', SHORTCODE_ADDOONS),
-                'type' => Controls::MEDIA,
-                'default' => [
-                    'type' => 'media-library',
-                    'link' => '#asdas',
-                ]
-            ]
-        );
-        $this->add_group_control(
-            'sa-image-comparison-image-two',
-            $this->style,
-            [
-                'label' => __('URL', SHORTCODE_ADDOONS),
-                'type' => Controls::MEDIA,
-                'default' => [
-                    'type' => 'media-library',
-                    'link' => '#asdas',
-                ]
-            ]
-        );
-
-
-        $this->end_controls_section();
+         $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [

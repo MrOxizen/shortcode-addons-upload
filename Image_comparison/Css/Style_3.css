@@ -23,20 +23,4 @@
  }
 
  
- @media only screen and (min-width:669px) and (max-width:993px) {
-     .oxi-addons-main-wrapper-image-comparison-style-3 {
-         padding: 0px 0px 0px 0px
-     }
-     .oxi-addons-main-wrapper-image-comparison-style-3 .oxi-addons-main {
-         width: 600px
-     }
- }
- 
- @media only screen and (max-width:668px) {
-     .oxi-addons-main-wrapper-image-comparison-style-3 {
-         padding: 0px 0px 0px 0px
-     }
-     .oxi-addons-main-wrapper-image-comparison-style-3 .oxi-addons-main {
-         width: 600px
-     }
- }
+    

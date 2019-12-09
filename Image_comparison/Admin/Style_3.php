@@ -70,6 +70,8 @@ class Style_3 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-3 .oxi-addons-main' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-3 .mbac .mbac-slide > img' => 'width:{{SIZE}}{{UNIT}} !important;',
+                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-3 .mbac-wrap' => 'width:{{SIZE}}{{UNIT}} !important;',
             ],
                 ]
         );
