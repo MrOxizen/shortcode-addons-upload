@@ -30,7 +30,9 @@ class Style_9 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn9 .oxi-button-btn9 .sa-button-text1' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -50,7 +52,9 @@ class Style_9 extends AdminStyle {
             'label' => __('Button Second Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'SecondText',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn9 .oxi-button-btn9 .sa-button-text2' => ''
+            ],
             'condition' => [
                 'sa_btn_second_text_condition' => 'yes',
             ],
@@ -87,7 +91,9 @@ class Style_9 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-arrow-alt-circle-down',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn9 .oxi-button-btn9 .oxi-icons' => ''
+            ],
             'condition' => [
                 'sa_btn_icon' => 'yes',
             ],
@@ -98,7 +104,6 @@ class Style_9 extends AdminStyle {
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
                 ]
         );
 

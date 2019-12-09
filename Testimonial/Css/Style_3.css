@@ -135,9 +135,7 @@
      color: #cc1abd
  }
  
- .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:hover,
- .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:active,
- .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:focus {
+ .oxi-testimonials-testmonialnew-padding .oxi-testimonials-style-testmonialnew-working a:hover{
      color: #0e8f62;
      text-decoration: none
  }

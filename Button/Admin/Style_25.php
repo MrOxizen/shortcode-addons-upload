@@ -31,7 +31,9 @@ class Style_25 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn25 .oxi-button-btn25 .sa-button-text' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -51,7 +53,9 @@ class Style_25 extends AdminStyle {
             'label' => __('Button Hover Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Hover Text',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn25 .oxi-button-btn25 .sa-hover-text-text' => ''
+            ],
             'condition' => [
                 'sa_btn_hover_text_condition' => 'yes',
             ],
@@ -61,7 +65,6 @@ class Style_25 extends AdminStyle {
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
                 ]
         );
 

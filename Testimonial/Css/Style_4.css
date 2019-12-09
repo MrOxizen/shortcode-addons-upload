@@ -101,9 +101,7 @@
     color: #607d8b
 }
 
-.oxi-testimonials-testifournew-padding .oxi-testimonials-style-testifournew-working a:hover,
-.oxi-testimonials-testifournew-padding .oxi-testimonials-style-testifournew-working a:active,
-.oxi-testimonials-testifournew-padding .oxi-testimonials-style-testifournew-working a:focus {
+.oxi-testimonials-testifournew-padding .oxi-testimonials-style-testifournew-working a:hover{
     color: #80b5d1;
     text-decoration: none
 }

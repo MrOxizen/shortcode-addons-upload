@@ -94,9 +94,7 @@
      padding: 0px 10px 0px 10px
  }
  
-.oxi-testimonials-six-padding .oxi-testimonials-style-six-working a:hover,
-.oxi-testimonials-six-padding .oxi-testimonials-style-six-working a:active,
-.oxi-testimonials-six-padding .oxi-testimonials-style-six-working a:focus {
+.oxi-testimonials-six-padding .oxi-testimonials-style-six-working a:hover {
      color: #006064;
      text-decoration: none
  }

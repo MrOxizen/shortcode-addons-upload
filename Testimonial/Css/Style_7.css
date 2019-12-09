@@ -180,9 +180,7 @@
     color: #d81b60
 }
 
-.oxi-testimonials-seven-padding  .oxi-testimonials-style-seven-working a:hover,
-.oxi-testimonials-seven-padding  .oxi-testimonials-style-seven-working a:active,
-.oxi-testimonials-seven-padding  .oxi-testimonials-style-seven-working a:focus {
+.oxi-testimonials-seven-padding  .oxi-testimonials-style-seven-working a:hover {
     color: #405e18;
     text-decoration: none
 }

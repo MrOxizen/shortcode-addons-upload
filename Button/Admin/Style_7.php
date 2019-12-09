@@ -31,7 +31,9 @@ class Style_7 extends AdminStyle {
             'label' => __('Button Text', SHORTCODE_ADDOONS),
             'placeholder' => __('Button Text', SHORTCODE_ADDOONS),
             'default' => 'Button Text',
-            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn7 .oxi-button-btn7 .sa-button-text' => ''
+            ],
                 ]
         );
         $this->add_control(
@@ -63,7 +65,9 @@ class Style_7 extends AdminStyle {
             'label' => __('Icon Class', SHORTCODE_ADDOONS),
             'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
             'default' => 'fas fa-angle-double-right',
-            'loader' => TRUE,
+             'selector' => [
+                '{{WRAPPER}} .oxi-addons-align-btn7 .oxi-button-btn7 .oxi-icons' => ''
+            ],
             'condition' => [
                 'sa_btn_icon' => 'yes',
             ],
@@ -72,7 +76,6 @@ class Style_7 extends AdminStyle {
         $this->add_group_control(
                 'sa_btn_link', $this->style, [
             'type' => Controls::URL,
-            'loader' => TRUE,
                 ]
         );
 

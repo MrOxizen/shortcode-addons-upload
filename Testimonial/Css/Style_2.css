@@ -126,9 +126,7 @@
      text-decoration: none
  }
  
- .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:hover,
- .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:focus,
- .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:active {
+ .oxi-testimonials-testinew-padding .oxi-testimonials-style-testinew-working a:hover {
      color: #78c7ff;
      text-decoration: none
  }

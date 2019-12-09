@@ -556,7 +556,7 @@ class Style_4 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi-testimonials-testifournew-padding .oxi-testimonials-style-testifournew-working a:hover' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi-testimonials-testifournew-padding .oxi-testimonials-style-testifournew-working a:hover' => 'color: {{VALUE}};'
             ]
                 ]
         );

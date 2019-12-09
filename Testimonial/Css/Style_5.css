@@ -61,9 +61,7 @@
     padding: 5px 0px 5px 0px
 }
 
-.oxi-testimonials-five-padding .oxi-testimonials-style-five-name:hover,
-.oxi-testimonials-five-padding .oxi-testimonials-style-five-name:active,
-.oxi-testimonials-five-padding .oxi-testimonials-style-five-name:focus {
+.oxi-testimonials-five-padding .oxi-testimonials-style-five-name:hover{
     color: #429624
 }
 
