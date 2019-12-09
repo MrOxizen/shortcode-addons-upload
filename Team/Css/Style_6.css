@@ -209,11 +209,7 @@
         padding-top: 10px
     }
 
-    .oxi-addons-parent-wrapper-style-6 .member-icon {
-        line-height: 0px;
-        border: 0px solid;
-        height: 0px;
-        width: 0px;
+    .oxi-addons-parent-wrapper-style-6 .member-icon { 
         margin-top: 3px;
         Border-radius: 0px 0px 0px 0px;
         transform: translateX(15px)
@@ -257,12 +253,7 @@
         padding-top: 10px
     }
 
-    .oxi-addons-parent-wrapper-style-6 .member-icon {
-        line-height: 0px;
-        border: 0px solid;
-        height: 0px;
-        width: 0px;
-        margin-top: 0px;
+    .oxi-addons-parent-wrapper-style-6 .member-icon {  
         Border-radius: 0px 0px 0px 0px;
         transform: translateX(15px)
     }
