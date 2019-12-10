@@ -91,59 +91,9 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-panel {
-        border-radius: 0px 5px 5px 0px;
-        padding: 8px 8px 8px 8px;
-    }
-
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
-        left: -40px;
-        font-size: 14px;
-    }
-
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
-        font-size: 18px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-details {
-        font-size: 12px;
-        padding: 8px 8px 8px 8px;
-    }
-
-    .sa_element_ac_style_7 .oxi-active .oxi-addons-AC-SV-details {
-        font-size: 12px;
-        padding: 8px 8px 8px 8px;
-    }
+    
 }
 
 @media only screen and (max-width:668px) {
-    .sa_element_ac_style_7 {
-        padding: 5px 5px 5px 52px;
-    }
-
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-panel {
-        border-radius: 0px 5px 5px 0px;
-        padding: 5px 5px 5px 5px;
-    }
-
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-icon {
-        left: -40px;
-        font-size: 13px;
-    }
-
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-header {
-        font-size: 15px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_element_ac_style_7 .oxi-addons-AC-SV-details {
-        font-size: 12px;
-        padding: 5px 5px 5px 5px;
-    }
-
-    .sa_element_ac_style_7 .oxi-active .oxi-addons-AC-SV-details {
-        font-size: 12px;
-        padding: 5px 5px 5px 5px;
-    }
+    
 }

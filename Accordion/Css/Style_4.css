@@ -135,67 +135,9 @@ df*/
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_el_ac_style_4 {
-        padding: 5px 5px 5px 5px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-heading-icon {
-        width: 100%;
-        max-width: 60px;
-        height: 60px;
-        font-size: 18px;
-        padding: px px px px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-heading {
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-title {
-        font-size: 18px;
-        padding: 5px 0px 5px 42px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details {
-        border-radius: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details,
-    .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details p {
-        font-size: 15px;
-    }
+    
 }
 
 @media only screen and (max-width:668px) {
-    .sa_el_ac_style_4 .oxi-addonsAC-F-heading-icon {
-        width: 100%;
-        max-width: 60px;
-        height: 60px;
-        font-size: 16px;
-        padding: px px px px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-heading {
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-title {
-        font-size: 16px;
-        padding: 5px 0px 5px 42px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-content {
-        padding: 5px 0px 5px 0px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details {
-        border-radius: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details,
-    .sa_el_ac_style_4 .oxi-addonsAC-F-Content-details p {
-        font-size: 15px;
-    }
+    
 }

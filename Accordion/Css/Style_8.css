@@ -143,85 +143,9 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H {
-        border-radius: 0px 0px 0px 0px;
-        padding: 5px 5px 3px 5px
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-heading {
-        font-size: 17px;
-        padding: 8px 8px 8px 8px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-active {
-        font-size: 16px;
-        width: 100%;
-        height: 30px;
-        border-radius: 4px 4px 4px 4px;
-        margin: 8px 8px 8px 15px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-deactive {
-        font-size: 16px;
-        width: 100%;
-        height: 30px;
-        border-radius: 4px 4px 4px 4px;
-        margin: 8px 8px 8px 15px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-C {
-        padding: 0px 0px 0px 0px
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b {
-        border-radius: 0px 0px 0px 0px;
-        padding: 12px 12px 12px 12px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b,
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b p {
-        font-size: 12px;
-    }
+    
 }
 
 @media only screen and (max-width:668px) {
-    .sa_element_ac_style_8 {
-        padding: 0px 0px 0px 50px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H {
-        border-radius: 0px 0px 0px 0px;
-        padding: 5px 5px 3px 5px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-heading {
-        font-size: 16px;
-        padding: 5px 5px 5px 5px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H.active .oxi-addons-AC-EG-active {
-        font-size: 14px;
-        width: 100%;
-        height: 25px;
-        border-radius: 3px 3px 3px 3px;
-        margin: 5px 5px 5px 15px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-deactive {
-        font-size: 14px;
-        width: 100%;
-        height: 25px;
-        border-radius: 3px 3px 3px 3px;
-        margin: 5px 5px 5px 15px;
-    } 
     
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b {
-        border-radius: 0px 0px 0px 0px;
-        padding: 10px 10px 10px 10px;
-    }
-
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b,
-    .sa_element_ac_style_8 .oxi-addons-AC-EG-C-b p {
-        font-size: 11px;
-    }
 }
