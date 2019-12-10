@@ -87,8 +87,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_main' => 'max-width: {{SIZE}}{{UNIT}};'
-                ],
+                    '{{WRAPPER}} .sa_addons_ap_container_style_1 .sa_addons_ap_main' => 'max-width: {{SIZE}}{{UNIT}};',
+                   ],
             ]
         );
         $this->add_group_control(

@@ -86,7 +86,8 @@ class Style_3 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .sa_addons_ap_main' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .sa_addons_ap_main' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_ap_container_style_3 .sa_addons_ap_container_main' => 'max-width: {{SIZE}}{{UNIT}}; width: 100%',
                 ],
             ]
         );
@@ -688,7 +689,7 @@ class Style_3 extends AdminStyle
                 ],
             ]
         );
-        
+
         $this->add_control(
             'sa_ap_audio_pro_tooltip_color',
             $this->style,
@@ -714,7 +715,7 @@ class Style_3 extends AdminStyle
                 ],
             ]
         );
-        
+
 
         $this->add_responsive_control(
             'sa_ap_audio_pro_tooltip_b_r',
@@ -1157,7 +1158,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE ,
+                Controls::SEPARATOR => TRUE,
                 'condition' => [
                     'sa_ap_audio_prog_time_han' => 'yes'
                 ],
@@ -1309,7 +1310,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE ,
+                Controls::SEPARATOR => TRUE,
                 'condition' => [
                     'sa_ap_audio_prog_volu_han' => 'yes'
                 ],
@@ -1558,14 +1559,14 @@ class Style_3 extends AdminStyle
             ]
         );
         $this->start_controls_tab();
-        
+
         $this->add_control(
             'sa_ap_audio_pau_icon',
             $this->style,
             [
                 'label' => __('Pause Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f28b',
             ]
         );
@@ -1596,12 +1597,12 @@ class Style_3 extends AdminStyle
                         'step' => .1,
                     ],
                 ],
-                'selector' => [ 
+                'selector' => [
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-play button::after' => 'font-size: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-pause button::after' => 'font-size: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-replay button::after' => 'font-size: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .sa_addons_ap_container_style_3 .mejs-playpause-button>button' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
-                 ], 
+                ],
             ]
         );
         $this->add_responsive_control(
@@ -1696,18 +1697,18 @@ class Style_3 extends AdminStyle
         $this->end_controls_tab();
 
         $this->start_controls_tab();
-        
+
         $this->add_control(
             'sa_ap_audio_ply_icon',
             $this->style,
             [
                 'label' => __('Play Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f144',
             ]
         );
-        
+
         $this->add_control(
             'sa_ap_audio_ply_icon_c',
             $this->style,
@@ -1729,7 +1730,7 @@ class Style_3 extends AdminStyle
             [
                 'label' => __('Volume Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f6a9',
             ]
         );
@@ -1876,14 +1877,14 @@ class Style_3 extends AdminStyle
         $this->end_controls_tab();
 
         $this->start_controls_tab();
-        
+
         $this->add_control(
             'sa_ap_audio_s_v_icon',
             $this->style,
             [
                 'label' => __('Mute Icon', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'loader' => TRUE, 
+                'loader' => TRUE,
                 'default' => 'f028',
             ]
         );
