@@ -32,7 +32,7 @@ class Style_4 extends AdminStyle {
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Add New Content', SHORTCODE_ADDOONS),
-            'showing' => false,
+            'showing' => TRUE,
                 ]
         );
         $this->add_repeater_control(
