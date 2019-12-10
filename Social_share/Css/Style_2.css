@@ -16,6 +16,8 @@
 .oxi-addons-wrapper-ss2 .oxi-addons-main-social { 
     display: flex;   
     flex-wrap: wrap;   
+       justify-content:center;
+    align-items: center;
 } 
 .oxi-addons-wrapper-ss2 .oxi-addons-social {
     display: flex;
