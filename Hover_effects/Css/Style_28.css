@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : biplo
 */
 .oxi-hover-effects-style28{
-    padding: 3px 3px 3px 3px;
+    padding: 10px;
 }
 .oxi-hover-effects-style28 .oxi-hover-effects-map-style28{
     max-width: 300px;
@@ -144,115 +144,9 @@ and open the template in the editor.
     border-style:solid;
     border-radius: 50px 50px 50px 50px;
 }
-@media only screen and (min-width : 669px) and (max-width : 993px){
-    .oxi-hover-effects-style28{
-        padding: 3px 3px 3px 3px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects:hover{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-img,
-    .oxi-hover-effects-style28 .oxi-hover-img img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-img:hover,
-    .oxi-hover-effects-style28 .oxi-hover-img:hover img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info{
-        padding: 20px 20px 20px 20px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info h3.oxi-button-heading{
-        font-size: 22px;
-        padding: 2px 2px 7px 2px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info .headingunderline-body{
-        padding: 0px 0px 3px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info .headingunderline{
-        width: 120px;
-        border-bottom: 0px solid #e300a3;
 
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info .oxi-button-content{
-        font-size: 16px;
-        padding: 3px 3px 10px 3px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects a{
-        font-size: 14px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 50px 50px 50px 50px;
-        margin:3px 3px 3px 3px;
-        padding:8px 15px 8px 15px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects a:hover{
-        border-radius: 50px 50px 50px 50px;
-    }.oxi-hover-effects-style28 .oxi-hover-img:before{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28:hover .oxi-hover-img:before{
-        border-radius: 0px 0px 0px 0px;
-    }
-}
-@media only screen and (max-width : 668px){
-    .oxi-hover-effects-style28 .oxi-hover-img:before{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28:hover .oxi-hover-img:before{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28{
-        padding: 3px 3px 3px 3px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects:hover{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-img,
-    .oxi-hover-effects-style28 .oxi-hover-img img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-img:hover,
-    .oxi-hover-effects-style28 .oxi-hover-img:hover img{
-        border-radius: 0px 0px 0px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info{
-        padding: 20px 20px 20px 20px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info h3.oxi-button-heading{
-        font-size: 22px;
-        padding: 2px 2px 7px 2px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info .headingunderline-body{
-        padding: 0px 0px 3px 0px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info  .headingunderline{
-        width: 120px;
-        border-bottom: 0px solid #e300a3;
 
-    }
-    .oxi-hover-effects-style28 .oxi-hover-info .oxi-button-content{
-        font-size: 16px;
-        padding: 3px 3px 10px 3px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects a{
-        font-size: 14px;
-        width: px;
-        height: px;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 50px 50px 50px 50px;
-        margin:3px 3px 3px 3px;
-        padding:8px 15px 8px 15px;
-    }
-    .oxi-hover-effects-style28 .oxi-hover-effects a:hover{
-        border-radius: 50px 50px 50px 50px;
-    }
-}
+
 .oxi-hover-effects-style28 .oxi-hover-effects .oxi-hover-img {
     width: 100%;
     float: left;

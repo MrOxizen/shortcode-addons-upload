@@ -21,7 +21,6 @@ and open the template in the editor.
     border-radius: 5px 5px 5px 5px;
     background: linear-gradient(0deg, rgba(145, 189, 0, 1) 0%, rgba(190, 219, 109, 1.00) 100%);
     box-shadow: 1px 1px 15px 2px rgba(204, 198, 198, 1);
-    ;
     padding: 20px 20px 20px 20px
 }
 
@@ -29,7 +28,6 @@ and open the template in the editor.
     justify-content: center;
     display: flex;
     align-items: center;
-    flex-grow: 1;
     background: rgba(46, 175, 184, 0.00);
     border-right: 2px solid #8aa72b
 }
@@ -96,64 +94,3 @@ and open the template in the editor.
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
 }
 
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-AL-SE-7 {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-row {
-        border-radius: 5px 5px 5px 5px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon {
-        font-size: 25px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-col-two {
-        padding: 20px 20px 20px 20px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-H {
-        font-size: 18px;
-        padding: 4px 4px 4px 20px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-DC {
-        font-size: 15px;
-        padding: 4px 4px 4px 20px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons {
-        font-size: 18px;
-        width: 33px;
-        height: 33px;
-        border-radius: 50px 50px 50px 50px;
-        padding: 0px 0px 0px 0px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-addons-AL-SE-7 {
-        padding: 5px 5px 5px 5px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-row {
-        border-radius: 5px 5px 5px 5px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon {
-        font-size: 18px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-col-two {
-        padding: 20px 20px 20px 20px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-H {
-        font-size: 16px;
-        padding: 2px 2px 2px 15px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-DC {
-        font-size: 13px;
-        padding: 2px 2px 2px 15px
-    }
-    .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-L-icon .oxi-icons {
-        font-size: 16px;
-        width: 33px;
-        height: 33px;
-        border-radius: 50px 50px 50px 50px;
-        padding: 0px 0px 0px 0px
-    }
-}

@@ -66,38 +66,3 @@ and open the template in the editor.
     padding: 15px 0px 0px 0px
 }
 
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addonsOH-wrapper-1 {
-        padding: 5px 10px 5px 10px
-    }
-    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-row {
-        border-radius: 0px 0px 0px 0px;
-        padding: 50px 15px 50px 15px
-    }
-    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-heading {
-        font-size: 35px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-date {
-        font-size: 20px;
-        margin: 15px 0px 0px 0px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-addonsOH-wrapper-1 {
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-row {
-        border-radius: 0px 0px 0px 0px;
-        padding: 50px 15px 50px 15px
-    }
-    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-heading {
-        font-size: 35px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addonsOH-wrapper-1 .oxi-addonsOH-date {
-        font-size: px;
-        margin: 15px 0px 0px 0px
-    }
-}

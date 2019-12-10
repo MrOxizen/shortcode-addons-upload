@@ -492,8 +492,8 @@ class Style_10 extends AdminStyle {
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'normal' => esc_html__('Time', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Address', SHORTCODE_ADDOONS),
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
             ]
                 ]
         );

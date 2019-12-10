@@ -83,38 +83,3 @@ and open the template in the editor.
     transform: scale(1.5)
 }
 
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addonsOH-FI-wrapper-5 {
-        padding: 5px 10px 5px 10px
-    }
-    .oxi-addonsOH-FI-wrapper-5 .oxi-addonsOH-FI-row {
-        border-radius: 0px 0px 0px 0px;
-        padding: 30px 5px 30px 5px
-    }
-    .oxi-addonsOH-FI-wrapper-5 .oxi-addonsOH-FI-heading {
-        font-size: 21px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addonsOH-FI-wrapper-5 .oxi-addonsOH-FI-date {
-        font-size: 12px;
-        margin: 15px 0px 0px 0px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-addonsOH-FI-wrapper-5 {
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addonsOH-FI-wrapper-5 .oxi-addonsOH-FI-row {
-        border-radius: 0px 0px 0px 0px;
-        padding: 30px 5px 30px 5px
-    }
-    .oxi-addonsOH-FI-wrapper-5 .oxi-addonsOH-FI-heading {
-        font-size: 21px;
-        padding: 0px 0px 0px 0px
-    }
-    .oxi-addonsOH-FI-wrapper-5 .oxi-addonsOH-FI-date {
-        font-size: 12px;
-        margin: 15px 0px 0px 0px
-    }
-}
