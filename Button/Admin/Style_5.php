@@ -377,7 +377,8 @@ class Style_5 extends AdminStyle {
                 'sa_btn_h_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-align-btn5 .oxi-button-btn5:hover' => ''
+                '{{WRAPPER}} .oxi-addons-align-btn5 .oxi-button-btn5:hover' => '',
+                   
             ],
                 ]
         );
