@@ -103,61 +103,9 @@ df*/
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_el_ac_style_5 {
-        padding: 7px 7px 7px 7px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details {
-        border-radius: 0px 0px 0px 0px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-title {
-        font-size: 18px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-Fi-content {
-        padding: 23px 0px 8px 0px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details {
-        border-radius: 0px 0px 0px 0px;
-        padding: 10px 10px 10px 10px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details,
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details p {
-        font-size: 14px;
-    }
+    
 }
 
 @media only screen and (max-width:668px) {
-    .sa_el_ac_style_5 {
-        padding: 7px 7px 7px 7px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details {
-        border-radius: 0px 0px 0px 0px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-title {
-        font-size: 16px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-Fi-content {
-        padding: 23px 0px 8px 0px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details {
-        border-radius: 0px 0px 0px 0px;
-        padding: 10px 10px 10px 10px;
-    }
-
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details,
-    .sa_el_ac_style_5 .oxi-addonsAC-FI-Content-details p {
-        font-size: 14px;
-    }
+    
 }

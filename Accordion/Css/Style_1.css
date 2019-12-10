@@ -144,84 +144,9 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oa_ac_style_1 {
-        padding: 10px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H {
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H .heading-data {
-        font-size: 20px;
-        padding: 10px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H.active .span-active {
-        font-size: 13px;
-        width: 30px;
-        height: 30px;
-        border-radius: 5px 5px 5px 5px;
-        margin: 10px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H .span-deactive {
-        font-size: 13px;
-        width: 100%;
-        max-width: 30px;
-        height: 30px;
-        border-radius: 5px 5px 5px 5px;
-        margin: 10px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-C {
-        padding: 10px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-C-b {
-        font-size: 14px;
-        border-radius: 0px 0px 0px 0px;
-        padding: 10px 10px 10px 10px;
-    }
+    
 }
 
 @media only screen and (max-width:668px) {
-    .oa_ac_style_1 {
-        padding: 0px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H {
-        border-radius: 5px 5px 5px 5px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H .heading-data {
-        font-size: 20px;
-        padding: 10px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H.active .span-active {
-        font-size: 13px;
-        width: 30px;
-        height: 30px;
-        border-radius: 5px 5px 5px 5px;
-        margin: 10px 10px 10px 10px;
-    }
-
-    .oa_ac_style_1 .oxi-addons-ac-H .span-deactive {
-        font-size: 13px;
-        width: 100%;
-        max-width: 30px;
-        height: 30px;
-        border-radius: 5px 5px 5px 5px;
-        margin: 10px 10px 10px 10px;
-    }
- 
-
-    .oa_ac_style_1 .oxi-addons-ac-C-b {
-        font-size: 13px;
-        border-radius: 0px 0px 0px 0px;
-        padding: 10px 10px 10px 10px;
-    }
+    
 }
