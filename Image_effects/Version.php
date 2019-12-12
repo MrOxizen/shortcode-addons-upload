@@ -5,4 +5,4 @@
  * Checked by Fuadia
  */
 
-return array('2.0.0', 'Image Effects', true, 'fas fa-image');
+return array('2.0.0', 'Image Effects', true, 'fas fa-image', true);

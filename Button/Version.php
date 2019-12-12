@@ -5,4 +5,4 @@
  * Checked By Sabibur
  */
 
-return array('2.0.0', 'Content Elements', true, 'fas fa-ticket-alt');
+return array('2.0.0', 'Content Elements', true, 'fas fa-ticket-alt', false);

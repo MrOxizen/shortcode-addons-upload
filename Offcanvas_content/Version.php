@@ -6,4 +6,4 @@
  */
 
 
-return array('2.0.0', 'Creative Elements', true, 'fas fa-clone');
+return array('2.0.0', 'Creative Elements', true, 'fas fa-clone', false);

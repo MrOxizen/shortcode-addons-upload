@@ -5,4 +5,4 @@
  * Checked by Richard
  */
 
-return array('2.0.0', '3rd Party Widgets', true, 'fas fa-id-card-alt');
+return array('2.0.0', '3rd Party Widgets', true, 'fas fa-id-card-alt', true);

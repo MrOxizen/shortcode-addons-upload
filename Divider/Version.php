@@ -5,4 +5,4 @@
   Checked By Sabibur
  */
 
-return array('2.0.0', 'Extensions', true, 'fab fa-deviantart');
+return array('2.0.0', 'Extensions', true, 'fab fa-deviantart', true);

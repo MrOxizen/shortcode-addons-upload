@@ -6,4 +6,4 @@
  */
 
 
-return array('2.0.0', 'Creative Elements', true, 'fab fa-centos');
+return array('2.0.0', 'Creative Elements', true, 'fab fa-centos', false);

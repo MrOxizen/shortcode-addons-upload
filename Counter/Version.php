@@ -5,4 +5,4 @@
   Edit & Checked BY Sabibur
  */
 
-return array('2.0.0', 'Creative Elements', true, 'fas fa-clock');
+return array('2.0.0', 'Creative Elements', true, 'fas fa-clock', false);

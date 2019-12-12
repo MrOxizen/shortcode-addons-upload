@@ -5,4 +5,4 @@
  * Checked by Richard
  */
 
-return array('2.0.0', 'Creative Elements', true, 'fab fa-fonticons');
+return array('2.0.0', 'Creative Elements', true, 'fab fa-fonticons', false);

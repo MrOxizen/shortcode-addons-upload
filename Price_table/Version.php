@@ -5,4 +5,4 @@
  * Checked By - Al-amin
  */
 
-return array('2.0.0', 'Marketing Elements', true, 'far fa-money-bill-alt'); 
+return array('2.0.0', 'Marketing Elements', true, 'far fa-money-bill-alt', true); 

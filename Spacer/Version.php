@@ -4,4 +4,4 @@
   Version: 2.0.0
  */
 
-return array('2.0.0', 'Extensions', true, 'fas fa-backspace');
+return array('2.0.0', 'Extensions', true, 'fas fa-backspace', true);

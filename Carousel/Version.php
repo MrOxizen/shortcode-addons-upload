@@ -5,4 +5,4 @@
  * Checked by Richard
  */
 
-return array('2.0.0', 'Dynamic Contents', true, 'fas fa-sliders-h');
+return array('2.0.0', 'Dynamic Contents', true, 'fas fa-sliders-h', true);

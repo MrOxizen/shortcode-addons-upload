@@ -5,4 +5,4 @@
  * Checked by Al-almin 
  */
 
-return array('2.0.0', 'Image Effects', true, 'far fa-clone');
+return array('2.0.0', 'Image Effects', true, 'far fa-clone', true);

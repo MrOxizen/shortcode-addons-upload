@@ -5,4 +5,4 @@
  * Checked By Al-amin
  */
 
-return array('2.0.0', 'Image Effects', true,'fab fa-buffer');
+return array('2.0.0', 'Image Effects', true,'fab fa-buffer', true);

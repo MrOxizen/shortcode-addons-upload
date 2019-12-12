@@ -5,4 +5,4 @@
   Checked By Sabibur Rahman
  */
 
-return array('2.0.0', 'Creative Elements', true, 'far fa-newspaper');
+return array('2.0.0', 'Creative Elements', true, 'far fa-newspaper', false);

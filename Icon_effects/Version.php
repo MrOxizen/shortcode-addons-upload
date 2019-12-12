@@ -5,4 +5,4 @@
  * Checked By - Al-alamin
  */
 
-return array('2.0.0', 'Creative Elements', true, 'fas fa-radiation');
+return array('2.0.0', 'Creative Elements', true, 'fas fa-radiation', false);
