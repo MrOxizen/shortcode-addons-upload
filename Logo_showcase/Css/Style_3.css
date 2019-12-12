@@ -12,6 +12,7 @@
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
     float: left;
     position: relative;
     background: rgba(255, 255, 255, 1);

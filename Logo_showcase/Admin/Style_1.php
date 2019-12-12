@@ -162,7 +162,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '200',
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -182,7 +182,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_logo_showcase_style_1' => 'width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_logo_showcase_style_1' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -194,7 +194,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => '%',
-                    'size' => '40',
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -218,16 +218,117 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+        $this->start_controls_tabs(
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal View', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover View', SHORTCODE_ADDOONS),
+            ]
+                ]
+        );
+        $this->start_controls_tab();
+        
 
+        $this->add_responsive_control(
+                'sa-logo_showcase-br-radius', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
+            'separator' => FALSE,
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_addons_logo_showcase_style_1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        
+        $this->add_group_control(
+                'sa_logo_showcase_box_shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .sa_addons_logo_showcase_style_1' => ''
+            ],
+                ]
+        );
+
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
+      
+       
+        $this->add_responsive_control(
+                'sa-logo_showcase-hover-br-radius', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
+            'separator' => FALSE,
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => .1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .sa_addons_logo_showcase_style_1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],]
+        );
+      
+        $this->add_group_control(
+                'sa_logo_showcase_h_box_shadow', $this->style, [
+            'type' => Controls::BOXSHADOW,
+            'selector' => [
+                '{{WRAPPER}} .sa_addons_logo_showcase_style_1:hover' => ''
+            ],
+                ]
+        );
+
+        $this->end_controls_tab();
+
+        $this->end_controls_tabs();
+        
         $this->add_responsive_control(
             'sa_logo_showcase_logo_p',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
+                'separator' => TRUE,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '15',
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -251,16 +352,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-        $this->add_group_control(
-            'sa_logo_showcase_boxshadow',
-            $this->style,
-            [
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_logo_showcase_style_1' => ''
-                ],
-            ]
-        );
+       
 
         $this->end_controls_section();
 

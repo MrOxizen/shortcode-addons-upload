@@ -11,6 +11,7 @@
 .sa_addons_logo_showcase_style_2 {
     max-width: 200px;
     width: 100%;
+    overflow: hidden;
     margin: 0 auto;
     float: left;
     position: relative;
