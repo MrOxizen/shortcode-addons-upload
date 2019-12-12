@@ -57,6 +57,9 @@ class Style_1 extends Templates
             if ($this->media_render('sa_light_box_image', $value) != '') {
                 $image = ' 
                 <div  class="oxi_addons__image_main" style="background-image: url(\'' . $this->media_render('sa_light_box_image', $value) . '\');" >
+                    <div class="oxi_addons__overlay">
+                    ' . $this->font_awesome_render($style['sa_light_box_bg_overlay_icon']) . '
+                    </div>
                 </div>  
             ';
             }
@@ -83,8 +86,8 @@ class Style_1 extends Templates
             ';
             } 
             echo '<div class="oxi_addons__light_box_style_1 ' . $this->column_render('sa_info_boxes_column', $style) . ' "> 
-                <div class="oxi_addons__light_box_parent" > 
-                ' . $light_box . '
+                <div class="oxi_addons__light_box_parent"> 
+                    ' . $light_box . '
                 </div>
          </div>';
         }

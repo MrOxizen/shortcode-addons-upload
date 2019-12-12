@@ -29,7 +29,31 @@
      display: block;
      content: "";
      padding-bottom: 70%;
- } 
+     transition: 0.5s all;
+     -webkit-transition: 0.5s all;
+     -moz-transition: 0.5s all;
+     -ms-transition: 0.5s all;
+     -o-transition: 0.5s all;
+}  
+ .oxi_addons__light_box_style_1 .oxi_addons__image_main:hover::after {
+    background: rgba(177, 177, 177, 0.5); 
+ }  
+ .oxi_addons__light_box_style_1 .oxi_addons__image_main:hover .oxi_addons__overlay  {
+    opacity: 1;
+    visibility: visible;
+ }  
+ .oxi_addons__light_box_style_1 .oxi_addons__overlay {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+ .oxi_addons__light_box_style_1 .oxi_addons__overlay .oxi-icons {
+	 color: white;
+}
+ 
 
  .oxi_addons__light_box_style_1 .oxi_addons__image_main {
      border-radius: none;
