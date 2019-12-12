@@ -51,6 +51,7 @@ class Style_1 extends AdminStyle
                 'options' => [
                     'image' => __('Image', SHORTCODE_ADDOONS),
                     'button' => __('Button', SHORTCODE_ADDOONS),
+                    'icon' => __('Icon', SHORTCODE_ADDOONS),
                 ],
             ]
         );
@@ -79,6 +80,15 @@ class Style_1 extends AdminStyle
                         ],
                         'controller' => 'add_group_control',
                     ],
+                    'sa_light_box_button_icon' => [
+                        'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
+                        'type' => Controls::ICON,
+                        'default' => 'fab fa-accusoft',
+                        'conditional' => Controls::OUTSIDE,
+                        'condition' => [
+                            'sa_light_box_clickable' => 'icon',
+                        ],
+                    ],
                     'sa_light_box_button_text' => [
                         'label' => esc_html__('Button Text', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
@@ -96,7 +106,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => esc_html__('What is Lorem Ipsum? ', SHORTCODE_ADDOONS),
                         'selector' => [
-                            '{{WRAPPER}} .oxi_addons__light_box_style_1_{{KEY}} .oxi_addons__heading' => '',
+                            '{{WRAPPER}} .oxi_addons__light_box_style_1_{{KEY}} .oxi_addons__heading_light_box' => '',
                         ],
                     ],
                     'sa_light_box_desc' => [
@@ -104,7 +114,7 @@ class Style_1 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrytandard ', SHORTCODE_ADDOONS),
                         'selector' => [
-                            '{{WRAPPER}} .oxi_addons__light_box_style_1_{{KEY}} .oxi_addons__details' => '',
+                            '{{WRAPPER}} .oxi_addons__light_box_style_1_{{KEY}} .oxi_addons__details_light_box' => '',
                         ],
                     ],
                 ],
@@ -140,7 +150,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1' => ''
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1  .oxi_addons__light_box_parent' => ''
                 ],
             ]
         );
@@ -154,7 +164,6 @@ class Style_1 extends AdminStyle
                     'unit' => 'px',
                     'size' => '',
                 ],
-                //'loader' => TRUE,
                 'range' => [
                     '%' => [
                         'min' => 0,
@@ -173,7 +182,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__light_box_parent' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -187,7 +196,6 @@ class Style_1 extends AdminStyle
                     'unit' => 'px',
                     'size' => '',
                 ],
-                //'loader' => TRUE,
                 'range' => [
                     '%' => [
                         'min' => 0,
@@ -214,83 +222,42 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Image Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Image box Settings', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
                 'condition' => [
                     'sa_light_box_clickable' => 'image',
                 ],
             ]
-        );
-
+        ); 
         $this->add_responsive_control(
-            'sa_light_box_image_position',
+            'sa-image-boxes-height',
             $this->style,
             [
-                'label' => __('Image Postion', SHORTCODE_ADDOONS),
-                'separator' => TRUE,
-                'type' => Controls::CHOOSE,
-                'default' => 'center',
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', SHORTCODE_ADDOONS),
-                    ],
-                    'center' => [
-                        'title' => __('Center', SHORTCODE_ADDOONS),
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', SHORTCODE_ADDOONS),
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__light_box_parent' => 'justify-content: {{VALUE}}',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_light_box_image_switcher',
-            $this->style,
-            [
-                'label' => __('Custom Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => 'yes',
-                'loader' => TRUE,
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_light_box_image_width',
-            $this->style,
-            [
-                'label' => __('Width', SHORTCODE_ADDOONS),
+                'label' => __('Height', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'condition' => [
-                    'sa_light_box_image_switcher' => 'yes'
-                ],
                 'default' => [
-                    'unit' => 'px',
-                    'size' => '500',
+                    'unit' => '%',
+                    'size' => 70,
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 50,
-                        'max' => 1500,
+                        'min' => 0,
+                        'max' => 400,
                         'step' => 1,
                     ],
                     '%' => [
-                        'min' => 50,
+                        'min' => 0,
                         'max' => 250,
-                        'step' => 1,
+                        'step' => .1,
                     ],
-                    'em' => [
-                        'min' => 10,
-                        'max' => 50,
-                        'step' => 0.1,
+                    'rem' => [
+                        'min' => 1,
+                        'max' => 200,
+                        'step' => 2,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image' => 'max-width: {{SIZE}}{{UNIT}};  width: 100%;',
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1  .oxi_addons__image_main::after' => 'padding-bottom:{{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -300,7 +267,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image' => '',
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image_main' => '',
                 ],
             ]
         );
@@ -334,11 +301,203 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_light_box_image_width_box_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image_main' => ''
                 ],
             ]
         );
 
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Icon Settings', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+                'condition' => [
+                    'sa_light_box_clickable' => 'icon',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_light_box_icon_size',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '30',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 5,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_light_box_icon_width_height',
+            $this->style,
+            [
+                'label' => __('Height & Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '80',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 5,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                   ],
+            ]
+        ); 
+        $this->add_control(
+            'sa_light_box_icon_color',
+            $this->style,
+            [
+                'label' => __('Icon Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#ffffff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi-icons' => 'color: {{VALUE}};'
+                ],
+            ]
+        ); 
+        $this->add_control(
+            'sa_light_box_icon_bg',
+            $this->style,
+            [
+                'label' => __('Background', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon' => 'background:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_light_box_icon_align',
+            $this->style,
+            [
+                'label' => __('Icon Alignment', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON, 
+                'default' => 'center',
+                'options' => [
+                    'flex-start' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__light_box_parent' => 'justify-content: {{VALUE}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_light_box_icon_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon' => ''
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_light_box_icon_border_r',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '50',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_light_box_btn_box_shadow',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon' => ''
+                ],
+            ]
+        );
+       
 
         $this->end_controls_section();
         $this->end_section_devider();
@@ -347,10 +506,55 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Heading Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Light Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
         );
+        $this->add_control(
+            'sa_light_box_bg_light_box',
+            $this->style,
+            [
+                'label' => __('Background', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => '#000',
+                'selector' => [
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .lg' => 'background:{{VALUE}};'
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Heading Details Settings', SHORTCODE_ADDOONS),
+                'showing' => TRUE,
+            ]
+        );
+        $this->add_control(
+            'sa_light_box_bg_heading_details',
+            $this->style,
+            [
+                'label' => __('Background', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => 'rgba(59, 59, 59, 0.64)',
+                'selector' => [
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .lg-sub-html' => 'background:{{VALUE}};'
+                ],
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'heading' => esc_html__('Heading', SHORTCODE_ADDOONS),
+                    'description' => esc_html__('Description', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
         $this->add_control(
             'sa_light_box_tag',
             $this->style,
@@ -378,7 +582,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__heading' => ''
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .oxi_addons__heading_light_box' => ''
                 ],
             ]
         );
@@ -390,7 +594,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .lg-outer .oxi_addons__heading' => 'color:{{VALUE}} !important;'
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .oxi_addons__heading_light_box' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -423,18 +627,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .lg-outer .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .oxi_addons__heading_light_box' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
-        $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Description Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_group_control(
             'sa_light_box_desc_typo',
             $this->style,
@@ -443,7 +641,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__details' => ''
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .oxi_addons__details_light_box' => ''
                 ],
             ]
         );
@@ -455,7 +653,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__details' => 'color:{{VALUE}};'
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .oxi_addons__details_light_box' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -488,11 +686,15 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '.oxi_____disabled, .oxi_addons_light_box_overlay_' . $this->oxiid . ' .oxi_addons__details_light_box_light_box' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+
         $this->end_controls_section();
+
         $this->start_controls_section(
             'shortcode-addons',
             [

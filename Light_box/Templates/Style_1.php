@@ -37,13 +37,13 @@ class Style_1 extends Templates
     {
         $datas = (array_key_exists('sa_light_box_repeater', $style) && is_array($style['sa_light_box_repeater']) ? $style['sa_light_box_repeater'] : []);
         foreach ($datas as $key => $value) {
-            $heading = $details = $button = $image = $light_box = $image_or_btn =  '';
+            $heading = $details = $button = $image = $light_box = $image_or_btn  = $icon =  '';
 
             if (array_key_exists('sa_light_box_title', $value) && $value['sa_light_box_title'] != '') {
-                $heading = '<' . $style['sa_light_box_tag'] . ' class=\'oxi_addons__heading\'>' . $this->text_render($value['sa_light_box_title']) . '</' . $style['sa_light_box_tag'] . '>';
+                $heading = '<' . $style['sa_light_box_tag'] . ' class=\'oxi_addons__heading_light_box\'>' . $this->text_render($value['sa_light_box_title']) . '</' . $style['sa_light_box_tag'] . '>';
             }
             if (array_key_exists('sa_light_box_desc', $value) && $value['sa_light_box_desc'] != '') {
-                $details = '<div class=\'oxi_addons__details\'>' . $this->text_render($value['sa_light_box_desc']) . ' </div>';
+                $details = '<div class=\'oxi_addons__details_light_box\'>' . $this->text_render($value['sa_light_box_desc']) . ' </div>';
             }
 
             if (array_key_exists('sa_light_box_button_text', $value) && $value['sa_light_box_button_text'] != '') {
@@ -56,28 +56,34 @@ class Style_1 extends Templates
 
             if ($this->media_render('sa_light_box_image', $value) != '') {
                 $image = ' 
-                <div  class="oxi_addons_image_main" >
-                    <img  ' . (array_key_exists('sa_light_box_image_switcher', $style) && $style['sa_light_box_image_switcher'] != 'yes' ? 'style="width: 100%; max-width: 100%"' : '') . ' src="' . $this->media_render('sa_light_box_image', $value) . '" class="oxi_addons__image" alt="front image"/>
+                <div  class="oxi_addons__image_main" style="background-image: url(\'' . $this->media_render('sa_light_box_image', $value) . '\');" >
                 </div>  
+            ';
+            }
+            if ($value['sa_light_box_button_icon']  != '') {
+                $icon = '  
+                    <div  class="oxi_addons__icon" >
+                    ' . $this->font_awesome_render($value['sa_light_box_button_icon']) . '
+                    </div>   
             ';
             }
 
             if (array_key_exists('sa_light_box_clickable', $style) && $style['sa_light_box_clickable'] == 'button') {
                 $image_or_btn = $button;
-            } else {
+            } elseif (array_key_exists('sa_light_box_clickable', $style) && $style['sa_light_box_clickable'] == 'image') {
                 $image_or_btn = $image;
+            } else {
+                $image_or_btn = $icon;
             }
             if ($this->media_render('sa_light_box_image', $value) != '') {
                 $light_box = ' 
-                <div class="oxi_addons__light_box_item"  data-src="' . $this->media_render('sa_light_box_image', $value) . '" data-sub-html="' . $heading . ' <br> ' . $details . '">  
+                <div class="oxi_addons__light_box_item" '.((array_key_exists('sa_light_box_clickable', $style) && $style['sa_light_box_clickable'] == 'image') ? 'style="width: 100%"' : '').'  data-src="' . $this->media_render('sa_light_box_image', $value) . '" data-sub-html="' . $heading . ' <br> ' . $details . '">  
                       ' . $image_or_btn . '
                 </div> 
             ';
-            }
-
-
+            } 
             echo '<div class="oxi_addons__light_box_style_1 ' . $this->column_render('sa_info_boxes_column', $style) . ' "> 
-                <div class="oxi_addons__light_box_parent"> 
+                <div class="oxi_addons__light_box_parent" > 
                 ' . $light_box . '
                 </div>
          </div>';
@@ -89,7 +95,9 @@ class Style_1 extends Templates
         $jquery = '';
         $jquery .= 'jQuery(".oxi_addons__light_box_parent").lightGallery({
             share: false,
+            addClass: "oxi_addons_light_box_overlay_' . $this->oxiid . '"
         });';
+
         return $jquery;
     }
 }
