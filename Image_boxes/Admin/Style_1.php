@@ -187,27 +187,27 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 200,
+                    'size' => 262,
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 1,
+                        'min' => 0,
                         'max' => 1200,
                         'step' => 1,
                     ],
-                    'em' => [
-                        'min' => 1,
-                        'max' => 200,
-                        'step' => .1,
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
                     ],
-                    'rem' => [
-                        'min' => 1,
+                    'em' => [
+                        'min' => 0,
                         'max' => 200,
                         'step' => 0.1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-icon-boxes-area .oxi-addons-icon-box' => 'width:{{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-icon-boxes-area' => 'width:{{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -219,27 +219,27 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 200,
+                    'size' => 262,
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 1,
+                        'min' => 0,
                         'max' => 1200,
                         'step' => 1,
                     ],
-                    'em' => [
-                        'min' => 1,
-                        'max' => 200,
-                        'step' => .1,
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
                     ],
-                    'rem' => [
-                        'min' => 1,
+                    'em' => [
+                        'min' => 0,
                         'max' => 200,
                         'step' => 0.1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-icon-boxes-area .oxi-addons-icon-box' => 'height:{{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons-icon-boxes-area' => 'height:{{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -257,18 +257,18 @@ class Style_1 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 200,
+                        'max' => 500,
                         'step' => 1,
                     ],
                     '%' => [
                         'min' => 0,
                         'max' => 100,
-                        'step' => .1,
+                        'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 20,
-                        'step' => .1,
+                        'max' => 100,
+                        'step' => 0.1,
                     ],
                 ],
                 'selector' => [
@@ -290,18 +290,18 @@ class Style_1 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 200,
+                        'max' => 500,
                         'step' => 1,
                     ],
                     '%' => [
                         'min' => 0,
                         'max' => 100,
-                        'step' => .1,
+                        'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 20,
-                        'step' => .1,
+                        'max' => 100,
+                        'step' => 0.1,
                     ],
                 ],
                 'selector' => [
@@ -322,18 +322,18 @@ class Style_1 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 200,
+                        'max' => 500,
                         'step' => 1,
                     ],
                     '%' => [
                         'min' => 0,
                         'max' => 100,
-                        'step' => .1,
+                        'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 20,
-                        'step' => .1,
+                        'max' => 100,
+                        'step' => 0.1,
                     ],
                 ],
                 'selector' => [
@@ -445,20 +445,20 @@ class Style_1 extends AdminStyle
                     'size' => '',
                 ],
                 'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
                     'px' => [
                         'min' => 0,
-                        'max' => 200,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
+                        'max' => 100,
+                        'step' => 0.1,
                     ],
                 ],
                 'selector' => [
@@ -487,17 +487,17 @@ class Style_1 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 1,
-                        'max' => 600,
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     'em' => [
-                        'min' => 1,
-                        'max' => 200,
-                        'step' => .1,
-                    ],
-                    'rem' => [
-                        'min' => 1,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 0.1,
                     ],
@@ -520,17 +520,17 @@ class Style_1 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 1,
-                        'max' => 600,
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     'em' => [
-                        'min' => 1,
-                        'max' => 200,
-                        'step' => .1,
-                    ],
-                    'rem' => [
-                        'min' => 1,
+                        'min' => 0,
                         'max' => 200,
                         'step' => 0.1,
                     ],
