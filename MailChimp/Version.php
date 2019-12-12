@@ -5,4 +5,4 @@
   Checked By Md. Al-amin
  */
 
-return array('2.0.0', 'Subscribe form', true, 'fab fa-mailchimp');
+return array('2.0.0', 'Subscribe form', true, 'fab fa-mailchimp', true);

@@ -5,4 +5,4 @@
  * Checked By: Al-alamin
  */
 
-return array('2.0.0', 'Dynamic Contents', true, 'far fa-clone');
+return array('2.0.0', 'Dynamic Contents', true, 'far fa-clone', true);

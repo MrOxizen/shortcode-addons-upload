@@ -5,4 +5,4 @@
   Checked By Sabibur
  */
 
-return array('2.0.0', 'Creative Elements', true, 'fas fa-columns');
+return array('2.0.0', 'Creative Elements', true, 'fas fa-columns', false);

@@ -5,4 +5,4 @@
  * Checked by Richard
  */
 
-return array('2.0.0', 'Creative Elements', true, 'fas fa-scroll');
+return array('2.0.0', 'Creative Elements', true, 'fas fa-scroll', false);

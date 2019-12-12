@@ -5,4 +5,4 @@
  * Checked by Richard
  */
 
-return array('2.0.0', 'Content Elements', true, 'fas fa-tint-slash');
+return array('2.0.0', 'Content Elements', true, 'fas fa-tint-slash', false);

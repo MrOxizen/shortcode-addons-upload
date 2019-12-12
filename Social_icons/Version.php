@@ -5,4 +5,4 @@
  * Checked by - Al-amin
  */
 
-return array('2.0.0', 'Social Elements', true, 'fas fa-hashtag');
+return array('2.0.0', 'Social Elements', true, 'fas fa-hashtag', true);

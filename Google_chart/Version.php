@@ -5,4 +5,4 @@
  * Checked by - Al-amin
  */
 
-return array('2.0.0', 'Dynamic Contents', true, 'fas fa-chart-pie');
+return array('2.0.0', 'Dynamic Contents', true, 'fas fa-chart-pie', true);

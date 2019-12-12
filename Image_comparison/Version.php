@@ -4,4 +4,4 @@
   Version: 2.0.0
  */
 
-return array('2.0.0', 'Creative Elements', true, 'fas fa-arrows-alt-h');
+return array('2.0.0', 'Creative Elements', true, 'fas fa-arrows-alt-h', false);

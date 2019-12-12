@@ -5,4 +5,4 @@
  * Edit And Checked By Sabibur Rahman
 */
 
-return array('2.0.0', 'Marketing Elements', true, 'fas fa-calendar-week');
+return array('2.0.0', 'Marketing Elements', true, 'fas fa-calendar-week', true);

@@ -5,4 +5,4 @@
  * checked by Al-alamin
  */
 
-return array('2.0.0', 'Marketing Elements', true, 'fas fa-street-view');
+return array('2.0.0', 'Marketing Elements', true, 'fas fa-street-view', true);

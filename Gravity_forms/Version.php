@@ -5,4 +5,4 @@
  Edit & Checked by Sabibur Rahman
  */
 
-return array('2.0.0', '3rd Party Widgets', true, 'fas fa-table');
+return array('2.0.0', '3rd Party Widgets', true, 'fas fa-table', true);

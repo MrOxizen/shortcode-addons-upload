@@ -5,4 +5,4 @@
   Checked By - Al-amin
  */
 
-return array('2.0.0', 'Dynamic Contents', true, 'fab fa-teamspeak');
+return array('2.0.0', 'Dynamic Contents', true, 'fab fa-teamspeak', true);
