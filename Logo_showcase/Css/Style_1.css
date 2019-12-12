@@ -15,6 +15,7 @@
     float: left;
     position: relative;
     box-shadow: 0px 5px 10px 0px rgba(189, 189, 189, 0);
+    overflow: hidden;
 }
 
 .sa_addons_logo_showcase_style_1:after {
