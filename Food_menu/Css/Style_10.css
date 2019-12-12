@@ -12,6 +12,7 @@ and open the template in the editor.
 .oxi-addons-box-temp-10 {
     max-width: auto;
     margin: 0 auto;
+    display: flex;
 }
 
 .oxi-addons-box-temp-10 .oxi-addons-box-outer {

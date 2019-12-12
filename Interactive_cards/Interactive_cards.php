@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Elements_Frontend;
 class Interactive_cards extends Elements_Frontend {
 
     public function pre_active() {
-        return array('style_1');
+        return array('Style_1');
     }
     public function templates() {
         return array(
