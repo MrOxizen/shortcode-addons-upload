@@ -30,12 +30,7 @@ and open the template in the editor.
 }
 
 .oxi-addonsOH-FI-wrapper-5 .oxi-addonsOH-FI-row:hover {
-    background: linear-gradient(rgba(0, 0, 0, 1.00), rgba(0, 0, 0, 1.00)), url("http://127.0.0.1/wordpress/wp-content/uploads/2019/03/phonepicutres-TA.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    ;
+    background: linear-gradient(rgba(0, 0, 0, 1.00), rgba(0, 0, 0, 1.00));
     border-width: 4px 4px 4px 4px;
     border-style: solid;
     border-color: #08fce0
