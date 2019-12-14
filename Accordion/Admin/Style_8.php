@@ -313,10 +313,10 @@ class Style_8 extends AdminStyle {
                 '%' => [
                     'min' => 0,
                     'max' => 50,
-                    'step' => .1,
+                    'step' => 1,
                 ],
                 'px' => [
-                    'min' => -200,
+                    'min' => 0,
                     'max' => 200,
                     'step' => 1,
                 ],
@@ -327,7 +327,7 @@ class Style_8 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-heading' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                '{{WRAPPER}} .sa_element_ac_style_8 .oxi-addons-AC-EG-H .oxi-addons-AC-EG-heading' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
             ]
                 ]
         );
