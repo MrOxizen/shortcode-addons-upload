@@ -1,22 +1,22 @@
- .oxi_addons__light_box_style_1 .lg-outer {
+ .oxi_addons__light_box_style_2 .lg-outer {
      z-index: 99999;
  }
 
- .oxi_addons__light_box_style_1 .oxi_addons__light_box_parent {
+ .oxi_addons__light_box_style_2 .oxi_addons__light_box_parent {
      width: 100%;
      display: flex;
      justify-content: center;
      padding: 30px 10px 30px 10px
  }
 
- .oxi_addons__light_box_style_1 .oxi_addons__light_box_parent {
+ .oxi_addons__light_box_style_2 .oxi_addons__light_box_parent {
      width: 100%;
      display: flex;
      justify-content: center;
      align-items: center;
  }
 
- .oxi_addons__light_box_style_1 .oxi_addons__image_main {
+ .oxi_addons__light_box_style_2 .oxi_addons__image_main {
      position: relative;
      cursor: pointer;
      width: 100%;
@@ -25,7 +25,7 @@
      background-size: cover;
  }
 
- .oxi_addons__light_box_style_1 .oxi_addons__image_main::after {
+ .oxi_addons__light_box_style_2 .oxi_addons__image_main::after {
      display: block;
      content: "";
      padding-bottom: 70%;
@@ -35,14 +35,14 @@
      -ms-transition: 0.5s all;
      -o-transition: 0.5s all;
 }  
- .oxi_addons__light_box_style_1 .oxi_addons__image_main:hover::after {
+ .oxi_addons__light_box_style_2 .oxi_addons__image_main:hover::after {
     background: rgba(177, 177, 177, 0.5); 
  }  
- .oxi_addons__light_box_style_1 .oxi_addons__image_main:hover .oxi_addons__overlay  {
+ .oxi_addons__light_box_style_2 .oxi_addons__image_main:hover .oxi_addons__overlay  {
     opacity: 1;
     visibility: visible;
  }  
- .oxi_addons__light_box_style_1 .oxi_addons__overlay {
+ .oxi_addons__light_box_style_2 .oxi_addons__overlay {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -51,12 +51,12 @@
     visibility: hidden;
     z-index: 999;
 }
- .oxi_addons__light_box_style_1 .oxi_addons__overlay .oxi-icons {
+ .oxi_addons__light_box_style_2 .oxi_addons__overlay .oxi-icons {
 	 color: white;
 }
  
 
- .oxi_addons__light_box_style_1 .oxi_addons__image_main {
+ .oxi_addons__light_box_style_2 .oxi_addons__image_main {
      border-radius: none;
      -webkit-border-radius: none;
      -moz-border-radius: none;
@@ -68,7 +68,7 @@
 
 
 
- .oxi_addons__light_box_style_1 .oxi_addons__button {
+ .oxi_addons__light_box_style_2 .oxi_addons__button {
     background: rgba(17, 106, 177, 1.00);
     color: #ffffff;
     display: flex;
@@ -87,7 +87,7 @@
     box-shadow: 0px 11px 25px -8px rgb(177, 177, 177);
  }
 
- .oxi_addons__light_box_style_1 .oxi_addons__button:hover {
+ .oxi_addons__light_box_style_2 .oxi_addons__button:hover {
      background: rgb(54, 132, 248);
      color: #ffffff;
      border-color: #ffffff
@@ -121,7 +121,7 @@
      padding: 5px;
  }
 
- .oxi_addons__light_box_style_1 .oxi_addons__icon {
+ .oxi_addons__light_box_style_2 .oxi_addons__icon {
      width: 80px;
      height: 80px;
      display: flex;
@@ -135,7 +135,7 @@
      cursor: pointer;
      position: relative;
  }
- .oxi_addons__light_box_style_1 .oxi_addons__icon::after{
+ .oxi_addons__light_box_style_2 .oxi_addons__icon::after{
     content: "";
     position: absolute;
     left: 0;
@@ -149,11 +149,11 @@
     -ms-transition: 0.5s all;
     -o-transition: 0.5s all;
 }
- .oxi_addons__light_box_style_1 .oxi_addons__icon:hover .oxi_addons__overlay  {
+ .oxi_addons__light_box_style_2 .oxi_addons__icon:hover .oxi_addons__overlay  {
     opacity: 1;
     visibility: visible;
  }  
 
- .oxi_addons__light_box_style_1 .oxi-icons {
+ .oxi_addons__light_box_style_2 .oxi-icons {
      font-size: 30px;
  }

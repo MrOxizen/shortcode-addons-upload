@@ -66,7 +66,10 @@ class Style_1 extends Templates
             if ($value['sa_light_box_button_icon']  != '') {
                 $icon = '  
                     <div  class="oxi_addons__icon" >
-                    ' . $this->font_awesome_render($value['sa_light_box_button_icon']) . '
+                        <div class="oxi_addons__overlay">
+                        ' . $this->font_awesome_render($style['sa_light_box_bg_overlay_icon']) . '
+                        </div>
+                        ' . $this->font_awesome_render($value['sa_light_box_button_icon']) . '
                     </div>   
             ';
             }
@@ -78,19 +81,24 @@ class Style_1 extends Templates
             } else {
                 $image_or_btn = $icon;
             }
-            if ($this->media_render('sa_light_box_image', $value) != '') {
-                $light_box = ' 
-                <div class="oxi_addons__light_box_item" '.((array_key_exists('sa_light_box_clickable', $style) && $style['sa_light_box_clickable'] == 'image') ? 'style="width: 100%"' : '').'  data-src="' . $this->media_render('sa_light_box_image', $value) . '" data-sub-html="' . $heading . ' <br> ' . $details . '">  
-                      ' . $image_or_btn . '
-                </div> 
-            ';
-            } 
+            if($value['sa_light_box_select_type'] == 'image'){
+                if ($this->media_render('sa_light_box_image', $value) != '') {
+                    $light_box = '<div class="oxi_addons__light_box_item" ' . ((array_key_exists('sa_light_box_clickable', $style) && $style['sa_light_box_clickable'] == 'image') ? 'style="width: 100%"' : '') . '  data-src="' . $this->media_render('sa_light_box_image', $value) . '" data-sub-html="' . $heading . ' <br> ' . $details . '">  
+                          ' . $image_or_btn . '
+                    </div>';
+                }
+            }else{ 
+                $light_box = '<a class="oxi_addons__light_box_item"   href="' . $value['sa_light_box_video'] . '" data-sub-html="' . $heading . ' <br> ' . $details . '">  
+                    ' . $image_or_btn . '
+                </a>';  
+            }
+          
             echo '<div class="oxi_addons__light_box_style_1 ' . $this->column_render('sa_info_boxes_column', $style) . ' "> 
-                <div class="oxi_addons__light_box_parent"> 
-                    ' . $light_box . '
-                </div>
-         </div>';
-        }
+                    <div class="oxi_addons__light_box_parent"> 
+                        ' . $light_box . '
+                    </div>
+                </div>';
+            }
     }
 
     public function inline_public_jquery()
