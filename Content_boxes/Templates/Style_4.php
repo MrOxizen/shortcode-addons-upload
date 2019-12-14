@@ -58,6 +58,7 @@ class Style_4 extends Templates {
                             background-size: cover;">
                           </div>';
             }
+          
             
             
 
