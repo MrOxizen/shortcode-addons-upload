@@ -79,7 +79,7 @@ class Style_1 extends AdminStyle
             'sa_banner_btn_position',
             $this->style,
             [
-                'label' => __('Button Postion', SHORTCODE_ADDOONS), 
+                'label' => __('Button Postion', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'flex-start',
@@ -108,7 +108,7 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('', SHORTCODE_ADDOONS),
-                'type' => Controls::SEPARATOR, 
+                'type' => Controls::SEPARATOR,
                 Controls::SEPARATOR => TRUE
             ]
         );
@@ -182,7 +182,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Image Postion', SHORTCODE_ADDOONS),
                 'separator' => TRUE,
-                'type' => Controls::CHOOSE, 
+                'type' => Controls::CHOOSE,
                 'default' => 'left',
                 'loader' => TRUE,
                 'options' => [
@@ -207,14 +207,14 @@ class Style_1 extends AdminStyle
                 'default' => [
                     'unit' => '%',
                     'size' => 50,
-                ], 
+                ],
                 'range' => [
                     '%' => [
                         'min' => 0,
                         'max' => 100,
                         'step' => 1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons_image_main' => 'transform: translateX(-{{SIZE}}%)',
                 ],
@@ -245,7 +245,7 @@ class Style_1 extends AdminStyle
                 'default' => [
                     'unit' => '%',
                     'size' => 150,
-                ], 
+                ],
                 'range' => [
                     '%' => [
                         'min' => 50,
@@ -256,8 +256,8 @@ class Style_1 extends AdminStyle
                         'min' => 10,
                         'max' => 50,
                         'step' => 0.1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__image' => 'max-width: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
                 ],
@@ -267,7 +267,7 @@ class Style_1 extends AdminStyle
             'sa_banner_front_image_animation',
             $this->style,
             [
-                'type' => Controls::ANIMATION, 
+                'type' => Controls::ANIMATION,
             ]
         );
 
@@ -345,7 +345,7 @@ class Style_1 extends AdminStyle
             'sa_banner_heading_animation',
             $this->style,
             [
-                'type' => Controls::ANIMATION, 
+                'type' => Controls::ANIMATION,
             ]
         );
 
@@ -357,7 +357,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' =>'',
+                    'size' => '',
                 ],
                 'range' => [
                     '%' => [
@@ -432,7 +432,7 @@ class Style_1 extends AdminStyle
             'sa_banner_details_animation',
             $this->style,
             [
-                'type' => Controls::ANIMATION, 
+                'type' => Controls::ANIMATION,
             ]
         );
 
@@ -478,12 +478,12 @@ class Style_1 extends AdminStyle
             'shortcode-addons-start-tabs',
             [
                 'condition' => [
-                    'shortcode-addons-start-tabs' => 'button-left', 
+                    'shortcode-addons-start-tabs' => 'button-left',
                 ],
                 'section-condition' => [
                     'sa_banner_button_left_switcher' => 'yes'
                 ]
-            
+
             ]
         );
 
@@ -601,7 +601,7 @@ class Style_1 extends AdminStyle
             'sa_banner_button_left_animation',
             $this->style,
             [
-                'type' => Controls::ANIMATION, 
+                'type' => Controls::ANIMATION,
             ]
         );
         $this->end_controls_section();
@@ -625,7 +625,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-      
+
 
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
@@ -797,7 +797,7 @@ class Style_1 extends AdminStyle
                 ],
 
             ]
-        ); 
+        );
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
@@ -806,7 +806,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE, 
+                Controls::SEPARATOR => TRUE,
             ]
         );
         $this->add_responsive_control(
@@ -869,8 +869,8 @@ class Style_1 extends AdminStyle
             'sa_banner_button_right_icon_postion',
             $this->style,
             [
-                'label' => __('Icon Postion', SHORTCODE_ADDOONS), 
-                'type' => Controls::CHOOSE, 
+                'label' => __('Icon Postion', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
                 'default' => 'right',
                 'loader' => TRUE,
                 'options' => [
@@ -989,7 +989,7 @@ class Style_1 extends AdminStyle
             'sa_banner_button_right_animation',
             $this->style,
             [
-                'type' => Controls::ANIMATION, 
+                'type' => Controls::ANIMATION,
             ]
         );
         $this->end_controls_section();
@@ -1013,7 +1013,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-        
+
 
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
@@ -1037,7 +1037,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-          
+
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
@@ -1052,7 +1052,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-          
+
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
@@ -1061,7 +1061,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE, 
+                Controls::SEPARATOR => TRUE,
             ]
         );
         $this->add_responsive_control(

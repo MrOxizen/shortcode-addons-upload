@@ -104,7 +104,7 @@ class Style_1 extends Templates
     public function inline_public_jquery()
     {
         $jquery = '';
-        $jquery .= 'jQuery(".oxi_addons__light_box_parent").lightGallery({
+        $jquery .= 'jQuery(".'.$this->WRAPPER.' .oxi_addons__light_box_parent").lightGallery({
             share: false,
             addClass: "oxi_addons_light_box_overlay_' . $this->oxiid . '"
         });';

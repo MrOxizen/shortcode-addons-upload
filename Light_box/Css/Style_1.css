@@ -23,7 +23,12 @@
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
- }
+     border-radius: 5px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     -ms-border-radius: 5px;
+     -o-border-radius: 5px;
+}
 
  .oxi_addons__light_box_style_1 .oxi_addons__image_main::after {
      display: block;
@@ -34,7 +39,18 @@
      -moz-transition: 0.5s all;
      -ms-transition: 0.5s all;
      -o-transition: 0.5s all;
+     border-radius: 5px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     -ms-border-radius: 5px;
+     -o-border-radius: 5px;
+    
 }  
+.oxi_addons__light_box_style_1 .oxi_addons__light_box_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
  .oxi_addons__light_box_style_1 .oxi_addons__image_main:hover::after {
     background: rgba(177, 177, 177, 0.5); 
  }  
@@ -43,13 +59,14 @@
     visibility: visible;
  }  
  .oxi_addons__light_box_style_1 .oxi_addons__overlay {
-	position: absolute;
-	left: 50%;
-	top: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     visibility: hidden;
     z-index: 999;
+ 
 }
  .oxi_addons__light_box_style_1 .oxi_addons__overlay .oxi-icons {
 	 color: white;
@@ -142,12 +159,16 @@
     top: 0;
     width: 100%;
     height: 100%;
-    border-radius: 500px;
+    border-radius: 50px;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -ms-transition: 0.5s all;
     -o-transition: 0.5s all;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
  .oxi_addons__light_box_style_1 .oxi_addons__icon:hover .oxi_addons__overlay  {
     opacity: 1;

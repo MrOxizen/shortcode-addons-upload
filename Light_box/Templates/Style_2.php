@@ -21,12 +21,12 @@ class Style_2 extends Templates
     public function public_jquery()
     {
         $this->JSHANDLE = 'MagnificPopup';
-        wp_enqueue_script('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Light_box/file/MagnificPopup.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Light_box/File/MagnificPopup.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function public_css()
     {
-        wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Light_box/file/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Light_box/File/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery()
@@ -74,11 +74,7 @@ class Style_2 extends Templates
     {
         $datas = (array_key_exists('sa_light_box_repeater', $style) && is_array($style['sa_light_box_repeater']) ? $style['sa_light_box_repeater'] : []);
         foreach ($datas as $key => $value) {
-            $heading  = $button = $image = $light_box = $image_or_btn  = $icon =  '';
-
-            if (array_key_exists('sa_light_box_title', $value) && $value['sa_light_box_title'] != '') {
-                $heading = '<' . $style['sa_light_box_tag'] . ' class=\'oxi_addons__heading_light_box\'>' . $this->text_render($value['sa_light_box_title']) . '</' . $style['sa_light_box_tag'] . '>';
-            }
+            $button = $image = $light_box = $image_or_btn  = $icon =  ''; 
             if (array_key_exists('sa_light_box_button_text', $value) && $value['sa_light_box_button_text'] != '') {
                 $button = '<div class="oxi_addons__button_main">
                                     <button class="oxi_addons__button">
