@@ -439,7 +439,8 @@ class Style_18 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body' => ''
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body' => '',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body p' => '',
             ],
                 ]
         );
@@ -449,7 +450,8 @@ class Style_18 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#858585',
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-body p' => 'color: {{VALUE}};',
             ],
                 ]
         );
@@ -581,59 +583,52 @@ class Style_18 extends AdminStyle {
                 ]
         );
         $this->start_controls_tabs(
-            'shortcode-addons-start-tabs',
-            [
-                'options' => [
-                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-                    'active' => esc_html__('Active', SHORTCODE_ADDOONS),
-                ]
+                'shortcode-addons-start-tabs', [
+            'options' => [
+                'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                'active' => esc_html__('Active', SHORTCODE_ADDOONS),
             ]
+                ]
         );
         $this->start_controls_tab();
         $this->add_control(
-            'sa_tabs_headding_icon_c',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
-                ],
-            ]
+                'sa_tabs_headding_icon_c', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ffffff',
+            'selector' => [
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+            ],
+                ]
         );
 
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_tabs_headding_icon_c_h',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
-                ],
-            ]
+                'sa_tabs_headding_icon_c_h', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ffffff',
+            'selector' => [
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two:hover .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+            ],
+                ]
         );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_tabs_headding_icon_c_a',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
-                ],
-            ]
+                'sa_tabs_headding_icon_c_a', $this->style, [
+            'label' => __('Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#ffffff',
+            'selector' => [
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-18 .sa-addons-header-two.sa-active .sa_tabs_icon .oxi-icons' => 'color: {{VALUE}};',
+            ],
+                ]
         );
 
         $this->end_controls_tab();

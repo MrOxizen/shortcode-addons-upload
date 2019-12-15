@@ -124,6 +124,15 @@
     text-align: left;
     padding: 30px 40px 20px 20px
 }
+.sa-addons-tabs-main-wrapper-style-16 .sa-addons-body p{
+    font-size: 16px;
+    color: #7d7d7d;
+    font-family: "Verdana";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+}
 
 @media only screen and (min-width:669px) and (max-width:993px) {
     .oxi-addons-main-wrapper-52 {

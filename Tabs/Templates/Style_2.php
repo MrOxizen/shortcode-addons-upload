@@ -12,24 +12,21 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
-
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates
-{
+class Style_2 extends Templates {
 
-    public function default_render($style, $child, $admin)
-    {
+    public function default_render($style, $child, $admin) {
         $jquery = $linkopening = '';
 
 
 
-        echo '<div class="sa-addons-tabs-main-wrapper-style-2" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
+        echo '<div class="' . $this->WRAPPER . ' sa-addons-tabs-main-wrapper-style-2" ' . $this->animation_render('sa_tabs_tab_anim', $style) . '>
                 <div class="sa-addons-main-tab-header">';
         $styledata = $this->style;
 
         $all_data = (array_key_exists('sa_tabs_data', $styledata) && is_array($styledata['sa_tabs_data'])) ? $styledata['sa_tabs_data'] : [];
-        foreach ($all_data  as $key => $value_header) {
+        foreach ($all_data as $key => $value_header) {
             $icon = '';
             if (array_key_exists('sa_tabs_url_open', $value_header) && $value_header['sa_tabs_url_open'] != '0') :
 
@@ -56,7 +53,7 @@ class Style_2 extends Templates
         }
         echo '</div>
                 <div class="sa-addons-main-tab-body ">';
-        foreach ($all_data  as $key => $value_body) {
+        foreach ($all_data as $key => $value_body) {
             $icon = '';
             if (array_key_exists('sa_tabs_url_open', $value_body) && $value_body['sa_tabs_url_open'] != '0') :
                 if ($value_body['sa_tabs_url-target'] != 'yes') :
@@ -91,16 +88,16 @@ class Style_2 extends Templates
 
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
-    public function inline_public_css()
-    {
+
+    public function inline_public_css() {
         return '.' . $this->WRAPPER . ' .sa-addons-tabs-main-wrapper-style-2 .sa-active::after{
                     border-left: ' . $this->style['sa_tabs_headding_arrow-size'] . 'px solid transparent;
                     border-right: ' . $this->style['sa_tabs_headding_arrow-size'] . 'px solid transparent;
                     border-bottom: ' . $this->style['sa_tabs_headding_arrow-size'] . 'px solid ' . $this->style['sa_tabs_headding_arrow-color'] . ';
                     }';
     }
-    public function inline_public_jquery()
-    {
+
+    public function inline_public_jquery() {
         $styledata = $this->style;
         $animationIn = $animationOut = $jquery = '';
         if ($styledata['sa_tabs_tab_anim'] == 'slide') {
@@ -113,27 +110,27 @@ class Style_2 extends Templates
         $initial = array_key_exists('sa_tabs_initial', $styledata) ? $styledata['sa_tabs_initial'] : '0';
 
         $jquery .= ' 
-            jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-header:eq(' . $initial . ')").addClass("sa-active");
-            jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two:eq(' . $initial . ')").addClass("sa-active");
-            jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-body:eq(' . $initial . ')").' . $animationIn . '("slow");
-            jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-header").click(function() {
+            jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-header:eq(' . $initial . ')").addClass("sa-active");
+            jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two:eq(' . $initial . ')").addClass("sa-active");
+            jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-body:eq(' . $initial . ')").' . $animationIn . '("slow");
+            jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-header").click(function() {
             if (jQuery(this).hasClass("sa-active")) {
                 return false
             } else {
-                jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-header").removeClass("sa-active");
+                jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-header").removeClass("sa-active");
                 jQuery(this).addClass("sa-active");
-                jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-body").' . $animationOut . '("slow");
+                jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-body").' . $animationOut . '("slow");
                 var activeTab = jQuery(this).attr("ref");
                 jQuery(activeTab).' . $animationIn . '("slow"); 
             }
         });
-        jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two").click(function() {
+        jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two").click(function() {
             if (jQuery(this).hasClass("sa-active")) {
                 return false
             } else {
-                jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two").removeClass("sa-active");
+                jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-header-two").removeClass("sa-active");
                 jQuery(this).addClass("sa-active");
-                jQuery(".sa-addons-tabs-main-wrapper-style-2 .sa-addons-body").' . $animationOut . '("slow");
+                jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2 .sa-addons-body").' . $animationOut . '("slow");
                 var activeTab = jQuery(this).attr("ref");
                 jQuery(activeTab).' . $animationIn . '("slow");
                 var fullwidth = jQuery("html, body").width();';
@@ -141,7 +138,7 @@ class Style_2 extends Templates
         if (array_key_exists('sa_tabs_tab_fix_header', $styledata) && $styledata['sa_tabs_tab_fix_header'] != '0') {
             $jquery .= 'if(fullwidth <= 668){
                             jQuery("html, body").animate({
-                                scrollTop: jQuery(".sa-addons-tabs-main-wrapper-style-2").offset().top - ' . $styledata['sa_tabs_tab_fix_h_offset'] . '
+                                scrollTop: jQuery(".' . $this->WRAPPER . '.sa-addons-tabs-main-wrapper-style-2").offset().top - ' . $styledata['sa_tabs_tab_fix_h_offset'] . '
                             }, 2000);
                         } ';
         }
@@ -151,8 +148,7 @@ class Style_2 extends Templates
         return $jquery;
     }
 
-    public function old_render()
-    {
+    public function old_render() {
 
         $styledata = $this->dbdata;
         $listdata = $this->child;
@@ -407,4 +403,5 @@ class Style_2 extends Templates
         wp_add_inline_style('shortcode-addons-style', $css);
         wp_add_inline_script('shortcode-addons-jquery', $jquery);
     }
+
 }

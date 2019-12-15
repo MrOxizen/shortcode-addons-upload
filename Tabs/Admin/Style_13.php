@@ -521,7 +521,8 @@ class Style_13 extends AdminStyle {
             'type' => Controls::TYPOGRAPHY,
             'include' => Controls::ALIGNNORMAL,
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-13 .sa-addons-body' => ''
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-13 .sa-addons-body' => '',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-13 .sa-addons-body p' => '',
             ],
                 ]
         );
@@ -531,7 +532,8 @@ class Style_13 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#858585',
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-13 .sa-addons-body' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-13 .sa-addons-body' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-13 .sa-addons-body p' => 'color: {{VALUE}};',
             ],
                 ]
         );
