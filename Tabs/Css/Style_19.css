@@ -97,6 +97,16 @@
     box-shadow: 0px 9px 25px -8px rgba(110, 110, 110, 0.47);
     z-index: 222
 }
+.sa-addons-tabs-main-wrapper-style-19 .sa-addons-body p{
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Verdana";
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+   
+}
 
 @media only screen and (min-width:669px) and (max-width:993px) {
     .sa-addons-tabs-main-wrapper-style-19 {
