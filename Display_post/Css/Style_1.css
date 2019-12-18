@@ -256,8 +256,7 @@
     .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link{   
         font-size: 14px; 
         border-radius: 50px 50px 50px 50px;
-        padding: OxiAddonsDP-B-P-bottom px OxiAddonsDP-B-M-top px OxiAddonsDP-B-P-left px OxiAddonsDP-B-P-right px;  
-    } 
+          } 
 }
 @media only screen and (max-width : 400px){
     .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-button{  

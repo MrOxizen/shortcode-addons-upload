@@ -111,13 +111,13 @@ class Style_2 extends Templates
                 $image_or_btn = $icon;
             }
             if ($this->media_render('sa_light_box_image', $value) != '') {
-                $light_box = '<div class="oxi_addons__light_box_item" ' . ((array_key_exists('sa_light_box_clickable', $style) && $style['sa_light_box_clickable'] == 'image') ? 'style="width: 100%"' : '') . '  >  
+                $light_box = '<div class="oxi_addons__light_box_item  lightbox_key_' . $key . '" ' . ((array_key_exists('sa_light_box_clickable', $style) && $style['sa_light_box_clickable'] == 'image') ? 'style="width: 100%"' : '') . '  >  
                           ' . $image_or_btn . '
                     </div>';
             }
 
             echo '<div class="oxi_addons__light_box_style_2 ' . $this->column_render('sa_info_boxes_column', $style) . ' "> 
-                    <div class="oxi_addons__light_box_parent lightbox_key_' . $key . '"> 
+                    <div class="oxi_addons__light_box_parent"> 
                         ' . $light_box . '
                     </div>
                 </div>';

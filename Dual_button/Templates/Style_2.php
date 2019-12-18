@@ -12,11 +12,14 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates {
+class Style_2 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
+    public function default_render($style, $child, $admin)
+    {
         $href = '';
         $target = '';
         $middle_text = $href_left = $left_btn_text = $icon_left = $icon_text = $href_right = $target_right = $right_btn_text = $pos = $icon_right = $middle_text = '';
@@ -53,7 +56,7 @@ class Style_2 extends Templates {
             } else {
                 $middle_text = $this->font_awesome_render($style['sa_dual_btn_mid_icon']);
             }
-            $middle_text = '<div class="oxi-addons-btn-group-before OxiAddonsEqualHeightWidth" > ' . $middle_text . '</div>';
+            $middle_text = '<div class="oxi-addons-btn-group-before" > ' . $middle_text . '</div>';
         }
         if ($style['sa_dual_btn_right_position'] == 'left') {
             $icon_text_right = $icon_right . $right_btn_text;
@@ -70,5 +73,4 @@ class Style_2 extends Templates {
                         </div>
                     </div>';
     }
-
 }

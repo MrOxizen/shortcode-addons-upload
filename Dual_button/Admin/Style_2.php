@@ -154,68 +154,17 @@ class Style_2 extends AdminStyle
                 'label' => esc_html__('Middle', SHORTCODE_ADDOONS),
             ]
         );
-        $this->add_responsive_control(
-            'sa_dual_btn_mindle_width',
+        $this->add_control(
+            'sa_dual_btn_mid_middle_switcher',
             $this->style,
             [
-                'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 500,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 0.1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => 'width:{{SIZE}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_dual_btn_mindle_height',
-            $this->style,
-            [
-                'label' => __('Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 500,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 0.1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => 'height:{{SIZE}}{{UNIT}};'
-                ],
+                'label' => __('Middle Item', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => TRUE,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
             ]
         );
         $this->add_control(
@@ -235,6 +184,9 @@ class Style_2 extends AdminStyle
                         'title' => __('Icon', SHORTCODE_ADDOONS),
                     ],
                 ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
+                ]
             ]
         );
         $this->add_control(
@@ -246,6 +198,9 @@ class Style_2 extends AdminStyle
                 'default' => 'fas fa-adjust',
                 'condition' => [
                     'sa_dual_btn_mid_text_icon' => 'icon'
+                ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
                 ]
             ]
         );
@@ -263,6 +218,9 @@ class Style_2 extends AdminStyle
                 ],
                 'condition' => [
                     'sa_dual_btn_mid_text_icon' => 'text'
+                ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
                 ]
             ]
         );
@@ -278,6 +236,44 @@ class Style_2 extends AdminStyle
                 ],
                 'condition' => [
                     'sa_dual_btn_mid_text_icon' => 'icon'
+                ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
+                ]
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_icon_box_w_h',
+            $this->style,
+            [
+                'label' => __('Width & Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => 'max-width: {{SIZE}}{{UNIT}}; width: 100%; height: {{SIZE}}{{UNIT}};'
+                ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
                 ]
             ]
         );
@@ -292,6 +288,9 @@ class Style_2 extends AdminStyle
                 ],
                 'condition' => [
                     'sa_dual_btn_mid_text_icon' => 'text'
+                ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
                 ]
             ]
         );
@@ -306,6 +305,9 @@ class Style_2 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => 'color : {{VALUE}}; '
                 ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
+                ]
             ]
         );
         $this->add_control(
@@ -319,6 +321,9 @@ class Style_2 extends AdminStyle
                 'selector' => [
                     '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => 'background : {{VALUE}}; '
                 ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
+                ]
             ]
         );
 
@@ -334,24 +339,27 @@ class Style_2 extends AdminStyle
                     'size' => '',
                 ],
                 'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 500,
-                        'step' => 1,
-                    ],
                     '%' => [
                         'min' => 0,
-                        'max' => 100,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
                         'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 100,
-                        'step' => 0.1,
+                        'max' => 10,
+                        'step' => .1,
                     ],
                 ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
                 ]
             ]
         );
@@ -366,25 +374,40 @@ class Style_2 extends AdminStyle
                     'size' => '',
                 ],
                 'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 500,
-                        'step' => 1,
-                    ],
                     '%' => [
                         'min' => 0,
-                        'max' => 100,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
                         'step' => 1,
                     ],
                     'em' => [
                         'min' => 0,
-                        'max' => 100,
-                        'step' => 0.1,
+                        'max' => 10,
+                        'step' => .1,
                     ],
                 ],
                 'selector' => [
                     '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_dual_btn_mid_middle_switcher' => 'yes'
                 ]
+            ]
+        );
+        $this->add_group_control(
+            'sa_dual_btn_mid_box_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-dual-button-style-2 .oxi-addons-btn-group-before' => ''
+                ],
+
             ]
         );
 

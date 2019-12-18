@@ -50,14 +50,18 @@ class Style_1 extends Templates
 		if ($this->font_awesome_render($style['ssa_dual_btn_right_icon']) != '') {
 			$icon_right = $this->font_awesome_render($style['ssa_dual_btn_right_icon']);
 		}
-		if ($style['sa_dual_btn_mid_icon'] != '' || $style['sa_dual_btn_mid_text'] != '') {
-			if ($style['sa_dual_btn_mid_text_icon'] == 'text') {
-				$middle_text = $this->text_render($style['sa_dual_btn_mid_text']);
-			} else {
-				$middle_text = $this->font_awesome_render($style['sa_dual_btn_mid_icon']);
+		if (array_key_exists('sa_dual_btn_mid_middle_switcher', $style) && $style['sa_dual_btn_mid_middle_switcher'] == 'yes') {
+			if ($style['sa_dual_btn_mid_icon'] != '' || $style['sa_dual_btn_mid_text'] != '') {
+				if ($style['sa_dual_btn_mid_text_icon'] == 'text') {
+					$middle_text = $this->text_render($style['sa_dual_btn_mid_text']);
+				} else {
+					$middle_text = $this->font_awesome_render($style['sa_dual_btn_mid_icon']);
+				}
+				$middle_text = '<div class="oxi-addons-btn-group-before" > ' . $middle_text . '</div>';
 			}
-			$middle_text = '<div class="oxi-addons-btn-group-before OxiAddonsEqualHeightWidth" > ' . $middle_text . '</div>';
 		}
+
+
 		if ($style['sa_dual_btn_right_position'] == 'left') {
 			$icon_text_right = $icon_right . $right_btn_text;
 		} else {
