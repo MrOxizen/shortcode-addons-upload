@@ -306,7 +306,7 @@ class Style_21 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-header' => 'paddding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
