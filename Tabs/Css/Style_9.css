@@ -6,8 +6,9 @@
 
 .sa-addons-tabs-main-wrapper-style-9 .sa-addons-tabs-main-wrapper {
     display: flex;
-    border-radius: 10px 10px 0px 0px;
+   
     box-shadow: 0px 1px 25px -8px rgba(110, 110, 110, 0.47);
+    overflow: hidden;
 }
 
 .sa-addons-tabs-main-wrapper-style-9 .sa_tabs_icon {

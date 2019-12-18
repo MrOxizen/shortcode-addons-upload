@@ -275,7 +275,7 @@ class Style_21 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-main-tab-header' => 'width: {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-21 .sa-addons-main-tab-header' => 'width: {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
