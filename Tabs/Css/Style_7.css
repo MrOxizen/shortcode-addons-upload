@@ -41,7 +41,8 @@
     align-items: stretch;
     background: rgba(34, 130, 117, 1);
     border-radius: 10px 10px 0px 0px;
-    margin: 0px 0px 0px 0px
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
 }
 
 .sa-addons-tabs-main-wrapper-style-7 .sa-addons-header-two {
@@ -65,16 +66,13 @@
 }
 
 .sa-addons-tabs-main-wrapper-style-7 .sa-addons-header:first-child {
-    border-left-width: 1px;
-    border-top-left-radius: 10px
+    border-left-width: 0px !important;
+    
 }
 
 .sa-addons-tabs-main-wrapper-style-7 .sa-addons-header:last-child {
-    border-top-right-radius: 10px
-}
-
-.sa-addons-tabs-main-wrapper-style-7 .sa-addons-header {
-    border-left-width: 0
+    border-right-width: 0px !important;
+    
 }
 
 .sa-addons-tabs-main-wrapper-style-7 .sa-active {
@@ -135,7 +133,7 @@
     font-style: normal;
     line-height: 1.5;
     text-align: left;
-    
+
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {

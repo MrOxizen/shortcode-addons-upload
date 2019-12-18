@@ -215,9 +215,16 @@ class Style_7 extends AdminStyle {
                 'sa_tabs_headding_body_bg', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                'selector' => [
-                    '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-7 .sa-addons-main-tab-header' => ''
-                ],
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-7 .sa-addons-main-tab-header' => ''
+            ],
+                ]
+        );
+
+        $this->add_group_control(
+                'sa_tabs_header_border', $this->style, [
+            'type' => Controls::BORDER,
+            'selector' => [
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-7 .sa-addons-main-tab-header' => '',
             ],
                 ]
         );
