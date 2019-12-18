@@ -513,6 +513,7 @@ class Style_16 extends AdminStyle {
             ],
                 ]
         );
+          
         $this->add_responsive_control(
                 'sa_tabs_headding_M', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
