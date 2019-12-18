@@ -10,7 +10,7 @@
 
     max-width : 500px;
     border : 0px solid #c20b0b;
-    background : linear-gradient(rgba(255,255,255,1.00), rgba(255,255,255,1.00)), url("http : //localhost/wordpress/wp-content/uploads/2018/12/47159369_2191831407495588_4346524869400199168_n.jpg") no-repeat center center;
+    background : linear-gradient(rgba(255,255,255,1.00), rgba(255,255,255,1.00));
     -webkit-background-size : cover;
     -moz-background-size : cover;
     -o-background-size : cover;

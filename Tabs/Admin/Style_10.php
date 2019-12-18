@@ -246,7 +246,7 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-main-tab-header' => 'width: {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-main-tab-header' => 'width: {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -277,7 +277,7 @@ class Style_10 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-main-tab-header' => 'paddding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-10 .sa-addons-main-tab-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );

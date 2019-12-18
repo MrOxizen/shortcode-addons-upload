@@ -275,7 +275,7 @@ class Style_16 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-4 .sa-addons-main-tab-header' => 'width: {{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-16 .sa-addons-main-tab-header' => 'width: {{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -306,7 +306,7 @@ class Style_16 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-16 .sa-addons-main-tab-header' => 'paddding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .sa-addons-tabs-main-wrapper-style-16 .sa-addons-main-tab-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -513,6 +513,7 @@ class Style_16 extends AdminStyle {
             ],
                 ]
         );
+          
         $this->add_responsive_control(
                 'sa_tabs_headding_M', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
