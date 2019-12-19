@@ -815,7 +815,27 @@ class Style_2 extends AdminStyle
                 ]
             ]
         );
-
+        $this->add_control(
+            'sa_s_image_layout_linke_open',
+            $this->style,
+            [
+                'label' => __('Link Style', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_TEXT,
+                'default' => '_blank',
+                'options' => [
+                    '' => [
+                        'title' => __('Current Tab', SHORTCODE_ADDOONS),
+                    ],
+                    '_blank' => [
+                        'title' => __('New Tab', SHORTCODE_ADDOONS),
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}}  .oxi-addons-image-main ' => '',
+                ],
+            ]
+        );
         $this->add_control(
             'sa_display_post_title_tag',
             $this->style,
@@ -845,6 +865,7 @@ class Style_2 extends AdminStyle
                 ],
             ]
         );
+
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [

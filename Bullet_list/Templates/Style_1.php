@@ -3,7 +3,7 @@
 namespace SHORTCODE_ADDONS_UPLOAD\Bullet_list\Templates;
 
 if (!defined('ABSPATH')) {
-    exit;
+	exit;
 }
 
 /**
@@ -12,70 +12,73 @@ if (!defined('ABSPATH')) {
  *
  * @author $biplob018
  */
+
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_1 extends Templates
+{
 
-    public function default_render($style, $child, $admin) {
-        if($style['sa-bl-g-max-width-control'] == 'max-width'){
-                $class = 'sa-bl-width-auto';
-            }
-        echo '<div class="oxi-addons-bullet-list-area">
+	public function default_render($style, $child, $admin)
+	{
+		if ($style['sa-bl-g-max-width-control'] == 'max-width') {
+			$class = 'sa-bl-width-auto';
+		}
+		echo '<div class="oxi-addons-bullet-list-area">
                     <div class="oxi-addons-bullet-list-full-content"> 
-			<div class="oxi-addons-list-type-1 '.$class.'">
+			<div class="oxi-addons-list-type-1 ' . $class . '">
                             <ol class="oxi-addons-list-ol ">';
-        $styledata = $this->style;
-        foreach ($styledata['sa_image_accordion_data_style_1'] as $key => $value) {
-            $textheading = '';
-            
-            if (array_key_exists('sa_bl_text', $value) && $value['sa_bl_text'] != '') {
-                if(array_key_exists('sa_bl_url-url', $value) && $value['sa_bl_url-url'] != ''){
-                    $textheading .= '<a '.$this->url_render('sa_bl_url', $value).' class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</a>';
-                }else{
-                    $textheading .= '<div class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</div>';
-                }
-                
-            }
-                echo '<li class="oxi-addons-list-li ">
-                    '.$textheading.'';
-            echo '</li>';
-        }
-        echo '          </ol>
+		$styledata = $this->style;
+		foreach ($styledata['sa_image_accordion_data_style_1'] as $key => $value) {
+			$textheading = '';
+
+			if (array_key_exists('sa_bl_text', $value) && $value['sa_bl_text'] != '') {
+				if (array_key_exists('sa_bl_url-url', $value) && $value['sa_bl_url-url'] != '') {
+					$textheading .= '<a ' . $this->url_render('sa_bl_url', $value) . ' class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</a>';
+				} else {
+					$textheading .= '<div class="oxi-BL-link">' . $this->text_render($value['sa_bl_text']) . '</div>';
+				}
+			}
+			echo '<li class="oxi-addons-list-li ">
+                    ' . $textheading . '';
+			echo '</li>';
+		}
+		echo '          </ol>
                     </div>
                 </div>
             </div>
             
         ';
-    }
+	}
 
-    public function old_render() {
-        $style = $this->dbdata;
-        $child = $this->child;
-        $oxiid = $style['id'];
-        $stylefiles = explode('||#||', $style['css']);
-        $styledata = explode('|', $stylefiles[0]);
+	public function old_render()
+	{
+		$style = $this->dbdata;
+		$child = $this->child;
+		$oxiid = $style['id'];
+		$stylefiles = explode('||#||', $style['css']);
+		$styledata = explode('|', $stylefiles[0]);
 
-        echo '<div class="oxi-addons-container"> 
+		echo '<div class="oxi-addons-container"> 
             <div class="oxi-addons-row"> 
 		<div class="oxi-addons-bullet-list-' . $oxiid . '">
                     <div class="oxi-addons-bullet-list-full-content"> 
 			<div class="oxi-addons-list-type-1">
                             <ol class="oxi-addons-list-ol ">';
 
-        foreach ($child as $key => $one_item) {
+		foreach ($child as $key => $one_item) {
 
-            $a_tag = '';
-            $listfiles = explode('||#||', $one_item['files']);
-            if (!empty($listfiles[1])) {
-                $a_tag = '<a href="' . OxiAddonsUrlConvert($listfiles[3]) . '" class="oxi-BL-link">' . OxiAddonsTextConvert($listfiles[1]) . '</a>';
-            }
-            echo'
+			$a_tag = '';
+			$listfiles = explode('||#||', $one_item['files']);
+			if (!empty($listfiles[1])) {
+				$a_tag = '<a href="' . OxiAddonsUrlConvert($listfiles[3]) . '" class="oxi-BL-link">' . OxiAddonsTextConvert($listfiles[1]) . '</a>';
+			}
+			echo '
                 <li class="oxi-addons-list-li">' . $a_tag . '
 		';
-            echo '</li>';
-        }
+			echo '</li>';
+		}
 
-        echo'                   </ol>
+		echo '                   </ol>
                         </div> 
                     </div>
                 </div>
@@ -83,7 +86,7 @@ class Style_1 extends Templates {
 	</div>
 	';
 
-        $css = '
+		$css = '
 	
 		.oxi-addons-bullet-list-' . $oxiid . '{
 			width:100%;
@@ -237,7 +240,6 @@ class Style_1 extends Templates {
 
 	}
 	';
-        wp_add_inline_style('shortcode-addons-style', $css);
-    }
-
+		wp_add_inline_style('shortcode-addons-style', $css);
+	}
 }

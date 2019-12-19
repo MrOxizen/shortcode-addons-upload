@@ -75,7 +75,7 @@
     content: "";
     height: 0;
     position: absolute;
-    right: 6px;
+    right: 7px;
     top: 95px;
     width: 0
 }
@@ -90,7 +90,7 @@
     border-width: 15px;
     content: "";
     height: 0;
-    left: 5px;
+    left: 6px;
     position: absolute;
     top: 395px;
     width: 0
@@ -135,12 +135,16 @@
 .oxi-addons__main-wrapper-post-style-2 .oxi_addons__tooltip::before {
     border-color: transparent transparent rgb(51, 51, 51) transparent;
     border-style: solid;
-    border-width: 15px;
+    border-width: 12px;
     content: "";
     position: absolute;
     left: 50%;
-    top: -28px;
+    top: -24px;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 .oxi-addons__main-wrapper-post-style-2:hover .oxi_addons__tooltip {

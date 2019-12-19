@@ -26,7 +26,7 @@
  .oxi-addons-content-boxes-list {
      padding: 10px 10px 10px 10px;
      display: inline-block;
-     width: 100%; 
+     width: 100%;
  }
 
  .oxi-addons-content-boxes-list .oxi-addons-right-side {
@@ -96,7 +96,7 @@
      display: block;
      z-index: 1;
  }
- 
+
  .oxi-addons-content-boxes-list .oxi-addons-content-boxes-icon:after {
      position: absolute;
      content: "";
@@ -158,7 +158,7 @@
      .oxi-addons-main-wrapper-full-area {
          padding: 0px 0px 0px 0px
      }
- 
+
      .oxi-addons-content-boxes-list {
          padding: 10px 10px 10px 10px
      }

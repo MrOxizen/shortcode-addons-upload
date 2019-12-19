@@ -158,12 +158,14 @@
     .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link {
         Padding: 8px 8px 8px 8px;
         font-size: 13px;
-    }  
+    }
+
     .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link:before {
         Padding: 8px 8px 8px 8px;
         font-size: 12px;
         border-width: 2px 2px 2px 2px;
-    } 
+    }
+
     .oxi-addons-bullet-list-area .oxi-addons-list-type-1 .oxi-BL-link:hover:before {
         border-width: 2px 2px 2px 2px;
     }

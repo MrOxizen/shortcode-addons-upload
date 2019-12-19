@@ -221,6 +221,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link:before' => '',
                 ]
@@ -362,6 +363,7 @@ class Style_2 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-bullet-list-full-area .oxi-addons-list-type-1 .oxi-BL-link' => '',
                 ]
