@@ -37,7 +37,9 @@
     ;
     text-align: left;
     border-top: 3px solid #795548;
-    border-bottom: 2px solid #795548
+    border-bottom: 2px solid #795548;
+    transition: none;
+     
 }
 
 .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info {
@@ -252,102 +254,3 @@
     transform: translate(-50%, 50%);
 }
 
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-testimonials-nine-padding .oxi-testimonials-nine-padding {
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-item-nine {
-        max-width: 350px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info {
-        padding: 10px 10px 10px 10px;
-        font-size: 16px;
-        border-top: 3px solid #795548;
-        border-bottom: 2px solid #795548
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info {
-        border-top: 3px solid #c25f34;
-        border-bottom: 2px solid #c25f34
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info:after {
-        width: 10px;
-        height: 10px;
-        bottom: -7px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image-parent {
-        padding: 0px 4px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image {
-        max-width: 70px;
-        margin: 30px 10px 10px 10px;
-        border-radius: 50px 50px 50px 50px;
-        border-width: 4px 4px 4px 4px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image:after {
-        padding-bottom: 70px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img {
-        border-radius: 50px 50px 50px 50px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name-body {
-        padding: 0px 4px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name {
-        font-size: 20px;
-        padding: 15px 10px 0px 10px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working {
-        font-size: 16px;
-        padding: 0px 10px 15px 10px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-testimonials-nine-padding .oxi-testimonials-nine-padding {
-        padding: 20px 10px 20px 10px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-item-nine {
-        max-width: 350px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info {
-        padding: 10px Ubuntupx 10px 20px;
-        font-size: 16px;
-        border-top: 3px solid #795548;
-        border-bottom: 2px solid #795548
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine:hover .oxi-testimonials-style-nine-info {
-        border-top: 3px solid #c25f34;
-        border-bottom: 2px solid #c25f34
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-info:after {
-        width: 10px;
-        height: 10px;
-        bottom: -7px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image-parent {
-        padding: 0px OxiAddonsTestimonial-p-border-right px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image {
-        max-width: 70px;
-        margin: 30px 10px 10px 10px;
-        border-radius: 50px 50px 50px 50px;
-        border-width: 4px 4px 4px 4px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image:after {
-        padding-bottom: 70px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-image img {
-        border-radius: 50px 50px 50px 50px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name-body {
-        padding: 0px OxiAddonsTestimonial-p-border-right px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-name {
-        font-size: 20px;
-        padding: 15px 10px 0px 10px
-    }
-    .oxi-testimonials-nine-padding .oxi-testimonials-style-nine-working {
-        font-size: 16px;
-        padding: 0px 10px 15px 10px
-    }
-}

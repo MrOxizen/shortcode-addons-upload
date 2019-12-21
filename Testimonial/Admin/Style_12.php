@@ -124,6 +124,11 @@ class Style_12 extends AdminStyle {
                     'max' => 2000,
                     'step' => 1,
                 ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
                 'em' => [
                     'min' => 1,
                     'max' => 200,
@@ -335,6 +340,11 @@ class Style_12 extends AdminStyle {
                     'max' => 2000,
                     'step' => 1,
                 ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
+                ],
                 'em' => [
                     'min' => 1,
                     'max' => 200,
@@ -365,6 +375,11 @@ class Style_12 extends AdminStyle {
                     'min' => 1,
                     'max' => 2000,
                     'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => .1,
                 ],
                 'em' => [
                     'min' => 1,
