@@ -603,7 +603,7 @@ class Style_4 extends AdminStyle
             ]
         ); 
         $this->add_control(
-            'sa-is-btn-h-bg',
+            'sa-is-text-bg',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
