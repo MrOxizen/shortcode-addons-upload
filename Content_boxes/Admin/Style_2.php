@@ -285,7 +285,6 @@ class Style_2 extends AdminStyle
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',

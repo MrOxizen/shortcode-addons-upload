@@ -170,7 +170,6 @@ class Style_12 extends AdminStyle
             [
                 'label' => __('Max-Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 300,
@@ -206,7 +205,6 @@ class Style_12 extends AdminStyle
             [
                 'label' => __('Icon Box Height', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 300,

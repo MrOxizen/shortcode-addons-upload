@@ -152,7 +152,6 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Max-Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 300,
@@ -218,7 +217,6 @@ class Style_6 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',

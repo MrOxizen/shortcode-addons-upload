@@ -140,7 +140,6 @@ class Style_8 extends AdminStyle
             [
                 'label' => __('Max-Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 300,
@@ -205,8 +204,7 @@ class Style_8 extends AdminStyle
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
                 'type' => Controls::DIMENSIONS,
-                'loader' => true,
-                'default' => [
+                 'default' => [
                     'unit' => 'px',
                     'size' => 20,
                 ],
@@ -400,7 +398,6 @@ class Style_8 extends AdminStyle
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'loader' => TRUE,
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',

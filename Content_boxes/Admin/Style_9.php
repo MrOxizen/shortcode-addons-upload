@@ -205,7 +205,6 @@ class Style_9 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
-                'loader' => true,
                 'selector' => [
                     '{{WRAPPER}} .oxi_cb_temp_9 .oxi-content-body' => ''
                 ],
@@ -358,7 +357,6 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Height Ratio', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => '%',
                     'size' => 60,
@@ -452,7 +450,6 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Icon Height', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 100,
@@ -485,7 +482,6 @@ class Style_9 extends AdminStyle
             [
                 'label' => __('Icon Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 100,

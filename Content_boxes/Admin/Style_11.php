@@ -143,7 +143,6 @@ class Style_11 extends AdminStyle
             [
                 'label' => __('Max-Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 300,
@@ -189,8 +188,7 @@ class Style_11 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
-                'loader' => true,
-                'selector' => [
+                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-body' => ''
                 ],
             ]
@@ -202,7 +200,6 @@ class Style_11 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
-                'loader' => true,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-body:hover' => ''
                 ],
@@ -482,7 +479,6 @@ class Style_11 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
-                'loader' => true,
                 'selector' => [
                     '{{WRAPPER}} .oxi-addons-cb-tem-11 .oxi-cb11-hrbox-box' => ''
                 ],

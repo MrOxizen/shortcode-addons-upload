@@ -196,7 +196,6 @@ class Style_10 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
-                'loader' => true,
                 'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-main' => ''
                 ],
@@ -209,8 +208,7 @@ class Style_10 extends AdminStyle
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
-                'loader' => true,
-                'selector' => [
+               'selector' => [
                     '{{WRAPPER}} .oxi-contentbox-temp-10 .oxi-contentbox-main:hover' => ''
                 ],
             ]
@@ -701,7 +699,6 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Icon Box Height', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 60,
@@ -734,7 +731,6 @@ class Style_10 extends AdminStyle
             [
                 'label' => __('Icon Box Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 60,
