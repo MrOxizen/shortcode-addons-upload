@@ -1,0 +1,203 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 2, 2019, 10:30:51 AM
+    Author     : biplob
+*/
+
+.oxi_cb_tem_13 {
+    width: 100%;
+    position: relative;
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-boxes-data { 
+    position: relative;
+    width: 100%;
+    float: left;
+    overflow: hidden; 
+    transform: scale(1);
+    transition: all .5s ; 
+    max-width: 250px;
+    -webkit-transition: all .5s ;
+    -moz-transition: all .5s ;
+    -ms-transition: all .5s ;
+    -o-transition: all .5s ; 
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-boxes-content-outside{
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+}
+.oxi_cb_tem_13 .oxi-addons-content-boxes-icon {
+    width: 100%;
+    text-align: center;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-icon-boxes-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-boxes-data::before {
+	content: '';
+	background: #0c283b;
+	width: 200%;
+    height: 200%;
+    left: 50%;
+    top: 50%;
+	position: absolute;
+	transform: translate(-150%, -150%) rotate(135deg);
+	-webkit-transform: translate(-150%, -150%) rotate(135deg);
+	-webkit-transition: all 700ms ease;
+	transition: all 700ms ease;
+	z-index: -1;
+	-moz-transform: translate(-150%, -150%) rotate(135deg);
+	-ms-transform: translate(-150%, -150%) rotate(135deg);
+	-o-transform: translate(-150%, -150%) rotate(135deg);
+	-moz-transition: all 700ms ease;
+	-ms-transition: all 700ms ease;
+	-o-transition: all 700ms ease;
+}
+.oxi_cb_tem_13 .oxi--right-to-left.oxi-addons-content-boxes-data::before {
+	transform: translate(50%, -150%) rotate(-135deg);
+	-webkit-transform: translate(50%, -150%) rotate(-135deg);
+	-moz-transform: translate(50%, -150%) rotate(-135deg);
+	-ms-transform: translate(50%, -150%) rotate(-135deg);
+	-o-transform: translate(50%, -150%) rotate(-135deg); 
+}
+.oxi_cb_tem_13 .oxi-addons-content-boxes-data:hover::before,
+.oxi_cb_tem_13 .oxi-addons-content-boxes-data.oxi_addons__hover_active::before {
+	transform:translate(-50%, -50%) rotate(135deg);
+	-webkit-transform:translate(-50%, -50%) rotate(135deg);
+	-moz-transform:translate(-50%, -50%) rotate(135deg);
+	-ms-transform:translate(-50%, -50%) rotate(135deg);
+	-o-transform:translate(-50%, -50%) rotate(135deg);
+}
+.oxi_cb_tem_13 .oxi--right-to-left.oxi-addons-content-boxes-data:hover::before,
+.oxi_cb_tem_13 .oxi--right-to-left.oxi-addons-content-boxes-data.oxi_addons__hover_active::before {
+	transform:translate(-50%, -50%) rotate(-135deg);
+	-webkit-transform:translate(-50%, -50%) rotate(-135deg);
+	-moz-transform:translate(-50%, -50%) rotate(-135deg);
+	-ms-transform:translate(-50%, -50%) rotate(-135deg);
+	-o-transform:translate(-50%, -50%) rotate(-135deg);
+}
+
+.oxi_cb_tem_13 .oxi-icons {
+    display: block;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-boxes-content {
+    width: 100%;
+    float: left;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-boxes-heading {
+    width: 100%;
+    float: left;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-boxes-sub-heading {
+    width: 100%;
+    float: left;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-boxes-content {
+    width: 100%;
+    float: left;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.oxi_cb_tem_13 .oxi-addons-content-icon-boxes-data {
+    width: 80px;
+    height: 80px;
+}
+
+.oxi_cb_tem_13 .oxi_addons__button_main {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+} 
+.oxi_cb_tem_13 .oxi_addons__button {
+	background: rgba(17, 106, 177, 1.00);
+	color: #ffffff;
+	display: block;
+	font-family: "caros-bold";
+	font-weight: 500;
+	font-style: normal;
+	font-size: 16px;
+	padding: 10px 25px 10px 25px;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+}
+
+
+.oxi_cb_tem_13 .oxi-addons-ribon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 17px;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center; 
+    color: #ffffff;
+    background: rgba(0, 113, 189, 1.00);
+    padding: 20px 0px 0px 0px;
+    width: 200px;
+    max-width: 100%;
+    height: 82px;
+    max-height: 100%;
+    line-height: 1.5; 
+    top: -9px; 
+    transform-origin: 50% 50%
+}
+.oxi_cb_tem_13 .oxi-addons-ribon.ribon_left {
+    left: -70px;
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+}
+.oxi_cb_tem_13 .oxi-addons-ribon.ribon_right {
+    right: -69px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+@media only screen and (min-width:669px) and (max-width:993px) {}
+
+@media only screen and (max-width:668px) {}

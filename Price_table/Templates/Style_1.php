@@ -31,7 +31,6 @@ class Style_1 extends Templates
                 $price = '<div class="oxi-addons-price">' . $this->text_render($value['sa_price_table_price']) . '</div>';
             }
             if (array_key_exists('sa_price_table_ribbon_switter', $style) && $style['sa_price_table_ribbon_switter'] == 'yes') {
-
                 if (array_key_exists('sa_price_table_ribbon_text', $value) && $value['sa_price_table_ribbon_text'] != '') {
                     $ribbon = '<div class="oxi-addons-ribon ' . $style['sa_price_table_ribbon_position_left_right'] . '">' . $this->text_render($value['sa_price_table_ribbon_text']) . '</div>';
                 }
