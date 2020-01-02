@@ -1,0 +1,165 @@
+ .oxi_addons__card_content_style_1 .oxi_addons__content_main {
+     overflow: hidden;
+     position: relative;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     transition: 0.5s all ease-in;
+     -webkit-transition: 0.5s all ease-in;
+     -moz-transition: 0.5s all ease-in;
+     -ms-transition: 0.5s all ease-in;
+     -o-transition: 0.5s all ease-in;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__heading {
+     width: 100%;
+     font-size: 22px;
+     color: #333333;
+     font-family: "Open Sans";
+     font-weight: 500;
+     font-style: normal;
+     text-align: center;
+     padding: 10px 0;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__details {
+     width: 100%;
+     font-size: 16px;
+     color: #333333;
+     font-family: "Open Sans";
+     font-weight: normal;
+     font-style: normal;
+     text-align: center;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__button_main {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center
+ }
+
+
+ .oxi_addons__card_content_style_1 .oxi_addons__button {
+     background: rgba(17, 106, 177, 1.00);
+     color: #ffffff;
+     display: flex;
+     align-items: center;
+     font-family: "Open Sans";
+     font-weight: 500;
+     font-style: normal;
+     font-size: 16px;
+     border: 0px solid;
+     vertical-align: middle;
+     border-color: #ffffff;
+     border-radius: 50px 50px 50px 50px;
+     padding: 10px 25px 10px 25px;
+     margin: 10px 0px 20px 0px;
+     cursor: pointer;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__button .oxi-icons {
+     margin-left: 5px;
+     margin-right: 5px;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__image {
+     position: relative;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__image::after {
+     content: "";
+     display: inline-block;
+     padding-bottom: 50%;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__image img {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__image_main {
+     position: relative;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge {
+     position: absolute;
+     padding: 5px 15px;
+     border-radius: 50px;
+     background-color: #fff;
+     font-size: 12px;
+     -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+     -ms-border-radius: 50px;
+     -o-border-radius: 50px;
+     z-index: 11;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_top-left {
+     top: 1rem;
+     left: 1rem;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_top-center {
+     top: 1rem;
+     left: 50%;
+     -webkit-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     transform: translateX(-50%);
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_top-right {
+     top: 1rem;
+     right: 1rem;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_middle-left {
+     top: 50%;
+     left: 1rem;
+     -webkit-transform: translateY(-50%);
+     -ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_middle-center {
+     top: 50%;
+     left: 50%;
+     -webkit-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_middle-right {
+     top: 50%;
+     right: 1rem;
+     -webkit-transform: translateY(-50%);
+     -ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_bottom-left {
+     bottom: 1rem;
+     left: 1rem;
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_bottom-center {
+     bottom: 1rem;
+     left: 50%;
+     -webkit-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     transform: translateX(-50%);
+ }
+
+ .oxi_addons__card_content_style_1 .oxi_addons__badge_bottom-right {
+     right: 1rem;
+     bottom: 1rem;
+ }
+ 
+
+
+ @media only screen and (min-width:669px) and (max-width:993px) {}
+
+ @media only screen and (max-width:668px) {}
