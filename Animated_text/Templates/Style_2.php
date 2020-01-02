@@ -23,21 +23,21 @@ class Style_2 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $styledata = $this->style;
-        $id = $styledata['shortcode-addons-elements-id'];
-        echo '<div class="oxi-addons-AT-style-2">
-                    <span class="oxi-animated-style-2">' . $this->text_render($style['sa_animated_text']) . '</span>
+        $oxiid = $styledata['shortcode-addons-elements-id'];
+        echo '<div class="oxi-addons-AT-style-2 oxi-addons-AT-style-2-'.$oxiid.'">
+                    <span class="oxi-animated-style-2 oxi-animated-style-2-'.$oxiid.'">' . $this->text_render($style['sa_animated_text']) . '</span>
             </div>';
     }
 
     public function public_jquery() {
-        $this->JSHANDLE = 'jquery-dsaanimatedtext-js-2';
+        $this->JSHANDLE = 'jquery-dsaanimatedtext-js-2 jquery-dsaanimatedtext-js-2';
         wp_enqueue_script('jquery-dsaanimatedtext-js-2', SA_ADDONS_UPLOAD_URL . '/Animated_text/File/shuffletext-jquery.js', true, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery() {
         $jquery = '';
         $styledata = $this->style;
-        $id = $styledata['shortcode-addons-elements-id'];
+        $oxiid = $styledata['shortcode-addons-elements-id'];
         $txtdata = '';
         foreach ($styledata['sa_animated_text_data_2'] as $key => $values) {
             foreach ($values as $value) {
@@ -48,7 +48,7 @@ class Style_2 extends Templates {
         }
         $id = $this->WRAPPER;
         $id = str_replace('-', "_", $id);
-        $jquery .= 'jQuery(".oxi-animated-style-2").ShuffleText(
+        $jquery .= 'jQuery(".oxi-animated-style-2-'.$oxiid.'").ShuffleText(
                      [ ' . $txtdata . '],
                     {loop: true, delay: ' . $styledata['sa-animated_text_delay-size'] . ', shuffleSpeed:' . $styledata['sa-animated_text_letter_suffle-size'] . ',})';
         return $jquery;

@@ -1,0 +1,140 @@
+.sa_addons_numbers_container_style_4 {
+    display: flex;
+    width: 100%;
+    max-width: 275px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px
+}
+
+.sa_addons_numbers_style_4 {
+    width: 100%;
+    float: left;
+    position: relative;
+    background: rgba(255, 255, 255, 1.00);
+    border-radius: 10px 10px 10px 10px;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #fd3387;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0px 2px 6px 0px rgba(153, 153, 153, 1)
+}
+
+.sa_addons_numbers_style_4 .sa_addons_numbers_icon {
+    width: 100%;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    height: 70px;
+    text-align: center;
+    padding: 0 10px 0 10px
+}
+
+.sa_addons_numbers_style_4 .oxi-icons {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: rgba(47, 6, 150, 1.00);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    border-radius: 50px 50px 50px 50px;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #ffffff
+}
+
+.sa_addons_numbers_style_4 .sa_addons_numbers_headding {
+    width: 100%;
+    float: left;
+    margin-top: 35px;
+    color: #2f0696;
+    font-size: 22px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 5px 5px 5px 5px
+}
+
+.sa_addons_numbers_style_4 .sa_addons_numbers_content {
+    width: 100%;
+    float: left;
+    color: #575757;
+    font-size: 14px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px 10px 10px 10px
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_numbers_container_style_4 {
+        max-width: 275px;
+        padding: 20px 20px 20px 20px
+    }
+    .sa_addons_numbers_style_4 {
+        border-radius: 10px 10px 10px 10px;
+        border-width: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+    .sa_addons_numbers_style_4 .sa_addons_numbers_icon {
+        top: -35px;
+        height: 70px;
+        padding: 0 10px 0 10px
+    }
+    .sa_addons_numbers_style_4 .oxi-icons {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 30px;
+        border-radius: 2px 2px 2px 2px;
+        border-width: 1px 1px 1px 1px
+    }
+    .sa_addons_numbers_style_4 .sa_addons_numbers_headding {
+        font-size: 22px;
+        padding: 5px 5px 5px 5px
+    }
+    .sa_addons_numbers_style_4 .sa_addons_numbers_content {
+        font-size: 14px;
+        padding: 10px 10px 10px 10px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_numbers_container_style_4 {
+        max-width: 275px;
+        padding: 20px 20px 20px 20px
+    }
+    .sa_addons_numbers_style_4 {
+        border-radius: 10px 10px 10px 10px;
+        border-width: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px
+    }
+    .sa_addons_numbers_style_4 .sa_addons_numbers_icon {
+        top: -35px;
+        height: 70px;
+        padding: 0 10px 0 10px
+    }
+    .sa_addons_numbers_style_4 .oxi-icons {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 30px;
+        border-radius: 0px 0px 0px 0px;
+        border-width: 0px 0px 0px 0px
+    }
+    .sa_addons_numbers_style_4 .sa_addons_numbers_headding {
+        font-size: 22px;
+        padding: 5px 5px 5px 5px
+    }
+    .sa_addons_numbers_style_4 .sa_addons_numbers_content {
+        font-size: 14px;
+        padding: 10px 10px 10px 10px
+    }
+}
