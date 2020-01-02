@@ -190,6 +190,16 @@ class Style_9 extends AdminStyle
                 ]
             ]
         );
+        $this->add_group_control(
+            'sa_animated_text_second_color_shadow',
+            $this->style,
+            [
+                'type' => Controls::TEXTSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons-wrapper-style-9 .oxi-addons-para .oxi-addons-span::after' => '',
+                ]
+            ]
+        );
         
 
         $this->end_controls_section();
