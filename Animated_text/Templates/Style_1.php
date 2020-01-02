@@ -23,9 +23,9 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
         
         $styledata = $this->style;
-        $id = $styledata['shortcode-addons-elements-id'];
-        echo '<div class="oxi-addons-AT-P-style-1">
-                    <span class="oxi-animated-style-1">' . $this->text_render($style['sa_animated_text']) . '</span>
+        $oxiid = $styledata['shortcode-addons-elements-id'];
+        echo '<div class="oxi-addons-AT-P-style-1 oxi-addons-AT-P-style-1-'.$oxiid.'">
+                    <span class="oxi-animated-style-1 oxi-animated-style-1-'.$oxiid.'">' . $this->text_render($style['sa_animated_text']) . '</span>
             </div>';
         
     }
@@ -38,7 +38,7 @@ class Style_1 extends Templates {
     public function inline_public_jquery() {
         $jquery = '';
         $styledata = $this->style;
-        $id = $styledata['shortcode-addons-elements-id'];
+        $oxiid = $styledata['shortcode-addons-elements-id'];
          $txtdata = '';
         foreach ($styledata['sa_animated_text_data'] as $key => $values) {  
             foreach($values as $value){ 
@@ -57,7 +57,7 @@ class Style_1 extends Templates {
             var index = 0;
 
             var ctrl = bubbleText({
-                element: jQuery(".oxi-animated-style-1"),
+                element: jQuery(".oxi-animated-style-1-'.$oxiid.'"),
                 newText: phrases_'.$id.'[index++],
                 letterSpeed: ' . $styledata['sa-animated_text_speed-size'] . ',
                 repeat: Infinity,
