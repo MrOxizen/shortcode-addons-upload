@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_4 extends Templates
+class Style_6 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -23,22 +23,17 @@ class Style_4 extends Templates
         $styledata = $this->style;
         $all_data = (array_key_exists('sa_number_data', $styledata) && is_array($styledata['sa_number_data'])) ? $styledata['sa_number_data'] : [];
         foreach ($all_data as $key => $value) {
-            $number = $heading = $content = $link = $endlink = '';
+            $number = $heading = $link = $endlink = '';
             if (array_key_exists('sa_number_icon', $value) && $value['sa_number_icon'] != '') {
-                $number .= '<div class="sa_addons_numbers_area">
-                                <div class="sa_addons_numbers_icon">
+                $number .= '<div class="sa_addons_numbers_icon">
+                                <div class="oxi_numbers">
                                     ' . $this->text_render($value['sa_number_icon']) . '
                                 </div>
-                            </div>';
+                        </div>';
             }
             if (array_key_exists('sa_number_h_text', $value) && $value['sa_number_h_text'] != '') {
                 $heading .= '<div class="sa_addons_numbers_headding">
                             ' . $this->text_render($value['sa_number_h_text']) . '
-                        </div>';
-            }
-            if (array_key_exists('sa_number_content', $value) && $value['sa_number_content'] != '') {
-                $content .= '<div class="sa_addons_numbers_content">
-                            ' . $this->text_render($value['sa_number_content']) . '
                         </div>';
             }
             if (array_key_exists('sa_number_url_open', $value) && $value['sa_number_url_open'] != '0') {
@@ -47,19 +42,17 @@ class Style_4 extends Templates
                     $endlink .= '</a>';
                 }
             }
-            echo '<div class="' . $this->column_render('sa_number_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
-                    <div class="sa_addons_numbers_container_style_4">';
+            echo '<div class="' . $this->column_render('sa_number_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">';
             echo $link;
-            echo '<div class="sa_addons_numbers_style_4 sa_addons_numbers_style_4_' . $key . '">
-                            ' . $number . '
-                            ' . $heading . '
-                            ' . $content . '
+            echo '<div class="sa_addons_numbers_container_style_6">
+                        <div class="sa_addons_numbers_style_6 sa_addons_numbers_style_6_' . $key . '">
+                            ' . ($style['sa_number_icon_position'] == 'top' ? $number . $heading : $heading . $number) . '
                         </div>';
-            echo $endlink;
             echo '</div>';
+            echo $endlink;
             echo '</div>';
         }
     }
 
-    
+   
 }

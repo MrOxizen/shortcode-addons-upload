@@ -1,0 +1,94 @@
+.sa_addons_numbers_container_style_6 {
+    display: flex;
+    width: 100%;
+    max-width: 250px;
+    display: -webkit-box;
+    margin: 0 auto;
+    padding: 15px 10px 15px 10px
+}
+
+.sa_addons_numbers_style_6 {
+    width: 100%;
+    background: rgba(255, 255, 255, 1.00);
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #fd3387;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 8px 15px 0px rgba(219, 219, 219, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sa_addons_numbers_style_6:hover {
+    background: rgba(235, 230, 230, 1);
+    box-shadow: 0px 10px 20px 8px rgba(219, 219, 219, 1);
+}
+
+.sa_addons_numbers_style_6 .sa_addons_numbers_icon {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.sa_addons_numbers_style_6 .oxi_numbers {
+    color: #7c00b5;
+    font-size: 35px;
+}
+
+.sa_addons_numbers_style_6:hover .oxi_numbers {
+    color: #42065e;
+}
+
+.sa_addons_numbers_style_6 .sa_addons_numbers_headding {
+    color: #757575;
+    font-size: 18px;
+    font-family: "Nanum Gothic";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+
+@media only screen and (min-width:669px) and (max-width:993px) {
+    .sa_addons_numbers_container_style_6 {
+        max-width: 250px;
+        padding: 40px 10px 10px 10px
+    }
+    .sa_addons_numbers_style_6 {
+        border-width: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+        -webkit-border-radius: 0px 0px 0px 0px;
+        -moz-border-radius: 0px 0px 0px 0px;
+        -ms-border-radius: 0px 0px 0px 0px;
+        -o-border-radius: 0px 0px 0px 0px;
+    }
+    .sa_addons_numbers_style_6 .oxi_numbers {
+        font-size: 35px;
+        margin: 5px 5px 5px 5px
+    }
+    .sa_addons_numbers_style_6 .sa_addons_numbers_headding {
+        font-size: 18px;
+        padding: 0px 0px 0px 0px
+    }
+}
+
+@media only screen and (max-width:668px) {
+    .sa_addons_numbers_container_style_6 {
+        max-width: 250px;
+        padding: 40px 10px 10px 10px
+    }
+    .sa_addons_numbers_style_6 {
+        border-width: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .sa_addons_numbers_style_6 .oxi_numbers {
+        font-size: 35px;
+        line-height: 35px
+    }
+    .sa_addons_numbers_style_6 .sa_addons_numbers_headding {
+        font-size: 22px;
+        padding: 10px 5px 5px 5px
+    }
+}
