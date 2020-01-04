@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_2 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -64,7 +64,7 @@ class Style_1 extends Templates
             }
 
 
-            echo '<div class="oxi_addons__card_content_style_1 oxi_addons__card_content_style_' . $key . ' ' . $this->column_render('sa_addons_card_column', $style) . '" >
+            echo '<div class="oxi_addons__card_content_style_2 oxi_addons__card_content_style_' . $key . ' ' . $this->column_render('sa_addons_card_column', $style) . '" >
                             <div class="oxi_addons__content_main_wrapper" ' . $this->animation_render('sa_addons_card_animation', $style) . '>
                             ' . $image . '
                                 <div class="oxi_addons__content_main"> 

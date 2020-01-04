@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Card;
+namespace SHORTCODE_ADDONS_UPLOAD\Document_viewer;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Elements_Frontend;
 
-class Card extends Elements_Frontend {
+class Document_viewer extends Elements_Frontend {
 
     public function pre_active() {
         return array('Style_1');
