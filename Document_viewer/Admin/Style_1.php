@@ -46,10 +46,15 @@ class Style_1 extends AdminStyle
                 'type' => Controls::REPEATER,
                 'fields' => [ 
                     'sa_document_viewer_link' => [
-                        'label' => esc_html__('File Source   ', SHORTCODE_ADDOONS),
-                        'type' => Controls::TEXT,  
-                        'placeholder' => 'https://example.com/sample.pdf',  
-                        'description'=>'any type of document file: pdf, xls, docx, ppt etc'
+                        'label' => esc_html__('File Source', SHORTCODE_ADDOONS),
+                        'type' => Controls::FILEUPLOAD,  
+                        'select'=> Controls::FILE, 
+                        'placeholder'=> 'http://www.example.com/simple.pdf', 
+                        'default' => [
+                            'type' => 'media-library',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2020/01/A-Sample-PDF.pdf',
+                        ],
+                        'controller' => 'add_group_control',
                     ],
                     
                     'sa_document_viewer_title' => [
