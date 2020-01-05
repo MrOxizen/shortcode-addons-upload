@@ -1,0 +1,121 @@
+
+
+
+
+
+.oxi_addons_step_flow_style1 {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px
+}
+
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_body {
+    width: 100%;
+    float: left;
+   
+    padding: 10px;
+   
+}
+
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_icon {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_icon_body {
+    display: inline-block;
+    position: relative;
+    z-index: 2
+}
+
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_icon_icon {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: #865d5d;
+    border-radius: 73px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: white;
+}
+
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_icon_body:before {
+    position: absolute;
+    content: "";
+    left: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 350px;
+    border-top: 1px solid #2ecc71;
+    border-bottom: none !important;
+    z-index: 1
+}
+
+.oxi_addons_step_flow_style1 .line_off .oxi_addons_step_flow_icon_body:before {
+    display: none
+}
+
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_icon .oxi-icons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px
+}
+.oxi_addons_step_flow_style1 .oxi_addons_step_icon_text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+}
+
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_heading {
+    width: 100%;
+    float: left;
+    color: #000;
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px
+}
+
+.oxi_addons_step_flow_style1 .oxi_addons_step_flow_content {
+    width: 100%;
+    float: left;
+    color: #000;
+    font-size: 15px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
