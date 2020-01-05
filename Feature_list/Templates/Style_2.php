@@ -23,7 +23,7 @@ class Style_2 extends Templates {
         $repeater = (array_key_exists('sa_feature_list_repeater', $style) && is_array($style['sa_feature_list_repeater'])) ? $style['sa_feature_list_repeater'] : [];
         foreach ($repeater as $key => $value) {
             $icon = $heading = $textarea = '';
-            
+
             if (array_key_exists('sa_fl_icon', $value) && $value['sa_fl_icon'] != '') {
                 $icon = '<div class="oxi_addons_feature_list_icon ' . $style['sa_fl_icon_shape'] . '">
                             ' . $this->font_awesome_render($value['sa_fl_icon']) . '
@@ -47,6 +47,16 @@ class Style_2 extends Templates {
                             
                            ' . $icon . '
                            <div class="oxi_addons_feature_list_content_body">  
+                               ' . $heading . '
+                               ' . $textarea . '   
+                           </div>
+                 </div>';
+
+            elseif ($style['sa_fl_icon_position'] == 'center'):
+                echo '<div class="oxi_addons_feature_list_section oxi_addons_feature_list_' . $key . ' icon_center">
+                            
+                           <div class="oxi_addons_feature_list_content_body">  
+                               ' . $icon . '
                                ' . $heading . '
                                ' . $textarea . '   
                            </div>
