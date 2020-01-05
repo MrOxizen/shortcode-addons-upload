@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_4 extends Templates
+class Style_7 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -23,13 +23,19 @@ class Style_4 extends Templates
         $styledata = $this->style;
         $all_data = (array_key_exists('sa_number_data', $styledata) && is_array($styledata['sa_number_data'])) ? $styledata['sa_number_data'] : [];
         foreach ($all_data as $key => $value) {
-            $number = $heading = $content = $link = $endlink = '';
+            $number = $heading = $content = $link = $endlink = $icon_p = '';
+            if ($style['sa_number_icon_position'] == 'left') {
+                $icon_p .= 'icon_left';
+            }
             if (array_key_exists('sa_number_icon', $value) && $value['sa_number_icon'] != '') {
-                $number .= '<div class="sa_addons_numbers_area">
-                                <div class="sa_addons_numbers_icon">
+                $number .= '<div class="sa_addons_numbers_icon">
+                            <div class="sa_icons_body">
+                                <div class="oxi_numbers">
                                     ' . $this->text_render($value['sa_number_icon']) . '
                                 </div>
-                            </div>';
+                            </div>
+                        </div>
+                ';
             }
             if (array_key_exists('sa_number_h_text', $value) && $value['sa_number_h_text'] != '') {
                 $heading .= '<div class="sa_addons_numbers_headding">
@@ -48,12 +54,16 @@ class Style_4 extends Templates
                 }
             }
             echo '<div class="' . $this->column_render('sa_number_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
-                    <div class="sa_addons_numbers_container_style_4">';
+                    <div class="sa_addons_numbers_container_style_7">';
+
             echo $link;
-            echo '<div class="sa_addons_numbers_style_4 sa_addons_numbers_style_4_' . $key . '">
-                            ' . $number . '
-                            ' . $heading . '
-                            ' . $content . '
+
+            echo '<div class="sa_addons_numbers_style_7 sa_addons_numbers_style_7_' . $key . ' ' . $icon_p . '">
+                                <div>
+                                    ' . $number . '
+                                    ' . $heading . '
+                                    ' . $content . '
+                                </div>
                         </div>';
             echo $endlink;
             echo '</div>';
@@ -61,5 +71,4 @@ class Style_4 extends Templates
         }
     }
 
-    
 }

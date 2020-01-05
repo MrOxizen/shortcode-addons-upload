@@ -1,0 +1,25 @@
+
+ .oxi_addons__document_viewer_content_style_1 .oxi_addons__document_viewer {
+	width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+ .oxi_addons__document_viewer_content_style_1 .oxi_addons__document {
+	width: 100%;
+	height: 500px;
+}
+.oxi_addons__document_viewer_content_style_1 .oxi_addons__document_warning {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.oxi_addons__document_viewer_content_style_1 .oxi_addons__document_warning > p {
+	font-size: 18px;
+	text-align: center;
+	background: #ff6f6f;
+	padding: 8px 20px;
+	color: white;
+}

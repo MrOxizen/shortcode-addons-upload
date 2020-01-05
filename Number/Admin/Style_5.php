@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_4 extends AdminStyle
+class Style_5 extends AdminStyle
 {
 
     public function register_controls()
@@ -67,7 +67,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '275',
+                    'size' => '400',
                 ],
                 'range' => [
                     'px' => [
@@ -87,7 +87,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_container_style_4' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_numbers_container_style_5' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -108,7 +108,7 @@ class Style_4 extends AdminStyle
                         'type' => Controls::TEXT,
                         'default' => 'Default Title',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_numbers_style_4.sa_addons_numbers_style_4_{{KEY}} .sa_addons_numbers_headding' => ''
+                            '{{WRAPPER}} .sa_addons_numbers_style_5.sa_addons_numbers_style_5_{{KEY}} .sa_addons_numbers_headding' => ''
                         ],
                     ],
                     'sa_number_content' => [
@@ -116,7 +116,7 @@ class Style_4 extends AdminStyle
                         'type' => Controls::TEXTAREA,
                         'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit.',
                         'selector' => [
-                            '{{WRAPPER}} .sa_addons_numbers_style_4.sa_addons_numbers_style_4_{{KEY}} .sa_addons_numbers_content' => ''
+                            '{{WRAPPER}} .sa_addons_numbers_style_5.sa_addons_numbers_style_5_{{KEY}} .sa_addons_numbers_content' => ''
                         ],
                     ],
       
@@ -143,14 +143,13 @@ class Style_4 extends AdminStyle
                 'button' => 'Add New Icon Box',
             ]
         );
-        
         $this->add_group_control(
             'sa_number_boxshadow',
             $this->style,
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5' => ''
                 ],
             ]
         );
@@ -180,7 +179,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5' => ''
                 ],
             ]
         );
@@ -190,7 +189,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5' => ''
                 ],
             ]
         );
@@ -222,7 +221,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -255,7 +254,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -287,16 +286,13 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_container_style_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_numbers_container_style_5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->end_controls_section();
-
         $this->end_section_devider();
-
         $this->end_section_tabs();
-
 
         $this->start_section_tabs(
             'shortcode-addons-start-tabs',
@@ -322,7 +318,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => ''
+                    '{{WRAPPER}}  .sa_addons_numbers_style_5 .oxi_number' => ''
                 ],
             ]
         );
@@ -334,7 +330,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '70',
+                    'size' => '80',
                 ],
                 'range' => [
                     'px' => [
@@ -354,8 +350,41 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-                    
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_icons_body' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_icon' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .oxi_number' => 'line-height: {{SIZE}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_number_icon_posi_y',
+            $this->style,
+            [
+                'label' => __('Number Position Y', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '-40',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -100,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => -50,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => -5,
+                        'max' => 5,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_icon' => 'top: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -367,7 +396,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .oxi_number' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -377,7 +406,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_icons_body' => ''
                 ],
             ]
         );
@@ -391,7 +420,7 @@ class Style_4 extends AdminStyle
                 'toggle' => TRUE,
                 'default' => 'center',
                 'options' => [
-                    'flex-start' => [
+                    'left' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
                         'icon' => 'fa fa-align-left',
                     ],
@@ -399,13 +428,13 @@ class Style_4 extends AdminStyle
                         'title' => __('Center', SHORTCODE_ADDOONS),
                         'icon' => 'fa fa-align-center',
                     ],
-                    'flex-end' => [
+                    'right' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
                         'icon' => 'fa fa-align-right',
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_area' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_icon' => 'text-align: {{VALUE}};'
                 ],
             ]
         );
@@ -415,7 +444,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_icons_body' => ''
                 ],
             ]
         );
@@ -427,7 +456,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::DIMENSIONS,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => '10',
                 ],
                 'range' => [
                     'px' => [
@@ -447,39 +476,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_number_icon_margin',
-            $this->style,
-            [
-                'label' => __('Margin', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => -200,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_icons_body' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -489,7 +486,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::ANIMATION,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_icon' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .oxi_number' => ''
                 ],
             ]
         );
@@ -514,9 +511,9 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Heading Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#2f0696',
+                'default' => '#000000',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_headding' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_headding' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -527,7 +524,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_headding' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_headding' => ''
                 ],
             ]
         );
@@ -559,7 +556,7 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_headding' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_headding' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -578,9 +575,9 @@ class Style_4 extends AdminStyle
             [
                 'label' => __('Content Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
-                'default' => '#575757',
+                'default' => '#6b6b6b',
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_content' => 'color: {{VALUE}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_content' => 'color: {{VALUE}};'
                 ],
             ]
         );
@@ -591,7 +588,7 @@ class Style_4 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_content' => ''
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_content' => ''
                 ],
             ]
         );
@@ -623,14 +620,14 @@ class Style_4 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_addons_numbers_style_4 .sa_addons_numbers_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_addons_numbers_style_5 .sa_addons_numbers_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
 
         $this->end_controls_section();
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
-    
 }

@@ -1,0 +1,252 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+
+.sa-one-page-nav-container {
+    position: fixed;
+    margin-right: 20px;
+    right: 0;
+    z-index: 999;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.nav-align-top .sa-one-page-nav-container,
+.nav-align-bottom .sa-one-page-nav-container {
+    left: 50%;
+    right: auto;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.nav-align-top .sa-one-page-nav-container {
+    top: 0;
+    margin-top: 20px;
+}
+
+.nav-align-bottom .sa-one-page-nav-container {
+    bottom: 0;
+    margin-bottom: 20px;
+    top: auto;
+}
+
+.nav-align-left .sa-one-page-nav-container {
+    left: 0;
+    margin-left: 20px;
+    right: auto;
+}
+
+.sa-one-page-nav-container .sa-one-page-nav {
+    font-size: 0;
+    line-height: 0;
+}
+
+.sa-one-page-nav-container .sa-one-page-nav,
+.sa-one-page-nav-container .sa-one-page-nav-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-align-top .sa-one-page-nav-item,
+.nav-align-bottom .sa-one-page-nav-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.nav-align-top .sa-one-page-nav-item:last-child,
+.nav-align-bottom .sa-one-page-nav-item:last-child {
+    margin-right: 0 !important;
+}
+
+.sa-one-page-nav-item {
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1;
+    text-align: center;
+}
+
+.sa-one-page-nav-item:last-child {
+    margin-bottom: 0 !important;
+}
+
+.sa-one-page-nav-item:hover .sa-nav-dot-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sa-one-page-nav-item a:focus {
+    outline: none;
+}
+
+.sa-one-page-nav-item .sa-nav-dot {
+    display: block;
+}
+
+.sa-nav-dot-tooltip {
+    color: #000;
+    font-size: 14px;
+    line-height: 1.3;
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.sa-nav-dot-tooltip.sa-tooltip-arrow:after {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid;
+    position: absolute;
+    right: -5px;
+    content: "";
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "";
+}
+
+.nav-align-top .sa-nav-dot-tooltip,
+.nav-align-bottom .sa-nav-dot-tooltip {
+    text-align: center;
+    left: -95px;
+}
+
+.nav-align-top .sa-nav-dot-tooltip.sa-tooltip-arrow:after,
+.nav-align-bottom .sa-nav-dot-tooltip.sa-tooltip-arrow:after {
+    border-bottom: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    left: 50%;
+    content: "";
+    top: -10px;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    right: auto;
+}
+
+.nav-align-top .sa-nav-dot-tooltip {
+    top: 30px;
+    -ms-transform: translateY(15px) translateX(0);
+    transform: translateY(15px) translateX(0);
+    -webkit-transform: translateY(15px) translateX(0);
+}
+
+.nav-align-top .sa-one-page-nav-item:hover .sa-nav-dot-tooltip {
+    -ms-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    -webkit-transform: translateY(0) translateX(0);
+}
+
+.nav-align-bottom .sa-nav-dot-tooltip {
+    bottom: 30px;
+    -ms-transform: translateY(-15px) translateX(0);
+    transform: translateY(-15px) translateX(0);
+    -webkit-transform: translateY(-15px) translateX(0);
+}
+
+.nav-align-bottom .sa-nav-dot-tooltip.sa-tooltip-arrow:after {
+    border-top: 5px solid;
+    border-bottom: 5px solid transparent;
+    bottom: -10px;
+    top: auto;
+}
+
+.nav-align-bottom .sa-one-page-nav-item:hover .sa-nav-dot-tooltip {
+    -ms-transform: translateY(0) translateX(5px);
+    transform: translateY(0) translateX(5px);
+    -webkit-transform: translateY(0) translateX(5px);
+}
+
+.nav-align-right .sa-nav-dot-tooltip {
+    right: 40px;
+    text-align: right;
+    top: 50%;
+    -ms-transform: translateY(-50%) translateX(-15px);
+    transform: translateY(-50%) translateX(-15px);
+    -webkit-transform: translateY(-50%) translateX(-15px);
+}
+
+.nav-align-right .sa-one-page-nav-item:hover .sa-nav-dot-tooltip {
+    opacity: 1;
+    -ms-transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
+    -webkit-transform: translateY(-50%) translateX(0);
+}
+
+.nav-align-left .sa-nav-dot-tooltip {
+    left: 40px;
+    top: 50%;
+    text-align: left;
+    -ms-transform: translateY(-50%) translateX(15px);
+    transform: translateY(-50%) translateX(15px);
+    -webkit-transform: translateY(-50%) translateX(15px);
+}
+
+.nav-align-left .sa-nav-dot-tooltip.sa-tooltip-arrow:after {
+    border-right: 5px solid;
+    border-left: 5px solid transparent;
+    left: -10px;
+    right: auto;
+}
+
+.nav-align-left .sa-one-page-nav-item:hover .sa-nav-dot-tooltip {
+    opacity: 1;
+    -ms-transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
+    -webkit-transform: translateY(-50%) translateX(0);
+}
+
+.sa-nav-dot-tooltip-content {
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.sa-nav-dot {
+    color: #000;
+    display: block;
+    font-size: 10px;
+    line-height: 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-transition: color 0.3s ease, border 0.3s ease;
+    -o-transition: color 0.3s ease, border 0.3s ease;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+.sa-nav-dot-wrap {
+    display: block;
+    -webkit-transition: all 0.3s ease, border 0.3s ease;
+    -o-transition: all 0.3s ease, border 0.3s ease;
+    transition: all 0.3s ease, border 0.3s ease;
+}
+
+.admin-bar .nav-align-top .sa-one-page-nav-container {
+    top: 32px;
+}

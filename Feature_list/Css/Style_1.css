@@ -1,0 +1,131 @@
+
+
+
+.oxi_addons_feature_list_style1{
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+}
+.oxi_addons_feature_list_style1 .sa_fl_width_auto {
+    width: 100%;
+}
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_main_body {
+    margin: 0 auto;
+}
+
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_section{
+    display: flex;
+    position: relative;
+    padding-bottom: 10px;
+}
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_section:last-child{
+    padding-bottom: 0px !important;
+}
+
+/*.oxi_addons_feature_list_style1 .oxi_addons_feature_list_connector{
+    display: block;
+    position: absolute;
+    width: 0;
+    margin: 0 auto;
+    z-index: 5;
+    height: 100%;
+    top: 0.5em;
+    font-size: 60px;
+    left: 0;
+    right: calc(100% - 60px);
+    border-left: 2px solid #2ecc71;
+    border-right: none !important;
+}*/
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_section:last-child .oxi_addons_feature_list_connector {
+    display: none
+}
+
+
+
+
+
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_icon {
+
+
+    border-radius: 50%;
+    position: relative;
+    margin: 0px 30px 0px 30px;
+    z-index: 5;
+
+}
+
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_icon:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%)translateY(25%);
+    top: 25%;
+    width: 2px;
+    border-left: 2px solid;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    border-color: #bababa;
+    border-right: none !important;
+}
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_section:last-child .oxi_addons_feature_list_icon:after {
+    display: none
+}
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_icon .oxi-icons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+}
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_icon.rhombus .oxi-icons {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_icon.rhombus .oxi-icons:before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_heading {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #828282;
+    font-family: "Lato";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: 1px;
+    /*    padding: 5px 20px 5px 0px*/
+}
+.oxi_addons_feature_list_style1 .icon_right .oxi_addons_feature_list_heading {
+    text-align: right;  
+}
+
+.oxi_addons_feature_list_style1 .oxi_addons_feature_list_content {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #b0b0b0;
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: 1px;
+    ;
+    /*    padding: 5px 20px 5px 0px*/
+}
+.oxi_addons_feature_list_style1 .icon_right .oxi_addons_feature_list_content {
+    text-align: right;  
+}
