@@ -14,9 +14,9 @@
 .oxi_addons_step_flow_style1 .oxi_addons_step_flow_body {
     width: 100%;
     float: left;
-   
+
     padding: 10px;
-   
+
 }
 
 .oxi_addons_step_flow_style1 .oxi_addons_step_flow_icon {
@@ -50,6 +50,8 @@
     width: 350px;
     border-top: 1px solid #2ecc71;
     border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
     z-index: 1
 }
 
