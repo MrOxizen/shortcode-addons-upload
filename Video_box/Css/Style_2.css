@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : Sep 1, 2019, 12:29:11 PM
+    Author     : biplo
+*/
+
+
+/*
+Video Box
+*/
+
+.sa-video-box-container-style-2 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sa-video-box-container-style-2 .sa-video-box-container {
+    position: relative;
+    height: 0;
+}
+
+.sa-video-box-container-style-2 .sa-aspect-ratio-11 .sa-video-box-container {
+    padding-bottom: 100%;
+}
+
+.sa-video-box-container-style-2 .sa-aspect-ratio-169 .sa-video-box-container {
+    padding-bottom: 56.25%;
+}
+
+.sa-video-box-container-style-2 .sa-aspect-ratio-43 .sa-video-box-container {
+    padding-bottom: 75%;
+}
+
+.sa-video-box-container-style-2 .sa-aspect-ratio-32 .sa-video-box-container {
+    padding-bottom: 66.6666%;
+}
+
+.sa-video-box-container-style-2 .sa-aspect-ratio-219 .sa-video-box-container {
+    padding-bottom: 42.8571%;
+}
+
+.sa-video-box-container-style-2 .sa-video-box-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50%;
+    cursor: pointer;
+}
+
+.sa-video-box-container-style-2 .sa-video-box-play-icon-container {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    background: rgb(134, 201, 239);
+}
+
+.sa-video-box-container-style-2 .sa-video-box-description-container {
+    position: absolute;
+    z-index: 1;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.sa-video-box-container-style-2 .sa-video-box-text {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sa-video-box-container-style-2 .sa-video-box-play-icon {
+    color: #fff;
+    padding: 10px 20px 10px 28px;
+    transform: translateX(4%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: translateX(4%);
+    -moz-transform: translateX(4%);
+    -ms-transform: translateX(4%);
+    -o-transform: translateX(4%);
+}
+
+.sa-video-box-container-style-2 .sa-video-box-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    -ms-transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sa-video-box-container-style-2 .sa-video-box-container[data-overlay="true"][data-type="self"] .sa-video-box-video-container {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sa-video-box-container-style-2 .sa-video-box-video-container iframe,
+.sa-video-box-container-style-2 .sa-video-box-video-container video {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 1;
+    border: none;
+}
+
+.sa-video-box-container-style-2 .sa-video-box-video-container video {
+    -o-object-fit: contain;
+    object-fit: contain;
+}
