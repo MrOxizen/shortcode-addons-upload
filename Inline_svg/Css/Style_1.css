@@ -1,0 +1,64 @@
+
+.oxi-inline-svg {
+    display: inline-block
+}
+
+.oxi-inline-svg svg {
+    min-width: 20px;
+       width: 100%
+}
+
+.oxi-inline-svg--custom-width {
+    width: 100%
+}
+
+.oxi-inline-svg--custom-width svg {
+    width: 100%;
+    height: auto;
+    display: block
+}
+
+.oxi-inline-svg--custom-color svg {
+    fill: currentColor;
+    stroke: currentColor
+}
+
+.oxi-inline-svg circle:not([stroke]),
+.oxi-inline-svg ellipse:not([stroke]),
+.oxi-inline-svg polygon:not([stroke]),
+.oxi-inline-svg path:not([stroke]),
+.oxi-inline-svg rect:not([stroke]) {
+    stroke: none
+}
+
+.oxi-inline-svg circle:not([stroke-width]),
+.oxi-inline-svg ellipse:not([stroke-width]),
+.oxi-inline-svg polygon:not([stroke-width]),
+.oxi-inline-svg path:not([stroke-width]),
+.oxi-inline-svg rect:not([stroke-width]) {
+    stroke-width: 2px
+}
+
+.oxi-inline-svg circle:not([stroke-linecap]),
+.oxi-inline-svg ellipse:not([stroke-linecap]),
+.oxi-inline-svg polygon:not([stroke-linecap]),
+.oxi-inline-svg path:not([stroke-linecap]),
+.oxi-inline-svg rect:not([stroke-linecap]) {
+    stroke-linecap: butt
+}
+
+.oxi-inline-svg circle:not([stroke-dasharray]),
+.oxi-inline-svg ellipse:not([stroke-dasharray]),
+.oxi-inline-svg polygon:not([stroke-dasharray]),
+.oxi-inline-svg path:not([stroke-dasharray]),
+.oxi-inline-svg rect:not([stroke-dasharray]) {
+    stroke-dasharray: none
+}
+
+.oxi-inline-svg circle:not([stroke-miterlimit]),
+.oxi-inline-svg ellipse:not([stroke-miterlimit]),
+.oxi-inline-svg polygon:not([stroke-miterlimit]),
+.oxi-inline-svg path:not([stroke-miterlimit]),
+.oxi-inline-svg rect:not([stroke-miterlimit]) {
+    stroke-miterlimit: 4
+}
