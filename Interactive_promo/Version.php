@@ -4,4 +4,4 @@
   Version: 2.0.0
   Checked By Al-amin
  */ 
-return array('2.0.0', 'Content Elements', true, 'fas fa-vr-cardboard', false);
+return array('2.0.0', 'Creative Elements', true, 'fab fa-buromobelexperte', false);

@@ -36,9 +36,9 @@
     height: 100%;
 }
 .oxi_addons_feature_list_style2 .oxi_addons_feature_list_section.icon_right:before{
-  right: 0;
-  left: inherit;
-   
+    right: 0;
+    left: inherit;
+
 }
 
 
@@ -55,18 +55,23 @@
     z-index: 5;
 
 }
+.oxi_addons_feature_list_style2 .icon_center .oxi_addons_feature_list_icon {
+
+    text-align: center;
+
+}
 
 .oxi_addons_feature_list_style2 .oxi_addons_feature_list_icon:before{
 
     content: "";
-    position: relative;
-    left: 5px;
+    position: absolute;
+    left: -46px;
     top: 50%;
     transform: translateY(-50%);
     width: 23px;
     display: block;
     z-index: 2;
-    border-bottom: 1px dashed #000;
+    border-bottom: 2px dashed #000;
     border-top: none !important;
 
 }
@@ -125,6 +130,9 @@
     letter-spacing: 1px;
     /*    padding: 5px 20px 5px 0px*/
 }
+.oxi_addons_feature_list_style2 .icon_center .oxi_addons_feature_list_heading {
+    text-align: center;  
+}
 .oxi_addons_feature_list_style2 .icon_right .oxi_addons_feature_list_heading {
     text-align: right;  
 }
@@ -142,6 +150,9 @@
     letter-spacing: 1px;
     ;
     /*    padding: 5px 20px 5px 0px*/
+}
+.oxi_addons_feature_list_style2 .icon_center .oxi_addons_feature_list_content {
+    text-align: center;  
 }
 .oxi_addons_feature_list_style2 .icon_right .oxi_addons_feature_list_content {
     text-align: right;  
