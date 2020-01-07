@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_2 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -36,45 +36,45 @@ class Style_1 extends Templates
             ';
         endif;
 
-        echo '<div class="sa_protected_content_container_style_1">
+        echo '<div class="sa_protected_content_container_style_2">
                 <div class="sa_protected_content" ' . $this->animation_render('sa_protected_content_animation', $style) . '>';
-        if ('role' == $style['sa_protected_content_protection_type']) :
-            if (true === $this->current_user_privileges()) :
-                echo '' . $protected_content . '';
-            else :
-                echo '' . $message . '';
-            endif;
+        if ($style['sa_protected_content_field'] !== '') :
+            if ('role' == $style['sa_protected_content_protection_type']) :
+                if (true === $this->current_user_privileges()) :
+                    echo '' . $protected_content . '';
+                else :
+                    echo '' . $message . '';
+                endif;
 
-            if ('yes' == $style['sa_show_fallback_message']) :
-                echo '' . $message . '';
+                if ('yes' == $style['sa_show_fallback_message']) :
+                    echo '' . $message . '';
+                endif;
+            else :
+                if (!empty($style['sa_protection_password'])) {
+                    if (!session_status()) {
+                        session_start();
+                    }
+
+                    if (isset($_POST['sa_protection_password']) && ($style['sa_protection_password'] === sanitize_text_field($_POST['sa_protection_password']))) {
+                        $_SESSION['sa_protection_password'] = true;
+                    }
+                    if (!isset($_SESSION['sa_protection_password'])) {
+                        if ('yes' !== $style['sa_show_content']) {
+                            echo '' . $message . '';
+                            $this->sa_get_block_pass_protected_form($style);
+                            return;
+                        }
+                    }
+                    echo '' . $protected_content . '';
+                }
             endif;
         else :
-            if (!empty($style['sa_protection_password'])) {
-                if (!session_status()) {
-                    session_start();
-                }
-
-                if (isset($_POST['sa_protection_password']) && ($style['sa_protection_password'] === sanitize_text_field($_POST['sa_protection_password']))) {
-                    $_SESSION['sa_protection_password'] = true;
-                }
-                if (!isset($_SESSION['sa_protection_password'])) {
-                    if ('yes' !== $style['sa_show_content']) {
-                        echo '' . $message . '';
-                        $this->sa_get_block_pass_protected_form($style);
-                        return;
-                    }
-                }
-                echo '' . $protected_content . '';
-            }
+            echo '<div class="protected_content_error_msg">Please enter your short code</div>';
         endif;
 
         echo '
                 </div>
             </div>';
-    }
-
-    public function inline_public_jquery()
-    {
     }
 
     /** Check current user role exists inside of the roles array. * */

@@ -17,7 +17,7 @@ use Elementor\Controls_Manager;
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle
+class Style_3 extends AdminStyle
 {
     public function sa_user_roles()
     {
@@ -75,15 +75,14 @@ class Style_1 extends AdminStyle
                 'default' => 'role'
             ]
         );
-        $this->add_control(
+        $this->add_group_control(
             'sa_protected_content_field',
             $this->style,
             [
-                'label' => __('Protected Content', SHORTCODE_ADDOONS),
-                'type' => Controls::WYSIWYG,
-                'default' => 'This is the content that you want to be protected by either role or password.',
-                'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .protected_content' => ''
+                'type' => Controls::MEDIA,
+                'default' => [
+                    'type' => 'media-library',
+                    'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/12/gettyimages-545111084-e1562259807114.jpg',
                 ],
             ]
         );
@@ -96,7 +95,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXTAREA,
                 'default' => esc_html__('You do not have permission to see this content.', SHORTCODE_ADDOONS),
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message_text' => ''
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message_text' => ''
                 ],
             ]
         );
@@ -201,7 +200,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => '',
+                    'size' => '500',
                 ],
                 'range' => [
                     'px' => [
@@ -221,7 +220,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1' => 'max-width: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_protected_content_container_style_3' => 'max-width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
@@ -231,7 +230,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content' => '',
                 ],
             ]
         );
@@ -241,7 +240,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content' => '',
                 ],
             ]
         );
@@ -273,7 +272,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .sa_protected_content_container_style_1 .sa_protected_content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}}  .sa_protected_content_container_style_3 .sa_protected_content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -305,7 +304,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .sa_protected_content_container_style_1 .sa_protected_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}}  .sa_protected_content_container_style_3 .sa_protected_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -315,7 +314,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content' => ''
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content' => ''
                 ],
             ]
         );
@@ -345,34 +344,95 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Content Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Image Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
         );
-        $this->add_group_control(
-            'sa_protected_content_content_typo',
+        $this->add_responsive_control(
+            'sa_protected_content_image_width',
             $this->style,
             [
-                'type' => Controls::TYPOGRAPHY,
-                'include' => Controls::ALIGNNORMAL,
+                'label' => __('Image Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => '%',
+                    'size' => '100',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .protected_content' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .protected_content' => 'width: {{SIZE}}{{UNIT}};'
                 ],
             ]
         );
-        $this->add_control(
-            'sa_protected_content_content_c',
+        $this->add_group_control(
+            'sa_protected_content_content_border',
             $this->style,
             [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '',
+                'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .protected_content' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_image' => '',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_protected_content_content_box_s',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_image' => '',
                 ],
             ]
         );
 
+        $this->add_responsive_control(
+            'sa_protected_content_content_b_r',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_protected_content_content_padding',
             $this->style,
@@ -401,7 +461,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .protected_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .protected_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -421,8 +481,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message_text' => '',
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .protected_content_error_msg' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message_text' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .protected_content_error_msg' => '',
                 ],
             ]
         );
@@ -434,8 +494,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message_text' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .protected_content_error_msg' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message_text' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .protected_content_error_msg' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -445,7 +505,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message' => '',
                 ],
             ]
         );
@@ -455,7 +515,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message' => '',
                 ],
             ]
         );
@@ -465,7 +525,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message' => '',
                 ],
             ]
         );
@@ -497,7 +557,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -529,7 +589,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -561,7 +621,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_protected_content_message' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_protected_content_message' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -607,7 +667,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -633,7 +693,7 @@ class Style_1 extends AdminStyle
                 ],
                 'default' => 'flex-start',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields>form' => 'justify-content: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields>form' => 'justify-content: {{VALUE}};',
                 ],
             ]
         );
@@ -655,7 +715,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -668,7 +728,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -678,7 +738,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => '',
                 ],
             ]
         );
@@ -688,7 +748,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => ''
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => ''
                 ],
             ]
         );
@@ -702,7 +762,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password:focus' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password:focus' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -715,7 +775,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password:focus' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password:focus' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -729,7 +789,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password:focus' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password:focus' => 'border-color: {{VALUE}};',
                 ],
             ]
         );
@@ -739,7 +799,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password:focus' => ''
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password:focus' => ''
                 ],
             ]
         );
@@ -777,7 +837,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -809,7 +869,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -841,7 +901,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_password' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_password' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -863,7 +923,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => '',
                 ],
             ]
         );
@@ -885,7 +945,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -898,7 +958,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -908,7 +968,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => '',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => '',
                 ],
             ]
         );
@@ -918,7 +978,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => ''
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => ''
                 ],
             ]
         );
@@ -932,7 +992,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -945,7 +1005,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit:hover' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit:hover' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -959,7 +1019,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit:hover' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit:hover' => 'border-color: {{VALUE}};',
                 ],
             ]
         );
@@ -969,7 +1029,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit:hover' => ''
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit:hover' => ''
                 ],
             ]
         );
@@ -1004,7 +1064,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1036,7 +1096,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1068,7 +1128,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_protected_content_container_style_1 .sa_password_protected_content_fields .sa_submit' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_protected_content_container_style_3 .sa_password_protected_content_fields .sa_submit' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );

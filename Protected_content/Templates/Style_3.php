@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_3 extends Templates
 {
 
     public function default_render($style, $child, $admin)
@@ -29,14 +29,14 @@ class Style_1 extends Templates
                         </div>
             ';
         endif;
-        if (!empty($style['sa_protected_content_field'])) :
+        if (!empty($this->media_render('sa_protected_content_field', $style))) :
             $protected_content = '<div class="protected_content">
-                                    ' . $this->text_render($style['sa_protected_content_field']) . '
+                                    <img src="' . $this->media_render('sa_protected_content_field', $style) . '" class="sa_protected_content_image">
                                 </div>
             ';
         endif;
 
-        echo '<div class="sa_protected_content_container_style_1">
+        echo '<div class="sa_protected_content_container_style_3">
                 <div class="sa_protected_content" ' . $this->animation_render('sa_protected_content_animation', $style) . '>';
         if ('role' == $style['sa_protected_content_protection_type']) :
             if (true === $this->current_user_privileges()) :
