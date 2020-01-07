@@ -1,0 +1,545 @@
+.oxi-hover-effects .sa-hover-effects-grow {
+    transition-duration: .3s;
+    transition-property: transform
+}
+
+.oxi-hover-effects .sa-hover-effects-grow:active,
+.oxi-hover-effects .sa-hover-effects-grow:focus,
+.oxi-hover-effects .sa-hover-effects-grow:hover {
+    transform: scale(1.1)
+}
+
+.oxi-hover-effects .sa-hover-effects-shrink {
+    transition-duration: .3s;
+    transition-property: transform
+}
+
+.oxi-hover-effects .sa-hover-effects-shrink:active,
+.oxi-hover-effects .sa-hover-effects-shrink:focus,
+.oxi-hover-effects .sa-hover-effects-shrink:hover {
+    transform: scale(0.9)
+}
+
+@keyframes elementor-animation-pulse {
+    25% {
+        transform: scale(1.1)
+    }
+    75% {
+        transform: scale(0.9)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-pulse:active,
+.oxi-hover-effects .sa-hover-effects-pulse:focus,
+.oxi-hover-effects .sa-hover-effects-pulse:hover {
+    animation-name: elementor-animation-pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+@keyframes elementor-animation-pulse-grow {
+    to {
+        transform: scale(1.1)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-pulse-grow:active,
+.oxi-hover-effects .sa-hover-effects-pulse-grow:focus,
+.oxi-hover-effects .sa-hover-effects-pulse-grow:hover {
+    animation-name: elementor-animation-pulse-grow;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
+
+@keyframes elementor-animation-pulse-shrink {
+    to {
+        transform: scale(0.9)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-pulse-shrink:active,
+.oxi-hover-effects .sa-hover-effects-pulse-shrink:focus,
+.oxi-hover-effects .sa-hover-effects-pulse-shrink:hover {
+    animation-name: elementor-animation-pulse-shrink;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
+
+@keyframes elementor-animation-push {
+    50% {
+        transform: scale(0.8)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-push:active,
+.oxi-hover-effects .sa-hover-effects-push:focus,
+.oxi-hover-effects .sa-hover-effects-push:hover {
+    animation-name: elementor-animation-push;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-pop {
+    50% {
+        transform: scale(1.2)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-pop:active,
+.oxi-hover-effects .sa-hover-effects-pop:focus,
+.oxi-hover-effects .sa-hover-effects-pop:hover {
+    animation-name: elementor-animation-pop;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1
+}
+
+.oxi-hover-effects .sa-hover-effects-bounce-in {
+    transition-duration: .5s
+}
+
+.oxi-hover-effects .sa-hover-effects-bounce-in:active,
+.oxi-hover-effects .sa-hover-effects-bounce-in:focus,
+.oxi-hover-effects .sa-hover-effects-bounce-in:hover {
+    transform: scale(1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36)
+}
+
+.oxi-hover-effects .sa-hover-effects-bounce-out {
+    transition-duration: .5s
+}
+
+.oxi-hover-effects .sa-hover-effects-bounce-out:active,
+.oxi-hover-effects .sa-hover-effects-bounce-out:focus,
+.oxi-hover-effects .sa-hover-effects-bounce-out:hover {
+    transform: scale(0.8);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36)
+}
+
+.oxi-hover-effects .sa-hover-effects-rotate {
+    transition-duration: .3s;
+    transition-property: transform
+}
+
+.oxi-hover-effects .sa-hover-effects-rotate:active,
+.oxi-hover-effects .sa-hover-effects-rotate:focus,
+.oxi-hover-effects .sa-hover-effects-rotate:hover {
+    transform: rotate(4deg)
+}
+
+.oxi-hover-effects .sa-hover-effects-grow-rotate {
+    transition-duration: .3s;
+    transition-property: transform
+}
+
+.oxi-hover-effects .sa-hover-effects-grow-rotate:active,
+.oxi-hover-effects .sa-hover-effects-grow-rotate:focus,
+.oxi-hover-effects .sa-hover-effects-grow-rotate:hover {
+    transform: scale(1.1) rotate(4deg)
+}
+
+.oxi-hover-effects .sa-hover-effects-float {
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out
+}
+
+.oxi-hover-effects .sa-hover-effects-float:active,
+.oxi-hover-effects .sa-hover-effects-float:focus,
+.oxi-hover-effects .sa-hover-effects-float:hover {
+    transform: translateY(-8px)
+}
+
+.oxi-hover-effects .sa-hover-effects-sink {
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out
+}
+
+.oxi-hover-effects .sa-hover-effects-sink:active,
+.oxi-hover-effects .sa-hover-effects-sink:focus,
+.oxi-hover-effects .sa-hover-effects-sink:hover {
+    transform: translateY(8px)
+}
+
+@keyframes elementor-animation-bob {
+    0% {
+        transform: translateY(-8px)
+    }
+    50% {
+        transform: translateY(-4px)
+    }
+    100% {
+        transform: translateY(-8px)
+    }
+}
+
+@keyframes elementor-animation-bob-float {
+    100% {
+        transform: translateY(-8px)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-bob:active,
+.oxi-hover-effects .sa-hover-effects-bob:focus,
+.oxi-hover-effects .sa-hover-effects-bob:hover {
+    animation-name: elementor-animation-bob-float, elementor-animation-bob;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate
+}
+
+@keyframes elementor-animation-hang {
+    0% {
+        transform: translateY(8px)
+    }
+    50% {
+        transform: translateY(4px)
+    }
+    100% {
+        transform: translateY(8px)
+    }
+}
+
+@keyframes elementor-animation-hang-sink {
+    100% {
+        transform: translateY(8px)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-hang:active,
+.oxi-hover-effects .sa-hover-effects-hang:focus,
+.oxi-hover-effects .sa-hover-effects-hang:hover {
+    animation-name: elementor-animation-hang-sink, elementor-animation-hang;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate
+}
+
+.oxi-hover-effects .sa-hover-effects-skew {
+    transition-duration: .3s;
+    transition-property: transform
+}
+
+.oxi-hover-effects .sa-hover-effects-skew:active,
+.oxi-hover-effects .sa-hover-effects-skew:focus,
+.oxi-hover-effects .sa-hover-effects-skew:hover {
+    transform: skew(-10deg)
+}
+
+.oxi-hover-effects .sa-hover-effects-skew-forward {
+    transition-duration: .3s;
+    transition-property: transform;
+    transform-origin: 0 100%
+}
+
+.oxi-hover-effects .sa-hover-effects-skew-forward:active,
+.oxi-hover-effects .sa-hover-effects-skew-forward:focus,
+.oxi-hover-effects .sa-hover-effects-skew-forward:hover {
+    transform: skew(-10deg)
+}
+
+.oxi-hover-effects .sa-hover-effects-skew-backward {
+    transition-duration: .3s;
+    transition-property: transform;
+    transform-origin: 0 100%
+}
+
+.oxi-hover-effects .sa-hover-effects-skew-backward:active,
+.oxi-hover-effects .sa-hover-effects-skew-backward:focus,
+.oxi-hover-effects .sa-hover-effects-skew-backward:hover {
+    transform: skew(10deg)
+}
+
+@keyframes elementor-animation-wobble-vertical {
+    16.65% {
+        transform: translateY(8px)
+    }
+    33.3% {
+        transform: translateY(-6px)
+    }
+    49.95% {
+        transform: translateY(4px)
+    }
+    66.6% {
+        transform: translateY(-2px)
+    }
+    83.25% {
+        transform: translateY(1px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-vertical:active,
+.oxi-hover-effects .sa-hover-effects-wobble-vertical:focus,
+.oxi-hover-effects .sa-hover-effects-wobble-vertical:hover {
+    animation-name: elementor-animation-wobble-vertical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-wobble-horizontal {
+    16.65% {
+        transform: translateX(8px)
+    }
+    33.3% {
+        transform: translateX(-6px)
+    }
+    49.95% {
+        transform: translateX(4px)
+    }
+    66.6% {
+        transform: translateX(-2px)
+    }
+    83.25% {
+        transform: translateX(1px)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-horizontal:active,
+.oxi-hover-effects .sa-hover-effects-wobble-horizontal:focus,
+.oxi-hover-effects .sa-hover-effects-wobble-horizontal:hover {
+    animation-name: elementor-animation-wobble-horizontal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-wobble-to-bottom-right {
+    16.65% {
+        transform: translate(8px, 8px)
+    }
+    33.3% {
+        transform: translate(-6px, -6px)
+    }
+    49.95% {
+        transform: translate(4px, 4px)
+    }
+    66.6% {
+        transform: translate(-2px, -2px)
+    }
+    83.25% {
+        transform: translate(1px, 1px)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-to-bottom-right:active,
+.oxi-hover-effects .sa-hover-effects-wobble-to-bottom-right:focus,
+.oxi-hover-effects .sa-hover-effects-wobble-to-bottom-right:hover {
+    animation-name: elementor-animation-wobble-to-bottom-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-wobble-to-top-right {
+    16.65% {
+        transform: translate(8px, -8px)
+    }
+    33.3% {
+        transform: translate(-6px, 6px)
+    }
+    49.95% {
+        transform: translate(4px, -4px)
+    }
+    66.6% {
+        transform: translate(-2px, 2px)
+    }
+    83.25% {
+        transform: translate(1px, -1px)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-to-top-right:active,
+.oxi-hover-effects .sa-hover-effects-wobble-to-top-right:focus,
+.oxi-hover-effects .sa-hover-effects-wobble-to-top-right:hover {
+    animation-name: elementor-animation-wobble-to-top-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-wobble-top {
+    16.65% {
+        transform: skew(-12deg)
+    }
+    33.3% {
+        transform: skew(10deg)
+    }
+    49.95% {
+        transform: skew(-6deg)
+    }
+    66.6% {
+        transform: skew(4deg)
+    }
+    83.25% {
+        transform: skew(-2deg)
+    }
+    100% {
+        transform: skew(0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-top {
+    transform-origin: 0 100%
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-top:active,
+.oxi-hover-effects .sa-hover-effects-wobble-top:focus,
+.oxi-hover-effects .sa-hover-effects-wobble-top:hover {
+    animation-name: elementor-animation-wobble-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-wobble-bottom {
+    16.65% {
+        transform: skew(-12deg)
+    }
+    33.3% {
+        transform: skew(10deg)
+    }
+    49.95% {
+        transform: skew(-6deg)
+    }
+    66.6% {
+        transform: skew(4deg)
+    }
+    83.25% {
+        transform: skew(-2deg)
+    }
+    100% {
+        transform: skew(0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-bottom {
+    transform-origin: 100% 0
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-bottom:active,
+.oxi-hover-effects .sa-hover-effects-wobble-bottom:focus,
+.oxi-hover-effects .sa-hover-effects-wobble-bottom:hover {
+    animation-name: elementor-animation-wobble-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-wobble-skew {
+    16.65% {
+        transform: skew(-12deg)
+    }
+    33.3% {
+        transform: skew(10deg)
+    }
+    49.95% {
+        transform: skew(-6deg)
+    }
+    66.6% {
+        transform: skew(4deg)
+    }
+    83.25% {
+        transform: skew(-2deg)
+    }
+    100% {
+        transform: skew(0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-wobble-skew:active,
+.oxi-hover-effects .sa-hover-effects-wobble-skew:focus,
+.oxi-hover-effects .sa-hover-effects-wobble-skew:hover {
+    animation-name: elementor-animation-wobble-skew;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes elementor-animation-buzz {
+    50% {
+        transform: translateX(3px) rotate(2deg)
+    }
+    100% {
+        transform: translateX(-3px) rotate(-2deg)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-buzz:active,
+.oxi-hover-effects .sa-hover-effects-buzz:focus,
+.oxi-hover-effects .sa-hover-effects-buzz:hover {
+    animation-name: elementor-animation-buzz;
+    animation-duration: .15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+@keyframes elementor-animation-buzz-out {
+    10% {
+        transform: translateX(3px) rotate(2deg)
+    }
+    20% {
+        transform: translateX(-3px) rotate(-2deg)
+    }
+    30% {
+        transform: translateX(3px) rotate(2deg)
+    }
+    40% {
+        transform: translateX(-3px) rotate(-2deg)
+    }
+    50% {
+        transform: translateX(2px) rotate(1deg)
+    }
+    60% {
+        transform: translateX(-2px) rotate(-1deg)
+    }
+    70% {
+        transform: translateX(2px) rotate(1deg)
+    }
+    80% {
+        transform: translateX(-2px) rotate(-1deg)
+    }
+    90% {
+        transform: translateX(1px) rotate(0)
+    }
+    100% {
+        transform: translateX(-1px) rotate(0)
+    }
+}
+
+.oxi-hover-effects .sa-hover-effects-buzz-out:active,
+.oxi-hover-effects .sa-hover-effects-buzz-out:focus,
+.oxi-hover-effects .sa-hover-effects-buzz-out:hover {
+    animation-name: elementor-animation-buzz-out;
+    animation-duration: .75s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1
+}

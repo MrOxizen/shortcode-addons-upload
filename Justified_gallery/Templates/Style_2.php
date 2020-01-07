@@ -14,11 +14,12 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_2 extends Templates {
 
     public function public_css() {
         wp_enqueue_style('justifiedGallery.min', SA_ADDONS_UPLOAD_URL . '/Justified_gallery/File/justifiedGallery.min.css', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_style('MagnificPopup', SA_ADDONS_UPLOAD_URL . '/Justified_gallery/File/MagnificPopup.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('Hover_effects', SA_ADDONS_UPLOAD_URL . '/Justified_gallery/File/Hover_effects.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function public_jquery() {
@@ -41,7 +42,7 @@ class Style_1 extends Templates {
         $datas = (array_key_exists('sa_jg_reapeter', $style) && is_array($style['sa_jg_reapeter']) ? $style['sa_jg_reapeter'] : []);
         foreach ($datas as $key => $value) {
 
-            $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi_addons_justified_gallery_style1 .sa_img_' . $key . '").OximagnificPopup({
+            $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi_addons_justified_gallery_style2 .sa_img_' . $key . '").OximagnificPopup({
                          items: [
                              {
                                  src: "' . $this->media_render('sa_jg_image', $value) . '",
@@ -90,12 +91,13 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
 
-        echo '<div class="oxi_addons_justified_gallery_style1">
+        echo '<div class="oxi_addons_justified_gallery_style2 ">
                 <div class="justified-gallery">';
+
         $repeater = (array_key_exists('sa_jg_reapeter', $style) && is_array($style['sa_jg_reapeter'])) ? $style['sa_jg_reapeter'] : [];
         foreach ($repeater as $key => $value) {
-            echo '<a class="oxi_addons_justified_gallery_item">
-                        <img class="oxi_addons_justified_gallery_img sa_img_' . $key . '" src="' . $this->media_render('sa_jg_image', $value) . '" alt="' . $this->text_render($value['sa_jg_title']) . '"/>
+            echo '<a class="oxi_addons_justified_gallery_item oxi-hover-effects">
+                        <img class="oxi_addons_justified_gallery_img sa_img_' . $key . ' ' . $style['sa_jg_hover_animation'] . '" src="' . $this->media_render('sa_jg_image', $value) . '" alt=""/>
                  </a>';
         }
 
