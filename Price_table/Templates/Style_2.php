@@ -22,7 +22,9 @@ class Style_2 extends Templates
     {
         foreach ($child as $v) {
             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
-
+//            echo '<pre>';
+//            print_r($value);
+//            echo '</pre>';
             $title   = $price    = $button = $ribbon = '';
             if (array_key_exists('sa_price_table_title', $value) && $value['sa_price_table_title'] != '') {
                 $title = '<' . $style['sa_price_table_title_tag'] . ' class="oxi-addons-price-title">' . $this->text_render($value['sa_price_table_title']) . '</' . $style['sa_price_table_title_tag'] . '>';

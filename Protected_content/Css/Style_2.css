@@ -1,0 +1,85 @@
+.sa_protected_content_container_style_2 {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.sa_protected_content_container_style_2 .sa_protected_content {
+    width: 100%;
+    background: rgba(239, 249, 255, 1.00);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #e6e6e6;
+    border-radius: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0px 5px 12px 0px rgba(204, 204, 204, 0.5);
+}
+
+.sa_protected_content_container_style_2 .protected_content {
+    width: 100%;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #474545;
+}
+
+.sa_protected_content_container_style_2 .sa_password_protected_content_fields>form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sa_protected_content_container_style_2 .sa_password_protected_content_fields .sa_password {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #f7703b;
+    color: #f7703b;
+    background-color: #f4f4f4;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.sa_protected_content_container_style_2 .sa_password_protected_content_fields .sa_password:focus {
+    border-color: #f55414;
+    background-color: #f3e6e6;
+    box-shadow: none;
+}
+
+.sa_protected_content_container_style_2 .sa_password_protected_content_fields .sa_submit {
+    text-transform: uppercase;
+    padding: 14px 25px;
+    margin: 0 0 0 10px;
+    border-radius: 50px;
+    color: #fff;
+    background: #f7703b;
+    font-size: 1em;
+    line-height: 1em;
+    cursor: pointer;
+}
+
+.sa_protected_content_container_style_2 .sa_protected_content_message {
+    background: rgba(248, 215, 218, 1.00);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #f5c6cb;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 0px 10px 0px;
+}
+
+.sa_protected_content_container_style_2 .protected_content_error_msg,
+.sa_protected_content_container_style_2 .sa_protected_content_message_text {
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    color: #721c24;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
