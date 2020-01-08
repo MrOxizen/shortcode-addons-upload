@@ -173,9 +173,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -189,9 +186,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -237,9 +231,6 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
                     'type' => Controls::DIMENSIONS,
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ],
                     'default' => [
                         'unit' => 'px',
                         'size' => '',
@@ -285,9 +276,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -301,9 +289,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
 
@@ -313,9 +298,6 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
                     'type' => Controls::DIMENSIONS,
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ],
                     'default' => [
                         'unit' => 'px',
                         'size' => '',
@@ -412,9 +394,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -428,9 +407,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
 
@@ -450,9 +426,6 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
                     'type' => Controls::DIMENSIONS,
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ],
                     'default' => [
                         'unit' => 'px',
                         'size' => '',
@@ -534,9 +507,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
 
@@ -551,9 +521,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -599,9 +566,6 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
                     'type' => Controls::DIMENSIONS,
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ],
                     'default' => [
                         'unit' => 'px',
                         'size' => '',
@@ -655,9 +619,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -679,9 +640,6 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::CHOOSE,
                     'operator' => Controls::OPERATOR_ICON,
                     'default' => 'center',
-                    'condition' => [
-                        'sa_info_image_img_layout' => 'row'
-                    ],
                     'options' => [
                         'flex-start' => [
                             'title' => __('Top', SHORTCODE_ADDOONS),
@@ -718,9 +676,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -743,9 +698,6 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::CHOOSE,
                     'operator' => Controls::OPERATOR_ICON,
                     'default' => 'center',
-                    'condition' => [
-                        'sa_info_image_img_layout' => 'row'
-                    ],
                     'options' => [
                         'flex-start' => [
                             'title' => __('Top', SHORTCODE_ADDOONS),
@@ -782,9 +734,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -815,9 +764,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -832,7 +778,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-                'sa_comparison_table_feature_box_bg_color',
+                'sa_comparison_table_price_bg_color',
                 $this->style,
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -843,14 +789,11 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
 
         $this->add_control(
-                'sa_comparison_table_feature_box_alignment', $this->style, [
+                'sa_comparison_table_price_align', $this->style, [
             'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
@@ -875,14 +818,11 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_responsive_control(
-                'sa_comparison_table_feature_box_padding',
+                'sa_comparison_table_price_padding',
                 $this->style,
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
                     'type' => Controls::DIMENSIONS,
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ],
                     'default' => [
                         'unit' => 'px',
                         'size' => '',
@@ -926,9 +866,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -941,9 +878,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -956,9 +890,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -972,9 +903,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -1020,9 +948,6 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Padding', SHORTCODE_ADDOONS),
                     'type' => Controls::DIMENSIONS,
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ],
                     'default' => [
                         'unit' => 'px',
                         'size' => '',
@@ -1065,7 +990,7 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons',
                 [
                     'label' => esc_html__('Button', SHORTCODE_ADDOONS),
-                    'showing' =>TRUE
+                    'showing' => TRUE
                 ]
         );
         $this->add_control(
@@ -1078,9 +1003,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -1094,9 +1016,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_control(
@@ -1110,9 +1029,6 @@ class Style_1 extends AdminStyle {
                     'selector' => [
                         '{{WRAPPER}} .oxi-addons-parent-wrapper-style-1 .oxi-addons-ribon' => 'background-color:{{VALUE}};'
                     ],
-                    'condition' => [
-                        'sa_price_table_ribbon_switter' => 'yes'
-                    ]
                 ]
         );
         $this->add_group_control(
@@ -1430,6 +1346,7 @@ class Style_1 extends AdminStyle {
                             'selector' => [
                                 '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-price-title' => '',
                             ],
+                            'conditional' => Controls::INSIDE,
                             'condition' => [
                                 'sa_comparison_table_feature_tooltip_type' => 'text',
                             ],
