@@ -20,7 +20,7 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
-        $heading = $details = $image = $author = $date = $notes = $ingredient_title = $instruction_title = '';
+        $heading = $details = $image = $author = $date = $notes = $ingredient_title = $instruction_title = $notes_title= '';
 
         if (array_key_exists('sa_recipe_heading_text', $style) && $style['sa_recipe_heading_text'] != '') {
             $heading = '<' . $style['sa_recipe_title_tag'] . ' class="oxi_addons__heading '. $style['sa_recipe_title_separator'].'">' . $this->text_render($style['sa_recipe_heading_text']) . '</' . $style['sa_recipe_title_tag'] . '>';
@@ -60,7 +60,10 @@ class Style_1 extends Templates
         }
 
         if (array_key_exists('sa_recipe_notes_title', $style) && $style['sa_recipe_notes_title'] != '') {
-            $notes = '<div class="oxi_addons__notes"> ' . $this->text_render($style['sa_recipe_notes_title']) . ' </div>';
+            $notes_title = '<div class="oxi_addons__notes_title"> ' . $this->text_render($style['sa_recipe_notes_title']) . ' </div>';
+        }
+        if (array_key_exists('sa_recipe_notes_title_text', $style) && $style['sa_recipe_notes_title_text'] != '') {
+            $notes = '<div class="oxi_addons__notes_text"> ' . $this->text_render($style['sa_recipe_notes_title_text']) . ' </div>';
         }
         if (array_key_exists('sa_recipe_ingredients_title', $style) && $style['sa_recipe_ingredients_title'] != '') {
             $ingredient_title = '<div class="oxi_addons_ingredients_title"> ' . $this->text_render($style['sa_recipe_ingredients_title']) . ' </div>';
@@ -110,31 +113,34 @@ class Style_1 extends Templates
                                 </div>';
                         } 
                         echo '</div>
-                         <div class="oxi_addons__ingredients_main">
-                             '. $ingredient_title .'';
+                        <div class="oxi_addons__ingredients_main">
+                            '. $ingredient_title .'';
                          foreach ($ingredients as $ing_key => $ingredient) {
-                             $ingredient_text = $ingredient_icon = '';
+                            $ingredient_text = $ingredient_icon = '';
                             if (array_key_exists('sa_recipe_ingredients_text', $ingredient) && $ingredient['sa_recipe_ingredients_text'] != '') {
                                 $ingredient_text = '<div class="oxi_addons__ingredients_text"> ' . $this->text_render($ingredient['sa_recipe_ingredients_text']) . ' </div>';
                             }
-                            if ($recipe_list['sa_recipe_ingredients_icon']) {
+                            if ($ingredient['sa_recipe_ingredients_icon']) {
                                 $ingredient_icon = '<div class="oxi_addons__ingredients_icon">'.$this->font_awesome_render($ingredient['sa_recipe_ingredients_icon']).'</div>';
                             }
                             echo ' <div class="oxi_addons__ingredients">
                                         '. $ingredient_text .'
                                         '. $ingredient_icon .' 
                                     </div>';
-                         } 
+                        } 
                         echo '</div>
-                         <div class="oxi_addons__instructions_main">
+                        <div class="oxi_addons__instructions_main">
                             '. $instruction_title .' 
-                         <div class="oxi_addons__instructions">
-                                     '. $instruction_text .' 
+                        <div class="oxi_addons__instructions">
+                            '. $instruction_text .' 
+                        </div>
+                        </div>
+                        <div class="oxi_addons__notes_main"> 
+                            '. $notes_title .' 
+                            <div class="oxi_addons__notes">
+                                '. $notes .' 
                             </div>
-                         </div>
-                         <div class="oxi_addons__notes_main">
-                            '. $notes .'
-                         </div>
+                        </div>
                     </div>';
         echo ' </div>';
     }

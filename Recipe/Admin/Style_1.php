@@ -27,16 +27,16 @@ class Style_1 extends AdminStyle
             [
                 'options' => [
                     'content-settings' => esc_html__('Content Settings', SHORTCODE_ADDOONS),
-                    'style-settings' => esc_html__('Style Settings', SHORTCODE_ADDOONS), 
-                ]
+                    'style-settings' => esc_html__('Style Settings', SHORTCODE_ADDOONS),
+                ],
             ]
         );
         $this->start_section_tabs(
             'shortcode-addons-start-tabs',
             [
                 'condition' => [
-                    'shortcode-addons-start-tabs' => 'content-settings'
-                ]
+                    'shortcode-addons-start-tabs' => 'content-settings',
+                ],
             ]
         );
 
@@ -45,7 +45,7 @@ class Style_1 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('Recipe Info', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => true,
             ]
         );
         $this->add_control(
@@ -57,7 +57,7 @@ class Style_1 extends AdminStyle
                 'default' => 'Fudgy Chocolate Brownies​',
                 'placeholder' => 'Lorem Ipsum is simply dummy text',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => '',
                 ],
             ]
         );
@@ -70,8 +70,8 @@ class Style_1 extends AdminStyle
                 'default' => 'These heavenly brownies are pure chocolate overload, featuring a fudgy center, slightly crusty top and layers of decadence. It doesn\'t get better than this.​',
                 'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => ''
-                    ],
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => '',
+                ],
             ]
         );
         $this->add_group_control(
@@ -92,12 +92,12 @@ class Style_1 extends AdminStyle
                 'label' => __('Title Separator', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
                 'default' => 'no',
-                'loader' => TRUE,
+                'loader' => true,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'oxi_heading__separator',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => '',
                 ],
             ]
         );
@@ -106,7 +106,7 @@ class Style_1 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('Recipe Meta', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
         );
         $this->add_control(
@@ -116,7 +116,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Meta Switcher', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
                 'default' => 'no',
-                'loader' => TRUE,
+                'loader' => true,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'yes',
@@ -131,14 +131,14 @@ class Style_1 extends AdminStyle
                 'default' => 'Mr. John​',
                 'placeholder' => 'Lorem Ipsum is simply dummy text',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author' => '',
                 ],
                 'condition' => [
-                    'sa_recipe_author_switter' => 'yes'
-                ] 
+                    'sa_recipe_author_switter' => 'yes',
+                ],
             ]
         );
-        
+
         $this->add_control(
             'sa_recipe_date_text',
             $this->style,
@@ -147,19 +147,19 @@ class Style_1 extends AdminStyle
                 'type' => Controls::DATE_TIME,
                 'default' => '2022-01-01',
                 'condition' => [
-                    'sa_recipe_author_switter' => 'yes'
-                ] 
+                    'sa_recipe_author_switter' => 'yes',
+                ],
             ]
         );
-  
-        $this->end_controls_section(); 
+
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Recipe Details', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => true,
             ]
         );
         $this->add_repeater_control(
@@ -168,7 +168,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
-                'fields' => [ 
+                'fields' => [
                     'sa_recipe_details_text' => [
                         'label' => esc_html__('Title', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
@@ -176,7 +176,7 @@ class Style_1 extends AdminStyle
                         'selector' => [
                             '{{WRAPPER}} .oxi_addons__recipe_style_{{KEY}} .oxi_addons__list_title' => '',
                         ],
-                    ], 
+                    ],
                     'sa_recipe_details_minute' => [
                         'label' => esc_html__('Minute', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
@@ -184,24 +184,24 @@ class Style_1 extends AdminStyle
                         'selector' => [
                             '{{WRAPPER}} .oxi_addons__recipe_style_{{KEY}} .oxi_addons__list_minute' => '',
                         ],
-                    ], 
+                    ],
                     'sa_recipe_details_icon' => [
                         'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fas fa-leaf'
+                        'default' => 'fas fa-leaf',
                     ],
                 ],
                 'title_field' => 'sa_recipe_details_text',
             ]
         );
 
-        $this->end_controls_section(); 
-        
+        $this->end_controls_section();
+
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Ingredients', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => true,
             ]
         );
         $this->add_control(
@@ -213,8 +213,8 @@ class Style_1 extends AdminStyle
                 'default' => 'Ingredients',
                 'placeholder' => 'Ingredients',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_title' => ''
-                ], 
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_title' => '',
+                ],
             ]
         );
         $this->add_repeater_control(
@@ -223,7 +223,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
-                'fields' => [ 
+                'fields' => [
                     'sa_recipe_ingredients_text' => [
                         'label' => esc_html__('Text', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
@@ -231,24 +231,24 @@ class Style_1 extends AdminStyle
                         'selector' => [
                             '{{WRAPPER}} .oxi_addons__recipe_style_{{KEY}} .oxi_addons__ingredients_text' => '',
                         ],
-                    ], 
+                    ],
                     'sa_recipe_ingredients_icon' => [
                         'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                         'type' => Controls::ICON,
-                        'default' => 'fas fa-square-o'
-                    ], 
+                        'default' => 'far fa-caret-square-right',
+                    ],
                 ],
 
                 'title_field' => 'sa_recipe_ingredients_text',
             ]
         );
 
-        $this->end_controls_section(); 
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Instructions', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
         );
         $this->add_control(
@@ -260,10 +260,10 @@ class Style_1 extends AdminStyle
                 'default' => 'Instructions',
                 'placeholder' => 'Instructions',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_title' => ''
-                ], 
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_title' => '',
+                ],
             ]
-        ); 
+        );
         $this->add_control(
             'sa_recipe_instructions_text',
             $this->style,
@@ -273,39 +273,51 @@ class Style_1 extends AdminStyle
                 'default' => '1. Soak the basmati rice in water for 20 minutes to half an hour.',
                 'placeholder' => '1. Soak the basmati rice in water for 20 minutes to half an hour.',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => ''
-                    ],
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => '',
+                ],
             ]
         );
-        $this->end_controls_section(); 
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Notes', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
         );
         $this->add_control(
-            'sa_recipe_notes_title', 
+            'sa_recipe_notes_title',
             $this->style,
             [
-                'label' => __('Notes', SHORTCODE_ADDOONS),
+                'label' => __('Notes Title', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'placeholder' => 'Notes',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_title' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_recipe_notes_title_text',
+            $this->style,
+            [
+                'label' => __('Notes details', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXTAREA,
                 'placeholder' => 'Write A Notes',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes' => ''
-                    ],
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_text' => '',
+                ],
             ]
-        ); 
-        $this->end_controls_section(); 
-        $this->end_section_devider();   
-        $this->end_section_tabs();  
+        );
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->end_section_tabs();
         $this->start_section_tabs(
             'shortcode-addons-start-tabs',
             [
                 'condition' => [
                     'shortcode-addons-start-tabs' => 'style-settings',
-                ],  
+                ],
             ]
         );
 
@@ -314,7 +326,7 @@ class Style_1 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => true,
             ]
         );
         $this->add_group_control(
@@ -323,7 +335,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => '',
                 ],
             ]
         );
@@ -333,7 +345,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => '',
                 ],
             ]
         );
@@ -365,7 +377,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -376,7 +388,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => '',
                 ],
             ]
         );
@@ -409,9 +421,9 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
-                'separator' => TRUE
+                'separator' => true,
             ]
         );
         $this->add_responsive_control(
@@ -442,7 +454,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_wrapper_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_wrapper_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -458,7 +470,7 @@ class Style_1 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('Recipe Info', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
         );
         $this->start_controls_tabs(
@@ -468,10 +480,9 @@ class Style_1 extends AdminStyle
                     'title' => esc_html__('Title', SHORTCODE_ADDOONS),
                     'description' => esc_html__('Description', SHORTCODE_ADDOONS),
                     'image' => esc_html__('image', SHORTCODE_ADDOONS),
-                ]
+                ],
             ]
         );
-
 
         $this->start_controls_tab();
         $this->add_control(
@@ -481,7 +492,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Tag', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
                 'default' => 'h3',
-                'loader' => TRUE,
+                'loader' => true,
                 'options' => [
                     'h1' => __('H1', SHORTCODE_ADDOONS),
                     'h2' => __('H2', SHORTCODE_ADDOONS),
@@ -501,7 +512,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => '',
                 ],
             ]
         );
@@ -513,7 +524,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#f93e70',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -546,7 +557,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -560,7 +571,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => '',
                 ],
             ]
         );
@@ -572,7 +583,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -605,7 +616,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -616,7 +627,7 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => 300,
@@ -640,17 +651,16 @@ class Style_1 extends AdminStyle
         );
         $this->end_controls_tab();
 
-
         $this->end_controls_tabs();
         $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Recipe Meta', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
                 'condition' => [
-                    'sa_recipe_author_switter' => 'yes'
-                ] 
+                    'sa_recipe_author_switter' => 'yes',
+                ],
             ]
         );
         $this->start_controls_tabs(
@@ -658,11 +668,10 @@ class Style_1 extends AdminStyle
             [
                 'options' => [
                     'author' => esc_html__('Author', SHORTCODE_ADDOONS),
-                    'date' => esc_html__('Date', SHORTCODE_ADDOONS), 
-                ]
+                    'date' => esc_html__('Date', SHORTCODE_ADDOONS),
+                ],
             ]
         );
-
 
         $this->start_controls_tab();
         $this->add_group_control(
@@ -673,7 +682,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author' => '',
                 ],
             ]
         );
@@ -685,11 +694,11 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author' => 'color:{{VALUE}};',
                 ],
             ]
         );
- 
+
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_group_control(
@@ -700,7 +709,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__date' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__date' => '',
                 ],
             ]
         );
@@ -712,12 +721,12 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__date' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__date' => 'color:{{VALUE}};',
                 ],
             ]
         );
- 
-        $this->end_controls_tab(); 
+
+        $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
             'sa_recipe_list_main_meta',
@@ -725,8 +734,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE ,
-                
+                Controls::SEPARATOR => true,
+
             ]
         );
         $this->add_responsive_control(
@@ -757,45 +766,45 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author_date_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__author_date_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_section(); 
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('Heading Separetor Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
                 'condition' => [
-                    'sa_recipe_title_separator' => 'oxi_heading__separator'
+                    'sa_recipe_title_separator' => 'oxi_heading__separator',
                 ],
             ]
-        ); 
+        );
         $this->add_responsive_control(
             'sa_recipe_line_position',
             $this->style,
             [
                 'label' => __('Postion', SHORTCODE_ADDOONS),
-                'type' => Controls::CHOOSE, 
+                'type' => Controls::CHOOSE,
                 'default' => 'left',
                 'loader' => true,
                 'options' => [
                     'left' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-left',
-                    ], 
+                    ],
                     'center' => [
                         'title' => __('Center', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-center',
-                    ], 
+                    ],
                     'right' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-right',
                     ],
-                ], 
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_heading__separator::before' => '{{VALUE}}: 0;'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_heading__separator::before' => '{{VALUE}}: 0;',
                 ],
             ]
         );
@@ -804,23 +813,23 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
-                ],  
+                ],
                 'range' => [
                     'px' => [
                         'min' => 0,
                         'max' => 1200,
                         'step' => 1,
-                    ], 
+                    ],
                     '%' => [
                         'min' => 0,
                         'max' => 100,
                         'step' => 1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_heading__separator::before' => 'width: {{SIZE}}{{UNIT}};',
                 ],
@@ -831,18 +840,18 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER, 
+                'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
-                ],   
-                'range' => [ 
+                ],
+                'range' => [
                     'px' => [
                         'min' => 0,
                         'max' => 20,
-                        'step' =>  1,
-                    ], 
-                ], 
+                        'step' => 1,
+                    ],
+                ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_heading__separator::before' => 'height: {{SIZE}}px;',
                 ],
@@ -855,12 +864,12 @@ class Style_1 extends AdminStyle
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#28a745',
-                'oparetor' => 'RGB', 
+                'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_heading__separator::before' => 'background-color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_heading__separator::before' => 'background-color:{{VALUE}};',
                 ],
             ]
-        ); 
+        );
         $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
@@ -868,9 +877,9 @@ class Style_1 extends AdminStyle
             'shortcode-addons',
             [
                 'label' => esc_html__('Recipe Details', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => true,
             ]
-        ); 
+        );
         $this->add_responsive_control(
             'sa_recipe_list_main_position',
             $this->style,
@@ -894,7 +903,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__recipe_list_main' => 'justify-content: {{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_main' => 'justify-content: {{VALUE}};',
                 ],
             ]
         );
@@ -904,7 +913,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__recipe_list_main' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_main' => '',
                 ],
             ]
         );
@@ -914,23 +923,21 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__recipe_list_main' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_main' => '',
                 ],
             ]
         );
-        
-        
+
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
                 'options' => [
                     'title' => esc_html__('Title', SHORTCODE_ADDOONS),
-                    'minute' => esc_html__('minute', SHORTCODE_ADDOONS), 
-                    'icon' => esc_html__('icon', SHORTCODE_ADDOONS), 
-                ]
+                    'minute' => esc_html__('minute', SHORTCODE_ADDOONS),
+                    'icon' => esc_html__('icon', SHORTCODE_ADDOONS),
+                ],
             ]
         );
-
 
         $this->start_controls_tab();
         $this->add_group_control(
@@ -941,7 +948,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_title' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_title' => '',
                 ],
             ]
         );
@@ -953,7 +960,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_title' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_title' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -986,7 +993,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1000,7 +1007,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_minutes' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_minutes' => '',
                 ],
             ]
         );
@@ -1012,7 +1019,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_minutes' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_minutes' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1045,21 +1052,21 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_minutes' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_minutes' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_tab(); 
-        $this->start_controls_tab(); 
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_responsive_control(
-            'sa_recipe_list_icon_size',
+            'sa_recipe_list_icon_sizes',
             $this->style,
             [
                 'label' => __('Icon Size', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 70,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -1079,7 +1086,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_icon' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_icon .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -1091,7 +1098,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_icon' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_icon .oxi-icons' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1123,21 +1130,21 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_tab(); 
+        $this->end_controls_tab();
         $this->end_controls_tabs();
-        
+
         $this->add_control(
             'sa_recipe_list_main_separator',
             $this->style,
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE ,
-                
+                Controls::SEPARATOR => true,
+
             ]
         );
         $this->add_responsive_control(
@@ -1168,20 +1175,52 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__recipe_list_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_section();  
+        $this->add_responsive_control(
+            'sa_recipe_list_main_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 600,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__list_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('
                 Ingredients
                 ', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
-        ); 
+        );
 
         $this->add_group_control(
             'sa_recipe_ingredients_main_bg',
@@ -1189,7 +1228,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_main' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_main' => '',
                 ],
             ]
         );
@@ -1199,22 +1238,81 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_main' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients' => '',
                 ],
             ]
         );
-        
+
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
                 'options' => [
-                    'text' => esc_html__('Text', SHORTCODE_ADDOONS), 
-                    'icon' => esc_html__('icon', SHORTCODE_ADDOONS), 
-                ]
+                    'title' => esc_html__('Title', SHORTCODE_ADDOONS),
+                    'text' => esc_html__('Text', SHORTCODE_ADDOONS),
+                    'icon' => esc_html__('icon', SHORTCODE_ADDOONS),
+                ],
             ]
         );
 
+        $this->start_controls_tab();
+        $this->add_group_control(
+            'sa_recipe_ingredients_title_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons_ingredients_title' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_recipe_ingredients_title_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#111',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons_ingredients_title' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
 
+        $this->add_responsive_control(
+            'sa_recipe_ingredients_title_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons_ingredients_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_group_control(
             'sa_recipe_ingredients_text_typo',
@@ -1224,7 +1322,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_text' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_text' => '',
                 ],
             ]
         );
@@ -1236,7 +1334,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_text' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_text' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1269,12 +1367,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_tab(); 
-        $this->start_controls_tab(); 
+        $this->end_controls_tab();
+        $this->start_controls_tab();
         $this->add_responsive_control(
             'sa_recipe_ingredients_icon_size',
             $this->style,
@@ -1303,7 +1401,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_icon' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_icon' => '',
                 ],
             ]
         );
@@ -1315,7 +1413,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_icon' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_icon' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1347,11 +1445,11 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_tab(); 
+        $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
             'sa_recipe_ingredients_separator',
@@ -1359,8 +1457,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE ,
-                
+                Controls::SEPARATOR => true,
+
             ]
         );
         $this->add_responsive_control(
@@ -1391,20 +1489,20 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__ingredients_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_section();  
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('
                 Instructions
                 ', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
-        ); 
+        );
 
         $this->add_group_control(
             'sa_recipe_instructions_main_bg',
@@ -1412,7 +1510,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_main' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_main' => '',
                 ],
             ]
         );
@@ -1422,20 +1520,79 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_main' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_main' => '',
                 ],
             ]
         );
-        
+
         $this->start_controls_tabs(
             'shortcode-addons-start-tabs',
             [
                 'options' => [
-                    'text' => esc_html__('Text', SHORTCODE_ADDOONS),   
-                ]
+                    'title' => esc_html__('Title', SHORTCODE_ADDOONS),
+                    'text' => esc_html__('Text', SHORTCODE_ADDOONS),
+                ],
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_group_control(
+            'sa_recipe_instructions_title_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons_instructions_title' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_recipe_instructions_title_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#111',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons_instructions_title' => 'color:{{VALUE}};',
+                ],
             ]
         );
 
+        $this->add_responsive_control(
+            'sa_recipe_instructions_title_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons_instructions_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
 
         $this->start_controls_tab();
         $this->add_group_control(
@@ -1446,7 +1603,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => '',
                 ],
             ]
         );
@@ -1458,7 +1615,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1491,11 +1648,11 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_tab();  
+        $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_control(
             'sa_recipe_instructions_separator',
@@ -1503,8 +1660,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR => TRUE ,
-                
+                Controls::SEPARATOR => true,
+
             ]
         );
         $this->add_responsive_control(
@@ -1535,20 +1692,90 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__instructions_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_section();  
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
             [
                 'label' => esc_html__('
                 Notes
                 ', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
-        ); 
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'title' => esc_html__('Title', SHORTCODE_ADDOONS),
+                    'text' => esc_html__('Text', SHORTCODE_ADDOONS),
+                ],
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_group_control(
+            'sa_recipe_notes_title_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_title' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_recipe_notes_title_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#111',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_title' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_recipe_notes_title_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
         $this->add_group_control(
             'sa_recipe_notes_typo',
             $this->style,
@@ -1557,7 +1784,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes' => ''
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_text' => '',
                 ],
             ]
         );
@@ -1569,7 +1796,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#111',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_text' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1601,12 +1828,14 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi_addons__recipe_style_1 .oxi_addons__notes_text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->end_controls_section();  
-        $this->end_section_devider();   
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->end_controls_section();
+        $this->end_section_devider();
         $this->end_section_tabs();
     }
 }
