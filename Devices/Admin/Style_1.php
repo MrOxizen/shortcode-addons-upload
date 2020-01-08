@@ -31,7 +31,6 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-start-tabs', [
             'condition' => [
                 'shortcode-addons-start-tabs' => 'general-settings',
-                
             ]
                 ]
         );
@@ -183,11 +182,6 @@ class Style_1 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .sa-el-device-wrapper' => 'max-width: {{SIZE}}{{UNIT}}; width: 100%;',
                 '{{WRAPPER}} .sa-el-device' => 'width: 100%;',
-//                '{{WRAPPER}} .sa-el-device' => 'width:{{SIZE}}{{UNIT}};',
-//                '{{WRAPPER}} .sa-el-device-wrapper' => 'max-width:{{SIZE}}{{UNIT}};',
-//                '{{WRAPPER}} .oxi-addons-wrapper-device' => 'max-width:{{SIZE}}{{UNIT}};',
-//                '{{WRAPPER}} .sa-el-device-type-laptop .sa-el-device' => 'width:{{SIZE}}{{UNIT}};',
-//                '{{WRAPPER}} .sa-el-device-type-laptop' => 'width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -382,7 +376,7 @@ class Style_1 extends AdminStyle {
                 'sa_video_box_play_icon_switcher' => 'yes',
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-video-box-container-style-3  .sa-video-box-play-icon-container' => 'left: {{SIZE}}%;',
+                '{{WRAPPER}} .oxi-addons-device-container-style-3  .oxi-addons-device-play-icon-container' => 'left: {{SIZE}}%;',
             ]
                 ]
         );
@@ -405,7 +399,7 @@ class Style_1 extends AdminStyle {
                 'sa_video_box_play_icon_switcher' => 'yes',
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-video-box-container-style-3  .sa-video-box-play-icon-container' => 'top: {{SIZE}}%;',
+                '{{WRAPPER}} .oxi-addons-device-container-style-3  .oxi-addons-device-play-icon-container' => 'top: {{SIZE}}%;',
             ]
                 ]
         );
@@ -415,19 +409,18 @@ class Style_1 extends AdminStyle {
         $this->end_section_tabs();
 
         $this->start_section_tabs(
-            'shortcode-addons-start-tabs', [
+                'shortcode-addons-start-tabs', [
             'condition' => [
                 'shortcode-addons-start-tabs' => 'style-settings'
             ]
                 ]
         );
-        
+
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons', [
             'label' => esc_html__('Device', SHORTCODE_ADDOONS),
             'showing' => TRUE,
-            
                 ]
         );
         $this->add_control(
@@ -443,18 +436,16 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
-            'sa_device_override_color',
-            $this->style,
-            [
-                'type' => Controls::COLOR,
-                'loader' => TRUE,
-                'selector' => [
-                    '{{WRAPPER}} .sa-el-device-wrapper svg .back-shape, {{WRAPPER}} .sa-el-device-skin-black svg .side-shape' => 'fill:{{VALUE}}',
-                ],
-                'condition' => [
+                'sa_device_override_color', $this->style, [
+            'type' => Controls::COLOR,
+            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .sa-el-device-wrapper svg .back-shape, {{WRAPPER}} .sa-el-device-skin-black svg .side-shape' => 'fill:{{VALUE}}',
+            ],
+            'condition' => [
                 'sa_device_override_style' => 'yes'
             ]
-            ]
+                ]
         );
         $this->add_control(
                 'sa_device_skin', $this->style, [
@@ -471,8 +462,130 @@ class Style_1 extends AdminStyle {
             'default' => '169',
                 ]
         );
-        
-        
+
+
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->start_section_devider();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Icon Style', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+            'condition' => [
+                'sa_video_box_play_icon_switcher' => 'yes'
+            ]
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_devices_icon_size', $this->style, [
+            'label' => __('Icon Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'font-size: {{SIZE}}{{UNIT}};',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_devices_icon_background', $this->style, [
+            'type' => Controls::GRADIENT,
+            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'background:{{VALUE}};',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_devices_icon_color', $this->style, [
+            'type' => Controls::COLOR,
+            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'color:{{VALUE}};',
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_devices_icon_border_radiur', $this->style, [
+            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],       
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_devices_icon_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+                    
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();

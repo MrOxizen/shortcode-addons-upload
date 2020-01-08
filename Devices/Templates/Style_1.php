@@ -26,12 +26,11 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
         $devicetype = $style['sa_devices_type'];
         $skin = $style['sa_device_skin'];
-
         $style['sa-el-device-orientation-landscape'] = '';
-        echo ' <div class="oxi-addons-wrapper-device ">
+        
+        echo ' <div class="oxi-addons-wrapper-device">
                     <div class = "sa-el-device-wrapper sa-el-device-type-'.$devicetype.' ' . $style['sa-el-device-orientation-landscape'].'">
                         <div class="sa-el-device sa-el-device-skin-'.$skin.'">
-                            
                             <div class="sa-el-device__shape" data-device-shape="' . $style['sa_devices_type'] . '">
                             </div>
                             <div class="sa-el-device__media">
@@ -49,7 +48,9 @@ class Style_1 extends Templates {
                             </div>
                         </div>
                     </div>
-                </div>';
+                 </div>
+            </div>
+        </div>';
     }
     public function video_render($style, $child, $admin)
     {
@@ -93,18 +94,18 @@ class Style_1 extends Templates {
                 }
             }
         }
-        echo '<div class="sa-video-box-container-style-3">
+        echo '<div class="oxi-addons-device-container-style-3">
                 <div class="sa-aspect-ratio-' . $style['aspect_ratio'] . '">
-                    <div id="sa-video-box-container-' . $this->oxiid . '" class="sa-video-box-container" data-overlay="' . (($style['sa_video_box_image_switcher'] == 'yes') ? 'true' : 'false') . '" data-type="' . $video_type . '">
-                        <div class="sa-video-box-video-container" >
+                    <div id="oxi-addons-device-container-' . $this->oxiid . '" class="oxi-addons-device-container" data-overlay="' . (($style['sa_video_box_image_switcher'] == 'yes') ? 'true' : 'false') . '" data-type="' . $video_type . '">
+                        <div class="oxi-addons-device-video-container" >
                             <video src="' . $hosted_url . '"  ' . $video_params . '></video>
                         </div>
-                        <div class="sa-video-box-image-container" style="background-image: url(' . $image . ')">
+                        <div class="oxi-addons-device-image-container" style="background-image: url(' . $image . ')">
                         </div>';
         if ($style['sa_video_box_play_icon_switcher'] == 'yes') :
             echo '
-                        <div class="sa-video-box-play-icon-container">
-                            <i class="sa-video-box-play-icon fa fa-play fa-lg"></i>
+                        <div class="oxi-addons-device-play-icon-container">
+                            <i class="oxi-addons-device-play-icon fa fa-play fa-lg"></i>
                         </div>';
         endif;
         echo '
@@ -118,8 +119,8 @@ class Style_1 extends Templates {
         $jquery = '';
         $jquery .= '
            
-            var videoBoxElement = $(".' . $this->WRAPPER . ' .sa-video-box-container-style-3 .sa-video-box-container"),
-            videoContainer = videoBoxElement.find(".sa-video-box-video-container"),
+            var videoBoxElement = $(".' . $this->WRAPPER . ' .oxi-addons-device-container-style-3 .oxi-addons-device-container"),
+            videoContainer = videoBoxElement.find(".oxi-addons-device-video-container"),
             type = videoBoxElement.data("type"),
             video = videoContainer.find("video"),
             vidSrc = video.attr("src");
@@ -133,7 +134,7 @@ class Style_1 extends Templates {
                         opacity: "1",
                         visibility: "visible"
                     });
-                    videoBoxElement.find(".sa-video-box-image-container").remove();
+                    videoBoxElement.find(".oxi-addons-device-image-container").remove();
                 });
             }
         ';
@@ -159,48 +160,11 @@ class Style_1 extends Templates {
                         $shape.html(data.childNodes[0]);
                         svg = $shape.find("svg.devices-elementor-svg").get(0);
                     });
-
-                    if ('yes' === $wrapper.find('.sa-el-device__orientation').data('device-orientation')) {
-                        $wrapper.find('.sa-el-device__orientation').on('click', function () {
-                            $wrapper.toggleClass('sa-el-device-orientation-landscape');
-                        });
-                    }
         //                    SAVideoPlayer($scope);
 
                 })(jQuery);
 
-
-
-                var SAVideoPlayer = function ($scope, $) {
-                    $scope.elementSettings = sa.getElementSettings($scope);
-
-                    var $video = $('.<?php echo $this->WRAPPER; ?> .sa-el-video-player'),
-                            videoPlayerArgs = {
-                                playOnViewport: 'yes' === $scope.elementSettings.video_play_viewport,
-                                stopOffViewport: 'yes' === $scope.elementSettings.video_stop_viewport,
-                                endAtLastFrame: 'yes' === $scope.elementSettings.video_end_at_last_frame,
-                                restartOnPause: 'yes' === $scope.elementSettings.video_restart_on_pause,
-                                stopOthersOnPlay: 'yes' === $scope.elementSettings.video_stop_others,
-                            };
-
-                    if ('undefined' !== typeof $scope.elementSettings.video_speed) {
-                        videoPlayerArgs.speed = $scope.elementSettings.video_speed.size;
-                    }
-
-                    if (!$video.length)
-                        return;
-
-                    $scope.init = function () {
-                        if ('undefined' !== typeof $scope.elementSettings.video_volume) {
-                            videoPlayerArgs.volume = $scope.elementSettings.video_volume.size;
-                        }
-
-                        $video.SAVideoPlayer(videoPlayerArgs);
-                    };
-
-                    $scope.init();
-                };
-            }, 500);
+            }, 2000);
         </script>
         <?php
         
