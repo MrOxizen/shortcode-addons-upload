@@ -24,20 +24,14 @@ class Style_1 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-        $sss = ''
-                . '
-                                    <div class="sa-el-device__media__screen">
-                                        <div class="sa-el-device__media__screen__inner">
-                                            
-                                        </div>
-                                    </div>';
         $devicetype = $style['sa_devices_type'];
-        
+        $skin = $style['sa_device_skin'];
+
         $style['sa-el-device-orientation-landscape'] = '';
         echo ' <div class="oxi-addons-wrapper-device ">
                     <div class = "sa-el-device-wrapper sa-el-device-type-'.$devicetype.' ' . $style['sa-el-device-orientation-landscape'].'">
-                        <div class="sa-el-device">
-                            <div class="sa-el-device__orientation far" data-device-orientation="' . $style['sa_devices_orientation'] . '"></div>
+                        <div class="sa-el-device sa-el-device-skin-'.$skin.'">
+                            
                             <div class="sa-el-device__shape" data-device-shape="' . $style['sa_devices_type'] . '">
                             </div>
                             <div class="sa-el-device__media">
@@ -214,3 +208,12 @@ class Style_1 extends Templates {
     }
 
 }
+
+//
+//        $sss = ''
+//                . '<div class="sa-el-device__orientation far" data-device-orientation="' . $style['sa_devices_orientation'] . '"></div>
+//                                    <div class="sa-el-device__media__screen">
+//                                        <div class="sa-el-device__media__screen__inner">
+//                                            
+//                                        </div>
+//                                    </div>';

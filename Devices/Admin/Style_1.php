@@ -88,47 +88,47 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_devices_orientation', $this->style, [
-            'label' => __('Orientation', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'sa-el-device-orientation-landscape',
-            'options' => [
-                '' => [
-                    'title' => __('Portarait', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-mobile-alt',
-                ],
-                'sa-el-device-orientation-landscape' => [
-                    'title' => __('Landscape', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-tablet-alt',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_addons_number_style_1 .sa_addons_number_icon' => 'text-align: {{VALUE}};'
-            ],
-            'condition' => [
-                'sa_devices_media_type' => 'image',
-                'sa_devices_type' => ['phone', 'tablet'],
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_devices_orientation_control', $this->style, [
-            'label' => __('Orientation Control', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-            'description' => 'Show Orientation control on frontend',
-            'condition' => [
-                'sa_devices_media_type' => 'image',
-                'sa_devices_type' => ['phone', 'tablet'],
-            ]
-                ]
-        );
+//        $this->add_control(
+//                'sa_devices_orientation', $this->style, [
+//            'label' => __('Orientation', SHORTCODE_ADDOONS),
+//            'type' => Controls::CHOOSE,
+//            'operator' => Controls::OPERATOR_ICON,
+//            'toggle' => TRUE,
+//            'loader' => TRUE,
+//            'default' => 'sa-el-device-orientation-landscape',
+//            'options' => [
+//                '' => [
+//                    'title' => __('Portarait', SHORTCODE_ADDOONS),
+//                    'icon' => 'fas fa-mobile-alt',
+//                ],
+//                'sa-el-device-orientation-landscape' => [
+//                    'title' => __('Landscape', SHORTCODE_ADDOONS),
+//                    'icon' => 'fas fa-tablet-alt',
+//                ],
+//            ],
+//            'selector' => [
+//                '{{WRAPPER}} .sa_addons_number_style_1 .sa_addons_number_icon' => 'text-align: {{VALUE}};'
+//            ],
+//            'condition' => [
+//                'sa_devices_media_type' => 'image',
+//                'sa_devices_type' => ['phone', 'tablet'],
+//            ]
+//                ]
+//        );
+//        $this->add_control(
+//                'sa_devices_orientation_control', $this->style, [
+//            'label' => __('Orientation Control', SHORTCODE_ADDOONS),
+//            'type' => Controls::SWITCHER,
+//            'yes' => __('Yes', SHORTCODE_ADDOONS),
+//            'no' => __('No', SHORTCODE_ADDOONS),
+//            'return_value' => 'yes',
+//            'description' => 'Show Orientation control on frontend',
+//            'condition' => [
+//                'sa_devices_media_type' => 'image',
+//                'sa_devices_type' => ['phone', 'tablet'],
+//            ]
+//                ]
+//        );
         $this->add_responsive_control(
                 'sa_devices_alignment', $this->style, [
             'label' => __('Alignment', SHORTCODE_ADDOONS),
@@ -151,7 +151,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_addons_number_style_1 .sa_addons_number_icon' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-device' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -181,11 +181,13 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa-el-device' => 'width:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa-el-device-wrapper' => 'max-width:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi-addons-wrapper-device' => 'max-width:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa-el-device-type-laptop .sa-el-device' => 'width:{{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa-el-device-type-laptop' => 'width:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-el-device-wrapper' => 'max-width: {{SIZE}}{{UNIT}}; width: 100%;',
+                '{{WRAPPER}} .sa-el-device' => 'width: 100%;',
+//                '{{WRAPPER}} .sa-el-device' => 'width:{{SIZE}}{{UNIT}};',
+//                '{{WRAPPER}} .sa-el-device-wrapper' => 'max-width:{{SIZE}}{{UNIT}};',
+//                '{{WRAPPER}} .oxi-addons-wrapper-device' => 'max-width:{{SIZE}}{{UNIT}};',
+//                '{{WRAPPER}} .sa-el-device-type-laptop .sa-el-device' => 'width:{{SIZE}}{{UNIT}};',
+//                '{{WRAPPER}} .sa-el-device-type-laptop' => 'width:{{SIZE}}{{UNIT}};'
             ],
                 ]
         );
@@ -413,7 +415,7 @@ class Style_1 extends AdminStyle {
         $this->end_section_tabs();
 
         $this->start_section_tabs(
-                'shortcode-addons-start-tabs', [
+            'shortcode-addons-start-tabs', [
             'condition' => [
                 'shortcode-addons-start-tabs' => 'style-settings'
             ]
@@ -421,7 +423,57 @@ class Style_1 extends AdminStyle {
         );
         
         $this->start_section_devider();
-
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Device', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+            
+                ]
+        );
+        $this->add_control(
+                'sa_device_override_style', $this->style, [
+            'label' => __('Custom Style', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'loader' => TRUE,
+            'description' => 'Override default device style',
+            'default' => 'yes',
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->add_control(
+            'sa_device_override_color',
+            $this->style,
+            [
+                'type' => Controls::COLOR,
+                'loader' => TRUE,
+                'selector' => [
+                    '{{WRAPPER}} .sa-el-device-wrapper svg .back-shape, {{WRAPPER}} .sa-el-device-skin-black svg .side-shape' => 'fill:{{VALUE}}',
+                ],
+                'condition' => [
+                'sa_device_override_style' => 'yes'
+            ]
+            ]
+        );
+        $this->add_control(
+                'sa_device_skin', $this->style, [
+            'label' => __('Skin', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'loader' => TRUE,
+            'options' => [
+                'jetblack' => 'Jet black',
+                'black' => 'Black',
+                'silver' => 'Silver',
+                'gold' => 'Gold',
+                'rosegold' => 'Rose Gold',
+            ],
+            'default' => '169',
+                ]
+        );
+        
+        
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }

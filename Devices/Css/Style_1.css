@@ -1,7 +1,6 @@
 .oxi-addons-wrapper-device {
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 
@@ -131,7 +130,6 @@
     width: 277px;
 }
 .sa-el-device-type-phone .sa-el-device {
-    width: 277px;
     padding-bottom: 207.22022%;
 }
 .sa-el-device-type-phone .sa-el-device__media {
@@ -146,7 +144,6 @@
     width: 430px;
 }
 .sa-el-device-type-tablet .sa-el-device {
-    width: 430px;
     padding-bottom: 138.37209%;
 }
 .sa-el-device-type-tablet .sa-el-device__media {
@@ -161,7 +158,6 @@
     width: 645px;
 }
 .sa-el-device-type-laptop .sa-el-device {
-    width: 645px;
     padding-bottom: 57.36434%;
 }
 .sa-el-device-type-laptop .sa-el-device__media {
@@ -259,7 +255,6 @@
     width: 595px;
 }
 .sa-el-device-orientation-landscape .sa-el-device-wrapper.sa-el-device-type-tablet .sa-el-device {
-    width: 595px;
     padding-bottom: 72.26891%;
 }
 .sa-el-device-orientation-landscape .sa-el-device-wrapper.sa-el-device-type-tablet .sa-el-device__shape {
