@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_tabs(
@@ -44,7 +44,29 @@ class Style_1 extends AdminStyle {
             'default' => 'http://oxilab.org',
                 ]
         );
-        
+       
+        $this->add_control(
+                'sa_qr_code_label_text', $this->style, [
+            'label' => __('Label Text', SHORTCODE_ADDOONS),
+            'type' => Controls::TEXT,
+            'placeholder' => 'Oxilab',
+            'default' => 'Oxilab',
+           
+                ]
+        );
+        $this->add_control(
+                'sa_qr_code_mode', $this->style, [
+            'label' => __('Mode', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'loader' => TRUE,
+            'default' => 'box',
+            'options' => [
+                'strip' => __('Strip', SHORTCODE_ADDOONS),
+                'box' => __('Box', SHORTCODE_ADDOONS),
+            ],
+       
+                ]
+        );
 
         
         $this->add_responsive_control(
@@ -68,7 +90,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_qrcode_style1' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_qrcode_style2' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -98,7 +120,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_qrcode_style1 .oxi_addons_qrcode_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_qrcode_style2 .oxi_addons_qrcode_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'separator' => TRUE
                 ]
@@ -130,7 +152,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_qrcode_style1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_qrcode_style2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -153,7 +175,14 @@ class Style_1 extends AdminStyle {
            
                 ]
         );
-        
+        $this->add_control(
+                'sa_qr_code_color_label', $this->style, [
+            'label' => __('Lavel Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#808080',
+            
+             ]
+        );
         $this->add_control(
                 'sa_qr_code_redius', $this->style, [
             'label' => __('Code Redius', SHORTCODE_ADDOONS),
@@ -188,7 +217,60 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        
+        $this->add_control(
+                'sa_qr_code_label_size', $this->style, [
+            'label' => __('Label Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '0',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 1,
+                ],
+            ],
+           
+                ]
+        );
+        $this->add_control(
+                'sa_qr_code_lx', $this->style, [
+            'label' => __('Label POS X', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '50',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            
+                ]
+        );
+        $this->add_control(
+                'sa_qr_code_ly', $this->style, [
+            'label' => __('Label POS Y', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '50',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+           
+                ]
+        );
         $this->add_control(
                 'sa_qr_code_mv', $this->style, [
             'label' => __('Min Version', SHORTCODE_ADDOONS),

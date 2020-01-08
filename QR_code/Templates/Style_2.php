@@ -7,14 +7,14 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_2 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-qrcode.min';
@@ -23,8 +23,8 @@ class Style_1 extends Templates {
 
     public function inline_public_jquery() {
         $js = '
-        var $qrcode = $(".oxi_addons_qrcode_style1 .oxi_addons_qrcode_main"),
-        image = $qrcode.find(".oxi_addons_qrcode_style1 .sa_qrcode_image");
+        var $qrcode = $(".oxi_addons_qrcode_style2 .oxi_addons_qrcode_main"),
+        image = $qrcode.find(".oxi_addons_qrcode_style2 .sa_qrcode_image");
         if (!$qrcode.length) {
             return;
            }
@@ -36,9 +36,11 @@ class Style_1 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-       
 
-        $data = wp_json_encode(array_filter([
+
+
+
+        $sdfsf = wp_json_encode(array_filter([
             "render" => "canvas",
             "ecLevel" => $style['sa_qr_code_ecl'],
             "minVersion" => $style['sa_qr_code_mv-size'],
@@ -46,16 +48,16 @@ class Style_1 extends Templates {
             "text" => $this->text_render($style['sa_qr_code_content']),
             "size" => $style['sa_qr_code_size-size'],
             "radius" => $style['sa_qr_code_redius-size'] * 0.01,
-            "mode" => 0,
-            "mSize" => 0.14,
-            "mPosX" => 0.5,
-            "mPosY" => 0.5,
-            "label" => "",
-            "fontcolor" => "",
+            "mode" => ($style['sa_qr_code_mode'] == 'box' ? 2 : 1),
+            "mSize" => $style['sa_qr_code_label_size-size'] * 0.01,
+            "mPosX" => $style['sa_qr_code_lx-size'] * 0.01,
+            "mPosY" => $style['sa_qr_code_ly-size'] * 0.01,
+            "label" => $this->text_render($style['sa_qr_code_label_text']),
+            "fontcolor" => $style['sa_qr_code_color_label'],
         ]));
 
-        echo '<div class = "oxi_addons_qrcode_style1">
-                    <div class = "oxi_addons_qrcode_main" data-settings = \'' . $data . '\'>
+        echo '<div class = "oxi_addons_qrcode_style2">
+                    <div class = "oxi_addons_qrcode_main" data-settings = \'' . $sdfsf . '\'>
                     </div>
               </div>';
     }
