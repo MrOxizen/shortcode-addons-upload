@@ -143,9 +143,7 @@ class Style_1 extends Templates {
 
                     $store = [];
                     $count = count($all_data);
-                    if ($count < 1):
-                        return;
-                    endif;
+
                     $i = 1;
                     foreach ($all_data as $key => $value) {
                         $store[$i][0] = $value;
