@@ -23,13 +23,14 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-start-tabs', [
             'options' => [
                 'general-settings' => esc_html__('General', SHORTCODE_ADDOONS),
+                'style-settings' => esc_html__('Style Settings', SHORTCODE_ADDOONS),
             ]
                 ]
         );
         $this->start_section_tabs(
                 'shortcode-addons-start-tabs', [
             'condition' => [
-                'shortcode-addons-start-tabs' => 'general-settings'
+                'shortcode-addons-start-tabs' => 'general-settings',
             ]
                 ]
         );
@@ -68,10 +69,6 @@ class Style_1 extends AdminStyle {
                     'title' => __('Desktop', SHORTCODE_ADDOONS),
                     'icon' => 'fa fa-desktop',
                 ],
-                'windows' => [
-                    'title' => __('Windows', SHORTCODE_ADDOONS),
-                    'icon' => 'far fa-window-maximize',
-                ],
             ],
             'selector' => [
                 '{{WRAPPER}} .sa_addons_number_style_1 .sa_addons_number_icon' => 'text-align: {{VALUE}};'
@@ -90,47 +87,47 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa_devices_orientation', $this->style, [
-            'label' => __('Orientation', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'sa-el-device-orientation-landscape',
-            'options' => [
-                '' => [
-                    'title' => __('Portarait', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-mobile-alt',
-                ],
-                'sa-el-device-orientation-landscape' => [
-                    'title' => __('Landscape', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-tablet-alt',
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_addons_number_style_1 .sa_addons_number_icon' => 'text-align: {{VALUE}};'
-            ],
-            'condition' => [
-                'sa_devices_media_type' => 'image',
-                'sa_devices_type' => ['phone', 'tablet'],
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_devices_orientation_control', $this->style, [
-            'label' => __('Orientation Control', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-            'description' => 'Show Orientation control on frontend',
-            'condition' => [
-                'sa_devices_media_type' => 'image',
-                'sa_devices_type' => ['phone', 'tablet'],
-            ]
-                ]
-        );
+//        $this->add_control(
+//                'sa_devices_orientation', $this->style, [
+//            'label' => __('Orientation', SHORTCODE_ADDOONS),
+//            'type' => Controls::CHOOSE,
+//            'operator' => Controls::OPERATOR_ICON,
+//            'toggle' => TRUE,
+//            'loader' => TRUE,
+//            'default' => 'sa-el-device-orientation-landscape',
+//            'options' => [
+//                '' => [
+//                    'title' => __('Portarait', SHORTCODE_ADDOONS),
+//                    'icon' => 'fas fa-mobile-alt',
+//                ],
+//                'sa-el-device-orientation-landscape' => [
+//                    'title' => __('Landscape', SHORTCODE_ADDOONS),
+//                    'icon' => 'fas fa-tablet-alt',
+//                ],
+//            ],
+//            'selector' => [
+//                '{{WRAPPER}} .sa_addons_number_style_1 .sa_addons_number_icon' => 'text-align: {{VALUE}};'
+//            ],
+//            'condition' => [
+//                'sa_devices_media_type' => 'image',
+//                'sa_devices_type' => ['phone', 'tablet'],
+//            ]
+//                ]
+//        );
+//        $this->add_control(
+//                'sa_devices_orientation_control', $this->style, [
+//            'label' => __('Orientation Control', SHORTCODE_ADDOONS),
+//            'type' => Controls::SWITCHER,
+//            'yes' => __('Yes', SHORTCODE_ADDOONS),
+//            'no' => __('No', SHORTCODE_ADDOONS),
+//            'return_value' => 'yes',
+//            'description' => 'Show Orientation control on frontend',
+//            'condition' => [
+//                'sa_devices_media_type' => 'image',
+//                'sa_devices_type' => ['phone', 'tablet'],
+//            ]
+//                ]
+//        );
         $this->add_responsive_control(
                 'sa_devices_alignment', $this->style, [
             'label' => __('Alignment', SHORTCODE_ADDOONS),
@@ -153,7 +150,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_addons_number_style_1 .sa_addons_number_icon' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-device' => 'text-align: {{VALUE}};'
             ],
                 ]
         );
@@ -183,7 +180,8 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon' => 'font-size:{{SIZE}}{{UNIT}};'
+                '{{WRAPPER}} .sa-el-device-wrapper' => 'max-width: {{SIZE}}{{UNIT}}; width: 100%;',
+                '{{WRAPPER}} .sa-el-device' => 'width: 100%;',
             ],
                 ]
         );
@@ -223,221 +221,372 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_group_control(
-                'sa_devices_video', $this->style, [
+                'sa_video_box_video_link', $this->style, [
+            'label' => __('Youtube Video Link', SHORTCODE_ADDOONS),
             'type' => Controls::FILEUPLOAD,
             'select' => Controls::VIDEO,
-            'placeholder' => 'www.example.com/video/video.mp4',
-            'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .heading-data' => ''
+            'placeholder' => 'www.example.com/video.mp4',
+            'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2020/01/videoplayback.mp4',
             ],
                 ]
         );
+
         $this->add_control(
-                'sa_devices_ch_cover', $this->style, [
-            'label' => __('Choose Cover', SHORTCODE_ADDOONS),
-            'separator' => true,
-            'type' => Controls::HEADING,
-                ]
-        );
-        $this->add_group_control(
-                'sa_devices_cover_photo', $this->style, [
-            'label' => esc_html__('Video', SHORTCODE_ADDOONS),
-            'type' => Controls::MEDIA,
-            'placeholder' => 'www.example.com/image/image.jpg',
-            'selector' => [
-                '{{WRAPPER}} .oa_ac_style_1 .oxi-addons-ac-H .heading-data' => ''
-            ],
+                'sa_video_box_controls', $this->style, [
+            'label' => __('Player Controls', SHORTCODE_ADDOONS),
+            'description' => __('Show/hide player controls', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'loader' => TRUE,
+            'default' => 'yes',
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
                 ]
         );
         $this->add_control(
-                'sa_devices_behaviour', $this->style, [
-            'label' => __('Behaviour', SHORTCODE_ADDOONS),
-            'separator' => true,
-            'type' => Controls::HEADING,
+                'sa_video_box_mute', $this->style, [
+            'label' => __('Mute', SHORTCODE_ADDOONS),
+            'description' => __('This will play the video muted', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'loader' => TRUE,
+            'return_value' => 'yes',
                 ]
         );
         $this->add_control(
-                'sa_devices_video_autoplay', $this->style, [
+                'sa_video_box_self_autoplay', $this->style, [
             'label' => __('Auto Play', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
+            'loader' => TRUE,
             'return_value' => 'yes',
                 ]
         );
+
         $this->add_control(
-                'sa_devices_autoplay_desc', $this->style, [
-            'label' => __('Many browsers don\'t allow videos with sound to autoplay without user interaction. To avoid this, enable the Start Muted control to disable sound so that the video autoplays correctly.', SHORTCODE_ADDOONS),
-            'type' => Controls::HEADING,
-            'condition' => [
-                'sa_devices_video_autoplay' => 'yes',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_stop', $this->style, [
-            'label' => __('Stop Others', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-            'description' => 'Stop all other videos on page when this video is played.'
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_veiwport', $this->style, [
-            'label' => __('Play in Viewport', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-            'condition' => [
-                'sa_devices_video_autoplay' => 'yes',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_stop_leave', $this->style, [
-            'label' => __('Stop on Leave', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-            'condition' => [
-                'sa_devices_video_veiwport' => 'yes',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_restart', $this->style, [
-            'label' => __('Restart on pause', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_loop', $this->style, [
+                'sa_video_box_loop', $this->style, [
             'label' => __('Loop', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
+            'loader' => TRUE,
             'return_value' => 'yes',
                 ]
         );
         $this->add_control(
-                'sa_devices_video_last_frame', $this->style, [
-            'label' => __('End at last frame', SHORTCODE_ADDOONS),
+                'sa_video_box_start', $this->style, [
+            'label' => __('Start Time', SHORTCODE_ADDOONS),
+            'type' => Controls::NUMBER,
+            'description' => __('Specify a start time (in seconds)', SHORTCODE_ADDOONS),
+                ]
+        );
+        $this->add_control(
+                'sa_video_box_end', $this->style, [
+            'label' => __('End Time', SHORTCODE_ADDOONS),
+            'type' => Controls::NUMBER,
+            'description' => __('Specify an end time (in seconds)', SHORTCODE_ADDOONS),
+                ]
+        );
+        $this->add_control(
+                'aspect_ratio', $this->style, [
+            'label' => __('Aspect Ratio', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'loader' => TRUE,
+            'options' => [
+                '11' => '1:1',
+                '169' => '16:9',
+                '43' => '4:3',
+                '32' => '3:2',
+                '219' => '21:9',
+            ],
+            'default' => '169',
+                ]
+        );
+        $this->add_control(
+                'sa_video_box_image_switcher', $this->style, [
+            'label' => __('Overlay', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
+            'loader' => TRUE,
+            'default' => 'yes',
             'return_value' => 'yes',
-            'description' => 'Stop all other videos on page when this video is played.',
-            'condition' => [
-                '! sa_devices_video_loop' => '',
-            ]
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_devices_video_pb_speed', $this->style, [
-            'label' => __('Playback Speed', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => '%',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 5,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_devices_display', $this->style, [
-            'label' => __('Display', SHORTCODE_ADDOONS),
-            'separator' => true,
-            'type' => Controls::HEADING,
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_btn', $this->style, [
-            'label' => __('Show Buttons', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_bar', $this->style, [
-            'label' => __('Show Bar', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_rewind', $this->style, [
-            'label' => __('Show Rewind', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-            'condition' => [
-                'sa_devices_video_restart' => 'yes',
-            ]
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_volume', $this->style, [
-            'label' => __('Volume', SHORTCODE_ADDOONS),
-            'separator' => true,
-            'type' => Controls::HEADING,
-                ]
-        );
-        $this->add_control(
-                'sa_devices_video_muted', $this->style, [
-            'label' => __('Start Muted', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'yes' => __('Yes', SHORTCODE_ADDOONS),
-            'no' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-            
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_devices_video_in_volume', $this->style, [
-            'label' => __('Initial Volume', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => '%',
-                'size' => '',
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 0,
-                    'max' => 5,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-AL-SE-7 .oxi-addonsAL-SE-F-icon' => 'font-size:{{SIZE}}{{UNIT}};'
-            ],
-                    'condition' => [
-                '! sa_devices_video_muted' => '',
-            ]
                 ]
         );
         $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => __('Overlay', SHORTCODE_ADDOONS),
+            'condition' => [
+                'sa_video_box_image_switcher' => 'yes'
+            ],
+            'showing' => FALSE,
+            'condition' => [
+                'sa_devices_media_type' => 'video',
+                'sa_video_box_image_switcher' => 'yes',
+            ]
+                ]
+        );
+        $this->add_group_control(
+                'sa_video_box_image', $this->style, [
+            'label' => __('Image', SHORTCODE_ADDOONS),
+            'description' => __('Choose an image for the video box', SHORTCODE_ADDOONS),
+            'type' => Controls::MEDIA,
+            'default' => [
+                'type' => 'media-library',
+                'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2020/01/placeholder.png',
+            ]
+                ]
+        );
 
+        $this->end_controls_section();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Play Icon', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+            'condition' => [
+                'sa_devices_media_type' => 'video',
+            ]
+                ]
+        );
+
+        $this->add_control(
+                'sa_video_box_play_icon_switcher', $this->style, [
+            'label' => __('Play Icon', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'loader' => TRUE,
+            'default' => 'yes',
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_video_box_icon_hor_position', $this->style, [
+            'label' => __('Horizontal Position (%)', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 50,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            'condition' => [
+                'sa_video_box_play_icon_switcher' => 'yes',
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3  .oxi-addons-device-play-icon-container' => 'left: {{SIZE}}%;',
+            ]
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_video_box_icon_ver_position', $this->style, [
+            'label' => __('Vertical Position (%)', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 50,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            'condition' => [
+                'sa_video_box_play_icon_switcher' => 'yes',
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3  .oxi-addons-device-play-icon-container' => 'top: {{SIZE}}%;',
+            ]
+                ]
+        );
+
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->end_section_tabs();
+
+        $this->start_section_tabs(
+                'shortcode-addons-start-tabs', [
+            'condition' => [
+                'shortcode-addons-start-tabs' => 'style-settings'
+            ]
+                ]
+        );
+
+        $this->start_section_devider();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Device', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+                ]
+        );
+        $this->add_control(
+                'sa_device_override_style', $this->style, [
+            'label' => __('Custom Style', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'loader' => TRUE,
+            'description' => 'Override default device style',
+            'default' => 'yes',
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->add_control(
+                'sa_device_override_color', $this->style, [
+            'type' => Controls::COLOR,
+            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .sa-el-device-wrapper svg .back-shape, {{WRAPPER}} .sa-el-device-skin-black svg .side-shape' => 'fill:{{VALUE}}',
+            ],
+            'condition' => [
+                'sa_device_override_style' => 'yes'
+            ]
+                ]
+        );
+        $this->add_control(
+                'sa_device_skin', $this->style, [
+            'label' => __('Skin', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'loader' => TRUE,
+            'options' => [
+                'jetblack' => 'Jet black',
+                'black' => 'Black',
+                'silver' => 'Silver',
+                'gold' => 'Gold',
+                'rosegold' => 'Rose Gold',
+            ],
+            'default' => '169',
+                ]
+        );
+
+
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->start_section_devider();
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Icon Style', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
+            'condition' => [
+                'sa_video_box_play_icon_switcher' => 'yes'
+            ]
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_devices_icon_size', $this->style, [
+            'label' => __('Icon Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'font-size: {{SIZE}}{{UNIT}};',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_devices_icon_background', $this->style, [
+            'type' => Controls::GRADIENT,
+            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'background:{{VALUE}};',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_devices_icon_color', $this->style, [
+            'type' => Controls::COLOR,
+            'loader' => TRUE,
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'color:{{VALUE}};',
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_devices_icon_border_radiur', $this->style, [
+            'label' => __('Border Radius', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],       
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_devices_icon_padding', $this->style, [
+            'label' => __('Padding', SHORTCODE_ADDOONS),
+            'type' => Controls::DIMENSIONS,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+                    
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
+                ],
+                '%' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 0.1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi-addons-device-container-style-3 .oxi-addons-device-play-icon-container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+            ],
+                ]
+        );
+
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }

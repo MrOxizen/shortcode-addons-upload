@@ -1,0 +1,250 @@
+ .oxi_addons__recipe_style_1 {
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     background-color: #f2faff;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__recipe_header {
+     display: flex;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__header_left {
+     padding: 30px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__heading {
+     position: relative;
+     width: 100%;
+     font-size: 32px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #f0f0f0;
+     padding: 10px 0px 10px 0px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_heading__separator::before {
+     position: absolute;
+     content: '';
+     width: 250px;
+     height: 4px;
+     background: #28a745;
+     bottom: 0;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__author_date_main {
+     display: flex;
+     padding: 10px 0;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__author {
+     font-size: 18px;
+     font-family: "Roboto", Sans-serif;
+     position: relative;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__author::after {
+     content: '\2022';
+     margin: 0 6px
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__date {
+     font-size: 18px;
+     font-family: "Roboto", Sans-serif;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__details {
+     width: 100%;
+     font-size: 16px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: center;
+     color: #f0f0f0;
+     padding: 10px 0px 10px 0px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__header_right {
+     display: flex;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__image_main {
+     padding: 5px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__image {
+     width: 100%;
+     max-width: 300px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__list_main {
+     display: flex;
+     justify-content: center;
+     padding: 30px;
+     border-top: 1px solid#ccc;
+     border-bottom: 1px solid #ccc;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__list {
+     padding: 10px 20px;
+     display: flex;
+     align-items: center;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__list_icon {
+     margin-right: 5px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__title_minute {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__list_title {
+     width: 100%;
+     font-size: 18px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+     padding: 5px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__list_minute {
+     width: 100%;
+     font-size: 18px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+     padding: 5px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__ingredients_main {
+     padding: 30px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons_ingredients_title {
+     width: 100%;
+     font-size: 26px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+     padding-bottom: 15px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__ingredients {
+     padding: 12px 0;
+     border-bottom: 1px solid#ccc;
+     display: flex;
+     flex-direction: row-reverse;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__ingredients:last-child {
+     border-bottom: 0px solid#ccc !important;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__ingredients:first-child {
+     border-top: 0px solid#ccc !important;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__ingredients_text {
+     width: 100%;
+     font-size: 18px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__ingredients_icon {
+     margin-right: 5px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__instructions_main {
+     padding: 30px;
+     border-top: 1px solid #ccc;
+     border-bottom: 1px solid #ccc;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons_instructions_title {
+     width: 100%;
+     font-size: 26px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+     padding-bottom: 15px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__instructions_text {
+     width: 100%;
+     font-size: 18px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+     padding-bottom: 15px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__notes_main {
+     padding: 30px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__notes_title {
+     width: 100%;
+     font-size: 24px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+     padding-bottom: 15px;
+ }
+
+ .oxi_addons__recipe_style_1 .oxi_addons__notes_text {
+     width: 100%;
+     font-size: 18px;
+     font-family: "Roboto", Sans-serif;
+     font-weight: normal;
+     font-style: normal;
+     line-height: 1.3;
+     text-align: left;
+     color: #303030;
+ }
+
+ @media only screen and (min-width:669px) and (max-width:993px) {
+    .oxi_addons__recipe_style_1 .oxi_addons__list_main {
+        flex-wrap: wrap;
+    }
+    .oxi_addons__recipe_style_1 .oxi_addons__recipe_header {
+        flex-wrap: wrap;
+    }
+ }
+
+ @media only screen and (max-width:668px) {
+    .oxi_addons__recipe_style_1 .oxi_addons__list_main {
+        flex-wrap: wrap;
+    }
+    .oxi_addons__recipe_style_1 .oxi_addons__recipe_header {
+        flex-wrap: wrap;
+    }
+ }
