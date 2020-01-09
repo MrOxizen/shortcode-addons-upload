@@ -126,9 +126,9 @@ class Style_1 extends Templates {
             $custom_color =  'oxi-inline-svg--custom-color';
         }
 
-        echo '<div class="oxi-inline-svg-style-1">
+        echo '<div class="oxi-inline-svg-style-1 ">
                 <div class="oxi-inline-svg__wrapper">
-                    <' . $tag . ' class="oxi-inline-svg" '.$link_url.'>';
+                    <' . $tag . ' class="oxi-inline-svg " ' . $this->animation_render('oxi_inline_svg_animation', $style) . ' '.$link_url.'>';
                      echo $svg;
                 echo '</' . $tag . '>
                 </div>

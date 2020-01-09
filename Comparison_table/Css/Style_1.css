@@ -211,12 +211,17 @@ article.oxi-ct-wrapper{
     margin-left: -60px;
 }
 
+.oxi-ct-wrapper .tooltip{
+    opacity: 1;
+}
 .oxi-ct-wrapper .tooltip:hover .tooltiptext {
     visibility: visible;
 }
 .oxi-ct-heading-tooltip{
+
+    visibility: visible;
     text-decoration-line: underline;
-    text-decoration-style: dotted;
+    text-decoration-style: solid;
 }
 .oxi-ct-btn{
     padding: 10px 15px 10px 15px;
@@ -230,7 +235,7 @@ article.oxi-ct-wrapper{
 .oxi-ct-wrapper i.fa.fa-check{
     color: #38f146;
 }
-.oxi-ct-wrapper i.fa.fa-close{
+.oxi-ct-wrapper i.fas.fa-times{ 
     color: #ff0000;
 }
 

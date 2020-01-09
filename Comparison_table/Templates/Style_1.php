@@ -17,9 +17,9 @@ use SHORTCODE_ADDONS\Core\Templates;
 class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
-        echo '<pre>';
-        print_r($child);
-        echo '</pre>';
+//        echo '<pre>';
+//        print_r($child);
+//        echo '</pre>';
         ?>
         <article class="oxi-ct-wrapper">
 
@@ -56,6 +56,7 @@ class Style_1 extends Templates {
                     echo '<div class="oxi-ct-heading-inner">';
                     echo $this->text_render($value['sa_comparison_table_feature_modal_text']);
                     echo '</div>';
+
                     echo '</li>';
                 }
                 ?>
@@ -71,7 +72,7 @@ class Style_1 extends Templates {
                             $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
 
                             if ($value['sa_comparison_table_ribbon_on_off'] == 'yes') {
-                                echo '<th class="oxi-ct-heading oxi-ct-ribbons-yes oxi-ct-ribbons-h-' . $value['sa_comparison_table_feature_ribbon_position'] . ' oxi-table-' . $key . ' ">';
+                                echo '<th class="oxi-ct-heading ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . '  oxi-ct-ribbons-yes oxi-ct-ribbons-h-' . $value['sa_comparison_table_feature_ribbon_position'] . ' oxi-table-' . $key . ' ">';
                                 if ($value['sa_comparison_table_feature_ribbon_position'] == 'top') {
                                     ?>
                             <div class="oxi-ct-ribbons-wrapper-top">
@@ -90,9 +91,19 @@ class Style_1 extends Templates {
                             <?php
                         }
                     } else {
-                        echo '<th class="oxi-ct-heading oxi-table-' . $key . '">';
+                        echo '<th class="oxi-ct-heading ' . ($admin == "admin" ? 'oxi-addons-admin-edit-list' : '') . '  oxi-table-' . $key . '">';
                     }
                     echo $this->text_render($value['sa_comparison_table_feature_modal_text']);
+                    if ($admin == 'admin') :
+                        echo '  <div class="oxi-addons-admin-absulote">
+                                <div class="oxi-addons-admin-absulate-edit">
+                                    <button class="btn btn-primary shortcode-addons-template-item-edit" type="button" value="' . $v['id'] . '">Edit</button>
+                                </div>
+                                <div class="oxi-addons-admin-absulate-delete">
+                                <button class="btn btn-danger shortcode-addons-template-item-delete" type="submit" value="' . $v['id'] . '">Delete</button>
+                                </div>
+                            </div>';
+                    endif;
                     echo '</th>';
                 }
                 ?>
@@ -109,7 +120,7 @@ class Style_1 extends Templates {
 
                         if ($value['sa_comparison_table_offer_dis_on_off'] == 'yes') {
                             echo '<span class="oxi-ct-original-price">';
-                            echo $this->text_render($value['sa_comparison_table_feature_modal_original_price']) . $this->text_render($value['sa_comparison_table_feature_modal_original_price']);
+                            echo $this->text_render($value['sa_comparison_table_feature_modal_original_price']) ;
                             echo '</span>';
                         }
                         $price_full = $this->text_render($value['sa_comparison_table_feature_modal_price']);
@@ -128,6 +139,8 @@ class Style_1 extends Templates {
                     echo '</tr>';
 
                     $all_data = (array_key_exists('sa_comparison_table_feature_data', $style) && is_array($style['sa_comparison_table_feature_data'])) ? $style['sa_comparison_table_feature_data'] : [];
+
+
                     $store = [];
                     $count = count($all_data);
                     if ($count < 1):
@@ -146,77 +159,66 @@ class Style_1 extends Templates {
                         $c = count($md_rep_data);
                         if ($c < $count):
                             for ($a = $count; $a > $c; $a--) {
-                                $store[$a][$i] = [];
+                                $store[$a][0]['inner_td'][$i] = [];
                             }
                         endif;
                         foreach ($md_rep_data as $k => $data) {
-                            $store[$j][$i] = $data;
+
+                            $store[$j][0]['inner_td'][$i] = $data;
                             $j++;
-                            if($j > $count):
+                            if ($j > $count):
                                 break;
                             endif;
                         }
                         $i++;
                     }
-                    echo '<pre>';
-                    print_r($store);
-                    echo '</pre>';
 
-
-
-
-
-                    foreach ($all_data as $key => $data) {
+                   
+                    foreach ($store as $key => $data) {
+                     
                         echo '<tr>';
                         echo '<td  class="oxi-ct-feature">';
 
-                        if ($data['sa_comparison_table_feature_tooltip_text'] !== '' && $data['sa_comparison_table_tooltip_on_off'] == 'yes') {
-
+                        if ($data[0]['sa_comparison_table_feature_tooltip_text'] !== '' && $style['sa_comparison_table_tooltip_on_off'] == 'yes') {
+                          
                             echo '<div class="tooltip">';
                             echo '<span class="oxi-ct-heading-tooltip">';
-                            if ($data['sa_comparison_table_feature_text'] != ''):
-
-                                echo $this->text_render($data['sa_comparison_table_feature_text']);
+                            if ($data[0]['sa_comparison_table_feature_text'] != ''):
+                                echo $this->text_render($data[0]['sa_comparison_table_feature_text']);
                             endif;
                             echo '</span>';
                             ?>
                         <span class="tooltiptext">
                             <?php
-                            echo $this->text_render($data['sa_comparison_table_feature_tooltip_text']);
+                            echo $this->text_render($data[0]['sa_comparison_table_feature_tooltip_text']);
                             ?>
                         </span>
                         </div>
                         <?php
                     } else {
-                        echo $this->text_render($data['sa_comparison_table_feature_text']);
+                        echo $this->text_render($data[0]['sa_comparison_table_feature_text']);
                     }
                     echo '</td>';
-                    foreach ($child as $key => $v) {
-                        $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
+                    
+                    foreach ($data[0]['inner_td'] as $key => $v) {
 
+//                        echo '<pre>';
+//                        print_r($v);
+//                        echo '</pre>';
 
-                        $md_rep_data = (array_key_exists('sa_comparison_table_features_modal_data', $value) && is_array($value['sa_comparison_table_features_modal_data'])) ? $value['sa_comparison_table_features_modal_data'] : [];
-
-
-
-///////////////BAKII ASE
-
-                        foreach ($md_rep_data as $k => $data) {
-//                                echo '<pre>';
-//                                print_r($data);
-//                                echo '</pre>';
-                            echo '<td class="oxi-ct-txt oxi-table-' . $k . '">';
+//
+                    
+//                            
+                            echo '<td class="oxi-ct-txt oxi-table-' . $key . '">';
 //                                if (count($settings['feature_items_' . $j]) >= $x) {
-                            if ($data['sa_comparison_table_feature_tooltip_type'] !== 'text') {
-                                echo '<i class="' . $data['sa_comparison_table_feature_tooltip_type'] . '"></i>';
+                            if ($v['sa_comparison_table_feature_tooltip_type'] !== 'text') {
+                                echo '<i class="' . $v['sa_comparison_table_feature_tooltip_type'] . '"></i>';
                             } else {
-                                echo $data['sa_comparison_table_feature_feature_text'];
+                                echo $this->text_render($v['sa_comparison_table_feature_feature_text']);
                             }
-//                                } else {
-//                                    echo '';
-//                                }
+//                               
                             echo '</td>';
-                        }
+                     
                     }
                     echo '</tr>';
                 }
