@@ -384,7 +384,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_logo_carousel_pause_grab_cursor',
+            'sa_logo_carousel_grab_cursor',
             $this->style,
             [
                 'label' => __('Grab Cursor', SHORTCODE_ADDOONS),
@@ -754,8 +754,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Left Arrow', SHORTCODE_ADDOONS),
                 'type' => Controls::ICON,
-                'default' => 'fab fa-adn',
-                'placeholder' => 'example:- fab fa-adn',
+                'default' => 'fas fa-angle-left',
+                'placeholder' => 'example:- fas fa-angle-left',
             ]
         );
         $this->add_responsive_control(
@@ -788,8 +788,8 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Right Arrow', SHORTCODE_ADDOONS),
                 'type' => Controls::ICON,
-                'default' => 'fab fa-adn',
-                'placeholder' => 'example:- fab fa-adn',
+                'default' => 'fas fa-angle-right',
+                'placeholder' => 'example:- fas fa-angle-right',
             ]
         );
         $this->add_responsive_control(
@@ -835,7 +835,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 70,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
@@ -856,6 +856,38 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_logo_carousel_icon_width_height',
+            $this->style,
+            [
+                'label' => __('Width Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 5,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                    'rem' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}',
                 ],
             ]
         );
