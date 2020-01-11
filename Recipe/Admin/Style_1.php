@@ -774,7 +774,7 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Heading Separetor Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Heading Separator Settings', SHORTCODE_ADDOONS),
                 'showing' => false,
                 'condition' => [
                     'sa_recipe_title_separator' => 'oxi_heading__separator',
