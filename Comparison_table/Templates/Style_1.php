@@ -21,7 +21,7 @@ class Style_1 extends Templates {
 //        print_r($child);
 //        echo '</pre>';
         ?>
-        <article class="oxi-ct-wrapper">
+        <article class="oxi-ct-wrapper" <?php echo $this->animation_render('sa_comparison_table_animation', $style) ?>>
 
             <ul>
                 <?php
@@ -120,7 +120,7 @@ class Style_1 extends Templates {
 
                         if ($value['sa_comparison_table_offer_dis_on_off'] == 'yes') {
                             echo '<span class="oxi-ct-original-price">';
-                            echo $this->text_render($value['sa_comparison_table_feature_modal_original_price']) ;
+                            echo $this->text_render($value['sa_comparison_table_feature_modal_original_price']);
                             echo '</span>';
                         }
                         $price_full = $this->text_render($value['sa_comparison_table_feature_modal_price']);
@@ -171,14 +171,14 @@ class Style_1 extends Templates {
                         $i++;
                     }
 
-                   
+
                     foreach ($store as $key => $data) {
-                     
+
                         echo '<tr>';
                         echo '<td  class="oxi-ct-feature">';
 
                         if ($data[0]['sa_comparison_table_feature_tooltip_text'] !== '' && $style['sa_comparison_table_tooltip_on_off'] == 'yes') {
-                          
+
                             echo '<div class="tooltip">';
                             echo '<span class="oxi-ct-heading-tooltip">';
                             if ($data[0]['sa_comparison_table_feature_text'] != ''):
@@ -197,26 +197,23 @@ class Style_1 extends Templates {
                         echo $this->text_render($data[0]['sa_comparison_table_feature_text']);
                     }
                     echo '</td>';
-                    
+
                     foreach ($data[0]['inner_td'] as $key => $v) {
 
 //                        echo '<pre>';
 //                        print_r($v);
 //                        echo '</pre>';
-
 //
-                    
 //                            
-                            echo '<td class="oxi-ct-txt oxi-table-' . $key . '">';
+                        echo '<td class="oxi-ct-txt oxi-table-' . $key . '">';
 //                                if (count($settings['feature_items_' . $j]) >= $x) {
-                            if ($v['sa_comparison_table_feature_tooltip_type'] !== 'text') {
-                                echo '<i class="' . $v['sa_comparison_table_feature_tooltip_type'] . '"></i>';
-                            } else {
-                                echo $this->text_render($v['sa_comparison_table_feature_feature_text']);
-                            }
+                        if ($v['sa_comparison_table_feature_tooltip_type'] !== 'text') {
+                            echo '<i class="' . $v['sa_comparison_table_feature_tooltip_type'] . '"></i>';
+                        } else {
+                            echo $this->text_render($v['sa_comparison_table_feature_feature_text']);
+                        }
 //                               
-                            echo '</td>';
-                     
+                        echo '</td>';
                     }
                     echo '</tr>';
                 }
@@ -229,7 +226,7 @@ class Style_1 extends Templates {
                     }
                     echo '<td class="oxi-table-' . $key . '">';
                     if ($value['sa_comparison_table_feature_button_text'] !== '') {
-                        echo '<a ' . $btn_link . '>' . $value['sa_comparison_table_feature_button_text'] . '</a>';
+                        echo '<a ' . $btn_link . ' class="oxi-ct-btn">' . $value['sa_comparison_table_feature_button_text'] . '</a>';
                     }
                     echo '</td>';
                 }

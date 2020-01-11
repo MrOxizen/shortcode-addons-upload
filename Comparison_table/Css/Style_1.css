@@ -33,7 +33,7 @@ article.oxi-ct-wrapper{
 .oxi-ct-wrapper th{
     display: none;
 }
-.oxi-ct-wrapper .oxi-ct-heading {
+.oxi-ct-heading {
     display: block;
     width:100%;
     padding: 10px;
@@ -41,7 +41,7 @@ article.oxi-ct-wrapper{
     font-size:20px;
     font-weight:bold;
     height:60px;
-    color:#999;
+    color:#3fa3d9;
     text-align:center;
 }
 .oxi-ct-wrapper li.oxi-ct-heading .oxi-ct-heading-inner{

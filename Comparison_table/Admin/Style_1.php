@@ -102,6 +102,38 @@ class Style_1 extends AdminStyle {
                     'button' => 'Add New Feature',
                 ]
         );
+        $this->add_responsive_control(
+                'sa_comparison_table_an_padding',
+                $this->style,
+                [
+                    'label' => __('Padding', SHORTCODE_ADDOONS),
+                    'type' => Controls::DIMENSIONS,
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => '',
+                    ],
+                    'range' => [
+                        '%' => [
+                            'min' => 0,
+                            'max' => 50,
+                            'step' => .1,
+                        ],
+                        'px' => [
+                            'min' => 0,
+                            'max' => 200,
+                            'step' => 1,
+                        ],
+                        'em' => [
+                            'min' => 0,
+                            'max' => 10,
+                            'step' => .1,
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-ct-wrapper' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    ],
+                ]
+        );
         $this->add_group_control(
                 'sa_comparison_table_animation',
                 $this->style,
@@ -171,7 +203,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => '#fff',
+                    'default' => '#6d6d6d',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-feature' => 'color:{{VALUE}};'
                     ],
@@ -183,7 +215,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => 'rgba(255, 255, 255, 1.00)',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-feature' => 'background: {{VALUE}};'
@@ -286,7 +318,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => '#3fa3d9',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-wrapper .tooltip .tooltiptext' => 'background-color: {{VALUE}};',
@@ -417,7 +449,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => 'rgba(63,195,135,0.8)',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper span.oxi-ct-ribbons-inner' => 'background: {{VALUE}};',
@@ -533,9 +565,9 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => '#fff',
+                    'default' => '#3fa3d9',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-ct-heading' => 'color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-ct-wrapper .oxi-ct-heading' => 'color:{{VALUE}};'
                     ],
                 ]
         );
@@ -546,7 +578,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => 'rgba(255, 255, 255, 1.00)',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-heading' => 'background:{{VALUE}};'
@@ -645,7 +677,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => '#3d3d3d',
+                    'default' => '#3fa3d9',
                     'selector' => [
                         '{{WRAPPER}}  .oxi-ct-original-price' => 'color:{{VALUE}};'
                     ],
@@ -873,7 +905,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => 'rgba(253, 253, 253, 1)',
                     'oparetor' => 'RGB',
                     'separator' => TRUE,
                     'selector' => [
@@ -944,6 +976,7 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons',
                 [
                     'label' => esc_html__('Features', SHORTCODE_ADDOONS),
+                    'showing' => TRUE
                 ]
         );
         $this->add_control(
@@ -952,7 +985,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => '#fff',
+                    'default' => '#6d6d6d',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-txt' => 'color:{{VALUE}};'
                     ],
@@ -964,7 +997,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Check Icon Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => '#fff',
+                    'default' => '#24c600',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-wrapper i.fa.fa-check' => 'color:{{VALUE}};'
                     ],
@@ -976,7 +1009,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Close Icon Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => '#fff',
+                    'default' => '#ff0000',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-wrapper i.fas.fa-times' => 'color:{{VALUE}};'
                     ],
@@ -988,7 +1021,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => 'rgba(255, 255, 255, 1.00)',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-txt' => 'background:{{VALUE}};'
@@ -1101,7 +1134,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => '#61ce70',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} .oxi-ct-btn' => 'background:{{VALUE}};'
@@ -1112,9 +1145,9 @@ class Style_1 extends AdminStyle {
                 'sa_comparison_table_button_col_bg_color',
                 $this->style,
                 [
-                    'label' => __('Background Color', SHORTCODE_ADDOONS),
+                    'label' => __('Column Background Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
-                    'default' => 'rgba(0, 113, 189, 1.00)',
+                    'default' => 'rgba(255,255,255, 1.00)',
                     'oparetor' => 'RGB',
                     'selector' => [
                         '{{WRAPPER}} tr:last-child td' => 'background-color:{{VALUE}};'
@@ -1409,6 +1442,7 @@ class Style_1 extends AdminStyle {
                         'sa_comparison_table_feature_tooltip_type' => [
                             'label' => esc_html__('Title', SHORTCODE_ADDOONS),
                             'type' => Controls::CHOOSE,
+                            'default' => 'fa fa-check',
                             'operator' => Controls::OPERATOR_ICON,
                             'placeholder' => 'Enter Your Feature',
                             'options' => [
@@ -1432,7 +1466,7 @@ class Style_1 extends AdminStyle {
                         'sa_comparison_table_feature_feature_text' => [
                             'label' => esc_html__('Feature', SHORTCODE_ADDOONS),
                             'type' => Controls::TEXT,
-                            'default' => esc_html__('Enter Your Feature', SHORTCODE_ADDOONS),
+                            'placeholder' => esc_html__('Enter Your Feature', SHORTCODE_ADDOONS),
                             'selector' => [
                                 '{{WRAPPER}}  .oxi-addons-parent-wrapper-style-1-{{KEY}} .oxi-addons-price-title' => '',
                             ],
