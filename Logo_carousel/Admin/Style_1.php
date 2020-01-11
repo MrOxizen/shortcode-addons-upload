@@ -210,7 +210,7 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Carousel Settings ', SHORTCODE_ADDOONS),
-                'showing' => false,
+                'showing' => FALSE,
             ]
         );
         $this->add_control(
@@ -220,8 +220,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Effect', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
                 'default' => 'slide',
-                'loader' => true,
-                'separator' => true,
+                'loader' => true, 
                 'options' => [
                     'slide' => __('Slide', SHORTCODE_ADDOONS),
                     'fade' => __('Fade', SHORTCODE_ADDOONS),
@@ -231,13 +230,12 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-        $this->add_control(
-            'sa_addons_logo_carousel_visible_item',
+        $this->add_responsive_control(
+            'sa_addons_logo_carousel_visible_items',
             $this->style,
             [
                 'label' => __('Visible Items', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'loader' => true,
                 'default' => [
                     'unit' => 'px',
                     'size' => 3,
@@ -250,11 +248,11 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'condition' => [
-                    'sa_addons_logo_carousel_effect' => 'slide',
-                ],
+                    'sa_addons_logo_carousel_effect' => 'slide'
+                ]
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_addons_logo_carousel_items_gap',
             $this->style,
             [
@@ -320,7 +318,7 @@ class Style_1 extends AdminStyle
             'sa_addons_logo_carousel_autoplay_speed',
             $this->style,
             [
-                'label' => __('Autoplay Speed  ', SHORTCODE_ADDOONS),
+                'label' => __('Autoplay Speed', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
@@ -334,7 +332,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'condition' => [
-                    'sa_logo_carousel_autoplay_switter' => 'true',
+                    'sa_logo_carousel_autoplay_switter' => 'yes',
                 ],
             ]
         );
@@ -376,7 +374,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_logo_carousel_list_main_infinite',
+            'sa_logo_carousel_list_main_in',
             $this->style,
             [
                 'label' => __('', SHORTCODE_ADDOONS),
@@ -409,18 +407,14 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_logo_carousel_pause_arrow',
+            'sa_logo_carousel_Heading',
             $this->style,
             [
-                'label' => __('Arrows', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => 'no',
-                'loader' => true,
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
+                'label' => __('Navigation', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,  
             ]
         );
+    
         $this->add_control(
             'sa_logo_carousel_pause_arrow',
             $this->style,
@@ -474,7 +468,7 @@ class Style_1 extends AdminStyle
         $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
-
+        
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Logo Settings ', SHORTCODE_ADDOONS),
@@ -675,7 +669,7 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Title', SHORTCODE_ADDOONS),
-                'showing' => false,
+                'showing' => FALSE,
             ]
         );
         $this->add_group_control(
@@ -740,7 +734,7 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Arrow Settings', SHORTCODE_ADDOONS),
-                'showing' => false,
+                'showing' => FALSE,
             ]
         );
         $this->start_controls_tabs(
@@ -874,7 +868,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-
+ 
         $this->start_controls_tab();
         $this->add_control(
             'sa_logo_carousel_icon_color',
@@ -884,7 +878,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons' => 'color:{{VALUE}};', 
                 ],
             ]
         );
@@ -953,10 +947,10 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons:hover' => 'color:{{VALUE}};', 
                 ],
             ]
-        );
+        ); 
         $this->add_control(
             'sa_logo_carousel_icon_bg_color_hover',
             $this->style,
@@ -978,7 +972,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons:hover' => 'border-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons:hover' => 'border-color:{{VALUE}};', 
                 ],
             ]
         );
@@ -1055,14 +1049,14 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
+                ], 
             ]
         );
         $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Pagination: Dots', SHORTCODE_ADDOONS),
-                'showing' => false,
+                'showing' => FALSE,
             ]
         );
 
@@ -1153,7 +1147,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-
+ 
         $this->start_controls_tab();
         $this->add_control(
             'sa_logo_carousel_dot_color',
@@ -1163,7 +1157,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ccc',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot' => 'color:{{VALUE}};', 
                 ],
             ]
         );
@@ -1175,7 +1169,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#000',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot' => 'color:{{VALUE}};', 
                 ],
             ]
         );
@@ -1267,7 +1261,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->end_controls_tab();
-        $this->start_controls_tab();
+        $this->start_controls_tab(); 
         $this->add_control(
             'sa_logo_carousel_dot_color_hover',
             $this->style,
@@ -1276,11 +1270,11 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot:hover' => 'color:{{VALUE}};', 
                 ],
             ]
         );
-
+       
         $this->add_control(
             'sa_logo_carousel_dot_border_color',
             $this->style,
@@ -1289,12 +1283,12 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot:hover' => 'border-color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__logo_carousel_style_1 .oxi_addons__dot:hover' => 'border-color:{{VALUE}};', 
                 ],
             ]
-        );
+        ); 
         $this->end_controls_tab();
-        $this->end_controls_tabs();
+        $this->end_controls_tabs(); 
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
