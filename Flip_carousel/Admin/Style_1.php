@@ -46,7 +46,7 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_repeater_control(
-                'oxi_addons_repeater_control', $this->style, [
+                'oxi_addons_flipbox_style_1', $this->style, [
             'label' => __('Sliders', SHORTCODE_ADDOONS),
             'type' => Controls::REPEATER,
             'fields' => [
@@ -130,10 +130,10 @@ class Style_1 extends AdminStyle {
             'label' => __('Item Starts From Center?', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'default' => 'center',
+            'center' => __('Yes', SHORTCODE_ADDOONS),
             'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'return_value' => 'center',
                 ]
         );
         $this->add_control(
@@ -150,10 +150,10 @@ class Style_1 extends AdminStyle {
             'label' => __('Loop', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'default' => 'true',
+            'true' => __('Yes', SHORTCODE_ADDOONS),
+            'false' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'true',
                 ]
         );
         $this->add_control(
@@ -161,18 +161,19 @@ class Style_1 extends AdminStyle {
             'label' => __('Auto Play', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'default' => 'false',
+            'true' => __('Yes', SHORTCODE_ADDOONS),
+            'false' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'true',
                 ]
         );
         $this->add_control(
-                'oxi_addons_slider_str_number', $this->style, [
+                'oxi_addons_slider_timeout', $this->style, [
             'label' => __('Autoplay Timeout (ms)', SHORTCODE_ADDOONS),
+            'default' => 500,
             'type' => Controls::NUMBER,
             'condition' => [
-                'oxi_addons_slider_autoplay' => 'yes',
+                'oxi_addons_slider_autoplay' => 'true',
             ]
                 ]
         );
@@ -181,10 +182,10 @@ class Style_1 extends AdminStyle {
             'label' => __('Pause On Hover', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'default' => 'true',
+            'true' => __('Yes', SHORTCODE_ADDOONS),
+            'false' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'true',
                 ]
         );
         $this->add_control(
@@ -192,10 +193,10 @@ class Style_1 extends AdminStyle {
             'label' => __('On Click Play?', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'default' => 'true',
+            'true' => __('Yes', SHORTCODE_ADDOONS),
+            'false' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'true',
                 ]
         );
         $this->add_control(
@@ -203,10 +204,10 @@ class Style_1 extends AdminStyle {
             'label' => __('On Scroll Wheel Play?', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'default' => 'true',
+            'true' => __('Yes', SHORTCODE_ADDOONS),
+            'false' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'true',
                 ]
         );
         $this->add_control(
@@ -214,10 +215,10 @@ class Style_1 extends AdminStyle {
             'label' => __('On Touch Play?', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'default' => 'true',
+            'true' => __('Yes', SHORTCODE_ADDOONS),
+            'false' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'true',
                 ]
         );
         $this->add_control(
@@ -225,16 +226,14 @@ class Style_1 extends AdminStyle {
             'label' => __('Carousel Navigator', SHORTCODE_ADDOONS),
             'type' => Controls::SWITCHER,
             'loader' => TRUE,
-            'default' => 'no',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
+            'default' => 'true',
+            'true' => __('Yes', SHORTCODE_ADDOONS),
+            'false' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'true',
                 ]
         );
-        $this->add_responsive_control(
-            'oxi_addons_slider_spacing',
-            $this->style,
-            [
+        $this->add_control(
+            'oxi_addons_slider_spacing', $this->style,[
                 'label' => __('Slide Spacing', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'default' => [
@@ -247,10 +246,7 @@ class Style_1 extends AdminStyle {
                         'max' => 1,
                         'step' => .1,
                     ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__card_content_style_1 .oxi_addons__image::after' => 'padding-bottom: {{SIZE}}{{UNIT}};',
-                ],
+                ]
             ]
         );
         $this->end_controls_section();

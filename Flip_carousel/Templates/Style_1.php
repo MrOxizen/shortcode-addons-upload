@@ -26,50 +26,60 @@ class Style_1 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
-        $devicetype = $style['sa_devices_type'];
-        $skin = $style['sa_device_skin'];
-        $style['sa-el-device-orientation-landscape'] = '';
-        
+         $styledata = $this->style;
         echo '<div class="oxi-addons-wrapper-device">
-                 <div id="wheel">
-                    <ul>
-                        <li data-flip-title="Red">
-                            <img src="img/text1.gif">
-                        </li>
-                        <li data-flip-title="Razzmatazz" data-flip-category="Purples">
-                            <img src="img/text2.gif">
-                         </li>
-                        <li data-flip-title="Deep Lilac" data-flip-category="Purples">
-                            <img src="img/text3.gif">
-                        </li>
-                        <li data-flip-title="Daisy Bush" data-flip-category="Purples">
-                            <img src="img/text4.gif">
-                        </li>
-                        <li data-flip-title="Cerulean Blue" data-flip-category="Blues">
-                            <img src="img/text5.gif">
-                        </li>
-                        <li data-flip-title="Dodger Blue" data-flip-category="Blues">
-                            <img src="img/text6.gif">
-                        </li>
-                        <li data-flip-title="Cyan" data-flip-category="Blues">
-                            <img src="img/text7.gif">
-                        </li>
-                        
-                    </ul>
-                </div>   
+                <article id="demo-carousel" class="demo">
+                    <div id="carousel">
+                       <ul>';
+                           foreach ($styledata['oxi_addons_flipbox_style_1'] as $key => $value) {
+                               $image = '';
+                                if ($this->media_render('oxi_addons_slider_image', $value) != '') {
+                                    $image = '<img src="'.$this->media_render('oxi_addons_slider_image', $value).'">';
+                                }
+                            echo '<li data-flip-title="Razzmatazz">
+                                       '.$image.'
+                                  </li>';
+                           }   
+                echo '</ul>
+                   </div> 
+                </article>
               </div>';
     }
   
 
     public function inline_public_jquery() {
         $arraykey = $this->style;
+        if($arraykey['oxi_addons_slider_start_from'] == 'center'){
+            $startform = $arraykey['oxi_addons_slider_start_from'];
+            $start = 'start: "'.$startform.'"';
+        }else{
+            $startform = $arraykey['oxi_addons_slider_str_number'];
+            $start = "start:".$startform;
+        }
+        if($arraykey['oxi_addons_slider_autoplay'] == true){
+            $autopaly = ($arraykey['oxi_addons_slider_autoplay'].",". $arraykey['oxi_addons_slider_timeout']);
+        }else{
+            $autopaly = ('false'.",". 0);
+        }
         $jquery = '';
-        $jquery .= ' var wheel = $("#wheel").flipster({
-                        style: "flat",
-                        spacing: -0.25,
-                        buttons: true,
-                        autoplay: true,
+        $jquery .= 'var carousel = $("#carousel").flipster({
+                        style: "carousel",
+                        fadeIn: '.$arraykey['oxi_addons_slider_fade_in'].',
+                        '.$start .',
+                        loop: '.$arraykey['oxi_addons_slider_loop'].',
+                        autoplay: ('.$autopaly.'),
+                        pauseOnHover: '.$arraykey['oxi_addons_slider_puse_hover'].',
+                        click: '.$arraykey['oxi_addons_slider_cl_play'].',
+                        scrollwheel: '.$arraykey['oxi_addons_slider_on_scroll'].',
+                        touch: '.$arraykey['oxi_addons_slider_on_touch'].',
+                        nav: '.$arraykey['oxi_addons_slider_cas_navi'].',
+                        spacing: '.$arraykey['oxi_addons_slider_spacing-size'].',
+                        buttons:   true,
+                        
                     });
+                    
+                   oxiequalHeight($(".' . $this->WRAPPER . ' #carousel ul li img"));
+                   oxiequalWidth($(".' . $this->WRAPPER . ' #carousel ul li img"));
                 ';
         
         return $jquery;
