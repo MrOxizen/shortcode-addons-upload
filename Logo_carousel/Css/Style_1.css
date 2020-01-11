@@ -1,0 +1,16 @@
+/* .swiper-container {
+    width: 600px;
+    height: 300px;
+} */
+ .oxi_addons__logo_carousel_style_1 {
+	background: rgba(25,194,209,1.01);
+	border-style: double;
+	border-width: 10px;
+	border-color: #31472e;
+	border-radius: 30px 30px 30px 30px;
+	padding: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-ms-border-radius: 30px 30px 30px 30px;
+	-o-border-radius: 30px 30px 30px 30px;
+}
