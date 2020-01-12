@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_3 extends Templates {
     
     public function public_jquery() {
         wp_enqueue_script('flipster-min', SA_ADDONS_UPLOAD_URL . '/Flip_carousel/File/jquery.flipster.min.js', false, SA_ADDONS_PLUGIN_VERSION);
@@ -27,9 +27,9 @@ class Style_1 extends Templates {
 
     public function default_render($style, $child, $admin) {
          $styledata = $this->style;
-        echo '<div class="oxi-addons-wrapper-flip-carousel-style-1">
+        echo '<div class="oxi-addons-wrapper-flip-carousel-style-3">
                 <article class="oxi-addons-carousel">
-                    <div id="carousel-'.$this->WRAPPER.'">
+                    <div id="flat-'.$this->WRAPPER.'">
                        <ul>';
                            foreach ($styledata['oxi_addons_flipbox_style_1'] as $key => $value) {
                                $image = '';
@@ -76,8 +76,8 @@ class Style_1 extends Templates {
             $autopaly = ('false'.",". 0);
         }
         $jquery = '';
-        $jquery .= 'var carousel = $("#carousel-'.$this->WRAPPER.'").flipster({
-                        style: "carousel",
+        $jquery .= 'var carousel = $("#flat-'.$this->WRAPPER.'").flipster({
+                        style: "flat",
                         fadeIn: '.$arraykey['oxi_addons_slider_fade_in'].',
                         '.$start .',
                         loop: '.$arraykey['oxi_addons_slider_loop'].',

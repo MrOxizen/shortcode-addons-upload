@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
 
@@ -359,7 +359,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1' => 'max-width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3' => 'max-width: {{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -368,7 +368,7 @@ class Style_1 extends AdminStyle {
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1' => '',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3' => '',
             ],
                 ]
         );
@@ -400,7 +400,7 @@ class Style_1 extends AdminStyle {
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -432,7 +432,7 @@ class Style_1 extends AdminStyle {
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -464,7 +464,7 @@ class Style_1 extends AdminStyle {
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -553,7 +553,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => 'font-size: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => 'font-size: {{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -583,7 +583,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -592,7 +592,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Background Color', SHORTCODE_ADDOONS),
             'type' => Controls::GRADIENT,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => 'background:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => 'background:{{VALUE}};',
             ],
                 ]
         );
@@ -601,7 +601,7 @@ class Style_1 extends AdminStyle {
             'label' => __('Icon Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => 'color:{{VALUE}};',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => 'color:{{VALUE}};',
             ],
                 ]
         );
@@ -610,7 +610,7 @@ class Style_1 extends AdminStyle {
                 'label' => __('Border', SHORTCODE_ADDOONS),
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => '',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => '',
             ],
                 ]
         );
@@ -619,7 +619,7 @@ class Style_1 extends AdminStyle {
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => '',
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => '',
             ],
                 ]
         );
@@ -649,7 +649,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -679,7 +679,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-1 .flip-custom-nav' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi-addons-wrapper-flip-carousel-style-3 .flip-custom-nav' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
