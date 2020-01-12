@@ -1,0 +1,10 @@
+.magic-scroll .parallax-scroll,
+.magic-scroll .scale-scroll,
+.magic-scroll .both-scroll {
+    -webkit-transition: -webkit-transform 1.3s ease .0s;
+    -ms-transition: -ms-transform 1.3s ease .0s;
+    -moz-transition: -moz-transform 1.3s ease .0s;
+    -o-transition: -o-transform 1.3s ease .0s;
+    transition: transform 1.3s ease .0s;
+    will-change: transform;
+}
