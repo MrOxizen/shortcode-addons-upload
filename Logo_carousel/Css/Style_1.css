@@ -1,7 +1,6 @@
-/* .swiper-container {
-    width: 600px;
+.swiper-container { 
     height: 300px;
-} */
+}
  .oxi_addons__logo_carousel_style_1 {
 	background: rgba(25,194,209,1.01);
 	border-style: double;
@@ -14,3 +13,34 @@
 	-ms-border-radius: 30px 30px 30px 30px;
 	-o-border-radius: 30px 30px 30px 30px;
 }
+
+.swiper-button-next, .swiper-button-prev {
+	position: absolute;
+	top: 50%; 
+}
+
+.oxi_addons__logo_carousel_style_1 .swiper-button-prev::after,
+.oxi_addons__logo_carousel_style_1 .swiper-button-next::after{
+    display: none;
+}
+.oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons,
+.oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oxi_addons__logo_carousel_style_1 .oxi_addons__icon .oxi-icons{
+    font-size: 30px;
+}
+.swiper-container{
+    width: 100%;
+  }
+  .swiper-wrapper {
+    width: 50%;
+  }
+  .swiper-slide {
+    text-align: center;
+    width: auto  ;
+  }

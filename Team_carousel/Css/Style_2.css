@@ -1,14 +1,17 @@
-.oxi-addons-parent-wrapper-style-1 {
+.oxi-addons-parent-wrapper-style-2 {
     padding: 0px 0px 0px 0px
 }
 
 
-.oxi-addons-parent-wrapper-style-1 .oxi-team-show {
+.oxi-addons-parent-wrapper-style-2 .oxi-team-show {
     width: 100%;
     float: left;
 }
 
-.oxi-addons-parent-wrapper-style-1 .oxi-team-show-body-style-1 {
+
+
+
+.oxi-addons-parent-wrapper-style-2 .oxi-team-show-body-style-2 {
     max-width: 250px;
     width: 100%;
     margin: 0 auto;
@@ -16,20 +19,20 @@
 }
 
 
-.oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size {
+.oxi-addons-parent-wrapper-style-2 .oxi-team-pic-size {
     width: 100%;
     float: left;
     position: relative;
     overflow: hidden;
 }
 
-.oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size:after {
+.oxi-addons-parent-wrapper-style-2 .oxi-team-pic-size:after {
     padding-bottom: 100%;
     content: "";
     display: block
 }
 
-.oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size img {
+.oxi-addons-parent-wrapper-style-2 .oxi-team-pic-size img {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,12 +41,28 @@
     display: block
 }
 
-.oxi-addons-parent-wrapper-style-1 .member-icons {
-
+.oxi-addons-parent-wrapper-style-2 .oxi-team-image-section {
     width: 100%;
+    float: left;
+
+}
+
+
+.oxi-addons-parent-wrapper-style-2 .member-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.49);
     justify-content: center;
     padding: 0px 0px 0px 0px;
+    opacity: 0;
+
+
+}
+.oxi-addons-parent-wrapper-style-2 .oxi-team-show:hover .member-icons {
+    opacity: 1;
 
 }
 
@@ -51,7 +70,7 @@
 
 
 
-.oxi-addons-parent-wrapper-style-1 .member-icon .oxi-icons {
+.oxi-addons-parent-wrapper-style-2 .member-icon .oxi-icons {
     font-size: 14px;
     color: #ffffff;
     background: rgba(66, 62, 62, 0);
@@ -64,12 +83,12 @@
     align-items: center;
 }
 
-.oxi-addons-parent-wrapper-style-1 .member-icon .oxi-icons:hover {
+.oxi-addons-parent-wrapper-style-2 .member-icon .oxi-icons:hover {
     color: #ffffff;
     background: rgba(127, 0, 196, 1.00)
 }
 
-.oxi-addons-parent-wrapper-style-1 .member-info {
+.oxi-addons-parent-wrapper-style-2 .member-info {
     padding: 0px 0px 0px 0px;
     width: 100%;
     float: left;
@@ -78,7 +97,7 @@
     background: rgba(33, 150, 243, 1.00)
 }
 
-.oxi-addons-parent-wrapper-style-1 .member-name {
+.oxi-addons-parent-wrapper-style-2 .member-name {
     font-size: 20px;
     margin: 0;
     margin-bottom: 0px;
@@ -92,13 +111,13 @@
     padding: 5px 0px 0px 0px
 }
 
-.oxi-addons-parent-wrapper-style-1 .member-divider-main {
+.oxi-addons-parent-wrapper-style-2 .member-divider-main {
     width: 100%; 
     justify-content: center;
     display: flex
 }
 
-.oxi-addons-parent-wrapper-style-1 .member-divider {
+.oxi-addons-parent-wrapper-style-2 .member-divider {
     width: 100%;
     max-width: 400px;
     border-left: 0 !important;
@@ -107,7 +126,7 @@
     border-top: 5px dashed #3eb39c
 }
 
-.oxi-addons-parent-wrapper-style-1 .member-role {
+.oxi-addons-parent-wrapper-style-2 .member-role {
     font-size: 15px;
     margin: 0;
     margin-bottom: 0px;
@@ -120,7 +139,7 @@
     text-align: center;
     padding: 5px 0px 5px 0px
 }
-.oxi-addons-parent-wrapper-style-1 .member-descriptin {
+.oxi-addons-parent-wrapper-style-2 .member-descriptin {
     font-size: 12px;
     margin: 0;
     margin-bottom: 0px;
@@ -135,93 +154,95 @@
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-parent-wrapper-style-1 {
+    .oxi-addons-parent-wrapper-style-2 {
         padding: 10px 0px 10px 0px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .oxi-team-show-body-style-1 {
+    .oxi-addons-parent-wrapper-style-2 .oxi-team-show-body-style-2 {
         max-width: 250px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size:after {
+    .oxi-addons-parent-wrapper-style-2 .oxi-team-pic-size:after {
         padding-bottom: 100%
     }
 
 
 
 
-    .oxi-addons-parent-wrapper-style-1 .member-icon .oxi-icons {
+    .oxi-addons-parent-wrapper-style-2 .member-icon .oxi-icons {
         font-size: 14px;
         line-height: 40px;
         height: 40px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-info {
+    .oxi-addons-parent-wrapper-style-2 .member-info {
         padding: 0px 0px 0px 0px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-name {
+    .oxi-addons-parent-wrapper-style-2 .member-name {
         font-size: 20px;
         padding: 5px 0px 0px 0px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-divider {
+    .oxi-addons-parent-wrapper-style-2 .member-divider {
         padding: 5px 5px 5px 5px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-divider div {
+    .oxi-addons-parent-wrapper-style-2 .member-divider div {
         max-width: 60px;
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-role {
+    .oxi-addons-parent-wrapper-style-2 .member-role {
         font-size: 15px;
         padding: 5px 0px 5px 0px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .oxi-addons-parent-wrapper-style-1 {
+    .oxi-addons-parent-wrapper-style-2 {
         padding: 10px 0px 10px 0px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .oxi-team-show-body-style-1 {
+    .oxi-addons-parent-wrapper-style-2 .oxi-team-show-body-style-2 {
         max-width: 250px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .oxi-team-pic-size:after {
+    .oxi-addons-parent-wrapper-style-2 .oxi-team-pic-size:after {
         padding-bottom: 100%
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-icon .oxi-icons {
+    .oxi-addons-parent-wrapper-style-2 .member-icon .oxi-icons {
         font-size: 14px;
         line-height: 40px;
         height: 40px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-info {
+    .oxi-addons-parent-wrapper-style-2 .member-info {
         padding: 0px 0px 0px 0px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-name {
+    .oxi-addons-parent-wrapper-style-2 .member-name {
         font-size: 20px;
         padding: 5px 0px 0px 0px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-divider {
+    .oxi-addons-parent-wrapper-style-2 .member-divider {
         padding: 5px 5px 5px 5px
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-divider div {
+    .oxi-addons-parent-wrapper-style-2 .member-divider div {
         max-width: 60px;
     }
 
-    .oxi-addons-parent-wrapper-style-1 .member-role {
+    .oxi-addons-parent-wrapper-style-2 .member-role {
         font-size: 15px;
         padding: 5px 0px 5px 0px
     }
     
 }
 
+
+
 /*Carousel CSS*/
 /*Carousel CSS*/
 /*Carousel CSS*/
@@ -229,7 +250,7 @@
 /*Carousel CSS*/
 
 
-.sa_addons_carousel_style_1 {
+.sa_addons_carousel_style_2 {
     display: none;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
@@ -239,23 +260,23 @@
     padding-right: 0px
 }
 
-.sa_addons_carousel_style_1 .sa_addons_carousel_item_text {
+.sa_addons_carousel_style_2 .sa_addons_carousel_item_text {
     font-size: 16px;
     color: #000000;
     text-align: left;
 }
 
-.sa_addons_carousel_style_1 .sa_addons_carousel_item {
+.sa_addons_carousel_style_2 .sa_addons_carousel_item {
     width: 100%;
     float: left;
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-stage-outer {
+.sa_addons_carousel_style_2 .oxi-owl-stage-outer {
     padding-top: 10px;
     padding-bottom: 40px
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-stage {
+.sa_addons_carousel_style_2 .oxi-owl-stage {
     position: relative;
     -ms-touch-action: pan-Y;
     touch-action: manipulation;
@@ -266,11 +287,11 @@
     align-items: flex-end
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-stage-outer.oxi-owl-height .oxi-owl-stage {
+.sa_addons_carousel_style_2 .oxi-owl-stage-outer.oxi-owl-height .oxi-owl-stage {
     display: block
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-stage:after {
+.sa_addons_carousel_style_2 .oxi-owl-stage:after {
     content: ".";
     display: block;
     clear: both;
@@ -279,15 +300,15 @@
     height: 0
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-stage-outer {
+.sa_addons_carousel_style_2 .oxi-owl-stage-outer {
     position: relative;
     overflow: hidden;
     transform: translate3d(0px, 0px, 0px);
     -webkit-transform: translate3d(0px, 0px, 0px)
 }
 
-.sa_addons_carousel_style_1 .owl-wrapper,
-.sa_addons_carousel_style_1 .oxi-owl-item {
+.sa_addons_carousel_style_2 .owl-wrapper,
+.sa_addons_carousel_style_2 .oxi-owl-item {
     backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -299,7 +320,7 @@
     -o-transform: translate3d(0, 0, 0);
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-item {
+.sa_addons_carousel_style_2 .oxi-owl-item {
     position: relative;
     min-height: 1px;
     float: left;
@@ -309,35 +330,35 @@
     -webkit-touch-callout: none
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav.disabled,
-.sa_addons_carousel_style_1 .oxi-owl-dots.disabled {
+.sa_addons_carousel_style_2 .oxi-owl-nav.disabled,
+.sa_addons_carousel_style_2 .oxi-owl-dots.disabled {
     display: none
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav {
+.sa_addons_carousel_style_2 .oxi-owl-nav {
     opacity: 1;
     line-height: 1
 }
 
-.sa_addons_carousel_style_1:hover .oxi-owl-nav {
+.sa_addons_carousel_style_2:hover .oxi-owl-nav {
     opacity: 1
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-dots {
+.sa_addons_carousel_style_2 .oxi-owl-dots {
     opacity: 1
 }
 
-.sa_addons_carousel_style_1.sa_dot_show_on_hover .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_dot_show_on_hover .oxi-owl-dots {
     opacity: 0
 }
 
-.sa_addons_carousel_style_1.sa_dot_show_on_hover:hover .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_dot_show_on_hover:hover .oxi-owl-dots {
     opacity: 1
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev,
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next,
-.sa_addons_carousel_style_1 .oxi-owl-dot {
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev,
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next,
+.sa_addons_carousel_style_2 .oxi-owl-dot {
     cursor: pointer;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -348,9 +369,9 @@
     line-height: 1
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev,
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next,
-.sa_addons_carousel_style_1 .oxi-owl-dot {
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev,
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next,
+.sa_addons_carousel_style_2 .oxi-owl-dot {
     background: none;
     color: inherit;
     border: none;
@@ -358,24 +379,24 @@
     font: inherit
 }
 
-.sa_addons_carousel_style_1.oxi-owl-loaded {
+.sa_addons_carousel_style_2.oxi-owl-loaded {
     display: block
 }
 
-.sa_addons_carousel_style_1.oxi-owl-loading {
+.sa_addons_carousel_style_2.oxi-owl-loading {
     opacity: 0;
     display: block
 }
 
-.sa_addons_carousel_style_1.owl-hidden {
+.sa_addons_carousel_style_2.owl-hidden {
     opacity: 0
 }
 
-.sa_addons_carousel_style_1.owl-refresh .oxi-owl-item {
+.sa_addons_carousel_style_2.owl-refresh .oxi-owl-item {
     visibility: hidden
 }
 
-.sa_addons_carousel_style_1.owl-drag .oxi-owl-item {
+.sa_addons_carousel_style_2.owl-drag .oxi-owl-item {
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-user-select: none;
@@ -384,37 +405,37 @@
     user-select: none
 }
 
-.sa_addons_carousel_style_1.oxi-owl-grab {
+.sa_addons_carousel_style_2.oxi-owl-grab {
     cursor: move;
     cursor: grab
 }
 
-.sa_addons_carousel_style_1.oxi-owl-rtl {
+.sa_addons_carousel_style_2.oxi-owl-rtl {
     direction: rtl
 }
 
-.sa_addons_carousel_style_1.oxi-owl-rtl .oxi-owl-item {
+.sa_addons_carousel_style_2.oxi-owl-rtl .oxi-owl-item {
     float: right
 }
 
-.no-js .sa_addons_carousel_style_1 {
+.no-js .sa_addons_carousel_style_2 {
     display: block
 }
 
-.sa_addons_carousel_style_1 .animated {
+.sa_addons_carousel_style_2 .animated {
     animation-duration: 1000ms;
     animation-fill-mode: both
 }
 
-.sa_addons_carousel_style_1 .owl-animated-in {
+.sa_addons_carousel_style_2 .owl-animated-in {
     z-index: 0
 }
 
-.sa_addons_carousel_style_1 .owl-animated-out {
+.sa_addons_carousel_style_2 .owl-animated-out {
     z-index: 1
 }
 
-.sa_addons_carousel_style_1 .fadeOut {
+.sa_addons_carousel_style_2 .fadeOut {
     animation-name: fadeOut
 }
 
@@ -431,18 +452,18 @@
     transition: height 500ms ease-in-out
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-dots {
+.sa_addons_carousel_style_2 .oxi-owl-dots {
     position: absolute;
     display: flex;
     z-index: 100;
 }
 
-.sa_addons_carousel_style_1.sa_carousel_dot_top_left .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_carousel_dot_top_left .oxi-owl-dots {
     top: 10px;
     left: 10px;
 }
 
-.sa_addons_carousel_style_1.sa_carousel_dot_top_midd .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_carousel_dot_top_midd .oxi-owl-dots {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -452,17 +473,17 @@
     -o-transform: translateX(-50%);
 }
 
-.sa_addons_carousel_style_1.sa_carousel_dot_top_right .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_carousel_dot_top_right .oxi-owl-dots {
     top: 10px;
     right: 10px;
 }
 
-.sa_addons_carousel_style_1.sa_carousel_dot_bottom_left .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_carousel_dot_bottom_left .oxi-owl-dots {
     left: 10px;
     bottom: 10px;
 }
 
-.sa_addons_carousel_style_1.sa_carousel_dot_bottom_midd .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_carousel_dot_bottom_midd .oxi-owl-dots {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -472,23 +493,23 @@
     -o-transform: translateX(-50%);
 }
 
-.sa_addons_carousel_style_1.sa_carousel_dot_bottom_right .oxi-owl-dots {
+.sa_addons_carousel_style_2.sa_carousel_dot_bottom_right .oxi-owl-dots {
     bottom: 10px;
     right: 10px;
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-dot {
+.sa_addons_carousel_style_2 .oxi-owl-dot {
     padding: 4px 4px 4px 4px
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-dot span {
+.sa_addons_carousel_style_2 .oxi-owl-dot span {
     background: rgba(194, 194, 194, 1.00);
     padding: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-dot:hover span,
-.sa_addons_carousel_style_1 .oxi-owl-dot.active span {
+.sa_addons_carousel_style_2 .oxi-owl-dot:hover span,
+.sa_addons_carousel_style_2 .oxi-owl-dot.active span {
     background: rgba(49, 194, 148, 1);
     border-radius: 5px 5px 5px 5px;
     transform: scale(1);
@@ -498,7 +519,7 @@
     -o-transform: scale(1);
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav {
+.sa_addons_carousel_style_2 .oxi-owl-nav {
     position: absolute;
     z-index: 100;
     width: 100%;
@@ -511,7 +532,7 @@
     -o-transform: translateY(-50%);
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev {
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev {
     float: left;
     margin-left: 50%;
     background: rgba(108, 194, 50, 1.00);
@@ -522,7 +543,7 @@
     box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.25)
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next {
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next {
     float: right;
     margin-right: 50%;
     background: rgba(108, 194, 50, 1.00);
@@ -533,36 +554,36 @@
     box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.25)
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev .oxi-icons,
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next .oxi-icons {
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev .oxi-icons,
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next .oxi-icons {
     font-size: 14px;
     line-height: 1;
     color: #ffffff
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover,
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover {
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev:hover,
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next:hover {
     background: rgba(49, 194, 148, 1);
     border: 0px solid #ffffff;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1)
 }
 
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover .oxi-icons,
-.sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover .oxi-icons {
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev:hover .oxi-icons,
+.sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next:hover .oxi-icons {
     color: #ffffff
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    .sa_addons_carousel_style_1 {
+    .sa_addons_carousel_style_2 {
         padding-left: 0px;
         padding-right: 0px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-stage-outer {
+    .sa_addons_carousel_style_2 .oxi-owl-stage-outer {
         padding-top: 10px;
         padding-bottom: 40px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dots {
+    .sa_addons_carousel_style_2 .oxi-owl-dots {
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
@@ -571,7 +592,7 @@
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav {
+    .sa_addons_carousel_style_2 .oxi-owl-nav {
         top: 50%;
         left: 0%;
         transform: translateY(-50%);
@@ -580,7 +601,7 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev {
         float: left;
         margin-left: 50%;
         border: 1px solid #ffffff;
@@ -588,7 +609,7 @@
         padding: 10px 10px 10px 10px;
         margin: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next {
         float: right;
         margin-right: 50%;
         border: 1px solid #ffffff;
@@ -596,38 +617,38 @@
         padding: 10px 10px 10px 10px;
         margin: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev .oxi-icons,
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next .oxi-icons {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev .oxi-icons,
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next .oxi-icons {
         font-size: 14px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover,
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev:hover,
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next:hover {
         border: 1px solid #ffffff;
         border-radius: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dot {
+    .sa_addons_carousel_style_2 .oxi-owl-dot {
         padding: 4px 4px 4px 4px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dot span {
+    .sa_addons_carousel_style_2 .oxi-owl-dot span {
         padding: 5px 5px 5px 5px;
         border-radius: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dot:hover span,
-    .sa_addons_carousel_style_1 .oxi-owl-dot.active span {
+    .sa_addons_carousel_style_2 .oxi-owl-dot:hover span,
+    .sa_addons_carousel_style_2 .oxi-owl-dot.active span {
         border-radius: 5px 5px 5px 5px
     }
 }
 
 @media only screen and (max-width:668px) {
-    .sa_addons_carousel_style_1 {
+    .sa_addons_carousel_style_2 {
         padding-left: 0px;
         padding-right: 0px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-stage-outer {
+    .sa_addons_carousel_style_2 .oxi-owl-stage-outer {
         padding-top: 10px;
         padding-bottom: 40px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dots {
+    .sa_addons_carousel_style_2 .oxi-owl-dots {
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
@@ -636,12 +657,12 @@
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav {
+    .sa_addons_carousel_style_2 .oxi-owl-nav {
         top: 50%;
         transform: translateY(-50%);
         left: 0%
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev {
         float: left;
         margin-left: 50%;
         border: 1px solid #ffffff;
@@ -649,7 +670,7 @@
         padding: 10px 10px 10px 10px;
         margin: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next {
         float: right;
         margin-right: 50%;
         border: 1px solid #ffffff;
@@ -657,24 +678,24 @@
         padding: 10px 10px 10px 10px;
         margin: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev .oxi-icons,
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next .oxi-icons {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev .oxi-icons,
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next .oxi-icons {
         font-size: 14px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover,
-    .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover {
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-prev:hover,
+    .sa_addons_carousel_style_2 .oxi-owl-nav .oxi-owl-next:hover {
         border: 1px solid #ffffff;
         border-radius: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dot {
+    .sa_addons_carousel_style_2 .oxi-owl-dot {
         padding: 4px 4px 4px 4px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dot span {
+    .sa_addons_carousel_style_2 .oxi-owl-dot span {
         padding: 5px 5px 5px 5px;
         border-radius: 5px 5px 5px 5px
     }
-    .sa_addons_carousel_style_1 .oxi-owl-dot:hover span,
-    .sa_addons_carousel_style_1 .oxi-owl-dot.active span {
+    .sa_addons_carousel_style_2 .oxi-owl-dot:hover span,
+    .sa_addons_carousel_style_2 .oxi-owl-dot.active span {
         border-radius: 5px 5px 5px 5px
     }
 }
