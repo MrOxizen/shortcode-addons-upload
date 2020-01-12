@@ -13,7 +13,6 @@ if (!defined('ABSPATH')) {
  * @author $biplob018
  */
 
-use Elementor\Controls_Manager;
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
