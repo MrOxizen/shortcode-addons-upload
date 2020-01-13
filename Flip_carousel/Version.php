@@ -5,4 +5,4 @@
  * Checked by 
  */
 
-return array('2.0.3', 'Creative Elements', true, 'fas fa-list', false);
+return array('2.0.3', 'Dynamic Contents', true, 'fas fa-sliders-h', false);
