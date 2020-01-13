@@ -4,44 +4,44 @@
 	top: 50%; 
 }
 
-.oxi_addons__logo_carousel_style_1 .swiper-button-prev::after,
-.oxi_addons__logo_carousel_style_1 .swiper-button-next::after{
+.oxi_addons__logo_carousel_style_5 .swiper-button-prev::after,
+.oxi_addons__logo_carousel_style_5 .swiper-button-next::after{
     display: none;
 }
-.oxi_addons__logo_carousel_style_1 .oxi_addons__icon_right,
-.oxi_addons__logo_carousel_style_1 .oxi_addons__icon_left{
+.oxi_addons__logo_carousel_style_5 .oxi_addons__icon_right,
+.oxi_addons__logo_carousel_style_5 .oxi_addons__icon_left{
     width: 50px;
     height:50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.oxi_addons__logo_carousel_style_1  .oxi-icons{
+.oxi_addons__logo_carousel_style_5  .oxi-icons{
     font-size: 30px;
 }
  
-.oxi_addons__logo_carousel_style_1 .oxi_addons__dot_main{
+.oxi_addons__logo_carousel_style_5 .oxi_addons__dot_main{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.oxi_addons__logo_carousel_style_1 .oxi_addons__dot .swiper-pagination-bullet{
+.oxi_addons__logo_carousel_style_5 .oxi_addons__dot .swiper-pagination-bullet{
 	opacity: 1;
 }
-.oxi_addons__logo_carousel_style_1 .swiper-pagination-inside{
+.oxi_addons__logo_carousel_style_5 .swiper-pagination-inside{
 	bottom: 40px; 
 	left: 0; 
 	width: 100%;
 }
 
-.oxi_addons__logo_carousel_style_1 .oxi_addons_grayscale{
+.oxi_addons__logo_carousel_style_5 .oxi_addons_grayscale{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
 	filter: grayscale(100%);
 	filter: gray;
 }
-.oxi_addons__logo_carousel_style_1 .oxi_addons_grayscale_hover:hover{
+.oxi_addons__logo_carousel_style_5 .oxi_addons_grayscale_hover:hover{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
@@ -49,7 +49,7 @@
 	filter: gray;
 }
  
-.oxi_addons__logo_carousel_style_1 .oxi_addons__image:not(.oxi_addons_grayscale_hover):hover{
+.oxi_addons__logo_carousel_style_5 .oxi_addons__image:not(.oxi_addons_grayscale_hover):hover{
 	-webkit-filter: none;
   -moz-filter: none;
   -ms-filter: none;
@@ -59,7 +59,7 @@
 	  right: auto !important;
   }
 
-.oxi_addons__logo_carousel_style_1 .oxi_addons__title {
+.oxi_addons__logo_carousel_style_5 .oxi_addons__title {
     width: 100%;
     font-size: 16px;
 	font-family: "Roboto", Sans-serif;
@@ -67,4 +67,9 @@
     font-style: normal; 
     text-align: center;
     color: #f0f0f0; 
+}
+.oxi_addons__logo_carousel_style_5 .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

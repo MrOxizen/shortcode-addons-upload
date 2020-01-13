@@ -7,14 +7,14 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_2
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_2 extends Templates
 {
 
     public function public_css()
@@ -31,8 +31,8 @@ class Style_1 extends Templates
     public function inline_public_jquery()
     {
         $style = $this->style;
-
         $speed = $items = $jquery = $slides_type = $coverflow_type = '';
+        $effect = $style['sa_addons_logo_carousel_effect'] != '' ? $style['sa_addons_logo_carousel_effect'] : 'slide';
         $speed = $style['sa_addons_logo_carousel_slider_speed'] != '' ? $style['sa_addons_logo_carousel_slider_speed'] : 400;
         $margin = $style['sa_addons_logo_carousel_items_gap-lap-size'] != '' ? $style['sa_addons_logo_carousel_items_gap-lap-size'] : 10;
         $margin_tablet = $style['sa_addons_logo_carousel_items_gap-tab-size'] != '' ? $style['sa_addons_logo_carousel_items_gap-tab-size'] : 10;
@@ -42,14 +42,10 @@ class Style_1 extends Templates
         $grab_cursor = (array_key_exists('sa_logo_carousel_grab_cursor', $style) && $style['sa_logo_carousel_grab_cursor'] == 'yes') ? '1' : '0';
         $pause_on_hover = (array_key_exists('sa_logo_carousel_pause_switter', $style) && $style['sa_logo_carousel_pause_switter'] == 'yes') ? true : false;
 
-        $items = $style['sa_addons_logo_carousel_visible_items-lap-size'] != '' ? $style['sa_addons_logo_carousel_visible_items-lap-size'] : 3;
-        $items_tablet = $style['sa_addons_logo_carousel_visible_items-tab-size'] != '' ? $style['sa_addons_logo_carousel_visible_items-tab-size'] : 2;
-        $items_mobile = $style['sa_addons_logo_carousel_visible_items-mob-size'] != '' ? $style['sa_addons_logo_carousel_visible_items-mob-size'] : 1;
-
-        $jquery .= ' var LogoCarousel = new Swiper(".' . $this->WRAPPER . '   .oxi_addons__logo_carousel_style_' . $this->oxiid . '", {
+        $jquery .= ' var LogoCarousel = new Swiper(".' . $this->WRAPPER . ' .oxi_addons__logo_carousel_style_' . $this->oxiid . '", {
             direction: "horizontal",
             speed: ' . $speed . ',
-            effect: "slide",
+            effect: "fade",
             paginationClickable: true,
             autoHeight: true,
             grabCursor: ' . $grab_cursor . ',
@@ -64,22 +60,6 @@ class Style_1 extends Templates
             navigation: {
                 nextEl: ".swiper__button_prev_' . $this->oxiid . '",
                 prevEl: ".swiper__button_next_' . $this->oxiid . '"
-            },
-            spaceBetween: ' . $margin . ',
-            slidesPerView: ' . $items . ',
-            breakpoints: {
-                960: {
-                    slidesPerView: ' . $items . ',
-                    spaceBetween:  ' . $margin . '
-                },
-                600 : {
-                    slidesPerView: ' . $items_tablet . ',
-                    spaceBetween:  ' . $margin_tablet . '
-                },
-                480: {
-                    slidesPerView: ' . $items_mobile . ',
-                    spaceBetween:  ' . $margin_mobile . '
-                }
             },
         }); ';
         if ($pause_on_hover) {
@@ -98,6 +78,7 @@ class Style_1 extends Templates
 
     public function default_render($style, $child, $admin)
     {
+
         $rtl = $arrow = $dot = $icon_left = $icon_right = '';
 
         if ($style['sa_logo_carousel_icon_left']) {
@@ -119,15 +100,15 @@ class Style_1 extends Templates
         }
         if ((array_key_exists('sa_logo_carousel_pause_dots', $style) && $style['sa_logo_carousel_pause_dots'] == 'yes')) {
             $dot = '<div class="oxi_addons__dot_main">
-                            <div class="swiper-pagination swiper__pagination_' . $this->oxiid . ' oxi_addons__dot ' . $style['sa_addons_logo_carousel_position'] . '">
+                            <div class="swiper-pagination oxi_addons__dot swiper__pagination_' . $this->oxiid . ' ' . $style['sa_addons_logo_carousel_position'] . '">
                             </div>
                         </div>';
         }
 
         $rtl = (array_key_exists('sa_addons_logo_carousel_direction', $style) && $style['sa_addons_logo_carousel_direction'] == 'right') ? 'dir="rtl"' : '';
         echo '<div class="oxi_addons_logo_carousel_wrapper">
-                <div class="oxi_addons__logo_carousel_style_1">
-                <div class="swiper-container ' . $style['sa_logo_carousel_image_switcher'] . ' oxi_addons__logo_carousel_style_' . $this->oxiid . '" ' . $rtl . '>
+                <div class="oxi_addons__logo_carousel_style_2">
+                <div class="swiper-container ' . $style['sa_logo_carousel_body_switcher'] . ' oxi_addons__logo_carousel_style_' . $this->oxiid . '" ' . $rtl . '>
                     <div class="swiper-wrapper">';
         $repeater = (array_key_exists('sa_logo_carousel_reapeter', $style) && is_array($style['sa_logo_carousel_reapeter'])) ? $style['sa_logo_carousel_reapeter'] : [];
         foreach ($repeater as $key => $value) {
@@ -137,7 +118,7 @@ class Style_1 extends Templates
             if (array_key_exists('sa_logo_carousel_title_link-url', $value) && $value['sa_logo_carousel_title_link-url'] != '') {
                 $image = '<a ' . $this->url_render('sa_logo_carousel_title_link', $value) . ' ><img class="oxi_addons__image ' . $style['sa_logo_carousel_grayscale_switter'] . ' ' . $style['sa_logo_carousel_grayscale_switter_hover'] . '" src="' . $this->media_render('sa_logo_carousel_image', $value) . '" alt="slider image"/></a>';
             } else {
-                $image = '<img class="oxi_addons__image ' . $style['sa_logo_carousel_grayscale_switter'] . ' ' . $style['sa_logo_carousel_grayscale_switter_hover'] . '" src="' . $this->media_render('sa_logo_carousel_image', $value) . '" alt="slider image"/>';
+                $image = '<img class="oxi_addons__image ' . $style['sa_logo_carousel_image_switcher'] . ' ' . $style['sa_logo_carousel_grayscale_switter'] . ' ' . $style['sa_logo_carousel_grayscale_switter_hover'] . '" src="' . $this->media_render('sa_logo_carousel_image', $value) . '" alt="slider image"/>';
             }
             if ((array_key_exists('sa_logo_carousel_title_show', $value) && $value['sa_logo_carousel_title_show'] == 'yes')) {
                 if (array_key_exists('sa_logo_carousel_title', $value) && $value['sa_logo_carousel_title'] != '') {
