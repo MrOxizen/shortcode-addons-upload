@@ -1,0 +1,140 @@
+.sa_unfold_container_style_1 {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_container,
+.sa_unfold_container_style_1 .sa_unfold_wrap .sa_unfold_button span {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_heading {
+    width: 100%;
+    margin-bottom: 5px;
+    border-color: #000;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0px 0px 10px 0px;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_editor_content {
+    width: 100%;
+    color: #e8e8e8;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0px 0px 10px 0px;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_before {
+    margin-right: 10px;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_after {
+    margin-left: 10px;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_container {
+    background: rgba(223, 75, 137, 1.00);
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 10px 0 10px;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_folder {
+    position: relative;
+    overflow: hidden;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_gradient {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background: linear-gradient(180deg, rgba(223, 75, 137, 0.47) 0%, rgba(223, 75, 137, 0.82) 100%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_gradient.toggled {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button {
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    background: rgba(255, 255, 255, 1.01);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 0px 0px 0px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out !important;
+    -moz-transition: all 0.2s ease-in-out !important;
+    -ms-transition: all 0.2s ease-in-out !important;
+    -o-transition: all 0.2s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button:hover {
+    background: rgba(223, 75, 137, 1.00);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #ffffff;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button_sm {
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button_md {
+    padding: 14px 26px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button_lg {
+    padding: 16px 28px;
+    font-size: 18px;
+    line-height: 1.3333;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button_block {
+    font-size: 15px;
+    line-height: 1;
+    padding: 12px 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button_text,
+.sa_unfold_container_style_1 .sa_unfold_icon {
+    display: inline-block;
+    color: #df4b89;
+}
+
+.sa_unfold_container_style_1 .sa_unfold_button:hover .sa_unfold_button_text,
+.sa_unfold_container_style_1 .sa_unfold_button:hover .sa_unfold_icon {
+    color: #ffffff;
+}
