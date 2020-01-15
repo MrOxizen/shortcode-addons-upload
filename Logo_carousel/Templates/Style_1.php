@@ -127,7 +127,7 @@ class Style_1 extends Templates
         $rtl = (array_key_exists('sa_addons_logo_carousel_direction', $style) && $style['sa_addons_logo_carousel_direction'] == 'right') ? 'dir="rtl"' : '';
         echo '<div class="oxi_addons_logo_carousel_wrapper">
                 <div class="oxi_addons__logo_carousel_style_1">
-                <div class="swiper-container ' . $style['sa_logo_carousel_image_switcher'] . ' oxi_addons__logo_carousel_style_' . $this->oxiid . '" ' . $rtl . '>
+                <div class="swiper-container ' . $style['sa_logo_carousel_image_switcher'] . ' " ' . $rtl . '>
                     <div class="swiper-wrapper">';
         $repeater = (array_key_exists('sa_logo_carousel_reapeter', $style) && is_array($style['sa_logo_carousel_reapeter'])) ? $style['sa_logo_carousel_reapeter'] : [];
         foreach ($repeater as $key => $value) {
@@ -145,7 +145,7 @@ class Style_1 extends Templates
                 }
             }
 
-            echo '<div class="swiper-slide">
+            echo '<div class="swiper-slide oxi_addons__logo_carousel_style_' . $key . '">
                     ' . $image . '
                     ' . $title . '
                 </div>';

@@ -1,5 +1,5 @@
  
-/* 
+
  .oxi_addons__image_magnifier_wrapper{
      width: 100%;
      display: flex;
@@ -20,109 +20,9 @@
 }
 .oxi_addons__image_magnifier_style_2 .oxi_addons__image:hover{
 	cursor: crosshair;
-} */
+}
 
-
-.image {
-    max-width: 100%;
-    cursor: none;
-  }
-  .image a {
-    cursor: none;
-  }
-  .image img {
-    max-width: 100%;
-    vertical-align: middle;
-    z-index: 1;
-  }
-  
-  .zoom {
-    width: 14rem;
-    height: 14rem;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    transition: opacity 0s linear .25s, background .25s ease, -webkit-transform .25s ease;
-    transition: transform .25s ease, opacity 0s linear .25s, background .25s ease;
-    transition: transform .25s ease, opacity 0s linear .25s, background .25s ease, -webkit-transform .25s ease;
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    overflow: hidden;
-  }
-  .zoom:before {
-    content: '';
-    position: absolute;
-    margin: auto;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: none;
-  }
-  .zoom.show {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    transition: opacity 0s linear, -webkit-transform .25s ease;
-    transition: transform .25s ease, opacity 0s linear;
-    transition: transform .25s ease, opacity 0s linear, -webkit-transform .25s ease;
-  }
-  .zoom.loading {
-    background: transparent;
-  }
-  .zoom.loading:before {
-    display: block;
-    -webkit-animation: loading .5s ease infinite alternate;
-            animation: loading .5s ease infinite alternate;
-  }
-  @-webkit-keyframes loading {
-    0% {
-      -webkit-transform: scale(0.1);
-              transform: scale(0.1);
-      box-shadow: inset 0 0 0 150px gold;
-    }
-    50% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      box-shadow: inset 0 0 0 140px golf;
-    }
-    100% {
-      box-shadow: inset 0 0 0 0 gold;
-    }
-  }
-  @keyframes loading {
-    0% {
-      -webkit-transform: scale(0.1);
-              transform: scale(0.1);
-      box-shadow: inset 0 0 0 150px gold;
-    }
-    50% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      box-shadow: inset 0 0 0 140px golf;
-    }
-    100% {
-      box-shadow: inset 0 0 0 0 gold;
-    }
-  }
-  .zoom.loading .zoom-image {
-    opacity: 0;
-  }
-  .zoom .zoom-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: opacity .25s ease;
-  }
-  
-
+ 
 
 
 

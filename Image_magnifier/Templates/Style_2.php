@@ -7,14 +7,15 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of class Style_2 extends Templates
+
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_2 extends Templates
 {
     public function public_css()
     {
@@ -30,34 +31,37 @@ class Style_1 extends Templates
     public function inline_public_jquery()
     {
         $style = $this->style;
-        $position = $width = $height = '';
-        if (array_key_exists('sa_image_magnifier_magnifi_position', $style) && $style['sa_image_magnifier_magnifi_position'] == 'top') {
-            $position = '' . ($style['sa_image_magnifier_magnifi_position_top-size'] != '') ? 'top: ' . $style['sa_image_magnifier_magnifi_position_top-size'] . '' : 'top:10' . '';
-        } elseif (array_key_exists('sa_image_magnifier_magnifi_position', $style) && $style['sa_image_magnifier_magnifi_position'] == 'right') {
-            $position = '' . ($style['sa_image_magnifier_magnifi_position_right-size'] != '') ? 'right: ' . $style['sa_image_magnifier_magnifi_position_right-size'] . '' : 'right:10' . '';
-        } elseif (array_key_exists('sa_image_magnifier_magnifi_position', $style) && $style['sa_image_magnifier_magnifi_position'] == 'bottom') {
-            $position = '' . ($style['sa_image_magnifier_magnifi_position_bottom-size'] != '') ? 'bottom: ' . $style['sa_image_magnifier_magnifi_position_bottom-size'] . '' : 'bottom:10' . '';
-        } elseif (array_key_exists('sa_image_magnifier_magnifi_position', $style) && $style['sa_image_magnifier_magnifi_position'] == 'left') {
-            $position = '' . ($style['sa_image_magnifier_magnifi_position_left-size'] != '') ? 'left: ' . $style['sa_image_magnifier_magnifi_position_left-size'] . '' : 'left:10' . '';
-        }
-
+        $jquery = '';
+        $width = 'zoomWidth:200,';
+        $height = 'zoomHeight:200,';
+        $offset = 'offset: {x: -150, y: -150},';
+        $rounded = '';
         if (array_key_exists('sa_image_magnifier_magnifi_switcher', $style) && $style['sa_image_magnifier_magnifi_switcher'] == 'yes') {
-            $width = 'width: ' . $style['sa_image_magnifier_magnifi_width-size'] . ',';
-            $height = 'height: ' . $style['sa_image_magnifier_magnifi_height-size'] . ',';
+            $width = '' . ($style['sa_image_magnifier_magnifi_width-size'] != '') ? 'zoomWidth: ' . $style['sa_image_magnifier_magnifi_width-size'] . ',' : 'zoomWidth:200 ' . ',';
+            $height = '' . ($style['sa_image_magnifier_magnifi_height-size'] != '') ? 'zoomHeight: ' . $style['sa_image_magnifier_magnifi_height-size'] . ',' : 'zoomHeight:200 ' . ',';
         }
-        $zoom = (array_key_exists('sa_image_magnifier_magnifi_zoom-size', $style) && $style['sa_image_magnifier_magnifi_zoom-size'] != '') ? 'maxZoom: ' . $style['sa_image_magnifier_magnifi_zoom-size'] . '' : 'maxZoom: 2,';
-        $jquery = '
-            new ImageZoom(".oxi__image_' . $this->oxiid . '", {
-                deadarea: 0.1,
-                target: {
-                    ' . $position . '
-                    ' . $width . '
-                    ' . $height . '
-                },
-                ' . $zoom . '
-                })';
-        return $jquery;
+        if (array_key_exists('sa_image_magnifier_magnifi_offset_switcher', $style) && $style['sa_image_magnifier_magnifi_offset_switcher'] == 'yes') {
+            $offset = 'offset : {x: ' . ($style['sa_image_magnifier_offset_x-size'] != '' ? $style['sa_image_magnifier_offset_x-size'] : '-100') . ',y: ' . ($style['sa_image_magnifier_offset_y-size'] != '' ? $style['sa_image_magnifier_offset_y-size'] : '-100') . '},';
+        }
+        if (array_key_exists('sa_image_magnifier_magnifi_router_switcher', $style) && $style['sa_image_magnifier_magnifi_router_switcher'] == 'yes') {
+            $rounded = 'roundedCorners :true,';
+        }
+        $jquery .= ' $(".oxi__image_' . $this->oxiid . '").zoomple({
+                blankURL : "' . SA_ADDONS_UPLOAD_URL . '/Image_magnifier/File/images/blank.gif' . '",
+                bgColor :"#fff",
+                loaderURL : "' . SA_ADDONS_UPLOAD_URL . '/Image_magnifier/File/images/loader.gif' . '",
+                showCursor:false,
+                ' . $width . '
+                ' . $height . '
+                ' . $offset . '
+                ' . $rounded . '
 
+              });
+            ';
+        $jquery .= '
+        jQuery("#zoomple_previewholder").addClass("oxi_addons_magnifier_' . $this->oxiid . '");
+        ';
+        return $jquery;
     }
 
     public function default_render($style, $child, $admin)
@@ -65,11 +69,13 @@ class Style_1 extends Templates
         $image = '';
 
         if ($this->media_render('sa_image_magnifier_image', $style) != '') {
-            $image = '<img class="oxi_addons__image   oxi__image_' . $this->oxiid . ' ' . $style['sa_image_magnifier_image_switcher'] . '  ' . $style['sa_image_magnifier_grayscale_switter'] . '  " src="' . $this->media_render('sa_image_magnifier_image', $style) . '" alt="slider image"/>';
+            $image = '<a class="oxi__image_' . $this->oxiid . '" href="' . $this->media_render('sa_image_magnifier_image', $style) . '">
+                 <img class="oxi_addons__image' . $style['sa_image_magnifier_image_switcher'] . '  ' . $style['sa_image_magnifier_grayscale_switter'] . '  " src="' . $this->media_render('sa_image_magnifier_image', $style) . '" alt=""/>
+            </a>';
         }
         echo '<div class="oxi_addons__image_magnifier_wrapper">
-                <div class="oxi_addons__image_magnifier_style_1 ' . $style['sa_image_magnifier_image_switcher'] . '">
-                    ' . $image . '
+                <div class="oxi_addons__image_magnifier_style_2 ' . $style['sa_image_magnifier_image_switcher'] . '">
+                     ' . $image . '
                 </div>
          </div>';
     }
