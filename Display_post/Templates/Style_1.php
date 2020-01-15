@@ -440,8 +440,7 @@ class Style_1 extends Templates {
             } 
             .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__main-img:hover .oxi-addons__overlay{
                 visibility: visible;
-                opacity: 1; 
-                ' . $hoverData . '
+                opacity: 1;  
             }  
             .oxi-addons__main-wrapper-' . $oxiid . ' .oxi-addons__article{ 
                 width: 100%;
