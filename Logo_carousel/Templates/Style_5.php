@@ -41,7 +41,7 @@ class Style_5 extends Templates
         $grab_cursor = (array_key_exists('sa_logo_carousel_grab_cursor', $style) && $style['sa_logo_carousel_grab_cursor'] == 'yes') ? '1' : '0';
         $pause_on_hover = (array_key_exists('sa_logo_carousel_pause_switter', $style) && $style['sa_logo_carousel_pause_switter'] == 'yes') ? true : false;
 
-        $jquery .= ' var LogoCarousel = new Swiper(".' . $this->WRAPPER . ' .oxi_addons__logo_carousel_style_' . $this->oxiid . '", {
+        $jquery .= 'setTimeout(function(){ var LogoCarousel = new Swiper(".' . $this->WRAPPER . ' .oxi_addons__logo_carousel_style_' . $this->oxiid . '", {
             direction: "horizontal",
             speed: ' . $speed . ',
             effect: "flip",
@@ -52,6 +52,13 @@ class Style_5 extends Templates
             autoplay: {
                 delay: ' . $autoplay . '
             },
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows : true,
+              },
             pagination: {
                 el: ".swiper__pagination_' . $this->oxiid . '",
                 clickable: true
@@ -60,7 +67,8 @@ class Style_5 extends Templates
                 nextEl: ".swiper__button_prev_' . $this->oxiid . '",
                 prevEl: ".swiper__button_next_' . $this->oxiid . '"
             },
-        }); ';
+        })},1000);
+        ';
         if ($pause_on_hover) {
             $jquery .= '
             var mySwiper = document.querySelector(".' . $this->WRAPPER . ' .oxi_addons__logo_carousel_style_' . $this->oxiid . '").swiper
