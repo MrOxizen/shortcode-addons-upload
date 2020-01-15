@@ -149,7 +149,7 @@ class Style_4 extends Templates
                 }
             }
 
-            echo '<div class="swiper-slide">
+            echo '<div class="swiper-slide oxi_addons__logo_carousel_style_' . $key . '">
                     ' . $image . '
                     ' . $title . '
                 </div>';

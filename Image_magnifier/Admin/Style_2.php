@@ -28,14 +28,14 @@ class Style_2 extends AdminStyle
             ]
         );
 
-        $this->start_section_devider(); 
+        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
         );
-       
+
         $this->add_group_control(
             'sa_addons_image_magnifier_main_background',
             $this->style,
@@ -165,23 +165,23 @@ class Style_2 extends AdminStyle
                 ],
             ]
         );
-        $this->end_controls_section(); 
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
-        
+
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Image Settings ', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
-        );  
+        );
         $this->add_responsive_control(
             'sa_image_magnifier_image_position',
             $this->style,
             [
-                'label' => __('Image Postion', SHORTCODE_ADDOONS), 
-                'type' => Controls::CHOOSE, 
-                'default' => 'center', 
+                'label' => __('Image Postion', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'default' => 'center',
                 'operator' => Controls::OPERATOR_ICON,
                 'options' => [
                     'flex-start' => [
@@ -223,7 +223,7 @@ class Style_2 extends AdminStyle
                 'loader' => true,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'oxi__image_height_width', 
+                'return_value' => 'oxi__image_height_width',
             ]
         );
         $this->add_responsive_control(
@@ -233,7 +233,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'condition' => [
-                    'sa_image_magnifier_image_switcher' => 'oxi__image_height_width', 
+                    'sa_image_magnifier_image_switcher' => 'oxi__image_height_width',
                 ],
                 'default' => [
                     'unit' => 'px',
@@ -284,7 +284,7 @@ class Style_2 extends AdminStyle
                     '{{WRAPPER}} .oxi_addons__image_magnifier_style_2.oxi__image_height_width' => 'height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
-                    'sa_image_magnifier_image_switcher' => 'oxi__image_height_width', 
+                    'sa_image_magnifier_image_switcher' => 'oxi__image_height_width',
                 ],
             ]
         );
@@ -323,143 +323,83 @@ class Style_2 extends AdminStyle
                 ],
             ]
         );
-       
-        $this->end_controls_section(); 
+
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Magnifi Settings', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
+                'showing' => false,
             ]
-        );   
+        );
+
         $this->add_control(
-            'sa_image_magnifier_magnifi_zoom',
+            'sa_image_magnifier_magnifi_router_switcher',
             $this->style,
             [
-                'label' => __('Zoom', SHORTCODE_ADDOONS),
+                'label' => __('Rounded Corner', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'no',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'sa_image_magnifier_magnifi_offset_switcher',
+            $this->style,
+            [
+                'label' => __('Offset', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'no',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'sa_image_magnifier_offset_x',
+            $this->style,
+            [
+                'label' => __('Offset X', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_image_magnifier_magnifi_offset_switcher' => 'yes',
+                ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 2,
+                    'size' => '',
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 0,
-                        'max' => 10,
+                        'min' => -500,
+                        'max' => 500,
+                        'step' => 10,
+                    ],
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_image_magnifier_offset_y',
+            $this->style,
+            [
+                'label' => __('Offset Y', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -500,
+                        'max' => 500,
                         'step' => 1,
                     ],
                 ],
-            ]
-        );
-        $this->add_control(
-            'sa_image_magnifier_magnifi_position',
-            $this->style,
-            [
-                'label' => __('Magnifi Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT,
-                'default' => 'right',
-                'loader' => TRUE,
-                'options' => [
-                    'none' => __('None', SHORTCODE_ADDOONS), 
-                    'top' => __('Top', SHORTCODE_ADDOONS),  
-                    'right' => __('Right', SHORTCODE_ADDOONS),  
-                    'bottom' => __('Bottom', SHORTCODE_ADDOONS),  
-                    'left' => __('Left', SHORTCODE_ADDOONS),  
-                ], 
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__interactive_promo_content_style_2 .oxi_addons__badge' => '',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_image_magnifier_magnifi_position_top',
-            $this->style,
-            [
-                'label' => __('Top Position', SHORTCODE_ADDOONS),
-                'description' => 'After save You will show the changes',
-                'type' => Controls::SLIDER,
                 'condition' => [
-                    'sa_image_magnifier_magnifi_position' => 'top', 
+                    'sa_image_magnifier_magnifi_offset_switcher' => 'yes',
                 ],
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [ 
-                    'px' => [
-                        'min' => -500,
-                        'max' => 500,
-                        'step' => 2,
-                    ],
-                ], 
-            ]
-        );
-        $this->add_control(
-            'sa_image_magnifier_magnifi_position_right',
-            $this->style,
-            [
-                'label' => __('Right Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'description' => 'After save You will show the changes',
-                'condition' => [
-                    'sa_image_magnifier_magnifi_position' => 'right', 
-                ],
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [ 
-                    'px' => [
-                        'min' => -500,
-                        'max' => 500,
-                        'step' => 2,
-                    ],
-                ], 
-            ]
-        );
-        $this->add_control(
-            'sa_image_magnifier_magnifi_position_bottom',
-            $this->style,
-            [
-                'label' => __('Bottom Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'condition' => [
-                    'sa_image_magnifier_magnifi_position' => 'bottom', 
-                ],
-                'description' => 'After save You will show the changes',
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [ 
-                    'px' => [
-                        'min' => -500,
-                        'max' => 500,
-                        'step' => 2,
-                    ],
-                ], 
-            ]
-        );
-        $this->add_control(
-            'sa_image_magnifier_magnifi_position_left',
-            $this->style,
-            [
-                'label' => __('Left Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'description' => 'After save You will show the changes',
-                'condition' => [
-                    'sa_image_magnifier_magnifi_position' => 'left', 
-                ],
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [ 
-                    'px' => [
-                        'min' => -500,
-                        'max' => 500,
-                        'step' => 2,
-                    ],
-                ], 
             ]
         );
         $this->add_control(
@@ -472,7 +412,7 @@ class Style_2 extends AdminStyle
                 'loader' => true,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes', 
+                'return_value' => 'yes',
             ]
         );
 
@@ -483,19 +423,19 @@ class Style_2 extends AdminStyle
                 'label' => __('Width', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
                 'condition' => [
-                    'sa_image_magnifier_magnifi_switcher' => 'yes', 
+                    'sa_image_magnifier_magnifi_switcher' => 'yes',
                 ],
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
                 ],
-                'range' => [ 
+                'range' => [
                     'px' => [
                         'min' => 100,
                         'max' => 1500,
                         'step' => 10,
                     ],
-                ], 
+                ],
             ]
         );
         $this->add_control(
@@ -513,15 +453,26 @@ class Style_2 extends AdminStyle
                         'min' => 0,
                         'max' => 1200,
                         'step' => 1,
-                    ], 
-                ], 
+                    ],
+                ],
                 'condition' => [
-                    'sa_image_magnifier_magnifi_switcher' => 'yes', 
+                    'sa_image_magnifier_magnifi_switcher' => 'yes',
                 ],
             ]
         );
-      
-        $this->end_controls_section(); 
+        $this->add_group_control(
+            'sa_image_magnifier_magnifi_box_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '.oxi_____disabled,  .oxi_addons_magnifier_' . $this->oxiid . ' .image_wrap' => '',
+                ],
+
+            ]
+        );
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }
