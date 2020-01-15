@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates {
+class Style_2 extends Templates {
 
     public function public_css() {
         wp_enqueue_style('swiper.css', SA_ADDONS_UPLOAD_URL . '/Testimonial_slider/File/swiper.min.css', false, SA_ADDONS_PLUGIN_VERSION);
@@ -112,8 +112,11 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
         ?>
 
-        <div class="oxi_addons_testi_slider_style_1_full_wrap <?php echo $this->animation_render('sa_testi_silder_body_animation', $style); ?>">
-            <div class="oxi_addons_testi_slider_style_1 swiper-container-wrap  ">
+
+        <div class="oxi_addons_testi_slider_style_2_full_wrap <?php echo $this->animation_render('sa_testi_silder_body_animation', $style); ?>">
+            <div class="oxi_addons_testi_slider_style_2 swiper-container-wrap  ">
+
+
                 <div class="default-style  swiper-container oxi-testimonial-slider-main  swiper-container-<?php echo $this->oxiid; ?>"     
                      >
 
@@ -128,16 +131,17 @@ class Style_1 extends Templates {
 //                            .oxi-testimonial-content .oxi-testimonial-user
             ?>
                             <div class="oxi-testimonial-item  clearfix swiper-slide <?php echo $style['sa_testi_silder_set_line_position']; ?>">
-                            <?php $this->_render_user_avatar($item); ?>
+
                                 <div class="oxi-testimonial-content <?php echo $item['sa_testi_silder_profile_rating']; ?>" style="width: 100%;">
-                                <?php //$this->_render_quote();      ?>
-                                    <div class="default-style-testimonial-content">
+            <?php //$this->_render_quote();       ?>
+                                    <div class="testimonial-classic-style-content">
                                     <?php
                                     $this->_render_user_description($item);
                                     $this->_render_user_ratings($item);
                                     $this->_render_user_meta($item);
                                     ?>
                                     </div>
+                                        <?php $this->_render_user_avatar($item); ?>
                                 </div>
                             </div>
 
@@ -147,16 +151,6 @@ class Style_1 extends Templates {
         ?>
                     </div>
                         <?php
-                        if (array_key_exists('sa_testi_silder_pause_dots', $style) && $style['sa_testi_silder_pause_dots'] == 'yes') {
-
-                            echo '
-                                <div class="swiper-pagination swiper__pagination_' . $this->oxiid . ' oxi_addons__dot ' . $style['sa_testi_silder_pagination_position'] . '">
-                                </div>
-                           
-                            ';
-
-                            // <div class = "swiper-pagination swiper-pagination-<?php echo $this->oxiid; "></div> 
-                        }
                         $pa_next_arrow = $pa_prev_arrow = "";
                         if (array_key_exists('sa_testi_silder_pause_arrow', $style) && $style['sa_testi_silder_pause_arrow'] == 'yes') {
                             if ($style['sa_testi_silder_icon_right'] != '' && $style['sa_testi_silder_icon_left'] != '') {
@@ -169,27 +163,39 @@ class Style_1 extends Templates {
                             ?>
                         <!-- Add Arrows -->
                         <div class="swiper-button-next swiper-button-next-<?php echo $this->oxiid; ?>">
-            <?php echo $pa_next_arrow; ?>
+                        <?php echo $pa_next_arrow; ?>
                         </div>
                         <div class="swiper-button-prev swiper-button-prev-<?php echo $this->oxiid; ?>">
-            <?php echo $pa_prev_arrow; ?>
+                            <?php echo $pa_prev_arrow; ?>
                         </div>
                             <?php
                         }
                         ?>
                 </div>
+                    <?php
+                    if (array_key_exists('sa_testi_silder_pause_dots', $style) && $style['sa_testi_silder_pause_dots'] == 'yes') {
+
+                        echo '
+                                <div class="swiper-pagination swiper__pagination_' . $this->oxiid . ' oxi_addons__dot ' . $style['sa_testi_silder_pagination_position'] . '">
+                                </div>
+                           
+                            ';
+
+                        // <div class = "swiper-pagination swiper-pagination-<?php echo $this->oxiid; "></div> 
+                    }
+                    ?>
             </div>
         </div>
-        <?php
-    }
+                <?php
+            }
 
-    protected function _render_user_description($item) {
-        echo '<div class="oxi-testimonial-text">' . wpautop($item["sa_testi_silder_profile_description"]) . '</div>';
-    }
+            protected function _render_user_description($item) {
+                echo '<div class="oxi-testimonial-text">' . wpautop($item["sa_testi_silder_profile_description"]) . '</div>';
+            }
 
-    protected function _render_user_meta($item) {
-        ob_start();
-        ?>
+            protected function _render_user_meta($item) {
+                ob_start();
+                ?>
         <p class="oxi-testimonial-user" <?php if (!empty($style['sa_testi_silder_display_user'])) : ?> style="display: block; float: none;"<?php endif; ?>><?php echo $this->text_render($item['sa_testi_silder_profile_name']); ?></p>
         <p class="oxi-testimonial-user-company"><?php echo $this->text_render($item['sa_testi_silder_company_name']); ?></p>
         <?php
