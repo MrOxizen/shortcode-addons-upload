@@ -253,7 +253,7 @@ class Style_1 extends AdminStyle
             'sa_interactive_promo_badge_position',
             $this->style,
             [
-                'label' => __('Tag', SHORTCODE_ADDOONS),
+                'label' => __('Bade Position', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
                 'default' => 'top-left',
                 'loader' => TRUE,

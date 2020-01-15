@@ -1,0 +1,23 @@
+ 
+
+ .oxi_addons__image_magnifier_wrapper{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+ .oxi_addons__image_magnifier_style_1{
+    display: flex;
+    overflow: hidden;  
+    width: 100%;
+ }
+ 
+.oxi_addons__image_magnifier_style_1 .oxi_addons_grayscale{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}
+.oxi_addons__image_magnifier_style_1 .oxi_addons__image:hover{
+	cursor: crosshair;
+}
