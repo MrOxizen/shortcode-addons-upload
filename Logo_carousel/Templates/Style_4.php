@@ -33,7 +33,7 @@ class Style_4 extends Templates
         $style = $this->style;
         $speed = $items = $jquery = $slides_type = $coverflow_type = '';
         $effect = $style['sa_addons_logo_carousel_effect'] != '' ? $style['sa_addons_logo_carousel_effect'] : 'slide';
-        $speed = $style['sa_addons_logo_carousel_slider_speed'] != '' ? $style['sa_addons_logo_carousel_slider_speed'] : 400;
+        $speed = $style['sa_addons_logo_carousel_slider_speed-size'] != '' ? $style['sa_addons_logo_carousel_slider_speed-size'] : 400;
         $margin = $style['sa_addons_logo_carousel_items_gap-lap-size'] != '' ? $style['sa_addons_logo_carousel_items_gap-lap-size'] : 10;
         $margin_tablet = $style['sa_addons_logo_carousel_items_gap-tab-size'] != '' ? $style['sa_addons_logo_carousel_items_gap-tab-size'] : 10;
         $margin_mobile = $style['sa_addons_logo_carousel_items_gap-mob-size'] != '' ? $style['sa_addons_logo_carousel_items_gap-mob-size'] : 10;
