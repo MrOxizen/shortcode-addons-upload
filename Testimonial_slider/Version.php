@@ -6,4 +6,4 @@
  * Checked by Richard
  */
 
-return array('2.0.0', 'Slider Elements', true, 'fas fa-quote-right', false);
+return array('2.0.0', 'Carousel & Slider', true, 'fas fa-quote-right', false);
