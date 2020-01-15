@@ -7,14 +7,14 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Description of Style_1
+ * Description of Style_3
  * Content of Shortcode Addons Plugins
  *
  * @author $biplob018
  */
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_2 extends Templates {
+class Style_3 extends Templates {
 
     public function public_css() {
         wp_enqueue_style('swiper.css', SA_ADDONS_UPLOAD_URL . '/Testimonial_slider/File/swiper.min.css', false, SA_ADDONS_PLUGIN_VERSION);
@@ -107,21 +107,22 @@ class Style_2 extends Templates {
         </ul>
         <?php
         echo ob_get_clean();
+     
     }
-
     public function default_render($style, $child, $admin) {
         $rtl = (array_key_exists('sa_testi_silder_direction', $style) && $style['sa_testi_silder_direction'] == 'right') ? 'dir="rtl"' : '';
         ?>
-        <div class="oxi_addons_testi_slider_style_2_full_wrap <?php echo $this->animation_render('sa_testi_silder_body_animation', $style); ?>">
-            <div class="oxi_addons_testi_slider_style_2 swiper-container-wrap  ">
+        <div class="oxi_addons_testi_slider_style_3_full_wrap <?php echo $this->animation_render('sa_testi_silder_body_animation', $style); ?>">
+            <div class="oxi_addons_testi_slider_style_3 swiper-container-wrap  oxi-testimonial-slider <?php echo $style['sa_testi_slider_image_align']; ?> ">
 
 
-                <div class="default-style  swiper-container oxi-testimonial-slider-main  swiper-container-<?php echo $this->oxiid; ?> "     <?php echo $rtl; ?>
+                <div class="  swiper-container oxi-testimonial-slider-main  swiper-container-<?php echo $this->oxiid; ?> "     <?php echo $rtl; ?>
                      >
+
 
                     <div class="swiper-wrapper">
                         <?php
-                        $repeater = (array_key_exists('sa_testi_silder_style_2', $style) && is_array($style['sa_testi_silder_style_2'])) ? $style['sa_testi_silder_style_2'] : [];
+                        $repeater = (array_key_exists('sa_testi_silder_style_3', $style) && is_array($style['sa_testi_silder_style_3'])) ? $style['sa_testi_silder_style_3'] : [];
 
                         foreach ($repeater as $key => $item) :
 //                            echo '<pre>';
@@ -129,18 +130,19 @@ class Style_2 extends Templates {
 //                            echo '</pre>';
 //                            .oxi-testimonial-content .oxi-testimonial-user
                             ?>
-                            <div class="oxi-testimonial-item  clearfix swiper-slide <?php echo $style['sa_testi_silder_set_line_position']; ?>">
 
-                                <div class="oxi-testimonial-content <?php echo $item['sa_testi_silder_profile_rating']; ?>" style="width: 100%;">
+
+                            <div class="oxi-testimonial-item  clearfix swiper-slide ">
+
+                                <?php $this->_render_user_avatar($item); ?>
+                                <div class="oxi-testimonial-content <?php echo $style['sa_testi_silder_set_line_position']; ?> <?php echo $item['sa_testi_silder_profile_rating']; ?>" >
                                     <?php //$this->_render_quote();       ?>
-                                    <div class="testimonial-classic-style-content">
-                                        <?php
-                                        $this->_render_user_description($item);
-                                        $this->_render_user_ratings($item);
-                                        $this->_render_user_meta($item);
-                                        ?>
-                                    </div>
-                                    <?php $this->_render_user_avatar($item); ?>
+                                    <?php
+                                    $this->_render_user_description($item);
+                                    $this->_render_user_ratings($item);
+                                    $this->_render_user_meta($item);
+                                    ?>
+
                                 </div>
                             </div>
 
