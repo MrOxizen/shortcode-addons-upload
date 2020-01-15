@@ -16,310 +16,229 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_1 extends Templates {
 
+    public function public_css() {
+        wp_enqueue_style('swiper.css', SA_ADDONS_UPLOAD_URL . '/Testimonial_slider/File/swiper.min.css', false, SA_ADDONS_PLUGIN_VERSION);
+    }
+
+    public function public_jquery() {
+        $this->JSHANDLE = 'swiper.js';
+        wp_enqueue_script('swiper.js', SA_ADDONS_UPLOAD_URL . '/Testimonial_slider/File/swiper.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+    }
+
+    public function inline_public_jquery() {
+        $style = $this->style;
+
+        $effect = $speed = $items = $jquery = '';
+        $effect = $style['sa_testi_silder_effect'] != '' ? $style['sa_testi_silder_effect'] : 'slide';
+        $speed = $style['sa_testi_silder_slider_speed'] != '' ? $style['sa_testi_silder_slider_speed'] : 400;
+        $items = $style['sa_testi_silder_visible_items-lap-size'] != '' ? $style['sa_testi_silder_visible_items-lap-size'] : 3;
+        $items_tablet = $style['sa_testi_silder_visible_items-tab-size'] != '' ? $style['sa_testi_silder_visible_items-tab-size'] : 3;
+        $items_mobile = $style['sa_testi_silder_visible_items-mob-size'] != '' ? $style['sa_testi_silder_visible_items-mob-size'] : 3;
+        $margin = $style['sa_testi_silder_items_gap-lap-size'] != '' ? $style['sa_testi_silder_items_gap-lap-size'] : 10;
+        $margin_tablet = $style['sa_testi_silder_items_gap-tab-size'] != '' ? $style['sa_testi_silder_items_gap-tab-size'] : 10;
+        $margin_mobile = $style['sa_testi_silder_items_gap-mob-size'] != '' ? $style['sa_testi_silder_items_gap-mob-size'] : 10;
+        $autoplay = (array_key_exists('sa_testi_silder_autoplay_switter', $style) && $style['sa_testi_silder_autoplay_switter'] == 'yes') ? $style['sa_testi_silder_autoplay_speed-size'] : 999999;
+        $loop = (array_key_exists('sa_testi_silder_loop_switter', $style) && $style['sa_testi_silder_loop_switter'] == 'yes') ? '1' : '0';
+        $grab_cursor = (array_key_exists('sa_testi_silder_pause_grab_cursor', $style) && $style['sa_testi_silder_pause_grab_cursor'] == 'yes') ? '1' : '0';
+        $pause_on_hover = (array_key_exists('sa_testi_silder_pause_switter', $style) && $style['sa_testi_silder_pause_switter'] == 'yes') ? 'true' : 'false';
+
+        $jquery .= ' var TestiCarousel = new Swiper(".' . $this->WRAPPER . '   .swiper-container-' . $this->oxiid . '", {
+            direction: "horizontal",
+            speed: ' . $speed . ',
+            effect: "slide",
+            paginationClickable: true,
+            autoHeight: true,
+            grabCursor: ' . $grab_cursor . ',
+            loop: ' . $loop . ',
+            autoplay: {
+                delay: ' . $autoplay . '
+            },
+            pagination: {
+                el: ".swiper__pagination_' . $this->oxiid . '",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-prev-' . $this->oxiid . '",
+                prevEl: ".swiper-button-next-' . $this->oxiid . '"
+            },
+            spaceBetween: ' . $margin . ',
+            slidesPerView: ' . $items . ',
+            breakpoints: {
+                960: {
+                    slidesPerView: ' . $items . ',
+                    spaceBetween:  ' . $margin . '
+                },
+                600 : {
+                    slidesPerView: ' . $items_tablet . ',
+                    spaceBetween:  ' . $margin_tablet . '
+                },
+                480: {
+                    slidesPerView: ' . $items_mobile . ',
+                    spaceBetween:  ' . $margin_mobile . '
+                }
+            },
+        }); ';
+        if ($pause_on_hover) {
+            $jquery .= '
+            var mySwiper = document.querySelector(".' . $this->WRAPPER . ' .swiper-container-' . $this->oxiid . '").swiper
+            $(".swiper-container").mouseenter(function() {
+                mySwiper.autoplay.stop();
+              });
+              $(".swiper-container").mouseleave(function() {
+                mySwiper.autoplay.start();
+              });';
+        }
+        return $jquery;
+    }
+
+    protected function _render_user_ratings($item) {
+       
+        if ($item['sa_testi_silder_rating_on_off'] != 'yes') {
+            return;
+        }
+        ob_start();
+        ?>
+        <ul class="testimonial-star-rating">
+            <li><i class="fa fa-star oxi-icons" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star oxi-icons" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star oxi-icons" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star oxi-icons" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star oxi-icons" aria-hidden="true"></i></li>
+        </ul>
+        <?php
+        echo ob_get_clean();
+    }
+
     public function default_render($style, $child, $admin) {
-        $styledata = $this->style;
-        foreach ($styledata['sa_image_accordion_data_style_1'] as $key => $value) {
 
-            $image = $info = $rating = $name = '';
-            if($this->media_render('sa_testi_profile_picture', $value) != ''){
-              $image = '<div class="oxi-testimonials-style-testi-image">                               
-                                <img src="' . $this->media_render('sa_testi_profile_picture', $value) . '">  
-                            </div>';  
-            }
-            if(array_key_exists('sa_testi_profile_description', $value) && $value['sa_testi_profile_description'] != ''){
-              $info = '<div class="oxi-testimonials-style-testi-info">
-                                ' . $this->text_render($value['sa_testi_profile_description']) . '
-                            </div>';  
-            }
-            if(array_key_exists('sa_testi_profile_rating-size', $value) && $value['sa_testi_profile_rating-size'] != ''){
-              $rating = '<div class="oxi-testimonials-style-testi-rating">
-                                ' . $this->public_rating_render($value['sa_testi_profile_rating-size']) . '  
-                            </div> ';  
-            }
-            if(array_key_exists('sa_testi_profile_name', $value) && $value['sa_testi_profile_name'] != ''){
-              
-              if (array_key_exists('sa_testi_profile_url-url', $value) && $value['sa_testi_profile_url-url'] != '') {
-                    $name = '<a ' . $this->url_render('sa_testi_profile_url', $value) . ' class="oxi-testimonials-style-testi-name">
-                                ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                            </a>'; 
-                } else {
-                    $name = '<div  class="oxi-testimonials-style-testi-name">
-                                ' . $this->text_render($value['sa_testi_profile_name']) . ' 
-                            </div>'; 
-                }
-            }
-            
-            echo ' <div class="oxi-testimonials-testi-padding ' . $this->column_render('sa-testimonial-body-col', $style) . ' " >
-                    <div class="oxi-testimonials-item-testi">
-                        <div class="oxi-testimonials-style-testi" ' . $this->animation_render('sa-testimonial-body-animation', $style) . '>
-                            '.$image.'
-                            '.$info.'
-                            '.$rating.'
-                            '.$name.'
-                        </div>
-                    </div>';
-           
-            echo '</div>';
-        }
-    }
-    
-    
-    
-    public function public_rating_render($value = '') {
-            $ratefull = 'fas fa-star';
-            $ratehalf = 'fas fa-star-half-alt';
-            $rateO = 'far fa-star';
+        $dot_class = 'swiper-container-wrap-dots-' . $style['sa_testi_silder_pagination_position'];
+        ?>
 
-            if ($value > 4.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull);
-            } elseif ($value <= 4.75 && $value > 4.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf);
-            } elseif ($value <= 4.25 && $value > 3.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 3.75 && $value > 3.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 3.25 && $value > 2.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 2.75 && $value > 2.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 2.25 && $value > 1.75) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 1.75 && $value > 1.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            } elseif ($value <= 1.25) {
-                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
-            }
-        }
+        <div class="oxi_addons_testi_slider_style_1_full_wrap <?php echo $this->animation_render('sa_testi_silder_body_animation', $style); ?>">
+            <div class="oxi_addons_testi_slider_style_1 swiper-container-wrap  <?php echo $dot_class; ?> ">
+                <div class="default-style  swiper-container oxi-testimonial-slider-main  swiper-container-<?php echo $this->oxiid; ?>"     
+                     >
+
+                    <div class="swiper-wrapper">
+                        <?php
+                        $repeater = (array_key_exists('sa_testi_silder_style_1', $style) && is_array($style['sa_testi_silder_style_1'])) ? $style['sa_testi_silder_style_1'] : [];
+
+                        foreach ($repeater as $key => $item) :
+//                            echo '<pre>';
+//                            print_r($item);
+//                            echo '</pre>';
+//                            .oxi-testimonial-content .oxi-testimonial-user
+                            ?>
+                            <div class="oxi-testimonial-item  clearfix swiper-slide <?php echo $style['sa_testi_silder_set_line_position']; ?>">
+                                <?php $this->_render_user_avatar($item); ?>
+                                <div class="oxi-testimonial-content <?php echo $item['sa_testi_silder_profile_rating']; ?>" style="width: 100%;">
+                                    <?php //$this->_render_quote();      ?>
+                                    <div class="default-style-testimonial-content">
+                                        <?php
+                                        $this->_render_user_description($item);
+                                        $this->_render_user_ratings($item);
+                                        $this->_render_user_meta($item);
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
 
 
-    public function old_render() {
-        $styledata = $this->dbdata;
-        $listdata = $this->child;
-        $stylename = $styledata['style_name'];
-        $oxiid = $styledata['id'];
-        $stylefiles = explode('||#||', $styledata['css']);
-        $styledata = explode('|', $stylefiles[0]);
-        $css = '';
-        echo '<div class="oxi-addons-container">
-            <div class="oxi-addons-row">';
-        foreach ($listdata as $value) {
-            $data = explode('||#||', $value['files']);
-            $image = $info = $rating = $name = '';
-            if ($data[1] != '') {
-                $image = '
-                    <div class="oxi-testimonials-style-' . $oxiid . '-image">                               
-                        <img src="' . OxiAddonsUrlConvert($data[1]) . '">  
+                            <?php
+                        endforeach;
+                        ?>
                     </div>
-            ';
-            }
-            if ($data[7] != '') {
-                $info = '
-                    <div class="oxi-testimonials-style-' . $oxiid . '-info">
-                        ' . OxiAddonsTextConvert($data[7]) . '
-                    </div>
-            ';
-            }
-            if ($data[5] != '') {
-                $rating = '
-                    <div class="oxi-testimonials-style-' . $oxiid . '-rating">
-                        ' . OxiAddonsPublicRate($data[5]) . '                                
-                     </div>
-            ';
-            }
-            if ($data[3] != '' && $data[9] != '') {
-                $name = '
-                      <a href="' . $data[9] . '" class="oxi-testimonials-style-' . $oxiid . '-name" target="' . $styledata[45] . '">
-                            ' . OxiAddonsTextConvert($data[3]) . ' 
-                      </a>
-            ';
-            } elseif ($data[3] != '' && $data[9] == '') {
-                $name = '
-                      <div class="oxi-testimonials-style-' . $oxiid . '-name" >
-                            ' . OxiAddonsTextConvert($data[3]) . ' 
-                      </div>
-            ';
-            }
+                    <?php
+                    if (array_key_exists('sa_testi_silder_pause_dots', $style) && $style['sa_testi_silder_pause_dots'] == 'yes') {
 
+                        echo '
+                                <div class="swiper-pagination swiper__pagination_' . $this->oxiid . ' oxi_addons__dot ' . $style['sa_testi_silder_pagination_position'] . '">
+                                </div>
+                           
+                            ';
 
-            echo ' <div class="oxi-testimonials-' . $oxiid . '-padding ' . OxiAddonsItemRows($styledata, 3) . '" ' . OxiAddonsAnimation($styledata, 63) . ' >
-                    <div class="oxi-testimonials-item-' . $oxiid . '">
-                        <div class="oxi-testimonials-style-' . $oxiid . '">
-                            ' . $image . '
-                            ' . $info . ' 
-                            ' . $rating . '  
-                            ' . $name . '  
+                        // <div class = "swiper-pagination swiper-pagination-<?php echo $this->oxiid; "></div> 
+                    }
+                    $pa_next_arrow = $pa_prev_arrow = "";
+                    if (array_key_exists('sa_testi_silder_pause_arrow', $style) && $style['sa_testi_silder_pause_arrow'] == 'yes') {
+                        if ($style['sa_testi_silder_icon_right'] != '' && $style['sa_testi_silder_icon_left'] != '') {
+                            $pa_next_arrow = $this->font_awesome_render($style['sa_testi_silder_icon_right']);
+                            $pa_prev_arrow = $this->font_awesome_render($style['sa_testi_silder_icon_left']);
+                        } else {
+                            $pa_next_arrow = '<i class="' . esc_attr('fa fa-angle-right') . '></i>';
+                            $pa_prev_arrow = '<i class="' . esc_attr('fa fa-angle-left') . '"></i>';
+                        }
+                        ?>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next swiper-button-next-<?php echo $this->oxiid; ?>">
+                            <?php echo $pa_next_arrow; ?>
                         </div>
-                    </div>';
-            
-            echo '</div>';
-        }
-        echo '</div></div>';
-        $css .= ' .oxi-addons-container .oxi-testimonials-' . $oxiid . '-padding{
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 29) . ';                
-            }
-            .oxi-addons-container .oxi-testimonials-item-' . $oxiid . '{
-                position: relative;
-                max-width: ' . $styledata[7] . 'px;
-                width: 100%;
-                margin: 0 auto;
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '{
-                width: 100%;
-                position: relative;
-                float: left;
-                text-align: left;
-                background:' . $styledata[11] . ';
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 13) . ';                 
-                border-radius:' . OxiAddonsPaddingMarginSanitize($styledata, 47) . ';
-                ' . OxiAddonsBoxShadowSanitize($styledata, 68) . ';
-                }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-image{
-                width: 100%;
-                display: block;
-                position: relative;
-                margin:0 auto ' . $styledata[234] . 'px;
-                max-width: ' . $styledata[74] . 'px;            
-                vertical-align: middle;               
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-image:after{
-                padding-bottom:' . $styledata[78] . 'px;
-                content: "";
-                display: block;
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-image img{              
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%; 
-                display: block;
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 102) . ';
-                border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 82) . ';
-                border-style:' . $styledata[98] . '; 
-                border-color:' . $styledata[99] . ';
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-info{
-                width: 100%;
-                float: left;                
-                font-size: ' . $styledata[134] . 'px;
-                color: ' . $styledata[138] . ';
-                ' . OxiAddonsFontSettings($styledata, 140) . ';                
-                line-height: 130%;                
-                margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 146) . ';
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-rating{
-                text-align: center;
-                padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 218) . ';  
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-rating i{
-                font-size: ' . $styledata[212] . 'px;
-                color:  ' . $styledata[216] . ';
-                padding: 0 2px;
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-name{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: ' . $styledata[196] . 'px;
-                height: ' . $styledata[200] . 'px;
-                position: absolute;
-                top:100%;
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                -o-transform: translateX(-50%);
-                transform: translateX(-50%) translateY(-50%);
-                left: 50%;
-                line-height: 100%;
-                color: ' . $styledata[166] . ';
-                font-size: ' . $styledata[162] . 'px;
-                background: ' . $styledata[168] . ';
-                ' . OxiAddonsFontSettings($styledata, 174) . ';          
-                border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 180) . ';   
-                cursor: pointer;
-            }
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-name:hover,
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-name:active,
-            .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-name:focus{               
-                color: ' . $styledata[170] . ';
-                background: ' . $styledata[172] . ';
-            }    
-            @media only screen and (min-width : 669px) and (max-width : 993px){
-               .oxi-addons-container  .oxi-testimonials-' . $oxiid . '-padding{
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 30) . ';                
-                }
-               .oxi-addons-container  .oxi-testimonials-item-' . $oxiid . '{                   
-                    max-width: ' . $styledata[8] . 'px;
-                }
-               .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '{
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 14) . ';                 
-                    border-radius:' . OxiAddonsPaddingMarginSanitize($styledata, 48) . ';                   
+                        <div class="swiper-button-prev swiper-button-prev-<?php echo $this->oxiid; ?>">
+                            <?php echo $pa_prev_arrow; ?>
+                        </div>
+                        <?php
                     }
-               .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-image{
-                    width: ' . $styledata[75] . 'px;                   
-                    margin:0 auto ' . $styledata[235] . 'px;
-                }
-               .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-image:after{
-                    padding-bottom:' . $styledata[79] . 'px;                   
-                }
-               .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-image img{ 
-                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 103) . ';
-                    border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 83) . ';
-                }
-               .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-info{                           
-                    font-size: ' . $styledata[135] . 'px;
-                    margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 147) . ';
-                }
-               .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-rating{                   
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 219) . ';  
-                }
-               .oxi-addons-container  .oxi-testimonials-style-' . $oxiid . '-rating i{
-                    font-size: ' . $styledata[213] . 'px; 
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-name{                   
-                    font-size: ' . $styledata[163] . 'px;                             
-                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 181) . ';  
-                }               
-            }
-            @media only screen and (max-width : 668px){
-            .oxi-addons-container .oxi-testimonials-' . $oxiid . '-padding{
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 31) . ';                
-                }
-                .oxi-addons-container .oxi-testimonials-item-' . $oxiid . '{                   
-                    max-width: ' . $styledata[9] . 'px;
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '{
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 15) . ';                 
-                    border-radius:' . OxiAddonsPaddingMarginSanitize($styledata, 49) . ';                   
-                    }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-image{
-                    width: ' . $styledata[76] . 'px;                   
-                    margin:0 auto ' . $styledata[236] . 'px;
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-image:after{
-                    padding-bottom:' . $styledata[80] . 'px;                   
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-image img{ 
-                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 104) . ';
-                    border-width: ' . OxiAddonsPaddingMarginSanitize($styledata, 84) . ';
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-info{                           
-                    font-size: ' . $styledata[136] . 'px;
-                    margin: ' . OxiAddonsPaddingMarginSanitize($styledata, 148) . ';
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-rating{                   
-                    padding: ' . OxiAddonsPaddingMarginSanitize($styledata, 220) . ';  
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-rating i{
-                    font-size: ' . $styledata[214] . 'px; 
-                }
-                .oxi-addons-container .oxi-testimonials-style-' . $oxiid . '-name{                   
-                    font-size: ' . $styledata[164] . 'px;                            
-                    border-radius: ' . OxiAddonsPaddingMarginSanitize($styledata, 182) . ';  
-                }  
-            }';
-
-        wp_add_inline_style('shortcode-addons-style', $css);
+                    ?>
+                </div>
+            </div>
+        </div>
+        <?php
     }
 
+    protected function _render_user_description($item) {
+        echo '<div class="oxi-testimonial-text">' . wpautop($item["sa_testi_silder_profile_description"]) . '</div>';
+    }
+
+    protected function _render_user_meta($item) {
+        ob_start();
+        ?>
+        <p class="oxi-testimonial-user" <?php if (!empty($style['sa_testi_silder_display_user'])) : ?> style="display: block; float: none;"<?php endif; ?>><?php echo $this->text_render($item['sa_testi_silder_profile_name']); ?></p>
+        <p class="oxi-testimonial-user-company"><?php echo $this->text_render($item['sa_testi_silder_company_name']); ?></p>
+        <?php
+        echo ob_get_clean();
+    }
+
+    protected function _render_user_avatar($item) {
+        if (array_key_exists('sa_testi_silder_profile_picture_on_off', $item) && $item['sa_testi_silder_profile_picture_on_off'] != 'yes')
+            return;
+
+        ob_start();
+        $img = '';
+        $img = $this->media_render('sa_testi_silder_profile_picture_img', $item);
+        ?>
+        <div class="oxi-testimonial-image">
+            <span class="oxi-testimonial-quote"></span>
+            <figure>
+                <img src="<?php echo $img; ?>" alt="<?php echo $img; ?>">
+            </figure>
+        </div>
+        <?php
+        echo ob_get_clean();
+    }
+
+//    public function public_rating_render($value = '') {
+//            $ratefull = 'fas fa-star';
+//            $ratehalf = 'fas fa-star-half-alt';
+//            $rateO = 'far fa-star';
+//
+//            if ($value > 4.75) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull);
+//            } elseif ($value <= 4.75 && $value > 4.25) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf);
+//            } elseif ($value <= 4.25 && $value > 3.75) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO);
+//            } elseif ($value <= 3.75 && $value > 3.25) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO);
+//            } elseif ($value <= 3.25 && $value > 2.75) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+//            } elseif ($value <= 2.75 && $value > 2.25) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+//            } elseif ($value <= 2.25 && $value > 1.75) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+//            } elseif ($value <= 1.75 && $value > 1.25) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($ratehalf) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+//            } elseif ($value <= 1.25) {
+//                return $this->font_awesome_render($ratefull) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO) . $this->font_awesome_render($rateO);
+//            }
+//        }
 }

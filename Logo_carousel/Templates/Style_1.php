@@ -119,9 +119,9 @@ class Style_1 extends Templates
         }
         if ((array_key_exists('sa_logo_carousel_pause_dots', $style) && $style['sa_logo_carousel_pause_dots'] == 'yes')) {
             $dot = '<div class="oxi_addons__dot_main">
-                            <div class="swiper-pagination swiper__pagination_' . $this->oxiid . ' oxi_addons__dot ' . $style['sa_addons_logo_carousel_position'] . '">
-                            </div>
-                        </div>';
+                        <div class="swiper-pagination swiper__pagination_' . $this->oxiid . ' oxi_addons__dot ' . $style['sa_addons_logo_carousel_position'] . '">
+                        </div>
+                    </div>';
         }
 
         $rtl = (array_key_exists('sa_addons_logo_carousel_direction', $style) && $style['sa_addons_logo_carousel_direction'] == 'right') ? 'dir="rtl"' : '';

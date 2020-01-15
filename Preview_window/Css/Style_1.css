@@ -1,0 +1,52 @@
+.sa_preview_image_container_style_1 {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sa_prev_img_tooltip_wrap {
+    overflow: hidden;
+    background: #f7f7f7;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.sa_prev_img_tooltip_title_wrap {
+    margin: 10px auto;
+}
+
+.sa_prev_img_tooltip_title_wrap .sa_previmg_tooltip_title {
+    margin: 0;
+}
+
+.tooltipster-sidetip .tooltipster-content {
+    background: transparent;
+    text-align: center;
+    padding: 0;
+}
+
+.sa_prev_img_tooltip_desc_wrap {
+    margin: 10px auto;
+}
+
+.sa_preview_image_tooltips_img,
+.sa_prev_img_tooltip_title_wrap,
+.sa_prev_img_tooltip_desc_wrap {
+    border-color: #000;
+}
+
+.sa_preview_image_inner_trig_img {
+    display: inline-block;
+}
+
+.sa_preview_image_wrap .sa_preview_image_figcap {
+    border-color: #000;
+}
+
+.sa_preview_image_wrap .sa_preview_image_trigger {
+    cursor: pointer;
+}
+
+.sa_preview_image_tooltips_img,
+.sa_preview_image_trigger {
+    width: 100%;
+}
