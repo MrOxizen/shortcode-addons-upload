@@ -110,14 +110,13 @@ class Style_2 extends Templates {
     }
 
     public function default_render($style, $child, $admin) {
+        $rtl = (array_key_exists('sa_testi_silder_direction', $style) && $style['sa_testi_silder_direction'] == 'right') ? 'dir="rtl"' : '';
         ?>
-
-
         <div class="oxi_addons_testi_slider_style_2_full_wrap <?php echo $this->animation_render('sa_testi_silder_body_animation', $style); ?>">
             <div class="oxi_addons_testi_slider_style_2 swiper-container-wrap  ">
 
 
-                <div class="default-style  swiper-container oxi-testimonial-slider-main  swiper-container-<?php echo $this->oxiid; ?>"     
+                <div class="default-style  swiper-container oxi-testimonial-slider-main  swiper-container-<?php echo $this->oxiid; ?> "     <?php echo $rtl; ?>
                      >
 
                     <div class="swiper-wrapper">

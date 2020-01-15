@@ -1095,8 +1095,8 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-start-tabs',
                 [
                     'options' => [
-                        'left_arrow' => esc_html__('Left Arrow', SHORTCODE_ADDOONS),
-                        'right_arrow' => esc_html__('Right Arrow', SHORTCODE_ADDOONS),
+                        'left_arrow' => esc_html__('Previous Arrow', SHORTCODE_ADDOONS),
+                        'right_arrow' => esc_html__('Next Arrow', SHORTCODE_ADDOONS),
                     ],
                 ]
         );
@@ -1106,7 +1106,7 @@ class Style_1 extends AdminStyle {
                 'sa_testi_silder_icon_left',
                 $this->style,
                 [
-                    'label' => __('Left Arrow', SHORTCODE_ADDOONS),
+                    'label' => __('Previous Arrow', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
                     'default' => 'fas fa-angle-left',
                     'placeholder' => 'example:- fab fa-adn',
@@ -1140,7 +1140,7 @@ class Style_1 extends AdminStyle {
                 'sa_testi_silder_icon_right',
                 $this->style,
                 [
-                    'label' => __('Right Arrow', SHORTCODE_ADDOONS),
+                    'label' => __('Next Arrow', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
                     'default' => 'fas fa-angle-right',
                     'placeholder' => 'example:- fab fa-adn',

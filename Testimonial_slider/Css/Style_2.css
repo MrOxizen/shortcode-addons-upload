@@ -401,7 +401,7 @@
     top: 50%; 
 }
 .oxi_addons_testi_slider_style_2  .oxi_addons__dot{
-  width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -424,4 +424,15 @@
 }
 .oxi_addons_testi_slider_style_2 .oxi-testimonial-align-left .testimonial-classic-style-content{
     text-align: left;
+}
+
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    left : auto;
+    right : 10px;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-prev{
+    right: auto;
+    left : 10px;
 }

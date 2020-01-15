@@ -428,3 +428,12 @@
     left: 0; 
     width: 100%;
 }
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    left : auto;
+    right : 10px;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-prev{
+    right: auto;
+    left : 10px;
+}
