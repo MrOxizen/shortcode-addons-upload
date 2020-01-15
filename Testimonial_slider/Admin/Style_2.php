@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle {
+class Style_2 extends AdminStyle {
 
     public function register_controls() {
 
@@ -142,7 +142,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -172,7 +172,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1_full_wrap' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2_full_wrap' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -283,7 +283,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => __('Autoplay', SHORTCODE_ADDOONS),
                     'type' => Controls::SWITCHER,
-                    'default' => 'no',
+                    'default' => 'yes',
                     'loader' => true,
                     'label_on' => __('Yes', SHORTCODE_ADDOONS),
                     'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -298,7 +298,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::SLIDER,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 1000,
+                        'size' => 2000,
                     ],
                     'range' => [
                         'px' => [
@@ -399,6 +399,7 @@ class Style_1 extends AdminStyle {
                     'return_value' => 'yes',
                 ]
         );
+
         $this->add_control(
                 'sa_testi_silder_pause_dots',
                 $this->style,
@@ -460,7 +461,7 @@ class Style_1 extends AdminStyle {
                 'sa_testi_silder_bg_full', $this->style, [
             'type' => Controls::BACKGROUND,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-item' => '',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-item' => '',
             ]
                 ]
         );
@@ -506,7 +507,7 @@ class Style_1 extends AdminStyle {
                 'sa_testi_silder_body_boxshadow', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-item' => '',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-item' => '',
             ]
                 ]
         );
@@ -536,7 +537,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-item' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-item' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -544,7 +545,7 @@ class Style_1 extends AdminStyle {
                 'sa_testi_silder_full_style_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-item' => '',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-item' => '',
             ]
                 ]
         );
@@ -574,7 +575,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -617,7 +618,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-image' => 'max-width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-image' => 'max-width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -653,7 +654,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-image img' => 'width:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-image img' => 'width:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -661,7 +662,7 @@ class Style_1 extends AdminStyle {
                 'sa_testi_silder_full_style_image_border', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-image img' => '',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-image img' => '',
             ]
                 ]
         );
@@ -692,7 +693,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-image img' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-image img' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -724,7 +725,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-image img' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-image img' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -754,7 +755,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-image img' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-image img' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -794,7 +795,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .testimonial-star-rating li .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .testimonial-star-rating li .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};',
             ],
                 ]
         );
@@ -804,17 +805,17 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#ff6600',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-five .testimonial-star-rating li .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-one .testimonial-star-rating li:first-child .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-two .testimonial-star-rating li:nth-child(1) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-two .testimonial-star-rating li:nth-child(2) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-three .testimonial-star-rating li:nth-child(1) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-three .testimonial-star-rating li:nth-child(2) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-three .testimonial-star-rating li:nth-child(3) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-four .testimonial-star-rating li:nth-child(1) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-four .testimonial-star-rating li:nth-child(2) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-four .testimonial-star-rating li:nth-child(3) .oxi-icons' => 'color : {{VALUE}};',
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .rating-four .testimonial-star-rating li:nth-child(4) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-five .testimonial-star-rating li .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-one .testimonial-star-rating li:first-child .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-two .testimonial-star-rating li:nth-child(1) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-two .testimonial-star-rating li:nth-child(2) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-three .testimonial-star-rating li:nth-child(1) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-three .testimonial-star-rating li:nth-child(2) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-three .testimonial-star-rating li:nth-child(3) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-four .testimonial-star-rating li:nth-child(1) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-four .testimonial-star-rating li:nth-child(2) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-four .testimonial-star-rating li:nth-child(3) .oxi-icons' => 'color : {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .rating-four .testimonial-star-rating li:nth-child(4) .oxi-icons' => 'color : {{VALUE}};',
             ]
                 ]
         );
@@ -824,7 +825,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .testimonial-star-rating li .oxi-icons' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .testimonial-star-rating li .oxi-icons' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -855,7 +856,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .testimonial-star-rating li .oxi-icons' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .testimonial-star-rating li .oxi-icons' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -885,7 +886,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .testimonial-star-rating ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .testimonial-star-rating ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -907,7 +908,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1  .oxi-testimonial-content .oxi-testimonial-user' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2  .oxi-testimonial-content .oxi-testimonial-user' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -917,7 +918,7 @@ class Style_1 extends AdminStyle {
             'include' => Controls::ALIGNNORMAL,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1  .oxi-testimonial-content .oxi-testimonial-user' => '',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2  .oxi-testimonial-content .oxi-testimonial-user' => '',
             ]
                 ]
         );
@@ -948,7 +949,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1  .oxi-testimonial-content .oxi-testimonial-user' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2  .oxi-testimonial-content .oxi-testimonial-user' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -966,7 +967,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1  .oxi-testimonial-content .oxi-testimonial-user-company ' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-content .oxi-testimonial-user-company ' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -976,7 +977,7 @@ class Style_1 extends AdminStyle {
             'include' => Controls::ALIGNNORMAL,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1  .oxi-testimonial-content .oxi-testimonial-user-company ' => '',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2  .oxi-testimonial-content .oxi-testimonial-user-company ' => '',
             ]
                 ]
         );
@@ -1007,7 +1008,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1  .oxi-testimonial-content .oxi-testimonial-user-company ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2  .oxi-testimonial-content .oxi-testimonial-user-company ' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -1024,7 +1025,7 @@ class Style_1 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#787878',
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-content .oxi-testimonial-text' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-content .oxi-testimonial-text' => 'color: {{VALUE}};',
             ]
                 ]
         );
@@ -1034,7 +1035,7 @@ class Style_1 extends AdminStyle {
             'include' => Controls::ALIGNNORMAL,
             'separator' => TRUE,
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-content .oxi-testimonial-text' => '',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-content .oxi-testimonial-text' => '',
             ]
                 ]
         );
@@ -1065,7 +1066,7 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .oxi-testimonial-content .oxi-testimonial-text' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi-testimonial-content .oxi-testimonial-text' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ]
                 ]
         );
@@ -1130,7 +1131,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1 .swiper-button-prev' => 'left: {{SIZE}}px;',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .swiper-button-prev' => 'left: {{SIZE}}px;',
                     ],
                 ]
         );
@@ -1164,7 +1165,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1  .swiper-button-next' => 'right: {{SIZE}}px;',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2  .swiper-button-next' => 'right: {{SIZE}}px;',
                     ],
                 ]
         );
@@ -1208,8 +1209,8 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next' => 'font-size: {{SIZE}}{{UNIT}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev' => 'font-size: {{SIZE}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next' => 'font-size: {{SIZE}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev' => 'font-size: {{SIZE}}{{UNIT}};',
                     ],
                 ]
         );
@@ -1232,8 +1233,8 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next' => 'color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev' => 'color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next' => 'color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev' => 'color:{{VALUE}};',
                     ],
                 ]
         );
@@ -1246,8 +1247,8 @@ class Style_1 extends AdminStyle {
                     'default' => '#28a745',
                     'oparetor' => 'RGB',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next' => 'background:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev' => 'background:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next' => 'background:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev' => 'background:{{VALUE}};',
                     ],
                 ]
         );
@@ -1257,8 +1258,8 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BORDER,
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next' => '',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev' => '',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next' => '',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev' => '',
                     ],
                 ]
         );
@@ -1290,8 +1291,8 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
         );
@@ -1305,8 +1306,8 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next:hover' => 'color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev:hover' => 'color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next:hover' => 'color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev:hover' => 'color:{{VALUE}};',
                     ],
                 ]
         );
@@ -1319,8 +1320,8 @@ class Style_1 extends AdminStyle {
                     'default' => '#28a745',
                     'oparetor' => 'RGB',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next:hover' => 'background-color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev:hover' => 'background-color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next:hover' => 'background-color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev:hover' => 'background-color:{{VALUE}};',
                     ],
                 ]
         );
@@ -1332,8 +1333,8 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next:hover' => 'border-color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev:hover' => 'border-color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next:hover' => 'border-color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev:hover' => 'border-color:{{VALUE}};',
                     ],
                 ]
         );
@@ -1365,8 +1366,8 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
         );
@@ -1409,8 +1410,8 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-next' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-button-prev' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-next' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-button-prev' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
         );
@@ -1457,7 +1458,29 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}}  .oxi_addons_testi_slider_style_1 .oxi_addons__dot .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                        '{{WRAPPER}}  .oxi_addons_testi_slider_style_2 .oxi_addons__dot .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_testi_silder_pagination_dot_spacing',
+                $this->style,
+                [
+                    'label' => __('Spacing', SHORTCODE_ADDOONS),
+                    'type' => Controls::SLIDER,
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => '',
+                    ],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 40,
+                            'step' => 1,
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi_addons_testi_slider_style_2 .oxi_addons__dot .swiper-pagination-bullet' => 'margin-left: {{SIZE}}px; margin-right: {{SIZE}}px;',
                     ],
                 ]
         );
@@ -1482,7 +1505,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#000',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-pagination-bullet.swiper-pagination-bullet-active' => 'background:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-pagination-bullet.swiper-pagination-bullet-active' => 'background:{{VALUE}};',
                     ],
                 ]
         );
@@ -1495,7 +1518,7 @@ class Style_1 extends AdminStyle {
                     'default' => '#28a745',
                     'oparetor' => 'RGB',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-pagination-bullet' => 'background:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-pagination-bullet' => 'background:{{VALUE}};',
                     ],
                 ]
         );
@@ -1505,7 +1528,7 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BORDER,
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-pagination-bullet' => '',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-pagination-bullet' => '',
                     ],
                 ]
         );
@@ -1537,10 +1560,11 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-pagination-bullet' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-pagination-bullet' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
         );
+
         $this->add_responsive_control(
                 'sa_testi_silder_pagination_dot_margin',
                 $this->style,
@@ -1569,42 +1593,11 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .oxi_addons__dot .swiper-pagination-bullet' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2 .oxi_addons__dot ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
         );
-        $this->add_responsive_control(
-                'sa_testi_silder_pagination_dot_margin',
-                $this->style,
-                [
-                    'label' => __('Margin', SHORTCODE_ADDOONS),
-                    'type' => Controls::DIMENSIONS,
-                    'default' => [
-                        'unit' => 'px',
-                        'size' => '',
-                    ],
-                    'range' => [
-                        '%' => [
-                            'min' => 0,
-                            'max' => 50,
-                            'step' => .1,
-                        ],
-                        'px' => [
-                            'min' => -100,
-                            'max' => 200,
-                            'step' => 1,
-                        ],
-                        'em' => [
-                            'min' => -3,
-                            'max' => 10,
-                            'step' => .1,
-                        ],
-                    ],
-                    'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .oxi_addons__dot ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    ],
-                ]
-        );
+
 
         $this->end_controls_tab();
         $this->start_controls_tab();
@@ -1617,7 +1610,7 @@ class Style_1 extends AdminStyle {
                     'default' => '#28a745',
                     'oparetor' => 'RGB',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-pagination-bullet:hover' => 'background:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-pagination-bullet:hover' => 'background:{{VALUE}};',
                     ],
                 ]
         );
@@ -1630,7 +1623,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons_testi_slider_style_1.swiper-container-wrap .swiper-pagination-bullet:hover' => 'border-color:{{VALUE}};',
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_2.swiper-container-wrap .swiper-pagination-bullet:hover' => 'border-color:{{VALUE}};',
                     ],
                 ]
         );
