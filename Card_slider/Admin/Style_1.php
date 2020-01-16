@@ -19,7 +19,7 @@ use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 class Style_1 extends AdminStyle
 {
 
-    use \SHORTCODE_ADDONS_UPLOAD\Card_slider\Files\Post_Query;
+    use \SHORTCODE_ADDONS_UPLOAD\Post_carousel\Files\Post_Query;
 
     public function register_controls()
     {
@@ -29,7 +29,7 @@ class Style_1 extends AdminStyle
                 'options' => [
                     'general-settings' => esc_html__('General Settings', SHORTCODE_ADDOONS),
                     'style-settings' => esc_html__('Style', SHORTCODE_ADDOONS),
-                    'button-settings' => esc_html__('Button', SHORTCODE_ADDOONS),
+                    'button-settings' => esc_html__('Button / Arrows', SHORTCODE_ADDOONS),
                 ]
             ]
         );
@@ -51,7 +51,7 @@ class Style_1 extends AdminStyle
         );
         $this->post_type();
         $this->add_control(
-            'sa_display_post_post_type',
+            'sa_post_carousel_post_type',
             $this->style,
             [
                 'label' => __('Post Type', SHORTCODE_ADDOONS),
@@ -62,28 +62,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-                'sa_display_post_post_date', $this->style, [
-            'label' => __('Date', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-        $this->add_control(
-                'sa_display_post_post_date_icon', $this->style, [
-            'label' => __('Date Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::ICON,
-            'default' => 'fas fa-calendar-alt',
-            'condition' => [
-                'sa_display_post_post_date' => 'yes',
-            ]
-                ]
-        );
-        $this->add_control(
-            'sa_display_post_author',
+            'sa_post_carousel_author',
             $this->style,
             [
                 'label' => __('Author', SHORTCODE_ADDOONS),
@@ -96,7 +75,7 @@ class Style_1 extends AdminStyle
         foreach ($this->post_type() as $key => $value) {
             if ($key != 'page') :
                 $this->add_control(
-                    'sa_display_post_post_type-cat' . $key,
+                    'sa_post_carousel_post_type-cat' . $key,
                     $this->style,
                     [
                         'label' => __(' Category', SHORTCODE_ADDOONS),
@@ -105,12 +84,12 @@ class Style_1 extends AdminStyle
                         'loader' => TRUE,
                         'options' => $this->post_category($key),
                         'condition' => [
-                            'sa_display_post_post_type' => $key
+                            'sa_post_carousel_post_type' => $key
                         ]
                     ]
                 );
                 $this->add_control(
-                    'sa_display_post_post_type-tag' . $key,
+                    'sa_post_carousel_post_type-tag' . $key,
                     $this->style,
                     [
                         'label' => __(' Tags', SHORTCODE_ADDOONS),
@@ -119,14 +98,14 @@ class Style_1 extends AdminStyle
                         'loader' => TRUE,
                         'options' => $this->post_tags($key),
                         'condition' => [
-                            'sa_display_post_post_type' => $key
+                            'sa_post_carousel_post_type' => $key
                         ]
                     ]
                 );
             endif;
 
             $this->add_control(
-                'sa_display_post_post_type-include' . $key,
+                'sa_post_carousel_post_type-include' . $key,
                 $this->style,
                 [
                     'label' => __(' Include Post', SHORTCODE_ADDOONS),
@@ -135,12 +114,12 @@ class Style_1 extends AdminStyle
                     'loader' => TRUE,
                     'options' => $this->post_include($key),
                     'condition' => [
-                        'sa_display_post_post_type' => $key
+                        'sa_post_carousel_post_type' => $key
                     ]
                 ]
             );
             $this->add_control(
-                'sa_display_post_post_type-exclude' . $key,
+                'sa_post_carousel_post_type-exclude' . $key,
                 $this->style,
                 [
                     'label' => __(' Exclude Post', SHORTCODE_ADDOONS),
@@ -149,38 +128,33 @@ class Style_1 extends AdminStyle
                     'loader' => TRUE,
                     'options' => $this->post_exclude($key),
                     'condition' => [
-                        'sa_display_post_post_type' => $key
+                        'sa_post_carousel_post_type' => $key
                     ]
                 ]
             );
         }
         $this->add_control(
-            'sa_display_post_per_page',
+            'sa_post_carousel_per_page',
             $this->style,
             [
                 'label' => __('Post Per Page', SHORTCODE_ADDOONS),
                 'type' => Controls::NUMBER,
                 'loader' => TRUE,
+                'default' => 3,
                 'min' => 1,
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon' => 'top: {{VALUE}}px;',
-                ]
             ]
         );
         $this->add_control(
-            'sa_display_post_offset',
+            'sa_post_carousel_offset',
             $this->style,
             [
                 'label' => __('Offset', SHORTCODE_ADDOONS),
                 'type' => Controls::NUMBER,
                 'loader' => TRUE,
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon' => 'top: {{VALUE}}px;',
-                ]
             ]
         );
         $this->add_control(
-            'sa_display_post_orderby',
+            'sa_post_carousel_orderby',
             $this->style,
             [
                 'label' => __(' Order By', SHORTCODE_ADDOONS),
@@ -202,7 +176,7 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_control(
-            'sa_display_post_ordertype',
+            'sa_post_carousel_ordertype',
             $this->style,
             [
                 'label' => __(' Order Type', SHORTCODE_ADDOONS),
@@ -215,22 +189,13 @@ class Style_1 extends AdminStyle
             ]
         );
 
-
-
-
-        $this->end_controls_section();
-
-        $this->end_section_devider();
-        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons-layout',
             [
                 'label' => esc_html__('layout Settings', SHORTCODE_ADDOONS),
-                'showing' => TRUE,
+                'showing' => FALSE,
             ]
         );
-
-
         $this->add_control(
             'sa_s_image_layout_linke_open',
             $this->style,
@@ -277,7 +242,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_display_post_thumb_sizes',
+            'sa_post_carousel_thumb_sizes',
             $this->style,
             [
                 'label' => __('Image Size', SHORTCODE_ADDOONS),
@@ -340,9 +305,6 @@ class Style_1 extends AdminStyle
                 'loader' => TRUE,
                 'default' => 20,
                 'min' => 0,
-                'selector' => [
-                    '{{WRAPPER}} .oxi-addons-single-image-container-style-1 .oxi-addons-single-image-ribbon' => 'top: {{VALUE}}px;',
-                ],
                 'condition' => [
                     'sa_s_image_layout_show_excerpt' => 'show'
                 ]
@@ -365,13 +327,10 @@ class Style_1 extends AdminStyle
                         'title' => __('False', SHORTCODE_ADDOONS),
                     ],
                 ],
-                'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-image-main ' => '',
-                ],
             ]
         );
         $this->add_control(
-            'sa_display_post_meta_position',
+            'sa_post_carousel_meta_position',
             $this->style,
             [
                 'label' => __('Meta Position', SHORTCODE_ADDOONS),
@@ -388,89 +347,285 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->end_controls_section();
+        $this->end_controls_section();
+        $this->end_section_devider();
+
+
+        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons-layout',
             [
-                'label' => esc_html__('Slider Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Carousel Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
             ]
         );
+        $this->add_control(
+            'sa_post_carousel_image_switcher',
+            $this->style,
+            [
+                'label' => __('Custom Width Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'post_carousel_height_width',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'post_carousel_height_width', 
+            ]
+        );
         $this->add_responsive_control(
-            'sa_card_slider_speed',
+            'sa_post_carousel_image_width',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_post_carousel_image_switcher' => 'post_carousel_height_width', 
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '700',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 50,
+                        'max' => 250,
+                        'step' => 1,
+                    ],
+                    'px' => [
+                        'min' => 100,
+                        'max' => 1500,
+                        'step' => 10,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .post_carousel_height_width' => 'max-width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_post_carousel_height',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 1,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .post_carousel_height_width' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_post_carousel_image_switcher' => 'post_carousel_height_width', 
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_post_carousel_visible_items',
+            $this->style,
+            [
+                'label' => __('Visible Items', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 3,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_post_carousel_items_gap',
+            $this->style,
+            [
+                'label' => __('Items Gap', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 10,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_post_carousel_slider_speed',
             $this->style,
             [
                 'label' => __('Slider Speed', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
-                'description' => 'Duration of transition between slides (in ms)',
                 'default' => [
                     'unit' => 'px',
-                    'size' => 400,
+                    'size' => 500,
                 ],
                 'range' => [
                     'px' => [
                         'min' => 0,
                         'max' => 3000,
-                        'step' => 1,
+                        'step' => 50,
                     ],
-                ]
+                ],
             ]
         );
         $this->add_control(
-                'sa_card_slider_autoplay', $this->style, [
-            'label' => __('Auto Play', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'separator' => true,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
-        );
-        $this->add_control(
-                'sa_card_slider_autoplay_speed', $this->style, [
-            'label' => __('Autoplay Speed', SHORTCODE_ADDOONS),
-            'type' => Controls::NUMBER,
-            'condition' => [
-                'sa_card_slider_autoplay' => 'yes',
+            'sa_post_carousel_autoplay_switter',
+            $this->style,
+            [
+                'label' => __('Autoplay', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
             ]
-                ]
         );
         $this->add_control(
-                'sa_card_slider_loop', $this->style, [
-            'label' => __('Infinite Loop', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
+            'sa_post_carousel_autoplay_speed',
+            $this->style,
+            [
+                'label' => __('Autoplay Speed', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 1000,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 5000,
+                        'step' => 50,
+                    ],
+                ],
+                'condition' => [
+                    'sa_post_carousel_autoplay_switter' => 'yes',
+                ],
+            ]
+        );
+    
+        $this->add_control(
+            'sa_post_carousel_pause_switter',
+            $this->style,
+            [
+                'label' => __('Pause On Hover', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'loader' => true,
+                'default' => 'false',
+                'options' => [
+                    'true' => [
+                        'title' => __('True', SHORTCODE_ADDOONS),
+                    ],
+                    'false' => [
+                        'title' => __('False', SHORTCODE_ADDOONS),
+                    ]
+                ],
+            ]
         );
         $this->add_control(
-                'sa_card_slider_grab_cursor', $this->style, [
-            'label' => __('Grab Cursor', SHORTCODE_ADDOONS),
-            'description' => 'Shows grab cursor when you hover over the slider',
-            'type' => Controls::SWITCHER,
-            'separator' => true,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
+            'sa_post_carousel_loop_switter',
+            $this->style,
+            [
+                'label' => __('Infinite Loop', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
         );
         $this->add_control(
-                'sa_card_slider_pagination', $this->style, [
-            'label' => __('Pagination', SHORTCODE_ADDOONS),
-            'type' => Controls::SWITCHER,
-            'separator' => true,
-            'loader' => TRUE,
-            'default' => 'yes',
-            'label_on' => __('Yes', SHORTCODE_ADDOONS),
-            'label_off' => __('No', SHORTCODE_ADDOONS),
-            'return_value' => 'yes',
-                ]
+            'sa_post_carousel_grab_cursor',
+            $this->style,
+            [
+                'label' => __('Grab Cursor', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'no',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'sa_post_carousel_arrow',
+            $this->style,
+            [
+                'label' => __('Arrows', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'sa_post_carousel_dots',
+            $this->style,
+            [
+                'label' => __('Dots', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'sa_post_carousel_auto_height',
+            $this->style,
+            [
+                'label' => __('Auto Height', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'loader' => true,
+                'default' => 'true',
+                'options' => [
+                    'true' => [
+                        'title' => __('True', SHORTCODE_ADDOONS),
+                    ],
+                    'false' => [
+                        'title' => __('False', SHORTCODE_ADDOONS),
+                    ]
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_post_carousel_direction',
+            $this->style,
+            [
+                'label' => __('Direction', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'default' => 'left',
+                'loader' => true,
+                'options' => [
+                    'left' => __('Left', SHORTCODE_ADDOONS),
+                    'right' => __('Right', SHORTCODE_ADDOONS),
+                ],
+            ]
         );
         $this->end_controls_section();
         $this->end_section_devider();
@@ -493,27 +648,27 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_display_post_meta_bg',
+            'sa_post_carousel_meta_bg',
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__wrapper' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => '',
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_display_post_post_border',
+            'sa_post_carousel_post_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__wrapper' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => ''
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_post_set_border_r',
+            'sa_post_carousel_post_set_border_r',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -540,12 +695,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_post_set_padding',
+            'sa_post_carousel_post_set_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -572,13 +727,13 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__article' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__article' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
 
         $this->add_responsive_control(
-            'sa_display_post_post_set_margin',
+            'sa_post_carousel_post_set_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -605,22 +760,22 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_display_post_box_shadow',
+            'sa_post_carousel_box_shadow',
             $this->style,
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__wrapper' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => ''
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_display_post_animation',
+            'sa_post_carousel_animation',
             $this->style,
             [
                 'type' => Controls::ANIMATION,
@@ -634,7 +789,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_display_post_img_eq_height',
+            'sa_post_carousel_img_eq_height',
             $this->style,
             [
                 'label' => __('Image Equal Height', SHORTCODE_ADDOONS),
@@ -650,23 +805,19 @@ class Style_1 extends AdminStyle
                         'title' => __('False', SHORTCODE_ADDOONS),
                     ],
                 ],
-                'selector' => [
-                    '{{WRAPPER}}  .oxi-addons-image-main ' => '',
-                ],
             ]
         );
         $this->add_control(
-            'sa_display_post_thumbnail_height',
+            'sa_post_carousel_thumbnail_height',
             $this->style,
             [
                 'label' => __('Thumbnail Height', SHORTCODE_ADDOONS),
                 'type' => Controls::NUMBER,
-                'default' => 78,
+                'default' => 55,
                 'min' => 0,
                 'max' => 100,
-                'loader' => TRUE,
                 'condition' => [
-                    'sa_display_post_img_eq_height' => 'true'
+                    'sa_post_carousel_img_eq_height' => 'true'
                 ]
             ]
         );
@@ -679,7 +830,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_display_post_icon',
+            'sa_post_carousel_icon',
             $this->style,
             [
                 'type' => Controls::ICON,
@@ -689,7 +840,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_display_post_icon_size',
+            'sa_post_carousel_icon_size',
             $this->style,
             [
                 'label' => __('Icon Size', SHORTCODE_ADDOONS),
@@ -697,24 +848,24 @@ class Style_1 extends AdminStyle
                 'default' => 22,
                 'min' => 0,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__overlay .oxi-icons' => 'font-size: {{VALUE}}px;',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__overlay .oxi-icons' => 'font-size: {{VALUE}}px;',
                 ],
             ]
         );
         $this->add_control(
-            'sa_display_post_icon_color',
+            'sa_post_carousel_icon_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons__main-wrapper-style-1 .oxi-addons__overlay .oxi-icons' => 'color : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-2 .oxi-addons__overlay .oxi-icons' => 'color : {{VALUE}}; '
                 ],
             ]
         );
         $this->add_control(
-            'sa_display_post_icon_bg_color',
+            'sa_post_carousel_icon_bg_color',
             $this->style,
             [
                 'label' => __('Background', SHORTCODE_ADDOONS),
@@ -722,13 +873,13 @@ class Style_1 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(59, 59, 59, 0.7)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons__main-wrapper-style-1 .oxi-addons__overlay' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-2 .oxi-addons__overlay' => 'background : {{VALUE}}; '
                 ],
             ]
         );
 
         $this->add_control(
-            'sa_display_post_meta_position_effect',
+            'sa_post_carousel_meta_position_effect',
             $this->style,
             [
                 'label' => __('Meta Position', SHORTCODE_ADDOONS),
@@ -760,7 +911,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_display_post_title_tag',
+            'sa_post_carousel_title_tag',
             $this->style,
             [
                 'label' => __('Select Tag', SHORTCODE_ADDOONS),
@@ -778,31 +929,31 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_display_post_title_color',
+            'sa_post_carousel_title_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#252b25',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__title' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__title' => 'color:{{VALUE}};'
                 ],
             ]
         );
 
         $this->add_group_control(
-            'sa_display_post_title_typo',
+            'sa_post_carousel_title_typo',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__title' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__title' => '',
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_title_padding',
+            'sa_post_carousel_title_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -829,7 +980,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -846,31 +997,31 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_control(
-            'sa_display_post_excerpt_color',
+            'sa_post_carousel_excerpt_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#252b25',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__details' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__details' => 'color:{{VALUE}};'
                 ],
             ]
         );
 
         $this->add_group_control(
-            'sa_display_post_excerpt_typo',
+            'sa_post_carousel_excerpt_typo',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__details ' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__details ' => '',
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_excerpt_padding',
+            'sa_post_carousel_excerpt_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -897,7 +1048,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -917,19 +1068,19 @@ class Style_1 extends AdminStyle
                 'options' => [
                     'meta_name' => esc_html__('Meta Name', SHORTCODE_ADDOONS),
                     'meta_date' => esc_html__('Meta Date', SHORTCODE_ADDOONS),
-                    'meta_avater' => esc_html__('Meta Avater', SHORTCODE_ADDOONS), 
+                    'meta_avater' => esc_html__('Meta Avater', SHORTCODE_ADDOONS),
                 ]
             ]
-        ); 
-        $this->start_controls_tab(); 
+        );
+        $this->start_controls_tab();
         $this->add_group_control(
-            'sa_display_post_meta_typo',
+            'sa_post_carousel_meta_typo',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-name .oxi-name' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name .oxi-name' => '',
                 ],
             ]
         );
@@ -944,28 +1095,28 @@ class Style_1 extends AdminStyle
         );
         $this->start_controls_tab();
         $this->add_control(
-            'sa_display_post_meta_name_color',
+            'sa_post_carousel_meta_name_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#2ba5ba',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-name > .oxi-name' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name > .oxi-name' => 'color:{{VALUE}};'
                 ],
             ]
         );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_display_post_meta_h_name',
+            'sa_post_carousel_meta_h_name',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#1cbfa4',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-name:hover > .oxi-name' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name:hover > .oxi-name' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -973,7 +1124,7 @@ class Style_1 extends AdminStyle
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->add_responsive_control(
-            'sa_display_post_meta_name_padding',
+            'sa_post_carousel_meta_name_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -1000,38 +1151,38 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-name ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
         $this->end_controls_tab();
-        $this->start_controls_tab(); 
+        $this->start_controls_tab();
         $this->add_control(
-            'sa_display_post_meta_date_color',
+            'sa_post_carousel_meta_date_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#252b25',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-date > .oxi-time' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-date > .oxi-time' => 'color:{{VALUE}};'
                 ],
             ]
         );
 
         $this->add_group_control(
-            'sa_display_post_meta_date_typo',
+            'sa_post_carousel_meta_date_typo',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-date > .oxi-time ' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-date > .oxi-time ' => '',
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_meta_date_padding',
+            'sa_post_carousel_meta_date_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -1058,15 +1209,15 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-date > .oxi-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-date > .oxi-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
         $this->end_controls_tab();
-        $this->start_controls_tab(); 
+        $this->start_controls_tab();
 
         $this->add_control(
-            'sa_display_post_meta_avater',
+            'sa_post_carousel_meta_avater',
             $this->style,
             [
                 'label' => __('Avatars Type', SHORTCODE_ADDOONS),
@@ -1085,7 +1236,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_display_post_meta_avater_img',
+            'sa_post_carousel_meta_avater_img',
             $this->style,
             [
                 'type' => Controls::MEDIA,
@@ -1094,12 +1245,12 @@ class Style_1 extends AdminStyle
                     'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/1-1.jpg',
                 ],
                 'condition' => [
-                    'sa_display_post_meta_avater' => 'custom'
+                    'sa_post_carousel_meta_avater' => 'custom'
                 ]
             ]
         );
         $this->add_control(
-            'sa_display_post_meta_avater_img_width',
+            'sa_post_carousel_meta_avater_img_width',
             $this->style,
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
@@ -1127,13 +1278,13 @@ class Style_1 extends AdminStyle
                     ]
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-left > img' => 'width: {{SIZE}}{{UNIT}}; ',
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-left > .oxi-addons__avater' => 'width: {{SIZE}}{{UNIT}}; '
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > img' => 'width: {{SIZE}}{{UNIT}}; ',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > .oxi-addons__avater' => 'width: {{SIZE}}{{UNIT}}; '
                 ],
             ]
         );
         $this->add_control(
-            'sa_display_post_meta_avater_img_height',
+            'sa_post_carousel_meta_avater_img_height',
             $this->style,
             [
                 'label' => __('Height', SHORTCODE_ADDOONS),
@@ -1161,25 +1312,25 @@ class Style_1 extends AdminStyle
                     ]
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-left > img' => 'height: {{SIZE}}{{UNIT}}; ',
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-left > .oxi-addons__avater' => 'height: {{SIZE}}{{UNIT}}; '
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > img' => 'height: {{SIZE}}{{UNIT}}; ',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > .oxi-addons__avater' => 'height: {{SIZE}}{{UNIT}}; '
                 ],
             ]
         );
-        $this->end_controls_tab(); 
+        $this->end_controls_tab();
         $this->end_controls_tabs();
 
         $this->add_control(
-            'sa_display_post_meta_separator',
+            'sa_post_carousel_meta_separator',
             $this->style,
             [
                 'label' => __(' ', SHORTCODE_ADDOONS),
                 'type' => Controls::SEPARATOR,
-                Controls::SEPARATOR=> TRUE, 
+                Controls::SEPARATOR => TRUE,
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_meta_padding',
+            'sa_post_carousel_meta_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -1206,12 +1357,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__meta-info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
-        $this->end_controls_section(); 
-     
+        $this->end_controls_section();
+
         $this->end_section_devider();
         $this->end_section_tabs();
 
@@ -1233,7 +1384,7 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_control(
-            'sa_display_post_button_align',
+            'sa_post_carousel_button_align',
             $this->style,
             [
                 'label' => __('Button Align', SHORTCODE_ADDOONS),
@@ -1255,7 +1406,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_display_post_button_show',
+            'sa_post_carousel_button_show',
             $this->style,
             [
                 'label' => __('Button Show', SHORTCODE_ADDOONS),
@@ -1275,7 +1426,7 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_control(
-            'sa_display_post_button_text',
+            'sa_post_carousel_button_text',
             $this->style,
             [
                 'label' => __('Button Text', SHORTCODE_ADDOONS),
@@ -1283,13 +1434,13 @@ class Style_1 extends AdminStyle
                 'default' => 'Read More..',
                 'placeholder' => 'Button Text..',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => '',
                 ],
             ]
         );
 
         $this->add_control(
-            'sa_display_post_button_url',
+            'sa_post_carousel_button_url',
             $this->style,
             [
                 'label' => __('Link Opening', SHORTCODE_ADDOONS),
@@ -1309,7 +1460,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_button_padding',
+            'sa_post_carousel_button_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -1336,12 +1487,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_button_margin',
+            'sa_post_carousel_button_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -1368,8 +1519,308 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Arrows', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+                'condition'     => [
+                    'sa_post_carousel_arrow' => 'yes'
+                ],
+            ]
+        );
+        $this->add_control(
+            'arrow_left',
+            $this->style,
+            [
+                'label' => __('Arrow Left', SHORTCODE_ADDOONS),
+                'type' => Controls::ICON,
+                'default' => 'fas fa-arrow-left',
+
+            ]
+        );
+        $this->add_control(
+            'arrow_right',
+            $this->style,
+            [
+                'label' => __('Arrow Right', SHORTCODE_ADDOONS),
+                'type' => Controls::ICON,
+                'default' => 'fas fa-arrow-right',
+
+            ]
+        );
+        $this->add_responsive_control(
+            'arrows_width_height',
+            $this->style,
+            [
+                'label' => __('Width Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 35,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'arrows_size',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 22,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'arrows_position',
+            $this->style,
+            [
+                'label' => __('Align Arrows', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 220,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 400,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => -50,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => -50,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . '' => 'right: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'left: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
+
+        $this->add_control(
+            'arrows_color_normal',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'arrows_bg_color_normal',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#44bbed',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'arrows_border_normal',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => '',
+                ]
+            ]
+        );
+        $this->add_group_control(
+            'arrows_boxsha_normal',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => '',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
+        $this->add_control(
+            'arrows_color_hover',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover .oxi-icons' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'arrows_bg_color_hover',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'arrows_border_hover',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => '',
+                ]
+            ]
+        );
+        $this->add_group_control(
+            'arrows_boxsha_hover',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => '',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->add_responsive_control(
+            'arrows_border_radius_normal',
+            $this->style,
+            [
+                'label' => __('Border radius', SHORTCODE_ADDOONS),
+                'separator' => TRUE,
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '50',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'arrows_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
             ]
         );
         $this->end_controls_section();
@@ -1383,12 +1834,12 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_group_control(
-            'sa_display_post_button_typo',
+            'sa_post_carousel_button_typo',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => ' ',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => ' ',
                 ],
             ]
         );
@@ -1405,19 +1856,19 @@ class Style_1 extends AdminStyle
         );
         $this->start_controls_tab();
         $this->add_control(
-            'sa_display_post_button_color',
+            'sa_post_carousel_button_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'color:{{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'sa_display_post_button_bg_color',
+            'sa_post_carousel_button_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -1425,22 +1876,22 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(62, 156, 214, 1)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => 'background :{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'background :{{VALUE}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_display_post_button_border',
+            'sa_post_carousel_button_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => ''
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_button_radius',
+            'sa_post_carousel_button_radius',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -1467,37 +1918,37 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_display_post_button_sadow',
+            'sa_post_carousel_button_sadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => ''
                 ],
             ]
         );
         $this->end_controls_tab();
         $this->start_controls_tab();
         $this->add_control(
-            'sa_display_post_button_hover_color',
+            'sa_post_carousel_button_hover_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => 'color:{{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'sa_display_post_button_hover_bg_color',
+            'sa_post_carousel_button_hover_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -1505,22 +1956,22 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(67, 143, 191, 1)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link:hover' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => 'background:{{VALUE}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_display_post_button_hover_border',
+            'sa_post_carousel_button_hover_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link:hover' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => ''
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_display_post_button_hover_radius',
+            'sa_post_carousel_button_hover_radius',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -1547,23 +1998,268 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_display_post_button_hover_shadow',
+            'sa_post_carousel_button_hover_shadow',
             $this->style,
             [
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__main-wrapper-style-1 .oxi-addons__btn-link:hover' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => ''
                 ],
             ]
         );
         $this->end_controls_tab();
         $this->end_controls_tabs();
+        
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Dots', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+                'condition'     => [
+                    'sa_post_carousel_dots' => 'yes'
+                ],
+            ]
+        );
+        $this->add_control(
+            'dots_position',
+            $this->style,
+            [
+                'label' => __('Position', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'loader' => TRUE,
+                'options' => [
+                    'inside' => __('Inside', SHORTCODE_ADDOONS),
+                    'outside' => __('Outside', SHORTCODE_ADDOONS),
+                ],
+                'default' => 'outside',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2' => '',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'dots_size',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '10',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'dots_spacing',
+            $this->style,
+            [
+                'label' => __('Spacing', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '3',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 30,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 5,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'margin-left: {{SIZE}}{{UNIT}}; margin-right: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                    'active' => esc_html__('Active', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+            'dots_bg_color_normal',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => 'rgb(119, 119, 119)',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'dots_border_normal',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => '',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
+        $this->add_control(
+            'dots_bg_color_hover',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#44bbed',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'dots_border_hover',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => '',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'dots_bg_color_active',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#44bbed',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet-active' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'dots_border_active',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet-active' => '',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+
+        $this->add_responsive_control(
+            'dots_border_radius_normal',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'dots_margin',
+            $this->style,
+            [
+                'label' => __('margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_section();
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
