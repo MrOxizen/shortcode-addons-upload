@@ -127,7 +127,7 @@ class Style_1 extends Templates {
 //                            echo '</pre>';
 //                            .oxi-testimonial-content .oxi-testimonial-user
                             ?>
-                            <div class="oxi-testimonial-item  clearfix swiper-slide <?php echo $style['sa_testi_silder_set_line_position']; ?>">
+                            <div class="oxi-testimonial-item  clearfix swiper-slide <?php echo $style['sa_testi_silder_set_line_position']; ?> <?php echo ' oxi_addons_testi_slider_style_' . $key; ?>">
                                 <?php $this->_render_user_avatar($item); ?>
                                 <div class="oxi-testimonial-content <?php echo $item['sa_testi_silder_profile_rating']; ?>" style="width: 100%;">
                                     <?php //$this->_render_quote();      ?>

@@ -75,17 +75,26 @@ class Style_3 extends AdminStyle {
                     'type' => Controls::TEXT,
                     'default' => 'John Mandis',
                     'placeholder' => 'John Mandis',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_{{KEY}} .oxi-testimonial-user' => '',
+                    ],
                 ],
                 'sa_testi_silder_company_name' => [
                     'label' => __('Company Name', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
                     'placeholder' => 'Company Name',
                     'default' => 'Oxilab',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_{{KEY}} .oxi-testimonial-user-company' => '',
+                    ],
                 ],
                 'sa_testi_silder_profile_description' => [
                     'label' => esc_html__('Short Details', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXTAREA,
                     'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons_testi_slider_style_{{KEY}} .oxi-testimonial-text' => '',
+                    ],
                 ],
                 'sa_testi_silder_rating_on_off' => [
                     'label' => __('Display Rating?', SHORTCODE_ADDOONS),

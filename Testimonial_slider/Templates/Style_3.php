@@ -107,8 +107,8 @@ class Style_3 extends Templates {
         </ul>
         <?php
         echo ob_get_clean();
-     
     }
+
     public function default_render($style, $child, $admin) {
         $rtl = (array_key_exists('sa_testi_silder_direction', $style) && $style['sa_testi_silder_direction'] == 'right') ? 'dir="rtl"' : '';
         ?>
@@ -132,7 +132,7 @@ class Style_3 extends Templates {
                             ?>
 
 
-                            <div class="oxi-testimonial-item  clearfix swiper-slide ">
+                            <div class="oxi-testimonial-item  clearfix swiper-slide  <?php echo ' oxi_addons_testi_slider_style_' . $key; ?>">
 
                                 <?php $this->_render_user_avatar($item); ?>
                                 <div class="oxi-testimonial-content <?php echo $style['sa_testi_silder_set_line_position']; ?> <?php echo $item['sa_testi_silder_profile_rating']; ?>" >
