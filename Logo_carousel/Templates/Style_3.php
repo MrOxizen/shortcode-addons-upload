@@ -107,7 +107,7 @@ class Style_3 extends Templates
         $rtl = (array_key_exists('sa_addons_logo_carousel_direction', $style) && $style['sa_addons_logo_carousel_direction'] == 'right') ? 'dir="rtl"' : '';
         echo '<div class="oxi_addons_logo_carousel_wrapper">
                 <div class="oxi_addons__logo_carousel_style_3">
-                <div class="swiper-container ' . $style['sa_logo_carousel_body_switcher'] . '" ' . $rtl . '>
+                <div class="swiper-container oxi_addons__logo_carousel_style_' . $this->oxiid . ' ' . $style['sa_logo_carousel_body_switcher'] . '" ' . $rtl . '>
                     <div class="swiper-wrapper">';
         $repeater = (array_key_exists('sa_logo_carousel_reapeter', $style) && is_array($style['sa_logo_carousel_reapeter'])) ? $style['sa_logo_carousel_reapeter'] : [];
         foreach ($repeater as $key => $value) {
@@ -117,7 +117,7 @@ class Style_3 extends Templates
             if (array_key_exists('sa_logo_carousel_title_link-url', $value) && $value['sa_logo_carousel_title_link-url'] != '') {
                 $image = '<a ' . $this->url_render('sa_logo_carousel_title_link', $value) . ' ><img class="oxi_addons__image ' . $style['sa_logo_carousel_grayscale_switter'] . ' ' . $style['sa_logo_carousel_grayscale_switter_hover'] . '" src="' . $this->media_render('sa_logo_carousel_image', $value) . '" alt="slider image"/></a>';
             } else {
-                $image = '<img class="oxi_addons__image ' . $style['sa_logo_carousel_image_switcher'] . ' ' . $style['sa_logo_carousel_grayscale_switter'] . ' ' . $style['sa_logo_carousel_grayscale_switter_hover'] . '" src="' . $this->media_render('sa_logo_carousel_image', $value) . '" alt="slider image"/>';
+                $image = '<img class="oxi_addons__image  ' . $style['sa_logo_carousel_image_switcher'] . ' ' . $style['sa_logo_carousel_grayscale_switter'] . ' ' . $style['sa_logo_carousel_grayscale_switter_hover'] . '" src="' . $this->media_render('sa_logo_carousel_image', $value) . '" alt="slider image"/>';
             }
             if ((array_key_exists('sa_logo_carousel_title_show', $value) && $value['sa_logo_carousel_title_show'] == 'yes')) {
                 if (array_key_exists('sa_logo_carousel_title', $value) && $value['sa_logo_carousel_title'] != '') {
