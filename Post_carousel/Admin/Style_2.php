@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_1 extends AdminStyle
+class Style_2 extends AdminStyle
 {
 
     use \SHORTCODE_ADDONS_UPLOAD\Post_carousel\Files\Post_Query;
@@ -359,7 +359,79 @@ class Style_1 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
-        
+        $this->add_control(
+            'sa_post_carousel_image_switcher',
+            $this->style,
+            [
+                'label' => __('Custom Width Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'post_carousel_height_width',
+                'loader' => true,
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'post_carousel_height_width', 
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_post_carousel_image_width',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_post_carousel_image_switcher' => 'post_carousel_height_width', 
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '700',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 50,
+                        'max' => 250,
+                        'step' => 1,
+                    ],
+                    'px' => [
+                        'min' => 100,
+                        'max' => 1500,
+                        'step' => 10,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .post_carousel_height_width' => 'max-width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_post_carousel_height',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 1,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .post_carousel_height_width' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_post_carousel_image_switcher' => 'post_carousel_height_width', 
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_post_carousel_visible_items',
             $this->style,
@@ -581,7 +653,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__wrapper' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => '',
                 ],
             ]
         );
@@ -591,7 +663,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__wrapper' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => ''
                 ],
             ]
         );
@@ -623,7 +695,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -655,7 +727,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__article' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__article' => 'padding : {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -688,7 +760,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -698,7 +770,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__wrapper' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__wrapper' => ''
                 ],
             ]
         );
@@ -741,7 +813,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Thumbnail Height', SHORTCODE_ADDOONS),
                 'type' => Controls::NUMBER,
-                'default' => 78,
+                'default' => 55,
                 'min' => 0,
                 'max' => 100,
                 'loader' => TRUE,
@@ -777,7 +849,7 @@ class Style_1 extends AdminStyle
                 'default' => 22,
                 'min' => 0,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__overlay .oxi-icons' => 'font-size: {{VALUE}}px;',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__overlay .oxi-icons' => 'font-size: {{VALUE}}px;',
                 ],
             ]
         );
@@ -789,7 +861,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-1 .oxi-addons__overlay .oxi-icons' => 'color : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-2 .oxi-addons__overlay .oxi-icons' => 'color : {{VALUE}}; '
                 ],
             ]
         );
@@ -802,7 +874,7 @@ class Style_1 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(59, 59, 59, 0.7)',
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-1 .oxi-addons__overlay' => 'background : {{VALUE}}; '
+                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-2 .oxi-addons__overlay' => 'background : {{VALUE}}; '
                 ],
             ]
         );
@@ -865,7 +937,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#252b25',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__title' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__title' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -877,7 +949,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__title' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__title' => '',
                 ],
             ]
         );
@@ -909,7 +981,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -933,7 +1005,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#252b25',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__details' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__details' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -945,7 +1017,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__details ' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__details ' => '',
                 ],
             ]
         );
@@ -977,7 +1049,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__details' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -1009,7 +1081,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-name .oxi-name' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name .oxi-name' => '',
                 ],
             ]
         );
@@ -1031,7 +1103,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#2ba5ba',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-name > .oxi-name' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name > .oxi-name' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -1045,7 +1117,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#1cbfa4',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-name:hover > .oxi-name' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name:hover > .oxi-name' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -1080,7 +1152,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-name ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-name ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -1094,7 +1166,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#252b25',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-date > .oxi-time' => 'color:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-date > .oxi-time' => 'color:{{VALUE}};'
                 ],
             ]
         );
@@ -1106,7 +1178,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-date > .oxi-time ' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-date > .oxi-time ' => '',
                 ],
             ]
         );
@@ -1138,7 +1210,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-date > .oxi-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-date > .oxi-time' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -1207,8 +1279,8 @@ class Style_1 extends AdminStyle
                     ]
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-left > img' => 'width: {{SIZE}}{{UNIT}}; ',
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-left > .oxi-addons__avater' => 'width: {{SIZE}}{{UNIT}}; '
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > img' => 'width: {{SIZE}}{{UNIT}}; ',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > .oxi-addons__avater' => 'width: {{SIZE}}{{UNIT}}; '
                 ],
             ]
         );
@@ -1241,8 +1313,8 @@ class Style_1 extends AdminStyle
                     ]
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-left > img' => 'height: {{SIZE}}{{UNIT}}; ',
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-left > .oxi-addons__avater' => 'height: {{SIZE}}{{UNIT}}; '
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > img' => 'height: {{SIZE}}{{UNIT}}; ',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-left > .oxi-addons__avater' => 'height: {{SIZE}}{{UNIT}}; '
                 ],
             ]
         );
@@ -1286,7 +1358,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__meta-info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__meta-info' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -1363,7 +1435,7 @@ class Style_1 extends AdminStyle
                 'default' => 'Read More..',
                 'placeholder' => 'Button Text..',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => '',
                 ],
             ]
         );
@@ -1416,7 +1488,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -1448,7 +1520,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}}  .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
@@ -1511,8 +1583,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . '' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'line-height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -1544,7 +1616,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -1556,7 +1628,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::SLIDER,
                 'default' => [
                     'unit' => 'px',
-                    'size' => 20,
+                    'size' => 220,
                 ],
                 'range' => [
                     'px' => [
@@ -1576,8 +1648,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . '' => 'right: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . '' => 'left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . '' => 'right: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'left: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -1600,7 +1672,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ' .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ' .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1614,7 +1686,7 @@ class Style_1 extends AdminStyle
                 'default' => '#44bbed',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . '' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1624,7 +1696,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . '' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => '',
                 ]
             ]
         );
@@ -1634,7 +1706,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . '' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => '',
                 ]
             ]
         );
@@ -1649,7 +1721,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ':hover .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . ':hover .oxi-icons' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover .oxi-icons, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover .oxi-icons' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1661,7 +1733,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1671,7 +1743,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => '',
                 ]
             ]
         );
@@ -1681,7 +1753,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ':hover, {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . ':hover' => '',
                 ]
             ]
         );
@@ -1716,7 +1788,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1748,7 +1820,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_prev_' . $this->oxiid . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_next_' . $this->oxiid . ', {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_prev_' . $this->oxiid . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1768,7 +1840,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => ' ',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => ' ',
                 ],
             ]
         );
@@ -1792,7 +1864,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1805,7 +1877,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(62, 156, 214, 1)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => 'background :{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'background :{{VALUE}};'
                 ],
             ]
         );
@@ -1815,7 +1887,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => ''
                 ],
             ]
         );
@@ -1847,7 +1919,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1858,7 +1930,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link' => ''
                 ],
             ]
         );
@@ -1872,7 +1944,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link:hover' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => 'color:{{VALUE}};',
                 ],
             ]
         );
@@ -1885,7 +1957,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(67, 143, 191, 1)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link:hover' => 'background:{{VALUE}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => 'background:{{VALUE}};'
                 ],
             ]
         );
@@ -1895,7 +1967,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link:hover' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => ''
                 ],
             ]
         );
@@ -1927,7 +1999,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -1938,7 +2010,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Box Shadow', SHORTCODE_ADDOONS),
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .oxi-addons__btn-link:hover' => ''
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .oxi-addons__btn-link:hover' => ''
                 ],
             ]
         );
@@ -1968,7 +2040,7 @@ class Style_1 extends AdminStyle
                 ],
                 'default' => 'outside',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2' => '',
                 ],
             ]
         );
@@ -2000,7 +2072,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -2032,7 +2104,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'margin-left: {{SIZE}}{{UNIT}}; margin-right: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'margin-left: {{SIZE}}{{UNIT}}; margin-right: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -2056,7 +2128,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgb(119, 119, 119)',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -2066,7 +2138,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => '',
                 ]
             ]
         );
@@ -2082,7 +2154,7 @@ class Style_1 extends AdminStyle
                 'default' => '#44bbed',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -2092,7 +2164,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => '',
                 ]
             ]
         );
@@ -2107,7 +2179,7 @@ class Style_1 extends AdminStyle
                 'default' => '#44bbed',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet-active' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet-active' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -2117,7 +2189,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet-active' => '',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet-active' => '',
                 ]
             ]
         );
@@ -2152,7 +2224,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . ' .swiper-pagination-bullet' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -2184,7 +2256,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} {{WRAPPER}} .oxi-addons__post-carousel-style-1 .sa_post_carousel_pagination_' . $this->oxiid . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} {{WRAPPER}} .oxi-addons__post-carousel-style-2 .sa_post_carousel_pagination_' . $this->oxiid . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
