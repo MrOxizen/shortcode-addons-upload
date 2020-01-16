@@ -602,7 +602,7 @@ class Style_2 extends AdminStyle
                 'label' => __('Auto Height', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'loader' => true,
-                'default' => 'false',
+                'default' => 'true',
                 'options' => [
                     'true' => [
                         'title' => __('True', SHORTCODE_ADDOONS),
