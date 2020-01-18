@@ -25,8 +25,9 @@ class Style_1 extends AdminStyle
             [
                 'options' => [
                     'general-settings' => esc_html__('General Settings', SHORTCODE_ADDOONS),
-                    'form-style' => esc_html__('Form Style', SHORTCODE_ADDOONS), 
-                ]
+                    'form-style' => esc_html__('Form Settings', SHORTCODE_ADDOONS),
+                    'title-description' => esc_html__('Title & Description', SHORTCODE_ADDOONS),
+                ],
             ]
         );
         $this->start_section_tabs(
@@ -37,14 +38,14 @@ class Style_1 extends AdminStyle
             ]
         );
 
-        $this->start_section_devider(); 
+        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
         );
-       
+
         $this->add_group_control(
             'sa_addons_caldera_form_main_background',
             $this->style,
@@ -174,30 +175,30 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-        $this->end_controls_section(); 
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->start_section_devider();
-        
+
         $this->start_controls_section(
             'shortcode-addons', [
                 'label' => esc_html__('Caldera Forms', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
-        );  
+        );
         $this->add_control(
             'sa_caldera_form_data',
             $this->style,
             [
                 'label' => __('Caldera Form', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT, 
-                'loader' => TRUE,
+                'type' => Controls::SELECT,
+                'loader' => true,
                 'options' => [
-                    'none' => __('None', SHORTCODE_ADDOONS), 
-                    'top' => __('Top', SHORTCODE_ADDOONS),  
-                    'right' => __('Right', SHORTCODE_ADDOONS),  
-                    'bottom' => __('Bottom', SHORTCODE_ADDOONS),  
-                    'left' => __('Left', SHORTCODE_ADDOONS),  
-                ],  
+                    'none' => __('None', SHORTCODE_ADDOONS),
+                    'top' => __('Top', SHORTCODE_ADDOONS),
+                    'right' => __('Right', SHORTCODE_ADDOONS),
+                    'bottom' => __('Bottom', SHORTCODE_ADDOONS),
+                    'left' => __('Left', SHORTCODE_ADDOONS),
+                ],
             ]
         );
 
@@ -211,7 +212,7 @@ class Style_1 extends AdminStyle
                 'loader' => true,
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes', 
+                'return_value' => 'yes',
             ]
         );
         $this->add_control(
@@ -223,10 +224,10 @@ class Style_1 extends AdminStyle
                 'default' => 'Lorem Ipsum is simply dummy text',
                 'placeholder' => 'Lorem Ipsum is simply dummy text',
                 'condition' => [
-                    'sa_caldera_form_title_description_switcher' => 'yes'
+                    'sa_caldera_form_title_description_switcher' => 'yes',
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => ''
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => '',
                 ],
             ]
         );
@@ -239,10 +240,10 @@ class Style_1 extends AdminStyle
                 'default' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
                 'placeholder' => 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
                 'condition' => [
-                    'sa_caldera_form_title_description_switcher' => 'yes'
+                    'sa_caldera_form_title_description_switcher' => 'yes',
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__details' => ''
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__details' => '',
                 ],
             ]
         );
@@ -256,7 +257,7 @@ class Style_1 extends AdminStyle
                 'loader' => true,
                 'label_on' => __('show', SHORTCODE_ADDOONS),
                 'label_off' => __('hide', SHORTCODE_ADDOONS),
-                'return_value' => 'yes', 
+                'return_value' => 'yes',
             ]
         );
         $this->add_control(
@@ -269,7 +270,7 @@ class Style_1 extends AdminStyle
                 'loader' => true,
                 'label_on' => __('show', SHORTCODE_ADDOONS),
                 'label_off' => __('hide', SHORTCODE_ADDOONS),
-                'return_value' => 'yes', 
+                'return_value' => 'yes',
             ]
         );
         $this->add_control(
@@ -282,11 +283,11 @@ class Style_1 extends AdminStyle
                 'loader' => true,
                 'label_on' => __('show', SHORTCODE_ADDOONS),
                 'label_off' => __('hide', SHORTCODE_ADDOONS),
-                'return_value' => 'yes', 
+                'return_value' => 'yes',
             ]
         );
-         
-        $this->end_controls_section();  
+
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
         $this->start_section_tabs(
@@ -297,26 +298,1386 @@ class Style_1 extends AdminStyle
             ]
         );
 
-        $this->start_section_devider(); 
+        $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons', [
-                'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Labels Settings', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
         );
-        
-        $this->end_controls_section(); 
-        $this->end_section_devider();
-        $this->start_section_devider();
-        
+        $this->add_group_control(
+            'sa_caldera_form_labels_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_labels_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#666',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons', [
-                'label' => esc_html__('Caldera Forms', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Input & Textarea Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_inputs_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => '',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_inputs_text_position',
+            $this->style,
+            [
+                'label' => __('Alignment', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'left',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__button_main' => 'text-align: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'focus' => esc_html__('Focus', SHORTCODE_ADDOONS),
+                ],
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_caldera_form_inputs_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_inputs_color_bg',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#28a745',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'background-color:{{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_caldera_form_inputs_color_bg_hover',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#28a745',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1:hover' => 'background-color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->add_control(
+            'sa_caldera_form_inputs_separtor',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => true,
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'input' => esc_html__('Input', SHORTCODE_ADDOONS),
+                    'textarea' => esc_html__('Textarea', SHORTCODE_ADDOONS),
+                ],
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+            'sa_caldera_form_input_width',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_input_height',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+            'sa_caldera_form_textarea_width',
+            $this->style,
+            [
+                'label' => __('Textarea Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__image' => 'width: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_textarea_height',
+            $this->style,
+            [
+                'label' => __('Textarea Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__image' => 'height: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->add_control(
+            'sa_caldera_form_inputs_separtor',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => true,
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_input_text_indent',
+            $this->style,
+            [
+                'label' => __('Text Indent', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 70,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 30,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__image' => 'text-indent: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_input_text_spacing',
+            $this->style,
+            [
+                'label' => __('Spacing', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__image' => 'margin-bottom: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_inputs_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .form' => '',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_inputs_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .form-group' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_inputs_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_wrapper' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_inputs_shadow',
+            $this->style,
+            [
+                'label' => __('Box Shadow', SHORTCODE_ADDOONS),
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .form-group' => '',
+                ],
+
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Placeholder', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+
+        $this->add_control(
+            'sa_caldera_form_placeholder_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Success Message ', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_success_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_success_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_success_color_bg',
+            $this->style,
+            [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#28a745',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'background-color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_success_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => '',
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Errors', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_errors_heading', $this->style, [
+                'label' => __('Error Messages', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_erorr_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'sa_caldera_form_errors_heading', $this->style, [
+                'label' => __('Error Fields', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_errors_label_color',
+            $this->style,
+            [
+                'label' => __('Label Color ', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_error_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => '',
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->start_section_devider();
+
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Field Description', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
+        );
+
+        $this->add_group_control(
+            'sa_caldera_form_description_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_description_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_description_spacing',
+            $this->style,
+            [
+                'label' => __('Spacing', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 500,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__image' => 'margin-bottom: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Radio & Checkbox', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_radio_checkbox_swicher',
+            $this->style,
+            [
+                'label' => __('Custom Styles', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'default' => 'yes',
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_radio_checkbox_size',
+            $this->style,
+            [
+                'label' => __('Size', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 5,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                    'rem' => [
+                        'min' => 1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Radio', SHORTCODE_ADDOONS),
+                    'checked' => esc_html__('Checked', SHORTCODE_ADDOONS),
+                ],
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_caldera_form_radio_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_radio_border_width',
+            $this->style,
+            [
+                'label' => __('Border Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 30,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'border-width: {{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_radio_border_color',
+            $this->style,
+            [
+                'label' => __('Border Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'border-color:{{VALUE}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_radio_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .form-group' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_caldera_form_checkbox_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'color:{{VALUE}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_checkbox_border_width',
+            $this->style,
+            [
+                'label' => __('Border Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 30,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'border-width: {{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_checkbox_border_color',
+            $this->style,
+            [
+                'label' => __('Border Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#000',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'border-color:{{VALUE}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_checkbox_border_radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .form-group' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_radio_checkbox_swicher' => 'yes',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Button Settings', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_button_position',
+            $this->style,
+            [
+                'label' => __('Alignment', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'left',
+                'options' => [
+                    'left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'center' => [
+                        'title' => __('Center', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ],
+                    'right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 ' => 'text-align: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_button_typo',
+            $this->style,
+            [
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_button_width_true_false',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'separator' => true,
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_TEXT,
+                'default' => 'full-width',
+                'options' => [
+                    'full-width' => [
+                        'title' => __('Full width', SHORTCODE_ADDOONS),
+                    ],
+                    'custom' => [
+                        'title' => __('Custom', SHORTCODE_ADDOONS),
+                    ],
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_button_width',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 300,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 800,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 0.1,
+                    ],
+                    'rem' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'width:{{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'sa_caldera_form_button_width_true_false' => 'custom',
+                ],
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                ],
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_caldera_form_button_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_button_bg_color',
+            $this->style,
+            [
+                'label' => __('Background', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => 'rgba(95, 61, 153, 1)',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'background:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_button_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => '',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_caldera_form_button_border-radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_caldera_form_button_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'color:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_button_bg_color',
+            $this->style,
+            [
+                'label' => __('Background', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'oparetor' => 'RGB',
+                'default' => 'rgba(95, 61, 153, 1)',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'background:{{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_button_border',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => '',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'sa_caldera_form_button_border-radius',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->add_control(
+            'sa_caldera_form_inputs_separator',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'type' => Controls::SEPARATOR,
+                Controls::SEPARATOR => true,
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_button_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_caldera_form_button_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => -300,
+                        'max' => 300,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            'sa_caldera_form_button_box_shadow',
+            $this->style,
+            [
+                'type' => Controls::BOXSHADOW,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1' => '',
+                ],
+            ]
+        );
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->end_section_tabs();
+        $this->start_section_tabs(
+            'shortcode-addons-start-tabs', [
+                'condition' => [
+                    'shortcode-addons-start-tabs' => 'title-description',
+                ],
+            ]
+        );
+
+        $this->start_section_devider();
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Title Settings', SHORTCODE_ADDOONS),
+                'showing' => true,
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_title_tag',
+            $this->style,
+            [
+                'label' => __('Tag', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'default' => 'h3',
+                'loader' => TRUE,
+                'options' => [
+                    'h1' => __('H1', SHORTCODE_ADDOONS),
+                    'h2' => __('H2', SHORTCODE_ADDOONS),
+                    'h3' => __('H3', SHORTCODE_ADDOONS),
+                    'h4' => __('H4', SHORTCODE_ADDOONS),
+                    'h5' => __('H5', SHORTCODE_ADDOONS),
+                    'h6' => __('H6', SHORTCODE_ADDOONS),
+                    'div' => __('DIV', SHORTCODE_ADDOONS),
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_title_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_title_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => 'color:{{VALUE}};'
+                ],
+            ]
         );  
-        
-        $this->end_controls_section();  
+        $this->add_responsive_control(
+            'sa_caldera_form_title_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+        $this->end_section_devider();
+        $this->start_section_devider(); 
+        $this->start_controls_section(
+            'shortcode-addons', [
+                'label' => esc_html__('Description', SHORTCODE_ADDOONS),
+                'showing' => true,
+            ]
+        );
+        $this->add_group_control(
+            'sa_caldera_form_description_typo',
+            $this->style,
+            [
+                'label' => __('Typography', SHORTCODE_ADDOONS),
+                'type' => Controls::TYPOGRAPHY,
+                'include' => Controls::ALIGNNORMAL,
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => ''
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_caldera_form_description_color',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#fff',
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => 'color:{{VALUE}};'
+                ],
+            ]
+        );  
+        $this->add_responsive_control(
+            'sa_caldera_form_description_padding',
+            $this->style,
+            [
+                'label' => __('Padding', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__caldera_form_style_1 .oxi_addons__heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ],
+            ]
+        );
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }
