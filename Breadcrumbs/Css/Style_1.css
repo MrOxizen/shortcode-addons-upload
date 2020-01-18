@@ -1,0 +1,50 @@
+.sa_breadcrumbs_container_style_1 {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.sa_breadcrumbs_container_style_1 li {
+    margin: 0;
+    padding: 0;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs_main {
+    width: 100%;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs {
+    list-style: none;
+    margin: 0;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs>li,
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs>li>a {
+    display: inline-block;
+    zoom: 1;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs {
+    margin-left: -12px;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs>li {
+    margin-left: 12px;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs .sa_breadcrumbs__separator {
+    margin-top: 2px;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs__crumb--home,
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs__separator__text {
+    cursor: text;
+}
+
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs__item,
+.sa_breadcrumbs_container_style_1 .sa_breadcrumbs__separator {
+    cursor: default;
+}
