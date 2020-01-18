@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Card_slider\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Post_carousel\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -15,12 +15,11 @@ if (!defined('ABSPATH')) {
 
 use SHORTCODE_ADDONS\Core\Templates;
 
-class Style_1 extends Templates
+class Style_5 extends Templates
 {
 
     public function public_css()
     {
-
         wp_enqueue_style('swiper.min.css', SA_ADDONS_UPLOAD_URL . '/Post_carousel/Files/swiper.min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function public_jquery()
@@ -30,7 +29,31 @@ class Style_1 extends Templates
     }
 
 
-    
+    function inline_public_css()
+    {
+        $style = $this->style;
+        $hoverData = $css_inline = $final = '';
+        if ($style['sa_post_carousel_meta_position_effect'] == 'left') {
+            $css_inline = 'transform: translateX(-100%)';
+            $hoverData = 'transform: translateX(0)';
+        } elseif ($style['sa_post_carousel_meta_position_effect'] == 'top') {
+            $css_inline = 'transform: translateY(-100%)';
+            $hoverData = 'transform: translateY(0)';
+        } elseif ($style['sa_post_carousel_meta_position_effect'] == 'right') {
+            $css_inline = 'transform: translateX(100%)';
+            $hoverData = 'transform: translateX(0)';
+        } elseif ($style['sa_post_carousel_meta_position_effect'] == 'bottom') {
+            $css_inline = 'transform: translateY(100%)';
+            $hoverData = 'transform: translateY(0)';
+        }
+        $final = ' .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-style-5 .oxi-addons__overlay{
+                        ' . $css_inline . '
+                    }
+                    .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-style-5 .oxi-addons__main-img:hover .oxi-addons__overlay{
+                        ' . $hoverData . '
+                    }';
+        return $final;
+    }
     public function post_render()
     {
         $style = $this->style;
@@ -85,11 +108,24 @@ class Style_1 extends Templates
 
                 if ($style['sa_s_image_layout_show_image'] == 'show') {
                     if ($image_url[0] != '') {
+                        if ($style['sa_post_carousel_img_eq_height'] == 'true') {
+                            $ssstyle .= '
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    padding-bottom:' . $style['sa_post_carousel_thumbnail_height'] . '%;';
+                        }
                         $img = ' <a class="oxi-addons__post-link" href="' . get_permalink($query->post->ID) . '"  target="' . $style['sa_s_image_layout_linke_open'] . '">
-                                    <div class="oxi-addons__main-img oxi-addons__main-img_' . $query->post->ID . '">
-                                        <img class="oxi-image" src="' . $image_url[0] . '">
-                                     </div>
-                                 </a>
+                                <div class="oxi-addons__main-img oxi-addons__main-img_' . $query->post->ID . '" style=" background-image: url(' . $image_url[0] . '); ' . $ssstyle . '">';
+
+                        if ($style['sa_post_carousel_img_eq_height'] != 'true') {
+                            $img .= '<img class="oxi-image" src="' . $image_url[0] . '">';
+                        }
+                        $img .= ' <div class="oxi-addons__overlay">
+                                        ' . $this->font_awesome_render($style['sa_post_carousel_icon']) . '
+                                    </div>
+                                </div>
+                            </a>
                         ';
                     }
                 }
@@ -208,15 +244,15 @@ class Style_1 extends Templates
             ';
         }
         $rtl = (array_key_exists('sa_post_carousel_direction', $style) && $style['sa_post_carousel_direction'] == 'right') ? 'dir="rtl"' : '';
-        echo '<div class="oxi-addons__card-slider-style-1 swiper-container-wrap-dots-' . $style['dots_position'] . '">
+        echo '<div class="oxi-addons__post-carousel-style-5 swiper-container-wrap-dots-' . $style['dots_position'] . '">
                     <div class="swiper-container oxi-addons__post-carousel-wrap ' . $style['sa_post_carousel_image_switcher'] . '" ' . $rtl . '>
                         <div class="swiper-wrapper">
                             ' . $this->post_render() . '
-                        </div>';
-                    echo '</div>';
+                        </div>
+                    </div>';
         if (array_key_exists('sa_post_carousel_dots', $style) && $style['sa_post_carousel_dots'] == 'yes') :
-                            echo '<div class="swiper-pagination '.$style['dots_types'].' sa_post_carousel_pagination_' . $this->oxiid . '"></div>';
-                        endif;
+            echo '<div class="swiper-pagination sa_post_carousel_pagination_' . $this->oxiid . '"></div>';
+        endif;
         echo $arrow;
         echo '</div>
             ';
@@ -228,12 +264,6 @@ class Style_1 extends Templates
         $prev = '.sa_post_carousel_next_' . $this->oxiid . '';
         $next = '.sa_post_carousel_prev_' . $this->oxiid . '';
         $pagin = '.sa_post_carousel_pagination_' . $this->oxiid . '';
-        $items = $style["sa_post_carousel_visible_items-lap-size"] != '' ? $style["sa_post_carousel_visible_items-lap-size"] : 3;
-        $items_tablet = $style["sa_post_carousel_visible_items-tab-size"] != '' ? $style["sa_post_carousel_visible_items-tab-size"] : 2;
-        $items_mobile = $style["sa_post_carousel_visible_items-mob-size"] != '' ? $style["sa_post_carousel_visible_items-mob-size"] : 1;
-        $margin = $style["sa_post_carousel_items_gap-lap-size"] != '' ? $style["sa_post_carousel_items_gap-lap-size"] : 10;
-        $margin_tablet = $style["sa_post_carousel_items_gap-tab-size"] != '' ? $style["sa_post_carousel_items_gap-tab-size"] : 10;
-        $margin_mobile = $style["sa_post_carousel_items_gap-mob-size"] != '' ? $style["sa_post_carousel_items_gap-mob-size"] : 10;
         $speed = $style["sa_post_carousel_slider_speed-size"] != '' ? $style["sa_post_carousel_slider_speed-size"] : 400;
         $autoplay = (array_key_exists('sa_post_carousel_autoplay_switter', $style) && $style['sa_post_carousel_autoplay_switter'] == "yes") ? $style['sa_post_carousel_autoplay_speed-size'] : 999999;
         $pause_on_hover = $style["sa_post_carousel_pause_switter"];
@@ -241,15 +271,13 @@ class Style_1 extends Templates
         $grab_cursor = (array_key_exists('sa_post_carousel_grab_cursor', $style) && $style["sa_post_carousel_grab_cursor"] == "yes") ? "1" : "0";
         $auto_height = $style["sa_post_carousel_auto_height"];
         $js = '';
-        $js = 'var sa_post_carousel = $(".' . $this->WRAPPER . ' .oxi-addons__card-slider-style-1 .oxi-addons__post-carousel-wrap");
+        $js = 'var sa_post_carousel = $(".' . $this->WRAPPER . ' .oxi-addons__post-carousel-style-5 .oxi-addons__post-carousel-wrap");
             
             var saPostCarousel = new Swiper(sa_post_carousel, {
                 direction: "horizontal",
                 speed: ' . $speed . ',
-                effect: "fade",
+                effect: "flip",
                 centeredSlides: false,
-                slidesPerView: ' . $items . ',
-                spaceBetween: ' . $margin . ',
                 grabCursor: ' . $grab_cursor . ',
                 autoHeight: ' . $auto_height . ',
                 loop: ' . $loop . ',
