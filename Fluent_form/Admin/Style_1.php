@@ -1109,6 +1109,7 @@ class Style_1 extends AdminStyle {
                         'label_on' => __('Yes', SHORTCODE_ADDOONS),
                         'label_off' => __('No', SHORTCODE_ADDOONS),
                         'return_value' => 'yes',
+                        'loader' => 'true',
                     ]
             );
             $this->add_responsive_control(
@@ -1152,7 +1153,7 @@ class Style_1 extends AdminStyle {
                     'shortcode-addons-start-tabs',
                     [
                         'options' => [
-                            'normal' => esc_html__('Radio', SHORTCODE_ADDOONS),
+                            'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
                             'checked' => esc_html__('Checked', SHORTCODE_ADDOONS),
                         ],
                     ]
@@ -1167,7 +1168,7 @@ class Style_1 extends AdminStyle {
                         'default' => '#3d3d3d',
                         'selector' => [
                             '{{WRAPPER}} .oxi_addons__fluent_form_style_1 .oxi-custom-radio-checkbox input[type="checkbox"]' => 'color:{{VALUE}};',
-                            '{{WRAPPER}} .oxi_addons__fluent_form_style_1 .oxi-custom-radio-checkbox input[type="radio"]' => 'color:{{VALUE}};',
+                            '{{WRAPPER}} .oxi_addons__fluent_form_style_1 .oxi-custom-radio-checkbox input[type="radio"]' => 'background:{{VALUE}};',
                         ],
                         'condition' => [
                             'sa_fluent_form_radio_checkbox_swicher' => 'yes',
@@ -1228,7 +1229,7 @@ class Style_1 extends AdminStyle {
                         'default' => '#3d3d3d',
                         'selector' => [
                             '{{WRAPPER}} .oxi_addons__fluent_form_style_1  .oxi-custom-radio-checkbox input[type="checkbox"]:checked:before ' => 'color:{{VALUE}};',
-                            '{{WRAPPER}} .oxi_addons__fluent_form_style_1  .oxi-custom-radio-checkbox input[type="radio"]:checked:before' => 'color:{{VALUE}};',
+                            '{{WRAPPER}} .oxi_addons__fluent_form_style_1  .oxi-custom-radio-checkbox input[type="radio"]:checked:before' => 'background:{{VALUE}};',
                         ],
                         'condition' => [
                             'sa_fluent_form_radio_checkbox_swicher' => 'yes',
