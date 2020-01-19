@@ -41,7 +41,7 @@ class Style_1 extends Templates
                 wp_reset_query();
             } else {
 
-                _e('Post or page not found', SA_EL_ADDONS_TEXTDOMAIN);
+                _e('Post or page not found', SHORTCODE_ADDOONS);
             }
         } else {
             // Render using the original query

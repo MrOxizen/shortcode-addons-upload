@@ -417,13 +417,13 @@ class Style_1 extends AdminStyle
             'preview_stack',
             $this->style,
             [
-                'label' => __('Stack On', SA_EL_ADDONS_TEXTDOMAIN),
+                'label' => __('Stack On', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
                 'loader' => TRUE,
                 'default' => 'tablet',
                 'options' => [
-                    'tablet' => __('Tablet', SA_EL_ADDONS_TEXTDOMAIN),
-                    'mobile' => __('Mobile', SA_EL_ADDONS_TEXTDOMAIN),
+                    'tablet' => __('Tablet', SHORTCODE_ADDOONS),
+                    'mobile' => __('Mobile', SHORTCODE_ADDOONS),
                 ],
                 'condition' => [
                     'preview_position' => ['left', 'right'],
