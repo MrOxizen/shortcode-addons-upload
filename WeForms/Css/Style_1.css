@@ -1,0 +1,58 @@
+.oxi_weform_style1 .oxi_weform_main ul,
+.oxi_weform_style1 .oxi_weform_main li {
+    list-style-type: none !important;
+}
+
+.oxi_weform_style1 .oxi_weform_main input,
+.oxi_weform_style1 .oxi_weform_main textarea {
+    height: auto;
+    padding: 10px;
+}
+
+.oxi_weform_style1.sa_weform_align_right .oxi_weform_main {
+    margin: 0 0 0 auto;
+}
+
+.oxi_weform_style1.sa_weform_align_left .oxi_weform_main {
+    margin: 0 auto 0 0;
+}
+
+.oxi_weform_style1.sa_weform_align_center .oxi_weform_main{
+    margin: 0 auto;
+}
+
+
+
+
+
+.sa-el-contact-form-align-left .oxi_weform_style1 .oxi_weform_main,
+.sa-el-contact-form-btn-align-left .oxi_weform_style1 .oxi_weform_main ul.wpuf-form .wpuf-submit input[type="submit"] {
+    float: left;
+    width: auto;
+}
+
+.sa-el-contact-form-align-right .oxi_weform_style1 .oxi_weform_main,
+.sa-el-contact-form-btn-align-right .oxi_weform_style1 .oxi_weform_main ul.wpuf-form .wpuf-submit input[type="submit"] {
+    float: right;
+    width: auto;
+}
+
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="text"],
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="password"],
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="email"],
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="url"],
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="number"],
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields textarea {
+    max-width: 100%;
+}
+
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="text"]:focus,
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="password"]:focus,
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="email"]:focus,
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="url"]:focus,
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input[type="number"]:focus,
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields input:focus,
+.oxi_weform_style1 .oxi_weform_main ul.wpuf-form li .wpuf-fields textarea:focus {
+    outline: none !important;
+}
+
