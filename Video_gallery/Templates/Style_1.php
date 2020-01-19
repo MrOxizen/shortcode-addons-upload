@@ -84,12 +84,12 @@ class Style_1 extends Templates {
                                 <div class="rvs-item-text">
 
                                     <?php if (array_key_exists('sa_video_gellery_title_on_off', $style) && $style['sa_video_gellery_title_on_off'] == 'yes') : ?>
-                                        <h2 class="sa-vg-video-title"><?php echo esc_html($value['sa_video_gellery_title']); ?></h2>
+                                        <h2 class="sa-vg-video-title"><?php echo $this->text_render(esc_html($value['sa_video_gellery_title'])); ?></h2>
                                     <?php endif; ?>
 
                                     <?php if (array_key_exists('sa_video_gellery_description_on_off', $style) && $style['sa_video_gellery_description_on_off'] == 'yes') : ?>
 
-                                        <div class="sa-vg-video-desc"><?php echo wp_kses_post($value['sa_video_gellery_des']); ?></div>
+                                        <div class="sa-vg-video-desc"><?php echo $this->text_render(wp_kses_post($value['sa_video_gellery_des'])); ?></div>
                                     <?php endif; ?>
 
                                 </div>
@@ -131,7 +131,7 @@ class Style_1 extends Templates {
                             <span class="rvs-nav-item-thumb" style="background-image: url(<?php echo esc_url($video_thumbnail); ?>)"></span>
 
 
-                            <h4 class="rvs-nav-item-title" title="<?php echo esc_html($value['sa_video_gellery_title']); ?>"><?php echo esc_html($value['sa_video_gellery_title']); ?></h4>
+                            <h4 class="rvs-nav-item-title" title="<?php echo $this->text_render(esc_html($value['sa_video_gellery_title'])); ?>"><?php echo $this->text_render(esc_html($value['sa_video_gellery_title'])); ?></h4>
 
 
 

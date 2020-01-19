@@ -37,8 +37,8 @@ class Style_1 extends Templates {
                 <div class="oxi-single-post-item">
                     <div class="oxi-single-post-thumbnail-wrap oxi-position-relative">
                         <div class="oxi-single-post-thumbnail">
-                            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_html($single_post->post_title); ?>">
-                                <img src="<?php echo esc_url($image_src); ?>" alt="<?php echo esc_html($single_post->post_title); ?>">
+                            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo $this->text_render(esc_html($single_post->post_title)); ?>">
+                                <img src="<?php echo esc_url($image_src); ?>" alt="<?php echo $this->text_render(esc_html($single_post->post_title)); ?>">
                             </a>
                         </div>
                         <div class="oxi-overlay-primary oxi-position-cover"></div>
@@ -48,7 +48,7 @@ class Style_1 extends Templates {
                                     <?php
                                     $tags_list = get_the_tag_list('<span class="oxi-background-primary">', '</span> <span class="oxi-background-primary">', '</span>', $single_post->ID);
                                     if ($tags_list) :
-                                        echo wp_kses_post($tags_list);
+                                        echo $this->text_render(wp_kses_post($tags_list));
                                     endif;
                                     ?>
                                 </div>
@@ -57,10 +57,10 @@ class Style_1 extends Templates {
                             <?php if ($style['sa_single_post_post_title']) : ?>
 
                                 <?php if ($style['sa_single_post_post_link_title']) : ?>
-                                    <a href="<?php echo esc_url(get_permalink($single_post->ID)); ?>" class="oxi-single-post-link" title="<?php echo esc_html($single_post->post_title); ?>">
+                                    <a href="<?php echo esc_url(get_permalink($single_post->ID)); ?>" class="oxi-single-post-link" title="<?php echo $this->text_render(esc_html($single_post->post_title)); ?>">
                                     <?php endif; ?>									
 
-                                    <h2 class="oxi-single-post-title oxi-margin-small-top oxi-margin-remove-bottom"><?php echo esc_html($single_post->post_title); ?></h2>
+                                    <h2 class="oxi-single-post-title oxi-margin-small-top oxi-margin-remove-bottom"><?php echo $this->text_render(esc_html($single_post->post_title)); ?></h2>
 
                                     <?php if ($style['sa_single_post_post_link_title']) : ?>									
                                     </a>
@@ -71,17 +71,17 @@ class Style_1 extends Templates {
                             <?php if ($style['sa_single_post_post_category'] or $style['sa_single_post_post_date']) : ?>
                                 <div class="oxi-single-post-meta oxi-flex-center oxi-subnav oxi-flex-middle oxi-margin-small-top">
                                     <?php if ($style['sa_single_post_post_category']) : ?>
-                                        <?php echo '<span class="oxi-single-post-cate">' . get_the_category_list(', ', '', $single_post->ID) . '</span>'; ?>
+                                        <?php echo '<span class="oxi-single-post-cate">' . $this->text_render(get_the_category_list(', ', '', $single_post->ID)) . '</span>'; ?>
                                     <?php endif ?>
 
                                     <?php if ($style['sa_single_post_post_date']) : ?>
-                                        <?php echo '<span class="oxi-single-post-date">' . esc_attr(get_the_date('d F Y', $single_post->ID)) . '</span>'; ?>
+                                        <?php echo '<span class="oxi-single-post-date">' . $this->text_render(esc_attr(get_the_date('d F Y', $single_post->ID))) . '</span>'; ?>
                                     <?php endif ?>
                                 </div>
                             <?php endif ?>
 
                             <div class="oxi-single-post-excerpt">
-                                <?php echo $single_post->post_excerpt; ?>
+                                <?php echo $this->text_render($single_post->post_excerpt); ?>
                             </div>
 
 
