@@ -366,7 +366,7 @@ class Style_1 extends AdminStyle
                         'dashed' => __('Dashed', SHORTCODE_ADDOONS),
                         'groove' => __('Groove', SHORTCODE_ADDOONS),
                     ],
-                    'selectors' => [
+                    'selector' => [
                         'body .cc-window .cc-btn.cc-dismiss' => 'border-style: {{VALUE}} !important;',
                     ],
             ]
@@ -410,7 +410,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Border Color', SHORTCODE_ADDOONS),
                     'type' => Controls::COLOR,
                     'default' => '#ccc',
-                    'selectors' => [
+                    'selector' => [
                         'body .cc-window .cc-btn.cc-dismiss' => 'border-color: {{VALUE}} !important;',
                     ],
             ]
