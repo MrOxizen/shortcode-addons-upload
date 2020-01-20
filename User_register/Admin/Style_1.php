@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\User_login\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\User_register\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -80,58 +80,119 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'user_label',
+            'first_name_headding',
             $this->style,
             [
-                'label'     => esc_html__('Username Label', SHORTCODE_ADDOONS),
+                'label' => __('First Name', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+                'condition' => [
+                    'custom_labels' => 'yes',
+                ],
+            ]
+        );
+        $this->add_control(
+            'first_name_label',
+            $this->style,
+            [
+                'label'     => esc_html__('First Name Label', SHORTCODE_ADDOONS),
                 'type'      => Controls::TEXT,
-                'default'   => esc_html__('Username or Email', SHORTCODE_ADDOONS),
+                'default'   => esc_html__('First Name', SHORTCODE_ADDOONS),
                 'condition' => [
                     'show_labels'   => 'yes',
                     'custom_labels' => 'yes',
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_label_user' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_label_first' => '',
                 ],
             ]
         );
         $this->add_control(
-            'user_placeholder',
+            'first_name_placeholder',
             $this->style,
             [
-                'label'     => esc_html__('Username Placeholder', SHORTCODE_ADDOONS),
+                'label'     => esc_html__('First Name Placeholder', SHORTCODE_ADDOONS),
                 'type'      => Controls::TEXT,
-                'default'   => esc_html__('Username or Email', SHORTCODE_ADDOONS),
+                'default'   => esc_html__('John', SHORTCODE_ADDOONS),
                 'condition' => [
                     'show_labels'   => 'yes',
                     'custom_labels' => 'yes',
                 ],
             ]
         );
-
         $this->add_control(
-            'password_label',
+            'last_name_headding',
             $this->style,
             [
-                'label'     => esc_html__('Password Label', SHORTCODE_ADDOONS),
+                'label' => __('Last Name', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+                'condition' => [
+                    'custom_labels' => 'yes',
+                ],
+            ]
+        );
+        $this->add_control(
+            'last_name_label',
+            $this->style,
+            [
+                'label'     => esc_html__('Last Name Label', SHORTCODE_ADDOONS),
                 'type'      => Controls::TEXT,
-                'default'   => esc_html__('Password', SHORTCODE_ADDOONS),
+                'default'   => esc_html__('Last Name', SHORTCODE_ADDOONS),
                 'condition' => [
                     'show_labels'   => 'yes',
                     'custom_labels' => 'yes',
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_label_pass' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_label_last' => '',
                 ],
             ]
         );
         $this->add_control(
-            'password_placeholder',
+            'last_name_placeholder',
             $this->style,
             [
-                'label'     => esc_html__('Password Placeholder', SHORTCODE_ADDOONS),
+                'label'     => esc_html__('Last Name Placeholder', SHORTCODE_ADDOONS),
                 'type'      => Controls::TEXT,
-                'default'   => esc_html__('Password', SHORTCODE_ADDOONS),
+                'default'   => esc_html__('Doe', SHORTCODE_ADDOONS),
+                'condition' => [
+                    'show_labels'   => 'yes',
+                    'custom_labels' => 'yes',
+                ],
+            ]
+        );
+        $this->add_control(
+            'email_name_headding',
+            $this->style,
+            [
+                'label' => __('Email', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+                'condition' => [
+                    'custom_labels' => 'yes',
+                ],
+            ]
+        );
+        $this->add_control(
+            'email_label',
+            $this->style,
+            [
+                'label'     => esc_html__('Email Label', SHORTCODE_ADDOONS),
+                'type'      => Controls::TEXT,
+                'default'   => esc_html__('Email', SHORTCODE_ADDOONS),
+                'condition' => [
+                    'show_labels'   => 'yes',
+                    'custom_labels' => 'yes',
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_label_email' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'email_placeholder',
+            $this->style,
+            [
+                'label'     => esc_html__('Email Placeholder', SHORTCODE_ADDOONS),
+                'type'      => Controls::TEXT,
+                'default'   => esc_html__('example@email.com', SHORTCODE_ADDOONS),
                 'condition' => [
                     'show_labels'   => 'yes',
                     'custom_labels' => 'yes',
@@ -143,7 +204,7 @@ class Style_1 extends AdminStyle
             'submit_button_title',
             $this->style,
             [
-                'label'         => __('Submit Button', SHORTCODE_ADDOONS),
+                'label'  => __('Submit Button', SHORTCODE_ADDOONS),
                 'type' => Controls::HEADING,
                 'separator' => TRUE,
             ]
@@ -154,9 +215,9 @@ class Style_1 extends AdminStyle
             [
                 'label'     => esc_html__('Button Text', SHORTCODE_ADDOONS),
                 'type'      => Controls::TEXT,
-                'default'   => esc_html__('Log In', SHORTCODE_ADDOONS),
+                'default'   => esc_html__('Register', SHORTCODE_ADDOONS),
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button span' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button span' => '',
                 ],
             ]
         );
@@ -169,7 +230,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
-            'redirect_after_login',
+            'redirect_after_register',
             $this->style,
             [
                 'label'         => __('Redirect After Login', SHORTCODE_ADDOONS),
@@ -189,7 +250,7 @@ class Style_1 extends AdminStyle
                 'placeholder'   => 'http://your-link.com/',
                 'description'   => esc_html__('Note: Because of security reasons, you can ONLY use your current domain here.', SHORTCODE_ADDOONS),
                 'condition'     => [
-                    'redirect_after_login' => 'yes',
+                    'redirect_after_register' => 'yes',
                 ],
             ]
         );
@@ -206,27 +267,12 @@ class Style_1 extends AdminStyle
                 'return_value' => 'yes',
             ]
         );
-        if (get_option('users_can_register')) {
-            $this->add_control(
-                'show_register',
-                $this->style,
-                [
-                    'label'   => esc_html__('Register', SHORTCODE_ADDOONS),
-                    'type' => Controls::SWITCHER,
-                    'loader' => TRUE,
-                    'default' => 'yes',
-                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                    'label_off' => __('No', SHORTCODE_ADDOONS),
-                    'return_value' => 'yes',
-                ]
-            );
-        }
 
         $this->add_control(
-            'show_remember_me',
+            'show_login',
             $this->style,
             [
-                'label'         => __('Remember Me', SHORTCODE_ADDOONS),
+                'label'   => esc_html__('Login', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
                 'loader' => TRUE,
                 'default' => 'yes',
@@ -246,6 +292,34 @@ class Style_1 extends AdminStyle
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'show_additional_message',
+            $this->style,
+            [
+                'label'         => __('Additional Bottom Message', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'loader' => TRUE,
+                'default' => 'yes',
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
+            ]
+        );
+        $this->add_control(
+            'additional_message',
+            $this->style,
+            [
+                'label'     => esc_html__('Additional Message', SHORTCODE_ADDOONS),
+                'type'      => Controls::TEXTAREA,
+                'default'   => esc_html__('<b>Note:</b> Your password will be generated automatically and sent to your email address.', SHORTCODE_ADDOONS),
+                'condition'     => [
+                    'show_additional_message' => 'yes',
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_register_additional_message' => '',
+                ],
             ]
         );
         $this->end_controls_section();
@@ -285,7 +359,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_user_login_width',
+            'sa_user_register_width',
             $this->style,
             [
                 'label' => __('Max Width', SHORTCODE_ADDOONS),
@@ -312,43 +386,43 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         $this->add_group_control(
-            'sa_user_login_background',
+            'sa_user_register_background',
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_main' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_main' => '',
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_user_login_border',
+            'sa_user_register_border',
             $this->style,
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_main' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_main' => '',
                 ],
             ]
         );
         $this->add_group_control(
-            'sa_user_login_box_shadow',
+            'sa_user_register_box_shadow',
             $this->style,
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_main' => ''
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_main' => ''
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_user_login_b_r',
+            'sa_user_register_b_r',
             $this->style,
             [
                 'label' => __('Border Radius', SHORTCODE_ADDOONS),
@@ -375,12 +449,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_user_login_padding',
+            'sa_user_register_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -407,12 +481,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
         $this->add_responsive_control(
-            'sa_user_login_margin',
+            'sa_user_register_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -439,7 +513,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -491,7 +565,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field:not(:last-child)' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field:not(:last-child)' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -501,7 +575,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_password a' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_password a' => '',
                 ],
             ]
         );
@@ -513,8 +587,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_password a' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_password a:not(:last-child):after' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_password a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_password a:not(:last-child):after' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -526,7 +600,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_password a:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_password a:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -567,7 +641,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_label' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_label' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -579,7 +653,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_label' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_label' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -589,7 +663,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_label' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_label' => '',
                 ],
             ]
         );
@@ -607,7 +681,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input' => '',
                 ],
             ]
         );
@@ -630,7 +704,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -642,8 +716,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input::placeholder' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input::-moz-placeholder' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input::placeholder' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input::-moz-placeholder' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -655,8 +729,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input' => 'background-color: {{VALUE}} !important;',
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_checkbox' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_checkbox' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -666,7 +740,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input' => '',
                 ]
             ]
         );
@@ -676,7 +750,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input' => '',
                 ]
             ]
         );
@@ -690,7 +764,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input:focus' => 'background-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input:focus' => 'background-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -700,7 +774,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input:focus' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input:focus' => '',
                 ]
             ]
         );
@@ -710,7 +784,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input:focus' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input:focus' => '',
                 ]
             ]
         );
@@ -745,7 +819,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
             ]
         );
@@ -777,7 +851,39 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_field .sa_user_login_input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_field .sa_user_register_input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'field__margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_user_register_container_style_1  .sa_user_register_form_controls' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -815,7 +921,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button_content' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button_content' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -825,7 +931,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button' => '',
                 ],
             ]
         );
@@ -849,7 +955,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -861,7 +967,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -871,7 +977,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button' => '',
                 ],
             ]
         );
@@ -903,7 +1009,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -913,7 +1019,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button' => '',
                 ],
             ]
         );
@@ -928,7 +1034,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -940,7 +1046,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button:hover' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button:hover' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -950,7 +1056,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button:hover' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button:hover' => '',
                 ],
             ]
         );
@@ -982,7 +1088,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -992,7 +1098,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button:hover' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button:hover' => '',
                 ],
             ]
         );
@@ -1028,7 +1134,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1060,7 +1166,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_button_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_register_button_content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1068,266 +1174,35 @@ class Style_1 extends AdminStyle
         $this->start_controls_section(
             'shortcode-addons',
             [
-                'label' => esc_html__('Logout Style', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Additional Message', SHORTCODE_ADDOONS),
                 'showing' => FALSE,
             ]
         );
         $this->add_group_control(
-            'logout_typography',
+            'additonal_typography',
             $this->style,
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a' => '',
-                ],
-            ]
-        );
-        $this->start_controls_tabs(
-            'shortcode-addons-start-tabs',
-            [
-                'options' => [
-                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
-                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
-                ],
-                'separator' => TRUE,
-            ]
-        );
-        $this->start_controls_tab();
-
-        $this->add_control(
-            'logout_text_color',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '',
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'logout_text_color_bg',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'oparetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a' => 'background: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'logout_border',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a' => '',
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'logout_box_sha',
-            $this->style,
-            [
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a' => '',
-                ],
-            ]
-        );
-        $this->end_controls_tab();
-
-        $this->start_controls_tab();
-        $this->add_control(
-            'logout_text_color_h',
-            $this->style,
-            [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '',
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a:hover' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'logout_text_color_bg_h',
-            $this->style,
-            [
-                'label' => __('Background Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'oparetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a:hover' => 'background: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'logout_border_h',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a:hover' => '',
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'logout_box_sha_h',
-            $this->style,
-            [
-                'type' => Controls::BOXSHADOW,
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a:hover' => '',
-                ],
-            ]
-        );
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-        $this->add_responsive_control(
-            'logout_border_b_r',
-            $this->style,
-            [
-                'label' => __('Border Radius', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'separator' => TRUE,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'logout_padding',
-            $this->style,
-            [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_logout a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'logout__margin',
-            $this->style,
-            [
-                'label' => __('Margin', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login .sa_user_login_details_content li.sa_user_login_logout' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons',
-            [
-                'label' => esc_html__('Logged in Message Style', SHORTCODE_ADDOONS),
-                'showing' => FALSE,
-            ]
-        );
-        $this->add_group_control(
-            'logged_message_typography',
-            $this->style,
-            [
-                'type' => Controls::TYPOGRAPHY,
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_details_content>li:nth-child(n+2)' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_register_additional_message' => '',
                 ],
             ]
         );
 
         $this->add_control(
-            'logged_message_text_color',
+            'additonal_text_color',
             $this->style,
             [
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_details_content>li:nth-child(n+2)' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            'logged_message_border',
-            $this->style,
-            [
-                'type' => Controls::BORDER,
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_details_content>li:nth-child(n+2)' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_register_additional_message' => 'color: {{VALUE}};',
                 ],
             ]
         );
         $this->add_responsive_control(
-            'logged_message_padding',
+            'additonal_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -1354,42 +1229,11 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_details_content>li:nth-child(n+2)' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_register_additional_message' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        $this->add_responsive_control(
-            'logged_message__margin',
-            $this->style,
-            [
-                'label' => __('Margin', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_login_details_content>li:nth-child(n+2)' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
+
         $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
@@ -1404,7 +1248,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show' => '',
                 ],
             ]
         );
@@ -1427,7 +1271,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#155724',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_success' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_success' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1440,7 +1284,7 @@ class Style_1 extends AdminStyle
                 'default' => '#d4edda',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_success' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_success' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1450,11 +1294,11 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_success' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_success' => '',
                 ],
             ]
         );
-
+        
         $this->add_responsive_control(
             'success_padding',
             $this->style,
@@ -1483,7 +1327,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_success' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_success' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1498,7 +1342,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#721c24',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_error' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_error' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1511,7 +1355,7 @@ class Style_1 extends AdminStyle
                 'default' => '#f8d7da',
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_error' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_error' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1521,11 +1365,11 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_error' => '',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_error' => '',
                 ],
             ]
         );
-
+        
         $this->add_responsive_control(
             'error_padding',
             $this->style,
@@ -1554,7 +1398,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_user_login_container_style_1 .sa_user_message_show.sa_user_error' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_user_register_container_style_1 .sa_user_message_show.sa_user_error' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
