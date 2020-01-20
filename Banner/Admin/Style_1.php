@@ -220,49 +220,49 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-        $this->add_control(
-            'sa_banner_image_switcher',
-            $this->style,
-            [
-                'label' => __('Custom Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'default' => 'yes',
-                'loader' => TRUE,
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_banner_image_width',
-            $this->style,
-            [
-                'label' => __('Width', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'condition' => [
-                    'sa_banner_image_switcher' => 'yes'
-                ],
-                'default' => [
-                    'unit' => '%',
-                    'size' => 150,
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 50,
-                        'max' => 250,
-                        'step' => 1,
+            $this->add_control(
+                'sa_banner_image_switcher',
+                $this->style,
+                [
+                    'label' => __('Custom Width', SHORTCODE_ADDOONS),
+                    'type' => Controls::SWITCHER,
+                    'default' => 'yes',
+                    'loader' => TRUE,
+                    'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                    'label_off' => __('No', SHORTCODE_ADDOONS),
+                    'return_value' => 'yes',
+                ]
+            );
+            $this->add_responsive_control(
+                'sa_banner_image_width',
+                $this->style,
+                [
+                    'label' => __('Width', SHORTCODE_ADDOONS),
+                    'type' => Controls::SLIDER,
+                    'condition' => [
+                        'sa_banner_image_switcher' => 'yes'
                     ],
-                    'em' => [
-                        'min' => 10,
-                        'max' => 50,
-                        'step' => 0.1,
+                    'default' => [
+                        'unit' => '%',
+                        'size' => 150,
                     ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__image' => 'max-width: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
+                    'range' => [
+                        '%' => [
+                            'min' => 50,
+                            'max' => 250,
+                            'step' => 1,
+                        ],
+                        'em' => [
+                            'min' => 10,
+                            'max' => 50,
+                            'step' => 0.1,
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__image' => 'max-width: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
         $this->add_group_control(
             'sa_banner_front_image_animation',
             $this->style,
