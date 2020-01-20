@@ -64,6 +64,7 @@ class Style_1 extends Templates {
                 <?php echo $label_show; ?>
                 <?php echo $error_show; ?>
                 <?php echo $radioCheckbox; ?>
+                <?php echo $settings['sa_fluent_form_button_width_true_false']; ?>
 
                      ">
 
