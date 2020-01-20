@@ -1,0 +1,106 @@
+
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form{
+    padding: 25px;
+    background: #fff;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-title{
+    font-weight: 700;
+    padding : 10px 0;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-description{
+    
+    padding : 10px 0 30px 0;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide input::-webkit-input-placeholder,
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide textarea::-webkit-input-placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide input::-moz-placeholder,
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide textarea::-moz-placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide input:-ms-input-placeholder,
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide textarea:-ms-input-placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-wrapper.fluent-form-labels-hide label {
+    display: none !important;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-wrapper.error-message-hide .ff-el-is-error .text-danger {
+    display: none;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide input:-moz-placeholder,
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.placeholder-hide textarea:-moz-placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form-wrapper label.ff-el-form-check-label {
+    display: flex;
+    align-items: center;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form-wrapper label.ff-el-form-check-label input {
+    margin-right: 5px;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-full-width .ff-btn-submit {
+    width: 100%;
+    display: block;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-top-align-right{
+    margin: 0  0 0 auto;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-top-align-default,
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-top-align-left{
+    margin: 0 auto 0 0;
+}
+
+
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-top-align-center{
+    margin: 0 auto;
+}
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-wrapper.error-message-hide .ff-el-is-error .text-danger {
+    display: none;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-center .ff-el-group.ff-text-left .ff-btn-submit,
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-center .ff-el-group.ff-text-right .ff-btn-submit,
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-center .ff-el-group .ff-btn-submit {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-right .ff-el-group.ff-text-left .ff-btn-submit,
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-right .ff-el-group.ff-text-right .ff-btn-submit,
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-right .ff-el-group .ff-btn-submit {
+    float: right;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-left .ff-el-group.ff-text-left .ff-btn-submit,
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-left .ff-el-group.ff-text-right .ff-btn-submit,
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-form-button-left .ff-el-group .ff-btn-submit {
+    float: left;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-wrapper.fluent-form-labels-hide label {
+    display: none !important;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-section-break-content-left .ff-el-group.ff-el-section-break {
+    text-align: left;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-section-break-content-center .ff-el-group.ff-el-section-break {
+    text-align: center;
+}
+
+.oxi_addons__fluent_form_style_1 .oxi-fluentform-section-break-content-right .ff-el-group.ff-el-section-break {
+    text-align: right;
+}
