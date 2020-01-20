@@ -46,6 +46,10 @@
     width: 100%;
 }
 
+.sa_user_login_container_style_1 .sa_user_login_label {
+    display: inline-block;
+}
+
 .sa_user_login_container_style_1 .sa_user_login_password a:not(:last-child) {
     margin-right: 22px
 }

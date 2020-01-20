@@ -53,12 +53,12 @@ class Style_1 extends Templates
         if (array_key_exists('show_labels', $style) && $style['show_labels'] == 'yes') {
             if ($style['user_label'] != '') {
                 $label = '
-                    <label class="sa_user_login_label" for="user' . $id . '">' . $this->text_render($style['user_label']) . '</label>
+                    <label class="sa_user_login_label sa_user_login_label_user" for="user' . $id . '">' . $this->text_render($style['user_label']) . '</label>
             ';
             }
             if ($style['password_label'] != '') {
                 $pass_label = '
-                    <label class="sa_user_login_label" for="password' . $id . '">' . $this->text_render($style['password_label']) . '</label>
+                    <label class="sa_user_login_label sa_user_login_label_pass" for="password' . $id . '">' . $this->text_render($style['password_label']) . '</label>
                 ';;
             }
         }
