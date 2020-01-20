@@ -24,7 +24,7 @@ class Caldera_form extends Elements_Frontend {
         return array(
             'Style_1' => [
                 'url' => '',
-                'image' => 'https://www.shortcode-addons.com/wp-content/uploads/2020/01/Untitled.png'
+                'image' => 'https://www.shortcode-addons.com/wp-content/uploads/2020/01/Screenshot_2020-01-20-Elements-‹-roots-Blog-—-WordPress.png'
             ]);
     }
 
