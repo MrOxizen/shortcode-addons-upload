@@ -1,0 +1,105 @@
+.oxi_addons__caldera_form_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+}
+.oxi_addons__caldera_form_style_1{
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    background: #79a5f7;
+}
+.oxi_addons__caldera_form_style_1 .oxi_addons__heading{
+    width: 100%;
+    font-size: 22px;
+    font-family: "caros-bold";
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1;
+    text-align: left;
+    color: #ffffff;
+    padding: 15px 0px 10px 0px;
+    line-height: 1;
+}
+.oxi_addons__caldera_form_style_1 .oxi_addons__details{
+    width: 100%;
+    font-size: 16px;
+    font-family: "caros-bold";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+    color: #f0f0f0;
+    padding: 0px 0px 15px 0px;
+}
+
+.oxi_addons__caldera_form_style_1.placeholder-hide input::-webkit-input-placeholder,
+.oxi_addons__caldera_form_style_1.placeholder-hide textarea::-webkit-input-placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.oxi_addons__caldera_form_style_1.placeholder-hide input::placeholder,
+.oxi_addons__caldera_form_style_1.placeholder-hide textarea::placeholder{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.oxi_addons__caldera_form_style_1.error-message-hide .ff-el-is-error .text-danger {
+    display: none;
+}
+
+.oxi_addons__caldera_form_style_1.placeholder-hide input:-moz-placeholder,
+.oxi_addons__caldera_form_style_1.placeholder-hide textarea:-moz-placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+ 
+
+.oxi_addons__caldera_form_style_1 .control-label {
+    display: none;
+}
+
+.oxi_addons__caldera_form_style_1.oxi-labels-yes .control-label {
+    display: block;
+}
+
+ 
+
+.oxi_addons__caldera_form_style_1 .intl-tel-input {
+    display: inherit;
+}
+.oxi_addons__caldera_form_style_1.oxi-button-custom-width .oxi-addons-button-position{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.oxi_addons__caldera_form_style_1 .caldera-grid input[type=checkbox],
+.oxi_addons__caldera_form_style_1 .caldera-grid input[type=radio] {
+    border-style: solid;
+    border-width: 2;
+    padding: 3px;
+    -webkit-appearance: none;
+    position: relative;
+    width: 20px;
+	height: 20px;
+}
+
+.oxi_addons__caldera_form_style_1.oxi-button-full-width .form-group input[type=submit],
+.oxi_addons__caldera_form_style_1.oxi-button-full-width .form-group input[type=button] {
+    width: 100%;
+}
+ 
+.oxi_addons__caldera_form_style_1 .caldera-grid input[type=checkbox]:checked::before,
+.oxi_addons__caldera_form_style_1 .caldera-grid input[type=radio]:checked::before { 
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 !important;
+    width: 12px;
+    height: 12px;
+}
+ 
