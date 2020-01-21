@@ -26,12 +26,12 @@ class Style_1 extends AdminStyle {
         $options = array();
 
         if (!empty($wpuf_form_list) && !is_wp_error($wpuf_form_list)) {
-            $options[0] = esc_html__('Select weForm', SA_EL_ADDONS_TEXTDOMAIN);
+            $options[0] = esc_html__('Select weForm', SHORTCODE_ADDOONS);
             foreach ($wpuf_form_list as $post) {
                 $options[$post->ID] = $post->post_title;
             }
         } else {
-            $options[0] = esc_html__('Create a Form First', SA_EL_ADDONS_TEXTDOMAIN);
+            $options[0] = esc_html__('Create a Form First', SHORTCODE_ADDOONS);
         }
 
         return $options;
@@ -56,7 +56,7 @@ class Style_1 extends AdminStyle {
                 'sa_weforms_select_form', $this->style, [
             'label' => __('Select Form', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
-            'loader' => TRUe,
+            'loader' => TRUE,
             'default' => '0',
             'options' => $this->sa_weform_get_weforms(),
                 ]
@@ -223,7 +223,7 @@ class Style_1 extends AdminStyle {
                     'step' => .1,
                 ],
             ],
-            'selectors' => [
+            'selector' => [
                 '{{WRAPPER}} .oxi_weform_style1 .oxi_weform_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
@@ -253,7 +253,7 @@ class Style_1 extends AdminStyle {
                     'step' => .1,
                 ],
             ],
-            'selectors' => [
+            'selector' => [
                 '{{WRAPPER}} .oxi_weform_style1 .oxi_weform_main' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
