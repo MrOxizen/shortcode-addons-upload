@@ -1,0 +1,46 @@
+.sa_icon_nav_style_1{
+    width: 80px;
+    background: darkred;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+}
+.sa_icon_nav_icon_left{
+    left: 0;
+}
+.sa_icon_nav_icon_right{
+    right: 0;
+}
+.sa_icon_nav_style_1 .sa_icon_nav_logo{
+    overflow: hidden;
+}
+.sa_icon_nav_branding{
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.sa_icon_nav_menu{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+}
+.sa_icon_nav_menu li{
+    
+}
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
+	background: grey;
+	border-radius: 6px;
+}
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
+	color: blue;
+	padding: 8px;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border{
+    border-top-color: transparent !important;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
+    border-top-color: gray;
+}

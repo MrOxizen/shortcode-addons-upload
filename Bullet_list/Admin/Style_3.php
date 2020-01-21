@@ -51,9 +51,9 @@ class Style_3 extends AdminStyle
             'sa_bullet_list_data_style_3',
             $this->style,
             [
-                'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
+                'label' => __('Bullet List Data', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
-                'button' => 'Add New Testimonial',
+                'button' => 'Add New Item',
                 'fields' => [
                     'sa_bl_icon' => [
                         'label' => __('Icon', SHORTCODE_ADDOONS),

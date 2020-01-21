@@ -51,9 +51,9 @@ class Style_2 extends AdminStyle
             'sa_bullet_list_data_style_2',
             $this->style,
             [
-                'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
+                'label' => __('Bullet List Data', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
-                'button' => 'Add New Testimonial',
+                'button' => 'Add New Item',
                 'fields' => [
                     'sa_bl_text' => [
                         'label' => __('Title', SHORTCODE_ADDOONS),
