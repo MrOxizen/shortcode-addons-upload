@@ -76,11 +76,18 @@ class Style_1 extends AdminStyle
         $this->add_control(
             'sa_whatsapp_chat_float', $this->style, [
                 'label' => __('Float', SHORTCODE_ADDOONS),
-                'type' => Controls::SWITCHER,
-                'loader' => true,
-                'label_on' => __('Yes', SHORTCODE_ADDOONS),
-                'label_off' => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
+                'type' => Controls::CHOOSE,
+                'default' => 'oxi_addons__nofloat',
+                'options' => [
+                    'oxi_addons__float' => [
+                        'title' => __('True', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'oxi_addons__nofloat' => [
+                        'title' => __('false', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-center',
+                    ], 
+                ],
             ]
         );
 
@@ -95,27 +102,27 @@ class Style_1 extends AdminStyle
                     'size' => '',
                 ],
                 'condition' => [
-                    'sa_whatsapp_chat_float' => 'yes',
+                    'sa_whatsapp_chat_float' => 'oxi_addons__float',
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 5,
+                        'min' => -400,
                         'max' => 400,
                         'step' => 1,
                     ],
                     'em' => [
-                        'min' => 1,
+                        'min' => -50,
                         'max' => 50,
                         'step' => 0.1,
                     ],
                     'rem' => [
-                        'min' => 1,
+                        'min' => -50,
                         'max' => 50,
                         'step' => 0.1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__button_left .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__float' => 'left: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -130,28 +137,39 @@ class Style_1 extends AdminStyle
                     'size' => '',
                 ],
                 'condition' => [
-                    'sa_whatsapp_chat_float' => 'yes',
+                    'sa_whatsapp_chat_float' => 'oxi_addons__float',
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 5,
+                        'min' => -400,
                         'max' => 400,
                         'step' => 1,
                     ],
                     'em' => [
-                        'min' => 1,
+                        'min' => -50,
                         'max' => 50,
                         'step' => 0.1,
                     ],
                     'rem' => [
-                        'min' => 1,
+                        'min' => -50,
                         'max' => 50,
                         'step' => 0.1,
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__button_left .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__float' => 'top: {{SIZE}}{{UNIT}};',
                 ],
+            ]
+        );
+        $this->add_control(
+            'sa_whatsapp_chat_text_switter', $this->style, [
+                'label' => __('Text', SHORTCODE_ADDOONS),
+                'type' => Controls::SWITCHER,
+                'loader' => true,
+                'default' => 'yes',
+                'label_on' => __('Yes', SHORTCODE_ADDOONS),
+                'label_off' => __('No', SHORTCODE_ADDOONS),
+                'return_value' => 'yes',
             ]
         );
         $this->add_control(
@@ -160,8 +178,11 @@ class Style_1 extends AdminStyle
                 'label' => __('Text', SHORTCODE_ADDOONS),
                 'placeholder' => __('Contact Us', SHORTCODE_ADDOONS),
                 'default' => 'Contact Us',
+                'condition' => [
+                    'sa_whatsapp_chat_text_switter' => 'yes',
+                ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1 .sa-button-text' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__button' => '',
                 ],
             ]
         );
@@ -181,9 +202,9 @@ class Style_1 extends AdminStyle
                 'type' => Controls::ICON,
                 'label' => __('Icon Class', SHORTCODE_ADDOONS),
                 'placeholder' => __('Icon Class', SHORTCODE_ADDOONS),
-                'default' => 'fas fa-angle-double-right',
+                'default' => 'fab fa-whatsapp',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1 .oxi-icons' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__icon .oxi-icons' => '',
                 ],
                 'condition' => [
                     'sa_whatsapp_chat_icon_switter' => 'yes',
@@ -203,7 +224,7 @@ class Style_1 extends AdminStyle
                     'right' => __('Right', SHORTCODE_ADDOONS),
                 ],
                 'condition' => [
-                    '! sa_whatsapp_chat_float' => '',
+                    'sa_whatsapp_chat_float' => 'oxi_addons__float',
                 ],
             ]
         );
@@ -215,9 +236,6 @@ class Style_1 extends AdminStyle
                 'type' => Controls::CHOOSE,
                 'operator' => Controls::OPERATOR_ICON,
                 'default' => 'flex-start',
-                'condition' => [
-                    'sa_whatsapp_chat_float' => 'yes',
-                ],
                 'options' => [
                     'flex-start' => [
                         'title' => __('Left', SHORTCODE_ADDOONS),
@@ -233,8 +251,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__button_main' => 'justify-content: {{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1' => 'justify-content: {{VALUE}};',
+                ], 
+                'condition' => [
+                    'sa_whatsapp_chat_float' => 'oxi_addons__nofloat',
                 ],
+                 
             ]
         );
         $this->add_control(
@@ -295,7 +317,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXT,
                 'label' => __('Tooltip Message', SHORTCODE_ADDOONS),
                 'placeholder' => __('Message us', SHORTCODE_ADDOONS),
-                'description' => 'Message us',
+                'default' => 'Message us',
                 'condition' => [
                     'sa_whatsapp_chat_tooltip_switter' => 'yes',
                 ],
@@ -360,7 +382,7 @@ class Style_1 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => 40,
                         'max' => 400,
                         'step' => 5,
                     ],
@@ -376,7 +398,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__image' => 'max-width: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -395,8 +417,8 @@ class Style_1 extends AdminStyle
                 ],
                 'range' => [
                     'px' => [
-                        'min' => 0,
-                        'max' => 400,
+                        'min' => 15,
+                        'max' => 200,
                         'step' => 5,
                     ],
                     '%' => [
@@ -411,7 +433,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__image' => 'max-width: {{SIZE}}{{UNIT}};  width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => 'height: {{SIZE}}{{UNIT}}; ',
                 ],
             ]
         );
@@ -419,7 +441,7 @@ class Style_1 extends AdminStyle
             'sa_whatsapp_chat_button_typho', $this->style, [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__button' => '',
                 ],
             ]
         );
@@ -438,16 +460,18 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1 .sa-button-text' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => 'color:{{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__icon .oxi-icons' => 'color:{{VALUE}};',
                 ],
             ]
         );
-        $this->add_group_control(
+        $this->add_control(
             'sa_whatsapp_chat_button_bg', $this->style, [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => 'background:{{VALUE}};',
                 ],
             ]
         );
@@ -456,7 +480,7 @@ class Style_1 extends AdminStyle
             'sa_whatsapp_chat_button_border', $this->style, [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => '',
                 ],
             ]
         );
@@ -488,7 +512,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -496,7 +520,7 @@ class Style_1 extends AdminStyle
             'sa_whatsapp_chat_button_box_shadow', $this->style, [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => '',
                 ],
             ]
         );
@@ -509,30 +533,33 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1:hover .sa-button-text' => 'color:{{VALUE}} ;',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main:hover' => 'color:{{VALUE}} ;',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main:hover  .oxi-icons' => 'color:{{VALUE}} ;',
                 ],
             ]
         );
-        $this->add_group_control(
+        $this->add_control(
             'sa_whatsapp_chat_button_hover_bg', $this->style, [
+                'label' => __('Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'oparetor' => 'RGB',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1:hover' => '',
-                ]]
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main:hover' => 'background:{{VALUE}};',
+                ],
+            ]
         );
 
         $this->add_group_control(
             'sa_whatsapp_chat_button_hover_border', $this->style, [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1:hover' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main:hover' => '',
                 ],
             ]
         );
 
         $this->add_responsive_control(
-            'sa_whatsapp_chat_button_border_radius', $this->style, [
+            'sa_whatsapp_chat_button_hover_border_radius', $this->style, [
                 'label' => __('Border radius', SHORTCODE_ADDOONS),
                 'separator' => false,
                 'type' => Controls::DIMENSIONS,
@@ -558,14 +585,14 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]]
         );
         $this->add_group_control(
             'sa_whatsapp_chat_button_hover_box_shadow', $this->style, [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1:hover' => '',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main:hover' => '',
                 ],
             ]
         );
@@ -600,7 +627,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -640,7 +667,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1 .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__icon .oxi-icons' => 'font-size:{{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -672,96 +699,12 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1 .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__icon .oxi-icons' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
         $this->end_controls_section();
-        $this->start_controls_section(
-            'shortcode-addons', [
-                'label' => esc_html__('Tooltip Setting', SHORTCODE_ADDOONS),
-                'showing' => false,
-                'condition' => [
-                    'sa_whatsapp_chat_tooltip_switter' => 'yes',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_whatsapp_chat_tooltip_position',
-            $this->style,
-            [
-                'label' => __('Position', SHORTCODE_ADDOONS),
-                'type' => Controls::SELECT,
-                'default' => 'oxi_tooltip__top',
-                'loader' => true,
-                'options' => [
-                    'oxi_tooltip__top' => __('Top', SHORTCODE_ADDOONS),
-                    'oxi_tooltip__right' => __('Right', SHORTCODE_ADDOONS),
-                    'oxi_tooltip__bottom' => __('Bottom', SHORTCODE_ADDOONS),
-                    'oxi_tooltip__left' => __('left', SHORTCODE_ADDOONS),
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_whatsapp_chat_tooltip_typho', $this->style, [
-                'type' => Controls::TYPOGRAPHY,
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi-button-btn1' => '',
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_whatsapp_chat_tooltip_color', $this->style, [
-                'label' => __('Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'default' => '#ffffff',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__tooltip' => 'color:{{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_group_control(
-            'sa_whatsapp_chat_tooltip_bg', $this->style, [
-                'type' => Controls::COLOR,
-                'oparetor' => 'RGB',
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__tooltip' => 'background:{{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'sa_whatsapp_chat_tooltip_padding', $this->style, [
-                'label' => __('Padding', SHORTCODE_ADDOONS),
-                'type' => Controls::DIMENSIONS,
-                'separator' => true,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => '',
-                ],
-                'range' => [
-                    '%' => [
-                        'min' => 0,
-                        'max' => 50,
-                        'step' => .1,
-                    ],
-                    'px' => [
-                        'min' => 0,
-                        'max' => 200,
-                        'step' => 1,
-                    ],
-                    'em' => [
-                        'min' => 0,
-                        'max' => 10,
-                        'step' => .1,
-                    ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__tooltip' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->end_controls_section();
+         
         $this->end_section_devider();
         $this->end_section_tabs();
     }

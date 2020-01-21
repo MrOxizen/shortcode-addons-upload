@@ -1,71 +1,32 @@
  
-.oxi-addons-align-btn1 .oxi-button-btn1 {
+.oxi_addons__whatsapp_style_1{
+    display: flex;
+}
+.oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main{
+    width: 100%; 
+    max-width: 150px;
+    height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto;
+    background: rgba(0, 137, 123, 1);
+    cursor: pointer;
+    border-radius: 50px; 
+ }
+ .oxi_addons__whatsapp_style_1 .oxi_addons__button{ 
     font-size: 20px;
     font-family: "Open Sans";
     font-weight: 100;
     font-style: normal;
     line-height: 1;
     text-align: center;
-    padding: 15px 15px 15px 15px;
-    margin: 0px 0px 0px 0px;
-    background: rgba(0, 137, 123, 1);
-    border-width: 0px;
-    border-style: solid;
-    border-color: #000000;
-    border-radius: 50px;
-    text-align: center
-}
-
-.oxi-addons-align-btn1 .oxi-button-btn1.sa-width-dymanic{
-    max-width: 220px;
-    width: 100%;
-}
-.oxi-addons-align-btn1 {
-   text-align: center
-}
-
-.oxi-addons-align-btn1 .oxi-button-btn1 .oxi-icons{
-   
-    font-size: 20px;
-    color: #ffffff;
-     padding: 0px 0px 0px 15px;
-}
-.oxi-addons-align-btn1 .oxi-button-btn1:hover {
-    background: rgba(46, 204, 113, 1);
-    border-width: 0px;
-    border-style: dotted;
-    border-color: #ff0000;
-    border-radius: 50px
-}
-.oxi-addons-align-btn1 .oxi-button-btn1 .sa-button-text{
-    color: #ffffff;
-   transition: .3s;
-}
-.oxi-addons-align-btn1 .oxi-button-btn1:hover .sa-button-text{
-    color: #000000;
-   transition: .3s;
-}
-@media only screen and (min-width:669px) and (max-width:993px) {
-    .oxi-addons-align-btn1 .oxi-button-btn1  {
-        max-width: 220px;
-        font-size: 20px;
-        padding: 15px 15px 15px 15px;
-        margin: 0px 0px 0px 0px
-    }
-}
-
-@media only screen and (max-width:668px) {
-    .oxi-addons-align-btn1 .oxi-button-btn1 {
-        max-width: 220px;
-        font-size: 20px;
-        padding: 15px 15px 15px 15px;
-        margin: 0px 5px 0px 0px
-    }
-    .oxi-addons-align-btn1 {
-        text-align: center
-    }
-}
+} 
+.oxi_addons__whatsapp_style_1 .oxi_addons__icon{
+    padding-right: 5px;
+ }
+.oxi_addons__whatsapp_style_1 .oxi_addons__tooltip{
+    display: none;
+ }
+.oxi_addons__whatsapp_style_1 .oxi__block{
+    display: block;
+ }
