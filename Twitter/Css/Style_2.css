@@ -1,0 +1,15 @@
+.sa_twitter_container_style_2 {
+    max-width: 60%;
+}
+
+.sa_twitter_container_style_2.sa_twitter_align_center {
+    margin: 0 auto;
+}
+
+.sa_twitter_container_style_2.sa_twitter_align_left {
+    margin: auto 0 0 0;
+}
+
+.sa_twitter_container_style_2.sa_twitter_align_right {
+    margin: 0 0 0 auto;
+}
