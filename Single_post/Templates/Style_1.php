@@ -19,7 +19,10 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
 
         $id = $this->oxiid;
-        $single_post = get_post($style['sa_single_post_post_list']);
+        $single_post = "";
+        if (array_key_exists('sa_single_post_post_list', $style) && $style['sa_single_post_post_list'] != '') {
+            $single_post = get_post($style['sa_single_post_post_list']);
+        }
 
 
         if ($single_post) {

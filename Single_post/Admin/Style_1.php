@@ -78,7 +78,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::SLIDER,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 50,
+                        'size' => '',
                     ],
                     'range' => [
                         'px' => [
@@ -270,7 +270,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::SLIDER,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 50,
+                        'size' => '',
                     ],
                     'range' => [
                         'px' => [
@@ -435,7 +435,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::SLIDER,
                     'default' => [
                         'unit' => 'px',
-                        'size' => 50,
+                        'size' => '',
                     ],
                     'range' => [
                         'px' => [

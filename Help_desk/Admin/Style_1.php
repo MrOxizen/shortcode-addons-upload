@@ -52,7 +52,7 @@ class Style_1 extends AdminStyle {
                     'label' => __('Position', SHORTCODE_ADDOONS),
                     'type' => Controls::CHOOSE,
                     'operator' => Controls::OPERATOR_ICON,
-                    'default' => 'left',
+                    'default' => 'right',
                     'options' => [
                         'left' => [
                             'title' => __('Left', SHORTCODE_ADDOONS),
@@ -64,7 +64,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__fluent_form_style_1 .oxi-fluent-form.oxi-fluent-form-wrapper ' => '',
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk-icons' => '',
                     ],
                 ]
         );
@@ -95,7 +95,8 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_icon_effects_style_1 .oxi-icons' => 'font-size: {{SIZE}}px;'
+                        '{{WRAPPER}}  .oxi-helpdesk-style-1 .oxi-helpdesk .oxi-helpdesk-icons-item' => 'width: {{SIZE}}px; height: {{SIZE}}px; line-height: {{SIZE}}px;',
+                        '{{WRAPPER}}  .oxi-helpdesk-style-1 .oxi-helpdesk .oxi-helpdesk-icons-open-button' => 'width: {{SIZE}}px; height: {{SIZE}}px; line-height: {{SIZE}}px;',
                     ],
                 ]
         );
@@ -117,7 +118,11 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_icon_effects_style_1 .oxi-icons' => 'font-size: {{SIZE}}px;'
+                        '{{WRAPPER}}  .oxi-helpdesk-style-1 .oxi-helpdesk-icons-open:checked ~ .oxi-helpdesk-icons-item:nth-child(3)' => 'transform: translate3d(0, calc(-{{SIZE}}px - {{helpdesk_size.SIZE}}px), 0);',
+                        '{{WRAPPER}}  .oxi-helpdesk-style-1 .oxi-helpdesk-icons-open:checked ~ .oxi-helpdesk-icons-item:nth-child(4)' => 'transform: translate3d(0, calc(-{{SIZE}}px * 2 - {{helpdesk_size.SIZE}}px * 2), 0);',
+                        '{{WRAPPER}}  .oxi-helpdesk-style-1 .oxi-helpdesk-icons-open:checked ~ .oxi-helpdesk-icons-item:nth-child(5)' => 'transform: translate3d(0, calc(-{{SIZE}}px * 3 - {{helpdesk_size.SIZE}}px * 3), 0);',
+                        '{{WRAPPER}}  .oxi-helpdesk-style-1 .oxi-helpdesk-icons-open:checked ~ .oxi-helpdesk-icons-item:nth-child(6)' => 'transform: translate3d(0, calc(-{{SIZE}}px * 4 - {{helpdesk_size.SIZE}}px * 4), 0);',
+                        '{{WRAPPER}}  .oxi-helpdesk-style-1 .oxi-helpdesk-icons-open:checked ~ .oxi-helpdesk-icons-item:nth-child(7)' => 'transform: translate3d(0, calc(-{{SIZE}}px * 5 - {{helpdesk_size.SIZE}}px * 5), 0);',
                     ],
                 ]
         );
@@ -200,17 +205,7 @@ class Style_1 extends AdminStyle {
                     'return_value' => 'yes',
                 ]
         );
-        $this->add_group_control(
-                'sa_head_animation',
-                $this->style,
-                [
-                    'type' => Controls::ANIMATION,
-                ]
-        );
         $this->end_controls_section();
-
-
-
         $this->end_section_devider();
         $this->start_section_devider();
 
@@ -240,7 +235,8 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_icon_effects_style_1 .oxi-icons' => 'font-size: {{SIZE}}px;'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1 .oxi-helpdesk  .oxi-helpdesk-icons.left,'
+                        . '{{WRAPPER}} .oxi-helpdesk-style-1 .oxi-helpdesk  .oxi-helpdesk-icons.right' => 'left: {{SIZE}}px; right: {{SIZE}}px;',
                     ],
                 ]
         );
@@ -262,7 +258,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_icon_effects_style_1 .oxi-icons' => 'font-size: {{SIZE}}px;'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1 .oxi-helpdesk .oxi-helpdesk-icons' => 'bottom: {{SIZE}}px;'
                     ],
                 ]
         );
@@ -381,6 +377,9 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-font-settings',
                 [
                     'label' => esc_html__('Messenger', SHORTCODE_ADDOONS),
+                    'condition' => [
+                        'sa_help_desk_sup_messenger' => 'yes'
+                    ]
                 ]
         );
         $this->add_control(
@@ -402,7 +401,7 @@ class Style_1 extends AdminStyle {
                 'sa_help_desk_messenger_title_user_id',
                 $this->style,
                 [
-                    'label' => __('User ID', SHORTCODE_ADDOONS),
+                    'label' => __('Link/ID', SHORTCODE_ADDOONS),
                     'type' => Controls::TEXT,
                     'default' => 'oxilab',
                     'placeholder' => 'oxilab',
@@ -430,7 +429,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'far fa-life-ring',
+                    'default' => 'fab fa-facebook-messenger',
                 ]
         );
 
@@ -439,6 +438,9 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-font-settings',
                 [
                     'label' => esc_html__('WhatsApp', SHORTCODE_ADDOONS),
+                    'condition' => [
+                        'sa_help_desk_sup_whatsapp' => 'yes'
+                    ]
                 ]
         );
         $this->add_control(
@@ -488,7 +490,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'far fa-life-ring',
+                    'default' => 'fab fa-whatsapp',
                 ]
         );
 
@@ -497,6 +499,9 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-telegram-settings',
                 [
                     'label' => esc_html__('Telegram', SHORTCODE_ADDOONS),
+                    'condition' => [
+                        'sa_help_desk_sup_telegram' => 'yes'
+                    ]
                 ]
         );
         $this->add_control(
@@ -546,7 +551,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'far fa-life-ring',
+                    'default' => 'fab fa-telegram',
                 ]
         );
 
@@ -555,6 +560,9 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-custom-settings',
                 [
                     'label' => esc_html__('Custom', SHORTCODE_ADDOONS),
+                    'condition' => [
+                        'sa_help_desk_sup_custom' => 'yes'
+                    ]
                 ]
         );
         $this->add_control(
@@ -613,6 +621,9 @@ class Style_1 extends AdminStyle {
                 'shortcode-addons-email-settings',
                 [
                     'label' => esc_html__('Email', SHORTCODE_ADDOONS),
+                    'condition' => [
+                        'sa_help_desk_sup_email' => 'yes'
+                    ]
                 ]
         );
         $this->add_control(
@@ -689,7 +700,7 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
                     'type' => Controls::ICON,
-                    'default' => 'far fa-life-ring',
+                    'default' => 'fas fa-envelope',
                 ]
         );
 
@@ -847,13 +858,196 @@ class Style_1 extends AdminStyle {
         $this->end_section_devider();
         $this->start_section_devider();
         $this->start_controls_section(
-                'shortcode-addons-help-desk-text',
+                'sa_help_desk_tooltipp',
                 [
-                    'label' => esc_html__('Icons Style', SHORTCODE_ADDOONS),
+                    'label' => esc_html__('Tooltip', SHORTCODE_ADDOONS),
                     'showing' => TRUE,
                 ]
         );
 
+        $this->add_responsive_control(
+                'sa_help_desk_tooltip_width',
+                $this->style,
+                [
+                    'label' => __('Width', SHORTCODE_ADDOONS),
+                    'type' => Controls::SLIDER,
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => 30,
+                    ],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 500,
+                            'step' => 1,
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}}  .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper span.oxi-ct-ribbons-inner' => 'width: {{SIZE}}px;',
+                    ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_help_desk_tooltip_typo',
+                $this->style,
+                [
+                    'label' => __('Typography', SHORTCODE_ADDOONS),
+                    'type' => Controls::TYPOGRAPHY,
+                    'include' => Controls::ALIGNNORMAL,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__heading' => ''
+                    ],
+                ]
+        );
+        $this->add_control(
+                'sa_help_desk_tooltip_text_color',
+                $this->style,
+                [
+                    'label' => __('Text Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => '#fff',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper span.oxi-ct-ribbons-inner' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper-top' => 'color: {{VALUE}};',
+                    ],
+                ]
+        );
+
+        $this->add_control(
+                'sa_help_desk_tooltip_text_alignment',
+                $this->style,
+                [
+                    'label' => __('Alignment', SHORTCODE_ADDOONS),
+                    'type' => Controls::CHOOSE,
+                    'operator' => Controls::OPERATOR_ICON,
+                    'default' => 'center',
+                    'options' => [
+                        'left' => [
+                            'title' => __('Left', SHORTCODE_ADDOONS),
+                            'icon' => 'fas fa-align-left',
+                        ],
+                        'center' => [
+                            'title' => __('Center', SHORTCODE_ADDOONS),
+                            'icon' => 'fas fa-align-center',
+                        ],
+                        'right' => [
+                            'title' => __('Right', SHORTCODE_ADDOONS),
+                            'icon' => 'fas fa-align-right',
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-ct-heading' => 'text-align: {{VALUE}};'
+                    ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_help_desk_tooltip_back_color',
+                $this->style,
+                [
+                    'type' => Controls::BACKGROUND,
+                    'selector' => [
+                        '{{WRAPPER}} .sa_addons_numbers_style_2' => ''
+                    ],
+                ]
+        );
+        $this->add_control(
+                'sa_help_desk_tooltip_arrow_color',
+                $this->style,
+                [
+                    'label' => __('Arrow Color', SHORTCODE_ADDOONS),
+                    'type' => Controls::COLOR,
+                    'default' => '#fff',
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper span.oxi-ct-ribbons-inner' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper-top' => 'color: {{VALUE}};',
+                    ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_help_desk_tooltip_border',
+                $this->style,
+                [
+                    'type' => Controls::BORDER,
+                    'selector' => [
+                        '{{WRAPPER}} .sa_addons_numbers_style_2' => ''
+                    ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_help_desk_tooltip_border_r',
+                $this->style,
+                [
+                    'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                    'type' => Controls::DIMENSIONS,
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => '',
+                    ],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 500,
+                            'step' => 1,
+                        ],
+                        '%' => [
+                            'min' => 0,
+                            'max' => 100,
+                            'step' => 1,
+                        ],
+                        'em' => [
+                            'min' => 0,
+                            'max' => 100,
+                            'step' => .1,
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}} .sa_addons_numbers_style_2' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    ],
+                ]
+        );
+
+        $this->add_responsive_control(
+                'sa_help_desk_tooltip_padding',
+                $this->style,
+                [
+                    'label' => __('Padding', SHORTCODE_ADDOONS),
+                    'type' => Controls::DIMENSIONS,
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => '',
+                    ],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 200,
+                            'step' => 1,
+                        ],
+                        '%' => [
+                            'min' => 0,
+                            'max' => 100,
+                            'step' => 1,
+                        ],
+                        'em' => [
+                            'min' => 0,
+                            'max' => 50,
+                            'step' => .1,
+                        ],
+                    ],
+                    'selector' => [
+                        '{{WRAPPER}} .sa_addons_numbers_style_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    ],
+                ]
+        );
+        $this->add_group_control(
+                'sa_help_desk_tooltip_boxshadow',
+                $this->style,
+                [
+                    'type' => Controls::BOXSHADOW,
+                    'selector' => [
+                        '{{WRAPPER}} .oxi-ct-btn' => ''
+                    ],
+                ]
+        );
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
