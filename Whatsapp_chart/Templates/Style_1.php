@@ -31,8 +31,8 @@ class Style_1 extends Templates
     public function inline_public_jquery()
     {
         $style = $this->style;
-
-        $jquery = 'jQuery(".oxi_addons__whatsapp_main").tooltipster({
+        $jquery = '';
+        $jquery .= 'jQuery(".oxi_addons__whatsapp_main.yes").tooltipster({
                     functionInit: function (instance, helper) {
                         var content = $(helper.origin)
                                 .find("#tooltip_content")
@@ -49,20 +49,21 @@ class Style_1 extends Templates
                     interactive: true,
                     delay: 0,
                     side: ["right", "left", "top", "bottom"]
-                });
-                $("#tooltip_content").addClass("oxi__block")
-               
+                });';
+
+        $jquery .= ' $("#tooltip_content").addClass("oxi__block")
+
                 jQuery(window).on("resize", function(){
                     var $width  = jQuery(window).width();
-                    if ($width  < 767){'; 
-                        if (array_key_exists('sa_whatsapp_chat_hide_on_mobile', $style) && $style['sa_whatsapp_chat_hide_on_mobile'] == 'yes') {
-                            $jquery .= 'jQuery(".oxi_addons__whatsapp_main").hide()';
-                        }  
-                $jquery .='}else if($width >= 768 && $width <= 991){';
-                    if (array_key_exists('sa_whatsapp_chat_hide_on_tab', $style) && $style['sa_whatsapp_chat_hide_on_tab'] == 'yes') {
-                        $jquery .= 'jQuery(".oxi_addons__whatsapp_main").hide()';
-                    }
-                   $jquery .=' }else if($width > 991){
+                    if ($width  < 767){';
+        if (array_key_exists('sa_whatsapp_chat_hide_on_mobile', $style) && $style['sa_whatsapp_chat_hide_on_mobile'] == 'yes') {
+            $jquery .= 'jQuery(".oxi_addons__whatsapp_main").hide()';
+        }
+        $jquery .= '}else if($width >= 768 && $width <= 991){';
+        if (array_key_exists('sa_whatsapp_chat_hide_on_tab', $style) && $style['sa_whatsapp_chat_hide_on_tab'] == 'yes') {
+            $jquery .= 'jQuery(".oxi_addons__whatsapp_main").hide()';
+        }
+        $jquery .= ' }else if($width > 991){
                         jQuery(".oxi_addons__whatsapp_main").show();
                    }
                 });
@@ -73,7 +74,7 @@ class Style_1 extends Templates
     }
 
     public function default_render($style, $child, $admin)
-    { 
+    {
         $target = 'yes' == $style['sa_whatsapp_chat_open_link'] ? "_blank" : "_self";
         $id = ('private' == $style['sa_whatsapp_chat_type']) ? $style['sa_whatsapp_chat_number'] : $style['sa_whatsapp_chat_group'];
         $is_mobile = (wp_is_mobile()) ? 'api' : 'web';
@@ -83,7 +84,7 @@ class Style_1 extends Templates
         $suffix = ('private' == $style['sa_whatsapp_chat_type']) ? 'send?phone=' : '';
         $href = sprintf('https://%s.whatsapp.com/%s%s', $prefix, $suffix, $id);
 
-        $icon = $button = '';
+        $icon = $button = $tooltip =  '';
         if (array_key_exists('sa_whatsapp_chat_icon_switter', $style) && $style['sa_whatsapp_chat_icon_switter'] == 'yes') {
             $icon = '<div class="oxi_addons__icon">
                         ' . $this->font_awesome_render($style['sa_whatsapp_chat_icon']) . '
@@ -104,7 +105,7 @@ class Style_1 extends Templates
             }
         }
         echo '<div class="oxi_addons__whatsapp_style_1">
-                <a href="' . $href . '" class="oxi_addons__whatsapp_main" data-tooltip-content="#tooltip_content" target="' . $target . '">
+                <a href="' . $href . '" class="oxi_addons__whatsapp_main ' . $style['sa_whatsapp_chat_tooltip_switter'] . ' ' . $style['sa_whatsapp_chat_float'] . ' ' . $style['sa_whatsapp_chat_button_alignment'] . '" data-tooltip-content="#tooltip_content" target="' . $target . '">
                     ' . $icon . '
                     ' . $button . '
                     ' . $tooltip . '
