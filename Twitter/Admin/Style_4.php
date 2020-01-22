@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle
+class Style_4 extends AdminStyle
 {
 
     public function register_controls()
@@ -32,184 +32,32 @@ class Style_2 extends AdminStyle
             ]
         );
         $this->add_control(
-            'sa_twitter_note',
-            $this->style,
-            [
-                'label' => __('Note', SHORTCODE_ADDOONS),
-                'type' => Controls::HEADING,
-                'description' => 'Some fields work after saving and reloading',
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_url_profile',
+            'sa_twitter_url_moments',
             $this->style,
             [
                 'label' => __('Enter URL', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'placeholder' => __('https://twitter.com/TwitterDev', SHORTCODE_ADDOONS),
-                'default'     => 'https://twitter.com/TwitterDev',
-            ]
-        );
-
-        $this->add_control(
-            'sa_twitter_display_mode_profile',
-            $this->style,
-            [
-                'label'     => __('Display Mode', SHORTCODE_ADDOONS),
-                'type'      => Controls::SELECT,
-                'loader' => TRUE,
-                'default'   => 'timeline',
-                'options'   => [
-                    'timeline' => __('Timeline', SHORTCODE_ADDOONS),
-                    'button'   => __('Button', SHORTCODE_ADDOONS),
-                ],
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_height_profile_timeline',
-            $this->style,
-            [
-                'label' => __('Height', SHORTCODE_ADDOONS),
-                'type' => Controls::SLIDER,
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 500,
-                ],
-                'range' => [
-                    'px' => [
-                        'min' => 250,
-                        'max' => 1300,
-                        'step' => 1,
-                    ],
-                ],
-                'condition' => [
-                    'sa_twitter_display_mode_profile' => 'timeline',
+                'description' => 'This fields work after saving and reloading',
+                'placeholder' => __('https://twitter.com/webtechhardik', SHORTCODE_ADDOONS),
+                'default'     => 'https://twitter.com/i/moments/625792726546558977',
+                'condition'   => [
+                    'sa_twitter_embed_type' => 'moments'
                 ]
             ]
         );
         $this->add_control(
-            'sa_twitter_theme_profile_timeline',
+            'sa_twitter_no_of_tweets',
             $this->style,
             [
-                'label'     => __('Theme', SHORTCODE_ADDOONS),
-                'type'      => Controls::SELECT,
-                'loader' => TRUE,
-                'default'   => 'light',
-                'options'   => [
-                    'light' => __('Light', SHORTCODE_ADDOONS),
-                    'dark'  => __('Dark', SHORTCODE_ADDOONS),
-                ],
-                'condition' => [
-                    'sa_twitter_display_mode_profile' => 'timeline',
-                ]
+                'label'     => __('Display No of Tweets', SHORTCODE_ADDOONS),
+                'type'      => Controls::NUMBER,
+                'description' => 'This fields work after saving and reloading',
+                'default'   => 2,
+                'min'       => '1',
+                'max'       => '50',
+                'step'      => '1',
             ]
         );
-        $this->add_control(
-            'sa_twitter_link_color_profile',
-            $this->style,
-            [
-                'label' => __('Display Link Color', SHORTCODE_ADDOONS),
-                'type' => Controls::COLOR,
-                'oparetor' => TRUE,
-                'condition' => [
-                    'sa_twitter_display_mode_profile' => 'timeline',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_button_type',
-            $this->style,
-            [
-                'label'     => __('Button Type', SHORTCODE_ADDOONS),
-                'type'      => Controls::SELECT,
-                'loader' => TRUE,
-                'default'   => 'follow-button',
-                'options'   => [
-                    'follow-button'  => __('Follow', SHORTCODE_ADDOONS),
-                    'mention-button' => __('Mention', SHORTCODE_ADDOONS),
-                ],
-                'condition' => [
-                    'sa_twitter_display_mode_profile' => 'button',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_hide_name',
-            $this->style,
-            [
-                'label'        => __('Hide Name', SHORTCODE_ADDOONS),
-                'type'         => Controls::SWITCHER,
-                'loader' => TRUE,
-                'default'      => '',
-                'label_on'     => __('Show', SHORTCODE_ADDOONS),
-                'label_off'    => __('Hide', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-                'condition'    => [
-                    'sa_twitter_display_mode_profile' => 'button',
-                    'sa_twitter_button_type'          => 'follow-button',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_show_count',
-            $this->style,
-            [
-                'label'        => __('Show Count', SHORTCODE_ADDOONS),
-                'type'         => Controls::SWITCHER,
-                'loader' => TRUE,
-                'default'      => 'yes',
-                'label_on'     => __('Show', SHORTCODE_ADDOONS),
-                'label_off'    => __('Hide', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-                'condition'    => [
-                    'sa_twitter_display_mode_profile' => 'button',
-                    'sa_twitter_button_type'          => 'follow-button',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_prefill_text',
-            $this->style,
-            [
-                'label'       => __('Tweet Text', SHORTCODE_ADDOONS),
-                'type'        => Controls::TEXTAREA,
-                'default'     => '',
-                'description' => __('Do you want to prefill the Tweet text?', SHORTCODE_ADDOONS),
-                'condition'    => [
-                    'sa_twitter_display_mode_profile' => 'button',
-                    'sa_twitter_button_type'          => 'mention-button',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_screen_name',
-            $this->style,
-            [
-                'label'     => __('Screen Name', SHORTCODE_ADDOONS),
-                'type'      => Controls::TEXT,
-                'condition'    => [
-                    'sa_twitter_display_mode_profile' => 'button',
-                    'sa_twitter_button_type'          => 'mention-button',
-                ]
-            ]
-        );
-        $this->add_control(
-            'sa_twitter_large_button',
-            $this->style,
-            [
-                'label'        => __('Large Button', SHORTCODE_ADDOONS),
-                'type'         => Controls::SWITCHER,
-                'loader' => TRUE,
-                'default'      => '',
-                'label_on'     => __('Yes', SHORTCODE_ADDOONS),
-                'label_off'    => __('No', SHORTCODE_ADDOONS),
-                'return_value' => 'yes',
-                'condition'    => [
-                    'sa_twitter_display_mode_profile' => 'button',
-                ]
-            ]
-        );
-        
         $this->add_control(
             'sa_twitter_language',
             $this->style,
@@ -223,7 +71,6 @@ class Style_2 extends AdminStyle
         );
         $this->end_controls_section();
         $this->end_section_devider();
-
         $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
@@ -255,7 +102,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2' => '',
+                    '{{WRAPPER}} .sa_twitter_container_style_4' => '',
                 ],
             ]
         );
@@ -287,18 +134,17 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_4' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
-
         $this->add_group_control(
-            'sa_twitter_background',
+            'sa_twitter_bg',
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => '',
+                    '{{WRAPPER}} .sa_twitter_container_style_4 .sa_twitter_main' => '',
                 ],
             ]
         );
@@ -308,7 +154,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => '',
+                    '{{WRAPPER}} .sa_twitter_container_style_4 .sa_twitter_main' => '',
                 ],
             ]
         );
@@ -318,7 +164,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => ''
+                    '{{WRAPPER}} .sa_twitter_container_style_4 .sa_twitter_main' => ''
                 ],
             ]
         );
@@ -350,8 +196,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main iframe' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_4 .sa_twitter_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_4 .sa_twitter_main iframe' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -383,7 +229,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_4 .sa_twitter_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -415,7 +261,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

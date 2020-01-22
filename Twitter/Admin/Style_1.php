@@ -32,6 +32,15 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
+            'sa_twitter_note',
+            $this->style,
+            [
+                'label' => __('Note', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+                'description' => 'Some fields work after saving and reloading',
+            ]
+        );
+        $this->add_control(
             'sa_twitter_url_collection',
             $this->style,
             [

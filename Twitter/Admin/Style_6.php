@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle
+class Style_6 extends AdminStyle
 {
 
     public function register_controls()
@@ -40,17 +40,18 @@ class Style_2 extends AdminStyle
                 'description' => 'Some fields work after saving and reloading',
             ]
         );
+        
         $this->add_control(
-            'sa_twitter_url_profile',
+            'sa_twitter_username',
             $this->style,
             [
                 'label' => __('Enter URL', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
-                'placeholder' => __('https://twitter.com/TwitterDev', SHORTCODE_ADDOONS),
-                'default'     => 'https://twitter.com/TwitterDev',
+                'placeholder' => __('@username', SHORTCODE_ADDOONS),
+                'default'     => '@TwitterDev',
             ]
         );
-
+        
         $this->add_control(
             'sa_twitter_display_mode_profile',
             $this->style,
@@ -199,7 +200,6 @@ class Style_2 extends AdminStyle
             [
                 'label'        => __('Large Button', SHORTCODE_ADDOONS),
                 'type'         => Controls::SWITCHER,
-                'loader' => TRUE,
                 'default'      => '',
                 'label_on'     => __('Yes', SHORTCODE_ADDOONS),
                 'label_off'    => __('No', SHORTCODE_ADDOONS),
@@ -209,7 +209,6 @@ class Style_2 extends AdminStyle
                 ]
             ]
         );
-        
         $this->add_control(
             'sa_twitter_language',
             $this->style,
@@ -223,7 +222,6 @@ class Style_2 extends AdminStyle
         );
         $this->end_controls_section();
         $this->end_section_devider();
-
         $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons',
@@ -255,7 +253,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2' => '',
+                    '{{WRAPPER}} .sa_twitter_container_style_6' => '',
                 ],
             ]
         );
@@ -287,18 +285,17 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2' => 'max-width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_6' => 'max-width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
-
         $this->add_group_control(
-            'sa_twitter_background',
+            'sa_twitter_bg',
             $this->style,
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => '',
+                    '{{WRAPPER}} .sa_twitter_container_style_6 .sa_twitter_main' => '',
                 ],
             ]
         );
@@ -308,7 +305,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => '',
+                    '{{WRAPPER}} .sa_twitter_container_style_6 .sa_twitter_main' => '',
                 ],
             ]
         );
@@ -318,7 +315,7 @@ class Style_2 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => ''
+                    '{{WRAPPER}} .sa_twitter_container_style_6 .sa_twitter_main' => ''
                 ],
             ]
         );
@@ -350,8 +347,8 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main iframe' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_6 .sa_twitter_main' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_6 .sa_twitter_main iframe' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -383,7 +380,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2 .sa_twitter_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_6 .sa_twitter_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -415,7 +412,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_twitter_container_style_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa_twitter_container_style_6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
