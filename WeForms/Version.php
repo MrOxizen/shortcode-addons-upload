@@ -6,4 +6,4 @@
  * Date: 18/01/2020.
  */
 
-return array('2.0.0', 'Form Elements', true, 'fab fa-wpforms', true);
+return array('2.0.0', '3rd Party Widgets', true, 'fab fa-wpforms', true);

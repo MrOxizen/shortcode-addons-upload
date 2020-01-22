@@ -54,9 +54,9 @@ public function pre_image() {
         }
         return __('<div class="oxi-addons-col-1" id="' . $data['style']['style_name'] . '">
                                 <div class="oxi-addons-style-preview">
-                                    <div class="oxi-addons-style-preview-top oxi-addons-center">
+                                    <div class="oxi-addons-style-preview-top oxi-addons-center" style="display: flex; justify-content: center;">
                                         <a href="' . $image[$data['style']['style_name']]['url'] . '" target="_black">
-                                             <img style="max-width: 50%; margin: 0 auto;" src="' . $image[$data['style']['style_name']]['image'] . '">
+                                             <img " src="' . $image[$data['style']['style_name']]['image'] . '">
                                         </a>
                                     </div>
                                     <div class="oxi-addons-style-preview-bottom">
