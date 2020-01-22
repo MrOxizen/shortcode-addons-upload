@@ -44,20 +44,19 @@ class Style_1 extends Templates {
     }
 
     public function inline_public_jquery() {
-        $jquery = "";
-        $jquery .= ' 
-                  var $iframe = $(".sa-iframe-style-1-section > iframe"),
-            $autoHeight = $iframe.data("auto_height");
+       
+        $jquery = 'var $iframe = $(".' . $this->WRAPPER .' .sa-iframe-style-1-section > iframe"),
+                    $autoHeight = $iframe.data("auto_height");
 
-            if (!$iframe.length) {
-                return;
-            }
+                    if (!$iframe.length) {
+                        return;
+                    }
 
-            if ($autoHeight) {
-                $($iframe).load(function () {
-                    $(this).height($(this).contents().find("html").height());
-                });
-            }';
+                    if ($autoHeight) {
+                        $($iframe).load(function () {
+                            $(this).height($(this).contents().find("html").height());
+                        });
+                    }';
         return $jquery;
     }
 

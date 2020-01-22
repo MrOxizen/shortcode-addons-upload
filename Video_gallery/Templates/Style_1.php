@@ -110,7 +110,7 @@ class Style_1 extends Templates {
 
                     <?php
                     foreach ($all_data as $key => $value) :
-
+                        $video_thumbnail = "";
                         $video_thumbnail = ( $value['sa_video_gellery_poster_media'] ) ? $value['sa_video_gellery_poster_media'] : 'https://www.sa-elementor-addons.com/wp-content/uploads/2019/12/placeholder-img.jpg';
 
                         $youtube_id = (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $value['sa_video_gellery_source'], $match) ) ? $match[1] : false;
