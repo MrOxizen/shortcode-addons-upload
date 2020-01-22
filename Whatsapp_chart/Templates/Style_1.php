@@ -84,7 +84,7 @@ class Style_1 extends Templates
         $suffix = ('private' == $style['sa_whatsapp_chat_type']) ? 'send?phone=' : '';
         $href = sprintf('https://%s.whatsapp.com/%s%s', $prefix, $suffix, $id);
 
-        $icon = $button = '';
+        $icon = $button = $tooltip =  '';
         if (array_key_exists('sa_whatsapp_chat_icon_switter', $style) && $style['sa_whatsapp_chat_icon_switter'] == 'yes') {
             $icon = '<div class="oxi_addons__icon">
                         ' . $this->font_awesome_render($style['sa_whatsapp_chat_icon']) . '
