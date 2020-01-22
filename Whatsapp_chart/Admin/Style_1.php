@@ -78,6 +78,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Float', SHORTCODE_ADDOONS),
                 'type' => Controls::CHOOSE,
                 'default' => 'oxi_addons__nofloat',
+                'loader' => true,
                 'options' => [
                     'oxi_addons__float' => [
                         'title' => __('True', SHORTCODE_ADDOONS),
@@ -86,7 +87,7 @@ class Style_1 extends AdminStyle
                     'oxi_addons__nofloat' => [
                         'title' => __('false', SHORTCODE_ADDOONS),
                         'icon' => 'fas fa-align-center',
-                    ], 
+                    ],
                 ],
             ]
         );
@@ -122,7 +123,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__float' => 'left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__float.oxi_addons__float_left' => 'left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__float.oxi_addons__float_right' => 'right: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -157,7 +159,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__float' => 'top: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__float' => 'bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -217,11 +219,11 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Button Position', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
-                'default' => 'right',
+                'default' => 'oxi_addons__float_right',
                 'loader' => true,
                 'options' => [
-                    'left' => __('Left', SHORTCODE_ADDOONS),
-                    'right' => __('Right', SHORTCODE_ADDOONS),
+                    'oxi_addons__float_left' => __('Left', SHORTCODE_ADDOONS),
+                    'oxi_addons__float_right' => __('Right', SHORTCODE_ADDOONS),
                 ],
                 'condition' => [
                     'sa_whatsapp_chat_float' => 'oxi_addons__float',
@@ -252,11 +254,11 @@ class Style_1 extends AdminStyle
                 ],
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__whatsapp_style_1' => 'justify-content: {{VALUE}};',
-                ], 
+                ],
                 'condition' => [
                     'sa_whatsapp_chat_float' => 'oxi_addons__nofloat',
                 ],
-                 
+
             ]
         );
         $this->add_control(
@@ -671,7 +673,30 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
+        $this->add_responsive_control(
+            'sa_whatsapp_chat_icon_alignment_normal',
+            $this->style,
+            [
+                'label' => __('Icon Alignment', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => 'row-reverse',
+                'options' => [
+                    'row' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-left',
+                    ],
+                    'row-reverse' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fas fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__whatsapp_style_1 .oxi_addons__whatsapp_main' => 'flex-direction: {{VALUE}};',
+                ],
 
+            ]
+        );
         $this->add_responsive_control(
             'sa_whatsapp_chat_icon_padding', $this->style, [
                 'label' => __('Icon Padding', SHORTCODE_ADDOONS),
@@ -704,7 +729,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->end_controls_section();
-         
+
         $this->end_section_devider();
         $this->end_section_tabs();
     }
