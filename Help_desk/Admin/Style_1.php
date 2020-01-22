@@ -741,8 +741,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left' => 'color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left .oxi-icons' => 'color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-open-button' => 'color:{{VALUE}};',
                     ],
                 ]
         );
@@ -752,7 +751,7 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-open-button' => ''
                     ],
                 ]
         );
@@ -766,8 +765,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left' => 'color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left .oxi-icons' => 'color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-open-button:hover' => 'color:{{VALUE}};',
                     ],
                 ]
         );
@@ -777,7 +775,7 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-open-button:hover' => ''
                     ],
                 ]
         );
@@ -811,8 +809,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left' => 'color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left .oxi-icons' => 'color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-item' => 'color:{{VALUE}};'
                     ],
                 ]
         );
@@ -822,7 +819,7 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-item' => ''
                     ],
                 ]
         );
@@ -836,8 +833,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left' => 'color:{{VALUE}};',
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__button_left .oxi-icons' => 'color:{{VALUE}};'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-item:hover' => 'color:{{VALUE}};',
                     ],
                 ]
         );
@@ -847,7 +843,7 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .oxi-helpdesk .oxi-helpdesk-icons-item:hover' => ''
                     ],
                 ]
         );
@@ -862,6 +858,9 @@ class Style_1 extends AdminStyle {
                 [
                     'label' => esc_html__('Tooltip', SHORTCODE_ADDOONS),
                     'showing' => TRUE,
+                    'condition' => [
+                        'sa_help_desk_title_as_tooltip' => 'yes'
+                    ]
                 ]
         );
 
@@ -883,7 +882,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}}  .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper span.oxi-ct-ribbons-inner' => 'width: {{SIZE}}px;',
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip' => 'width: {{SIZE}}px;',
                     ],
                 ]
         );
@@ -895,7 +894,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::TYPOGRAPHY,
                     'include' => Controls::ALIGNNORMAL,
                     'selector' => [
-                        '{{WRAPPER}} .oxi_addons__banner_style_1 .oxi_addons__heading' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip .tippy-content' => ''
                     ],
                 ]
         );
@@ -907,8 +906,7 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper span.oxi-ct-ribbons-inner' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper-top' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip' => 'color: {{VALUE}};',
                     ],
                 ]
         );
@@ -936,7 +934,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .oxi-ct-heading' => 'text-align: {{VALUE}};'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip .tippy-content' => 'text-align: {{VALUE}};'
                     ],
                 ]
         );
@@ -946,7 +944,8 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BACKGROUND,
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_numbers_style_2' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip,'
+                        . '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip .tippy-backdrop' => '',
                     ],
                 ]
         );
@@ -958,8 +957,10 @@ class Style_1 extends AdminStyle {
                     'type' => Controls::COLOR,
                     'default' => '#fff',
                     'selector' => [
-                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper span.oxi-ct-ribbons-inner' => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .oxi-ct-ribbons-yes .oxi-ct-ribbons-wrapper-top' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .oxi-helpdesk-style-1 .tippy-popper[x-placement^=left] .tippy-arrow' => 'border-left-color: {{VALUE}}',
+                        '{{WRAPPER}} .oxi-helpdesk-style-1 .tippy-popper[x-placement^=right] .tippy-arrow' => 'border-right-color: {{VALUE}}',
+                        '{{WRAPPER}} .oxi-helpdesk-style-1 .tippy-popper[x-placement^=top] .tippy-arrow' => 'border-top-color: {{VALUE}}',
+                        '{{WRAPPER}} .oxi-helpdesk-style-1 .tippy-popper[x-placement^=bottom] .tippy-arrow' => 'border-bottom-color: {{VALUE}}',
                     ],
                 ]
         );
@@ -969,7 +970,7 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BORDER,
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_numbers_style_2' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip' => ''
                     ],
                 ]
         );
@@ -1001,7 +1002,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_numbers_style_2' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                     ],
                 ]
         );
@@ -1034,7 +1035,7 @@ class Style_1 extends AdminStyle {
                         ],
                     ],
                     'selector' => [
-                        '{{WRAPPER}} .sa_addons_numbers_style_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                     ],
                 ]
         );
@@ -1044,7 +1045,7 @@ class Style_1 extends AdminStyle {
                 [
                     'type' => Controls::BOXSHADOW,
                     'selector' => [
-                        '{{WRAPPER}} .oxi-ct-btn' => ''
+                        '{{WRAPPER}} .oxi-helpdesk-style-1  .tippy-tooltip' => ''
                     ],
                 ]
         );

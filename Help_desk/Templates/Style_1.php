@@ -31,7 +31,7 @@ class Style_1 extends Templates {
 
 
                 function SaEltippyTooltip($helpdesk, $appendIn) {
-                    var $tooltip = $helpdesk.find(".sa-el-tippy-tooltip");
+                    var $tooltip = $helpdesk.find(".oxi-tippy-tooltip");
 
                     $tooltip.each(function (index) {
                         tippy(this, {
@@ -47,8 +47,9 @@ class Style_1 extends Templates {
     }
 
     public function public_jquery() {
-        wp_enqueue_script('tippy.js', SA_ADDONS_UPLOAD_URL . '/Help_desk/File/tippy/tippy.min.js', false, SA_ADDONS_PLUGIN_VERSION);
         wp_enqueue_script('popper.js', SA_ADDONS_UPLOAD_URL . '/Help_desk/File/popper/popper.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('tippy.js', SA_ADDONS_UPLOAD_URL . '/Help_desk/File/tippy/tippy.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        $this->JSHANDLE = 'tippy.js';
     }
 
     public function default_render($style, $child, $admin) {
@@ -109,6 +110,13 @@ class Style_1 extends Templates {
         if ('yes' != $settings['sa_help_desk_sup_messenger']) {
             return;
         }
+        $arrow = $tigger = '';
+        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
+            $arrow = 'true';
+        }
+        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
+            $tigger = 'click';
+        }
 
 //        $this->add_render_attribute('messenger', 'class', ['oxi-helpdesk-icons-item', 'oxi-hdi-messenger']);
 
@@ -130,7 +138,8 @@ class Style_1 extends Templates {
            data-tippy-content="<?php echo $settings['sa_help_desk_messenger_title_text']; ?>"
            data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
            data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
+           accesskey=""
+           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
            data-tippy-arrow="<?php echo $arrow; ?>"
            data-tippy-trigger="<?php echo $tigger; ?>"
            href="<?php echo $msg_link; ?>"
@@ -147,7 +156,13 @@ class Style_1 extends Templates {
     protected function sa_el_whatsapp() {
         $settings = $this->style;
         $whatsapp_target = $whatsapp_link = '';
-
+        $arrow = $tigger = '';
+        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
+            $arrow = 'true';
+        }
+        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
+            $tigger = 'click';
+        }
         if ('yes' != $settings['sa_help_desk_sup_whatsapp']) {
             return;
         }
@@ -170,7 +185,8 @@ class Style_1 extends Templates {
            data-tippy-content="<?php echo $settings['sa_help_desk_whatsapp_title_text']; ?>"
            data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
            data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
+           accesskey=""
+           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
            data-tippy-arrow="<?php echo $arrow; ?>"
            data-tippy-trigger="<?php echo $tigger; ?>"
            target="<?php echo $whatsapp_target; ?>"
@@ -187,7 +203,13 @@ class Style_1 extends Templates {
     protected function sa_el_telegram() {
         $settings = $this->style;
         $telegram_link = $telegram_target = '';
-
+        $arrow = $tigger = '';
+        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
+            $arrow = 'true';
+        }
+        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
+            $tigger = 'click';
+        }
         if ('yes' != $settings['sa_help_desk_sup_telegram']) {
             return;
         }
@@ -209,7 +231,8 @@ class Style_1 extends Templates {
            data-tippy-content="<?php echo $settings['sa_help_desk_telegram_title_text']; ?>"
            data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
            data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
+           accesskey=""
+           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
            data-tippy-arrow="<?php echo $arrow; ?>"
            data-tippy-trigger="<?php echo $tigger; ?>"
            target="<?php echo $telegram_target; ?>"
@@ -226,7 +249,13 @@ class Style_1 extends Templates {
     protected function sa_el_mailto() {
         $settings = $this->style;
         $email_link = $email_target = '';
-
+        $arrow = $tigger = '';
+        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
+            $arrow = 'true';
+        }
+        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
+            $tigger = 'click';
+        }
         if ('yes' != $settings['sa_help_desk_sup_email']) {
             return;
         }
@@ -257,7 +286,8 @@ class Style_1 extends Templates {
            data-tippy-content="<?php echo $settings['sa_help_desk_email_title_email_us']; ?>"
            data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
            data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
+           accesskey=""
+           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
            data-tippy-arrow="<?php echo $arrow; ?>"
            data-tippy-trigger="<?php echo $tigger; ?>"
            target="<?php echo $email_target; ?>"
@@ -274,7 +304,13 @@ class Style_1 extends Templates {
     protected function sa_el_custom() {
         $settings = $this->style;
         $custom_link = $custom_target = '';
-
+        $arrow = $tigger = '';
+        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
+            $arrow = 'true';
+        }
+        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
+            $tigger = 'click';
+        }
         if ('yes' != $settings['sa_help_desk_sup_custom']) {
             return;
         }
@@ -296,7 +332,8 @@ class Style_1 extends Templates {
            data-tippy-content="<?php echo $settings['sa_help_desk_custom_title_text']; ?>"
            data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
            data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
+           accesskey=""
+           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
            data-tippy-arrow="<?php echo $arrow; ?>"
            data-tippy-trigger="<?php echo $tigger; ?>"
            target="<?php echo $custom_target; ?>"
@@ -310,35 +347,35 @@ class Style_1 extends Templates {
         <?php
     }
 
-    public function sa_el_tooltip($icon) {
-        $settings = $this->style;
-
-        if ('yes' != $settings['sa_help_desk_title_as_tooltip']) {
-            return;
-        }
-
-        // Tooltip settings
-        $this->add_render_attribute($icon, 'class', 'oxi-tippy-tooltip');
-        $this->add_render_attribute($icon, 'data-tippy', '');
-
-        if ($settings['helpdesk_tooltip_placement']) {
-            $this->add_render_attribute($icon, 'data-tippy-placement', $settings['helpdesk_tooltip_placement']);
-        }
-
-        if ($settings['helpdesk_tooltip_animation']) {
-            $this->add_render_attribute($icon, 'data-tippy-animation', $settings['helpdesk_tooltip_animation']);
-        }
-
-        if ($settings['helpdesk_tooltip_x_offset']['size'] or $settings['helpdesk_tooltip_y_offset']['size']) {
-            $this->add_render_attribute($icon, 'data-tippy-offset', $settings['helpdesk_tooltip_x_offset']['size'] . ',' . $settings['helpdesk_tooltip_y_offset']['size']);
-        }
-
-        if ('yes' == $settings['helpdesk_tooltip_arrow']) {
-            $this->add_render_attribute($icon, 'data-tippy-arrow', 'true');
-        }
-
-        if ('yes' == $settings['helpdesk_tooltip_trigger']) {
-            $this->add_render_attribute($icon, 'data-tippy-trigger', 'click');
-        }
-    }
+//    public function sa_el_tooltip($icon) {
+//        $settings = $this->style;
+//
+//        if ('yes' != $settings['sa_help_desk_title_as_tooltip']) {
+//            return;
+//        }
+//
+//        // Tooltip settings
+//        $this->add_render_attribute($icon, 'class', 'oxi-tippy-tooltip');
+//        $this->add_render_attribute($icon, 'data-tippy', '');
+//
+//        if ($settings['helpdesk_tooltip_placement']) {
+//            $this->add_render_attribute($icon, 'data-tippy-placement', $settings['helpdesk_tooltip_placement']);
+//        }
+//
+//        if ($settings['helpdesk_tooltip_animation']) {
+//            $this->add_render_attribute($icon, 'data-tippy-animation', $settings['helpdesk_tooltip_animation']);
+//        }
+//
+//        if ($settings['helpdesk_tooltip_x_offset']['size'] or $settings['helpdesk_tooltip_y_offset']['size']) {
+//            $this->add_render_attribute($icon, 'data-tippy-offset', $settings['helpdesk_tooltip_x_offset']['size'] . ',' . $settings['helpdesk_tooltip_y_offset']['size']);
+//        }
+//
+//        if ('yes' == $settings['helpdesk_tooltip_arrow']) {
+//            $this->add_render_attribute($icon, 'data-tippy-arrow', 'true');
+//        }
+//
+//        if ('yes' == $settings['helpdesk_tooltip_trigger']) {
+//            $this->add_render_attribute($icon, 'data-tippy-trigger', 'click');
+//        }
+//    }
 }
