@@ -44,6 +44,7 @@ class Style_1 extends Templates {
     }
 
     public function inline_public_jquery() {
+        $jquery = "";
         $jquery .= ' 
                   var $iframe = $(".sa-iframe-style-1-section > iframe"),
             $autoHeight = $iframe.data("auto_height");
