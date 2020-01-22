@@ -19,7 +19,6 @@ class Style_1 extends Templates {
     public function public_jquery() {
         $this->JSHANDLE = 'rvslider.min,js';
         wp_enqueue_script('rvslider.min,js', SA_ADDONS_UPLOAD_URL . '/Video_gallery/file/rvslider.min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        
     }
 
     public function inline_public_jquery() {
@@ -36,7 +35,7 @@ class Style_1 extends Templates {
     public function default_render($style, $child, $admin) {
         $styledata = $this->style;
         $all_data = (array_key_exists('sa_video_gellery_data', $styledata) && is_array($styledata['sa_video_gellery_data'])) ? $styledata['sa_video_gellery_data'] : [];
-        $video_poster = $video_source = "";
+
         $continuous_play = $showonoff = $onHover = $horizontal = "";
         if (array_key_exists('sa_video_gellery_play_btn_on_off', $style) && $style['sa_video_gellery_play_btn_on_off'] == 'yes') {
             $onHover = 'rvs-show-play-on-hover';
@@ -49,7 +48,7 @@ class Style_1 extends Templates {
 
             $continuous_play = 'rvs-continuous-play';
         }
-         if ( $style['sa_video_gellery_temp_type'] == 'horizontal') {
+        if (array_key_exists('sa_video_gellery_temp_type', $style) && $style['sa_video_gellery_temp_type'] == 'horizontal') {
 
             $horizontal = 'rvs-horizontal';
         }
@@ -58,7 +57,8 @@ class Style_1 extends Templates {
             <div class="rvs-item-container">
                 <div class="rvs-item-stage"> <?php
                     foreach ($all_data as $key => $value) {
-                        $video_poster = ( $value['sa_video_gellery_poster_media'] != '' ) ? $this.media_render('sa_video_gellery_poster_media',$value) : 'https://www.sa-elementor-addons.com/wp-content/uploads/2019/12/placeholder-img.jpg';
+                        $video_poster = $video_source = "";
+                        $video_poster = ( $value['sa_video_gellery_poster_media'] != '' ) ? $this . media_render('sa_video_gellery_poster_media', $value) : 'https://www.sa-elementor-addons.com/wp-content/uploads/2019/12/placeholder-img.jpg';
                         $video_source = $value['sa_video_gellery_source'];
 
                         if ('local' == $value['sa_video_gellery_video_type']) {
