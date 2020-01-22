@@ -119,10 +119,10 @@ class Style_1 extends Templates {
         }
         
 
-        if (array_key_exists('oxi_inline_svg_custom_width', $style) &&  'yes' === $settings['oxi_inline_svg_custom_width']) {
+        if (array_key_exists('oxi_inline_svg_custom_width', $style) &&  'yes' === $style['oxi_inline_svg_custom_width']) {
             $custom_width =  'oxi-inline-svg--custom-width';
         }
-        if (array_key_exists('oxi_inline_svg_custom_color', $style) &&  'yes' === $settings['oxi_inline_svg_custom_color']) {
+        if (array_key_exists('oxi_inline_svg_custom_color', $style) &&  'yes' === $style['oxi_inline_svg_custom_color']) {
             $custom_color =  'oxi-inline-svg--custom-color';
         }
 
