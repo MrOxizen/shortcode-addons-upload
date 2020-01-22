@@ -57,8 +57,8 @@ class Style_1 extends Templates {
             <div class="rvs-item-container">
                 <div class="rvs-item-stage"> <?php
                     foreach ($all_data as $key => $value) {
-                        $video_poster = $video_source = "";
-                        $video_poster = ( $value['sa_video_gellery_poster_media'] != '' ) ? $this . media_render('sa_video_gellery_poster_media', $value) : 'https://www.sa-elementor-addons.com/wp-content/uploads/2019/12/placeholder-img.jpg';
+                        $video_poster = $video_source = $match ="";
+                        $video_poster = ( $this->media_render('sa_video_gellery_poster_media', $value) != '' ) ? $this->media_render('sa_video_gellery_poster_media', $value) : 'https://www.sa-elementor-addons.com/wp-content/uploads/2019/12/placeholder-img.jpg';
                         $video_source = $value['sa_video_gellery_source'];
 
                         if ('local' == $value['sa_video_gellery_video_type']) {
@@ -70,10 +70,10 @@ class Style_1 extends Templates {
 
                             if ($youtube_id) {
                                 $video_source = 'https://www.youtube.com/watch?v=' . $youtube_id;
-                                $video_poster = ( $value['sa_video_gellery_poster_media'] ) ? $value['sa_video_gellery_poster_media'] : 'https://img.youtube.com/vi/' . $youtube_id . '/maxresdefault.jpg';
+                                $video_poster = ( $this->media_render('sa_video_gellery_poster_media', $value) ) ? $this->media_render('sa_video_gellery_poster_media', $value) : 'https://img.youtube.com/vi/' . $youtube_id . '/maxresdefault.jpg';
                             } elseif ($vimeo_id) {
                                 $video_source = 'https://vimeo.com/' . $vimeo_id;
-                                $video_poster = ( $value['sa_video_gellery_poster_media'] ) ? $value['sa_video_gellery_poster_media'] : 'https://i.vimeocdn.com/video/' . $vimeo_id . '.webp?mw=960&mh=540';
+                                $video_poster = ( $this->media_render('sa_video_gellery_poster_media', $value) ) ? $this->media_render('sa_video_gellery_poster_media', $value) : 'https://i.vimeocdn.com/video/' . $vimeo_id . '.webp?mw=960&mh=540';
                             }
                         }
                         ?>
@@ -111,16 +111,16 @@ class Style_1 extends Templates {
                     <?php
                     foreach ($all_data as $key => $value) :
                         $video_thumbnail = "";
-                        $video_thumbnail = ( $value['sa_video_gellery_poster_media'] ) ? $value['sa_video_gellery_poster_media'] : 'https://www.sa-elementor-addons.com/wp-content/uploads/2019/12/placeholder-img.jpg';
+                        $video_thumbnail = ( $this->media_render('sa_video_gellery_poster_media', $value) ) ? $this->media_render('sa_video_gellery_poster_media', $value) : 'https://www.sa-elementor-addons.com/wp-content/uploads/2019/12/placeholder-img.jpg';
 
                         $youtube_id = (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $value['sa_video_gellery_source'], $match) ) ? $match[1] : false;
 
                         $vimeo_id = ( preg_match('%^https?:\/\/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|video\/|)(\d+)(?:$|\/|\?)(?:[?]?.*)$%im', $value['sa_video_gellery_source'], $match) ) ? $match[3] : false;
 
                         if ($youtube_id) {
-                            $video_thumbnail = ( $value['sa_video_gellery_poster_media'] ) ? $value['sa_video_gellery_poster_media'] : 'https://img.youtube.com/vi/' . $youtube_id . '/default.jpg';
+                            $video_thumbnail = ( $this->media_render('sa_video_gellery_poster_media', $value) ) ? $this->media_render('sa_video_gellery_poster_media', $value) : 'https://img.youtube.com/vi/' . $youtube_id . '/default.jpg';
                         } elseif ($vimeo_id) {
-                            $video_thumbnail = ( $value['sa_video_gellery_poster_media'] ) ? $value['sa_video_gellery_poster_media'] : 'https://i.vimeocdn.com/video/' . $vimeo_id . '.webp?mw=60&mh=60';
+                            $video_thumbnail = ( $this->media_render('sa_video_gellery_poster_media', $value) ) ? $this->media_render('sa_video_gellery_poster_media', $value) : 'https://i.vimeocdn.com/video/' . $vimeo_id . '.webp?mw=60&mh=60';
                         }
                         ?>
                         <!-- nav items go here -->
