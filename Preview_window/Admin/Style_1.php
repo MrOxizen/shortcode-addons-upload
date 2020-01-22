@@ -166,11 +166,21 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
+            'sa_preview_window_tootle_note',
+            $this->style,
+            [
+                'label' => __('Note', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+                'description' => 'Some fields work after saving and reloading',
+            ]
+        );
+        $this->add_control(
             'sa_preview_window_tooltip_img_switcher',
             $this->style,
             [
                 'label' => __('Image', SHORTCODE_ADDOONS),
                 'type' => Controls::SWITCHER,
+                'loader' => TRUE,
                 'default' => 'yes',
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
@@ -229,7 +239,7 @@ class Style_1 extends AdminStyle
                     'sa_preview_window_tooltip_img_switcher' => 'yes'
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . '' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_wrap_' . $id . '' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -255,7 +265,10 @@ class Style_1 extends AdminStyle
                 'default' => __('Preview Image', SHORTCODE_ADDOONS),
                 'condition' => [
                     'sa_preview_window_tooltip_title_switcher' => 'yes'
-                ]
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
+                ],
             ]
         );
         $this->add_control(
@@ -305,7 +318,7 @@ class Style_1 extends AdminStyle
                     'sa_preview_window_tooltip_title_switcher' => 'yes'
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_title_wrap_' . $id . '' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_title_wrap_' . $id . '' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -331,7 +344,10 @@ class Style_1 extends AdminStyle
                 'default' => __('Lorem ipsum dolor sit amet, consectetur adipiscing elit', SHORTCODE_ADDOONS),
                 'condition' => [
                     'sa_preview_window_tooltip_desc_switcher' => 'yes'
-                ]
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_desc_wrap_' . $id . '' => '',
+                ],
             ]
         );
         $this->add_responsive_control(
@@ -360,7 +376,7 @@ class Style_1 extends AdminStyle
                     'sa_preview_window_tooltip_desc_switcher' => 'yes'
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -373,6 +389,15 @@ class Style_1 extends AdminStyle
             [
                 'label' => esc_html__('Advanced Settings', SHORTCODE_ADDOONS),
                 'showing' => TRUE,
+            ]
+        );
+        $this->add_control(
+            'sa_preview_window_note',
+            $this->style,
+            [
+                'label' => __('Note', SHORTCODE_ADDOONS),
+                'type' => Controls::HEADING,
+                'description' => 'Some fields work after saving and reloading',
             ]
         );
         $this->add_control(
@@ -921,7 +946,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . '' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . '' => '',
                 ],
             ]
         );
@@ -931,7 +956,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . '' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . '' => '',
                 ]
             ]
         );
@@ -941,7 +966,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . '' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . '' => '',
                 ]
             ]
         );
@@ -973,7 +998,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1005,7 +1030,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1037,7 +1062,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1059,7 +1084,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BACKGROUND,
                 'selector' => [
-                    '.sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => '',
                 ],
             ]
         );
@@ -1069,7 +1094,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '.sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => '',
                 ]
             ]
         );
@@ -1079,7 +1104,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '.sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => '',
                 ]
             ]
         );
@@ -1111,7 +1136,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1143,7 +1168,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1175,7 +1200,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_img_wrap_' . $id . ' .sa_preview_image_tooltips_img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1198,7 +1223,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1208,7 +1233,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
                 ],
             ]
         );
@@ -1218,7 +1243,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TEXTSHADOW,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
                 ],
             ]
         );
@@ -1229,7 +1254,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::GRADIENT,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
                 ],
             ]
         );
@@ -1239,7 +1264,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_preview_image_container_style_1 .sa_preview_window_heading' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
                 ],
             ]
         );
@@ -1271,7 +1296,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_preview_image_container_style_1 .sa_preview_window_heading' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1303,7 +1328,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1335,7 +1360,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1357,7 +1382,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Color', SHORTCODE_ADDOONS),
                 'type' => Controls::COLOR,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -1367,7 +1392,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::TYPOGRAPHY,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => '',
                 ],
             ]
         );
@@ -1378,7 +1403,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Background', SHORTCODE_ADDOONS),
                 'type' => Controls::GRADIENT,
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1388,7 +1413,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '{{WRAPPER}} .sa_preview_image_container_style_1 .sa_preview_window_heading' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => '',
                 ],
             ]
         );
@@ -1420,7 +1445,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_preview_image_container_style_1 .sa_preview_window_heading' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1452,7 +1477,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1484,7 +1509,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .sa_prev_img_tooltip_wrap_' . $id . ' .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1505,7 +1530,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Inner Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::GRADIENT,
                 'selector' => [
-                    '.tooltipster-sidetip div.tooltipster-box-' . $id . ' .tooltipster-content' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa__prev___imag, .tooltipster-sidetip div.tooltipster-box-' . $id . ' .tooltipster-content' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1516,7 +1541,7 @@ class Style_1 extends AdminStyle
                 'label' => __('Outer Background Color', SHORTCODE_ADDOONS),
                 'type' => Controls::GRADIENT,
                 'selector' => [
-                    '.tooltipster-sidetip div.tooltipster-box-' . $id . '' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .sa__prev___imag, .tooltipster-sidetip div.tooltipster-box-' . $id . '' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -1526,7 +1551,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BOXSHADOW,
                 'selector' => [
-                    '.tooltipster-sidetip div.tooltipster-box-' . $id . '' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .tooltipster-sidetip div.tooltipster-box-' . $id . '' => '',
                 ],
             ]
         );
@@ -1536,7 +1561,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    '.tooltipster-sidetip div.tooltipster-box-' . $id . '' => '',
+                    '{{WRAPPER}} .sa__prev___imag, .tooltipster-sidetip div.tooltipster-box-' . $id . '' => '',
                 ],
             ]
         );
@@ -1568,7 +1593,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.tooltipster-sidetip div.tooltipster-box-' . $id . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .tooltipster-sidetip div.tooltipster-box-' . $id . '' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -1600,11 +1625,11 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '.tooltipster-sidetip div.tooltipster-box-' . $id . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sa__prev___imag, .tooltipster-sidetip div.tooltipster-box-' . $id . '' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
-        
+
         $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();

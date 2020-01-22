@@ -43,7 +43,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXTAREA,
                 'default' => 'This website uses cookies to ensure you get the best experience on our website.',
                 'selector' => [
-                    '{{WRAPPER}} .sa_cookie_consent_container_style_1 .protected_content' => ''
+                    '{{WRAPPER}} .c__sa___sa, .cc-window .cc-message' => ''
                 ],
             ]
         );
@@ -56,7 +56,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXT,
                 'default' => esc_html__('Got it!', SHORTCODE_ADDOONS),
                 'selector' => [
-                    '{{WRAPPER}} .sa_cookie_consent_container_style_1 .sa_cookie_consent_message_text' => ''
+                    '{{WRAPPER}} .c__sa___sa, .cc-window .cc-compliance a' => ''
                 ],
             ]
         );
@@ -68,7 +68,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXT,
                 'default' => esc_html__('Learn more', SHORTCODE_ADDOONS),
                 'selector' => [
-                    '{{WRAPPER}} .sa_cookie_consent_container_style_1 .sa_cookie_consent_message_text' => ''
+                    '{{WRAPPER}} .c__sa___sa, .cc-window .cc-message a' => ''
                 ],
             ]
         );
@@ -79,6 +79,7 @@ class Style_1 extends AdminStyle
                 'label' => esc_html__('Link', SHORTCODE_ADDOONS),
                 'type' => Controls::TEXT,
                 'default' => esc_html__('http://cookiesandyou.com/', SHORTCODE_ADDOONS),
+                'description' => 'Please Save And Reload',
             ]
         );
         $this->add_control(
@@ -87,6 +88,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Position', SHORTCODE_ADDOONS),
                 'type' => Controls::SELECT,
+                'description' => 'Please Save And Reload',
                 'loader' => TRUE,
                 'options' => [
                     'bottom' => esc_html__('Bottom', SHORTCODE_ADDOONS),
@@ -117,6 +119,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Expiry Days', SHORTCODE_ADDOONS),
                 'type' => Controls::SLIDER,
+                'description' => 'Please Save And Reload',
                 'default' => [
                     'unit' => 'px',
                     'size' => '365',
@@ -127,9 +130,6 @@ class Style_1 extends AdminStyle
                         'max' => 1200,
                         'step' => 1,
                     ],
-                ],
-                'selector' => [
-                    '{{WRAPPER}} .sa_cookie_consent_container_style_1' => 'max-width: {{SIZE}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -170,7 +170,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    'body .cc-window.cc-banner' => 'max-width: {{SIZE}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window.cc-banner' => 'max-width: {{SIZE}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -182,7 +182,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ff56c6',
                 'selector' => [
-                    'body .cc-window' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -192,7 +192,7 @@ class Style_1 extends AdminStyle
             [
                 'type' => Controls::BORDER,
                 'selector' => [
-                    'body .cc-window.cc-banner' => '',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window.cc-banner' => '',
                 ],
             ]
         );
@@ -224,7 +224,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    'body .cc-window.cc-banner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window.cc-banner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -256,7 +256,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    'body .cc-window.cc-banner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window.cc-banner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -279,7 +279,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TYPOGRAPHY,
                 'include' => Controls::ALIGNNORMAL,
                 'selector' => [
-                    'body .cc-window *' => '',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window *' => '',
                 ],
             ]
         );
@@ -291,7 +291,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#fff',
                 'selector' => [
-                    'body .cc-window' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -303,7 +303,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#f9ff4c',
                 'selector' => [
-                    'body .cc-window .cc-link' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-link' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -334,7 +334,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '#ffffff',
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -347,7 +347,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '#8e0077',
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -367,7 +367,7 @@ class Style_1 extends AdminStyle
                         'groove' => __('Groove', SHORTCODE_ADDOONS),
                     ],
                     'selector' => [
-                        'body .cc-window .cc-btn.cc-dismiss' => 'border-style: {{VALUE}} !important;',
+                        '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-style: {{VALUE}} !important;',
                     ],
             ]
         );
@@ -399,7 +399,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -411,7 +411,7 @@ class Style_1 extends AdminStyle
                     'type' => Controls::COLOR,
                     'default' => '#ccc',
                     'selector' => [
-                        'body .cc-window .cc-btn.cc-dismiss' => 'border-color: {{VALUE}} !important;',
+                        '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-color: {{VALUE}} !important;',
                     ],
             ]
         );
@@ -425,7 +425,7 @@ class Style_1 extends AdminStyle
                 'type' => Controls::COLOR,
                 'default' => '',
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss:hover' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss:hover' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -438,7 +438,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss:hover' => 'background: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss:hover' => 'background: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -452,7 +452,7 @@ class Style_1 extends AdminStyle
                 'oparator' => 'RGB',
                 'default' => '',
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss:hover' => 'border-color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss:hover' => 'border-color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -488,7 +488,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -520,7 +520,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
@@ -552,7 +552,7 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    'body .cc-window .cc-btn.cc-dismiss' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
                 ],
             ]
         );
