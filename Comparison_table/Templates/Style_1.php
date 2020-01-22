@@ -116,7 +116,7 @@ class Style_1 extends Templates {
                     foreach ($child as $key => $v) {
                         $value = ($v['rawdata'] != '' ? json_decode(stripcslashes($v['rawdata']), true) : []);
 
-                        echo '<td class="oxi-ct-plan oxi-table-' . $k . '"><div class="oxi-ct-price-wrapper">';
+                        echo '<td class="oxi-ct-plan oxi-table-' . $key . '"><div class="oxi-ct-price-wrapper">';
 
                         if ($value['sa_comparison_table_offer_dis_on_off'] == 'yes') {
                             echo '<span class="oxi-ct-original-price">';
