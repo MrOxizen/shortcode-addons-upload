@@ -21,3 +21,6 @@
 .oxi_addons__image_magnifier_style_1 .oxi_addons__image:hover{
 	cursor: crosshair;
 }
+.oxi_addons__image_magnifier_style_1 .oxi_addons__magnifier_right{
+	top: 0px;
+}

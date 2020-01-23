@@ -171,7 +171,7 @@ class Style_1 extends AdminStyle
         
         $this->start_controls_section(
             'shortcode-addons', [
-                'label' => esc_html__('Image Settings ', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Image Settings', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
         );  
@@ -190,7 +190,7 @@ class Style_1 extends AdminStyle
                     ],
                     'center' => [
                         'title' => __('Center', SHORTCODE_ADDOONS),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'fa fa-align-center', 
                     ],
                     'flex-end' => [
                         'title' => __('Right', SHORTCODE_ADDOONS),
@@ -242,7 +242,7 @@ class Style_1 extends AdminStyle
                 'range' => [
                     '%' => [
                         'min' => 50,
-                        'max' => 250,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     'px' => [
@@ -364,10 +364,7 @@ class Style_1 extends AdminStyle
                     'right' => __('Right', SHORTCODE_ADDOONS),  
                     'bottom' => __('Bottom', SHORTCODE_ADDOONS),  
                     'left' => __('Left', SHORTCODE_ADDOONS),  
-                ], 
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__interactive_promo_content_style_1 .oxi_addons__badge' => '',
-                ],
+                ],  
             ]
         );
         $this->add_control(
@@ -458,8 +455,68 @@ class Style_1 extends AdminStyle
                         'min' => -500,
                         'max' => 500,
                         'step' => 2,
+                    ], 
+                ], 
+            ]
+        ); 
+        $this->add_control(
+            'sa_image_magnifier_magnifi_top_left',
+            $this->style,
+            [
+                'label' => __('Top Bottom Position', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_image_magnifier_magnifi_position' => 'left', 
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [ 
+                    'px' => [
+                        'min' => -400,
+                        'max' => 400,
+                        'step' => 3,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 5,
                     ],
                 ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_1 .oxi_addons__magnifier_left' => 'top: {{SIZE}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_image_magnifier_magnifi_top_bottom',
+            $this->style,
+            [
+                'label' => __('Top Bottom Position', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'condition' => [
+                    'sa_image_magnifier_magnifi_position' => 'right', 
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [ 
+                    'px' => [
+                        'min' => -400,
+                        'max' => 400,
+                        'step' => 3,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 5,
+                    ],
+                ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_1 .oxi_addons__magnifier_right' => 'top: {{SIZE}}{{UNIT}} !important;',
+                ],
             ]
         );
         $this->add_control(
@@ -476,7 +533,8 @@ class Style_1 extends AdminStyle
             ]
         );
 
-        $this->add_control(
+      
+        $this->add_responsive_control(
             'sa_image_magnifier_magnifi_width',
             $this->style,
             [
@@ -495,10 +553,18 @@ class Style_1 extends AdminStyle
                         'max' => 1500,
                         'step' => 10,
                     ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 5,
+                    ],
                 ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_1 .zoomable.oxi_addons__magnifier' => 'width: {{SIZE}}{{UNIT}} !important;',
+                ],
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'sa_image_magnifier_magnifi_height',
             $this->style,
             [
@@ -514,7 +580,15 @@ class Style_1 extends AdminStyle
                         'max' => 1200,
                         'step' => 1,
                     ], 
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 5,
+                    ],
                 ], 
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_1 .zoomable.oxi_addons__magnifier' => 'height: {{SIZE}}{{UNIT}} !important;',
+                ],
                 'condition' => [
                     'sa_image_magnifier_magnifi_switcher' => 'yes', 
                 ],
