@@ -6,4 +6,4 @@
   Date: 12/01/2020
  */
 
-return array('2.0.0', 'Dynamic Contents', true, 'far fa-calendar-alt', false);
+return array('2.0.0', 'Dynamic Contents', true, 'far fa-calendar-alt', true);

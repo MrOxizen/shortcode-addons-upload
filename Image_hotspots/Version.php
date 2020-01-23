@@ -5,4 +5,4 @@
   Created By Sabibur Rahman
  */
 
-return array('2.0.0', 'Image Effects', true, 'fas fa-crosshairs', false);
+return array('2.0.0', 'Image Effects', true, 'fas fa-crosshairs', true);
