@@ -5,4 +5,4 @@
  * Checked by 
  */
 
-return array('2.0.3', 'Carousel & Slider', true, 'fas fa-sliders-h', false);
+return array('2.0.3', 'Carousel & Slider', true, 'fas fa-sliders-h', true);

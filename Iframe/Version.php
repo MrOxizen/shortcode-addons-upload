@@ -5,4 +5,4 @@
  * Create By Jabir
  */
 
-return array('2.1.0', 'Creative Elements', true, 'fab fa-deviantart', true);
+return array('2.1.0', 'Creative Elements', true, 'fab fa-deviantart', false);
