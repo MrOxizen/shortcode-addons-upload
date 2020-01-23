@@ -20,39 +20,51 @@ class Style_1 extends Templates {
 //        
 //    }
     public function inline_public_jquery() {
+        $arrow = $animation = $distance = $place = "";
 
-        $js = 'var $helpdesk = $(".oxi-helpdesk"),
+        $settings = $this->style;
+        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
+            $arrow = ' arrow : true,';
+        } else {
+            $arrow = ' arrow : false,';
+        }
+
+        if ($settings['sa_help_desk_title_animation'] != '') {
+            $animation = 'animation : "' . $settings['sa_help_desk_title_animation'] . '",';
+        }
+        if ($settings['sa_help_desk_title_distance'] != '') {
+            $distance = 'distance : ' . $settings['sa_help_desk_title_distance'] . ',';
+        }
+        if ($settings['sa_help_desk_title_placement'] != '') {
+            $place = 'side : "' . $settings['sa_help_desk_title_placement'] . '",';
+        }
+        $js = 'setTimeout(function(){
+            $(".tooltipster-base").addClass("oxi-tippy-tooltip-' . $this->oxiid . '");
+                 var $helpdesk = $(".' . $this->WRAPPER . ' .oxi-helpdesk"),
                         $helpdeskTooltip = $helpdesk.find(".oxi-helpdesk-icons");
 
                 if (!$helpdesk.length) {
                     return;
                 }
-                SaEltippyTooltip($helpdesk, $helpdeskTooltip);
+                $(".' . $this->WRAPPER . ' .oxi-tippy-tooltip").tooltipster({
+                    theme: ["tooltipster-noir", "tooltipster-noir-customized"],
+                   ' . $place . '
+                    ' . $distance . '
+                    ' . $animation . '
+                   ' . $arrow . '
 
-
-                function SaEltippyTooltip($helpdesk, $appendIn) {
-                    var $tooltip = $helpdesk.find(".oxi-tippy-tooltip");
-
-                    $tooltip.each(function (index) {
-                        tippy(this, {
-                            appendTo: $appendIn[0]
-                        });
-                    });
-                };';
+                 });
+                 
+                },1000);';
+//        echo $place;
         return $js;
     }
 
-    public function public_css() {
-        wp_enqueue_style('tippy.css', SA_ADDONS_UPLOAD_URL . '/Help_desk/File/tippy/tippy.min.css', false, SA_ADDONS_PLUGIN_VERSION);
-    }
-
-    public function public_jquery() {
-        wp_enqueue_script('popper.js', SA_ADDONS_UPLOAD_URL . '/Help_desk/File/popper/popper.min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        wp_enqueue_script('tippy.js', SA_ADDONS_UPLOAD_URL . '/Help_desk/File/tippy/tippy.min.js', false, SA_ADDONS_PLUGIN_VERSION);
-        $this->JSHANDLE = 'tippy.js';
-    }
 
     public function default_render($style, $child, $admin) {
+        wp_enqueue_script("tooltipster-bundle-min", SA_ADDONS_UPLOAD_URL . 'Help_desk/File/tooltipster.bundle.min.js', ['jquery'], '', true);
+        wp_enqueue_style("tooltipster-bundle-min-css", SA_ADDONS_UPLOAD_URL . 'Help_desk/File/tooltipster.bundle.min.css', null, '', FALSE);
+
         $arrow = $tigger = '';
         $settings = $style;
         if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
@@ -71,11 +83,11 @@ class Style_1 extends Templates {
                     <label class="oxi-helpdesk-icons-open-button" for="<?php echo $id; ?>" title="<?php echo $this->text_render($settings['sa_help_desk_main_icon_text']); ?>">
                         <i class="<?php echo esc_attr($settings['sa_help_desk_main_icon']); ?>" aria-hidden="true"></i>
                     </label>
-                    <?php $this->sa_el_messenger(); ?>
-                    <?php $this->sa_el_whatsapp(); ?>
-                    <?php $this->sa_el_telegram(); ?>
-                    <?php $this->sa_el_mailto(); ?>
-                    <?php $this->sa_el_custom(); ?>
+                    <?php $this->oxi_messenger(); ?>
+                    <?php $this->oxi_whatsapp(); ?>
+                    <?php $this->oxi_telegram(); ?>
+                    <?php $this->oxi_mailto(); ?>
+                    <?php $this->oxi_custom(); ?>
                 </nav>
 
 
@@ -104,18 +116,11 @@ class Style_1 extends Templates {
         <?php
     }
 
-    protected function sa_el_messenger() {
+    protected function oxi_messenger() {
         $settings = $this->style;
         $msg_target = $msg_link = '';
         if ('yes' != $settings['sa_help_desk_sup_messenger']) {
             return;
-        }
-        $arrow = $tigger = '';
-        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
-            $arrow = 'true';
-        }
-        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
-            $tigger = 'click';
         }
 
 //        $this->add_render_attribute('messenger', 'class', ['oxi-helpdesk-icons-item', 'oxi-hdi-messenger']);
@@ -133,19 +138,11 @@ class Style_1 extends Templates {
         ?>
 
 
-        <a class="oxi-helpdesk-icons-item oxi-hdi-messenger oxi-tippy-tooltip"
-           data-tippy=""
-           data-tippy-content="<?php echo $settings['sa_help_desk_messenger_title_text']; ?>"
-           data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
-           data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""
-           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
-           data-tippy-arrow="<?php echo $arrow; ?>"
-           data-tippy-trigger="<?php echo $tigger; ?>"
-           href="<?php echo $msg_link; ?>"
-           target="<?php echo $msg_target; ?>"
+        <a class="oxi-helpdesk-icons-item oxi-hdi-messenger oxi-tippy-tooltip" data-tooltip-content="<?php echo $this->oxiid . '-idnum'; ?>" title="<?php echo $this->text_render($settings['sa_help_desk_messenger_title_text']); ?>"
+           target="<?php echo $custom_target; ?>"
+           href="<?php echo $custom_link; ?>"
            >
-               <?php // echo  $this->font_awesome_render($settings['sa_help_desk_sup_messenger_icon']); ?>
+               <?php // echo  $this->font_awesome_render($settings['sa_help_desk_sup_messenger_icon']);  ?>
             <i class="<?php echo esc_attr($settings['sa_help_desk_sup_messenger_icon']); ?>" aria-hidden="true"></i>
 
         </a>		
@@ -153,16 +150,10 @@ class Style_1 extends Templates {
         <?php
     }
 
-    protected function sa_el_whatsapp() {
+    protected function oxi_whatsapp() {
         $settings = $this->style;
         $whatsapp_target = $whatsapp_link = '';
-        $arrow = $tigger = '';
-        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
-            $arrow = 'true';
-        }
-        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
-            $tigger = 'click';
-        }
+
         if ('yes' != $settings['sa_help_desk_sup_whatsapp']) {
             return;
         }
@@ -180,15 +171,8 @@ class Style_1 extends Templates {
         ?>
 
 
-        <a class="oxi-helpdesk-icons-item oxi-hdi-whatsapp oxi-tippy-tooltip"
-           data-tippy=""
-           data-tippy-content="<?php echo $settings['sa_help_desk_whatsapp_title_text']; ?>"
-           data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
-           data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""
-           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
-           data-tippy-arrow="<?php echo $arrow; ?>"
-           data-tippy-trigger="<?php echo $tigger; ?>"
+        <a class="oxi-helpdesk-icons-item oxi-hdi-whatsapp oxi-tippy-tooltip" title="<?php echo $this->text_render($settings['sa_help_desk_whatsapp_title_text']); ?>"
+
            target="<?php echo $whatsapp_target; ?>"
            href="<?php echo $whatsapp_link; ?>"
            >
@@ -200,16 +184,11 @@ class Style_1 extends Templates {
         <?php
     }
 
-    protected function sa_el_telegram() {
+    protected function oxi_telegram() {
         $settings = $this->style;
         $telegram_link = $telegram_target = '';
         $arrow = $tigger = '';
-        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
-            $arrow = 'true';
-        }
-        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
-            $tigger = 'click';
-        }
+
         if ('yes' != $settings['sa_help_desk_sup_telegram']) {
             return;
         }
@@ -226,15 +205,8 @@ class Style_1 extends Templates {
         ?>
 
 
-        <a class="oxi-helpdesk-icons-item oxi-hdi-telegram oxi-tippy-tooltip"
-           data-tippy=""
-           data-tippy-content="<?php echo $settings['sa_help_desk_telegram_title_text']; ?>"
-           data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
-           data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""
-           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
-           data-tippy-arrow="<?php echo $arrow; ?>"
-           data-tippy-trigger="<?php echo $tigger; ?>"
+        <a class="oxi-helpdesk-icons-item oxi-hdi-telegram oxi-tippy-tooltip" title="<?php echo $this->text_render($settings['sa_help_desk_telegram_title_text']); ?>"
+
            target="<?php echo $telegram_target; ?>"
            href="<?php echo $telegram_link; ?>"
            >
@@ -246,16 +218,11 @@ class Style_1 extends Templates {
         <?php
     }
 
-    protected function sa_el_mailto() {
+    protected function oxi_mailto() {
         $settings = $this->style;
         $email_link = $email_target = '';
-        $arrow = $tigger = '';
-        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
-            $arrow = 'true';
-        }
-        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
-            $tigger = 'click';
-        }
+
+
         if ('yes' != $settings['sa_help_desk_sup_email']) {
             return;
         }
@@ -281,15 +248,7 @@ class Style_1 extends Templates {
         ?>
 
 
-        <a class="oxi-helpdesk-icons-item oxi-hdi-email oxi-tippy-tooltip"
-           data-tippy=""
-           data-tippy-content="<?php echo $settings['sa_help_desk_email_title_email_us']; ?>"
-           data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
-           data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""
-           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
-           data-tippy-arrow="<?php echo $arrow; ?>"
-           data-tippy-trigger="<?php echo $tigger; ?>"
+        <a class="oxi-helpdesk-icons-item oxi-hdi-email oxi-tippy-tooltip" title="<?php echo $this->text_render($settings['sa_help_desk_email_title_email_us']); ?>"
            target="<?php echo $email_target; ?>"
            href="<?php echo $email_link; ?>"
            >
@@ -301,16 +260,10 @@ class Style_1 extends Templates {
         <?php
     }
 
-    protected function sa_el_custom() {
+    protected function oxi_custom() {
         $settings = $this->style;
         $custom_link = $custom_target = '';
-        $arrow = $tigger = '';
-        if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
-            $arrow = 'true';
-        }
-        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
-            $tigger = 'click';
-        }
+
         if ('yes' != $settings['sa_help_desk_sup_custom']) {
             return;
         }
@@ -327,15 +280,8 @@ class Style_1 extends Templates {
         ?>
 
 
-        <a class="oxi-helpdesk-icons-item oxi-hdi-custom oxi-tippy-tooltip"
-           data-tippy=""
-           data-tippy-content="<?php echo $settings['sa_help_desk_custom_title_text']; ?>"
-           data-tippy-placement="<?php echo $settings['sa_help_desk_title_placement']; ?>"
-           data-tippy-animation="<?php echo $settings['sa_help_desk_title_animation']; ?>"
-           accesskey=""
-           data-tippy-offset="<?php echo $settings['sa_help_desk_title_offset'] . "," . $settings['sa_help_desk_title_distance']; ?>"
-           data-tippy-arrow="<?php echo $arrow; ?>"
-           data-tippy-trigger="<?php echo $tigger; ?>"
+        <a class="oxi-helpdesk-icons-item oxi-hdi-custom oxi-tippy-tooltip" title="<?php echo $this->text_render($settings['sa_help_desk_custom_title_text']); ?>"
+
            target="<?php echo $custom_target; ?>"
            href="<?php echo $custom_link; ?>"
            >
@@ -347,7 +293,7 @@ class Style_1 extends Templates {
         <?php
     }
 
-//    public function sa_el_tooltip($icon) {
+//    public function oxi_tooltip($icon) {
 //        $settings = $this->style;
 //
 //        if ('yes' != $settings['sa_help_desk_title_as_tooltip']) {

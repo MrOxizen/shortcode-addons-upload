@@ -1,18 +1,16 @@
-.oxi-helpdesk {
-    z-index: 99;
+.oxi-helpdesk-style-1 .oxi-helpdesk {
+    z-index: 99999;
     position: relative
 }
 
-.oxi-helpdesk-style-1 {
-    z-index: 99999;
-}
 
-.oxi-helpdesk .oxi-helpdesk-icons {
+
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons {
     filter: url("#oxi-helpdesk-icon-wrapper");
     -webkit-filter: url("#oxi-helpdesk-icon-wrapper");
 }
 
-.oxi-helpdesk .hamburger {
+.oxi-helpdesk-style-1   .hamburger {
     width: 40%;
     height: 3px;
     background: white;
@@ -24,8 +22,8 @@
     transform: translateX(-50%)
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-item,
-.oxi-helpdesk .oxi-helpdesk-icons-open-button {
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item,
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-open-button {
     background: #32DED4;
     border-radius: 100%;
     width: 50px;
@@ -42,11 +40,11 @@
     transition: all ease-out 200ms
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open {
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-open {
     display: none
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons {
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons {
     position: fixed;
     bottom: 30px;
     height: 480px;
@@ -56,7 +54,7 @@
     text-align: center
 }
 
-.oxi-helpdesk span.helpdesk-intro-text {
+.oxi-helpdesk-style-1   span.helpdesk-intro-text {
     position: absolute;
     right: 100%;
     background: #fff;
@@ -72,50 +70,50 @@
     bottom: 6px
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-item svg {
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item svg {
     width: 20px;
     height: auto
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-item:hover {
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item:hover {
     background: white;
     color: #32DED4;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-item:nth-child(3),
-.oxi-helpdesk .oxi-helpdesk-icons-item:nth-child(4),
-.oxi-helpdesk .oxi-helpdesk-icons-item:nth-child(5),
-.oxi-helpdesk .oxi-helpdesk-icons-item:nth-child(6),
-.oxi-helpdesk .oxi-helpdesk-icons-item:nth-child(7) {
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item:nth-child(3),
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item:nth-child(4),
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item:nth-child(5),
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item:nth-child(6),
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-item:nth-child(7) {
     transition-duration: 180ms
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open-button {
+.oxi-helpdesk-style-1   .oxi-helpdesk-icons-open-button {
     z-index: 2;
     transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
     transition-duration: 400ms;
     cursor: pointer
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open-button:hover {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open-button:hover {
     transform: scale(1.1, 1.1) translate3d(0, 0, 0)
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked+.oxi-helpdesk-icons-open-button {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked+.oxi-helpdesk-icons-open-button {
     transition-timing-function: linear;
     transition-duration: 200ms
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked+.oxi-helpdesk-icons-open-button .far.fa-life-ring {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked+.oxi-helpdesk-icons-open-button .far.fa-life-ring {
     animation: helpdeskrotate 3s cubic-bezier(.3, .4, .3, .95) 0s infinite normal
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item {
     transition-timing-function: cubic-bezier(.43, 1.04, .53, .95)
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(3) {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(3) {
     transition-duration: 220ms;
     transform: translate3d(0, -60px, 0);
     -webkit-transform: translate3d(0, -60px, 0);
@@ -124,7 +122,7 @@
     -o-transform: translate3d(0, -60px, 0);
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(4) {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(4) {
     transition-duration: 320ms;
     transform: translate3d(0, -120px, 0);
     -webkit-transform: translate3d(0, -120px, 0);
@@ -133,7 +131,7 @@
     -o-transform: translate3d(0, -120px, 0);
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(5) {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(5) {
     transition-duration: 420ms;
     transform: translate3d(0, -180px, 0);
     -webkit-transform: translate3d(0, -180px, 0);
@@ -142,7 +140,7 @@
     -o-transform: translate3d(0, -180px, 0);
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(6) {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(6) {
     transition-duration: 520ms;
     transform: translate3d(0, -240px, 0);
     -webkit-transform: translate3d(0, -240px, 0);
@@ -151,7 +149,7 @@
     -o-transform: translate3d(0, -240px, 0);
 }
 
-.oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(7) {
+.oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(7) {
     transition-duration: 620ms;
     transform: translate3d(0, -350px, 0);
     -webkit-transform: translate3d(0, -350px, 0);
@@ -161,13 +159,13 @@
 }
 
 @media (min-width:960px) {
-    .oxi-helpdesk .oxi-helpdesk-icons-item,
-    .oxi-helpdesk .oxi-helpdesk-icons-open-button {
+    .oxi-helpdesk-style-1  .oxi-helpdesk-icons-item,
+    .oxi-helpdesk-style-1  .oxi-helpdesk-icons-open-button {
         width: 60px;
         height: 60px;
         line-height: 60px
     }
-    .oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(3) {
+    .oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(3) {
         transition-duration: 190ms;
         transform: translate3d(0, -70px, 0);
         -webkit-transform: translate3d(0, -70px, 0);
@@ -175,7 +173,7 @@
         -ms-transform: translate3d(0, -70px, 0);
         -o-transform: translate3d(0, -70px, 0);
     }
-    .oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(4) {
+    .oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(4) {
         transition-duration: 290ms;
         transform: translate3d(0, -140px, 0);
         -webkit-transform: translate3d(0, -140px, 0);
@@ -183,7 +181,7 @@
         -ms-transform: translate3d(0, -140px, 0);
         -o-transform: translate3d(0, -140px, 0);
     }
-    .oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(5) {
+    .oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(5) {
         transition-duration: 390ms;
         transform: translate3d(0, -210px, 0);
         -webkit-transform: translate3d(0, -210px, 0);
@@ -191,7 +189,7 @@
         -ms-transform: translate3d(0, -210px, 0);
         -o-transform: translate3d(0, -210px, 0);
     }
-    .oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(6) {
+    .oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(6) {
         transition-duration: 490ms;
         transform: translate3d(0, -280px, 0);
         -webkit-transform: translate3d(0, -280px, 0);
@@ -199,7 +197,7 @@
         -ms-transform: translate3d(0, -280px, 0);
         -o-transform: translate3d(0, -280px, 0);
     }
-    .oxi-helpdesk .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(7) {
+    .oxi-helpdesk-style-1  .oxi-helpdesk-icons-open:checked~.oxi-helpdesk-icons-item:nth-child(7) {
         transition-duration: 590ms;
         transform: translate3d(0, -350px, 0);
         -webkit-transform: translate3d(0, -350px, 0);
