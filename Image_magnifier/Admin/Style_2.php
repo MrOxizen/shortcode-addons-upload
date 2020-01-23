@@ -242,7 +242,7 @@ class Style_2 extends AdminStyle
                 'range' => [
                     '%' => [
                         'min' => 50,
-                        'max' => 250,
+                        'max' => 100,
                         'step' => 1,
                     ],
                     'px' => [
