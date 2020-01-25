@@ -127,7 +127,17 @@ class Style_1 extends AdminStyle {
                     ],
                 ]
         );
+        $this->end_controls_section();
 
+        $this->end_section_devider();
+        $this->start_section_devider();
+        $this->start_controls_section(
+                'shortcode-addons',
+                [
+                    'label' => esc_html__('General Style', SHORTCODE_ADDOONS),
+                    'showing' => TRUE,
+                ]
+        );
         $this->add_control(
                 'sa_iframe_style_1_fullscreen',
                 $this->style,
