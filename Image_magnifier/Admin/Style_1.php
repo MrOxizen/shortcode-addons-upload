@@ -534,7 +534,7 @@ class Style_1 extends AdminStyle
         );
 
       
-        $this->add_responsive_control(
+        $this->add_control(
             'sa_image_magnifier_magnifi_width',
             $this->style,
             [
@@ -552,19 +552,11 @@ class Style_1 extends AdminStyle
                         'min' => 100,
                         'max' => 1500,
                         'step' => 10,
-                    ],
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 5,
-                    ],
-                ], 
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_1 .zoomable.oxi_addons__magnifier' => 'width: {{SIZE}}{{UNIT}} !important;',
-                ],
+                    ], 
+                ],  
             ]
         );
-        $this->add_responsive_control(
+        $this->add_control(
             'sa_image_magnifier_magnifi_height',
             $this->style,
             [
@@ -579,16 +571,8 @@ class Style_1 extends AdminStyle
                         'min' => 0,
                         'max' => 1200,
                         'step' => 1,
-                    ], 
-                    '%' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 5,
-                    ],
-                ], 
-                'selector' => [
-                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_1 .zoomable.oxi_addons__magnifier' => 'height: {{SIZE}}{{UNIT}} !important;',
-                ],
+                    ],  
+                ],  
                 'condition' => [
                     'sa_image_magnifier_magnifi_switcher' => 'yes', 
                 ],
