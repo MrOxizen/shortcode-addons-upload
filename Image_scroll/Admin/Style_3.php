@@ -31,7 +31,7 @@ class Style_3 extends AdminStyle {
                 'sa_is_col', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
+                '{{WRAPPER}} .oxi-addons-coloum' => ''
             ],
                 ]
         );
@@ -49,8 +49,8 @@ class Style_3 extends AdminStyle {
                     'type' => Controls::MEDIA,
                     'controller' => 'add_group_control',
                     'default' => [
-                    'type' => 'media-library',
-                    'link' => 'https://www.oxilab.org/wp-content/uploads/2019/03/screencapture-themesitem-demos-html-Hunt-demo-index2-html-2019-03-25-11_29_33.jpg',
+                        'type' => 'media-library',
+                        'link' => 'https://www.oxilab.org/wp-content/uploads/2019/03/screencapture-themesitem-demos-html-Hunt-demo-index2-html-2019-03-25-11_29_33.jpg',
                     ],
                 ],
                 'sa_is_image_url' => [
@@ -59,7 +59,6 @@ class Style_3 extends AdminStyle {
                 ],
             ],
             'title_field' => 'sa_is_image_name',
-           
                 ]
         );
 
@@ -134,9 +133,9 @@ class Style_3 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addons-image-scroll-style-3 .oxi-addons-image-main' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
-        );    
-        
-        
+        );
+
+
         $this->add_group_control(
                 'sa_is_box_shadow', $this->style, [
             'type' => Controls::BOXSHADOW,

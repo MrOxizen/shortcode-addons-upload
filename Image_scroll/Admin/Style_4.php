@@ -36,7 +36,7 @@ class Style_4 extends AdminStyle
             [
                 'type' => Controls::COLUMN,
                 'selector' => [
-                    '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
+                    '{{WRAPPER}} .oxi-addons-coloum' => ''
                 ],
             ]
         );

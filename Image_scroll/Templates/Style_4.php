@@ -23,17 +23,21 @@ class Style_4 extends Templates {
         $repeater = (array_key_exists('sa_is_image_repeater', $style) && is_array($style['sa_is_image_repeater'])) ? $style['sa_is_image_repeater'] : [];
         foreach ($repeater as $key => $value) {
 
-            $img = '<img class="oxi-img oxi-IS4-image-' . $key . '" src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />';
+            $img = '<img class="oxi-img oxi-IS4-image-' . $key . '"  src="' . $this->media_render('sa_is_image_media', $value) . '" alt="image" />';
             
-            
+            $linkstart = '';
+            $linkend = '';
             if (array_key_exists('sa_is_btn_on', $value) && $value['sa_is_btn_on'] != '0') {    
                 
-                $btn = ' <div class="oxi-addons-main-button"  id="oxi-IS4-img-' . $key . '"> 
+                $btn = ' <div class="oxi-addons-main-button"> 
                             <a ' . $this->url_render('sa_is_btn_link', $value) . ' class="oxi-addons-link">
                                      ' . $this->text_render($value['sa_is_btn_text']) . '
                             </a>
                         </div>';
                
+            } else {
+                $linkstart = ' <a ' . $this->url_render('sa_is_btn_link', $value) . '>';
+                $linkend = ' </a>';
             }
             
             if (array_key_exists('sa_is_title_on', $value) && $value['sa_is_title_on'] != '0') {
@@ -41,14 +45,16 @@ class Style_4 extends Templates {
                 $title = ' <div class="oxi-addons-title">  ' . $this->text_render($value['sa_is_title']) . '</div>';
             }
             
-            echo '<div class="' . $this->column_render('sa_is_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+            echo '<div class="' . $this->column_render('sa_is_col', $style) . ' oxi-addons-coloum">
                         <div class="oxi-addons-image-scroll-4" ' . $this->animation_render('sa_is_animation', $value) . '>  
                             <div class="oxi-addons-image-main" id="oxi-addons-IS4-image-main-' . $key . '" >
-                                <div class="oxi-addons-img">
+                                    ' . $linkstart . '
+                                <div class="oxi-addons-img" id="oxi-IS4-img-' . $key . '">
                                     ' . $img . '
                                     ' . $btn . '
                                 </div>
                                     ' . $title . '
+                                    ' . $linkend . '
                             </div> 
                         </div>';
             echo '</div>';

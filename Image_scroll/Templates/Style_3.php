@@ -31,7 +31,7 @@ class Style_3 extends Templates {
                     </div> 
                 </a>';
 
-            echo '<div class="' . $this->column_render('sa_is_col', $style) . ' ' . ($admin == 'admin' ? 'oxi-addons-admin-edit-list ' : '') . '">
+            echo '<div class="' . $this->column_render('sa_is_col', $style) . ' oxi-addons-coloum">
                         <div class="oxi-addons-image-scroll-style-3" ' . $this->animation_render('sa_is_animation', $style) . ' >  
                             ' . $img . '
                         </div>';

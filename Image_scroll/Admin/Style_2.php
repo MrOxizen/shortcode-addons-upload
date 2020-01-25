@@ -31,7 +31,7 @@ class Style_2 extends AdminStyle {
                 'sa_is_col', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
+                '{{WRAPPER}} .oxi-addons-coloum' => ''
             ],
                 ]
         );
@@ -49,8 +49,8 @@ class Style_2 extends AdminStyle {
                     'type' => Controls::MEDIA,
                     'controller' => 'add_group_control',
                     'default' => [
-                    'type' => 'media-library',
-                    'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/modern-illustrated-city-2.png',
+                        'type' => 'media-library',
+                        'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/06/modern-illustrated-city-2.png',
                     ],
                 ],
                 'sa_is_image_url' => [
@@ -67,11 +67,8 @@ class Style_2 extends AdminStyle {
                         'right_to_left' => __('Right To Left', SHORTCODE_ADDOONS),
                     ],
                 ],
-                
-                
             ],
             'title_field' => 'sa_is_image_name',
-           
                 ]
         );
 
@@ -146,7 +143,7 @@ class Style_2 extends AdminStyle {
                 '{{WRAPPER}} .oxi-addons-image-scroll-style-2 .oxi-addons-image-main' => 'height:{{SIZE}}{{UNIT}};'
             ],
                 ]
-        );    
+        );
         $this->add_responsive_control(
                 'sa_is_td', $this->style, [
             'label' => __('Transition Duration (second)', SHORTCODE_ADDOONS),
@@ -161,11 +158,9 @@ class Style_2 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
-                
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi-addons-image-scroll-style-2 .oxi-img ' => 'transition: all {{SIZE}}s;'
-                
             ],
                 ]
         );

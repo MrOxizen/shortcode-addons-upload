@@ -31,8 +31,8 @@ class Style_1 extends AdminStyle {
                 'sa_is_col', $this->style, [
             'type' => Controls::COLUMN,
             'selector' => [
-                '{{WRAPPER}} .oxi-addons-admin-edit-list' => ''
-            ],
+                 '{{WRAPPER}} .oxi-addons-coloum' => ''
+              ],
                 ]
         );
         $this->add_repeater_control(
