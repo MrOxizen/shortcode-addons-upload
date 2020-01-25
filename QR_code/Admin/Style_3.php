@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 use SHORTCODE_ADDONS\Core\AdminStyle;
 use SHORTCODE_ADDONS\Core\Admin\Controls as Controls;
 
-class Style_2 extends AdminStyle {
+class Style_3 extends AdminStyle {
 
     public function register_controls() {
         $this->start_section_tabs(
@@ -51,6 +51,16 @@ class Style_2 extends AdminStyle {
                 ]
         );
         $this->add_control(
+                'sa_qr_code_text_option', $this->style, [
+            'label' => __('Text', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'loader' => TRUE,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->add_control(
                 'sa_qr_code_select', $this->style, [
             'label' => __('Select Style', SHORTCODE_ADDOONS),
             'type' => Controls::SELECT,
@@ -59,6 +69,9 @@ class Style_2 extends AdminStyle {
             'options' => [
                 'text' => __('Text', SHORTCODE_ADDOONS),
                 'image' => __('Image', SHORTCODE_ADDOONS),
+            ],
+            'condition' => [
+                'sa_qr_code_text_option' => 'yes',
             ],
                 ]
         );
@@ -71,6 +84,7 @@ class Style_2 extends AdminStyle {
             'default' => 'Oxilab',
             'condition' => [
                 'sa_qr_code_select' => 'text',
+                'sa_qr_code_text_option' => 'yes',
             ],
                 ]
         );
@@ -84,9 +98,12 @@ class Style_2 extends AdminStyle {
             ],
             'condition' => [
                 'sa_qr_code_select' => 'image',
+                'sa_qr_code_text_option' => 'yes',
             ],
                 ]
         );
+
+
         $this->add_control(
                 'sa_qr_code_mode', $this->style, [
             'label' => __('Mode', SHORTCODE_ADDOONS),
@@ -96,6 +113,9 @@ class Style_2 extends AdminStyle {
             'options' => [
                 'strip' => __('Strip', SHORTCODE_ADDOONS),
                 'box' => __('Box', SHORTCODE_ADDOONS),
+            ],
+            'condition' => [
+                'sa_qr_code_text_option' => 'yes',
             ],
                 ]
         );
@@ -122,7 +142,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_qrcode_style2' => 'justify-content: {{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_qrcode_style3' => 'justify-content: {{VALUE}};'
             ],
                 ]
         );
@@ -152,7 +172,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_qrcode_style2 .oxi_addons_qrcode_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_qrcode_style3 .oxi_addons_qrcode_main' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'separator' => TRUE
                 ]
@@ -184,7 +204,7 @@ class Style_2 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_qrcode_style2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .oxi_addons_qrcode_style3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
@@ -213,6 +233,7 @@ class Style_2 extends AdminStyle {
             'type' => Controls::COLOR,
             'default' => '#808080',
             'condition' => [
+                'sa_qr_code_text_option' => 'yes',
                 'sa_qr_code_select' => 'text',
             ],
                 ]
@@ -262,9 +283,12 @@ class Style_2 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 50,
                     'step' => 1,
                 ],
+            ],
+            'condition' => [
+                'sa_qr_code_text_option' => 'yes',
             ],
                 ]
         );
@@ -283,6 +307,9 @@ class Style_2 extends AdminStyle {
                     'step' => 1,
                 ],
             ],
+            'condition' => [
+                'sa_qr_code_text_option' => 'yes',
+            ],
                 ]
         );
         $this->add_control(
@@ -299,6 +326,9 @@ class Style_2 extends AdminStyle {
                     'max' => 100,
                     'step' => 1,
                 ],
+            ],
+            'condition' => [
+                'sa_qr_code_text_option' => 'yes',
             ],
                 ]
         );
@@ -330,6 +360,86 @@ class Style_2 extends AdminStyle {
                 'Q' => __('Quartile (25%)', SHORTCODE_ADDOONS),
                 'H' => __('High (30%)', SHORTCODE_ADDOONS),
             ],
+                ]
+        );
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+                'shortcode-addons', [
+            'label' => esc_html__('Border Settings', SHORTCODE_ADDOONS),
+            'showing' => FALSE,
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_qrcode_border_width', $this->style, [
+            'label' => __('Border Width', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line1:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line1:after,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line2:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line2:after' => 'height: {{SIZE}}px;',
+                '{{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line3:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line3:after,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line4:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line4:after' => 'width: {{SIZE}}px;',
+                '{{WRAPPER}} .oxi_addons_qrcode_style3 .oxi_addons_qrcode_main' => 'margin: {{SIZE}}px;',
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'sa_qrcode_border_height', $this->style, [
+            'label' => __('Border Height', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 500,
+                    'step' => 1,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line1:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line1:after,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line2:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line2:after' => 'width: {{SIZE}}px;',
+                '{{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line3:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line3:after,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line4:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line4:after' => 'height: {{SIZE}}px;',
+            ],
+                ]
+        );
+        $this->add_control(
+                'sa_qrcode_border_color', $this->style, [
+            'label' => __('Border Color', SHORTCODE_ADDOONS),
+            'type' => Controls::COLOR,
+            'default' => '#000000',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line1:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line1:after,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line2:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line2:after,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line3:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line3:after,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line4:before,
+                 {{WRAPPER}} .oxi_addons_qrcode_style3 .sa_qrcoder_line4:after' => 'background:{{VALUE}};',
+             ],
                 ]
         );
         $this->end_controls_section();

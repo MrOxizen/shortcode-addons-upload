@@ -44,9 +44,10 @@ class Style_1 extends AdminStyle {
             'default' => 'http://oxilab.org',
                 ]
         );
-        
 
-        
+
+
+
         $this->add_responsive_control(
                 'sa_qr_code_align', $this->style, [
             'label' => __('Align', SHORTCODE_ADDOONS),
@@ -54,7 +55,7 @@ class Style_1 extends AdminStyle {
             'operator' => Controls::OPERATOR_ICON,
             'default' => 'center',
             'options' => [
-                'left' => [
+                'flex-start' => [
                     'title' => __('Left', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-left',
                 ],
@@ -62,13 +63,13 @@ class Style_1 extends AdminStyle {
                     'title' => __('Center', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-center',
                 ],
-                'right' => [
+                'flex-end' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-right',
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .oxi_addons_qrcode_style1' => 'text-align: {{VALUE}};'
+                '{{WRAPPER}} .oxi_addons_qrcode_style1' => 'justify-content: {{VALUE}};'
             ],
                 ]
         );
@@ -146,14 +147,20 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->add_control(
+                'sa_qr_code_note', $this->style, [
+            'label' => __('Note', SHORTCODE_ADDOONS),
+            'type' => Controls::HEADING,
+            'description' => 'Some fields work after saving and reloading',
+                ]
+        );
+        $this->add_control(
                 'sa_qr_code_color', $this->style, [
             'label' => __('Code Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
             'default' => '#808080',
-           
                 ]
         );
-        
+
         $this->add_control(
                 'sa_qr_code_redius', $this->style, [
             'label' => __('Code Redius', SHORTCODE_ADDOONS),
@@ -188,7 +195,7 @@ class Style_1 extends AdminStyle {
             ],
                 ]
         );
-        
+
         $this->add_control(
                 'sa_qr_code_mv', $this->style, [
             'label' => __('Min Version', SHORTCODE_ADDOONS),
