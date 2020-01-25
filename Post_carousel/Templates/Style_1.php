@@ -13,14 +13,13 @@ if (!defined('ABSPATH')) {
  * @author $biplob018
  */
 
-use SHORTCODE_ADDONS\Core\Templates;
+use SHORTCODE_ADDONS_UPLOAD\Post_carousel\Files\Swiper_Settings_View;
 
-class Style_1 extends Templates
+class Style_1 extends Swiper_Settings_View
 {
-
+    public $slider_data;
     public function public_css()
     {
-
         wp_enqueue_style('swiper.min.css', SA_ADDONS_UPLOAD_URL . '/Post_carousel/Files/swiper.min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function public_jquery()
@@ -28,9 +27,7 @@ class Style_1 extends Templates
         wp_enqueue_script('swiper.min.js', SA_ADDONS_UPLOAD_URL . '/Post_carousel/Files/swiper.min.js', false, SA_ADDONS_PLUGIN_VERSION);
         $this->JSHANDLE = 'swiper.min.js';
     }
-
-
-    function inline_public_css()
+    public function inline_public_css()
     {
         $style = $this->style;
         $hoverData = $css_inline = $final = '';
@@ -47,10 +44,10 @@ class Style_1 extends Templates
             $css_inline = 'transform: translateY(100%)';
             $hoverData = 'transform: translateY(0)';
         }
-        $final = ' .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-style-1 .oxi-addons__overlay{
+        $final = ' .' . $this->WRAPPER . ' .oxi-addons__post-carousel-style-1 .oxi-addons__overlay{
                         ' . $css_inline . '
                     }
-                    .' . $this->WRAPPER . ' .oxi-addons__main-wrapper-style-1 .oxi-addons__main-img:hover .oxi-addons__overlay{
+                    .' . $this->WRAPPER . ' .oxi-addons__post-carousel-style-1 .oxi-addons__main-img:hover .oxi-addons__overlay{
                         ' . $hoverData . '
                     }';
         return $final;
@@ -227,112 +224,7 @@ class Style_1 extends Templates
     }
     public function default_render($style, $child, $admin)
     {
-        $arrow = $arrow_left = $arrow_right = $rtl = '';
-        if ($style['arrow_right'] != '') {
-            $arrow_left = $this->font_awesome_render($style['arrow_right']);
-        }
-        if ($style['arrow_left'] != '') {
-            $arrow_right = $this->font_awesome_render($style['arrow_left']);
-        }
-        if (array_key_exists('sa_post_carousel_arrow', $style) && $style['sa_post_carousel_arrow'] == 'yes') {
-            $arrow = '
-                <div class="swiper-button-next  sa_post_carousel_next_' . $this->oxiid . '">
-                    ' . $arrow_left . '
-                </div>
-                <div class="swiper-button-prev sa_post_carousel_prev_' . $this->oxiid . '">
-                    ' . $arrow_right . '
-                </div>
-            ';
-        }
-        $rtl = (array_key_exists('sa_post_carousel_direction', $style) && $style['sa_post_carousel_direction'] == 'right') ? 'dir="rtl"' : '';
-        echo '<div class="oxi-addons__post-carousel-style-1 swiper-container-wrap-dots-' . $style['dots_position'] . '">
-                    <div class="swiper-container oxi-addons__post-carousel-wrap" ' . $rtl . '>
-                        <div class="swiper-wrapper">
-                            ' . $this->post_render() . '
-                        </div>
-                    </div>';
-        if (array_key_exists('sa_post_carousel_dots', $style) && $style['sa_post_carousel_dots'] == 'yes') :
-            echo '<div class="swiper-pagination sa_post_carousel_pagination_' . $this->oxiid . '"></div>';
-        endif;
-        echo $arrow;
-        echo '</div>
-            ';
-    }
-
-    public function inline_public_jquery()
-    {
-        $style = $this->style;
-        $prev = '.sa_post_carousel_next_' . $this->oxiid . '';
-        $next = '.sa_post_carousel_prev_' . $this->oxiid . '';
-        $pagin = '.sa_post_carousel_pagination_' . $this->oxiid . '';
-        $items = $style["sa_post_carousel_visible_items-lap-size"] != '' ? $style["sa_post_carousel_visible_items-lap-size"] : 3;
-        $items_tablet = $style["sa_post_carousel_visible_items-tab-size"] != '' ? $style["sa_post_carousel_visible_items-tab-size"] : 2;
-        $items_mobile = $style["sa_post_carousel_visible_items-mob-size"] != '' ? $style["sa_post_carousel_visible_items-mob-size"] : 1;
-        $margin = $style["sa_post_carousel_items_gap-lap-size"] != '' ? $style["sa_post_carousel_items_gap-lap-size"] : 10;
-        $margin_tablet = $style["sa_post_carousel_items_gap-tab-size"] != '' ? $style["sa_post_carousel_items_gap-tab-size"] : 10;
-        $margin_mobile = $style["sa_post_carousel_items_gap-mob-size"] != '' ? $style["sa_post_carousel_items_gap-mob-size"] : 10;
-        $speed = $style["sa_post_carousel_slider_speed-size"] != '' ? $style["sa_post_carousel_slider_speed-size"] : 400;
-        $autoplay = (array_key_exists('sa_post_carousel_autoplay_switter', $style) && $style['sa_post_carousel_autoplay_switter'] == "yes") ? $style['sa_post_carousel_autoplay_speed-size'] : 999999;
-        $pause_on_hover = $style["sa_post_carousel_pause_switter"];
-        $loop = (array_key_exists('sa_post_carousel_loop_switter', $style) && $style["sa_post_carousel_loop_switter"] == "yes") ? "1" : "0";
-        $grab_cursor = (array_key_exists('sa_post_carousel_grab_cursor', $style) && $style["sa_post_carousel_grab_cursor"] == "yes") ? "1" : "0";
-        $auto_height = $style["sa_post_carousel_auto_height"];
-        $js = '';
-        $js = 'var sa_post_carousel = $(".' . $this->WRAPPER . ' .oxi-addons__post-carousel-style-1 .oxi-addons__post-carousel-wrap");
-            
-            var saPostCarousel = new Swiper(sa_post_carousel, {
-                direction: "horizontal",
-                speed: ' . $speed . ',
-                effect: "slide",
-                centeredSlides: false,
-                slidesPerView: ' . $items . ',
-                spaceBetween: ' . $margin . ',
-                grabCursor: ' . $grab_cursor . ',
-                autoHeight: ' . $auto_height . ',
-                loop: ' . $loop . ',
-                observer: true,
-                observeParents: true,
-                autoplay: {
-                    delay: ' . $autoplay . '
-                },
-                pagination: {
-                    el: "' . $pagin . '",
-                    clickable: true
-                },
-                navigation: {
-                    nextEl: "' . $prev . '",
-                    prevEl: "' . $next . '"
-                },
-                breakpoints: {
-                    960: {
-                        slidesPerView: ' . $items . ',
-                        spaceBetween:  ' . $margin . '
-                    },
-                    600 : {
-                        slidesPerView: ' . $items_tablet . ',
-                        spaceBetween:  ' . $margin_tablet . '
-                    },
-                    480: {
-                        slidesPerView: ' . $items_mobile . ',
-                        spaceBetween:  ' . $margin_mobile . '
-                    }
-                }
-                
-            });
-
-            if (' . $autoplay . ' === 0) {
-                saPostCarousel.autoplay.stop();
-            }
-        
-            if (' . $pause_on_hover . ' == true) {
-                sa_post_carousel.on("mouseenter", function() {
-                    saPostCarousel.autoplay.stop();
-                });
-                sa_post_carousel.on("mouseleave", function() {
-                    saPostCarousel.autoplay.start();
-                });
-            }
-            ';
-        return $js;
+        $this->slider_data = $this->post_render();
+        $this->slider_default_render('oxi-addons__post-carousel-style-1', $this->slider_data);
     }
 }
