@@ -1,0 +1,96 @@
+
+.oxi_addons_qrcode_style3{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.oxi_addons_qrcode_style3 .oxi_addons_qrcode_main{
+    padding: 10px;
+    margin: 5px;
+}
+
+.oxi_addons_qrcode_style3 .oxi_addons_qrcode_main canvas {
+    max-width: 100%
+}
+
+.oxi_addons_qrcode_style3 .sa_qrcode_hidden {
+    display: none;
+}
+
+.oxi_addons_qrcode_style3 .oxi_addons_qrcode_style3_main{
+    position: relative;
+}
+
+.oxi_addons_qrcode_style3 .sa_qrcoder_line1,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line2,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line3,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line4{
+    display: block;
+}
+
+.oxi_addons_qrcode_style3 .sa_qrcoder_line1:before,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line1:after,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line2:before,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line2:after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: #14bee0;
+    transition: 1s
+
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line1:before{
+    top: 0px;
+    left: 0px;
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line1:after{
+    top: 0px;
+    right: 0px;
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line2:before{
+    bottom: 4px;
+    left: 0px;
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line2:after{
+    bottom: 4px;
+    right: 0px;
+}
+
+.oxi_addons_qrcode_style3 .sa_qrcoder_line3:before,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line3:after,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line4:before,
+.oxi_addons_qrcode_style3 .sa_qrcoder_line4:after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background: #14bee0;
+    transition: 1s
+
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line3:before{
+    top: 0px;
+    left: 0px;
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line3:after{
+    top: 0px;
+    right: 0px;
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line4:before{
+    bottom: 4px;
+    left: 0px;
+}
+.oxi_addons_qrcode_style3 .sa_qrcoder_line4:after{
+    bottom: 4px;
+    right: 0px;
+}
+
+
+
+

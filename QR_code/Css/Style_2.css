@@ -3,12 +3,13 @@
     width: 100%;
     float: left;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .oxi_addons_qrcode_style2 .oxi_addons_qrcode_main{
-    width: 100%;
-    float: left;
+   
     padding: 10px;
 }
 
@@ -16,6 +17,6 @@
     max-width: 100%
 }
 
-.oxi_addons_qrcode_style2 .sa-el-hidden {
+.oxi_addons_qrcode_style2 .sa_qrcode_hidden {
     display: none;
 }

@@ -23,7 +23,7 @@ class Style_1 extends Templates {
 
     public function inline_public_jquery() {
         $js = '
-        var $qrcode = $(".oxi_addons_qrcode_style1 .oxi_addons_qrcode_main"),
+        var $qrcode = $(".' . $this->WRAPPER . ' .oxi_addons_qrcode_style1 .oxi_addons_qrcode_main"),
         image = $qrcode.find(".oxi_addons_qrcode_style1 .sa_qrcode_image");
         if (!$qrcode.length) {
             return;
