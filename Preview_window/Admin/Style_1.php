@@ -175,6 +175,35 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_control(
+            'sa_preview_window_tooltip_type',
+            $this->style,
+            [
+                'label'         => __('Content Type', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'loader' => TRUE,
+                'default' => 'custom',
+                'options' => [
+                    'custom' => 'Custom',
+                    'shortcode' => 'Shortcode',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_preview_window_tooltip_shortcode',
+            $this->style,
+            [
+                'label' => __('Shortcode', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXTAREA,
+                'placeholder' => __('Enter Your Shortcode', SHORTCODE_ADDOONS),
+                'condition' => [
+                    'sa_preview_window_tooltip_type' => 'shortcode',
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_wrap_' . $id . '' => '',
+                ],
+            ]
+        );
+        $this->add_control(
             'sa_preview_window_tooltip_img_switcher',
             $this->style,
             [
@@ -185,6 +214,9 @@ class Style_1 extends AdminStyle
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'yes',
+                'condition' => [
+                    'sa_preview_window_tooltip_type' => 'custom',
+                ],
             ]
         );
         $this->add_group_control(
@@ -197,7 +229,8 @@ class Style_1 extends AdminStyle
                     'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2020/01/placeholder.png',
                 ],
                 'condition' => [
-                    'sa_preview_window_tooltip_img_switcher' => 'yes'
+                    'sa_preview_window_tooltip_img_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ]
             ]
         );
@@ -209,7 +242,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXT,
                 'default' => __('Preview Window', SHORTCODE_ADDOONS),
                 'condition' => [
-                    'sa_preview_window_tooltip_img_switcher' => 'yes'
+                    'sa_preview_window_tooltip_img_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ]
             ]
         );
@@ -236,7 +270,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'condition' => [
-                    'sa_preview_window_tooltip_img_switcher' => 'yes'
+                    'sa_preview_window_tooltip_img_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_wrap_' . $id . '' => 'text-align: {{VALUE}};',
@@ -254,6 +289,9 @@ class Style_1 extends AdminStyle
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'yes',
+                'condition' => [
+                    'sa_preview_window_tooltip_type' => 'custom',
+                ],
             ]
         );
         $this->add_control(
@@ -264,7 +302,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXT,
                 'default' => __('Preview Image', SHORTCODE_ADDOONS),
                 'condition' => [
-                    'sa_preview_window_tooltip_title_switcher' => 'yes'
+                    'sa_preview_window_tooltip_title_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_title_wrap_' . $id . ' .sa_previmg_tooltip_title' => '',
@@ -288,7 +327,8 @@ class Style_1 extends AdminStyle
                     'h6' => 'H6',
                 ],
                 'condition' => [
-                    'sa_preview_window_tooltip_title_switcher' => 'yes'
+                    'sa_preview_window_tooltip_title_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ]
             ]
         );
@@ -315,7 +355,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'condition' => [
-                    'sa_preview_window_tooltip_title_switcher' => 'yes'
+                    'sa_preview_window_tooltip_title_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_title_wrap_' . $id . '' => 'text-align: {{VALUE}};',
@@ -333,6 +374,9 @@ class Style_1 extends AdminStyle
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'yes',
+                'condition' => [
+                    'sa_preview_window_tooltip_type' => 'custom',
+                ],
             ]
         );
         $this->add_control(
@@ -343,7 +387,8 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXTAREA,
                 'default' => __('Lorem ipsum dolor sit amet, consectetur adipiscing elit', SHORTCODE_ADDOONS),
                 'condition' => [
-                    'sa_preview_window_tooltip_desc_switcher' => 'yes'
+                    'sa_preview_window_tooltip_desc_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_desc_wrap_' . $id . '' => '',
@@ -373,7 +418,8 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'condition' => [
-                    'sa_preview_window_tooltip_desc_switcher' => 'yes'
+                    'sa_preview_window_tooltip_desc_switcher' => 'yes',
+                    'sa_preview_window_tooltip_type' => 'custom',
                 ],
                 'selector' => [
                     '{{WRAPPER}} .sa__image__disable, .sa_prev_img_tooltip_desc_wrap_' . $id . '' => 'text-align: {{VALUE}};',

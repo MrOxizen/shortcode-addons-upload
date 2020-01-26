@@ -20,7 +20,7 @@ class Style_1 extends Templates
 
     public function public_css()
     {
-        
+
         wp_enqueue_style('slick.min.css', SA_ADDONS_UPLOAD_URL . '/Showcase/File/slick.min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
     public function public_jquery()
@@ -30,7 +30,7 @@ class Style_1 extends Templates
     }
     public function default_render($style, $child, $admin)
     {
-        $slider_data ='';
+        $slider_data = '';
         $slider_data = wp_json_encode(array_filter([
             "scrollable_nav" => $style["scrollable_nav"],
             "preview_position" => $style["preview_position"],
@@ -52,91 +52,114 @@ class Style_1 extends Templates
         ]));
         $all_data = (array_key_exists('sa_showcase_data', $style) && is_array($style['sa_showcase_data'])) ? $style['sa_showcase_data'] : [];
 
-    echo'<div class="sa_showcase_container_style_1">
-            <div class=" sa_showcase_preview_align_'.$style['preview_position'].' sa_showcase_dots_'.$style['dots_position'].'">
-                <div class="sa_showcase" >
-                    <div class="sa_showcase_preview_wrap">
-                        <div id="sa_showcase_preview_'.$this->oxiid.'" class="sa_showcase_preview" data-slider=\''.$slider_data.'\'>';
-                            foreach ($all_data as $item) {
-                                $image_html ='';
-                                echo'<div class="sa_showcase_preview_item">';
-                                    if ($this->media_render('image', $item) != '') {
+        echo '<div class="sa_showcase_container_style_1">
+                <div class=" sa_showcase_preview_align_' . $style['preview_position'] . ' sa_showcase_dots_' . $style['dots_position'] . '">
+                    <div class="sa_showcase" >
+                        <div class="sa_showcase_preview_wrap">
+                            <div id="sa_showcase_preview_' . $this->oxiid . '" class="sa_showcase_preview" data-slider=\'' . $slider_data . '\'>';
+        foreach ($all_data as $key => $item) {
+            $image_html = '';
+            echo '
+                            <div class="sa_showcase_preview_item sa_showcase_preview_item_' . $key . '">';
+            if ($item['preview_type'] == 'shortcode') {
+                if ($item['preview_shortcode'] != '') {
+                    echo $this->text_render($item['preview_shortcode']);
+                } else {
+                    echo '<div style="color: red; font-size: 22px;">Please Enter Your Shortcode!</div>';
+                }
+            } else {
+                if ($this->media_render('image', $item) != '') {
 
-                                        $image_url = $this->media_render('image', $item);
+                    $image_url = $this->media_render('image', $item);
 
-                                        $image_html = '<div class="sa_showcase_preview_image">';
+                    $image_html = '<div class="sa_showcase_preview_image">';
 
-                                        $image_html .= '<img src="' . esc_url($image_url) . '" alt="">';
+                    $image_html .= '<img src="' . esc_url($image_url) . '" alt="">';
 
-                                        $image_html .= '</div>';
+                    $image_html .= '</div>';
 
-                                        echo $image_html;
-                                    }
-                                echo'</div>';
-                            }
-                    echo '
+                    echo $image_html;
+                }
+            }
+            echo '
+                            </div>';
+        }
+        echo '
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="sa_showcase_navigation">
-                        <div class="sa_showcase_navigation_items sa_grid ">';
-                            foreach ($all_data as $key => $item) {
-                                $nav_icon = $nav_title = $nav_des = '';
-                                if ($item['nav_icon_type'] == 'icon' && $item['nav_icon'] != '') {
-                                    $nav_icon = '<span class="sa_showcase_navigation_icon">
-                                            ' . $this->font_awesome_render($item['nav_icon']) . '
-                                            </span>
+                        <div class="sa_showcase_navigation">
+                            <div class="sa_showcase_navigation_items sa_grid ">';
+        foreach ($all_data as $key => $item) {
+            $nav_icon = $nav_title = $nav_des = '';
+            if ($item['nav_icon_type'] == 'icon' && $item['nav_icon'] != '') {
+                $nav_icon = '
+                            <span class="sa_showcase_navigation_icon">
+                            ' . $this->font_awesome_render($item['nav_icon']) . '
+                            </span>
                                 ';
-                                } elseif ($item['nav_icon_type'] == 'image' && $this->media_render('nav_icon_image', $item) != '') {
-                                    $nav_icon = '<span class="sa_showcase_navigation_icon">
-                                                <img src="' . $this->media_render('nav_icon_image', $item) . '" >
-                                            </span>
+            } elseif ($item['nav_icon_type'] == 'image' && $this->media_render('nav_icon_image', $item) != '') {
+                $nav_icon = '
+                            <span class="sa_showcase_navigation_icon">
+                                <img src="' . $this->media_render('nav_icon_image', $item) . '" >
+                            </span>
                                 ';
-                                }
+            }
 
-                                if ($item['title'] != '') {
-                                    $nav_title = '<div class="sa_showcase_navigation_title">
-                                                ' . $this->text_render($item['title']) . '
-                                            </div>
+            if ($item['title'] != '') {
+                $nav_title = '
+                            <div class="sa_showcase_navigation_title">
+                                ' . $this->text_render($item['title']) . '
+                            </div>
                                 ';
-                                }
-                                if ($item['description'] != '') {
-                                    $nav_des = '<div class="sa_showcase_navigation_description">
-                                                ' . $this->text_render($item['description']) . '
-                                            </div>
+            }
+            if ($item['description'] != '') {
+                $nav_des = '
+                            <div class="sa_showcase_navigation_description">
+                                ' . $this->text_render($item['description']) . '
+                            </div>
                                 ';
-                                }
-                                echo '
-                                <div class="sa_showcase_navigation_item_wrap sa_showcase_navigation_item_wrap_'.$key.' sa_grid_item_wrap '.$this->column_render('navigation_columns', $style).'">
-                                    <div class="sa_showcase_navigation_item sa_grid_item">';
-                                         if ($item['nav_icon_type'] != 'none') {
-                                            echo '<div class="sa_showcase_navigation_icon_wrap">
-                                                '.$nav_icon.'
-                                            </div>';
-                                         }
-                                         echo $nav_title;
-                                         echo $nav_des;
-                                echo'
-                                    </div>
-                                </div>';
-                            }
-                            echo'
+            }
+            echo '
+                    <div class="sa_showcase_navigation_item_wrap sa_showcase_navigation_item_wrap_' . $key . ' sa_grid_item_wrap ' . $this->column_render('navigation_columns', $style) . '">
+                        <div class="sa_showcase_navigation_item sa_grid_item">';
+            if ($item['navigation_type'] == 'shortcode') {
+                if ($item['shortcode'] != '') {
+                    echo $this->text_render($item['shortcode']);
+                } else {
+                    echo '
+                            <div style="color: red; font-size: 18px;">Please Enter Your Shortcode!</div>';
+                }
+            } else {
+                if ($item['nav_icon_type'] != 'none') {
+                    echo '
+                            <div class="sa_showcase_navigation_icon_wrap">
+                                ' . $nav_icon . '
+                            </div>';
+                }
+                echo $nav_title;
+                echo $nav_des;
+            }
+            echo '
+                        </div>
+                    </div>';
+        }
+        echo '
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         ';
-
     }
 
     public function inline_public_jquery()
     {
         $jquery = '';
-        
+
         $jquery = '
         setTimeout(function(){
-            var $main = $(".'.$this->WRAPPER.' .sa_showcase_container_style_1 .sa_showcase"),
+            var $main = $(".' . $this->WRAPPER . ' .sa_showcase_container_style_1 .sa_showcase"),
             $carousel = $main.find(".sa_showcase_preview"),
             $settings = $carousel.data("slider"),
             $slider_wrap = $main.find(".sa_showcase_preview_wrap"),
@@ -221,5 +244,4 @@ class Style_1 extends Templates
         }, 2000);';
         return $jquery;
     }
-    
 }

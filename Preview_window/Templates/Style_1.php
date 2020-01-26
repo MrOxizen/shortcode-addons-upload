@@ -116,10 +116,22 @@ class Style_1 extends Templates
                             </a>';
         endif;
         echo '
-                            <div id="tooltip_content" class="sa_prev_img_tooltip_wrap sa_prev_img_tooltip_wrap_' . $id . '">
+                            <div id="tooltip_content" class="sa_prev_img_tooltip_wrap sa_prev_img_tooltip_wrap_' . $id . '">';
+        if ($style["sa_preview_window_tooltip_type"] == "shortcode") {
+            if ($style['sa_preview_window_tooltip_shortcode'] != '') {
+                echo $this->text_render($style["sa_preview_window_tooltip_shortcode"]);
+            } else {
+                echo '
+                            <div style="color:red; font-size: 18px;">Place Enter Your Shortcode</div>
+                    ';
+            }
+        } else {
+            echo '
                                 ' . $tooltip_img . '
                                 ' . $title . '
-                                ' . $content . '
+                                ' . $content . '';
+        }
+        echo '
                             </div>
                         </div>
                     </div>

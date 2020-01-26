@@ -60,12 +60,37 @@ class Style_1 extends AdminStyle
                     'shortcode-addons-start-tab1' => [
                         'controller' => 'start_controls_tab',
                     ],
+                    'navigation_type' => [
+                        'label' => __('Navigation Type', SHORTCODE_ADDOONS),
+                        'type' => Controls::SELECT,
+                        'default' => 'custom',
+                        'options' => [
+                            'custom' => __('Custom', SHORTCODE_ADDOONS),
+                            'shortcode' => __('Shortcode', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'shortcode' => [
+                        'label' => __('Shortcode', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXTAREA,
+                        'placeholder' => 'Enter Your Shortcode',
+                        'selector' => [
+                            '{{WRAPPER}} .sa_showcase_container_style_1 .sa_showcase_navigation_item_wrap_{{KEY}} .sa_showcase_navigation_item' => '',
+                        ],
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'navigation_type' => 'shortcode',
+                        ],
+                    ],
                     'title' => [
                         'label' => __('Title', SHORTCODE_ADDOONS),
                         'type' => Controls::TEXT,
                         'default' => 'Item',
                         'selector' => [
                             '{{WRAPPER}} .sa_showcase_container_style_1 .sa_showcase_navigation_item_wrap_{{KEY}} .sa_showcase_navigation_title' => '',
+                        ],
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'navigation_type' => 'custom',
                         ],
                     ],
                     'description' => [
@@ -74,6 +99,10 @@ class Style_1 extends AdminStyle
                         'default' => 'I am the description for item',
                         'selector' => [
                             '{{WRAPPER}} .sa_showcase_container_style_1 .sa_showcase_navigation_item_wrap_{{KEY}} .sa_showcase_navigation_description' => '',
+                        ],
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'navigation_type' => 'custom',
                         ],
                     ],
                     'nav_icon_type' => [
@@ -94,6 +123,10 @@ class Style_1 extends AdminStyle
                             ],
                         ],
                         'default' => 'none',
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'navigation_type' => 'custom',
+                        ],
                     ],
                     'nav_icon' => [
                         'label' => esc_html__('Icon', SHORTCODE_ADDOONS),
@@ -102,6 +135,7 @@ class Style_1 extends AdminStyle
                         'conditional' => Controls::INSIDE,
                         'condition' => [
                             'nav_icon_type' => 'icon',
+                            'navigation_type' => 'custom',
                         ],
                     ],
                     'nav_icon_image' => [
@@ -114,6 +148,7 @@ class Style_1 extends AdminStyle
                         'conditional' => Controls::INSIDE,
                         'condition' => [
                             'nav_icon_type' => 'image',
+                            'navigation_type' => 'custom',
                         ],
                     ],
 
@@ -124,7 +159,27 @@ class Style_1 extends AdminStyle
                     'shortcode-addons-start-tab2' => [
                         'controller' => 'start_controls_tab',
                     ],
-
+                    'preview_type' => [
+                        'label' => __('Preview Type', SHORTCODE_ADDOONS),
+                        'type' => Controls::SELECT,
+                        'default' => 'custom',
+                        'options' => [
+                            'custom' => __('Custom', SHORTCODE_ADDOONS),
+                            'shortcode' => __('Shortcode', SHORTCODE_ADDOONS),
+                        ],
+                    ],
+                    'preview_shortcode' => [
+                        'label' => __('Shortcode', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXTAREA,
+                        'placeholder' => 'Enter Your Shortcode',
+                        'selector' => [
+                            '{{WRAPPER}} .sa_showcase_container_style_1 .sa_showcase_preview_item_{{KEY}}' => '',
+                        ],
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'preview_type' => 'shortcode',
+                        ],
+                    ],
                     'image' => [
                         'type' => Controls::MEDIA,
                         'controller' => 'add_group_control',
@@ -132,8 +187,12 @@ class Style_1 extends AdminStyle
                             'type' => 'media-library',
                             'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/12/thumb-1920-353279.jpg',
                         ],
+                        'conditional' => Controls::INSIDE,
+                        'condition' => [
+                            'preview_type' => 'custom',
+                        ],
                     ],
-                    
+
                     'shortcode-addons-start-tab2-end' => [
                         'controller' => 'end_controls_tab',
                     ],
@@ -204,6 +263,7 @@ class Style_1 extends AdminStyle
             [
                 'label' => __('Columns', SHORTCODE_ADDOONS),
                 'type' => Controls::COLUMN,
+                'loader' => TRUE,
                 'condition' => [
                     '! scrollable_nav' => '',
                 ],
@@ -1510,7 +1570,7 @@ class Style_1 extends AdminStyle
                 ],
             ]
         );
-        
+
         $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons',
