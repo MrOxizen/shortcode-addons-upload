@@ -31,21 +31,51 @@ class Style_2 extends AdminStyle
         $this->start_section_devider();
         $this->start_controls_section(
             'shortcode-addons', [
+                'label' => esc_html__('Content Settings', SHORTCODE_ADDOONS),
+                'showing' => true,
+            ]
+        );
+        $this->add_repeater_control(
+            'sa_addons_image_magnifier_repeater',
+            $this->style,
+            [
+                'label' => __('', SHORTCODE_ADDOONS),
+                'title_field' => 'sa_addons_image_magnifier_title',
+                'type' => Controls::REPEATER,
+                'fields' => [
+                    'sa_addons_image_magnifier_title' => [
+                        'label' => esc_html__('Title', SHORTCODE_ADDOONS),
+                        'type' => Controls::TEXT,
+                        'default' => esc_html__('Manifier 01', SHORTCODE_ADDOONS),
+                    ],
+                    'sa_addons_image_magnifier_img' => [
+                        'type' => Controls::MEDIA,
+                        'default' => [
+                            'type' => 'media-library',
+                            'link' => 'https://www.shortcode-addons.com/wp-content/uploads/2019/07/jamie-street-105288-unsplash-1.jpg',
+                        ],
+                        'loader' => true,
+                        'controller' => 'add_group_control',
+                    ], 
+                ]
+            ]
+        );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'shortcode-addons', [
                 'label' => esc_html__('General Settings', SHORTCODE_ADDOONS),
                 'showing' => true,
             ]
         );
-
         $this->add_group_control(
-            'sa_addons_image_magnifier_main_background',
-            $this->style,
-            [
-                'type' => Controls::BACKGROUND,
+            'sa_addons_image_magnifier_column', $this->style, [
+                'type' => Controls::COLUMN,
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_2' => '',
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_column' => '',
                 ],
             ]
         );
+       
         $this->add_group_control(
             'sa_addons_image_magnifier_button_border',
             $this->style,
@@ -84,7 +114,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_2' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_2 ' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -128,7 +158,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_column ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'separator' => true,
             ]
@@ -198,7 +228,7 @@ class Style_2 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__image_magnifier_wrapper' => 'justify-content: {{VALUE}};',
+                    '{{WRAPPER}} .oxi_addons__image_magnifier_style_2 .oxi_addons__image.oxi__image_height_width' => 'justify-content: {{VALUE}};',
                 ],
             ]
         );
@@ -247,7 +277,7 @@ class Style_2 extends AdminStyle
                     ],
                     'px' => [
                         'min' => 100,
-                        'max' => 1500,
+                        'max' => 500,
                         'step' => 10,
                     ],
                 ],
@@ -270,7 +300,7 @@ class Style_2 extends AdminStyle
                 'range' => [
                     'px' => [
                         'min' => 0,
-                        'max' => 1200,
+                        'max' => 500,
                         'step' => 1,
                     ],
                     '%' => [

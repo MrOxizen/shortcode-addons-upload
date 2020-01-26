@@ -1,13 +1,11 @@
  
 
  .oxi_addons__image_magnifier_wrapper{
-     width: 100%;
-     display: flex;
-     justify-content: center;
+	 width: 100%; 
+	 float: left;
  }
  .oxi_addons__image_magnifier_style_1{
-    display: flex;
-    overflow: hidden;  
+    display: flex; 
     width: 100%;
  }
  
@@ -23,4 +21,11 @@
 }
 .oxi_addons__image_magnifier_style_1 .oxi_addons__magnifier_right{
 	top: 0px;
+}
+.oxi_addons__image_magnifier_style_1 .zoomable{
+	z-index: 9999;
+}
+.oxi_addons__image.oxi__image_height_width{
+    display: flex;
+    justify-content: center;
 }

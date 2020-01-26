@@ -46,7 +46,9 @@ class Style_2 extends Templates
         if (array_key_exists('sa_image_magnifier_magnifi_router_switcher', $style) && $style['sa_image_magnifier_magnifi_router_switcher'] == 'yes') {
             $rounded = 'roundedCorners :true,';
         }
-        $jquery .= ' $(".oxi__image_' . $this->oxiid . '").zoomple({
+        $datas = (array_key_exists('sa_addons_image_magnifier_repeater', $style) && is_array($style['sa_addons_image_magnifier_repeater'])) ? $style['sa_addons_image_magnifier_repeater'] : [];
+        foreach ($datas as $key => $data) {
+            $jquery .= ' $(".oxi__image_' . $this->oxiid . '_' . $key . '").zoomple({
                 blankURL : "' . SA_ADDONS_UPLOAD_URL . '/Image_magnifier/File/images/blank.gif' . '",
                 bgColor :"#fff",
                 loaderURL : "' . SA_ADDONS_UPLOAD_URL . '/Image_magnifier/File/images/loader.gif' . '",
@@ -55,29 +57,33 @@ class Style_2 extends Templates
                 ' . $height . '
                 ' . $offset . '
                 ' . $rounded . '
-
               });
             ';
+        }
         $jquery .= '
-        jQuery("#zoomple_previewholder").addClass("oxi_addons_magnifier_' . $this->oxiid . '");
+            jQuery("#zoomple_previewholder").addClass("oxi_addons_magnifier_' . $this->oxiid . '");
         ';
         return $jquery;
     }
 
     public function default_render($style, $child, $admin)
-    {
-        $image = '';
-
-        if ($this->media_render('sa_image_magnifier_image', $style) != '') {
-            $image = '<a class="oxi__image_' . $this->oxiid . '" href="' . $this->media_render('sa_image_magnifier_image', $style) . '">
-                 <img class="oxi_addons__image' . $style['sa_image_magnifier_image_switcher'] . '  ' . $style['sa_image_magnifier_grayscale_switter'] . '  " src="' . $this->media_render('sa_image_magnifier_image', $style) . '" alt=""/>
-            </a>';
+    { 
+        echo '<div class="oxi_addons__image_magnifier_wrapper">';
+        $datas = (array_key_exists('sa_addons_image_magnifier_repeater', $style) && is_array($style['sa_addons_image_magnifier_repeater'])) ? $style['sa_addons_image_magnifier_repeater'] : [];
+        foreach ($datas as $key => $data) {
+            $image = '';
+            if ($this->media_render('sa_addons_image_magnifier_img', $data) != '') {
+                $image = '<a class="oxi__image_' . $this->oxiid . '_' . $key . ' " href="' . $this->media_render('sa_addons_image_magnifier_img', $data ) . '">
+                            <img class="oxi_addons__image ' . $style['sa_image_magnifier_image_switcher'] . '  ' . $style['sa_image_magnifier_grayscale_switter'] . '  " src="' . $this->media_render('sa_addons_image_magnifier_img', $data) . '" alt=""/>
+                        </a>';
+            }
+            echo ' <div class="oxi_addons__image_magnifier_column ' . $this->column_render('sa_addons_image_magnifier_column', $style) . '" >
+                        <div class="oxi_addons__image_magnifier_style_2 ' . $style['sa_image_magnifier_image_switcher'] . '" >
+                            ' . $image . '
+                        </div>
+                    </div>';
         }
-        echo '<div class="oxi_addons__image_magnifier_wrapper">
-                <div class="oxi_addons__image_magnifier_style_2 ' . $style['sa_image_magnifier_image_switcher'] . '">
-                     ' . $image . '
-                </div>
-         </div>';
+        echo '</div>';
     }
 
 }

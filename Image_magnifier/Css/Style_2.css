@@ -1,9 +1,8 @@
  
 
  .oxi_addons__image_magnifier_wrapper{
-     width: 100%;
-     display: flex;
-     justify-content: center;
+     width: 100%; 
+    float: left; 
  }
  .oxi_addons__image_magnifier_style_2{
     display: flex;
@@ -20,6 +19,10 @@
 }
 .oxi_addons__image_magnifier_style_2 .oxi_addons__image:hover{
 	cursor: crosshair;
+}
+.oxi_addons__image.oxi__image_height_width{
+    display: flex;
+    justify-content: center;
 }
 
 
