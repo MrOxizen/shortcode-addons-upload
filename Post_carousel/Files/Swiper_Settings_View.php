@@ -104,7 +104,7 @@ class Swiper_Settings_View  extends Templates
             ';
         return $js;
     }
-    public function slider_default_render($main_clsass = '', $slider_content = '')
+    public function slider_default_render($main_clsass = '', $slider_item = '')
     {
         $style = $this->style;
         $arrow = $sa_swiper_slider_arrows_left = $sa_swiper_slider_arrows_right = '';
@@ -127,14 +127,15 @@ class Swiper_Settings_View  extends Templates
         echo '<div class="' . $main_clsass . '  sa_swiper_slider_main_wrapper ' . $style['sa_swiper_slider_dots_position'] . '">
                     <div class="swiper-container sa_swiper_slider_triger ' . $style['sa_swiper_slider_image_switcher'] . '">
                         <div class="swiper-wrapper">
-                            ' . $slider_content . '
+                            ' . $slider_item . '
                         </div>
                     </div>';
         if (array_key_exists('sa_swiper_slider_dots', $style) && $style['sa_swiper_slider_dots'] == 'yes') :
             echo '<div class="swiper-pagination sa_swiper_slider_dots_' . $this->oxiid . '"></div>';
         endif;
         echo $arrow;
-        echo '</div>
+        echo '
+            </div>
             ';
 
         $this->inline_css .= '
@@ -149,6 +150,7 @@ class Swiper_Settings_View  extends Templates
             .sa_swiper_slider_main_wrapper .swiper-button-prev {
                 position: absolute;
                 top: 50%;
+                z-index: 9999;
             }
             .sa_swiper_slider_main_wrapper .swiper-pagination {
                 left: 50%;
