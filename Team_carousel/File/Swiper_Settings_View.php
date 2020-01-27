@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Post_carousel\Files;
+namespace SHORTCODE_ADDONS_UPLOAD\Team_carousel\File;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -63,7 +63,7 @@ class Swiper_Settings_View  extends Templates
                     slideShadows: false,
                     shadowOffset: 0,
                     shadowScale: 0,
-                },
+                },          
                 autoplay: {
                     delay: ' . $autoplay . '
                 },
@@ -84,7 +84,7 @@ class Swiper_Settings_View  extends Templates
                         slidesPerView: "' . $items_tablet . '",
                         spaceBetween:  ' . $margin_tablet . '
                     },
-                    480: {
+                    320: {
                         slidesPerView: "' . $items_mobile . '",
                         spaceBetween:  ' . $margin_mobile . '
                     }

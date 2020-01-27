@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Post_carousel\Files;
+namespace SHORTCODE_ADDONS_UPLOAD\Team_carousel\File;
 
 if (!defined('ABSPATH')) {
     exit;
