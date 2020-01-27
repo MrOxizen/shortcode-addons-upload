@@ -1,0 +1,50 @@
+.oxi_addons_content_ticker_style1{
+    width: 100%;
+    padding: 10px;
+}
+.oxi_addons_content_ticker_style1 .oxi_content_ticker_main{
+    display: flex;
+    width: 100%;
+}
+
+.oxi_addons_content_ticker_style1 .oxi_content_ticket_tag{
+    background: rgba(62, 156, 214, 1);
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+    flex: 0 0 auto;
+}
+.oxi_addons_content_ticker_style1 .oxi_content_ticket_content{
+    flex: 1 1 auto;
+    background: #d0d0d0;
+}
+.oxi_addons_content_ticker_style1 .oxi_content_ticket_title{
+    padding: 10px;
+    width: 100%;
+    float: left;
+}
+.oxi_addons_content_ticker_style1 .oxi_content_ticker_text{
+    font-size: 18px;
+    transition: none;
+}
+
+
+
+
+
+.oxi_addons_content_ticker_style1 .swiper-button-prev::after,
+.oxi_addons_content_ticker_style1 .swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+}
+.swiper-button-next{
+    
+}
+.swiper-button-prev{
+    
+}

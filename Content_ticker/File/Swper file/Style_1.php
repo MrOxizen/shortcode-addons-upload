@@ -96,7 +96,7 @@ class Style_1 extends AdminStyle {
         );
         $this->add_control(
                 'sa_content_ticker_tag_position', $this->style, [
-            'label' => __('Tag Alignment', SHORTCODE_ADDOONS),
+            'label' => __('Alignment', SHORTCODE_ADDOONS),
             'type' => Controls::CHOOSE,
             'operator' => Controls::OPERATOR_ICON,
             'default' => 'center',
@@ -107,11 +107,13 @@ class Style_1 extends AdminStyle {
                     'title' => __('Left', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-left',
                 ],
+                
                 'right' => [
                     'title' => __('Right', SHORTCODE_ADDOONS),
                     'icon' => 'fas fa-align-right',
                 ],
             ],
+            
                 ]
         );
         $this->add_responsive_control(
@@ -519,37 +521,6 @@ class Style_1 extends AdminStyle {
         );
 
 
-        $this->add_responsive_control(
-                'sa_content_ticker_teg_width', $this->style, [
-            'label' => __('Tag Width', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .oxi_content_ticket_tag' => 'width: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .oxi_content_ticket_content' => 'width: calc(100% - {{SIZE}}{{UNIT}});',
-            ],
-                ]
-        );
 
         $this->add_control(
                 'sa_counter_title_color_h', $this->style, [
@@ -696,178 +667,187 @@ class Style_1 extends AdminStyle {
         $this->start_section_devider();
 
         $this->start_controls_section(
-                'shortcode-addons', [
-            'label' => esc_html__('Carousel Style', SHORTCODE_ADDOONS),
+                'shortcode-addons-layout', [
+            'label' => esc_html__('Carousel Settings', SHORTCODE_ADDOONS),
             'showing' => TRUE,
                 ]
         );
 
+
+        
         $this->add_control(
-                'sa_carousel_a_p_on_off', $this->style, [
-            'label' => __('Auto Play', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'true',
-            'options' => [
-                'true' => [
-                    'title' => __('True', SHORTCODE_ADDOONS),
+                'sa_content_ticker_silder_slider_speed', $this->style, [
+            'label' => __('Slider Speed', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 500,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 3000,
+                    'step' => 50,
                 ],
-                'false' => [
-                    'title' => __('False', SHORTCODE_ADDOONS),
-                ]
             ],
                 ]
         );
+
         $this->add_control(
-                'sa_carousel_a_p_dur', $this->style, [
-            'label' => __('Auto Play Duration', SHORTCODE_ADDOONS),
-            'type' => Controls::NUMBER,
-            'loader' => TRUE,
-            'default' => '1',
+                'sa_content_ticker_silder_autoplay_switter', $this->style, [
+            'label' => __('Autoplay', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'separator' => TRUE,
+            'default' => 'yes',
+            'loader' => true,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->add_control(
+                'sa_content_ticker_silder_autoplay_speed', $this->style, [
+            'label' => __('Autoplay Speed  ', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => 2000,
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 5000,
+                    'step' => 50,
+                ],
+            ],
             'condition' => [
-                'sa_carousel_a_p_on_off' => 'true'
-            ]
+                'sa_content_ticker_silder_autoplay_switter' => 'yes',
+            ],
                 ]
         );
 
         $this->add_control(
-                'sa_carousel_pau_hov_on_off', $this->style, [
-            'label' => __('Pause in Hover', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'true',
-            'options' => [
-                'true' => [
-                    'title' => __('True', SHORTCODE_ADDOONS),
-                ],
-                'false' => [
-                    'title' => __('False', SHORTCODE_ADDOONS),
-                ]
-            ],
-                ]
-        );
-        $this->add_control(
-                'sa_carousel_infin_loop_on_off', $this->style, [
+                'sa_content_ticker_silder_loop_switter', $this->style, [
             'label' => __('Infinite Loop', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'true',
-            'options' => [
-                'true' => [
-                    'title' => __('True', SHORTCODE_ADDOONS),
-                ],
-                'false' => [
-                    'title' => __('False', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'separator' => TRUE,
+            'default' => 'yes',
+            'loader' => true,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
                 ]
-            ],
+        );
+
+        $this->add_control(
+                'sa_content_ticker_silder_pause_switter', $this->style, [
+            'label' => __('Pause On Hover', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => 'no',
+            'loader' => true,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
                 ]
         );
 
 
+        $this->add_control(
+                'sa_content_ticker_silder_pause_grab_cursor', $this->style, [
+            'label' => __('Grab Cursor', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'separator' => TRUE,
+            'default' => 'no',
+            'loader' => true,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+        $this->add_control(
+                'sa_content_ticker_silder_list_main_navigator', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::SEPARATOR,
+            Controls::SEPARATOR => true,
+                ]
+        );
+        $this->add_control(
+                'sa_content_ticker_slider_nav_on_off', $this->style, [
+            'label' => __('Navigation', SHORTCODE_ADDOONS),
+            'type' => Controls::HEADING,
+            'separator' => TRUE,
+                ]
+        );
+        $this->add_control(
+                'sa_content_ticker_silder_pause_arrow', $this->style, [
+            'label' => __('Arrows', SHORTCODE_ADDOONS),
+            'type' => Controls::SWITCHER,
+            'default' => 'yes',
+            'loader' => true,
+            'label_on' => __('Yes', SHORTCODE_ADDOONS),
+            'label_off' => __('No', SHORTCODE_ADDOONS),
+            'return_value' => 'yes',
+                ]
+        );
+
 
         $this->add_control(
-                'sa_carousel_mou_dragg_on_off', $this->style, [
-            'label' => __('Mouse Draggable', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'true',
-            'options' => [
-                'true' => [
-                    'title' => __('True', SHORTCODE_ADDOONS),
-                ],
-                'false' => [
-                    'title' => __('False', SHORTCODE_ADDOONS),
-                ]
-            ],
+                'sa_content_ticker_silder_list_main_direction', $this->style, [
+            'label' => __('', SHORTCODE_ADDOONS),
+            'type' => Controls::SEPARATOR,
+            Controls::SEPARATOR => true,
                 ]
         );
         $this->add_control(
-                'sa_carousel_rig_left_on_off', $this->style, [
-            'label' => __('Right to left', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'true',
+                'sa_content_ticker_silder_direction', $this->style, [
+            'label' => __('Direction', SHORTCODE_ADDOONS),
+            'type' => Controls::SELECT,
+            'default' => 'left',
+            'loader' => true,
             'options' => [
-                'true' => [
-                    'title' => __('True', SHORTCODE_ADDOONS),
-                ],
-                'false' => [
-                    'title' => __('False', SHORTCODE_ADDOONS),
-                ]
+                'left' => __('Left', SHORTCODE_ADDOONS),
+                'right' => __('Right', SHORTCODE_ADDOONS),
             ],
                 ]
         );
-        $this->add_control(
-                'sa_carousel_nav_on_off', $this->style, [
-            'label' => __('Nav Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'toggle' => TRUE,
-            'loader' => TRUE,
-            'default' => 'true',
-            'options' => [
-                'true' => [
-                    'title' => __('True', SHORTCODE_ADDOONS),
-                ],
-                'false' => [
-                    'title' => __('False', SHORTCODE_ADDOONS),
-                ]
-            ],
-                ]
-        );
+
 
         $this->end_controls_section();
-
         $this->end_section_devider();
 
         $this->start_section_devider();
         $this->start_controls_section(
                 'shortcode-addons', [
-            'label' => esc_html__('Nav icon Style', SHORTCODE_ADDOONS),
-            'showing' => FALSE,
+            'label' => esc_html__('Arrows Setting', SHORTCODE_ADDOONS),
+            'showing' => TRUE,
             'condition' => [
-                'sa_carousel_nav_on_off' => 'true'
-            ]
+                'sa_content_ticker_silder_pause_arrow' => 'yes'
+            ],
                 ]
         );
+
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
-                'normal' => esc_html__('Left Icon', SHORTCODE_ADDOONS),
-                'hover' => esc_html__('Right Icon', SHORTCODE_ADDOONS),
+                'normal' => esc_html__('Arrow Left', SHORTCODE_ADDOONS),
+                'hover' => esc_html__('Arrow Right', SHORTCODE_ADDOONS),
             ]
                 ]
         );
         $this->start_controls_tab();
         $this->add_control(
-                'sa_carousel_nav_left', $this->style, [
-            'label' => __('Nav Left Icon', SHORTCODE_ADDOONS),
+                'arrow_left', $this->style, [
+            'label' => __('Arrow Left', SHORTCODE_ADDOONS),
             'type' => Controls::ICON,
-            'default' => 'fas fa-angle-left',
+            'default' => 'fas fa-arrow-left',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => '',
+            ],
                 ]
         );
-        $this->end_controls_tab();
-
-        $this->start_controls_tab();
-        $this->add_control(
-                'sa_carousel_nav_right', $this->style, [
-            'label' => __('Nav Right Icon', SHORTCODE_ADDOONS),
-            'type' => Controls::ICON,
-            'separator' => TRUE,
-            'default' => 'fas fa-angle-right',
-                ]
-        );
-        
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-        
         $this->add_responsive_control(
-                'sa_carousel_nav_S', $this->style, [
-            'label' => __('Nav Size', SHORTCODE_ADDOONS),
+                'arrows_left_position', $this->style, [
+            'label' => __('Arrow Position', SHORTCODE_ADDOONS),
             'type' => Controls::SLIDER,
             'default' => [
                 'unit' => 'px',
@@ -876,47 +856,115 @@ class Style_1 extends AdminStyle {
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 200,
+                    'max' => 100,
+                    'step' => 0.5,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => 'left: {{SIZE}}%;',
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
+
+        $this->add_control(
+                'arrow_right', $this->style, [
+            'label' => __('Arrow Right', SHORTCODE_ADDOONS),
+            'type' => Controls::ICON,
+            'default' => 'fas fa-arrow-right',
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => '',
+            ],
+                ]
+        );
+        $this->add_responsive_control(
+                'arrows_Right_position', $this->style, [
+            'label' => __('Arrow Position', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 0.5,
+                ],
+            ],
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => 'right: {{SIZE}}%;',
+            ],
+                ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        $this->add_responsive_control(
+                'arrows_width_height', $this->style, [
+            'label' => __('Width Height', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'separator' => TRUE,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
                     'step' => 1,
                 ],
                 '%' => [
                     'min' => 0,
                     'max' => 50,
-                    'step' => .1,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
                     'max' => 10,
-                    'step' => .1,
+                    'step' => 1,
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
             ],
                 ]
         );
-        $this->add_control(
-                'sa_content_ticker_arrow_pos', $this->style, [
-            'label' => __('Arrow Alignment', SHORTCODE_ADDOONS),
-            'type' => Controls::CHOOSE,
-            'operator' => Controls::OPERATOR_ICON,
-            'default' => 'center',
-            'separator' => TRUE,
-            'loader' => TRUE,
-            'options' => [
-                'arrow_left' => [
-                    'title' => __('Left', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-left',
+        $this->add_responsive_control(
+                'arrows_size', $this->style, [
+            'label' => __('Size', SHORTCODE_ADDOONS),
+            'type' => Controls::SLIDER,
+            'default' => [
+                'unit' => 'px',
+                'size' => '',
+            ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
                 ],
-                'arrow_right' => [
-                    'title' => __('Right', SHORTCODE_ADDOONS),
-                    'icon' => 'fas fa-align-right',
+                '%' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 1,
+                ],
+                'em' => [
+                    'min' => 0,
+                    'max' => 10,
+                    'step' => 1,
                 ],
             ],
-           
+            'selector' => [
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev .oxi-icons' => 'font-size: {{SIZE}}{{UNIT}};',
+            ],
                 ]
         );
+
         $this->start_controls_tabs(
                 'shortcode-addons-start-tabs', [
             'options' => [
@@ -926,113 +974,113 @@ class Style_1 extends AdminStyle {
                 ]
         );
         $this->start_controls_tab();
+
         $this->add_control(
-                'sa_carousel_nav_c', $this->style, [
+                'arrows_color_normal', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
+            'default' => '',
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev .oxi-icons' => 'color: {{VALUE}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next .oxi-icons' => 'color: {{VALUE}};',
+                ' {{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next .oxi-icons' => 'color: {{VALUE}};',
+                ' {{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev .oxi-icons' => 'color: {{VALUE}};',
             ],
                 ]
         );
+
         $this->add_control(
-                'sa_carousel_nav_bg', $this->style, [
+                'arrows_bg_color_normal', $this->style, [
             'label' => __('Background Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => 'rgba(108, 194, 50, 1.00)',
-            'oparetor' => 'RGB',
+            'oparator' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev' => 'background: {{VALUE}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => 'background: {{VALUE}};',
             ],
                 ]
         );
         $this->add_group_control(
-                'sa_carousel_nav_border', $this->style, [
+                'arrows_border_normal', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev' => '',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next' => '',
-            ],
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => '',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => '',
+            ]
                 ]
         );
         $this->add_group_control(
-                'sa_carousel_nav_shad', $this->style, [
+                'arrows_boxsha_normal', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev' => '',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next' => '',
-            ],
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => '',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => '',
+            ]
                 ]
         );
         $this->end_controls_tab();
 
         $this->start_controls_tab();
         $this->add_control(
-                'sa_carousel_nav_c_h', $this->style, [
+                'arrows_color_hover', $this->style, [
             'label' => __('Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => '#ffffff',
+            'default' => '',
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover .oxi-icons' => 'color: {{VALUE}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover .oxi-icons' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev:hover .oxi-icons' => 'color: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next:hover .oxi-icons' => 'color: {{VALUE}};',
             ],
                 ]
         );
         $this->add_control(
-                'sa_carousel_nav_bg_h', $this->style, [
+                'arrows_bg_color_hover', $this->style, [
             'label' => __('Background Color', SHORTCODE_ADDOONS),
             'type' => Controls::COLOR,
-            'default' => 'rgba(36, 112, 4, 0.99)',
-            'oparetor' => 'RGB',
+            'oparator' => 'RGB',
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover' => 'background: {{VALUE}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev:hover' => 'background: {{VALUE}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next:hover' => 'background: {{VALUE}};',
             ],
                 ]
         );
         $this->add_group_control(
-                'sa_carousel_nav_border_h', $this->style, [
+                'arrows_border_hover', $this->style, [
             'type' => Controls::BORDER,
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover' => '',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover' => '',
-            ],
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev:hover' => '',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next:hover' => '',
+            ]
                 ]
         );
         $this->add_group_control(
-                'sa_carousel_nav_shad_h', $this->style, [
+                'arrows_boxsha_hover', $this->style, [
             'type' => Controls::BOXSHADOW,
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev:hover' => '',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next:hover' => '',
-            ],
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev:hover' => '',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next:hover' => '',
+            ]
                 ]
         );
+
         $this->end_controls_tab();
         $this->end_controls_tabs();
-
         $this->add_responsive_control(
-                'sa_carousel_nav_b_r', $this->style, [
-            'label' => __('Border Radius', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
+                'arrows_border_radius_normal', $this->style, [
+            'label' => __('Border radius', SHORTCODE_ADDOONS),
             'separator' => TRUE,
+            'type' => Controls::DIMENSIONS,
             'default' => [
                 'unit' => 'px',
                 'size' => '',
             ],
             'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
                 '%' => [
                     'min' => 0,
                     'max' => 50,
                     'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
@@ -1041,13 +1089,13 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
                 ]
         );
         $this->add_responsive_control(
-                'sa_carousel_nav_padding', $this->style, [
+                'arrows_padding', $this->style, [
             'label' => __('Padding', SHORTCODE_ADDOONS),
             'type' => Controls::DIMENSIONS,
             'default' => [
@@ -1055,15 +1103,15 @@ class Style_1 extends AdminStyle {
                 'size' => '',
             ],
             'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
                 '%' => [
                     'min' => 0,
                     'max' => 50,
                     'step' => .1,
+                ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 200,
+                    'step' => 1,
                 ],
                 'em' => [
                     'min' => 0,
@@ -1072,44 +1120,12 @@ class Style_1 extends AdminStyle {
                 ],
             ],
             'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-            ],
-                ]
-        );
-        $this->add_responsive_control(
-                'sa_carousel_nav_margin', $this->style, [
-            'label' => __('Margin', SHORTCODE_ADDOONS),
-            'type' => Controls::DIMENSIONS,
-            'default' => [
-                'unit' => 'px',
-                'size' => '',
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 0,
-                    'max' => 200,
-                    'step' => 1,
-                ],
-                '%' => [
-                    'min' => 0,
-                    'max' => 50,
-                    'step' => .1,
-                ],
-                'em' => [
-                    'min' => 0,
-                    'max' => 10,
-                    'step' => .1,
-                ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-prev' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                '{{WRAPPER}} .sa_addons_carousel_style_1 .oxi-owl-nav .oxi-owl-next' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-prev' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .oxi_addons_content_ticker_style1 .swiper-button-next' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
         $this->end_controls_section();
-
         $this->end_section_devider();
 
 

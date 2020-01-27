@@ -16,15 +16,6 @@ use SHORTCODE_ADDONS\Core\Templates;
 
 class Style_1 extends Templates {
 
-    public function public_css() {
-        wp_enqueue_style('swiper.css', SA_ADDONS_UPLOAD_URL . '/Content_ticker/File/swiper.min.css', false, SA_ADDONS_PLUGIN_VERSION);
-    }
-
-    public function public_jquery() {
-        $this->JSHANDLE = 'swiper.js';
-        wp_enqueue_script('swiper.js', SA_ADDONS_UPLOAD_URL . '/Content_ticker/File/swiper.min.js', false, SA_ADDONS_PLUGIN_VERSION);
-    }
-
     public function default_render($style, $child, $admin) {
 
 
@@ -78,7 +69,7 @@ class Style_1 extends Templates {
 
 
 
-                    $title .= ' <div class="oxi_content_ticket_title swiper-slide">
+                    $title .= ' <div class="oxi_content_ticket_title">
                                     <a class="oxi_content_ticker_text" title=" ' . get_the_title($query->post->ID) . '" href="' . get_permalink($query->post->ID) . '"  target="' . $style['sa_s_image_layout_linke_open'] . '">
                                     ' . get_the_title($query->post->ID) . '
                                     </a>
@@ -94,10 +85,10 @@ class Style_1 extends Templates {
             $repeater = (array_key_exists('sa_content_ticker_repeater', $style) && is_array($style['sa_content_ticker_repeater'])) ? $style['sa_content_ticker_repeater'] : [];
             foreach ($repeater as $key => $value) {
                 if ($value['sa_content_ticker_content'] != '') {
-                    $title .= '<div class="oxi_content_ticket_title swiper-slide oxi_content_ticket_title_' . $key . '">
+                    $title .= '<div class="oxi_content_ticket_title oxi_content_ticket_title_' . $key . '">
                                 <a class ="oxi_content_ticker_text" ' . $this->url_render('sa_content_ticker_content_link', $value) . ' >
                                     ' . $this->text_render($value['sa_content_ticker_content']) . '
-                                  </a>
+                                </a>
                             </div> ';
                 }
             }
@@ -109,85 +100,65 @@ class Style_1 extends Templates {
                                 ' . $this->text_render($style['sa_content_ticker_tag_title']) . '
                     </div>';
         }
-        
-       
-        
-        $rtl = (array_key_exists('sa_content_ticker_silder_direction', $style) && $style['sa_content_ticker_silder_direction'] == 'right') ? 'dir="rtl"' : '';
-        $arrow = $arrow_left = $arrow_right = '';
-        
-        if ($style['arrow_right'] != '') {
-            $arrow_left = $this->font_awesome_render($style['arrow_right']);
-        }
-        if ($style['arrow_left'] != '') {
-            $arrow_right = $this->font_awesome_render($style['arrow_left']);
-        }
-        if (array_key_exists('sa_content_ticker_silder_pause_arrow', $style) && $style['sa_content_ticker_silder_pause_arrow'] == 'yes') {
-            $arrow = '
-                <div class="swiper-button-next  sa_content_ticker_swiper_button_next_' . $this->oxiid . '">
-                    ' . $arrow_left . '
-                </div>
-                <div class="swiper-button-prev sa_content_ticker_swiper_button_prev_' . $this->oxiid . '">
-                    ' . $arrow_right . '
-                </div>
-            ';
-        }
+
+
+
+
         echo '<div class="oxi_addons_content_ticker_style1">
                         <div class="oxi_content_ticker_main"> 
                            ' . ($style['sa_content_ticker_tag_position'] == "left" ? $tag : "") . '
-                           <div class="swiper-container oxi_content_ticket_content" ' . $rtl . '>
-                                    <div class="swiper-wrapper">
-                                        ' . $title . '
-                                    </div>
-                            </div>
-                            '.$arrow.'
+                                <div class="oxi_content_ticket_content ">
+                                    <div class="sa_addons_carousel_style_1 sa_addons_carousel_style_1_' . $this->oxiid . ' ' . $style['sa_content_ticker_arrow_pos'] . '">
+                                     ' . $title . '
+                                     </div>
+                                </div>
                              ' . ($style['sa_content_ticker_tag_position'] == "right" ? $tag : "") . '
                         </div>
                     </div>';
     }
 
+    public function public_jquery() {
+        $this->JSHANDLE = 'owl.carousel';
+        wp_enqueue_script('owl.carousel', SA_ADDONS_UPLOAD_URL . '/Content_ticker/File/owl.carousel.js', false, SA_ADDONS_PLUGIN_VERSION);
+    }
+
     public function inline_public_jquery() {
-        $style = $this->style;
-        $prev = '.sa_content_ticker_swiper_button_next_' . $this->oxiid . '';
-        $next = '.sa_content_ticker_swiper_button_prev_' . $this->oxiid . '';
-        $speed = $style["sa_content_ticker_silder_slider_speed-size"] != '' ? $style["sa_content_ticker_silder_slider_speed-size"] : 400;
-        $autoplay = (array_key_exists('sa_content_ticker_silder_autoplay_switter', $style) && $style['sa_content_ticker_silder_autoplay_switter'] == "yes") ? $style['sa_content_ticker_silder_autoplay_speed-size'] : 999999;
-        $pause_on_hover = (array_key_exists('sa_content_ticker_silder_pause_switter', $style) && $style["sa_content_ticker_silder_pause_switter"] == "yes") ? "yes" : "";
-        $loop = (array_key_exists('sa_content_ticker_silder_loop_switter', $style) && $style["sa_content_ticker_silder_loop_switter"] == "yes") ? "1" : "0";
-        $grab_cursor = (array_key_exists('sa_content_ticker_silder_pause_grab_cursor', $style) && $style["sa_content_ticker_silder_pause_grab_cursor"] == "yes") ? "1" : "0";
-        $js = '';
-        $js .= 'var sa_content_carousel = $(".' . $this->WRAPPER . ' .oxi_addons_content_ticker_style1 .oxi_content_ticket_content");
-            var content_triger = new Swiper(sa_content_carousel, {
-                direction: "horizontal",
-                speed: ' . $speed . ',
-                effect: "slide",
-                centeredSlides: false,
-                slidesPerView: 1,
-                spaceBetween: 0,
-                grabCursor: ' . $grab_cursor . ',
-                autoHeight: true,
-                loop: ' . $loop . ',
-                autoplay: {
-                    delay: ' . $autoplay . '
+        $jquery = $navtext = '';
+        $styledata = $this->style;
+        $oxiid = $this->oxiid;
+        $navtext .= '[\'' . $this->font_awesome_render($styledata['sa_carousel_nav_left'] != '' ? $styledata['sa_carousel_nav_left'] : '') . '\', \'' . $this->font_awesome_render($styledata['sa_carousel_nav_right'] != '' ? $styledata['sa_carousel_nav_right'] : '') . '\' ]';
+        $jquery = 'jQuery(".sa_addons_carousel_style_1_' . $oxiid . '").OxiAddowlCarousel({
+            loop: ' . $styledata['sa_carousel_infin_loop_on_off'] . ',
+            margin:0,
+            autoplay:' . $styledata['sa_carousel_a_p_on_off'] . ',
+            autoplayTimeout: ' . ($styledata['sa_carousel_a_p_dur'] * 1000) . ',
+            center: false,
+            autoplayHoverPause:' . $styledata['sa_carousel_pau_hov_on_off'] . ',
+            mouseDrag:' . $styledata['sa_carousel_mou_dragg_on_off'] . ',
+            rtl:' . $styledata['sa_carousel_rig_left_on_off'] . ',
+            stagePadding: 0,
+            merge:false,
+            autoHeight: false,
+            autoHeightClass: "oxi-owl-height",
+            nav: ' . $styledata['sa_carousel_nav_on_off'] . ',
+            navText: ' . $navtext . ',
+            dots: false,
+            responsive: {
+                0: {
+                    merge:false,
+                    items: 1,
                 },
-               
-                navigation: {
-                    nextEl: "' . $next . '",
-                    prevEl: "' . $prev . '"
+                668: {
+                    merge:false,
+                    items: 1,
                 },
-                
-               
-            });';
-        if ($pause_on_hover == 'yes') {
-            $js .= '
-            var mySwiper = document.querySelector(".' . $this->WRAPPER . ' .oxi_addons_content_ticker_style1 oxi_content_ticket_content").swiper
-            $(".swiper-container").mouseenter(function() {
-                mySwiper.autoplay.stop();
-              });
-              $(".swiper-container").mouseleave(function() {
-                mySwiper.autoplay.start();
-              });';
-        }
-        return $js;
+                1000: {
+                    merge:true,
+                    items: 1,
+                },
+            },
+        });';
+        return $jquery;
     }
 
 }
