@@ -52,43 +52,15 @@ class Style_1 extends Templates
             } elseif (array_key_exists('sa_image_magnifier_magnifi_position', $data) && $data['sa_image_magnifier_magnifi_position'] == 'left') {
                 $position = '' . ($data['sa_image_magnifier_magnifi_position_left-size'] != '') ? 'left: ' . $data['sa_image_magnifier_magnifi_position_left-size'] . ',' : 'left:10,' . '';
             }
-            $jquery .= '
-            var $width  = jQuery(window).width();
-            if ($width > 767){ 
-                new ImageZoom(".oxi__image_' . $this->oxiid . '_'.$key.'", {
+            $jquery .= '    new ImageZoom(".oxi__image_' . $this->oxiid . '_'.$key.'", {
                 deadarea: 0.25,
-                    target: {
-                        ' . $position . ' 
-                        ' . $width . ' 
-                        ' . $height . ' 
-                    },
-                    ' . $zoom . '
-                });  
-            }
-                jQuery(window).on("resize", function(){
-                    var $width  = jQuery(window).width();
-                    if ($width  > 767){ 
-                        new ImageZoom(".oxi__image_' . $this->oxiid . '_'.$key.'", {
-                            deadarea: 0.25,
-                            target: { 
-                                ' . $width . ' 
-                                ' . $height . ' 
-                            },
-                            ' . $zoom . '
-                        }); 
-                    }else{
-                        new ImageZoom(".oxi__image_' . $this->oxiid . '_'.$key.'", {
-                            deadarea: 0.25,
-                            target: {
-                                ' . $position . ' 
-                                ' . $width . ' 
-                                ' . $height . ' 
-                            },
-                            ' . $zoom . '
-                        });
-                   }
-                });
-                ';  
+                target: {
+                    ' . $position . ' 
+                    ' . $width . ' 
+                    ' . $height . ' 
+                },
+                ' . $zoom . '
+            });';  
         } 
         return $jquery;
 
