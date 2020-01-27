@@ -160,7 +160,7 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_group_control(
-            'sa_info_boxes_column',
+            'sa_light_box_column',
             $this->style,
             [
                 'type' => Controls::COLUMN,
@@ -172,7 +172,7 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_group_control(
-            'sa_info_bg_color',
+            'sa_light_box_bg_color',
             $this->style,
             [
                 'label' => __('Background Color', SHORTCODE_ADDOONS),
@@ -183,7 +183,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_info_boxes_padding',
+            'sa_light_box_padding',
             $this->style,
             [
                 'label' => __('Padding', SHORTCODE_ADDOONS),
@@ -215,7 +215,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa_info_boxes_margin',
+            'sa_light_box_margin',
             $this->style,
             [
                 'label' => __('Margin', SHORTCODE_ADDOONS),
@@ -258,7 +258,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa-image-boxes-width',
+            'sa_light_box_width',
             $this->style,
             [
                 'label' => __('Width', SHORTCODE_ADDOONS),
@@ -290,7 +290,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->add_responsive_control(
-            'sa-image-boxes-height',
+            'sa_light_box_height',
             $this->style,
             [
                 'label' => __('Height', SHORTCODE_ADDOONS),
@@ -1111,8 +1111,7 @@ class Style_1 extends AdminStyle
                 'default' => 'rgba(59, 59, 59, 0.64)',
                 'selector' => [
                     '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image_main:hover::after' => 'background:{{VALUE}};',
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon:hover::after' => 'background:{{VALUE}};'
-                ],
+                  ],
             ]
         );
         $this->end_controls_section();
@@ -1178,8 +1177,7 @@ class Style_1 extends AdminStyle
                 'oparetor' => 'RGB',
                 'default' => 'rgba(59, 59, 59, 0.64)',
                 'selector' => [
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__image_main:hover::after' => 'background:{{VALUE}};',
-                    '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon:hover::after' => 'background:{{VALUE}};'
+                     '{{WRAPPER}} .oxi_addons__light_box_style_1 .oxi_addons__icon:hover::after' => 'background:{{VALUE}};'
                 ],
             ]
         );
