@@ -2296,6 +2296,7 @@ class Style_1 extends AdminStyle
             ]
         );
         $this->end_controls_section();
+        $this->end_controls_section();
         $this->end_section_devider();
         $this->end_section_tabs();
     }
