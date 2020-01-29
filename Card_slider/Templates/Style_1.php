@@ -192,5 +192,68 @@ class Style_1 extends Swiper_Settings_View
         $this->card_data = $this->post_render();
         $this->slider_default_render('oxi-addons__card-slider-style-1', $this->card_data);
     }
+    public function slider_default_render($main_clsass = '', $slider_item = '')
+    {
+        $style = $this->style;
+        $arrow = $sa_swiper_slider_arrows_left = $sa_swiper_slider_arrows_right = '';
+        if (array_key_exists('sa_swiper_slider_arrows_right', $style) && $style['sa_swiper_slider_arrows_right'] != '') {
+            $sa_swiper_slider_arrows_left = $this->font_awesome_render($style['sa_swiper_slider_arrows_right']);
+        }
+        if (array_key_exists('sa_swiper_slider_arrows_left', $style) && $style['sa_swiper_slider_arrows_left'] != '') {
+            $sa_swiper_slider_arrows_right = $this->font_awesome_render($style['sa_swiper_slider_arrows_left']);
+        }
+        if (array_key_exists('sa_swiper_slider_arrow', $style) && $style['sa_swiper_slider_arrow'] == 'yes') {
+            $arrow = '
+                <div class="swiper-button-next  sa_swiper_slider_next_' . $this->oxiid . '">
+                    ' . $sa_swiper_slider_arrows_left . '
+                </div>
+                <div class="swiper-button-prev sa_swiper_slider_prev_' . $this->oxiid . '">
+                    ' . $sa_swiper_slider_arrows_right . '
+                </div>
+            ';
+        }
+        echo '<div class="' . $main_clsass . '  sa_swiper_slider_main_wrapper ' . $style['sa_swiper_slider_dots_position'] . ' ' . $style['sa_swiper_slider_dots_align'] . ' ' . $style['sa_card_slider_thumbnail_align'] . '">
+                    <div class="swiper-container sa_swiper_slider_triger ' . $style['sa_swiper_slider_image_switcher'] . '">
+                        <div class="swiper-wrapper">
+                            ' . $slider_item . '
+                        </div>
+                    </div>';
+        if (array_key_exists('sa_swiper_slider_dots', $style) && $style['sa_swiper_slider_dots'] == 'yes') :
+            echo '<div class="swiper-pagination sa_swiper_slider_dots_' . $this->oxiid . '"></div>';
+        endif;
+        echo $arrow;
+        echo '
+            </div>
+            ';
 
+        $this->inline_css .= '
+            .sa_swiper_slider_main_wrapper .sa_swiper_slider_triger {
+                max-width: 100%;
+            }
+            .sa_swiper_slider_main_wrapper .swiper-button-prev::after,
+            .sa_swiper_slider_main_wrapper .swiper-button-next::after {
+                display: none;
+            }
+            .sa_swiper_slider_main_wrapper .swiper-button-next,
+            .sa_swiper_slider_main_wrapper .swiper-button-prev {
+                position: absolute;
+                top: 50%;
+                z-index: 9999;
+            }
+            .sa_swiper_slider_main_wrapper .swiper-pagination {
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+            .sa_swiper_slider_main_wrapper.sa_swiper_slider_dots_inside .swiper-pagination {
+                bottom: 30px;
+            }
+            .sa_swiper_slider_main_wrapper.sa_swiper_slider_dots_outside .swiper-pagination {
+                bottom: -25px;
+            }
+        ';
+    }
 }

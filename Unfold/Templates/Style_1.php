@@ -21,10 +21,7 @@ class Style_1 extends Templates
     public function default_render($style, $child, $admin)
     {
 
-
-
-
-        $title = $content = $button = $sep_height = $unfold_data = '';
+        $title = $content  = $unfold_data = '';
         if ($style['sa_unfold_fold_height_select'] == 'percent') {
             $fold_height = $style['sa_unfold_fold_height'];
         } else {
@@ -67,7 +64,7 @@ class Style_1 extends Templates
         }
         if (array_key_exists('sa_unfold_content', $style) && $style['sa_unfold_content'] !== '') {
             $content = '
-            <div id="sa_unfold_content_' . $this->oxiid . '" class="sa_unfold_content toggled">
+            <div id="sa_unfold_content_' . $this->oxiid . '" >
                 <div class="sa_unfold_editor_content">
                     ' . $this->text_render($style['sa_unfold_content']) . '
                 </div>
@@ -78,10 +75,21 @@ class Style_1 extends Templates
         echo '<div class="sa_unfold_container_style_1">
                 <div class="sa_unfold_wrap" data-settings=\'' . $unfold_data . '\'>
                     <div class="sa_unfold_container">
-                        <div class="sa_unfold_folder">
-                        
-                        ' . $title . '
-                        ' . $content . '
+                        <div class="sa_unfold_folder sa_unfold_content toggled">
+                            <div class="sa_unfold_data">';
+        if ($style['sa_unfold_type'] == 'shortcode') {
+            if ($style['sa_unfold_shortcode'] != '') {
+                echo $this->text_render($style['sa_unfold_shortcode']);
+            } else {
+                echo '<div style="color:red; font-size:20px; text-align:center;">Please Enter Your Shortcode !</div>';
+                return;
+            }
+        } else {
+            echo $title;
+            echo $content;
+        }
+        echo '
+                            </div>
                         ';
 
         if (array_key_exists('sa_unfold_fade_effect', $style) && $style['sa_unfold_fade_effect'] === 'yes') :
@@ -93,39 +101,39 @@ class Style_1 extends Templates
                         </div>';
         if ($style['sa_unfold_button_position'] == 'inside') {
             echo '<div class="sa_unfold_button_container">
-                <a id="sa_unfold_button_' . $this->oxiid . '" class="sa_unfold_button ' . $style['sa_unfold_button_size'] . '">';
+                    <a id="sa_unfold_button_' . $this->oxiid . '" class="sa_unfold_button ' . $style['sa_unfold_button_size'] . '">';
             if ((array_key_exists('sa_unfold_button_icon', $style) && $style['sa_unfold_button_icon'] == 'yes') && $style['sa_unfold_button_icon_position'] == 'before') :
                 echo '
-                    <span class="sa_unfold_icon sa_unfold_before"></span>';
+                        <span class="sa_unfold_icon sa_unfold_before"></span>';
             endif;
             echo '
-                    <span id="sa_unfold_button_text_' . $this->oxiid . '" class="sa_unfold_button_text"></span>';
+                        <span id="sa_unfold_button_text_' . $this->oxiid . '" class="sa_unfold_button_text"></span>';
             if ((array_key_exists('sa_unfold_button_icon', $style) && $style['sa_unfold_button_icon'] == 'yes') && $style['sa_unfold_button_icon_position'] == 'after') :
                 echo '
-                    <span class="sa_unfold_icon sa_unfold_after"></span>';
+                        <span class="sa_unfold_icon sa_unfold_after"></span>';
             endif;
             echo '
-                </a>
-            </div>';
+                    </a>
+                </div>';
         }
         echo '
                     </div>';
         if ($style['sa_unfold_button_position'] == 'outside') {
             echo '<div class="sa_unfold_button_container">
-            <a id="sa_unfold_button_' . $this->oxiid . '" class="sa_unfold_button ' . $style['sa_unfold_button_size'] . '">';
+                    <a id="sa_unfold_button_' . $this->oxiid . '" class="sa_unfold_button ' . $style['sa_unfold_button_size'] . '">';
             if ((array_key_exists('sa_unfold_button_icon', $style) && $style['sa_unfold_button_icon'] == 'yes') && $style['sa_unfold_button_icon_position'] == 'before') :
                 echo '
-                <span class="sa_unfold_icon sa_unfold_before"></span>';
+                        <span class="sa_unfold_icon sa_unfold_before"></span>';
             endif;
             echo '
-                <span id="sa_unfold_button_text_' . $this->oxiid . '" class="sa_unfold_button_text"></span>';
+                        <span id="sa_unfold_button_text_' . $this->oxiid . '" class="sa_unfold_button_text"></span>';
             if ((array_key_exists('sa_unfold_button_icon', $style) && $style['sa_unfold_button_icon'] == 'yes') && $style['sa_unfold_button_icon_position'] == 'after') :
                 echo '
-                <span class="sa_unfold_icon sa_unfold_after"></span>';
+                        <span class="sa_unfold_icon sa_unfold_after"></span>';
             endif;
             echo '
-            </a>
-        </div>';
+                    </a>
+                </div>';
         }
         echo '
                 </div>
@@ -141,7 +149,7 @@ class Style_1 extends Templates
         var sa_unfold_wrap = $(" .' . $this->WRAPPER . ' .sa_unfold_container_style_1 .sa_unfold_wrap"),
             unfoldSettings = sa_unfold_wrap.data("settings"),
             contentHeight = parseInt(
-                    sa_unfold_wrap.find(".sa_unfold_editor_content").outerHeight()
+                    sa_unfold_wrap.find(".sa_unfold_data").outerHeight()
                     );
         if (unfoldSettings["foldSelect"] == "percent") {
             var foldHeight = (unfoldSettings["foldHeight"] / 100) * contentHeight;
@@ -160,7 +168,7 @@ class Style_1 extends Templates
             e.preventDefault();
             if (sa_unfold_wrap.find(".sa_unfold_content").hasClass("toggled")) {
                 contentHeight = parseInt(
-                        sa_unfold_wrap.find(".sa_unfold_editor_content").outerHeight()
+                        sa_unfold_wrap.find(".sa_unfold_data").outerHeight()
                         );
                 sa_unfold_wrap
                         .find(".sa_unfold_button_text")

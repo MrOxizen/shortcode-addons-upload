@@ -364,6 +364,7 @@ class Style_1 extends Swiper_Settings_Admin
                 'showing' => TRUE,
             ]
         );
+
         $this->add_group_control(
             'sa_card_slider_meta_bg',
             $this->style,
@@ -503,6 +504,30 @@ class Style_1 extends Swiper_Settings_Admin
             'shortcode-addons-post-thumbnail',
             [
                 'label' => esc_html__('Post Thumbnail', SHORTCODE_ADDOONS),
+            ]
+        );
+        $this->add_control(
+            'sa_card_slider_thumbnail_align',
+            $this->style,
+            [
+                'label' => __('Thumbnail Align', SHORTCODE_ADDOONS),
+                'type' => Controls::CHOOSE,
+                'operator' => Controls::OPERATOR_ICON,
+                'default' => '0',
+                'options' => [
+                    'sa_card_slider_thumbnail_left' => [
+                        'title' => __('Left', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-left',
+                    ],
+
+                    'sa_card_slider_thumbnail_right' => [
+                        'title' => __('Right', SHORTCODE_ADDOONS),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi-addons__card-slider-style-1' => ''
+                ]
             ]
         );
         $this->add_responsive_control(
@@ -1453,5 +1478,442 @@ class Style_1 extends Swiper_Settings_Admin
         );
         $this->Swiper_Slider_Options();
         $this->end_section_tabs();
+    }
+    public function Swiper_Dots()
+    {
+        $this->start_controls_section(
+            'shortcode-addons',
+            [
+                'label' => esc_html__('Slider Dots', SHORTCODE_ADDOONS),
+                'showing' => FALSE,
+                'condition'     => [
+                    'sa_swiper_slider_dots' => 'yes'
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_swiper_slider_dots_align',
+            $this->style,
+            [
+                'label' => __('Align', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'loader' => TRUE,
+                'options' => [
+                    'sa_swiper_slider_dots_vertical' => __('Vertical', SHORTCODE_ADDOONS),
+                    'sa_swiper_slider_dots_horizontal' => __('Horizontal', SHORTCODE_ADDOONS),
+                ],
+                'default' => 'sa_swiper_slider_dots_vertical',
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper' => '',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_swiper_slider_dots_position',
+            $this->style,
+            [
+                'label' => __('Position', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'loader' => TRUE,
+                'options' => [
+                    'sa_swiper_slider_dots_inside' => __('Inside', SHORTCODE_ADDOONS),
+                    'sa_swiper_slider_dots_outside' => __('Outside', SHORTCODE_ADDOONS),
+                ],
+                'default' => 'sa_swiper_slider_dots_outside',
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper' => '',
+                ],
+                'condition'     => [
+                    'sa_swiper_slider_dots_align' => 'sa_swiper_slider_dots_horizontal'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_align_x',
+            $this->style,
+            [
+                'label' => __('Position X', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => '%',
+                    'size' => '19',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -900,
+                        'max' => 900,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => -100,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => -100,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_dots_vertical.sa_card_slider_thumbnail_left .swiper-pagination' => 'right: {{SIZE}}{{UNIT}}; left: inherit;',
+                    '{{WRAPPER}} .sa_swiper_slider_dots_vertical.sa_card_slider_thumbnail_right .swiper-pagination' => 'left: {{SIZE}}{{UNIT}}; right: inherit;',
+                ],
+                'condition'     => [
+                    'sa_swiper_slider_dots_align' => 'sa_swiper_slider_dots_vertical'
+                ],
+            ]
+        );
+
+        
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_spacing',
+            $this->style,
+            [
+                'label' => __('Spacing', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '3',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 30,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 5,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet' => 'margin: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->start_controls_tabs(
+            'shortcode-addons-start-tabs',
+            [
+                'options' => [
+                    'normal' => esc_html__('Normal', SHORTCODE_ADDOONS),
+                    'hover' => esc_html__('Hover', SHORTCODE_ADDOONS),
+                    'active' => esc_html__('Active', SHORTCODE_ADDOONS),
+                ]
+            ]
+        );
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_width',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '10',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_height',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '10',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_swiper_slider_dots_bg_color_normal',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => 'rgb(119, 119, 119)',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_swiper_slider_dots_border_normal',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet' => '',
+                ]
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_border_radius_normal',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+
+        $this->start_controls_tab();
+        $this->add_control(
+            'sa_swiper_slider_dots_bg_color_hover',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#44bbed',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_swiper_slider_dots_border_hover',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet:hover' => '',
+                ]
+            ]
+        );
+        $this->end_controls_tab();
+        $this->start_controls_tab();
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_width_a',
+            $this->style,
+            [
+                'label' => __('Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '10',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet-active' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_height_a',
+            $this->style,
+            [
+                'label' => __('Height', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '14',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet-active' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_swiper_slider_dots_bg_color_active',
+            $this->style,
+            [
+                'label' => __('Color', SHORTCODE_ADDOONS),
+                'type' => Controls::COLOR,
+                'default' => '#44bbed',
+                'oparetor' => 'RGB',
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet-active' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            'sa_swiper_slider_dots_border_active',
+            $this->style,
+            [
+                'type' => Controls::BORDER,
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet-active' => '',
+                ]
+            ]
+        );
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_border_radius_active',
+            $this->style,
+            [
+                'label' => __('Border Radius', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . ' .swiper-pagination-bullet-active' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+
+        
+        $this->add_responsive_control(
+            'sa_swiper_slider_dots_margin',
+            $this->style,
+            [
+                'label' => __('Margin', SHORTCODE_ADDOONS),
+                'type' => Controls::DIMENSIONS,
+                'separator' => TRUE,
+                'default' => [
+                    'unit' => 'px',
+                    'size' => '',
+                ],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => .1,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => .1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .sa_swiper_slider_main_wrapper .sa_swiper_slider_dots_' . $this->oxiid . '' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->end_controls_section();
     }
 }
