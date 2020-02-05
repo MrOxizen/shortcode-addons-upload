@@ -16,6 +16,9 @@
 	filter: grayscale(100%);
 	filter: gray;
 }
+.oxi_addons__image_magnifier_style_1 .oxi_addons__image{
+    width: 100%;
+}
 .oxi_addons__image_magnifier_style_1 .oxi_addons__image:hover{
 	cursor: crosshair;
 }

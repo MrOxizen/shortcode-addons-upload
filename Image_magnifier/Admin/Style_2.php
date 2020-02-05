@@ -357,7 +357,7 @@ class Style_2 extends AdminStyle
         $this->end_controls_section();
         $this->start_controls_section(
             'shortcode-addons', [
-                'label' => esc_html__('Magnifi Settings', SHORTCODE_ADDOONS),
+                'label' => esc_html__('Magnifier Settings', SHORTCODE_ADDOONS),
                 'showing' => false,
             ]
         );

@@ -401,7 +401,7 @@ class Style_1 extends AdminStyle
                 'condition' => [
                     'sa_image_magnifier_image_switcher' => 'oxi__image_height_width',
                 ],
-            ]
+        ]
         );
         $this->add_control(
             'sa_image_magnifier_grayscale_switter',
@@ -463,6 +463,7 @@ class Style_1 extends AdminStyle
                         'step' => 1,
                     ],
                 ],
+                    'description' => 'Effects will be show after save!'
             ]
         );
 
@@ -489,6 +490,7 @@ class Style_1 extends AdminStyle
                 'condition' => [
                     'sa_image_magnifier_magnifi_switcher' => 'yes',
                 ],
+                'description' => 'Effects will be show after save!',
                 'default' => [
                     'unit' => 'px',
                     'size' => '',
@@ -522,6 +524,7 @@ class Style_1 extends AdminStyle
                 'condition' => [
                     'sa_image_magnifier_magnifi_switcher' => 'yes',
                 ],
+                    'description' => 'Effects will be show after save!'
             ]
         );
 

@@ -73,49 +73,44 @@ class Style_4 extends AdminStyle {
             ],
                 ]
         );
-        $this->add_control(
-                'sa-image-comparison-hover-width', $this->style, [
-            'label' => __('Hover Width', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'separator' => TRUE,
-            'default' => [
-                'unit' => '%',
-                'size' => 10,
-            ],
-            'range' => [
-                '%' => [
-                    'min' => 1,
-                    'max' => 2000,
-                    'step' => 1,
+            $this->add_control(
+            'sa-image-comparison-hover-width', $this->style, [
+                'label' => __('Hover Width', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER,
+                'separator' => true,
+                'default' => [
+                    'unit' => '%',
+                    'size' => 25,
                 ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi-addons-main-wrapper-image-comparison-style-2 .oxi-addons-main' => 'width:{{SIZE}}{{UNIT}};',
-            ],
-                ]
+                'range' => [
+                    '%' => [
+                        'min' => 20,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ], 
+            ]
         );
         $this->add_control(
-                'sa-image-comparison-hover-transition', $this->style, [
-            'label' => __('Hover Transition', SHORTCODE_ADDOONS),
-            'type' => Controls::SLIDER,
-            'separator' => TRUE,
-            'default' => [
-                'unit' => 'px',
-                'size' => 3.5,
-            ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 20,
-                    'step' => 0.5,
+            'sa-image-comparison-hover-transition', $this->style, [
+                'label' => __('Hover Transition', SHORTCODE_ADDOONS),
+                'type' => Controls::SLIDER, 
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 2.5,
                 ],
-            ],
-            'selector' => [
-                '{{WRAPPER}} .oxi_addons_image_style_4_box .oxi_addons_font_view_img' => 'transition:all {{SIZE}}s ease-in-out;',
-            ],
-                ]
-        );
-
+                'range' => [
+                    'px' => [
+                        'min' => 0.1,
+                        'max' => 20,
+                        'step' => 0.1,
+                    ],
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .oxi_addons_image_style_4_box .oxi_addons_font_view_img' => 'transition:all {{SIZE}}s ease-in-out;',
+                ],
+            ]
+        ); 
         $this->add_responsive_control(
                 'sa_image-comparison_margin', $this->style, [
             'label' => __('Margin', SHORTCODE_ADDOONS),
