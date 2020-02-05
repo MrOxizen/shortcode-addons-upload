@@ -42,6 +42,36 @@ class Style_1 extends AdminStyle
                 'showing' => TRUE,
             ]
         );
+        $this->add_control(
+            'sa_unfold_type',
+            $this->style,
+            [
+                'label'         => __('Content Type', SHORTCODE_ADDOONS),
+                'type' => Controls::SELECT,
+                'loader' => TRUE,
+                'default' => 'custom',
+                'options' => [
+                    'custom' => 'Custom',
+                    'shortcode' => 'Shortcode',
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_unfold_shortcode',
+            $this->style,
+            [
+                'label' => __('Shortcode', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXTAREA,
+                'placeholder' => 'Enter Your Shortcode',
+                'description' => 'Save and reload',
+                'selector' => [
+                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_data' => '',
+                ],
+                'condition' => [
+                    'sa_unfold_type' => 'shortcode',
+                ],
+            ]
+        );
         $this->add_responsive_control(
             'sa_unfold_text_align',
             $this->style,
@@ -65,7 +95,10 @@ class Style_1 extends AdminStyle
                     ],
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_heading, {{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_content '=> 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_heading, {{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_content ' => 'text-align: {{VALUE}};',
+                ],
+                'condition' => [
+                    'sa_unfold_type' => 'custom',
                 ],
             ]
         );
@@ -79,6 +112,9 @@ class Style_1 extends AdminStyle
                 'label_on' => __('Yes', SHORTCODE_ADDOONS),
                 'label_off' => __('No', SHORTCODE_ADDOONS),
                 'return_value' => 'yes',
+                'condition' => [
+                    'sa_unfold_type' => 'custom',
+                ],
             ]
         );
         $this->add_control(
@@ -89,10 +125,11 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXT,
                 'default' => 'Unfold Left Alignmen',
                 'condition' => [
-                    'sa_unfold_title_on_off' => 'yes'
+                    'sa_unfold_title_on_off' => 'yes',
+                    'sa_unfold_type' => 'custom',
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_heading'=> '',
+                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_heading' => '',
                 ],
             ]
         );
@@ -113,7 +150,8 @@ class Style_1 extends AdminStyle
                     'h6' => 'H6',
                 ],
                 'condition' => [
-                    'sa_unfold_title_on_off' => 'yes'
+                    'sa_unfold_title_on_off' => 'yes',
+                    'sa_unfold_type' => 'custom',
                 ]
             ]
         );
@@ -126,7 +164,10 @@ class Style_1 extends AdminStyle
                 'type' => Controls::TEXTAREA,
                 'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
                 'selector' => [
-                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_editor_content'=> '',
+                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_editor_content' => '',
+                ],
+                'condition' => [
+                    'sa_unfold_type' => 'custom',
                 ],
             ]
         );
@@ -229,9 +270,9 @@ class Style_1 extends AdminStyle
                     'sa_unfold_button_block' => __('Block', SHORTCODE_ADDOONS),
                 ],
                 'selector' => [
-                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_button'=> '',
+                    '{{WRAPPER}} .sa_unfold_container_style_1 .sa_unfold_button' => '',
                 ],
-                
+
             ]
         );
         $this->add_control(

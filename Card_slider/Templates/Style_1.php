@@ -13,11 +13,11 @@ if (!defined('ABSPATH')) {
  * @author $biplob018
  */
 
-use SHORTCODE_ADDONS\Core\Templates;
+use SHORTCODE_ADDONS_UPLOAD\Card_slider\Files\Swiper_Settings_View;
 
-class Style_1 extends Templates
+class Style_1 extends Swiper_Settings_View
 {
-
+    public $card_data;
     public function public_css()
     {
 
@@ -30,7 +30,7 @@ class Style_1 extends Templates
     }
 
 
-    
+
     public function post_render()
     {
         $style = $this->style;
@@ -38,40 +38,39 @@ class Style_1 extends Templates
         $ssstyle = '';
 
         $post_args = [
-            'post_type' => $style['sa_post_carousel_post_type'],
-            'posts_per_page' => $style['sa_post_carousel_per_page'],
-            'orderby' => $style['sa_post_carousel_orderby'],
-            'order' => $style['sa_post_carousel_ordertype'],
-            'offset' => $style['sa_post_carousel_offset'],
+            'posts_per_page' => $style['sa_card_slider_per_page'],
+            'orderby' => $style['sa_card_slider_orderby'],
+            'order' => $style['sa_card_slider_ordertype'],
+            'offset' => $style['sa_card_slider_offset'],
             'ignore_sticky_posts' => 1,
             'post_status' => 'publish',
             'tax_query' => []
         ];
-        if (array_key_exists('sa_post_carousel_author', $style)) :
-            $post_args['author__in'] = $style['sa_post_carousel_author'];
+        if (array_key_exists('sa_card_slider_author', $style)) :
+            $post_args['author__in'] = $style['sa_card_slider_author'];
         endif;
-        $key = $style['sa_post_carousel_post_type'];
+        $key = $style['sa_card_slider_post_type'];
         if ($key != 'page') :
-            if (array_key_exists('sa_post_carousel_post_type-cat' . $key, $style)) :
+            if (array_key_exists('sa_card_slider_post_type-cat' . $key, $style)) :
                 $post_args['tax_query'][] = array(
                     'taxonomy' => $key == 'post' ? 'category' : $key . '_category',
                     'field' => 'term_id',
-                    'terms' => $style['sa_post_carousel_post_type-cat' . $key]
+                    'terms' => $style['sa_card_slider_post_type-cat' . $key]
                 );
             endif;
-            if (array_key_exists('sa_post_carousel_post_type-tag' . $key, $style)) :
+            if (array_key_exists('sa_card_slider_post_type-tag' . $key, $style)) :
                 $post_args['tax_query'][] = array(
                     'taxonomy' => $key . '_tag',
                     'field' => 'term_id',
-                    'terms' => $style['sa_post_carousel_post_type-tag' . $key]
+                    'terms' => $style['sa_card_slider_post_type-tag' . $key]
                 );
             endif;
         endif;
-        if (array_key_exists('sa_post_carousel_post_type-include' . $key, $style)) :
-            $post_args['post__in'] = $style['sa_post_carousel_post_type-include' . $key];
+        if (array_key_exists('sa_card_slider_post_type-include' . $key, $style)) :
+            $post_args['post__in'] = $style['sa_card_slider_post_type-include' . $key];
         endif;
-        if (array_key_exists('sa_post_carousel_post_type-exclude' . $key, $style)) :
-            $post_args['post__not_in'] = $style['sa_post_carousel_post_type-exclude' . $key];
+        if (array_key_exists('sa_card_slider_post_type-exclude' . $key, $style)) :
+            $post_args['post__not_in'] = $style['sa_card_slider_post_type-exclude' . $key];
         endif;
 
         $query = new \WP_Query($post_args);
@@ -79,9 +78,9 @@ class Style_1 extends Templates
         if ($query->have_posts()) {
             while ($query->have_posts()) {
                 $query->the_post();
-                echo ' <div class="swiper-slide">';
+                echo ' <div class=" swiper-slide">';
                 $img = $title = $content_excerpt = $image_url = '';
-                $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), $style['sa_post_carousel_thumb_sizes']);
+                $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), $style['sa_card_slider_thumb_sizes']);
 
                 if ($style['sa_s_image_layout_show_image'] == 'show') {
                     if ($image_url[0] != '') {
@@ -117,29 +116,29 @@ class Style_1 extends Templates
                 if ($style['sa_s_image_layout_show_title'] == 'show') {
                     $title = '
                   <a class="oxi-link" title=" ' . get_the_title($query->post->ID) . '" href="' . get_permalink($query->post->ID) . '"  target="' . $style['sa_s_image_layout_linke_open'] . '">
-                    <' . $style['sa_post_carousel_title_tag'] . ' class="oxi-addons__title">
+                    <' . $style['sa_card_slider_title_tag'] . ' class="oxi-addons__title">
                     ' . get_the_title($query->post->ID) . '
-                    </' . $style['sa_post_carousel_title_tag'] . '> 
+                    </' . $style['sa_card_slider_title_tag'] . '> 
                 </a>  
             ';
                 }
                 $avater = $meta = $align = $header_footer = $button = '';
                 $avater = get_avatar(get_the_author_meta('ID'));
-                if ($style['sa_post_carousel_button_show'] == 'show') {
+                if ($style['sa_card_slider_button_show'] == 'show') {
                     $button = '<div class="oxi-addons__button-main">
-                                <a href="' . get_permalink($query->post->ID) . '" class="oxi-addons__btn-link"  target="' . $style['sa_post_carousel_button_url'] . '">
-                                    ' . $this->text_render($style['sa_post_carousel_button_text']) . '
+                                <a href="' . get_permalink($query->post->ID) . '" class="oxi-addons__btn-link"  target="' . $style['sa_card_slider_button_url'] . '">
+                                    ' . $this->text_render($style['sa_card_slider_button_text']) . '
                                 </a>
                             </div>';
                 }
-                if ($style['sa_post_carousel_button_align'] == 'left') {
+                if ($style['sa_card_slider_button_align'] == 'left') {
                     $leftbutton = $button;
                 } else {
                     $rightbutton = $button;
                 }
                 if ($style['sa_s_image_layout_show_meta'] == 'show') {
-                    if ($style['sa_post_carousel_meta_avater'] == 'custom') {
-                        $avater = '<img alt="" src="' . $this->media_render('sa_post_carousel_meta_avater_img', $style) . '" class="avatar">';
+                    if ($style['sa_card_slider_meta_avater'] == 'custom') {
+                        $avater = '<img alt="" src="' . $this->media_render('sa_card_slider_meta_avater_img', $style) . '" class="avatar">';
                     }
                     $meta = '<div class="oxi-addons__meta-button">
                                 ' . $leftbutton . '
@@ -162,7 +161,7 @@ class Style_1 extends Templates
                     $meta = ' ' . $button . '';
                 }
 
-                if ($style['sa_post_carousel_meta_position'] == 'footer') {
+                if ($style['sa_card_slider_meta_position'] == 'footer') {
                     $header_footer = '' . $title . '
                                  ' . $this->text_render($content_excerpt) . '
                                  ' . $meta . '';
@@ -190,98 +189,71 @@ class Style_1 extends Templates
     }
     public function default_render($style, $child, $admin)
     {
-        $arrow = $arrow_left = $arrow_right = $rtl = '';
-        if ($style['arrow_right'] != '') {
-            $arrow_left = $this->font_awesome_render($style['arrow_right']);
-        }
-        if ($style['arrow_left'] != '') {
-            $arrow_right = $this->font_awesome_render($style['arrow_left']);
-        }
-        if (array_key_exists('sa_post_carousel_arrow', $style) && $style['sa_post_carousel_arrow'] == 'yes') {
-            $arrow = '
-                <div class="swiper-button-next  sa_post_carousel_next_' . $this->oxiid . '">
-                    ' . $arrow_left . '
-                </div>
-                <div class="swiper-button-prev sa_post_carousel_prev_' . $this->oxiid . '">
-                    ' . $arrow_right . '
-                </div>
-            ';
-        }
-        $rtl = (array_key_exists('sa_post_carousel_direction', $style) && $style['sa_post_carousel_direction'] == 'right') ? 'dir="rtl"' : '';
-        echo '<div class="oxi-addons__card-slider-style-1 swiper-container-wrap-dots-' . $style['dots_position'] . '">
-                    <div class="swiper-container oxi-addons__post-carousel-wrap ' . $style['sa_post_carousel_image_switcher'] . '" ' . $rtl . '>
-                        <div class="swiper-wrapper">
-                            ' . $this->post_render() . '
-                        </div>';
-                    echo '</div>';
-        if (array_key_exists('sa_post_carousel_dots', $style) && $style['sa_post_carousel_dots'] == 'yes') :
-                            echo '<div class="swiper-pagination '.$style['dots_types'].' sa_post_carousel_pagination_' . $this->oxiid . '"></div>';
-                        endif;
-        echo $arrow;
-        echo '</div>
-            ';
+        $this->card_data = $this->post_render();
+        $this->slider_default_render('oxi-addons__card-slider-style-1', $this->card_data);
     }
-
-    public function inline_public_jquery()
+    public function slider_default_render($main_clsass = '', $slider_item = '')
     {
         $style = $this->style;
-        $prev = '.sa_post_carousel_next_' . $this->oxiid . '';
-        $next = '.sa_post_carousel_prev_' . $this->oxiid . '';
-        $pagin = '.sa_post_carousel_pagination_' . $this->oxiid . '';
-        $items = $style["sa_post_carousel_visible_items-lap-size"] != '' ? $style["sa_post_carousel_visible_items-lap-size"] : 3;
-        $items_tablet = $style["sa_post_carousel_visible_items-tab-size"] != '' ? $style["sa_post_carousel_visible_items-tab-size"] : 2;
-        $items_mobile = $style["sa_post_carousel_visible_items-mob-size"] != '' ? $style["sa_post_carousel_visible_items-mob-size"] : 1;
-        $margin = $style["sa_post_carousel_items_gap-lap-size"] != '' ? $style["sa_post_carousel_items_gap-lap-size"] : 10;
-        $margin_tablet = $style["sa_post_carousel_items_gap-tab-size"] != '' ? $style["sa_post_carousel_items_gap-tab-size"] : 10;
-        $margin_mobile = $style["sa_post_carousel_items_gap-mob-size"] != '' ? $style["sa_post_carousel_items_gap-mob-size"] : 10;
-        $speed = $style["sa_post_carousel_slider_speed-size"] != '' ? $style["sa_post_carousel_slider_speed-size"] : 400;
-        $autoplay = (array_key_exists('sa_post_carousel_autoplay_switter', $style) && $style['sa_post_carousel_autoplay_switter'] == "yes") ? $style['sa_post_carousel_autoplay_speed-size'] : 999999;
-        $pause_on_hover = $style["sa_post_carousel_pause_switter"];
-        $loop = (array_key_exists('sa_post_carousel_loop_switter', $style) && $style["sa_post_carousel_loop_switter"] == "yes") ? "1" : "0";
-        $grab_cursor = (array_key_exists('sa_post_carousel_grab_cursor', $style) && $style["sa_post_carousel_grab_cursor"] == "yes") ? "1" : "0";
-        $auto_height = $style["sa_post_carousel_auto_height"];
-        $js = '';
-        $js = 'var sa_post_carousel = $(".' . $this->WRAPPER . ' .oxi-addons__card-slider-style-1 .oxi-addons__post-carousel-wrap");
-            
-            var saPostCarousel = new Swiper(sa_post_carousel, {
-                direction: "horizontal",
-                speed: ' . $speed . ',
-                effect: "fade",
-                centeredSlides: false,
-                slidesPerView: ' . $items . ',
-                spaceBetween: ' . $margin . ',
-                grabCursor: ' . $grab_cursor . ',
-                autoHeight: ' . $auto_height . ',
-                loop: ' . $loop . ',
-                observer: true,
-                observeParents: true,
-                autoplay: {
-                    delay: ' . $autoplay . '
-                },
-                pagination: {
-                    el: "' . $pagin . '",
-                    clickable: true
-                },
-                navigation: {
-                    nextEl: "' . $prev . '",
-                    prevEl: "' . $next . '"
-                },
-                
-            });
-
-            if (' . $autoplay . ' === 0) {
-                saPostCarousel.autoplay.stop();
-            }
-        
-            if (' . $pause_on_hover . ' == true) {
-                sa_post_carousel.on("mouseenter", function() {
-                    saPostCarousel.autoplay.stop();
-                });
-                sa_post_carousel.on("mouseleave", function() {
-                    saPostCarousel.autoplay.start();
-                });
-            }
+        $arrow = $sa_swiper_slider_arrows_left = $sa_swiper_slider_arrows_right = '';
+        if (array_key_exists('sa_swiper_slider_arrows_right', $style) && $style['sa_swiper_slider_arrows_right'] != '') {
+            $sa_swiper_slider_arrows_left = $this->font_awesome_render($style['sa_swiper_slider_arrows_right']);
+        }
+        if (array_key_exists('sa_swiper_slider_arrows_left', $style) && $style['sa_swiper_slider_arrows_left'] != '') {
+            $sa_swiper_slider_arrows_right = $this->font_awesome_render($style['sa_swiper_slider_arrows_left']);
+        }
+        if (array_key_exists('sa_swiper_slider_arrow', $style) && $style['sa_swiper_slider_arrow'] == 'yes') {
+            $arrow = '
+                <div class="swiper-button-next  sa_swiper_slider_next_' . $this->oxiid . '">
+                    ' . $sa_swiper_slider_arrows_left . '
+                </div>
+                <div class="swiper-button-prev sa_swiper_slider_prev_' . $this->oxiid . '">
+                    ' . $sa_swiper_slider_arrows_right . '
+                </div>
             ';
-        return $js;
+        }
+        echo '<div class="' . $main_clsass . '  sa_swiper_slider_main_wrapper ' . $style['sa_swiper_slider_dots_position'] . ' ' . $style['sa_swiper_slider_dots_align'] . ' ' . $style['sa_card_slider_thumbnail_align'] . '">
+                    <div class="swiper-container sa_swiper_slider_triger ' . $style['sa_swiper_slider_image_switcher'] . '">
+                        <div class="swiper-wrapper">
+                            ' . $slider_item . '
+                        </div>
+                    </div>';
+        if (array_key_exists('sa_swiper_slider_dots', $style) && $style['sa_swiper_slider_dots'] == 'yes') :
+            echo '<div class="swiper-pagination sa_swiper_slider_dots_' . $this->oxiid . '"></div>';
+        endif;
+        echo $arrow;
+        echo '
+            </div>
+            ';
+
+        $this->inline_css .= '
+            .sa_swiper_slider_main_wrapper .sa_swiper_slider_triger {
+                max-width: 100%;
+            }
+            .sa_swiper_slider_main_wrapper .swiper-button-prev::after,
+            .sa_swiper_slider_main_wrapper .swiper-button-next::after {
+                display: none;
+            }
+            .sa_swiper_slider_main_wrapper .swiper-button-next,
+            .sa_swiper_slider_main_wrapper .swiper-button-prev {
+                position: absolute;
+                top: 50%;
+                z-index: 9999;
+            }
+            .sa_swiper_slider_main_wrapper .swiper-pagination {
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+            .sa_swiper_slider_main_wrapper.sa_swiper_slider_dots_inside .swiper-pagination {
+                bottom: 30px;
+            }
+            .sa_swiper_slider_main_wrapper.sa_swiper_slider_dots_outside .swiper-pagination {
+                bottom: -25px;
+            }
+        ';
     }
 }

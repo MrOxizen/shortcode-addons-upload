@@ -51,6 +51,10 @@
     overflow: hidden;
 }
 
+.sa_unfold_data {
+    width: 100%;
+}
+
 .sa_unfold_container_style_1 .sa_unfold_gradient {
     position: absolute;
     width: 100%;

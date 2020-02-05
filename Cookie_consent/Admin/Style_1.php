@@ -49,6 +49,15 @@ class Style_1 extends AdminStyle
         );
 
         $this->add_control(
+            'sa_cookie_consent_name',
+            $this->style,
+            [
+                'label' => esc_html__('Cookie Name', SHORTCODE_ADDOONS),
+                'type' => Controls::TEXT,
+                'default' => esc_html__('oxi_shortcode_addons', SHORTCODE_ADDOONS),
+            ]
+        );
+        $this->add_control(
             'sa_cookie_consent_button_text',
             $this->style,
             [
@@ -130,6 +139,20 @@ class Style_1 extends AdminStyle
                         'max' => 1200,
                         'step' => 1,
                     ],
+                ],
+            ]
+        );
+        $this->add_control(
+            'sa_cookie_consent_zindex',
+            $this->style,
+            [
+                'label' => __('Z-Index', SHORTCODE_ADDOONS),
+                'type' => Controls::NUMBER,
+                'default' => 999999,
+                'min' => 0,
+                'max' => 99999999,
+                'selector' => [
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window, body .cc-revoke' => 'z-index: {{VALUE}};'
                 ],
             ]
         );
@@ -356,19 +379,19 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Border Style', SHORTCODE_ADDOONS),
-                    'type' => Controls::SELECT,
-                    'default' => 'none',
-                    'options' => [
-                        'none' => __('None', SHORTCODE_ADDOONS),
-                        'solid' => __('Solid', SHORTCODE_ADDOONS),
-                        'double' => __('Double', SHORTCODE_ADDOONS),
-                        'dotted' => __('Dotted', SHORTCODE_ADDOONS),
-                        'dashed' => __('Dashed', SHORTCODE_ADDOONS),
-                        'groove' => __('Groove', SHORTCODE_ADDOONS),
-                    ],
-                    'selector' => [
-                        '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-style: {{VALUE}} !important;',
-                    ],
+                'type' => Controls::SELECT,
+                'default' => 'none',
+                'options' => [
+                    'none' => __('None', SHORTCODE_ADDOONS),
+                    'solid' => __('Solid', SHORTCODE_ADDOONS),
+                    'double' => __('Double', SHORTCODE_ADDOONS),
+                    'dotted' => __('Dotted', SHORTCODE_ADDOONS),
+                    'dashed' => __('Dashed', SHORTCODE_ADDOONS),
+                    'groove' => __('Groove', SHORTCODE_ADDOONS),
+                ],
+                'selector' => [
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-style: {{VALUE}} !important;',
+                ],
             ]
         );
         $this->add_responsive_control(
@@ -408,11 +431,11 @@ class Style_1 extends AdminStyle
             $this->style,
             [
                 'label' => __('Border Color', SHORTCODE_ADDOONS),
-                    'type' => Controls::COLOR,
-                    'default' => '#ccc',
-                    'selector' => [
-                        '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-color: {{VALUE}} !important;',
-                    ],
+                'type' => Controls::COLOR,
+                'default' => '#ccc',
+                'selector' => [
+                    '{{WRAPPER}} .c__sa___sa, body .cc-window .cc-btn.cc-dismiss' => 'border-color: {{VALUE}} !important;',
+                ],
             ]
         );
         $this->end_controls_tab();
