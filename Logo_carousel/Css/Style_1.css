@@ -33,6 +33,11 @@
      filter: none;
  }
  
+ .oxi_addons__logo_carousel_style_1 .oxi_addons__logo_carousel_item img.oxi_addons__image {
+     width: 100%;
+     height: 100%;
+ }
+ 
  .swiper-container-rtl .swiper-button-prev {
      right: auto !important;
  }
