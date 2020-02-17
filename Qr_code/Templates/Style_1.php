@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\QR_code\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Qr_code\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -18,7 +18,7 @@ class Style_1 extends Templates {
 
     public function public_jquery() {
         $this->JSHANDLE = 'jquery-qrcode.min';
-        wp_enqueue_script('jquery-qrcode.min', SA_ADDONS_UPLOAD_URL . '/QR_code/File/jquery-qrcode.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('jquery-qrcode.min', SA_ADDONS_UPLOAD_URL . '/Qr_code/File/jquery-qrcode.min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery() {

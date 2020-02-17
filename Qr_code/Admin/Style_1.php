@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\QR_code\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Qr_code\Admin;
 
 if (!defined('ABSPATH')) {
     exit;
