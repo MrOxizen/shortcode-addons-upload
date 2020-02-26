@@ -76,8 +76,8 @@ class Style_2 extends Templates {
                 endif;
             }
             if (array_key_exists('sa_el_ac_opening_type', $this->style) && $this->style['sa_el_ac_opening_type'] == 'onebyone'):
-                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC").on("click", function () {
-                                $This = jQuery(this);
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-2-heading-data").on("click", function () {
+                                $This = jQuery(this).parent().parent();
                                 if($This.hasClass("oxi-active")){
                                     return false;
                                 }else{
@@ -88,8 +88,8 @@ class Style_2 extends Templates {
                                 }
                             });';
             else:
-                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC").on("click",function () {
-                                $This = jQuery(this);
+                $jquery .= 'jQuery(".' . $this->WRAPPER . ' .oxi-addonsAC-2-heading-data").on("click",function () {
+                                 $This = jQuery(this).parent().parent();
                                 if($This.hasClass("oxi-active")){
                                     $This.removeClass("oxi-active").children().find(".oxi-addonsAC-details").slideUp();
                                 }else{

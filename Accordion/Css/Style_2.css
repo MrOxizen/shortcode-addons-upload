@@ -11,7 +11,6 @@ df*/
 .sa_ac_style_2 .oxi-addonsAC {
     width: 100%;
     float: left;
-    cursor: pointer;
     display: flex;
     align-items: stretch;
     border: 0px dotted #f53636;
@@ -61,6 +60,7 @@ df*/
     text-align: left;
     padding: 10px 10px 10px 10px;
     transition: none;
+    cursor: pointer;
 }
 
 .sa_ac_style_2 .oxi-addonsAC .oxi-addonsAC-details,
@@ -88,9 +88,9 @@ df*/
 }
 
 @media only screen and (min-width:669px) and (max-width:993px) {
-    
+
 }
 
 @media only screen and (max-width:668px) {
-    
+
 }

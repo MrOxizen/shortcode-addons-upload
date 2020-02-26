@@ -5,4 +5,4 @@
  * Checked by 
  */
 
-return array('2.0.3', 'Content Elements', true, 'fas fa-list', false);
+return array('2.0.4', 'Content Elements', true, 'fas fa-list', false);
