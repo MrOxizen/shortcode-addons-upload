@@ -5,4 +5,4 @@
  * Create By Jabir
  */
 
-return array('2.2.0', 'Customer Supports', true, 'fas fa-heading', false);
+return array('2.2.0', 'Customer Supports', true, 'fas fa-heading', true);

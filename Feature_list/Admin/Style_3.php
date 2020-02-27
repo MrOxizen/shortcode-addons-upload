@@ -544,9 +544,6 @@ class Style_3 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_feature_list_style3 .oxi_addons_feature_list_image:after' => 'border-style:{{VALUE}};',
             ],
-            'condition' => [
-                'sa_fl_connetor_on' => 'yes',
-            ],
                 ]
         );
         $this->add_control(
@@ -556,9 +553,6 @@ class Style_3 extends AdminStyle {
             'default' => '#000000',
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_feature_list_style3 .oxi_addons_feature_list_image:after' => 'border-color:{{VALUE}};',
-            ],
-            'condition' => [
-                'sa_fl_connetor_on' => 'yes',
             ],
                 ]
         );
@@ -590,9 +584,6 @@ class Style_3 extends AdminStyle {
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_feature_list_style3 .oxi_addons_feature_list_image:after' => 'border-width:{{SIZE}}{{UNIT}};',
             ],
-            'condition' => [
-                'sa_fl_connetor_on' => 'yes',
-            ],
                 ]
         );
         $this->add_responsive_control(
@@ -622,9 +613,6 @@ class Style_3 extends AdminStyle {
             ],
             'selector' => [
                 '{{WRAPPER}} .oxi_addons_feature_list_style3 .oxi_addons_feature_list_image:after' => 'height:{{SIZE}}{{UNIT}};',
-            ],
-            'condition' => [
-                'sa_fl_connetor_on' => 'yes',
             ],
                 ]
         );

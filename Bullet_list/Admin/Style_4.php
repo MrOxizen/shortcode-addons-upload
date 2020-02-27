@@ -51,9 +51,9 @@ class Style_4 extends AdminStyle
             'sa_bullet_list_data_style_4',
             $this->style,
             [
-                'label' => __('Bullet List Data', SHORTCODE_ADDOONS),
+                'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
-                'button' => 'Add New Item',
+                'button' => 'Add New Testimonial',
                 'fields' => [
                     'sa_bl_four_icon' => [
                         'label' => __('Icon', SHORTCODE_ADDOONS),

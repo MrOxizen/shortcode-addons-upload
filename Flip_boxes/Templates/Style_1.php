@@ -22,7 +22,6 @@ class Style_1 extends Templates {
         
         $styledata = $this->style;
         foreach ($styledata['sa_flip_boxes_data_style_1'] as $key => $value) {
-            $this->media_render('sa_flip_boxes_media', $value) = '';
             $icon = $image = $backinfo = $heading = $button = $img_icon = $bt = $bc = '';
             if ($this->media_render('sa_flip_boxes_media', $value) != '') {
                 $image = ' <img src="' . $this->media_render('sa_flip_boxes_media', $value) . '">';

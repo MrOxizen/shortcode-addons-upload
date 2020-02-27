@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Whatsapp_chart\Admin;
+namespace SHORTCODE_ADDONS_UPLOAD\Whatsapp_chat\Admin;
 
 if (!defined('ABSPATH')) {
     exit;

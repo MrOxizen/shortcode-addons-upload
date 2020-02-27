@@ -17,7 +17,7 @@ use SHORTCODE_ADDONS\Core\Elements_Frontend;
 class Mailchimp extends Elements_Frontend {
 
     public function pre_active() {
-        return array('Style_1');
+        return array('Style_1', 'Style_2');
     }
 
     public function templates() {

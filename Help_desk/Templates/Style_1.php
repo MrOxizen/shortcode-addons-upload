@@ -60,19 +60,16 @@ class Style_1 extends Templates {
         return $js;
     }
 
-
     public function default_render($style, $child, $admin) {
         wp_enqueue_script("tooltipster-bundle-min", SA_ADDONS_UPLOAD_URL . 'Help_desk/File/tooltipster.bundle.min.js', ['jquery'], '', true);
         wp_enqueue_style("tooltipster-bundle-min-css", SA_ADDONS_UPLOAD_URL . 'Help_desk/File/tooltipster.bundle.min.css', null, '', FALSE);
 
-        $arrow = $tigger = '';
+        $arrow = '';
         $settings = $style;
         if ($settings['sa_help_desk_title_as_tooltip_arrow'] == 'yes') {
             $arrow = 'true';
         }
-        if ($settings['sa_help_desk_title_as_tooltip_trigger_on_click'] == 'yes') {
-            $tigger = 'click';
-        }
+
         $id = 'oxi-helpdesk-icons-' . $this->oxiid;
         ?>
 
@@ -142,7 +139,7 @@ class Style_1 extends Templates {
            target="<?php echo $custom_target; ?>"
            href="<?php echo $custom_link; ?>"
            >
-               <?php // echo  $this->font_awesome_render($settings['sa_help_desk_sup_messenger_icon']);  ?>
+               <?php // echo  $this->font_awesome_render($settings['sa_help_desk_sup_messenger_icon']);   ?>
             <i class="<?php echo esc_attr($settings['sa_help_desk_sup_messenger_icon']); ?>" aria-hidden="true"></i>
 
         </a>		

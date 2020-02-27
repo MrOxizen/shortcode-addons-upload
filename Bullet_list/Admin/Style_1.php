@@ -51,10 +51,10 @@ class Style_1 extends AdminStyle
             'sa_image_accordion_data_style_1',
             $this->style,
             [
-                'label' => __('Bullet List Data', SHORTCODE_ADDOONS),
+                'label' => __('Testimonial Data', SHORTCODE_ADDOONS),
                 'type' => Controls::REPEATER,
                 'separator' => TRUE,
-                'button' => 'Add New Item',
+                'button' => 'Add New Testimonial',
                 'fields' => [
                     'sa_bl_text' => [
                         'label' => __('Title', SHORTCODE_ADDOONS),

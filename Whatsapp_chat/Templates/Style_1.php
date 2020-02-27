@@ -1,6 +1,6 @@
 <?php
 
-namespace SHORTCODE_ADDONS_UPLOAD\Whatsapp_chart\Templates;
+namespace SHORTCODE_ADDONS_UPLOAD\Whatsapp_chat\Templates;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -19,13 +19,13 @@ class Style_1 extends Templates
 
     public function public_css()
     {
-        wp_enqueue_style('tooltipster.css', SA_ADDONS_UPLOAD_URL . '/Whatsapp_chart/File/css/tooltipster.bundle.min.css', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_style('tooltipster.css', SA_ADDONS_UPLOAD_URL . '/Whatsapp_chat/File/css/tooltipster.bundle.min.css', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function public_jquery()
     {
         $this->JSHANDLE = 'tooltipster.js';
-        wp_enqueue_script('tooltipster.js', SA_ADDONS_UPLOAD_URL . '/Whatsapp_chart/File/js/tooltipster.bundle.min.js', false, SA_ADDONS_PLUGIN_VERSION);
+        wp_enqueue_script('tooltipster.js', SA_ADDONS_UPLOAD_URL . '/Whatsapp_chat/File/js/tooltipster.bundle.min.js', false, SA_ADDONS_PLUGIN_VERSION);
     }
 
     public function inline_public_jquery()
